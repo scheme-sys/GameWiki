@@ -34,6 +34,13 @@ def main():
             if not args.check:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(content)
+    # Generated lazy files use content hashes; remove obsolete generated chunks only.
+    expected_lazy = {name for name in outputs if name.startswith('data/lazy/')}
+    for file in (root / 'data/lazy').glob('*.js'):
+        if file.relative_to(root).as_posix() not in expected_lazy:
+            changed.append(file.relative_to(root).as_posix())
+            if not args.check:
+                file.unlink()
     for name in changed:
         print(('Out of date: ' if args.check else 'Updated: ') + name)
     print(f'{len(changed)} generated file(s) ' + ('out of date.' if args.check else 'updated. JSON, images and page code were not modified.'))

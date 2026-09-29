@@ -1,7 +1,8 @@
 (() => {
   "use strict";
 
-  const data = window.COS_WIKI_DATA;
+  const runtime = window.COS_WIKI_RUNTIME;
+  const data = runtime?.data;
   if (!data || !Array.isArray(data.articles)) {
     document.getElementById("result-summary").textContent = "本地资料文件缺失或损坏。";
     return;
@@ -256,22 +257,53 @@
     elements.pagination.hidden = pageCount <= 1;
   }
 
-  function render() {
-    const rows = selectedArticles();
-    const pageCount = Math.max(1, Math.ceil(rows.length / state.pageSize));
-    state.page = Math.min(state.page, pageCount);
-    const start = (state.page - 1) * state.pageSize;
-    const pageRows = rows.slice(start, start + state.pageSize);
-    const fragment = document.createDocumentFragment();
-    for (const article of pageRows) fragment.append(createCard(article));
-    elements.results.replaceChildren(fragment);
-    elements.empty.hidden = rows.length !== 0;
-    elements.results.hidden = rows.length === 0;
-    elements.summary.textContent = rows.length
-      ? `共 ${rows.length.toLocaleString("en-US")} 条；显示第 ${(start + 1).toLocaleString("en-US")}–${Math.min(start + state.pageSize, rows.length).toLocaleString("en-US")} 条，第 ${state.page}/${pageCount} 页。`
-      : "0 条匹配结果。";
-    updateFilterChips();
-    renderPagination(pageCount);
+  let renderRevision = 0, searchReady = false;
+  async function render() {
+    const revision = ++renderRevision;
+    elements.results.setAttribute("aria-busy", "true");
+    elements.summary.textContent = state.query && !searchReady ? "正在打开搜索资料…" : "正在打开本页资料…";
+    elements.empty.hidden = true;
+    try {
+      if (state.query && !searchReady) {
+        const descriptions = await runtime.searchText();
+        if (!searchReady) {
+          for (const article of data.articles) article._search = normalize([
+            article.id, `#${article.id}`, article.title, descriptions.get(article.id),
+            article.type, article.wikiGroup, article.quality,
+          ].join(" "));
+          searchReady = true;
+        }
+      }
+      if (revision !== renderRevision) return;
+      const rows = selectedArticles();
+      const pageCount = Math.max(1, Math.ceil(rows.length / state.pageSize));
+      state.page = Math.min(state.page, pageCount);
+      const start = (state.page - 1) * state.pageSize;
+      const pageRows = rows.slice(start, start + state.pageSize);
+      await runtime.hydrate(pageRows);
+      if (revision !== renderRevision) return;
+      const fragment = document.createDocumentFragment();
+      for (const article of pageRows) fragment.append(createCard(article));
+      elements.results.replaceChildren(fragment);
+      elements.empty.hidden = rows.length !== 0;
+      elements.results.hidden = rows.length === 0;
+      elements.summary.textContent = rows.length
+        ? `共 ${rows.length.toLocaleString("en-US")} 条；显示第 ${(start + 1).toLocaleString("en-US")}–${Math.min(start + state.pageSize, rows.length).toLocaleString("en-US")} 条，第 ${state.page}/${pageCount} 页。`
+        : "0 条匹配结果。";
+      updateFilterChips();
+      renderPagination(pageCount);
+    } catch (error) {
+      if (revision !== renderRevision) return;
+      elements.results.hidden = false;
+      elements.results.replaceChildren(text("p", "这页资料暂时未能打开。请检查连接后重试。"));
+      const retry = text("button", "重新加载资料", "quiet-button");
+      retry.type = "button"; retry.addEventListener("click", render);
+      elements.results.append(retry);
+      elements.summary.textContent = "资料加载未完成";
+      elements.pagination.hidden = true;
+    } finally {
+      if (revision === renderRevision) elements.results.setAttribute("aria-busy", "false");
+    }
   }
 
   function setDetailImage(article, role) {

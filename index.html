@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://countapi.mileshilliard.com; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#080e19">
+  <meta name="theme-color" content="#080d17">
   <meta name="description" content="LCZ 游戏 Wiki：探索辐射生存、西部世界、生存工艺与僵尸的黎明的物品、装备和生存资料。">
   <meta property="og:title" content="LCZ · 游戏 Wiki">
   <meta property="og:description" content="选择你的游戏，探索它的世界。">
@@ -23,15 +23,20 @@
 <body>
   <a class="skip-link" href="#game-universe">跳到游戏气泡</a>
   <div class="space-haze" aria-hidden="true"></div>
+  <svg class="constellations" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g class="star-lines"><path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810"/></g>
+    <g class="star-points"><circle cx="70" cy="330" r="1.4"/><circle cx="152" cy="280" r="1.8"/><circle cx="223" cy="303" r="1"/><circle cx="268" cy="223" r="1.5"/><circle cx="1160" cy="138" r="1.2"/><circle cx="1230" cy="188" r="1.7"/><circle cx="1340" cy="163" r="1"/><circle cx="1180" cy="775" r="1.3"/><circle cx="1300" cy="815" r="1.7"/><circle cx="1380" cy="740" r="1.2"/><circle cx="325" cy="835" r="1"/><circle cx="390" cy="787" r="1.6"/><circle cx="475" cy="810" r="1"/><circle cx="530" cy="127" r="1.1"/><circle cx="860" cy="217" r="1"/><circle cx="727" cy="574" r="1.4"/><circle cx="1450" cy="443" r="1"/><circle cx="89" cy="712" r="1.1"/><circle cx="994" cy="900" r="1.3"/><circle cx="1015" cy="420" r="1"/></g>
+  </svg>
   <div class="app-shell">
     <header class="site-header">
       <div class="brand-group">
         <a class="brand" href="index.html" aria-label="LCZ 游戏 Wiki 首页">LCZ<span class="brand-dot" aria-hidden="true"></span></a>
+        <span class="community"><span>群 QQ</span><span class="community-number">1045051029</span></span>
         <div data-site-stats data-compact="true" class="site-stats"></div>
       </div>
       <button class="search-trigger" type="button" id="search-open" aria-label="搜索游戏">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-        <span>搜索游戏</span><kbd>/</kbd>
+        <span>搜索游戏<span class="search-trigger-hint">探索你的下一个世界</span></span><kbd>/</kbd>
       </button>
     </header>
     <main>
@@ -41,19 +46,12 @@
       </section>
       <p id="live-status" class="sr-only" role="status" aria-live="polite"></p>
     </main>
-    <footer class="scene-footer">
-      <button class="hint-button" id="help-open" type="button" aria-label="查看操作指南"><span class="hint-desktop">悬停查看 · 点击进入</span><span class="hint-touch">长按查看 · 轻触进入</span></button>
-      <div class="scene-controls" aria-label="气泡操作">
-        <button class="icon-button" id="motion-toggle" type="button" aria-pressed="false" aria-label="暂停漂浮" title="暂停漂浮"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause-symbol" d="M9 6v12M15 6v12"/><path class="play-symbol" d="m9 5 10 7-10 7Z"/></svg></button>
-        <button class="icon-button" id="reset-map" type="button" aria-label="重置气泡位置" title="重置气泡位置"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg></button>
-      </div>
-    </footer>
+
   </div>
 
   <aside class="game-popover" id="game-info" role="dialog" aria-modal="false" aria-labelledby="info-title" hidden>
     <div class="popover-top"><span class="eyebrow"><i></i> GAME WIKI</span><button id="info-close" class="icon-button" type="button" aria-label="关闭游戏介绍">×</button></div>
-    <h2 id="info-title"></h2>
-    <p class="info-english" id="info-english"></p>
+    <div class="popover-heading"><div><h2 id="info-title"></h2><p class="info-english" id="info-english"></p></div><img id="info-icon" alt="" width="52" height="52" decoding="async"></div>
     <p class="info-description" id="info-description"></p>
     <div class="info-tags" id="info-tags"></div>
     <div class="info-links" id="info-links"></div>
@@ -67,12 +65,7 @@
     <p class="empty-state" id="search-empty" hidden>没有找到这个游戏。<span>试试“西部”“装备”或英文名称。</span></p>
   </dialog>
 
-  <dialog class="help-dialog" id="help-dialog" aria-labelledby="help-title">
-    <div class="dialog-header"><div><span class="eyebrow">LCZ / GUIDE</span><h2 id="help-title">随手探索</h2></div><button class="icon-button dialog-close" type="button" aria-label="关闭操作指南">×</button></div>
-    <div class="guide-item"><h3>查看介绍</h3><p>电脑上将鼠标放到气泡上；手机和平板上按住气泡片刻。松开手指后，介绍会保持打开。</p></div>
-    <div class="guide-item"><h3>进入与拖动</h3><p>点击气泡进入 Wiki，也可以从介绍栏选择入口。按住后移动即可拖动，相邻气泡会轻轻让开。</p></div>
-    <div class="guide-item"><h3>按你的节奏</h3><p>右下角可暂停漂浮、恢复初始排列。<kbd>Tab</kbd> 选择游戏，<kbd>Enter</kbd> 进入，方向键移动，<kbd>/</kbd> 搜索，<kbd>Esc</kbd> 关闭介绍。</p></div>
-  </dialog>
+
   <noscript><nav class="noscript-note" aria-label="游戏入口"><a href="Day%20R%20Survival/wiki_dayR.html">辐射生存 / Day R Survival</a><a href="Craft%20of%20Survival/wiki.html">生存工艺 / Craft of Survival</a><a href="Westland%20Survival/westland_wiki.html">西部世界 / Westland Survival</a><a href="DawnofZombiewiki/index.html">僵尸的黎明 / Dawn of Zombies</a></nav></noscript>
 </body>
 </html>

@@ -6,20 +6,20 @@
   const universe = $('#game-universe');
   const info = $('#game-info');
   const search = $('#search-dialog');
-  const help = $('#help-dialog');
   const storage = {
     get(key) { try { return JSON.parse(localStorage.getItem('lcz:' + key)); } catch { return null; } },
     set(key, value) { try { localStorage.setItem('lcz:' + key, JSON.stringify(value)); } catch { /* Storage is optional. */ } }
   };
   // A changed game roster needs a fresh arrangement; keep layouts for each roster.
-  const positionStorageKey = 'positions-v3:' + GAMES.map(game => game.id).sort().join(',');
+  const positionStorageKey = 'positions-v4:' + GAMES.map(game => game.id).sort().join(',');
   const saved = storage.get(positionStorageKey);
   const positions = saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {};
   const nodes = new Map();
+  const radii = new Map();
+  let dragFrame = 0, pendingDrag = null;
   let width = 0, height = 0, layoutKey = 'desktop';
   let gesture = null, suppressClick = null, previewGame = null;
   let hideTimer, dialogTrigger, lastPointerType = 'mouse', ignoreFocus = false;
-  let paused = storage.get('paused') === true;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
 
@@ -49,43 +49,29 @@
     image.alt = '';
     image.width = image.height = 256;
     image.draggable = false;
+    image.decoding = 'async';
     visual.append(image);
-    const caption = document.createElement('div');
-    caption.className = 'world-caption';
-    const chinese = document.createElement('h2');
-    chinese.textContent = game.nameZh;
-    const english = document.createElement('p');
-    english.textContent = game.name;
-    caption.append(chinese, english);
-    link.append(visual, caption);
+    link.append(visual);
     node.append(link);
     $('#worlds').append(node);
     nodes.set(game.id, node);
   }
 
   const field = new window.LCZBubbleField({
-    width: 1, height: 1, padding: 3, gap: 10,
+    width: 1, height: 1, padding: 2, gap: 12,
     onUpdate(bodies) {
       for (const body of bodies) {
         const node = nodes.get(body.id);
-        const half = parseFloat(node.style.getPropertyValue('--diameter')) / 2 || 0;
+        const half = radii.get(body.id) || 0;
         node.style.transform = 'translate3d(' + (body.x - half) + 'px,' + (body.y - half) + 'px,0)';
-        node.dataset.x = body.x;
-        node.dataset.y = body.y;
       }
     }
   });
 
   function syncMotion() {
-    const quiet = paused || reducedMotion.matches;
-    field.setReducedMotion(quiet);
-    if (quiet || document.hidden || !info.hidden || search.open || help.open || (gesture && !gesture.moved)) field.stop();
+    field.setReducedMotion(reducedMotion.matches);
+    if (reducedMotion.matches || document.hidden || !info.hidden || search.open || (gesture && !gesture.moved)) field.stop();
     else field.start();
-    const toggle = $('#motion-toggle');
-    toggle.classList.toggle('motion-paused', quiet);
-    toggle.setAttribute('aria-pressed', String(quiet));
-    toggle.setAttribute('aria-label', reducedMotion.matches ? '已遵循系统设置，暂停漂浮' : paused ? '恢复漂浮' : '暂停漂浮');
-    toggle.title = toggle.getAttribute('aria-label');
   }
   function savePositions() {
     positions[layoutKey] = Object.fromEntries(field.getBodies().map((body) =>
@@ -99,27 +85,19 @@
     height = universe.clientHeight;
     layoutKey = innerHeight <= 500 && innerWidth > innerHeight ? 'landscape'
       : innerWidth <= 600 ? 'mobile' : innerWidth <= 900 ? 'tablet' : 'desktop';
-    // Keep four captions readable in a short landscape row and two phone columns.
-    const columns = layoutKey === 'landscape' ? GAMES.length : 2;
-    const captionWidth = Math.min(145, (width - 6 - 10 * (columns - 1)) / columns);
-    universe.style.setProperty('--compact-caption-width', captionWidth + 'px');
     field.resize(width, height);
     field.setBodies(GAMES.map((game) => {
       const node = nodes.get(game.id);
-      const size = layoutKey === 'landscape' ? Math.min(102, height * .43, captionWidth - 28)
-        : layoutKey === 'mobile' ? Math.min(122, width * .33) * game.size / 164
-        : game.size * (layoutKey === 'tablet' ? .87 : 1);
+      const size = layoutKey === 'landscape' ? Math.min(94, height * .38, (width - 72) / GAMES.length)
+        : layoutKey === 'mobile' ? Math.min(112, width * .32) * game.size / 164
+        : game.size * (layoutKey === 'tablet' ? .84 : 1);
+      radii.set(game.id, size / 2);
       node.style.setProperty('--diameter', size + 'px');
-      const caption = node.querySelector('.world-caption');
-      // A slightly wider invisible collision area protects the text from edges
-      // and gives adjacent circles some breathing room without a visible ring.
-      const radius = Math.max(size / 2 + 14, caption.offsetWidth / 2);
-      const labelHeight = Math.max(0, node.offsetHeight - size / 2 - radius);
       const point = positions[layoutKey]?.[game.id];
       const initial = game.position[layoutKey];
       const valid = point && Number.isFinite(point.x) && Number.isFinite(point.y);
       return { id: game.id, x: (valid ? point.x : initial[0]) * width,
-        y: (valid ? point.y : initial[1]) * height, radius, labelHeight };
+        y: (valid ? point.y : initial[1]) * height, radius: size / 2 + 8 };
     }));
     syncMotion();
   }
@@ -136,11 +114,13 @@
     info.style.top = y + 'px';
   }
   function showInfo(id, touch = false) {
-    if (gesture?.moved || search.open || help.open) return;
+    if (gesture?.moved || search.open) return;
     clearTimeout(hideTimer);
     previewGame = id;
     const game = GAMES.find((entry) => entry.id === id);
     $('#info-title').textContent = game.nameZh;
+    $('#info-icon').src = game.image;
+    info.style.setProperty('--preview-color', game.color);
     $('#info-english').textContent = game.name;
     $('#info-description').textContent = game.description;
     $('#info-tags').replaceChildren(...game.tags.map((tag) => {
@@ -178,6 +158,10 @@
   function finishGesture(cancel = false) {
     if (!gesture) return;
     const current = gesture;
+    cancelAnimationFrame(dragFrame);
+    dragFrame = 0;
+    if (!cancel && pendingDrag) field.dragTo(current.id, pendingDrag.x, pendingDrag.y);
+    pendingDrag = null;
     gesture = null;
     clearTimeout(current.timer);
     if (cancel) {
@@ -268,7 +252,12 @@
       hideInfo();
     }
     event.preventDefault();
-    field.dragTo(current.id, current.originX + dx, current.originY + dy);
+    pendingDrag = { x: current.originX + dx, y: current.originY + dy };
+    if (!dragFrame) dragFrame = requestAnimationFrame(() => {
+      dragFrame = 0;
+      if (gesture && pendingDrag) field.dragTo(gesture.id, pendingDrag.x, pendingDrag.y);
+      pendingDrag = null;
+    });
   }, { passive: false });
   window.addEventListener('pointerup', (event) => {
     if (gesture?.pointerId === event.pointerId) finishGesture();
@@ -291,20 +280,7 @@
     link?.focus({ preventScroll: true });
     ignoreFocus = false;
   });
-  $('#motion-toggle').addEventListener('click', () => {
-    paused = !paused;
-    storage.set('paused', paused);
-    syncMotion();
-    announce(reducedMotion.matches ? '已遵循系统的减少动态效果设置' : paused ? '已暂停漂浮' : '已恢复轻微漂浮');
-  });
   reducedMotion.addEventListener('change', syncMotion);
-  $('#reset-map').addEventListener('click', () => {
-    cancelGesture();
-    delete positions[layoutKey];
-    storage.set(positionStorageKey, positions);
-    layout();
-    announce('气泡已恢复初始排列');
-  });
 
   function renderResults(query) {
     const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
@@ -342,7 +318,7 @@
     }
     syncMotion();
   }
-  for (const dialog of [search, help]) {
+  for (const dialog of [search]) {
     dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {
       if (event.target !== dialog) return;
@@ -356,19 +332,18 @@
     });
   }
   $('#search-open').addEventListener('click', (event) => openDialog(search, event.currentTarget));
-  $('#help-open').addEventListener('click', (event) => openDialog(help, event.currentTarget));
   $('#game-search').addEventListener('input', (event) => renderResults(event.target.value));
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') lastPointerType = 'mouse';
     if (event.key === 'Escape') {
       cancelGesture();
       hideInfo();
-      if (search.open || help.open) {
+      if (search.open) {
         event.preventDefault();
-        (search.open ? search : help).close();
+        search.close();
       }
     }
-    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey && !search.open && !help.open &&
+    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey && !search.open &&
       !event.target.matches('input,textarea,[contenteditable="true"]')) {
       event.preventDefault();
       openDialog(search, $('#search-open'));

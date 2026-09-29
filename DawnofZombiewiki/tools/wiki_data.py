@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 from player_schema import validate_player_data
+from lazy_data import split_runtime
 
 ROOT = Path(__file__).resolve().parents[1]
 JSON_NAMES = ('catalog', 'mechanics', 'asset-map')
@@ -165,6 +166,7 @@ def generated_files(root=ROOT):
     for name, data in zip(JSON_NAMES, (catalog, mechanics, assets)):
         value = {key: data[key] for key in ('version', 'hero')} if name == 'asset-map' else data
         outputs[f'data/{name}.js'] = js_bytes(VARIABLES[name], value)
+    outputs.update(split_runtime(catalog, mechanics, js_bytes))
     outputs['data/media.js'] = js_bytes('DOZ_MEDIA', assets['images'])
     site = metadata(root, catalog, mechanics, assets)
     outputs['data/site-meta.js'] = js_bytes('DOZ_SITE_META', site)
