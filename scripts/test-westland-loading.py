@@ -78,7 +78,7 @@ try:
    expect(page.locator('#resultCount')).to_contain_text('4,561–4,567')
    page.locator('#reset').click()
    first=page.locator('.item-open').first
-   label=first.inner_text();first.click()
+   label=(first.text_content() or '').strip();first.click()
    expect(page.locator('#detail')).to_have_attribute('data-ready','true')
    expect(page.locator('#detailTitle')).to_have_text(label)
    chunks=[row for row in responses if '/data/chunks/' in row['url']]

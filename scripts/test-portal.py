@@ -351,7 +351,7 @@ try:
 
         def run_case(name, callback, *, width=1440, height=960, mobile=False, reduce=False):
             context = browser.new_context(viewport={"width":width,"height":height}, is_mobile=mobile, has_touch=mobile, reduced_motion="reduce" if reduce else "no-preference")
-            context.on("request", lambda request: results["counter_requests"].append(request.url) if "countapi." in urlparse(request.url).netloc else None)
+            context.on("request", lambda request: results["counter_requests"].append(request.url) if any(host in urlparse(request.url).netloc for host in ("countapi.","busuanzi.cc")) else None)
             page = context.new_page()
             page.set_default_timeout(8000)
             page.on("requestfailed", lambda request: results["errors"].append({"case":name,"request":request.url,"error":request.failure}) if request.failure != "net::ERR_ABORTED" else None)

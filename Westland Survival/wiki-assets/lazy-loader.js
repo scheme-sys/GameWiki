@@ -24,7 +24,8 @@
           script.remove();
           if (error) reject(error); else resolve();
         };
-        const timeout = setTimeout(() => finish(new Error('Local resource timed out: ' + path)), 30000);
+        const wait = path === 'lab/data/avatar-meshes.js' || path === 'lab/data/offline-textures.js' ? 180000 : 30000;
+        const timeout = setTimeout(() => finish(new Error('Local resource timed out: ' + path)), wait);
         script.onload = () => finish();
         script.onerror = () => finish(new Error('Local resource could not be loaded: ' + path));
         document.head.append(script);
