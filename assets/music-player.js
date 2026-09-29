@@ -17,8 +17,13 @@
     let resumeAt = Number.isFinite(saved?.time) && saved.time > 0 ? Math.min(saved.time, 900) : 0;
     let context, analyser, master, bins, owner, decks, current = 0, activated = false;
     let wanted = false, status = 'off', epoch = 0, crossfading = false, fadeTimer, raf = 0, lastBeat = 0, lastSaved = 0;
+    let muted = (() => { try { return sessionStorage.getItem('lcz:moonlight-muted') === 'true'; } catch { return false; } })();
+    function rememberMuted(value) {
+      muted = value;
+      try { sessionStorage.setItem('lcz:moonlight-muted', String(value)); } catch { /* Optional preference. */ }
+    }
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const FADE = 2.2, VOLUME = .27;
+    const FADE = 2.2, VOLUME = .60;
 
     function snapshot() { return { index, title: tracks[index].title, status, playing: wanted && status === 'playing', activated, time: decks?.[current].audio.currentTime || 0 }; }
     function publish() { const value = snapshot(); for (const listener of listeners) listener(value); }
@@ -116,6 +121,7 @@
       decks?.forEach(deck => deck.audio.pause()); metadata(); publish(); syncBeat();
     }
     function start() {
+      rememberMuted(false);
       init(); activated = true; wanted = true; status = 'loading'; const operation = ++epoch;
       clearTimeout(fadeTimer); crossfading = false;
       const deck = decks[current]; decks.forEach(other => { if (other !== deck) other.audio.pause(); });
@@ -134,6 +140,7 @@
       }).catch(() => { if (operation === epoch) fail(); });
     }
     function pause() {
+      rememberMuted(true);
       if (!decks) return;
       wanted = false; status = 'off'; ++epoch; clearTimeout(fadeTimer); crossfading = false;
       decks.forEach(deck => gain(deck, 0, .35)); save(); publish(); syncBeat(); metadata();
@@ -159,7 +166,7 @@
     document.addEventListener('visibilitychange', syncBeat);
     reduced.addEventListener('change', syncBeat);
     window.addEventListener('pagehide', save);
-    return { get activated() { return activated; }, toggle() { if (wanted && status !== 'interrupted') pause(); else start(); }, pause, snapshot,
+    return { get activated() { return activated; }, enter() { if (!muted && !wanted) start(); }, toggle() { if (wanted && status !== 'interrupted') pause(); else start(); }, pause, snapshot,
       subscribe(listener) { listeners.add(listener); listener(snapshot()); return () => listeners.delete(listener); } };
   }
 

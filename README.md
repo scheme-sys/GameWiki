@@ -20,9 +20,9 @@
 
 主页参考 [Yujie Luo 网站](https://yujieluo96.github.io/) 的粒子运动与距离连线机制，使用独立实现的 Canvas 2D 星空，不依赖外部粒子库。桌面约 30 fps、手机约 24 fps，限制星点数量与绘制分辨率；后台、弹窗、拖拽和系统减少动态效果时暂停，Canvas 不可用时保留 SVG 背景。
 
-顶部音符按钮默认关闭。点击后播放贝多芬《月光奏鸣曲》三个乐章，依次循环并柔和衔接；光晕跟随实际音频强弱，暂停后暗淡。录音由 Paul Pitman 演奏、Musopen 提供，录音本身已授权公有领域；来源与摘要见 [音频说明](assets/music/README.md)。
+主页初始不播放音乐，点击进入游戏时自动启播，也可点击顶部音符控制。播放贝多芬《月光奏鸣曲》三个乐章，依次循环并柔和衔接；光晕跟随实际音频强弱，暂停后暗淡。录音由 Paul Pitman 演奏、Musopen 提供，录音本身已授权公有领域；来源与摘要见 [音频说明](assets/music/README.md)。
 
-音乐开启后，同一标签页内切换本项目的 Wiki 会保留同一个播放器；普通栏目链接、详情、前进后退和独立页面访问仍可用。刷新、关闭标签或在当前标签跳到外站会中断演奏，新标签不继承原播放器；刷新后再次点击可从记录位置继续。`file://` 本地打开保留普通跳转，跨页连续播放请使用 HTTP 预览或 GitHub Pages。首次打开页面不下载音乐，仅主动播放后读取当前乐章，临近结尾再准备下一乐章。详细结构与维护方式见 [音乐与连续导航](docs/music.md)。
+手动关闭后会记住当前标签页的选择，切换游戏不会再次开启。音乐开启后，同一标签页内切换本项目的 Wiki 会保留同一个播放器；普通栏目链接、详情、前进后退和独立页面访问仍可用。刷新、关闭标签或在当前标签跳到外站会中断演奏，新标签不继承原播放器；刷新后再次点击可从记录位置继续。`file://` 本地打开保留普通跳转，跨页连续播放请使用 HTTP 预览或 GitHub Pages。首次打开页面不下载音乐，仅点击进入游戏或音符后读取当前乐章，临近结尾再准备下一乐章。详细结构与维护方式见 [音乐与连续导航](docs/music.md)。
 
 ## 已收录的世界
 
@@ -221,9 +221,10 @@ node scripts/check-site.mjs --root .verification/site-preview
 python -m pip install playwright
 python scripts/test-portal.py
 python scripts/test-music.py
+python scripts/test-wiki-nav.py
 python scripts/test-dawn.py
 python scripts/test-ldoe.py
 python scripts/test-grim.py
 ```
 
-脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-music.py` 检查自动启播、手动静音、三乐章衔接与连续导航；`test-wiki-nav.py` 检查八个 Wiki 入口的手机菜单位置、滚动、旋转和链接点击。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。

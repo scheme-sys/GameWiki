@@ -146,7 +146,7 @@ def home_render(page):
     assert page.locator('.world-link').evaluate_all('links=>links.every(a=>a.getAttribute("aria-label").includes("Wiki"))')
     assert page.locator('.app-shell').evaluate('(e)=>Math.abs(e.getBoundingClientRect().height-innerHeight)<1')
     assert page.locator('.world-visual').evaluate_all('els=>els.every(e=>getComputedStyle(e,":after").backgroundImage.includes("linear-gradient"))'), 'Glass highlights were lost'
-    assert page.locator('#search-open').evaluate('(e)=>getComputedStyle(e).backgroundImage.includes("linear-gradient")'), 'Gradient search border was lost'
+    assert page.locator('#search-open').evaluate('(e)=>{const s=getComputedStyle(e);return s.backgroundImage==="none"&&parseFloat(s.borderTopWidth)===0}'), 'Search icon should remain unframed'
     requests = page.evaluate('performance.getEntriesByType("resource").map(r=>r.name)')
     assert not any('/data/' in url or '/wiki-assets/' in url for url in requests), 'Home loaded a game dataset'
     assert page.evaluate('performance.getEntriesByType("resource").reduce((s,r)=>s+r.decodedBodySize,0)') < 285000, 'Portal initial resource budget exceeded (music and independent sky included)'
@@ -266,7 +266,7 @@ def popover_transition_races(page, context):
     page.mouse.move(*icon_center(page,'grimsoul'));page.wait_for_timeout(20)
     page.locator('#search-open').click();expect(page.locator('#search-dialog')).to_be_visible()
     page.wait_for_timeout(250);expect(info).to_be_hidden()
-    for selector in ['#search-open','#search-dialog','.search-field']:
+    for selector in ['#search-dialog','.search-field']:
         assert page.locator(selector).evaluate('(e)=>{const s=getComputedStyle(e);return [s.borderTopLeftRadius,s.borderTopRightRadius,s.borderBottomRightRadius,s.borderBottomLeftRadius].every(v=>v==="0px")}'), selector
     page.keyboard.press('Escape')
     page.mouse.move(*icon_center(page,'grimsoul'));expect(info).to_be_visible();page.wait_for_timeout(220)
@@ -676,6 +676,8 @@ try:
                 return
             context = browser.new_context(viewport={"width":width,"height":height}, is_mobile=mobile, has_touch=mobile, reduced_motion="reduce" if reduce else "no-preference")
             context.on("request", lambda request: results["counter_requests"].append(request.url) if any(host in urlparse(request.url).netloc for host in ("countapi.","busuanzi.cc")) else None)
+            # Music navigation is covered separately; exercise the muted native portal.
+            context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
             page = context.new_page()
             page.set_default_timeout(8000)
             page.on("requestfailed", lambda request: results["errors"].append({"case":name,"request":request.url,"error":request.failure}) if request.failure != "net::ERR_ABORTED" else None)

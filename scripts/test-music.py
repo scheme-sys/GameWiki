@@ -77,10 +77,48 @@ def lazy(page, context):
     page.evaluate("location.hash='weapons'");page.wait_for_timeout(250)
     assert page.locator('.lcz-content-frame').count()==0
     page.go_back();assert page.locator('.lcz-content-frame').count()==0
+    context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
     load(page)
     page.locator('.world[data-game="craft"] a').click()
     page.wait_for_url('**/Craft%20of%20Survival/wiki.html')
     assert page.locator('.lcz-content-frame').count()==0
+
+def entry(page, context):
+    load(page)
+    assert page.locator('audio').count()==0
+    page.locator('.world[data-game="craft"] a').click()
+    frame=frame_ready(page,'Craft of Survival/wiki.html')
+    page.wait_for_function("()=>LCZMusic.snapshot().playing")
+    expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
+    frame.locator('.lcz-music-toggle').click()
+    page.wait_for_timeout(450)
+    frame.locator('.atlas-switch summary').click()
+    frame.locator('.atlas-menu a[href*="grimsoul"]').click()
+    frame=frame_ready(page,'grimsoul_Wiki/index.html')
+    assert page.evaluate('LCZMusic.snapshot().status')=='off'
+    assert page.evaluate('[...document.querySelectorAll("audio")].every(a=>a.paused)')
+    frame.locator('.atlas-home').click();frame=frame_ready(page,'index.html')
+    frame.locator('.world[data-game="ldoe"] a').click();frame=frame_ready(page,'LDOE_Wiki/index.html')
+    assert page.evaluate('LCZMusic.snapshot().status')=='off'
+    page.reload(wait_until='networkidle');frame=frame_ready(page,'LDOE_Wiki/index.html')
+    assert page.locator('audio').count()==0
+    frame.locator('.atlas-switch summary').click();frame.locator('.atlas-menu a[href*="DawnofZombiewiki"]').click()
+    frame_ready(page,'DawnofZombiewiki/index.html')
+    assert page.locator('audio').count()==0
+
+def search_entry(page, context):
+    load(page)
+    page.locator('#search-open').click()
+    page.locator('#game-search').fill('Grim')
+    page.locator('.search-result').first.click()
+    frame=frame_ready(page,'grimsoul_Wiki/index.html')
+    page.wait_for_function("()=>LCZMusic.snapshot().playing")
+    assert page.locator('dialog[open]').count()==0
+    frame.locator('.atlas-switch summary').click()
+    frame.locator('.atlas-menu a[href*="DawnofZombiewiki"]').click()
+    frame=frame_ready(page,'DawnofZombiewiki/index.html')
+    expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
+    frame.locator('.lcz-music-toggle').click()
 
 def continuity(page, context):
     load(page);start(page)
@@ -183,7 +221,7 @@ def phone(page, context):
 
 with sync_playwright() as p:
     browser=p.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True)
-    for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True)]:
+    for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True)]:
         if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
         context=browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
         page=context.new_page()

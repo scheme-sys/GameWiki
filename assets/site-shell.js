@@ -50,6 +50,8 @@
     const url = allowed(value);
     if (!url) return false;
     if (location.protocol === 'file:') { location.href = url.href; return true; }
+    // A parked modal would keep the new document inert even when visually hidden.
+    try { oldWindow().document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close()); } catch { /* The outgoing frame may already be unavailable. */ }
     if (!host) { host = document.createElement('div'); host.className = 'lcz-content-host'; document.body.append(host); }
     const version = ++routeVersion; desired = url;
     if (push) {
@@ -104,6 +106,8 @@
     const url = allowed(link.href); if (!url) return;
     const current = new URL(location.href); current.searchParams.delete(parameter);
     if (url.pathname === current.pathname && url.search === current.search && url.hash && url.hash !== '#') return;
+    // Entering a game is a user gesture; explicit mute survives later navigation.
+    if (event.isTrusted && url.pathname !== root.pathname && url.pathname !== new URL('index.html', root).pathname) window.LCZMusic?.enter();
     if (parentSite || host || window.LCZMusic?.activated) {
       event.preventDefault(); site.navigate(url);
     }
