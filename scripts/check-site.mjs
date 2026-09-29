@@ -19,6 +19,7 @@ const sourceRoot = option('--root') || repository;
 const stageRoot = option('--stage');
 const errors = [];
 const requiredFiles = ['index.html', '404.html', '.nojekyll'];
+const optionalFiles = ['robots.txt'];
 const publicExtensions = new Set([
   '.html', '.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
   '.ico', '.avif', '.woff', '.woff2', '.ttf',
@@ -81,14 +82,15 @@ try {
     if (fs.existsSync(stageRoot) && fs.readdirSync(stageRoot).length) {
       throw new Error('The artifact directory must be empty. Choose a new directory; existing files are never deleted.');
     }
-    const sources = requiredFiles.map((name) => path.join(sourceRoot, name));
+    const sources = [...requiredFiles, ...optionalFiles.filter((name) => fs.existsSync(path.join(sourceRoot, name)))]
+      .map((name) => path.join(sourceRoot, name));
     for (const directory of directories) {
       const full = path.join(sourceRoot, directory);
       if (!fs.existsSync(full)) throw new Error(`Missing public directory: ${directory}`);
       sources.push(...walk(full).filter((file) => publicExtensions.has(path.extname(file).toLowerCase())));
     }
     for (const source of sources) {
-      if (fs.lstatSync(source).isSymbolicLink()) throw new Error(`Symbolic links are not supported: ${source}`);
+      if (!fs.lstatSync(source).isFile()) throw new Error(`Expected a regular public file: ${source}`);
       const target = path.join(stageRoot, path.relative(sourceRoot, source));
       fs.mkdirSync(path.dirname(target), { recursive: true });
       fs.copyFileSync(source, target);
@@ -110,9 +112,10 @@ const files = [];
 const checkedReferences = new Set();
 const networkReferences = new Set();
 let inlineScripts = 0;
-for (const required of requiredFiles) {
-  const file = path.join(root, required);
-  if (!fs.existsSync(file)) errors.push(`Missing required file: ${required}`);
+for (const name of [...requiredFiles, ...optionalFiles.filter((name) => fs.existsSync(path.join(root, name)))]) {
+  const file = path.join(root, name);
+  if (!fs.existsSync(file)) errors.push(`Missing required file: ${name}`);
+  else if (!fs.lstatSync(file).isFile()) errors.push(`Expected a regular public file: ${name}`);
   else files.push(file);
 }
 for (const directory of directories) {

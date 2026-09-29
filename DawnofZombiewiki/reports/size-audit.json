@@ -1,0 +1,25 @@
+{
+  "originalBytes": 9233345126,
+  "originalGiB": 8.599,
+  "standaloneBytes": 389643496,
+  "standaloneMiB": 371.59,
+  "reductionPercent": 95.78,
+  "originalSources": {
+    "localAPKFiles": {
+      "split_UnityDataAssetPack.apk": 22475,
+      "base.apk": 49
+    },
+    "remoteFiles": 10535,
+    "remoteHost": "survival-prod-content.doz-survival.com"
+  },
+  "originalBreakdownBytes": {
+    "sourceBundlesModelsScenes": 3015687840,
+    "allExportedPng": 3569515618,
+    "allAudio": 1480308714,
+    "rawTablesBytesAndJson": 634324225,
+    "reports": 353472609,
+    "extractorDependencies": 40932908
+  },
+  "finding": "Full-game extraction archives were included in the original Wiki directory. No other game source was found in its manifests. The standalone directory includes only player content and referenced images.",
+  "originalDirectoryPreserved": true
+}

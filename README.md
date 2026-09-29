@@ -32,6 +32,11 @@
 
 计数范围、隐私说明、服务限制及新增页面的方法见 [docs/visits.md](docs/visits.md)。
 
+## 抓取与页面防护
+
+本站向爬虫声明不收录、不跟踪链接、不展示摘要，并通过 CSP 限制未授权脚本和资源加载。玩家可正常浏览、搜索、复制资料和使用导入导出功能，无验证码或等待步骤。
+
+项目目录中的 robots.txt 不能替代域名根的爬虫规则；仓库已提供域名根合并模板。公开静态站及公开仓库无法强制阻止恶意下载。策略、生效范围、部署位置与验证方法见 [docs/security.md](docs/security.md)。
 ## 本地打开
 
 直接双击根目录的 `index.html` 即可打开。保持各文件夹相对位置不变，游戏页面也可以独立打开。
@@ -112,6 +117,8 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 node scripts/check-site.mjs
 node scripts/test-bubble-physics.cjs
 node scripts/test-site-stats.mjs
+node scripts/test-site-security.mjs
+node scripts/test-asset-versions.mjs
 ```
 
 检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径和 Westland 按需数据块。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。

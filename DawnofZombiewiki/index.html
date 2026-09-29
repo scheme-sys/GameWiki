@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151916">
+  <meta name="description" content="Dawn of Zombies 中文玩家百科：武器装备图鉴、怪物、随从、制作配方与抽取机制。基于 2.278 内置资料整理。">
+  <title>DOZ WIKI · 废土生存档案</title>
+  <link rel="icon" href="assets/wiki-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home" aria-label="DOZ Wiki 首页"><img src="assets/wiki-mark.svg" alt="" width="44" height="44"><span>DOZ<span class="brand-wiki">WIKI / 中文站</span></span></a>
+    <div class="sidebar-caption">DAWN OF ZOMBIES</div>
+    <nav id="nav" aria-label="百科导航"></nav>
+    <div class="sidebar-bottom"><span class="signal-dot"></span> 离线资料库 <strong>2.278</strong><p>献给每一位废土幸存者</p><a href="#about">资料范围与收录说明 <span>↗</span></a></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="mobile-menu" aria-label="打开导航" aria-expanded="false">☰</button>
+      <div class="breadcrumb"><span>幸存者手册</span><span>/</span><strong id="crumb">资料总览</strong></div>
+      <div class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索整个图鉴"><kbd>/</kbd></div>
+      <a class="saved-link" href="#favorites" aria-label="查看收藏">☆ <span>我的收藏</span><b id="saved-count">0</b></a>
+    </header>
+    <main id="main" tabindex="-1"><div class="initial-loading">正在打开废土档案…</div></main>
+    <footer><span>DOZ WIKI <i>·</i> 非官方中文玩家资料库</span><span>版本 2.278 / 内置资料 151.25 <i>·</i> <a href="#about">来源与完整性</a></span></footer>
+  </div>
+  <dialog id="detail-dialog" aria-label="图鉴详情"></dialog>
+  <dialog id="compare-dialog" aria-label="装备对比"></dialog>
+  <div id="compare-tray" class="compare-tray" hidden></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="data/catalog.js"></script>
+  <script src="data/asset-map.js"></script>
+  <script src="data/mechanics.js"></script>
+  <script src="data/site-meta.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

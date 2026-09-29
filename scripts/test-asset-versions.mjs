@@ -101,3 +101,45 @@ test('Staging leaves source HTML unchanged, excludes tools, and passes artifact 
   assert.equal(checked.status, 0, checked.stdout + checked.stderr);
   assert.match(checked.stdout, /Static site checks passed/);
 });
+test('Optional robots.txt is published unchanged while deployment templates and docs are excluded from the artifact', () => {
+  const fixture = path.join(workspace, 'robots-source');
+  fs.cpSync(source, fixture, { recursive: true });
+  const robots = read(path.join(repository, 'robots.txt'));
+  write(path.join(fixture, 'robots.txt'), robots);
+  write(path.join(fixture, 'deploy/domain-root-robots.txt'), read(path.join(repository, 'deploy/domain-root-robots.txt')));
+  write(path.join(fixture, 'docs/security.md'), 'Development documentation, not a published page.');
+  const output = path.join(workspace, 'robots-published');
+  const checker = path.join(repository, 'scripts/check-site.mjs');
+  const staged = spawnSync(process.execPath, [checker, '--root', fixture, '--stage', output], { encoding: 'utf8' });
+  assert.equal(staged.status, 0, staged.stdout + staged.stderr);
+  assert.equal(read(path.join(output, 'robots.txt')), robots);
+  for (const directory of ['deploy', 'docs', 'scripts']) {
+    assert.ok(!fs.existsSync(path.join(output, directory)), directory + ' must not be published');
+  }
+  assert.deepEqual(htmlPaths.map((file) => read(path.join(fixture, file))), originalHtml);
+  assert.ok(read(path.join(output, 'index.html')).includes(`v=${jsHash}`));
+  const checked = spawnSync(process.execPath, [checker, '--root', output], { encoding: 'utf8' });
+  assert.equal(checked.status, 0, checked.stdout + checked.stderr);
+});
+
+test('robots.txt must be a regular file when present', () => {
+  const fixture = path.join(workspace, 'invalid-robots-source');
+  fs.cpSync(source, fixture, { recursive: true });
+  fs.mkdirSync(path.join(fixture, 'robots.txt'));
+  const checker = path.join(repository, 'scripts/check-site.mjs');
+  const checked = spawnSync(process.execPath, [checker, '--root', fixture], { encoding: 'utf8' });
+  assert.notEqual(checked.status, 0);
+  assert.match(checked.stderr, /Expected a regular public file: robots\.txt/);
+  const staged = spawnSync(process.execPath, [checker, '--root', fixture, '--stage', path.join(workspace, 'invalid-robots-published')], { encoding: 'utf8' });
+  assert.notEqual(staged.status, 0);
+  assert.match(staged.stderr, /Expected a regular public file: .*robots\.txt/);
+});
+
+test('Domain-root template excludes only the two game projects', () => {
+  const rules = (filename) => read(path.join(repository, filename)).split(/\r?\n/)
+    .map((line) => line.replace(/#.*$/, '').trim()).filter(Boolean);
+  assert.deepEqual(rules('deploy/domain-root-robots.txt'), [
+    'User-agent: *', 'Disallow: /GameWiki/', 'Disallow: /LCZ-GameWiki/',
+  ]);
+  assert.deepEqual(rules('robots.txt'), ['User-agent: *', 'Disallow: /']);
+});

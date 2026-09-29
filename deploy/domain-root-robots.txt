@@ -1,0 +1,11 @@
+# Template for https://scheme-sys.github.io/robots.txt only.
+# Merge these rules into the existing User-agent: * group in the
+# scheme-sys.github.io repository's published root; preserve other site rules.
+# Also review any existing more-specific crawler groups: they may take priority
+# over the wildcard group. Add these two paths to those groups when applicable.
+# This template changes only the two GameWiki project paths.
+# Do not replace these paths with "/" on the shared domain.
+# Requests apply only to cooperating crawlers, not direct downloads.
+User-agent: *
+Disallow: /GameWiki/
+Disallow: /LCZ-GameWiki/

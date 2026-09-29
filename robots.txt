@@ -1,0 +1,8 @@
+# This file is authoritative only at the root of the serving origin (/robots.txt).
+# On GitHub project Pages, /GameWiki/robots.txt or /LCZ-GameWiki/robots.txt
+# does not control crawling. See docs/security.md.
+# For the shared scheme-sys.github.io origin, merge deploy/domain-root-robots.txt
+# into that origin's root robots.txt; do not copy this blanket rule there.
+# This is a request to cooperating crawlers, not access control.
+User-agent: *
+Disallow: /

@@ -1,0 +1,54 @@
+{
+  "result": "pass",
+  "checks": [
+    "Every copied image matches its original SHA-256 and size",
+    "All images are referenced; no orphan image archive",
+    "Catalogue and mechanics match original complete player data",
+    "All 461 player weapons and 500 armor records retain real images",
+    "All 15 CSVs retain player values and resolve new image paths",
+    "Standalone page files; no raw bundles, unused audio, raw tables or extraction dependencies",
+    "All 15 player content routes load offline without JavaScript errors",
+    "Renamed Chinese image paths, weapon search, detail, favorite and comparison",
+    "Both probability models retain verified results",
+    "Wiki-only material browser categories and Chinese search",
+    "Mobile layout and menu"
+  ],
+  "passed": 11,
+  "errors": [],
+  "images": 3687,
+  "sha256ReferencesVerified": 3689,
+  "coverage": {
+    "weapon": {
+      "entries": 461,
+      "withImage": 461
+    },
+    "armor": {
+      "entries": 500,
+      "withImage": 500
+    },
+    "enemy": {
+      "entries": 787,
+      "withImage": 165
+    },
+    "companion": {
+      "entries": 78,
+      "withImage": 76
+    },
+    "resource": {
+      "entries": 1338,
+      "withImage": 1338
+    },
+    "consumable": {
+      "entries": 322,
+      "withImage": 322
+    },
+    "building": {
+      "entries": 289,
+      "withImage": 289
+    },
+    "other": {
+      "entries": 1860,
+      "withImage": 1642
+    }
+  }
+}

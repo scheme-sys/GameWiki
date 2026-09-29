@@ -29,6 +29,9 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Check crawler directives and page security
+        run: node scripts/test-site-security.mjs
+
       - name: Prepare and check public files
         run: node scripts/check-site.mjs --stage _site
 
