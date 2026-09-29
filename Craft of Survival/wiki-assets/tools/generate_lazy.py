@@ -46,6 +46,20 @@ def verify_generated(assets=ASSETS):
     assert actual==set(expected), 'Missing or obsolete lazy data blocks; run generate_lazy.py'
     for relative,content in expected.items():
         assert (assets/relative).read_text('utf8')==content.decode('utf8'), relative
+    # Independently read the written payloads and reconstruct complete records.
+    source=source_data(assets)
+    index_text=(assets/'data/index.js').read_text('utf8')
+    index=json.JSONDecoder().raw_decode(index_text[len('window.COS_WIKI_INDEX='):])[0]
+    reconstructed={}
+    for key, relative in index['blocks'].items():
+        text=(assets/relative).read_text('utf8')
+        prefix='window.COS_WIKI_BLOCKS['+json.dumps(key)+']='
+        rows=json.JSONDecoder().raw_decode(text[text.index(prefix)+len(prefix):])[0]
+        for row in rows:
+            assert row['id'] not in reconstructed, 'Duplicate article across blocks'
+            reconstructed[row['id']]=row
+    assert len(reconstructed)==len(source['articles'])
+    assert [reconstructed[row['id']] for row in source['articles']]==source['articles'], 'A player value or image association was changed'
     return len(expected)
 
 def main():

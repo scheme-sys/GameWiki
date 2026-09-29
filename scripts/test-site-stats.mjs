@@ -64,6 +64,8 @@ test('production counts project and page once, without sending URL parameters or
   assert.equal(env.nodes.get('[data-stat-site]').textContent, '1,234');
   assert.equal(env.nodes.get('[data-stat-page]').textContent, '56');
   assert.equal(env.host.dataset.statsState, 'ready');
+  assert.equal(env.nodes.get('summary').title, undefined);
+  assert.match(env.nodes.get('summary')['data-tooltip'], /访问统计/);
   env.run();
   env.listeners.get('visibilitychange')();
   await settle();

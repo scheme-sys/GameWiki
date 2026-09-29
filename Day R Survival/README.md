@@ -11,7 +11,8 @@ wiki-assets/
   js/wiki-app.js                 搜索、筛选、分页、详情与收藏
   data/meta.js                   公开版本和资料范围
   data/items.js                  2,157 条物品（含 324 件武器）
-  data/monsters.js               2,643 条战斗单位
+  data/monsters.js               2,643 条战斗单位，进入相关功能时才加载
+  data/lazy-manifest.js          已知怪物 ID、总数和内容版本
   data/image-index.js            图片标识与本地文件映射
   images/                       2,008 张 PNG 与 hero.jpg
   asset-manifest.json            玩家数据与图片 SHA-256 校验基线
@@ -22,7 +23,7 @@ wiki-assets/
 
 ## 数据与路径约定
 
-HTML 顺序加载 `meta.js`、`items.js`、`monsters.js`、`image-index.js`，最后加载 `wiki-app.js`。普通 JavaScript 赋值统一写入 `window.DAYR_DATA`，支持本地打开。条目每行一条，便于维护。
+HTML 顺序加载 `meta.js`、`items.js`、`lazy-manifest.js`、`image-index.js`，最后加载 `wiki-app.js`。怪物资料仅在打开怪物分类、含怪物的收藏或怪物详情链接时加载；普通物品搜索和武器分类不会提前下载怪物资料。已知 ID 清单让收藏在尚未加载怪物时仍能正确保留。普通 JavaScript 赋值统一写入 `window.DAYR_DATA`，支持本地打开。条目每行一条，便于维护。
 
 发布资料保留玩家名称、说明、分类、属性、攻击、掉落及图片关联。未用于页面的原始配置、函数引用、来源程序路径和模板、宠物配置副本已从数据文件删除，掉落中重复保存的原始记录也已移除。
 
@@ -35,7 +36,11 @@ HTML 顺序加载 `meta.js`、`items.js`、`monsters.js`、`image-index.js`，�
 - 新图片放到 `images/` 并更新 `data/image-index.js`，不要嵌入 base64。
 - 新增字段先确认玩家用途，再更新白名单。更新基线前逐字段审阅名称、数值、攻击、掉落数量和图片关联；不得仅覆盖摘要使检查通过。
 
+修改怪物资料后，先更新按需清单。动态 URL 携带内容摘要，同一页面只加载一次，失败后可主动重试；快速切换分类不会被较晚的响应覆盖。没有定时预载，普通脚本加载继续支持本地 `file://`。
+
 ```powershell
+python "Day R Survival/wiki-assets/tools/generate_lazy.py"
+python "Day R Survival/wiki-assets/tools/generate_lazy.py" --check
 python "Day R Survival/wiki-assets/tools/validate_assets.py"
 ```
 

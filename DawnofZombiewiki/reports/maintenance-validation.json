@@ -2,8 +2,9 @@
   "result": "pass",
   "checks": [
     "Every local image matches its SHA-256 record; no missing or unlisted image",
-    "Runtime JSON wrappers preserve all source fields and metadata is current",
-    "All player export cells and guide paragraphs match the cleaned JSON source"
+    "Complete lazy details, recipes, datasets and mechanics reconstruct source JSON; content hashes and static references match",
+    "All player export cells and guide paragraphs match the cleaned JSON source",
+    "Page resources resolve within this Wiki/shared assets, and navigation links stay inside the site"
   ],
   "errors": [],
   "warnings": [],

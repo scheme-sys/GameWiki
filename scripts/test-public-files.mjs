@@ -14,6 +14,7 @@ const workspace = fs.mkdtempSync(path.join(verification, 'public-files-'));
 const excluded = [
   'DawnofZombiewiki/materials.html', 'DawnofZombiewiki/materials.js',
   'DawnofZombiewiki/data/media.js', 'DawnofZombiewiki/data/catalog.json',
+  'DawnofZombiewiki/data/catalog.js', 'DawnofZombiewiki/data/mechanics.js',
   'DawnofZombiewiki/data/mechanics.json', 'DawnofZombiewiki/data/asset-map.json',
   'DawnofZombiewiki/reports/audit.html', 'DawnofZombiewiki/reports/image-manifest.json',
   'DawnofZombiewiki/tools/developer.js', 'DawnofZombiewiki/README.md',
@@ -48,7 +49,7 @@ function fixture(name) {
 }
 
 test('Public selector includes only Dawn runtime, images, player CSVs and guides', () => {
-  for (const name of ['index.html', 'app.js', 'styles.css', 'data/catalog.js', 'data/mechanics.js', 'data/asset-map.js', 'data/site-meta.js', 'assets/wiki-mark.svg', 'assets/images/图 #1.png', 'data/player/武器.csv', 'guides/01-生存.md']) {
+  for (const name of ['index.html', 'app.js', 'data-loader.js', 'styles.css', 'data/bootstrap.js', 'data/lazy/detail-0-0123456789abcdef.js', 'data/asset-map.js', 'data/site-meta.js', 'assets/wiki-mark.svg', 'assets/images/图 #1.png', 'data/player/武器.csv', 'guides/01-生存.md']) {
     assert.equal(isPublicFile(`DawnofZombiewiki/${name}`), true, name);
   }
   for (const name of [...excluded, 'DawnofZombiewiki/data/player/../catalog.js', '.git/config', 'Sample Game/tools/debug.js']) {
@@ -89,4 +90,18 @@ test('Missing data-mapped images and player downloads fail source checks', () =>
   assert.notEqual(result.status, 0);
   assert.match(result.stderr, /missing local resource assets\/images\/missing\.png/);
   assert.match(result.stderr, /missing local resource data\/player\/missing\.csv/);
+});
+
+test('Lazy manifests must reference published chunks and maintenance catalogs stay private', () => {
+  assert.equal(isPublicFile('Craft of Survival/wiki-assets/wiki-data.js'), false);
+  assert.equal(isPublicFile('Craft of Survival/wiki-assets/data/index.js'), true);
+  assert.equal(isPublicFile('DawnofZombiewiki/data/lazy/private.js'), false);
+  const root = fixture('lazy-missing');
+  write(root, 'DawnofZombiewiki/data/bootstrap.js', 'window.DOZ_BOOTSTRAP={manifest:{"detail-0":"data/lazy/detail-0-0123456789abcdef.js"}};');
+  let result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource data\/lazy\/detail-0/);
+  write(root, 'DawnofZombiewiki/data/lazy/detail-0-0123456789abcdef.js', 'window.DOZ_DATA_PARTS["detail-0"]={image:"assets/images/图 #1.png"};');
+  result = check(root);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
 });

@@ -129,6 +129,40 @@ class MaintenanceTests(unittest.TestCase):
         self.write('reports/image-manifest.json', json_bytes(data))
         self.assertTrue(any('Unexpected image manifest fields' in error for error in verify(self.root, data_only=True)['errors']))
 
+    def test_lazy_runtime_reconstructs_all_player_details_and_has_immutable_names(self):
+        boot=read_js_json(self.root/'data/bootstrap.js','DOZ_BOOTSTRAP')
+        chunks={}
+        for key,name in boot['manifest'].items():
+            content=(self.root/name).read_bytes()
+            self.assertIn(hashlib.sha256(content).hexdigest()[:16],name)
+            prefix='window.DOZ_DATA_PARTS['+json.dumps(key)+'] = '
+            chunks[key]=json.loads(content.decode()[len(prefix):-2])
+        rows=[row for key,value in chunks.items() if key.startswith('detail-') for row in value['entries']]
+        self.assertEqual(sorted(rows,key=lambda row:row['id']),sorted(self.catalog['entries'],key=lambda row:row['id']))
+        self.assertNotIn('abilities',boot['entries'][0])
+        self.assertLess((self.root/'data/bootstrap.js').stat().st_size,100000)
+        before=dict(boot['manifest'])
+        self.catalog['entries'][0]['abilities'][0]['cooldown']=14
+        self.write('data/catalog.json',json_bytes(self.catalog))
+        self.assertEqual(self.command().returncode,0)
+        after=read_js_json(self.root/'data/bootstrap.js','DOZ_BOOTSTRAP')['manifest']
+        key='detail-'+str(123456//128)
+        self.assertNotEqual(before[key],after[key])
+        self.assertEqual(before['index-weapon'],after['index-weapon'])
+        self.assertFalse((self.root/before[key]).exists())
+
+    def test_validator_rejects_unlisted_lazy_script_and_modified_content(self):
+        self.write('data/lazy/orphan.js',b'window.unlisted=true;')
+        self.assertTrue(any('lazy chunk list' in error for error in verify(self.root,data_only=True)['errors']))
+        self.assertEqual(self.command().returncode,0)
+        self.assertFalse((self.root/'data/lazy/orphan.js').exists())
+        boot=read_js_json(self.root/'data/bootstrap.js','DOZ_BOOTSTRAP')
+        path=self.root/boot['manifest']['index-weapon']
+        path.write_bytes(path.read_bytes().replace(b'=danger',b'=changed'))
+        errors=verify(self.root,data_only=True)['errors']
+        self.assertTrue(any('content hash' in error for error in errors))
+        self.assertTrue(any('out of date' in error for error in errors))
+
 
 if __name__ == '__main__':
     unittest.main()

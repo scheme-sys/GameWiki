@@ -11,7 +11,7 @@
   const mechanics = window.DOZ_MECHANICS = {};
   const membership = atob(boot.membership);
   const categories = ['weapon','armor','enemy','companion','resource','consumable','building','other'];
-  const has = id => /^\d+$/.test(String(id)) && Number(id) < membership.length * 8 &&
+  const has = id => /^\d+$/.test(String(id)) && String(Number(id))===String(id) && Number(id) < membership.length * 8 &&
     Boolean(membership.charCodeAt(Number(id) >> 3) & (1 << (Number(id) % 8)));
   const load = key => {
     if (Object.hasOwn(parts,key)) return Promise.resolve(parts[key]);
@@ -20,8 +20,10 @@
     if (!file) return Promise.reject(new Error('未找到所需资料分片'));
     const promise = new Promise((resolve,reject) => {
       const script=document.createElement('script');
-      let timer;
+      let timer,settled=false;
       const finish = error => {
+        if(settled)return;
+        settled=true;
         clearTimeout(timer);script.remove();pending.delete(key);
         error ? reject(error) : resolve(parts[key]);
       };

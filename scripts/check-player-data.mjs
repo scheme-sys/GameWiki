@@ -38,7 +38,9 @@ function walk(directory) {
       if (text) issues = inspectPlayerText(source, '$text');
       else if (extension === '.json') issues = inspectPlayerData(JSON.parse(source));
       else {
-        const sandbox = { window: /\/lab\/data\/avatar-(?:meshes|textures)\.js$/.test(relative) ? { WESTLAND_LAB_DATA: { avatar: {} } } : {} };
+        const sandbox = { window: {} };
+        if (/\/lab\/data\/avatar-(?:meshes|textures)\.js$/.test(relative)) sandbox.window.WESTLAND_LAB_DATA = { avatar: {} };
+        if (relative.startsWith('DawnofZombiewiki/data/lazy/')) sandbox.window.DOZ_DATA_PARTS = {};
         vm.runInNewContext(source, sandbox, { filename: relative, timeout: 5000 });
         issues = inspectPlayerData(sandbox.window);
       }

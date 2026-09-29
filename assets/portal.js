@@ -201,6 +201,9 @@
     });
     link.addEventListener('blur', scheduleHide);
     link.addEventListener('dragstart', (event) => event.preventDefault());
+    link.addEventListener('lostpointercapture', (event) => {
+      if (event.target === link && gesture?.pointerId === event.pointerId) cancelGesture();
+    });
     link.addEventListener('contextmenu', (event) => { if (lastPointerType !== 'mouse') event.preventDefault(); });
     link.addEventListener('pointerdown', (event) => {
       if (event.button !== 0 || !event.isPrimary || gesture || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;

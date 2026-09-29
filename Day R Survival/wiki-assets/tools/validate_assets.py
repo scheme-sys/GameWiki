@@ -9,6 +9,8 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from generate_lazy import verify_generated
+
 
 ASSETS = Path(__file__).resolve().parents[1]
 ROOT = ASSETS.parent
@@ -45,6 +47,7 @@ def load_assignment(filename: str, prefix: str, suffix: str) -> object:
 
 
 def main() -> None:
+    verify_generated(ASSETS)
     manifest = json.loads((ASSETS / "asset-manifest.json").read_text(encoding="utf-8"))
     data = load_assignment("meta.js", "Object.assign(window.DAYR_DATA, ", ");")
     for name in ("items", "monsters", "images"):

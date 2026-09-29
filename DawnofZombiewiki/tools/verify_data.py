@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import io
+import json
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
@@ -68,10 +69,11 @@ def verify(root, data_only=False):
         expected = {key: data[key] for key in ('version', 'hero')} if name == 'asset-map' else data
         require(read_js_json(root / f'data/{name}.js', VARIABLES[name]) == expected, f'{name} JS does not preserve the source JSON')
     require(read_js_json(root / 'data/media.js', 'DOZ_MEDIA') == assets['images'], 'Local image browser metadata differs from the clean image list')
-    for name, expected in generated_files(root).items():
+    generated=generated_files(root)
+    for name, expected in generated.items():
         file = root / name
         require(file_matches(file, expected), f'Generated file out of date: {name}; run tools/update_data.py')
-    expected_lazy={name for name in generated_files(root) if name.startswith('data/lazy/')}
+    expected_lazy={name for name in generated if name.startswith('data/lazy/')}
     actual_lazy={file.relative_to(root).as_posix() for file in (root/'data/lazy').glob('*.js')}
     require(expected_lazy==actual_lazy,'Generated lazy chunk list differs; run tools/update_data.py')
     boot=read_js_json(root/'data/bootstrap.js','DOZ_BOOTSTRAP')
@@ -82,9 +84,9 @@ def verify(root, data_only=False):
         content=file.read_bytes()
         require(hashlib.sha256(content).hexdigest()[:16] in file.name,'Lazy chunk content hash differs')
         text=content.decode('utf-8').strip()
-        prefix='window.DOZ_DATA_PARTS['+__import__('json').dumps(key)+'] = '
+        prefix='window.DOZ_DATA_PARTS['+json.dumps(key)+'] = '
         require(text.startswith(prefix) and text.endswith(';'),'Unexpected lazy script wrapper')
-        value=__import__('json').loads(text[len(prefix):-1])
+        value=json.loads(text[len(prefix):-1])
         chunks[key]=value
         references(value)
         if key.startswith('detail-'):reconstructed.extend(value['entries'])

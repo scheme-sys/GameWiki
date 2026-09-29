@@ -5,7 +5,11 @@
 ## 文件说明
 
 - `wiki-assets/wiki-app.js`：搜索、筛选、分页和详情。
-- `wiki-assets/wiki-data.js`：3,843 条物品、4 项货币和分类统计。
+- `wiki-assets/wiki-data.js`：完整维护源，含 3,843 条物品、4 项货币和分类统计，不作为网页首屏资源。
+- `wiki-assets/data/index.js`：轻量名称、分类、品质与分块目录。
+- `wiki-assets/data/chunks/`：每块 80 条完整资料，只打开当前列表需要的块。
+- `wiki-assets/data/search.*.js`：说明全文索引，首次输入搜索词时加载。
+- `wiki-assets/wiki-loader.js`：缓存已加载资料；失败后用户可重试，过时请求不会覆盖当前筛选。
 - `wiki-assets/icons/`：1,189 个原画质图标文件。
 - `wiki-assets/provenance.json`：游戏版本、概要来源、玩家数据摘要及图标 SHA-256。
 - `package-validation.json`：当前发布文件清单、大小及 SHA-256。每项 `hashMode` 明确校验模式：文本以 UTF-8 / LF 规范化后计算大小和摘要，避免 Windows / Linux 换行差异；图片始终按原始字节校验。
@@ -21,10 +25,14 @@
 
 图片未经重编码。更换图片须核实用途和来源，再更新图标摘要与文件清单。已删除的历史导出文件不属于运行依赖。
 
+更新完整维护源后，先生成按需文件，再审阅差异和基线。块与搜索文件名含内容摘要，避免发布后误用旧缓存；没有定时全量预载。普通同源脚本加载兼容 `file://`，不需要开放额外网络权限。生成器只清理其 `data/` 下过期生成文件，不修改图片。
+
 ```powershell
+python "Craft of Survival/wiki-assets/tools/generate_lazy.py"
+python "Craft of Survival/wiki-assets/tools/generate_lazy.py" --check
 python "Craft of Survival/wiki-assets/tools/validate_assets.py"
 ```
 
-需要 Python 3.9+ 和 Node.js。浏览器回归应覆盖搜索、分类、品质筛选、分页、详情、制作花费和男女外观切换。
+需要 Python 3.9+ 和 Node.js。校验器会读取所有生成块，逐条重建并比较完整维护源，包括每个属性和图片关联。浏览器回归应覆盖搜索、分类、品质筛选、分页、详情、制作花费、男女外观切换，以及首次加载失败重试和快速切换。
 
 资料来自用户提供的游戏素材（5.7 / 2887）。游戏名称、文本和美术归原权利方所有；收录内容不代表当前全部可获取。

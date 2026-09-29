@@ -126,7 +126,7 @@
         this._remember();
         body.x += dx / count;
         body.y += dy / count;
-        if (!this._solve(24, false)) {
+        if (!this._solve(48, false)) {
           // A packed cluster has no legal movement in this direction. Retain the
           // last valid pose instead of teleporting another bubble to a free slot.
           this._restore();
@@ -237,7 +237,9 @@
           const roomA = pinHeld && heldA ? 0 : this._room(a, -nx, -ny);
           const roomB = pinHeld && heldB ? 0 : this._room(b, nx, ny);
           const overlap = separation - distance + EPSILON;
-          let shiftA = Math.min(roomA, overlap * (heldA ? 0 : heldB ? 1 : 0.5));
+          const priority = pass < 12;
+          const shareA = heldA ? (priority ? 0 : 0.5) : heldB ? (priority ? 1 : 0.5) : 0.5;
+          let shiftA = Math.min(roomA, overlap * shareA);
           const shiftB = Math.min(roomB, overlap - shiftA);
           shiftA += Math.min(roomA - shiftA, overlap - shiftA - shiftB);
           a.x -= nx * shiftA; a.y -= ny * shiftA;
@@ -253,8 +255,8 @@
       this._remember();
       if (!this._solve(40, false)) this._packInitialLayout();
       for (const body of this._bodies) {
-        body.anchorX = clamp(body.anchorX + body.x - body.oldX, body.minX, body.maxX);
-        body.anchorY = clamp(body.anchorY + body.y - body.oldY, body.minY, body.maxY);
+        body.anchorX = clamp(body.anchorX + (body.x - body.oldX), body.minX, body.maxX);
+        body.anchorY = clamp(body.anchorY + (body.y - body.oldY), body.minY, body.maxY);
         body.vx = body.vy = 0;
       }
     }

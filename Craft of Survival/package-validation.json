@@ -7,8 +7,314 @@
     {
       "path": "README.md",
       "hashMode": "utf8-lf",
-      "bytes": 2320,
-      "sha256": "65c91aaf09dca8a6ce42353201cc2cc52c98553452ba1a6fabffb9cf69f01081"
+      "bytes": 3384,
+      "sha256": "0f3cd8bd285a6b500d6952b4af907c68abea3b8d68be49d2c56a10033b23d01c"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b0.179071c50cc1a612.js",
+      "hashMode": "utf8-lf",
+      "bytes": 76359,
+      "sha256": "179071c50cc1a612c3220f466b2993805a9ab51b3ce689ce214bde26b4741206"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b1.8ed75d8be52f54a0.js",
+      "hashMode": "utf8-lf",
+      "bytes": 72434,
+      "sha256": "8ed75d8be52f54a0b9e2cd6e94f380180fcb8fb172063c20db9765ba6d87c79b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b10.dc31f10ca29c4677.js",
+      "hashMode": "utf8-lf",
+      "bytes": 80949,
+      "sha256": "dc31f10ca29c467715cd3ea4c39ba723306925c5d0a13fe8f01a52b3299398bf"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b11.925a4f245312dde3.js",
+      "hashMode": "utf8-lf",
+      "bytes": 76766,
+      "sha256": "925a4f245312dde3a4b6a4824ce606fcf5b48b0dc9aede0571485cab18df3f3a"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b12.65f222b803c1c95c.js",
+      "hashMode": "utf8-lf",
+      "bytes": 72594,
+      "sha256": "65f222b803c1c95cc80c175d2777641fe63d6735bb89beb614fe0a854a48d61f"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b13.aa0c44ad279fa29a.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79485,
+      "sha256": "aa0c44ad279fa29a7744ac1590e5cb7bc6ccf3855b734f42c247fbd2fa3c2362"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b14.7e67be7d7f952be8.js",
+      "hashMode": "utf8-lf",
+      "bytes": 82798,
+      "sha256": "7e67be7d7f952be8bcdde2178524fcf63c6698595fda704e6d6d3432374d0f4f"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b15.ae4516e9f1b4d731.js",
+      "hashMode": "utf8-lf",
+      "bytes": 85159,
+      "sha256": "ae4516e9f1b4d731573e7bf5bd377941986bc6731d31ab5ed276b9f3c8b369db"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b16.dd776c2f180761b7.js",
+      "hashMode": "utf8-lf",
+      "bytes": 67396,
+      "sha256": "dd776c2f180761b70f8a2670c053a3ba5752ef023e82801b93062e0666c67242"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b17.3ea7c2a270ff4abd.js",
+      "hashMode": "utf8-lf",
+      "bytes": 80152,
+      "sha256": "3ea7c2a270ff4abdbf6819bb39b87365a0063cad7539bbdcf661f18bb9b92b4b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b18.3af81f11388849e4.js",
+      "hashMode": "utf8-lf",
+      "bytes": 78564,
+      "sha256": "3af81f11388849e4c03fb830b013ea4d86b6299243a8be5582f1e5ee32093606"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b19.f7974422ce6612eb.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79211,
+      "sha256": "f7974422ce6612eb8bad3782ca5a5d115e965c464811e6dbde5bbfd19a9acbe8"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b2.b9ceeda55f64b5e7.js",
+      "hashMode": "utf8-lf",
+      "bytes": 72372,
+      "sha256": "b9ceeda55f64b5e7ae0042c1efe82d7e712ccdb0c021a45939c1c2cbd8eecb57"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b20.ac7cb245d0322f2c.js",
+      "hashMode": "utf8-lf",
+      "bytes": 78067,
+      "sha256": "ac7cb245d0322f2c64e129a9d9f296fcc435255193ec992505ee1c0f7acffc7c"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b21.429659b2ff693722.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79763,
+      "sha256": "429659b2ff6937222d6380c1f7ec95a6c356f86e11a2433b34d24b3836859161"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b22.445523b4e4f54800.js",
+      "hashMode": "utf8-lf",
+      "bytes": 76995,
+      "sha256": "445523b4e4f548000f9cc72da58f7043eac0b4df31941f8651a4b4f78bc6e39b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b23.4e40b96a8c28f8f0.js",
+      "hashMode": "utf8-lf",
+      "bytes": 75673,
+      "sha256": "4e40b96a8c28f8f01ad0377a420e83db94e867f4be43d96deba5279c032f8cd2"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b24.159a4103936b31d0.js",
+      "hashMode": "utf8-lf",
+      "bytes": 69017,
+      "sha256": "159a4103936b31d0e8731248dac0710c0f94671321deafb612b07ca1e7495766"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b25.455faf57a3d67bd4.js",
+      "hashMode": "utf8-lf",
+      "bytes": 81975,
+      "sha256": "455faf57a3d67bd4e2df4328ba1bb406d5b72b5d5637f128aa807fc072a7f196"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b26.444b81ec4848b4bb.js",
+      "hashMode": "utf8-lf",
+      "bytes": 70913,
+      "sha256": "444b81ec4848b4bbdba978dc42cd09eefc5d84227914c48c9045e575f14d85dc"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b27.d383a0a0a292de4a.js",
+      "hashMode": "utf8-lf",
+      "bytes": 78512,
+      "sha256": "d383a0a0a292de4aa958ad62191b7e4b393e99e2febdfe5b289afe53221df7af"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b28.c16844cc80a0b390.js",
+      "hashMode": "utf8-lf",
+      "bytes": 75611,
+      "sha256": "c16844cc80a0b39089352ee0aba99207dcb71a471745fb147b45dabaa8ea67b2"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b29.d1e93643147acffb.js",
+      "hashMode": "utf8-lf",
+      "bytes": 78557,
+      "sha256": "d1e93643147acffbf8f15319a2fd170573b0eb1b468ac8342ee2d0d56281b16b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b3.6f82b4431c02cedd.js",
+      "hashMode": "utf8-lf",
+      "bytes": 73995,
+      "sha256": "6f82b4431c02cedd5de00deb4bf5c6f3f8f3b70f36c15fae6d44dfe0e9384a8d"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b30.4199ed172624dec3.js",
+      "hashMode": "utf8-lf",
+      "bytes": 83399,
+      "sha256": "4199ed172624dec34e0ffb74a3f341f9e46f4e46fdcdcc27c068ae5806200aa7"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b31.7ea865c66e15b420.js",
+      "hashMode": "utf8-lf",
+      "bytes": 88094,
+      "sha256": "7ea865c66e15b42012cb2b8d6a6afa077c84eabe5706c8e6e6fbdde3211f6645"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b32.b549939d9e54332d.js",
+      "hashMode": "utf8-lf",
+      "bytes": 78932,
+      "sha256": "b549939d9e54332d37aa137aae4808338cd497d3d191e97b407d46b2ecb66ed4"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b33.98be595a37d4d0d9.js",
+      "hashMode": "utf8-lf",
+      "bytes": 82114,
+      "sha256": "98be595a37d4d0d9851c339cd82c5a569f8057427153e7787a22de084a25fda6"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b34.7196c59f817a0449.js",
+      "hashMode": "utf8-lf",
+      "bytes": 90109,
+      "sha256": "7196c59f817a0449167f38b5008cc7055b8672ebb8c3a433d7b200bd85b89b62"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b35.108472890f9c229c.js",
+      "hashMode": "utf8-lf",
+      "bytes": 71096,
+      "sha256": "108472890f9c229c0aa575a12381cb9e474f224307e868023b2452a7fc308101"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b36.067f94bc5a4d5783.js",
+      "hashMode": "utf8-lf",
+      "bytes": 84701,
+      "sha256": "067f94bc5a4d57836c5bc8100605e6c06cb8f9644784a46e72147d4509c89e2b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b37.0548f404b90f112f.js",
+      "hashMode": "utf8-lf",
+      "bytes": 73920,
+      "sha256": "0548f404b90f112fb6f6949876151f1a97b732d71676c9d2a9405950112c61ab"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b38.426a31a5fd4c6e86.js",
+      "hashMode": "utf8-lf",
+      "bytes": 74350,
+      "sha256": "426a31a5fd4c6e865085b951dc52da219fb038e9ff9a09b4ef475a683f33b8a6"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b39.31e2c14c76799e18.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79997,
+      "sha256": "31e2c14c76799e1816e2f8e9d6825e3a288dcdbbc80236f5d7f2535aa886c246"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b4.dc1f2864678cb235.js",
+      "hashMode": "utf8-lf",
+      "bytes": 69952,
+      "sha256": "dc1f2864678cb235f46fec29099942d271fdf52dac503db079aa6512e1c92210"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b40.7d439656547e60a4.js",
+      "hashMode": "utf8-lf",
+      "bytes": 90079,
+      "sha256": "7d439656547e60a43b086203f52bae5acbf08d1b10846109bf88219fcc0bf30a"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b41.197bdd6e602422bc.js",
+      "hashMode": "utf8-lf",
+      "bytes": 85267,
+      "sha256": "197bdd6e602422bc78c3bb151570781bac74d2011d9bed7e3da11e371bdf2c21"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b42.8f3a5e4054d10688.js",
+      "hashMode": "utf8-lf",
+      "bytes": 84246,
+      "sha256": "8f3a5e4054d106882042434141ab4317c2320d1b6d163142af3813789de7267e"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b43.8aadd2edba113d1c.js",
+      "hashMode": "utf8-lf",
+      "bytes": 82480,
+      "sha256": "8aadd2edba113d1cc303ce05392198b79ba610f973bfd7a9f820b461759f3df0"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b44.5dbe7882f9c3de87.js",
+      "hashMode": "utf8-lf",
+      "bytes": 87910,
+      "sha256": "5dbe7882f9c3de87102316b367528efecf6e1efcc6fbb3b07e91e55e8e37ed45"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b45.da6b3847e801ffba.js",
+      "hashMode": "utf8-lf",
+      "bytes": 82634,
+      "sha256": "da6b3847e801ffbaafbad5bd12862a7efc179402d050f7e9c6c30051a20dae3b"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b46.4afa96fcab094c34.js",
+      "hashMode": "utf8-lf",
+      "bytes": 83230,
+      "sha256": "4afa96fcab094c34c401dc645f75ad46895d5f9fd9a5d6234075e00747244b62"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b47.bb31ad1c14038ba3.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79744,
+      "sha256": "bb31ad1c14038ba3d4dcf423a71258b6e8fbe8421966e32f3a03c810e6af654a"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b48.f2ac01dc755ccea3.js",
+      "hashMode": "utf8-lf",
+      "bytes": 3265,
+      "sha256": "f2ac01dc755ccea32ef55f58d04edac1b80369def2dd34c5fcb90cb638269402"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b5.f68cbf16af0ece4b.js",
+      "hashMode": "utf8-lf",
+      "bytes": 80070,
+      "sha256": "f68cbf16af0ece4bd2be51e6b3510288521e76f7a0e82216d179cbf362f2391d"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b6.88495e406bbdf6f3.js",
+      "hashMode": "utf8-lf",
+      "bytes": 72468,
+      "sha256": "88495e406bbdf6f3f1de703eee4320a9f03e26404105de3d6f7c8ca7286da540"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b7.76b1f1a3fa4c4a96.js",
+      "hashMode": "utf8-lf",
+      "bytes": 66971,
+      "sha256": "76b1f1a3fa4c4a9698c17aed68aaca7c49fc54efaf017f1f0b435667e2812cb9"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b8.34193658f286174c.js",
+      "hashMode": "utf8-lf",
+      "bytes": 83368,
+      "sha256": "34193658f286174c21ad8b612d73a6696c0887fe93ed5e9e75fc4a7251c1adba"
+    },
+    {
+      "path": "wiki-assets/data/chunks/b9.73a95bab65da0eac.js",
+      "hashMode": "utf8-lf",
+      "bytes": 79185,
+      "sha256": "73a95bab65da0eac8101823f15f13ea33f43b597be3b9c4bfe38841ba4423915"
+    },
+    {
+      "path": "wiki-assets/data/index.js",
+      "hashMode": "utf8-lf",
+      "bytes": 349780,
+      "sha256": "337e5a199afb2a2dc52205fc656f6df32dad22191ff566117d86824cbd98d11c"
+    },
+    {
+      "path": "wiki-assets/data/search.f83a1f9398c11941.js",
+      "hashMode": "utf8-lf",
+      "bytes": 377877,
+      "sha256": "f83a1f9398c119414cfdf8d0f78e0e6f36ecde399489914a12a13c5c9b96dd31"
     },
     {
       "path": "wiki-assets/icons/000038.png",
@@ -7151,22 +7457,34 @@
       "sha256": "c7edf15baab1d8b5ceb6d188c286f7e0a0e989ae2afffb3c756eba4cc4f0341f"
     },
     {
+      "path": "wiki-assets/tools/generate_lazy.py",
+      "hashMode": "utf8-lf",
+      "bytes": 4318,
+      "sha256": "05408ca2f1f69c183de63b54d910757bd65236b85d53c80cb20278cc5483429f"
+    },
+    {
       "path": "wiki-assets/tools/validate_assets.py",
       "hashMode": "utf8-lf",
-      "bytes": 5241,
-      "sha256": "d50f7cd26faa1d3c31cf402ed45f28ca3bc8addb91d17ea2f07d37cd809b6398"
+      "bytes": 5374,
+      "sha256": "c68b988135f8361afcee49e0e578a9335c528c04d348ff610253f9e35b4498cf"
     },
     {
       "path": "wiki-assets/wiki-app.js",
       "hashMode": "utf8-lf",
-      "bytes": 16912,
-      "sha256": "3d77745ced45091e0cd977f38a83d13fe3bf9245e934187862b8674a4cb76f14"
+      "bytes": 18477,
+      "sha256": "d41ad0ab79dc75b47c8349c8bb531a3d54b5ece80296ccf6dfa350b494d4e8d9"
     },
     {
       "path": "wiki-assets/wiki-data.js",
       "hashMode": "utf8-lf",
       "bytes": 3779410,
       "sha256": "dee02efaa8f3711b3b9be03b962d36d92575a808b4ca46a0b122c6fee111530b"
+    },
+    {
+      "path": "wiki-assets/wiki-loader.js",
+      "hashMode": "utf8-lf",
+      "bytes": 3157,
+      "sha256": "d239d95882ae1c71b9d96e46c5a9b5016acb86f80cacb82e5e4b5feee3b8f2fe"
     },
     {
       "path": "wiki-assets/wiki.css",
@@ -7177,8 +7495,8 @@
     {
       "path": "wiki.html",
       "hashMode": "utf8-lf",
-      "bytes": 6987,
-      "sha256": "71e8af55f7c6728afbb0f485a97bd0216330452d1dd1fd98ce609e645c7edf64"
+      "bytes": 7047,
+      "sha256": "912eaea70feeb8c3fbe8619494f1b35ffde3c5f5c4bf2650388c0dfb94786be0"
     }
   ]
 }

@@ -17,12 +17,12 @@
       let ended = false;
       const finish = error => {
         if (ended) return;
-        ended = true; clearTimeout(timer); script.remove();
+        ended = true; clearTimeout(timer); script.onload = script.onerror = null; script.remove();
         if (error) reject(error); else resolve();
       };
       const timer = setTimeout(() => finish(new Error('资料加载超时，请重试。')), 15000);
       script.src = new URL(relative, base).href;
-      script.onload = () => { try { validate(); finish(); } catch (error) { finish(error); } };
+      script.onload = () => { if (ended) return; try { validate(); finish(); } catch (error) { finish(error); } };
       script.onerror = () => finish(new Error('资料暂时未能打开，请重试。'));
       document.head.append(script);
     }).catch(error => { pending.delete(relative); throw error; });
@@ -50,7 +50,7 @@
     if (descriptions) return descriptions;
     await load(index.search, () => {
       const rows = window.COS_WIKI_SEARCH;
-      if (!Array.isArray(rows) || rows.length !== articles.length) throw new Error('搜索资料未完整载入，请重试。');
+      if (!Array.isArray(rows) || rows.length !== articles.length || new Set(rows.map(row => row[0])).size !== articles.length || rows.some(row => !byId.has(row[0]))) throw new Error('搜索资料未完整载入，请重试。');
       descriptions = new Map(rows);
       delete window.COS_WIKI_SEARCH;
     });

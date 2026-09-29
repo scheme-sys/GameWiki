@@ -1,6 +1,6 @@
 # LCZ · 游戏星图
 
-一个以手机体验为优先的游戏 Wiki 集合。主页以圆形游戏图标和中英标题呈现四个世界，气泡轻微漂移，可以拖动，并会自然推开邻近气泡。介绍在需要时出现，游戏资料独立加载。
+一个以手机体验为优先的游戏 Wiki 集合。主页铺满屏幕，以四个纯圆形游戏图标呈现入口。气泡轻微漂移、可拖动并相互让开；中英名称只在悬停或长按后的介绍卡中出现。背景采用静态渐变与稀疏星点，游戏资料按实际操作分批加载。
 
 站点内容使用纯 HTML、CSS、JavaScript，无需 npm 安装或站点构建，可直接托管到 GitHub Pages。访问统计使用外部公开计数服务，与 Wiki 资料加载分开运行。
 
@@ -8,11 +8,11 @@
 
 - **鼠标**：悬停气泡查看介绍，点击进入游戏 Wiki；按住拖动可以调整位置。
 - **手机**：轻触直接进入；长按约 520 毫秒查看介绍，松手保留介绍，再次点击进入。移动手指会转为拖动，取消长按。
-- **动态**：气泡轻微漂移，拖动时相互排斥。可暂停自动漂移；系统开启“减少动态效果”时，会暂停自动漂移。
-- **位置**：桌面、平板、手机竖屏和横屏分别保存摆放锚点。漂移不会改变保存的位置，重置恢复当前布局的初始摆放。游戏目录增加或减少时会使用新的初始排列，避免沿用旧布局挤压新气泡。
+- **动态**：气泡轻微漂移，拖动时相互排斥。系统开启“减少动态效果”时停止漂移；切到后台、打开搜索或介绍卡时也自动停帧。主页不放置暂停、重置按钮或操作提示条。
+- **位置**：桌面、平板、手机竖屏和横屏分别保存摆放锚点。漂移不会改变保存的位置。游戏目录增加或减少时会使用新的初始排列，避免沿用旧布局挤压新气泡。
 - **查找**：搜索支持中文展示名、英文名称和关键词，也可以从游戏目录访问各个百科与工具。
 
-主页采用简洁的圆形气泡布局，介绍不常驻在左侧，也不依靠编号或装饰外圈识别游戏。
+主页左上角显示 LCZ、群 QQ：1045051029 和访问统计。右上角搜索支持 `/` 快捷键；介绍卡、搜索面板与访问统计提示共用深色方形视觉。
 
 ## 已收录的世界
 
@@ -66,7 +66,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 **https://scheme-sys.github.io/LCZ-GameWiki/**
 
-站点使用相对资源路径，兼容 `/LCZ-GameWiki/` 项目子目录。`404.html` 提供返回入口，并兼容原 `/GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。
+站点使用相对资源路径，兼容 `/LCZ-GameWiki/` 项目子目录。`404.html` 提供返回入口，并兼容原 `/GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。动态数据分片由各游戏生成器提供内容哈希文件名或版本参数，发布时须连同对应入口清单一起更新。
 
 Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；已清理的维护 JSON、校验报告与工具留在仓库。
 
@@ -83,7 +83,7 @@ assets/games.js                游戏中英名称、关键词、图标、链接�
 assets/portal.css              圆形气泡、介绍层与响应式布局
 assets/portal.js               拖动、悬停、长按、搜索与位置保存
 assets/bubble-physics.js       漂移、排斥与场景边界
-assets/game-icons/             官方应用图标与来源记录
+assets/game-icons/             官方应用图标、轻量显示副本与来源记录
 assets/wiki-nav.*              游戏页面的统一导航
 assets/site-stats.*            正式站点的参考访问统计
 docs/visits.md                访问统计范围与维护说明
@@ -91,6 +91,7 @@ Craft of Survival/           Wiki、样式、脚本、数据与图标
 Day R Survival/wiki-assets/   分离的 css/、js/、data/、images/
 Westland Survival/wiki-assets/ wiki/、lab/、base/ 与共享 images/
 DawnofZombiewiki/              玩家页面、数据、分类图片、指南与维护工具
+scripts/build-game-icons.py    生成主页显示尺寸图标（需要 Pillow）
 scripts/check-site.mjs         无依赖静态检查与发布打包
 scripts/lib/public-files.mjs   公开文件范围，排除维护文件
 scripts/check-player-data.mjs  检查未使用的游戏实现信息是否混入数据
@@ -112,7 +113,7 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 
 面向玩家的页面只展示可读名称、属性与玩法说明。维护数据和发布数据仅保留玩家资料及网站需要的稳定 ID、关联关系、本地图片路径、统计键和模型映射。未用的游戏函数引用、内部类名、原始配置和提取路径从文件中清除，而非仅在界面隐藏。已有收藏、关联查询和分享链接继续使用稳定 ID；未翻译的名称标注为待补充。清理范围和维护规则见 [数据清理说明](docs/player-data.md)。
 
-各游戏的大图和数据库已独立于 HTML 存放。Day R 按原始分类保存图像，Westland 共享重复图片并按需加载百科详情块。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
+各游戏的大图和数据库独立于 HTML 存放，并按浏览需求分批读取。Craft 使用轻索引与详情块；Day R 在访问战斗单位资料时加载怪物数据；Westland 首屏使用精简目录，3D 试装在主动打开后加载；Dawn 按分类、详情、配方分页和栏目读取分片。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
 
 详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
 
@@ -125,7 +126,7 @@ python DawnofZombiewiki/tools/update_data.py
 python DawnofZombiewiki/tools/verify_package.py --data-only
 ```
 
-第一个命令从已清理的维护 JSON 同步网页使用的 JS 数据与收录统计，不会改动维护 JSON 或图片。需要同时重建中文 CSV 和 Markdown 指南时使用 `update_data.py --exports`，查看文件差异后提交。详细目录职责、导出差异和新增图片流程见 [Dawn 维护说明](DawnofZombiewiki/README.md)。发布工作流也会校验 Dawn 的数据同步及原图完整性。
+第一个命令从已清理的维护 JSON 同步首页摘要、内容哈希分片与收录统计，不会改动维护 JSON 或图片。需要同时重建中文 CSV 和 Markdown 指南时使用 `update_data.py --exports`，查看文件差异后提交。详细目录职责、导出差异和新增图片流程见 [Dawn 维护说明](DawnofZombiewiki/README.md)。发布工作流会校验各游戏的资料一致性及原图完整性。加载边界、生成和性能核验方式见 [按需加载说明](docs/loading.md)。
 
 ## 检查与发布预览
 

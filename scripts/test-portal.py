@@ -32,7 +32,7 @@ results = {"passed": [], "failed": [], "errors": [], "screenshots": [], "counter
 
 
 def snapshot(page):
-    return page.locator(".world").evaluate_all("nodes => Object.fromEntries(nodes.map(n => [n.dataset.game, [Number(n.dataset.x), Number(n.dataset.y)]]))")
+    return page.locator(".world").evaluate_all("nodes => {const area=document.querySelector('#game-universe').getBoundingClientRect();return Object.fromEntries(nodes.map(n=>{const r=n.getBoundingClientRect();return [n.dataset.game,[r.x+r.width/2-area.x,r.y+r.height/2-area.y]];}));}")
 
 
 def distance(first, second):
@@ -52,10 +52,8 @@ def screenshot(page, name):
 
 
 def pause(page):
-    button = page.locator("#motion-toggle")
-    if button.get_attribute("aria-pressed") != "true":
-        button.click()
-    expect(button).to_have_attribute("aria-pressed", "true")
+    # Stable interaction tests use the operating-system preference, not a UI control.
+    page.emulate_media(reduced_motion="reduce")
     page.mouse.move(2, 2)
     page.keyboard.press("Escape")
 
@@ -79,7 +77,7 @@ def check_geometry(page, width, height):
         return {id:node.dataset.game, icon:rect(icon.getBoundingClientRect()), labels, radius:getComputedStyle(icon).borderRadius};
       });
       return {worlds, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight,
-        header:rect(document.querySelector('.site-header').getBoundingClientRect()), footer:rect(document.querySelector('.scene-footer').getBoundingClientRect())};
+        header:rect(document.querySelector('.site-header').getBoundingClientRect()), scene:rect(document.querySelector('.app-shell').getBoundingClientRect())};
     }""")
     assert geometry["scrollWidth"] <= width + 1, f"Horizontal overflow at {width}x{height}: {geometry['scrollWidth']}"
     assert geometry["scrollHeight"] <= height + 1, f"Vertical overflow at {width}x{height}: {geometry['scrollHeight']}"
@@ -90,7 +88,7 @@ def check_geometry(page, width, height):
         for rect in [icon, *world["labels"]]:
             assert rect["x"] >= -1 and rect["right"] <= width + 1, f"{world['id']} outside horizontal viewport at {width}x{height}: {rect}"
             assert rect["y"] >= geometry["header"]["bottom"] - 1, f"{world['id']} collides with header at {width}x{height}"
-            assert rect["bottom"] <= geometry["footer"]["y"] + 1, f"{world['id']} collides with footer at {width}x{height}: {rect}"
+            assert rect["bottom"] <= height + 1, f"{world['id']} outside viewport at {width}x{height}: {rect}"
     def intersects(a, b):
         return min(a["right"], b["right"]) - max(a["x"], b["x"]) > 1 and min(a["bottom"], b["bottom"]) - max(a["y"], b["y"]) > 1
 
@@ -126,11 +124,22 @@ def home_render(page):
     assert page.locator(".brand").inner_text().strip() == "LCZ"
     expect(page.locator("#game-info")).to_be_hidden()
     assert page.locator("canvas,.planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
-    captions = page.locator(".world-caption").evaluate_all("nodes => nodes.map(n => ({children:n.children.length,cn:n.querySelector('h2').textContent,en:n.querySelector('p').textContent}))")
-    assert all(item["children"] == 2 and re.search(r"[\u3400-\u9fff]", item["cn"]) and re.search(r"[A-Za-z]", item["en"]) for item in captions), captions
+    assert page.locator(".world-caption,#motion-toggle,#reset-map,#help-open,.scene-footer").count() == 0
+    expect(page.locator('.community-number')).to_have_text('1045051029')
+    assert page.locator('.world-link').evaluate_all('links=>links.every(a=>a.getAttribute("aria-label").includes("Wiki"))')
+    assert page.locator('.app-shell').evaluate('(e)=>Math.abs(e.getBoundingClientRect().height-innerHeight)<1')
+    requests = page.evaluate('performance.getEntriesByType("resource").map(r=>r.name)')
+    assert not any('/data/' in url or '/wiki-assets/' in url for url in requests), 'Home loaded a game dataset'
+    assert page.evaluate('performance.getEntriesByType("resource").reduce((s,r)=>s+r.decodedBodySize,0)') < 230000, 'Portal initial resource budget exceeded' 
     assert not re.search(r"已发现的世界|SECTOR 01|游戏档案", page.locator("body").inner_text(), re.I)
     expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
-    page.locator("[data-site-stats] summary").click()
+    summary = page.locator("[data-site-stats] summary")
+    assert summary.get_attribute('title') is None, 'Native unstyled tooltip returned'
+    summary.hover()
+    assert summary.evaluate('(e)=>getComputedStyle(e,"::after").content').strip('"') == '点击查看本站与当前页面的访问统计'
+    tooltip_color = summary.evaluate('(e)=>getComputedStyle(e,"::after").backgroundColor')
+    assert max(map(int, re.findall(r'\d+', tooltip_color)[:3])) < 70, tooltip_color
+    summary.click()
     expect(page.locator("[data-stat-note]")).to_contain_text("不计数")
     page.keyboard.press("Escape")
     screenshot(page, "desktop")
@@ -138,27 +147,27 @@ def home_render(page):
 
 def drift_and_hover(page):
     load(page)
-    expect(page.locator("#motion-toggle")).to_have_attribute("aria-pressed", "false")
     before = snapshot(page)
     page.wait_for_timeout(1250)
     after = snapshot(page)
     movement = [distance(before[key], after[key]) for key in before]
     assert max(movement) > 0.1, f"No automatic gentle drift: {movement}"
     assert max(movement) < 7, f"Drift too fast: {movement}"
+    x, y = icon_center(page)
+    page.mouse.move(x, y)
+    expect(page.locator("#game-info")).to_be_visible()
+    expect(page.locator("#info-title")).to_have_text('辐射生存')
+    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)<=4')
+    frozen = snapshot(page)
+    page.wait_for_timeout(500)
+    assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
+    screenshot(page, "desktop-info")
+    page.mouse.move(2, 2)
+    expect(page.locator("#game-info")).to_be_hidden(timeout=1500)
     pause(page)
     frozen = snapshot(page)
     page.wait_for_timeout(700)
     assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
-    x, y = icon_center(page)
-    page.mouse.move(x, y)
-    expect(page.locator("#game-info")).to_be_visible()
-    expected_name = page.locator('.world[data-game="dayr"] .world-caption h2').inner_text()
-    expect(page.locator("#info-title")).to_have_text(expected_name)
-    screenshot(page, "desktop-info")
-    page.mouse.move(2, 2)
-    expect(page.locator("#game-info")).to_be_hidden(timeout=1500)
-    page.locator("#motion-toggle").click()
-    expect(page.locator("#motion-toggle")).to_have_attribute("aria-pressed", "false")
 
 
 def desktop_drag(page):
@@ -173,7 +182,7 @@ def desktop_drag(page):
     assert page.url == BASE
     after = snapshot(page)
     assert distance(baseline["dayr"], after["dayr"]) > 20
-    saved = page.evaluate("JSON.parse(localStorage.getItem('lcz:positions-v3:craft,dawn,dayr,westland'))")
+    saved = page.evaluate("JSON.parse(localStorage.getItem('lcz:positions-v4:craft,dawn,dayr,westland'))")
     assert saved and any("dayr" in layout for layout in saved.values()), saved
     field = page.locator("#game-universe").bounding_box()
     saved_points = [layout["dayr"] for layout in saved.values() if "dayr" in layout]
@@ -182,9 +191,7 @@ def desktop_drag(page):
     pause(page)
     restored = snapshot(page)
     assert distance(after["dayr"], restored["dayr"]) < 3, (after, restored)
-    page.locator("#reset-map").click()
     reset = snapshot(page)
-    assert distance(baseline["dayr"], reset["dayr"]) < 3
     page.locator('.world[data-game="dayr"] .world-link').focus()
     page.keyboard.press("ArrowRight")
     shifted = snapshot(page)
@@ -304,7 +311,6 @@ def touch_drag_and_cancel(page, context):
     assert any(distance(before[key], after[key]) > 8 for key in before if key != "dayr"), "Neighbour was not pushed aside"
     expect(page.locator("#game-info")).to_be_hidden()
     check_geometry(page, 390, 844)
-    page.locator("#reset-map").tap()
     before = snapshot(page)
     start = icon_center(page)
     touch_drag(page, cdp, start, (start[0] + 32, start[1] + 22), cancel=True)
@@ -366,18 +372,17 @@ try:
                 context.close()
 
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
-        run_case("Gentle drift, explicit pause and mouse hover preview", lambda page, _: drift_and_hover(page))
-        run_case("Mouse drag, anchor persistence, reset, keyboard and Escape", lambda page, _: desktop_drag(page))
+        run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
+        run_case("Mouse drag, anchor persistence, keyboard and Escape", lambda page, _: desktop_drag(page))
         run_case("Search, keyboard entry and real Wiki return", lambda page, _: search_and_return(page))
         for width, height in [(1920,1080),(1440,960),(1024,768),(768,1024),(600,900),(390,844),(360,640),(320,568),(568,320),(844,390)]:
             def responsive(page, _, width=width, height=height):
                 load(page)
                 pause(page)
-                page.locator("#reset-map").click()
                 check_geometry(page, width, height)
                 if (width,height) in [(390,844),(320,568),(568,320),(844,390),(1920,1080)]:
                     screenshot(page, f"layout-{width}x{height}")
-            run_case(f"Viewport {width}x{height} keeps circles and labels in bounds", responsive, width=width, height=height, mobile=width<=844)
+            run_case(f"Viewport {width}x{height} keeps full-screen circles in bounds", responsive, width=width, height=height, mobile=width<=844)
         run_case("Dawn search, entry, shared navigation and return", dawn_entry_and_switch)
         run_case("Real touch long press, second tap and direct tap entry", touch_longpress, width=390, height=844, mobile=True)
         run_case("Real touch repulsion, cancel and long-press movement threshold", touch_drag_and_cancel, width=390, height=844, mobile=True)

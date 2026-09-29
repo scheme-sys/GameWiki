@@ -55,7 +55,7 @@
       host.querySelector("[data-stat-page]").textContent = page;
       host.querySelector("[data-stat-note]").textContent = note;
       const summary = host.querySelector("summary");
-      summary.title = `本站访问 ${total} · 本页 ${page} · ${note}`;
+      summary.setAttribute("data-tooltip", "点击查看本站与当前页面的访问统计");
       summary.setAttribute("aria-label", `访问统计，本站 ${total} 次，当前页面 ${page} 次。${note}`);
     }
   }

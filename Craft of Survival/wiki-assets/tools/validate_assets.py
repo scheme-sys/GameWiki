@@ -8,6 +8,8 @@ import re
 import shutil
 import subprocess
 
+from generate_lazy import verify_generated
+
 ASSETS = Path(__file__).resolve().parents[1]
 ROOT = ASSETS.parent
 ARTICLE_FIELDS = {
@@ -55,6 +57,7 @@ def main() -> None:
     manifest = json.loads((ROOT / "package-validation.json").read_text(encoding="utf-8"))
     provenance = json.loads((ASSETS / "provenance.json").read_text(encoding="utf-8"))
     assert manifest["schema"] == "craft-player-package-v3"
+    generated_count = verify_generated(ASSETS)
     assert_public_data(data)
     assert_public_data(provenance)
     for article in data["articles"]:
@@ -95,7 +98,7 @@ def main() -> None:
     print(json.dumps({"status": "PASS", "articles": len(data["articles"]),
                       "imageFiles": provenance["counts"]["imageFiles"],
                       "playerDataVerified": True, "privateSourceFieldsAbsent": True,
-                      "packageFilesVerified": len(expected)}, indent=2))
+                      "packageFilesVerified": len(expected), "lazyResourcesVerified": generated_count}, indent=2))
 
 
 if __name__ == "__main__":

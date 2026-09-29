@@ -18,6 +18,16 @@
 
 图片总计 **343,838,419 字节（327.91 MiB）**。461 条可见武器和 500 条可见防具均有图片，多条资料可共用一张图。15 份 CSV 合计 10,708 个数据行，不含表头。
 
+## 分批加载
+
+首页只读取 `data/bootstrap.js`、小型背景映射和统计清单，包含精选卡片、总数和紧凑的条目存在性索引。进入分类时读取该分类的列表索引；勾选特殊条目后才读取隐藏记录。打开详情后按条目数字范围读取对应分片及实际关联的配方。配方列表先读搜索索引，每页只读取需要的详细配方。
+
+全局搜索由用户打开后读取各分类的可见索引，默认不读隐藏记录或全部详情。收藏只读收藏条目所在分片；比较使用已读取的装备属性。地图、任务、成长资料各标签、抽取机制和指南分别按功能读取。没有定时全量预加载。图片继续使用原图和浏览器懒加载。
+
+`data-loader.js` 通过同源 script 加载，兼容 HTTP 和 `file://`。重复请求合并，成功结果保存在当前页面会话，失败会显示重试按钮；路由和详情令牌阻止旧请求覆盖新页面。动态分片的文件名包含内容 SHA-256，资料更新会生成新 URL，避免旧缓存混搭。
+
+维护 JSON 保留完整资料。`tools/lazy_data.py` 从清理后的 JSON 生成 `data/bootstrap.js` 和 `data/lazy/*.js`；校验器将详情、配方、其他资料集和机制分片重组后与 JSON 精确比较，并核对分片文件名哈希。每次更新只删除本 Wiki `data/lazy/` 中不再使用的生成 JS，不改原图、JSON、CSV 或指南。
+
 ## 维护源与玩家字段
 
 `data/catalog.json`、`data/mechanics.json` 和 `data/asset-map.json` 是维护源，已经清理不参与玩家资料的技术键、冗余搜索文本、内部品质证据和原始来源信息。
@@ -64,7 +74,7 @@ python DawnofZombiewiki/tools/verify_package.py --data-only
 
 ## 发布与测试
 
-仓库根 `scripts/lib/public-files.mjs` 选择公开文件：页面、交互脚本、样式、图片、四个运行时数据 JS，以及 `data/player/*.csv` 和 `guides/*.md`。JSON、维护报告、工具和本地图片浏览器不进入 Pages；仓库中的维护源同样只保留清理后的资料。
+仓库根 `scripts/lib/public-files.mjs` 选择公开文件：页面、交互脚本、样式、图片、首页小型数据和按需分片，以及 `data/player/*.csv` 和 `guides/*.md`。完整 catalog.js / mechanics.js 仅供维护兼容，和 JSON、维护报告、工具、本地图片浏览器一样不进入 Pages；仓库中的维护源同样只保留清理后的资料。
 
 在仓库根执行 `node scripts/check-site.mjs --stage _site` 可生成并检查完整站点，目标目录必须为空。图片、下载与共享资源路径参与检查，HTML 的本地 CSS/JS 引用会自动添加内容版本。
 
@@ -74,4 +84,4 @@ node --test scripts/test-asset-versions.mjs scripts/test-public-files.mjs
 python scripts/test-dawn.py
 ```
 
-浏览器回归需要 Python Playwright 与本机 Chrome，使用独立浏览器和临时本地服务，覆盖搜索、快速切页、详情、收藏、对比、下载、手机布局、键盘和本地打开，报告在 `.verification/dawn-ui/`。可用 `LCZ_BROWSER=msedge` 切换到本机 Edge。
+浏览器回归需要 Python Playwright 与本机 Chrome，使用独立浏览器和临时本地服务，覆盖首屏资源体积与无后台预取、按功能请求、缓存复用、失败重试、请求竞态、搜索、快速切页、详情、收藏、对比、下载、手机布局、键盘和本地打开，报告在 `.verification/dawn-ui/`。可用 `LCZ_BROWSER=msedge` 切换到本机 Edge。

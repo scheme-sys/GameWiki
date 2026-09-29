@@ -426,7 +426,9 @@
       $('#retry-view').addEventListener('click',loadView);
     }
   }
+  let routeToken=0;
   async function route() {
+    const token=++routeToken;
     cancelPendingSearch();
     ++detailToken;
     $('#detail-dialog').close();
@@ -439,7 +441,7 @@
     $('#crumb').textContent=labels[target];document.title=labels[target]+' · 僵尸的黎明 · LCZ';renderNav();
     setMenu(false);
     await loadView();
-    if(state.route!==target)return;
+    if(token!==routeToken||state.route!==target)return;
     if(fromMenu)main.focus({preventScroll:true});
     if(changed)window.scrollTo(0,0);
     if(params.has('entry'))openDetail(params.get('entry'));
@@ -465,7 +467,7 @@
   $('#menu-backdrop').addEventListener('click',()=>setMenu(false,true));
   window.addEventListener('resize',()=>{if(innerWidth>800)setMenu(false);else $('#sidebar').inert=!$('#sidebar').classList.contains('open');});
   $('.skip-link').addEventListener('click',event=>{event.preventDefault();main.focus({preventScroll:true});main.scrollIntoView({block:'start'});});
-  $('#global-search').addEventListener('keydown',e=>{if(e.key==='Enter'){const q=e.target.value.trim();location.hash='search?q='+encodeURIComponent(q);if(state.route==='search'&&location.hash==='search?q='+encodeURIComponent(q)){state.query=q;loadView();}}});
+  $('#global-search').addEventListener('keydown',e=>{if(e.key==='Enter'){const q=e.target.value.trim();location.hash='search?q='+encodeURIComponent(q);if(state.route==='search'&&location.hash==='#search?q='+encodeURIComponent(q)){state.query=q;loadView();}}});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#global-search').focus();}if(e.key==='Escape'&&$('#sidebar').classList.contains('open')){e.preventDefault();setMenu(false,true);}});
   document.addEventListener('keydown',event=>{
     if(event.key!=='Tab'||!$('#sidebar').classList.contains('open'))return;

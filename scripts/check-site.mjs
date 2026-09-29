@@ -192,12 +192,12 @@ for (const file of files) {
     if (gameDirectory) {
       const documentBase = path.join(root, gameDirectory);
       if (gameDirectory === 'DawnofZombiewiki') {
-        if (/\/data\/(?:catalog|mechanics|asset-map|site-meta)\.js$/.test(relative(file))) {
+        if (/\/data\/(?:bootstrap|asset-map|site-meta|lazy\/[a-z0-9-]+)\.js$/.test(relative(file))) {
           try {
-            const context = { window: {} };
+            const context = { window: { DOZ_DATA_PARTS: {} } };
             vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
             const visit = (value) => {
-              if (typeof value === 'string' && /^(?:assets\/|data\/player\/|guides\/)/.test(value)) {
+              if (typeof value === 'string' && /^(?:assets\/|data\/(?:player|lazy)\/|guides\/)/.test(value)) {
                 checkReference(value, file, documentBase, true);
               } else if (Array.isArray(value)) value.forEach(visit);
               else if (value && typeof value === 'object') Object.values(value).forEach(visit);
@@ -210,6 +210,22 @@ for (const file of files) {
             checkReference(match[2], file, documentBase);
           }
         }
+      }
+      if (relative(file) === 'Day R Survival/wiki-assets/data/lazy-manifest.js') {
+        try {
+          const context = { window: {} };
+          vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
+          checkReference(context.window.DAYR_MONSTER_MANIFEST.url, file);
+        } catch (error) { errors.push(`${relative(file)}: cannot validate monster manifest: ${error.message}`); }
+      }
+      if (relative(file) === 'Craft of Survival/wiki-assets/data/index.js') {
+        try {
+          const context = { window: {} };
+          vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
+          const index = context.window.COS_WIKI_INDEX;
+          if (!index || !index.blocks || !index.search) throw new Error('Missing Craft lazy manifest');
+          for (const url of [...Object.values(index.blocks), index.search]) checkReference(url, file, path.join(documentBase, 'wiki-assets'));
+        } catch (error) { errors.push(`${relative(file)}: cannot validate Craft manifest: ${error.message}`); }
       }
       if (relative(file).endsWith('/wiki-assets/wiki/data/index.js')) {
         for (const match of source.matchAll(/"_chunk"\s*:\s*"(wiki-chunk-[a-z0-9_-]+)"/g)) {

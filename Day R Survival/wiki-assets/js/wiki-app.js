@@ -43,13 +43,14 @@
     monsterPromise = new Promise((resolve, reject) => {
       const script = document.createElement('script'); let ended = false;
       const finish = error => {
-        if (ended) return; ended = true; clearTimeout(timer); script.remove();
+        if (ended) return; ended = true; clearTimeout(timer); script.onload = script.onerror = null; script.remove();
         if (error) reject(error); else resolve();
       };
       const timer = setTimeout(() => finish(new Error('怪物资料加载超时')), 15000);
       if (!MONSTERS || MONSTERS.schema !== 1 || !/^monsters\.js\?v=[a-f0-9]{16}$/.test(MONSTERS.url)) { finish(new Error('怪物资料目录缺失')); return; }
       script.src = new URL(MONSTERS.url, dataBase).href;
       script.onload = () => {
+        if (ended) return;
         try {
           const rows = DATA.monsters;
           if (!Array.isArray(rows) || rows.length !== MONSTERS.count || new Set(rows.map(row => String(row.id))).size !== MONSTERS.count || rows.some(row => !monsterIds.has(String(row.id)))) throw new Error('怪物资料不完整');
@@ -143,7 +144,7 @@
     const revision=++navigationRevision;
     try {
       const key=match[1]+':'+decodeURIComponent(match[2]);
-      if(!knownRecord(key)){announce('未找到此链接对应的档案');return;}
+      if(!knownRecord(key)){render();announce('未找到此链接对应的档案');return;}
       if(match[1]==='monster'&&monsterState!=='ready'){
         showMonsterLoad();
         try{await ensureMonsters();}catch(_){if(revision===navigationRevision&&hash===location.hash)showMonsterLoad(true);return;}
@@ -171,7 +172,13 @@
   $('copyLink').addEventListener('click',copyRecordLink);
   $('detailContent').addEventListener('click',event=>{const link=event.target.closest('[data-linked-item]');if(link)openDetail(recordMap.get('item:'+link.dataset.linkedItem));});
   document.addEventListener('keydown',event=>{if(event.key==='/'&&!$('detailDialog').open&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){event.preventDefault();$('search').focus();}});
-  window.addEventListener('hashchange',()=>{if(/^#(item|monster)=/.test(location.hash))readHash();else if($('detailDialog').open)closeDetail();});
+  window.addEventListener('hashchange',()=>{
+    if(/^#(item|monster)=/.test(location.hash)){readHash();return;}
+    navigationRevision++;if($('detailDialog').open)closeDetail();
+    const revision=navigationRevision;
+    if(needsMonsters()&&monsterState!=='ready')ensureMonsters().then(()=>{if(revision===navigationRevision){renderCategories();render();}}).catch(()=>{if(revision===navigationRevision)showMonsterLoad(true);});
+    else render();
+  });
   window.addEventListener('storage',event=>{if(event.key!==favoriteStorageKey)return;try{const parsed=JSON.parse(event.newValue||'[]');if(Array.isArray(parsed)){favorites=new Set(parsed.filter(knownRecord));updateFavoriteCount();if(state.scope==='favorites')setScope('favorites');else render();if(activeRecord)$('detailFavorite').setAttribute('aria-pressed',String(favorites.has(recordKey(activeRecord))));}}catch(_){}});
   const meta=DATA.meta||{};
   [['countItems',items.length],['countWeapons',weapons.length],['countMonsters',MONSTERS?.count||monsters.length],['navItems',items.length],['navWeapons',weapons.length],['navMonsters',MONSTERS?.count||monsters.length]].forEach(([id,count])=>$(id).textContent=formatNumber(count));

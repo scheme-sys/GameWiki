@@ -66,7 +66,7 @@ try:
   passed('Opening one category loads only its index and revisits reuse the loaded part')
   page.locator('#hidden-filter').check()
   expect(page.locator('#hidden-filter')).to_be_checked()
-  page.wait_for_function("DOZ_DATA.loaded().includes('index-weapon-hidden')")
+  page.wait_for_function("()=>DOZ_DATA.loaded().includes('index-weapon-hidden')")
   assert not page.evaluate("DOZ_DATA.loaded().some(k=>k.startsWith('detail-'))")
   passed('Special or hidden entries load only after their explicit filter is enabled')
   # A failed request remains retryable instead of poisoning the promise cache.
@@ -82,11 +82,53 @@ try:
   # Hold a request without blocking the browser, navigate away, then release it.
   held=[]
   page.route('**/index-enemy-*.js',lambda request:held.append(request))
-  page.evaluate("location.hash='enemy'");page.wait_for_timeout(100);assert held
+  page.evaluate("location.hash='enemy'")
+  for attempt in range(30):
+   if held:break
+   page.wait_for_timeout(100)
+  assert held
   route(page,'home');held.pop().continue_();page.wait_for_timeout(150)
   page.unroute('**/index-enemy-*.js')
   expect(page.locator('#crumb')).to_have_text('资料总览');assert page.locator('.hero').count()==1
   passed('A stale category response cannot replace a newer page')
+  route(page,'weapon')
+  held=[]
+  page.route('**/detail-*.js',lambda request:held.append(request))
+  page.locator('.catalog-grid .card-main').first.click()
+  for attempt in range(30):
+   if held:break
+   page.wait_for_timeout(100)
+  assert len(held)==1
+  page.evaluate("document.querySelector('.catalog-grid .card-main').click()")
+  page.wait_for_timeout(80);assert len(held)==1
+  page.locator('#detail-dialog [data-close]').click();held.pop().continue_()
+  page.wait_for_timeout(200);page.unroute('**/detail-*.js')
+  expect(page.locator('#detail-dialog')).not_to_be_visible()
+  page.locator('.catalog-grid .card-main').first.click()
+  expect(page.locator('#detail-dialog h2')).to_be_visible()
+  page.locator('#detail-dialog [data-close]').click()
+  passed('Concurrent detail loads share one request, closing stays closed, and cached reopening works')
+  isolated=browser.new_context(viewport={'width':1280,'height':900})
+  fresh=isolated.new_page();fresh.goto(BASE+'#search?q='+quote('频率片段'),wait_until='networkidle')
+  expect(fresh.locator('.catalog-grid .item-card')).to_have_count(4)
+  loaded=fresh.evaluate('DOZ_DATA.loaded()')
+  assert len(loaded)==8 and all(key.startswith('index-') and not key.endswith('-hidden') for key in loaded),loaded
+  passed('Cold global search finds an unvisited category without downloading details or hidden entries')
+  fresh.evaluate("localStorage.setItem('doz-wiki-favorites','[142]')")
+  fresh.goto('about:blank');fresh.goto(BASE+'#favorites',wait_until='networkidle')
+  expect(fresh.locator('.catalog-grid .item-card')).to_have_count(1)
+  assert fresh.evaluate('DOZ_DATA.loaded()')==['detail-1']
+  passed('Cold saved favorites load only their required detail bucket')
+  fresh.goto('about:blank');fresh.goto(BASE+'#recipes',wait_until='networkidle')
+  expect(fresh.locator('#list-results .info-card')).to_have_count(24)
+  assert set(fresh.evaluate('DOZ_DATA.loaded()'))=={'recipes-index','recipes-0'}
+  fresh.locator('[data-page="2"]').click()
+  expect(fresh.locator('.pagination')).to_contain_text('2 /')
+  assert set(fresh.evaluate('DOZ_DATA.loaded()'))=={'recipes-index','recipes-0','recipes-1'}
+  passed('Recipe pagination loads an index and only the requested page chunks')
+  isolated.close()
+
+
 
   for name in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search']:
    route(page,name);no_overflow(page,name);no_player_codes(page,name)
@@ -204,7 +246,7 @@ try:
    passed(f'{width}x{height} routes, menu and detail remain usable')
   report['csp']+=page.evaluate('window.__csp');assert not report['csp'],report['csp'];assert not report['errors'],report['errors'];assert not report['external'],report['external']
   passed('Normal interaction produces no CSP violations, JavaScript errors or external requests')
-  local=context.new_page();local.goto((ROOT/'DawnofZombiewiki/index.html').as_uri(),wait_until='load');expect(local.locator('#main h1')).to_be_visible();local.evaluate("location.hash='weapon'");local.wait_for_function("document.querySelector('#catalog-search')!==null");local.locator('.catalog-grid .card-main').first.click();expect(local.locator('#detail-dialog')).to_be_visible();passed('Direct local file supports catalog and details')
+  local=context.new_page();local.goto((ROOT/'DawnofZombiewiki/index.html').as_uri(),wait_until='load');expect(local.locator('#main h1')).to_be_visible();local.evaluate("location.hash='weapon'");local.wait_for_function("()=>document.querySelector('#catalog-search')!==null");local.locator('.catalog-grid .card-main').first.click();expect(local.locator('#detail-dialog h2')).to_be_visible();passed('Direct local file supports catalog and details')
   media=context.new_page();media.on('pageerror',lambda e:report['errors'].append(str(e)))
   media.add_init_script("window.__csp=[];document.addEventListener('securitypolicyviolation',e=>window.__csp.push({directive:e.effectiveDirective,uri:e.blockedURI}));")
   media.goto(BASE.replace('index.html','materials.html'),wait_until='networkidle')

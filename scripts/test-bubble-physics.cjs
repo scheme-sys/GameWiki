@@ -46,15 +46,18 @@ test('a rapid drag sweeps through neighbours without tunnelling or losing anchor
   field.dragTo('game-0', 10000, 116);
   valid(field);
   assert.ok(field.getBodies()[1].x > 200, 'The swept path must push the first neighbour');
-  const held = field.getBodies()[0];
+  const afterDrag = field.getBodies();
+  const pushed = afterDrag.map((body,index) => Math.abs(body.x - [56,200,344,488][index]) > 0.001);
+  const held = afterDrag[0];
+  assert.ok(held.x > 145, 'A packed row should transfer the available space through every neighbour');
   for (let frame = 0; frame < 120; frame++) field.step(1 / 60);
   assert.equal(field.getBodies()[0].x, held.x);
   assert.equal(field.getBodies()[0].y, held.y);
   valid(field);
   field.release();
-  for (const body of field.getBodies()) {
-    assert.equal(body.anchorX, body.x);
-    assert.equal(body.anchorY, body.y);
+  for (const [index,body] of field.getBodies().entries()) {
+    if (pushed[index]) { assert.equal(body.anchorX, body.x); assert.equal(body.anchorY, body.y); }
+    else { assert.equal(body.anchorX, afterDrag[index].anchorX); assert.equal(body.anchorY, afterDrag[index].anchorY); }
   }
   const saved = anchors(field);
   for (let frame = 0; frame < 60; frame++) field.step(1 / 60);
@@ -110,7 +113,7 @@ test('long stalls are capped and reduced motion still permits drag and keyboard 
   valid(field);
   assert.notDeepEqual(field.getBodies(), frozen);
   const heldAnchors = anchors(field);
-  field.grab('game-1').valueOf();
+  field.grab('game-1');
   field.release();
   assert.deepEqual(anchors(field), heldAnchors, 'A click or long press must not commit idle coordinates');
 });

@@ -39,3 +39,10 @@ dawn.webp     4ec391f89e140fc6fcbad36441b0b2d2898f676d92209d392cfbb25a8725d04b
 
 “辐射生存”在本站专指 Rmind Games 的 Day R Survival。检索、资料关联与图标归属始终以对应英文名称和上方官方商店页面为准。
 Dawn of Zombies 的本站中文展示名为“僵尸的黎明”：依据 [Royal Ark 官方 Google Play 繁体中文条目](https://play.google.com/store/apps/details?hl=zh_TW&id=com.survival.last)中的“殭屍的黎明：生存 (Dawn of Zombies)”，仅转为简体并省略副标题。该图标从此条目的应用图示链接获取，保留原始方形，显示时由主页统一裁为圆形。
+
+
+## 主页显示副本
+
+`display/` 是从上述官方原图生成的 WebP 显示副本，最大边长 384 像素，四图合计 94,980 字节。原图及其 SHA-256 保持不变，页面的圆形裁剪仍由 CSS 完成。
+
+更新图标后运行 `python scripts/build-game-icons.py`（需要 Pillow），并将 `assets/games.js` 的 `image` 指向对应显示副本。生成器只缩小和编码，不重绘内容，也不覆盖原图。新增游戏时同时扩充生成器的名称列表。
