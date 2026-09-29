@@ -194,3 +194,30 @@ dialog::backdrop { background: #030813c9; -webkit-backdrop-filter: blur(6px); ba
 
 @media (max-width: 600px) { .game-popover.touch-preview .popover-heading { min-height: 92px; } .game-popover.touch-preview .popover-art { height: 220px; } }
 @media (prefers-reduced-motion: reduce) { .game-popover[data-cover-state="ready"] .popover-art>img { transition: none; } }
+
+/* A search keeps its field and close action in view while only results scroll. */
+.search-dialog[open] { display:flex; flex-direction:column; overflow:hidden; }
+.search-dialog .dialog-header,.search-dialog .search-field { flex:none; }
+.search-dialog .search-results {
+  flex:0 1 auto; min-height:0; overflow-y:auto; overscroll-behavior:contain;
+  align-content:start; padding:3px; margin-inline:-3px;
+  scrollbar-width:thin; scrollbar-color:#66899860 transparent;
+}
+.search-result { border-radius:0; }
+.result-english { font-size:11px; color:#9db1bf; }
+.popover-heading>div { min-width:0; }
+.game-popover h2 { overflow-wrap:anywhere; line-height:1.35; }
+.info-english { font-size:11px; }
+.info-description { font-size:13px; line-height:1.8; }
+.info-links a { border-radius:0; font-size:12px; }
+.community-image,.community-download { border-radius:0; }
+@media (max-height:600px) {
+  .community-dialog { padding:16px 20px; }
+  .community-dialog .dialog-header { margin-bottom:10px; }
+  .community-image {
+    width:min(100%,calc((100vh - 164px) * .833333));
+    width:min(100%,calc((100dvh - 164px) * .833333));
+    margin-inline:auto;
+  }
+  .community-download { margin-top:10px; }
+}

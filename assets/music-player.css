@@ -25,3 +25,14 @@ button.lcz-music-toggle { position: relative; display: grid; place-items: center
 .lcz-music-control:hover .lcz-music-hint,.lcz-music-control:focus-within .lcz-music-hint { pointer-events: auto; }
 @media (hover:none) { .lcz-music-control:focus-within .lcz-music-hint { visibility: hidden; opacity: 0; pointer-events: none; } }
 @media (max-width:600px) and (min-height:501px) { .lcz-header-tools { gap: 0; } .lcz-header-tools .lcz-music-control { position: absolute; top: 48px; right: 0; } .lcz-header-tools .lcz-music-toggle { width: 44px; height: 44px; } .lcz-header-tools .lcz-music-hint { right: 0; } }
+
+/* Unframed controls keep a complete touch target; hints stay inside narrow pages. */
+button.lcz-music-toggle,
+.lcz-header-tools .lcz-music-toggle { width:44px; height:44px; min-height:44px; }
+.lcz-music-hint small { font-size:10px; line-height:1.7; }
+@media (max-width:760px) {
+  .atlas-nav>.lcz-music-control { position:static; }
+  .atlas-nav>.lcz-music-control .lcz-music-hint {
+    top:calc(100% + 6px); right:18px; max-width:calc(100vw - 36px);
+  }
+}

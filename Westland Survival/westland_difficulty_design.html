@@ -65,11 +65,40 @@
     <p id="lab-message" class="lab-message" role="status" aria-live="polite"></p>
   </div>
   <div class="lab-workbench" id="lab-workbench">
+<section class="panel lab-character" id="lab-character" aria-labelledby="lab-character-title">
+
+      <div class="lab-character-heading"><div><span class="lab-character-kicker">CHARACTER / LOADOUT</span><h2 id="lab-character-title">角色试装 <span id="lab-avatar-mode">二维示意</span></h2></div>      <button id="lab-avatar-open" type="button" class="lab-avatar-open" aria-controls="lab-avatar-canvas" aria-describedby="lab-avatar-status">打开 3D 试装</button></div>
+      <div class="lab-character-caption"><span>选择人物周围的装备部位</span><span id="lab-equipped-count" class="count"></span></div>
+
+
+      <div class="lab-dress-stage lab-slot-picker"><div class="lab-mannequin">
+        <canvas id="lab-avatar-canvas" hidden aria-label="可拖动旋转、滚轮缩放的原版装备 3D 穿戴预览" tabindex="0"></canvas>
+        <svg id="lab-doll" viewBox="0 0 300 410" role="img" aria-label="可点击装备部位的二维人物模型">
+          <defs><linearGradient id="lab-figure-shade" x1="0" x2="1"><stop stop-color="var(--lab-figure-dark)"/><stop offset=".5" stop-color="var(--lab-figure-light)"/><stop offset="1" stop-color="var(--lab-figure-dark)"/></linearGradient></defs>
+          <ellipse cx="150" cy="388" rx="95" ry="11" fill="var(--lab-shadow)"/>
+          <g fill="url(#lab-figure-shade)" stroke="var(--lab-figure-line)" stroke-width="1.5">
+            <path d="M134 81h32l3 27-19 17-19-17z"/><path d="M132 107 99 118 112 184 124 227h52l12-43 13-66-33-11-18 16z"/>
+            <path d="m98 120-17 11-15 76 20 6 23-57zM201 120l17 11 16 76-20 6-23-57z"/>
+            <path d="m65 213-8 65 19 5 11-67zM215 216l11 67 18-5-9-65z"/>
+            <ellipse cx="67" cy="290" rx="11" ry="18"/><ellipse cx="236" cy="290" rx="11" ry="18"/>
+            <path d="m124 229-12 75 28 3 10-60 10 60 29-3-13-75zM112 312l-3 51h24l7-48zM160 315l7 48h24l-2-51z"/>
+            <path d="m110 360-12 18 4 9h36l-5-27zM167 360l-4 27h36l4-9-13-18z"/>
+            <ellipse cx="150" cy="58" rx="29" ry="35"/><path d="M141 74h18" fill="none"/>
+          </g>
+          <g fill="none" stroke="var(--line)" stroke-dasharray="3 5"><path d="M45 89h62M193 89h62M39 162h56M206 162h55M42 261h52M202 261h58"/></g>
+          <g id="lab-doll-images"></g>
+        </svg>
+        <span id="lab-avatar-hint" class="lab-model-caption">点击部位 · 二维装备预览</span>
+      </div>
+
+      <div id="lab-slot-buttons" class="lab-slot-buttons" role="group" aria-label="选择人物装备部位"></div></div>
+      <div class="lab-view-controls">      <div class="lab-avatar-toolbar" hidden><label>人物外观<select id="lab-avatar-gender" aria-label="3D 人物外观"><option value="male">男性</option></select></label><button id="lab-avatar-front" type="button" class="lab-small-button">正面</button><button id="lab-avatar-back" type="button" class="lab-small-button">背面</button></div>      <div class="lab-avatar-actions" hidden><button id="lab-avatar-zoom-in" type="button" class="lab-small-button" aria-label="放大人物">＋ 放大</button><button id="lab-avatar-zoom-out" type="button" class="lab-small-button" aria-label="缩小人物">－ 缩小</button><button id="lab-avatar-reset" type="button" class="lab-small-button">重置视角</button></div></div>
+      <p id="lab-avatar-status" class="lab-avatar-status mini-note" role="status" aria-live="polite">人物与装备实时对应；开启 3D 后可拖动旋转、查看穿戴效果。</p>
+
+    </section>
     <section class="panel lab-equipment-panel" aria-label="装备工作区">
-      <div class="lab-slot-picker"><div class="lab-slot-caption"><span>选择部位</span><span id="lab-equipped-count" class="count"></span></div>
-      <div id="lab-slot-buttons" class="lab-slot-buttons" role="group" aria-label="角色装备部位"></div></div>
-<article class="lab-editor" aria-labelledby="lab-slot-title"><div class="lab-selection">
-      <div class="lab-card-heading"><h3 id="lab-slot-title">主武器</h3><button id="lab-clear-slot" type="button" class="lab-small-button">卸下</button></div>
+<article class="lab-editor" id="lab-editor" aria-labelledby="lab-slot-title"><div class="lab-selection">
+      <div class="lab-card-heading"><h3 id="lab-slot-title">主武器</h3><a class="lab-back-to-model" href="#lab-character">返回人物 ↑</a><button id="lab-clear-slot" type="button" class="lab-small-button">卸下</button></div>
       <div class="lab-item-filters"><label><span class="sr-only">搜索当前部位的装备</span><input id="lab-item-search" type="search" placeholder="搜索名称或品质" autocomplete="off"></label><label><span class="sr-only">装备阶级</span><select id="lab-item-tier"><option value="all">全部阶级</option><option value="1">T1</option><option value="2">T2</option><option value="3">T3</option><option value="4">T4</option><option value="5">T5</option><option value="6">T6</option><option value="7">T7</option></select></label></div>
       <div class="lab-select-caption"><label for="lab-item-select">选择装备</label><small id="lab-item-count" role="status"></small></div>
       <div class="lab-item-picker"><button id="lab-item-prev" type="button" aria-label="换上上一件匹配的装备" title="上一件装备">‹</button><select id="lab-item-select"></select><button id="lab-item-next" type="button" aria-label="换上下一件匹配的装备" title="下一件装备">›</button></div>
@@ -84,7 +113,7 @@
       <details class="lab-field-help"><summary>属性怎么填写？</summary><p>留空使用默认值；百分比输入 20 即为 20%。图纸等级上限 3000，未解锁属性不可编辑；调整等级后默认属性自动重算，耐久不超过新上限。</p></details>
     </div></article>
     </section>
-    <aside class="panel lab-results-panel" aria-label="实时配装指标">
+    <div class="lab-side-column"><aside class="panel lab-results-panel" aria-label="实时配装指标">
       <div class="lab-card-heading"><h3>实时指标</h3><span class="badge">随换装更新</span></div>
       <div id="lab-main-metrics" class="lab-main-metrics" aria-live="polite"></div>
 
@@ -117,38 +146,11 @@
       <div id="lab-skills" class="lab-skills"></div><p id="lab-skill-note" class="mini-note"></p>
 
       </div></details>
-      <details class="lab-side-section lab-preview"><summary>角色试装 <small>二维预览 / 按需 3D</small></summary>
-<div class="lab-model-panel">
-
-      <button id="lab-avatar-open" type="button" class="lab-avatar-open" aria-controls="lab-avatar-canvas" aria-describedby="lab-avatar-status">打开 3D 试装</button>
-      <div class="lab-avatar-toolbar" hidden><label>人物外观<select id="lab-avatar-gender" aria-label="3D 人物外观"><option value="male">男性</option></select></label><button id="lab-avatar-front" type="button" class="lab-small-button">正面</button><button id="lab-avatar-back" type="button" class="lab-small-button">背面</button></div>
-      <div class="lab-mannequin">
-        <canvas id="lab-avatar-canvas" hidden aria-label="可拖动旋转、滚轮缩放的原版装备 3D 穿戴预览" tabindex="0"></canvas>
-        <svg id="lab-doll" viewBox="0 0 300 410" role="img" aria-label="可点击装备部位的二维人物模型">
-          <defs><linearGradient id="lab-figure-shade" x1="0" x2="1"><stop stop-color="var(--lab-figure-dark)"/><stop offset=".5" stop-color="var(--lab-figure-light)"/><stop offset="1" stop-color="var(--lab-figure-dark)"/></linearGradient></defs>
-          <ellipse cx="150" cy="388" rx="95" ry="11" fill="var(--lab-shadow)"/>
-          <g fill="url(#lab-figure-shade)" stroke="var(--lab-figure-line)" stroke-width="1.5">
-            <path d="M134 81h32l3 27-19 17-19-17z"/><path d="M132 107 99 118 112 184 124 227h52l12-43 13-66-33-11-18 16z"/>
-            <path d="m98 120-17 11-15 76 20 6 23-57zM201 120l17 11 16 76-20 6-23-57z"/>
-            <path d="m65 213-8 65 19 5 11-67zM215 216l11 67 18-5-9-65z"/>
-            <ellipse cx="67" cy="290" rx="11" ry="18"/><ellipse cx="236" cy="290" rx="11" ry="18"/>
-            <path d="m124 229-12 75 28 3 10-60 10 60 29-3-13-75zM112 312l-3 51h24l7-48zM160 315l7 48h24l-2-51z"/>
-            <path d="m110 360-12 18 4 9h36l-5-27zM167 360l-4 27h36l4-9-13-18z"/>
-            <ellipse cx="150" cy="58" rx="29" ry="35"/><path d="M141 74h18" fill="none"/>
-          </g>
-          <g fill="none" stroke="var(--line)" stroke-dasharray="3 5"><path d="M45 89h62M193 89h62M39 162h56M206 162h55M42 261h52M202 261h58"/></g>
-          <g id="lab-doll-images"></g>
-        </svg>
-        <span id="lab-avatar-hint" class="lab-model-caption">点击部位 · 二维装备预览</span>
-      </div>
-      <div class="lab-avatar-actions" hidden><button id="lab-avatar-zoom-in" type="button" class="lab-small-button" aria-label="放大人物">＋ 放大</button><button id="lab-avatar-zoom-out" type="button" class="lab-small-button" aria-label="缩小人物">－ 缩小</button><button id="lab-avatar-reset" type="button" class="lab-small-button">重置视角</button></div>
-      <p id="lab-avatar-status" class="lab-avatar-status mini-note" role="status" aria-live="polite">二维配装已就绪。需要查看装备外观时，再打开 3D 试装（首次约 11 MB）。</p>
-      <details class="lab-avatar-notes"><summary>试装显示说明</summary><p id="lab-avatar-coverage" class="mini-note">3D 模型按需载入；二维配装、比较与对战无需等待模型下载。</p><p class="mini-note">这是静态试装，不运行游戏动作或战斗动画。没有独立可见模型的饰品不会伪造外观；不能使用 WebGL 的环境保留明确标注的二维部位示意。</p></details>
-    </div>
-      </details>
+      <details class="lab-side-section lab-avatar-notes"><summary>试装显示说明</summary><p id="lab-avatar-coverage" class="mini-note">首次打开 3D 约需下载 11 MB；人物示意与配装操作无需等待。</p><p class="mini-note">这是静态试装，不运行游戏动作或战斗动画。没有独立可见模型的饰品不会伪造外观；不能使用 WebGL 的环境保留明确标注的二维部位示意。</p></details>
       <details class="lab-side-section"><summary>对照与配装提示</summary><div id="lab-compare-summary" class="mini-note"></div></details>
       <div id="lab-build-warnings" class="lab-notes"></div>
     </aside>
+    </div>
   </div>
 
   <article class="panel lab-arena lab-space" id="lab-arena">

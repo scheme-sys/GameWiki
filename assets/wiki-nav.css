@@ -62,3 +62,18 @@ body dialog, body dialog[class] { border-radius: 0; }
 
 /* Rectangular search frames across the player-facing Wiki themes. */
 body input[type="search"], body .search-field, body .search-wrap, body .search-box, body .global-search { border-radius: 0; }
+
+/* Keep the shared navigation legible and its touch targets predictable. */
+.atlas-nav .atlas-menu a { line-height:1.6; }
+@media (pointer:coarse) {
+  .atlas-nav .atlas-home,
+  .atlas-nav .atlas-switch summary,
+  .atlas-nav .atlas-pages a { min-height:44px; }
+}
+
+@media (min-width:761px) and (max-width:1100px) {
+  .atlas-nav { column-gap:12px; padding-inline:24px; }
+  .atlas-nav .atlas-pages a { padding-inline:8px; }
+  .atlas-nav .atlas-branding { gap:10px; }
+  .atlas-nav .atlas-switch summary { gap:8px; padding-left:0; }
+}

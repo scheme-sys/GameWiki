@@ -454,3 +454,11 @@ dialog::backdrop{background:#070d10d9;backdrop-filter:blur(6px)}
 @media(max-width:360px){.masthead{padding-inline:18px;min-height:459px}.masthead h1{font-size:51px}.cover-description{font-size:10px}.cover-eyebrow{font-size:6px}.cover-subtitle{font-size:19px}.cover-subtitle>span{font-size:9px}.intro h2{font-size:21px}.collection-stats b{font-size:18px}.collection-stats{gap:8px}.collection-stats span+span{padding-left:8px}.item-card{padding:15px}.card-top{gap:11px}.image-tile{width:71px;height:71px;flex-basis:71px}.item-card h3{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media print{.masthead,.atlas-nav,.topnav,.sidebar,.search-row,.view-switch,.pagination{display:none!important}body{background:#fff;color:#000}.workspace{display:block;padding:0}.item-card{break-inside:avoid;box-shadow:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Comfortable touch targets within the mobile catalogue. */
+@media (max-width:780px) {
+  .sidebar-heading .text-button { min-height:44px; padding:8px 0 8px 12px; }
+  .category-button,.filter-panel select { min-height:44px; }
+  .view-switch button,.pagination button { min-width:44px; min-height:44px; }
+  #detail .close { width:44px; height:44px; min-width:44px; min-height:44px; }
+}

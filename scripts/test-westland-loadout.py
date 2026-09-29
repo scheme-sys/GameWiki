@@ -226,46 +226,85 @@ def filter_case(page, checks, evidence):
     checks.append("tier and search intersect, next/previous preserve search, outside-filter first/last and disabled boundaries/empty results")
 
 
+
 def focus_case(page, checks, evidence):
-    # Rerendering the equipment model must retain both the DOM keyboard target
-    # and the horizontal rail offset on a phone. Natural layout is used.
-    rail = page.locator("#lab-slot-buttons")
-    measurements = rail.evaluate("e=>({client:e.clientWidth,scroll:e.scrollWidth})")
-    if page.viewport_size["width"] < 600:
-        assert measurements["scroll"] > measurements["client"], measurements
+    stage = page.locator('.lab-dress-stage')
+    expect(stage).to_be_visible()
+    expect(page.locator('#lab-doll')).to_be_visible()
+    expect(page.locator('#lab-avatar-open')).to_be_visible()
+    expect(page.locator('#lab-avatar-canvas')).to_be_hidden()
+    expect(page.locator('#lab-avatar-mode')).to_contain_text(chr(20108) + chr(32500))
+    assert page.locator('.lab-dress-stage #lab-slot-buttons [data-lab-slot]').count() == 9
+    assert not page.locator('#lab-doll').evaluate("e=>!!e.closest('details:not([open])')")
+    for button in page.locator('#lab-slot-buttons [data-lab-slot]').all():
+        expect(button).to_be_visible()
+
+    def geometry():
+        return page.evaluate("""() => {
+          const header=document.querySelector('.top').getBoundingClientRect();
+          const rect=selector=>{const b=document.querySelector(selector).getBoundingClientRect();return {top:b.top,bottom:b.bottom,left:b.left,right:b.right,width:b.width,height:b.height}};
+          return {y:scrollY,height:innerHeight,headerBottom:header.top<=0?header.bottom:0,
+            title:rect('#lab-slot-title'),select:rect('#lab-item-select'),model:rect('#lab-doll'),
+            stage:rect('.lab-dress-stage')};
+        }""")
+
+    def assert_editor_reveal(before, after):
+        for key in ['title', 'select']:
+            box = after[key]
+            assert box['top'] >= after['headerBottom'] - 1 and box['bottom'] <= after['height'] + 1, (key, before, after)
+        top = min(before['title']['top'], before['select']['top'])
+        bottom = max(before['title']['bottom'], before['select']['bottom'])
+        needed = bottom - before['height'] if bottom > before['height'] else top - before['headerBottom'] if top < before['headerBottom'] else 0
+        actual = after['y'] - before['y']
+        # Permit a small breathing margin; forbid jumping to the editor's top
+        # when merely exposing the select would retain the visible character.
+        assert abs(actual) <= abs(needed) + 32, (needed, actual, before, after)
+        if needed == 0 and top >= before['headerBottom'] + 12 and bottom <= before['height'] - 12:
+            assert abs(actual) <= 1, (before, after)
+        model = before['model']
+        possible = max(0, min(model['bottom'] - needed, before['height']) - max(model['top'] - needed, before['headerBottom']))
+        visible = max(0, min(after['model']['bottom'], after['height']) - max(after['model']['top'], after['headerBottom']))
+        if possible > 32:
+            assert visible > 0, (possible, visible, before, after)
+        return {'minimal_needed_px': needed, 'actual_scroll_px': actual, 'model_visible_px': visible, 'before': before, 'after': after}
+
+    mobile = page.viewport_size['width'] < 600
     button = page.locator('#lab-slot-buttons [data-lab-slot="ring2"]')
     button.focus()
-    rail.evaluate("e=>e.scrollLeft=(e.scrollWidth-e.clientWidth)*0.72")
-    before = rail.evaluate("e=>e.scrollLeft")
-    page.keyboard.press("Enter")
-    assert page.evaluate("document.activeElement?.dataset.labSlot") == "ring2"
-    after = rail.evaluate("e=>e.scrollLeft")
-    assert abs(after - before) <= 1, (before, after)
-    expect(page.locator('#lab-slot-buttons [data-lab-slot="ring2"]')).to_have_attribute("aria-pressed", "true")
-    open_details(page, ".lab-preview")
+    if mobile:
+        page.evaluate('scrollBy(0,-Math.min(140,scrollY))')
+    before = geometry()
+    page.keyboard.press('Enter')
+    assert page.evaluate("document.activeElement?.dataset.labSlot") == 'ring2'
+    expect(page.locator('#lab-slot-buttons [data-lab-slot="ring2"]')).to_have_attribute('aria-pressed', 'true')
+    if mobile:
+        expect(page.locator('#lab-slot-title')).to_be_in_viewport()
+        evidence['slot_pick_geometry'] = assert_editor_reveal(before, geometry())
+
     doll = page.locator('#lab-doll [data-lab-slot="head"]')
     doll.focus()
-    page.keyboard.press("Space")
-    assert page.evaluate("document.activeElement?.closest('#lab-slot-buttons')?.id") == "lab-slot-buttons"
-    expect(page.locator("#lab-slot-title")).to_be_in_viewport()
-    geometry = page.evaluate("""() => {
-      const header=document.querySelector('.top').getBoundingClientRect();
-      const rect=selector=>{const b=document.querySelector(selector).getBoundingClientRect();return {top:b.top,bottom:b.bottom,left:b.left,right:b.right,width:b.width,height:b.height}};
-      return {height:innerHeight,headerBottom:header.top<=0?header.bottom:0,
-        title:rect('#lab-slot-title'),select:rect('#lab-item-select'),rail:rect('#lab-slot-buttons'),
-        selected:rect('#lab-slot-buttons [data-lab-slot="head"]')};
-    }""")
-    for key in ['title', 'select']:
-        box = geometry[key]
-        assert box['top'] >= geometry['headerBottom'] - 1 and box['bottom'] <= geometry['height'] + 1, (key, geometry)
-    assert geometry['selected']['left'] >= geometry['rail']['left'] - 1
-    assert geometry['selected']['right'] <= geometry['rail']['right'] + 1
-    evidence['model_reveal_geometry'] = geometry
-
-    assert page.evaluate("document.activeElement?.dataset.labSlot") == "head"
-    expect(page.locator('#lab-slot-buttons [data-lab-slot="head"]')).to_have_attribute("aria-pressed", "true")
-    evidence["slot_rail"] = {**measurements, "before": before, "after": after}
-    checks.append("slot button Enter retains focus and rail offset; SVG Space reveals the editor and focuses its matching slot button")
+    if mobile:
+        page.evaluate('scrollBy(0,-Math.min(140,scrollY))')
+    before = geometry()
+    page.keyboard.press('Space')
+    assert page.evaluate("document.activeElement?.closest('#lab-slot-buttons')?.id") == 'lab-slot-buttons'
+    assert page.evaluate("document.activeElement?.dataset.labSlot") == 'head'
+    expect(page.locator('#lab-slot-buttons [data-lab-slot="head"]')).to_have_attribute('aria-pressed', 'true')
+    expect(page.locator('#lab-slot-title')).to_be_in_viewport()
+    evidence['model_pick_geometry'] = assert_editor_reveal(before, geometry())
+    if mobile:
+        assert evidence['model_pick_geometry']['minimal_needed_px'] > 0, 'The mobile regression must exercise a real offscreen editor reveal'
+    if mobile:
+        back = page.locator('a.lab-back-to-model')
+        expect(back).to_have_attribute('href', '#lab-character')
+        back.click()
+        expect(page.locator('#lab-doll')).to_be_in_viewport(ratio=0.35)
+        expect(page.locator('#lab-avatar-open')).to_be_visible()
+        evidence['return_to_character_geometry'] = geometry()
+    checks.append('character and 9 surrounding slots stay visible without opening a disclosure; 3D stays explicitly opt-in')
+    checks.append('slot Enter and model Space retain matching slot focus; selection scrolls only enough to reveal editor and keeps character visible where possible')
+    if mobile:
+        checks.append('mobile return-to-character link reaches the persistent character stage')
 
 
 def battle_io_case(page, checks, evidence):

@@ -247,6 +247,9 @@
     if(!status||!canvas||!fallback)return;
     const stateName=result?.state||'loading',failed=stateName==='error'||stateName==='fallback',downloading=stateName==='downloading';
     const show3d=!failed&&!downloading;
+    const mode=$('lab-avatar-mode'),character=root.querySelector('.lab-character');
+    if(mode)mode.textContent=failed?'二维示意':stateName==='ready'?'3D试装':'载入中';
+    if(character)character.dataset.avatarState=stateName;
     status.dataset.state=stateName;status.textContent=result?.message||'正在准备 3D 预览。';
     canvas.hidden=!show3d;fallback.hidden=show3d;fallback.style.display=show3d?'none':'';
     $('lab-avatar-hint').textContent=show3d?'拖动旋转 · 滚轮缩放':'点击部位 · 二维装备预览';
@@ -351,24 +354,31 @@
     const index=current<0?(direction>0?0:list.length-1):current+direction;
     if(index>=0&&index<list.length)selectItem(list[index].id);
   }
+  function revealSlotEditor(){
+    const select=$('lab-item-select'),title=$('lab-slot-title');
+    if(!select||!title)return;
+    const field=select.getBoundingClientRect(),heading=title.getBoundingClientRect();
+    if(!field.height||!heading.height)return;
+    const viewport=window.visualViewport,viewportTop=viewport?.offsetTop||0;
+    const header=document.querySelector('.top')?.getBoundingClientRect();
+    const top=Math.max(viewportTop,header&&header.top<=viewportTop+1?header.bottom:viewportTop)+12;
+    const bottom=viewportTop+(viewport?.height||innerHeight)-12;
+    const targetTop=Math.min(field.top,heading.top),targetBottom=Math.max(field.bottom,heading.bottom);
+    // Move only far enough to reveal the selected equipment, retaining the stage above it.
+    const fits=targetBottom-targetTop<=bottom-top;
+    const start=fits?targetTop:field.top,end=fits?targetBottom:field.bottom;
+    const distance=end>bottom?end-bottom:start<top?start-top:0;
+    if(Math.abs(distance)>1){
+      const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';
+      window.scrollBy({top:distance,behavior});
+    }
+  }
   function selectSlot(slot,reveal=false){
     if(!Object.hasOwn(NAMES,slot))return;
     if(slot!==activeSlot){$('lab-item-search').value='';if($('lab-item-tier'))$('lab-item-tier').value='all';}
     activeSlot=slot;renderModel();renderEditor();
-    if(reveal){
-      const button=$('lab-slot-buttons').querySelector('[data-lab-slot="'+slot+'"]');
-      const selection=root.querySelector('.lab-selection'),picker=root.querySelector('.lab-slot-picker'),strip=$('lab-slot-buttons');
-      const bounds=selection?.getBoundingClientRect(),header=document.querySelector('.top')?.getBoundingClientRect();
-      const coveredTop=header&&header.top<=0?header.bottom:0;
-      const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';
-      button?.focus({preventScroll:true});
-      if(button){
-        const buttonBox=button.getBoundingClientRect(),railBox=strip.getBoundingClientRect();
-        if(buttonBox.left<railBox.left)strip.scrollLeft+=buttonBox.left-railBox.left;
-        else if(buttonBox.right>railBox.right)strip.scrollLeft+=buttonBox.right-railBox.right;
-      }
-      if(bounds&&(bounds.top<coveredTop||bounds.bottom>innerHeight))picker?.scrollIntoView({block:'start',behavior});
-    }
+    if(reveal)$('lab-slot-buttons').querySelector('[data-lab-slot="'+slot+'"]')?.focus({preventScroll:true});
+    revealSlotEditor();
   }
   function patchItemStats(markup){
     const host=$('lab-item-stats'),template=document.createElement('template');

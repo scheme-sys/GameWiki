@@ -41,3 +41,18 @@
   .site-stats .site-stats-panel { width: 242px; }
   .atlas-nav .site-stats .site-stats-panel { left: -40px; }
 }
+
+/* Anchor narrow-screen disclosures to the navigation, not the right-edge counter. */
+@media (max-width:760px) {
+  .atlas-nav .site-stats,
+  .atlas-nav .site-stats .site-stats-disclosure { position:static; }
+  .atlas-nav .site-stats .site-stats-panel {
+    left:auto; right:18px; top:calc(100% + 6px);
+    max-width:calc(100vw - 36px);
+  }
+  .atlas-nav .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:hover::after,
+  .atlas-nav .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:focus-visible::after {
+    left:auto; right:18px; top:calc(100% + 6px); max-width:calc(100vw - 36px);
+  }
+}
+@media (pointer:coarse) { .site-stats .site-stats-summary { min-height:44px; } }

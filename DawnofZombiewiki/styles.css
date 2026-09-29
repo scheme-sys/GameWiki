@@ -242,3 +242,25 @@ main { scroll-margin-top: 90px; }
 @media(max-width:800px) and (max-height:450px) { .sidebar { padding-top: 10px; padding-bottom: 10px; }.sidebar-caption,.sidebar-bottom { display: none; }.sidebar-brand { padding-bottom: 8px; }.nav-group { margin-top: 12px; }.topbar { height: 62px; } }
 @media(prefers-reduced-motion:reduce) { *,*:before,*:after { transition: none !important; scroll-behavior: auto !important; } }
 @media print { .sidebar,.topbar,.compare-tray,.card-save,footer { display: none; }.wiki-shell { display: block; } }
+/* Precise toolbar edges; material names and download actions remain legible. */
+.filter-panel,.filter-row input,.filter-row select,.global-search input,.icon-button,.compare-tray,.pagination button{border-radius:0}
+.dialog-top span{line-height:1.6}
+.detail-actions .secondary-button{min-height:44px}
+.table-scroll{scrollbar-width:thin;scrollbar-color:#486077 var(--panel)}
+.table-scroll th,.table-scroll td{overflow-wrap:anywhere}
+.materials-page main{max-width:1300px}
+.materials-page .media-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:0 0 20px}
+.materials-page .media-head .text-link{min-height:44px}
+.materials-page .media-tile{display:flex;flex-direction:column;min-width:0;border:1px solid var(--border);border-radius:6px;background:var(--panel);padding:12px}
+.materials-page .media-tile>a:first-child{display:block}
+.materials-page .media-tile img{display:block;height:155px;width:100%;object-fit:contain;background:repeating-conic-gradient(#232821 0 25%,#30372a 0 50%) 0/16px 16px}
+.materials-page .media-tile h3{font-size:14px;line-height:1.55;overflow-wrap:anywhere;color:var(--text);margin:13px 0 6px;font-weight:500}
+.materials-page .media-tile p{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 8px}
+.materials-page .media-tile a[download]{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;font-size:12px;line-height:1.6;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.materials-page .media-tile audio{width:100%;height:36px}
+@media(max-width:600px){
+ .materials-page .page-heading h1{font-size:27px}
+ .materials-page .media-head{gap:4px;padding-bottom:14px}
+ .materials-page .media-tile{padding:10px}
+ .materials-page .media-tile img{height:135px}
+}

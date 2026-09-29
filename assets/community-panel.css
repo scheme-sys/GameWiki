@@ -38,3 +38,18 @@ body dialog.lcz-community-dialog { box-sizing: border-box; color-scheme: dark; p
 }
 @media (prefers-reduced-motion: reduce) { .lcz-community-dialog[open] { animation: none; } }
 @media print { .lcz-community-footer, .lcz-community-dialog { display: none; } }
+
+@media (pointer:coarse) {
+  .lcz-community-trigger,.atlas-nav .lcz-community-trigger { min-height:44px; }
+}
+/* Retain the QR card's crop while keeping close/save visible in short viewports. */
+@media (max-height:600px) {
+  body dialog.lcz-community-dialog { padding:16px 20px; }
+  .lcz-community-dialog .lcz-community-heading { margin-bottom:10px; }
+  .lcz-community-dialog .lcz-community-image {
+    width:min(100%,calc((100vh - 180px) * .833333));
+    width:min(100%,calc((100dvh - 180px) * .833333));
+    margin-inline:auto;
+  }
+  .lcz-community-dialog [data-lcz-download] { margin-top:10px; }
+}
