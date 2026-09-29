@@ -83,7 +83,9 @@ GitHub 的设置说明见[使用自定义工作流部署 Pages](https://docs.git
 ```text
 index.html                    星图页面结构与无 JavaScript 备用链接
 404.html                      找不到页面时的返回入口
-assets/games.js                游戏中英名称、关键词、图标、链接与初始布局
+assets/games.js                游戏中英名称、关键词、图标、封面、链接与初始布局
+assets/game-covers/            六款游戏的轻量封面与来源说明
+scripts/build-game-covers.py   从保留的原图生成封面显示副本
 assets/portal.css              圆形气泡、介绍层与响应式布局
 assets/portal.js               拖动、悬停、长按、搜索与位置保存
 assets/bubble-physics.js       漂移、排斥与场景边界
@@ -106,7 +108,7 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 .github/workflows/pages.yml    GitHub Pages 发布工作流
 ```
 
-新增或调整游戏主要修改 `assets/games.js`。每个对象定义一个世界：稳定的 `id` 用于关联数据和保存位置；`image` 指向本地图标；`links` 定义百科和工具入口；`keywords` 定义搜索关键词；`position` 和 `size` 控制初始布局。主页气泡、搜索和目录从同一份配置生成。
+新增或调整游戏主要修改 `assets/games.js`。每个对象定义一个世界：稳定的 `id` 用于关联数据和保存位置；`image` 指向本地图标；`cover.image` 指向介绍卡封面，`cover.position` 设置裁切焦点；`links` 定义百科和工具入口；`keywords` 定义搜索关键词；`position` 和 `size` 控制初始布局。主页气泡、搜索和目录从同一份配置生成。
 
 添加游戏时：
 
@@ -121,6 +123,10 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 面向玩家的页面只展示可读名称、属性与玩法说明。维护数据和发布数据仅保留玩家资料及网站需要的稳定 ID、关联关系、本地图片路径、统计键和模型映射。未用的游戏函数引用、内部类名、原始配置和提取路径从文件中清除，而非仅在界面隐藏。已有收藏、关联查询和分享链接继续使用稳定 ID；未翻译的名称标注为待补充。清理范围和维护规则见 [数据清理说明](docs/player-data.md)。
 
 各游戏的大图和数据库独立于 HTML 存放，并按浏览需求分批读取。Craft 使用轻索引与详情块；Day R 在访问战斗单位资料时加载怪物数据；Westland 首屏使用精简目录，3D 试装在主动打开后加载；Dawn 按分类、详情、配方分页和栏目读取分片；LDOE 首页使用摘要，分类、详情、配方关联与完整搜索分别按需读取；Grim Soul 按分类、完整搜索、摘要与详情块加载。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
+
+首页介绍卡只在首次悬停或长按相应游戏时加载该游戏的封面；原图来源、尺寸与摘要见 [封面维护说明](assets/game-covers/README.md)。Craft 与 Westland 的 Wiki 首页和介绍卡共享各自的专属封面。运行 `python scripts/build-game-covers.py` 可重新生成六张压缩显示图，需要 Pillow；`assets/game-covers/originals/` 只用于维护，不进入 Pages。
+
+`craftsurvival/` 是临时本地素材来源，已从 Git 提交与 Pages 发布范围排除。不要修改原目录，不要让页面直接引用其中的文件；选用图片须复制到正式资源目录并记录来源。移走这个目录不会影响运行页面或封面生成流程。本次核对的四种货币图标与 `Craft of Survival/wiki-assets/icons/` 中现有副本完全一致，页面直接复用这些独立图片，没有重复引入原目录。
 
 详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)、[Last Day on Earth](LDOE_Wiki/README.md)、[Grim Soul](grimsoul_Wiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
 

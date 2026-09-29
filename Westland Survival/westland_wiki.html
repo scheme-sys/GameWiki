@@ -6,9 +6,10 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://cdn.busuanzi.cc; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#263a32">
-<title>Westland Survival · 西部生存百科</title>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141819">
+<title>Westland Survival · 西部生存玩家百科</title>
+<meta name="description" content="Westland Survival 西部生存玩家百科：查阅武器、装备、材料、宠物与坐骑，了解物品属性、制作配方和成长数据。">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 <link rel="stylesheet" href="wiki-assets/wiki/wiki.css">
   <link rel="stylesheet" href="../assets/wiki-nav.css">
@@ -42,8 +43,14 @@
 </nav>
 <a class="skip-link" href="#main">跳到物品目录</a>
 <header class="masthead">
-  <a class="brand" href="#items" aria-label="西部生存百科首页"><span class="brand-mark" aria-hidden="true">W</span><span><b>WESTLAND SURVIVAL</b><span class="brand-cn">西部生存百科</span></span></a>
-  <div class="edition"><span class="online-dot"></span>离线珍藏版<span class="edition-version">游戏数据 12.0.1 / r14</span></div>
+  <div class="cover-art" aria-hidden="true"><img src="../assets/game-covers/westland.webp" width="1440" height="600" alt="" decoding="async" fetchpriority="high"></div>
+  <div class="masthead-copy">
+    <p class="cover-eyebrow"><span aria-hidden="true"></span> THE FRONTIER FIELD GUIDE <span class="cover-edition">资料版本 12.0.1 / r14</span></p>
+    <h1><a class="brand" href="#items" aria-label="西部生存百科首页">Westland<br><span>Survival.</span></a></h1>
+    <p class="cover-subtitle">西部生存<span>玩家百科</span></p>
+    <p class="cover-description">荒野之中，每一次准备都值得。<br>查阅武器装备、物资与伙伴，写下属于你的西部故事。</p>
+    <a class="cover-action" href="#main">探索生存图鉴 <span aria-hidden="true">↗</span></a>
+  </div>
 </header>
 <nav class="topnav" aria-label="百科分区" id="topnav">
   <button data-domain="items" class="active">物品图鉴 <span id="navItemCount"></span></button>
@@ -61,20 +68,20 @@
       <div class="filter-pair"><div><label class="filter-label" for="tier">物品阶级</label><select id="tier"><option value="all">全部阶级</option></select></div><div><label class="filter-label" for="rarity">稀有度</label><select id="rarity"><option value="all">全部品质</option></select></div></div>
       <label class="filter-label" for="sort">排列方式</label><select id="sort"><option value="default">按图鉴分类</option><option value="name">名称 · 拼音顺序</option><option value="tier-desc">阶级 · 从高到低</option><option value="rarity">稀有度 · 从高到低</option></select>
     </div>
-    <div class="sidebar-note"><b>随手可查的西部手册</b><p>按名称或用途搜索。打开条目，即可查看属性、使用效果与相关资料。</p><span>所有图片与数值均可离线查看</span></div>
+    <div class="sidebar-note"><b>随手可查的西部手册</b><p>按名称或用途搜索。打开条目，即可查看属性、使用效果与相关资料。</p><span>物品 · 装备 · 荒野伙伴</span></div>
   </aside>
   <main id="main" class="main" tabindex="-1">
-    <section class="intro"><div class="kicker">THE FRONTIER FIELD GUIDE</div><div class="intro-heading"><h1 id="pageTitle">每一件物品，都有据可查。</h1><span class="volume">VOL. 01</span></div><p id="pageDescription">从一根松木到一把左轮，查找物品、了解用途，出发前心中有数。</p><div class="collection-stats" id="collectionStats"></div></section>
+    <section class="intro"><div class="kicker">THE FRONTIER FIELD GUIDE</div><div class="intro-heading"><h2 id="pageTitle">每一件物品，都有据可查。</h2></div><p id="pageDescription">从一根松木到一把左轮，查找物品、了解用途，出发前心中有数。</p><div class="collection-stats" id="collectionStats"></div></section>
     <div class="search-row"><div class="search-box"><span class="search-icon" aria-hidden="true"></span><label class="sr-only" for="search">搜索图鉴</label><input id="search" type="search" placeholder="搜索物品名称或用途…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div><button id="searchAll" class="secondary-button">全站搜索</button></div>
     <div class="results-toolbar"><div><h2 id="sectionTitle">全部物品</h2><p id="resultCount" role="status" aria-live="polite">正在打开物品目录…</p></div><div class="view-switch" aria-label="显示方式"><button id="gridMode" class="active" aria-label="卡片视图" aria-pressed="true">▦ <span>卡片</span></button><button id="tableMode" aria-label="列表视图" aria-pressed="false">☷ <span>列表</span></button></div></div>
     <div id="activeFilters" class="active-filters"></div>
     <div id="view"><div class="loading-preview" aria-hidden="true"><span></span><span></span><span></span></div></div><nav id="pagination" class="pagination" aria-label="结果分页"></nav>
-    <footer class="footer"><span class="footer-brand">WESTLAND FIELD NOTES</span><p>资料依据本地 12.0.1 / r14 游戏定义整理，包含活动及旧版实体物品。条目存在不代表当前活动开放或物品仍可获取。</p><p id="coverageNote"></p><span>游戏图像与原始内容归各自权利人所有。</span></footer>
+    <footer class="footer"><span class="footer-brand">WESTLAND FIELD NOTES</span><p>资料版本 12.0.1 / r14，包含活动及旧版物品。条目存在不代表当前活动开放或物品仍可获取。</p><p id="coverageNote"></p><span>游戏图像与原始内容归各自权利人所有。</span></footer>
   </main>
 </div>
 <dialog id="detail" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog>
 
-<noscript><p class="notice">请开启浏览器的 JavaScript，以查看和搜索离线图鉴。</p></noscript>
+<noscript><p class="notice">请开启浏览器的 JavaScript，以查看和搜索游戏图鉴。</p></noscript>
 <script src="wiki-assets/lazy-manifest.js"></script>
 <script src="wiki-assets/lazy-loader.js"></script>
 <script src="wiki-assets/wiki/data/bootstrap.js"></script>

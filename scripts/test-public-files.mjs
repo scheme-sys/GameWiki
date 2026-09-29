@@ -179,3 +179,32 @@ test('Every shared game switcher includes all registered games', () => {
   result = check(root);
   assert.equal(result.status, 0, result.stdout + result.stderr);
 });
+
+test('Registry cover images must exist in the published assets', () => {
+  const root = fixture('cover-image');
+  write(root, 'assets/games.js', 'window.ORBIT_GAMES=[{id:"dawn",name:"Dawn",image:"assets/icon.svg",cover:{image:"assets/game-covers/dawn.webp",position:"45% 40%"},links:[{href:"DawnofZombiewiki/index.html"}]}];');
+  let result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource assets\/game-covers\/dawn.webp/);
+  write(root, 'assets/game-covers/dawn.webp', 'fixture cover');
+  result = check(root);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+});
+
+test('Raw Craft source folder and cover originals never enter the public artifact', () => {
+  for (const name of ['craftsurvival/index.html', 'craftsurvival/assets/image.png',
+    'assets/game-covers/originals/craft.jpg', 'assets/game-covers/originals/westland.png']) {
+    assert.equal(isPublicFile(name), false, name);
+  }
+  assert.equal(isPublicFile('assets/game-covers/craft.webp'), true);
+  const root = fixture('cover-originals');
+  write(root, 'assets/game-covers/originals/craft.jpg', 'maintenance original');
+  write(root, 'assets/game-covers/craft.webp', 'display image');
+  write(root, 'craftsurvival/index.html', '<p>source only</p>');
+  const output = path.join(workspace, 'cover-originals-published');
+  const result = check(root, '--stage', output);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.equal(fs.existsSync(path.join(output, 'assets/game-covers/originals')), false);
+  assert.equal(fs.existsSync(path.join(output, 'craftsurvival')), false);
+  assert.equal(fs.existsSync(path.join(output, 'assets/game-covers/craft.webp')), true);
+});

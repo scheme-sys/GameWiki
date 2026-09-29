@@ -24,6 +24,8 @@ export function isPublicFile(relativePath) {
   const relative = relativePath.split(path.sep).join('/');
   const parts = relative.split('/');
   if (parts.some((part) => !part || part.startsWith('.'))) return false;
+  if (relative.startsWith('craftsurvival/')) return false;
+  if (relative.startsWith('assets/game-covers/originals/')) return false;
   if (relative.startsWith('grimsoul_Wiki/')) {
     const local = relative.slice('grimsoul_Wiki/'.length);
     return grimRuntimeFiles.has(local) ||

@@ -161,6 +161,7 @@ function checkCss(css, source) {
 const registry = path.join(root, 'assets', 'games.js');
 for (const game of games) {
   checkReference(game.image, registry, root);
+  if (game.cover?.image) checkReference(game.cover.image, registry, root);
   for (const link of game.links) checkReference(link.href, registry, root);
 }
 

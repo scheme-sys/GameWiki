@@ -149,13 +149,31 @@
   function populateCurrencies() {
     const grid = $("currency-grid");
     const fragment = document.createDocumentFragment();
+    // Reuse the original catalog images without loading full item data blocks.
+    const currencyIcons = {
+      77: "wiki-assets/icons/000493.png",
+      2286: "wiki-assets/icons/004476.png",
+      2337: "wiki-assets/icons/003383.png",
+      3388: "wiki-assets/icons/004818.png",
+    };
     for (const currency of data.currencies) {
       const card = document.createElement("article");
       card.className = "currency-card";
-      card.append(
-        text("span", currency.label),
-        text("strong", currency.title),
-      );
+      const copy = document.createElement("div");
+      copy.className = "currency-copy";
+      copy.append(text("span", currency.label), text("strong", currency.title));
+      card.append(copy);
+      if (currencyIcons[currency.articleId]) {
+        const image = document.createElement("img");
+        image.className = "currency-icon";
+        image.alt = "";
+        image.width = 64;
+        image.height = 64;
+        image.loading = "lazy";
+        image.decoding = "async";
+        image.src = currencyIcons[currency.articleId];
+        card.append(image);
+      }
       fragment.append(card);
     }
     grid.replaceChildren(fragment);

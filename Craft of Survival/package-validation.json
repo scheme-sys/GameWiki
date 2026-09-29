@@ -7471,8 +7471,8 @@
     {
       "path": "wiki-assets/wiki-app.js",
       "hashMode": "utf8-lf",
-      "bytes": 18477,
-      "sha256": "d41ad0ab79dc75b47c8349c8bb531a3d54b5ece80296ccf6dfa350b494d4e8d9"
+      "bytes": 19233,
+      "sha256": "b2a26f87904d0e409db5f15790f0e5b0151b8dec2091473de41d00329f900d42"
     },
     {
       "path": "wiki-assets/wiki-data.js",
@@ -7489,14 +7489,14 @@
     {
       "path": "wiki-assets/wiki.css",
       "hashMode": "utf8-lf",
-      "bytes": 19344,
-      "sha256": "75404c563628d312358f33c239eb60503eb43fd609a5c4e510239999f464929e"
+      "bytes": 21819,
+      "sha256": "abc9dfb72aa7580dcd8e47e68bde69518691ac5febb24ddc62175a226e0b6b21"
     },
     {
       "path": "wiki.html",
       "hashMode": "utf8-lf",
-      "bytes": 8804,
-      "sha256": "17617319967b3808efd949f9db978ed892eede15edc58e779e8f533f38d7e960"
+      "bytes": 8518,
+      "sha256": "41db3eee52636a4f728acdf22680aee474a1c7af0ae943e1480d418f5aef750a"
     }
   ]
 }

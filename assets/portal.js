@@ -5,6 +5,8 @@
   const $ = (selector) => document.querySelector(selector);
   const universe = $('#game-universe');
   const info = $('#game-info');
+  const infoCover = $('#info-cover');
+  let coverVersion = 0;
   const search = $('#search-dialog');
   const community = $('#community-dialog');
   const dialogs = [search, community];
@@ -154,9 +156,32 @@
       node.querySelector('a').setAttribute('aria-expanded', String(key === id));
     }
   }
+  function setInfoCover(game) {
+    const version = ++coverVersion;
+    const source = game.cover?.image || game.image;
+    const expected = new URL(source, document.baseURI).href;
+    info.dataset.coverState = 'loading';
+    infoCover.style.objectPosition = game.cover?.position || '50% 50%';
+    const reveal = async () => {
+      if (!infoCover.naturalWidth || infoCover.currentSrc !== expected) return;
+      // Decode without delaying the card, then ignore a superseded selection.
+      try { await infoCover.decode(); } catch { /* The neutral background remains usable. */ }
+      if (version === coverVersion && infoCover.currentSrc === expected && infoCover.naturalWidth) {
+        info.dataset.coverState = 'ready';
+      }
+    };
+    infoCover.onload = reveal;
+    infoCover.onerror = () => {
+      if (version === coverVersion) info.dataset.coverState = 'unavailable';
+    };
+    if (infoCover.getAttribute('src') !== source) infoCover.src = source;
+    if (infoCover.complete && infoCover.naturalWidth) reveal();
+  }
+
   function revealInfo(id, touch, from) {
     const game = GAMES.find((entry) => entry.id === id);
     if (previewGame !== id || info.hidden) {
+      setInfoCover(game);
       $('#info-title').textContent = game.nameZh;
       $('#info-icon').src = game.image;
       info.style.setProperty('--preview-color', game.color);

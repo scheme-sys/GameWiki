@@ -192,10 +192,10 @@ def drift_and_hover(page):
 
 def quiet_sky_motion(page, context):
     load(page)
-    assert page.locator('.constellations .star-points circle').count()==60
+    assert page.locator('.constellations .star-points circle').count()==108
     clusters=page.locator('.constellations .sky-cluster')
     expect(clusters).to_have_count(2)
-    assert sum(path.count('M') for path in page.locator('.star-lines path').evaluate_all('paths=>paths.map(p=>p.getAttribute("d"))'))==12
+    assert sum(path.count('M') for path in page.locator('.star-lines path').evaluate_all('paths=>paths.map(p=>p.getAttribute("d"))'))==20
     def state():
         return clusters.evaluate_all('nodes=>nodes.map(n=>({transform:getComputedStyle(n).transform,opacity:getComputedStyle(n).opacity,play:getComputedStyle(n).animationPlayState,animations:n.getAnimations().map(a=>({state:a.playState,duration:a.effect.getTiming().duration}))}))')
     before=state();page.wait_for_timeout(1200);after=state()
@@ -276,6 +276,41 @@ def popover_transition_races(page, context):
     assert info.evaluate('(e)=>e.getAnimations().length')==0
     assert info.evaluate('(e)=>+getComputedStyle(e).opacity')==1
     page.mouse.move(2,2);expect(info).to_be_hidden()
+
+
+
+def lazy_popover_covers(page, context, mobile=False):
+    load(page)
+    pause(page)
+    cover_requests=lambda:page.evaluate("performance.getEntriesByType('resource').map(r=>r.name).filter(u=>u.includes('/assets/game-covers/'))")
+    assert cover_requests()==[], 'Home must not preload hover covers'
+    cdp=context.new_cdp_session(page) if mobile else None
+    for index,game in enumerate(GAME_IDS):
+        if mobile:
+            x,y=icon_center(page,game)
+            touch(cdp,'touchStart',[(x,y)])
+            page.wait_for_timeout(650)
+            touch(cdp,'touchEnd')
+        else:
+            page.mouse.move(*icon_center(page,game))
+        info=page.locator('#game-info')
+        expect(info).to_be_visible()
+        expect(info).to_have_attribute('data-cover-state','ready')
+        cover=page.locator('#info-cover')
+        assert cover.evaluate('(img)=>img.complete&&img.naturalWidth>0')
+        assert cover.evaluate('(img)=>img.currentSrc').endswith('/assets/game-covers/'+game+'.webp')
+        assert cover.evaluate('(img)=>getComputedStyle(img).objectFit')=='cover'
+        assert page.locator('.popover-art').get_attribute('aria-hidden')=='true'
+        assert len(set(cover_requests()))==index+1, 'Only visited game covers should load'
+        frame=info.bounding_box()
+        assert frame['x']>=0 and frame['y']>=0 and frame['x']+frame['width']<=page.viewport_size['width']+1
+        assert frame['y']+frame['height']<=page.viewport_size['height']+1
+        assert info.evaluate('(e)=>getComputedStyle(e).borderTopLeftRadius')=='0px'
+        screenshot(page,('cover-touch-' if mobile else 'cover-mouse-')+game)
+        page.locator('#info-close').click()
+        expect(info).to_be_hidden()
+        if not mobile:page.mouse.move(2,2)
+    if cdp:cdp.detach()
 
 
 def desktop_drag(page):
@@ -662,8 +697,10 @@ try:
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
         run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
         run_case("Two quiet star groups drift, pause and respect reduced motion", quiet_sky_motion)
-        run_case("Mobile animated sky keeps 60 stars inexpensive and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
+        run_case("Mobile animated sky keeps 108 stars inexpensive and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
         run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
+        run_case("Wiki cover backgrounds load only for hovered games", lazy_popover_covers)
+        run_case("Wiki cover backgrounds fit long-press cards at 320px", lambda page,context:lazy_popover_covers(page,context,True), width=320,height=568,mobile=True)
         run_case("Mouse drag, anchor persistence, keyboard and Escape", lambda page, _: desktop_drag(page))
         run_case("Mouse may overlap during drag then eases apart on release", overlap_then_release)
         run_case("Touch may overlap during drag then eases apart on release", lambda page, context: overlap_then_release(page, context, True), width=390, height=844, mobile=True)
