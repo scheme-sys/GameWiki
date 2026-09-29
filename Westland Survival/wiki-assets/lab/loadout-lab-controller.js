@@ -33,6 +33,7 @@
   let state,reference=null,activeSlot='weapon',lastReport=null,busy=false,runToken=0,saveTimer=0,configRevision=0,importToken=0;
   let playerView,enemyView,gearView={},storeAvailable=true;
   let avatarPreview=null,avatarAttempted=false,avatarGender='male',avatarSelectionKey='',avatarThemeObserver=null;
+  let avatarResourcesReady=false,avatarLoading=null;
   function statText(key,value){return Number.isFinite(value)?fmt(percents.has(key)?value*100:value,key==='max_durability'?0:2)+(percents.has(key)?'%':key.endsWith('_time')||key==='duration'?' 秒':''):'未解锁';}
   function domain(key){if(percents.has(key))return [0,['health_modifier','pet_damage_modifier'].includes(key)?100:['critical_modifier','animal_damage_modifier','bandit_damage_modifier','move_speed_modifier','damage_modifier','attack_speed_modifier'].includes(key)?10:1];if(['dexterity','wisdom','strength','stamina'].includes(key))return [0,10000];if(key==='max_durability')return [1,1e7];if(key.endsWith('_time')||key==='duration')return [0,3600];if(key==='dot_amount')return [0,500000];return [0,1e7];}
   function naturalValue(item,key,level){return design.natural(item.curves[key],level,key);}
@@ -144,15 +145,43 @@
   function option(value,text,selected=false){return '<option value="'+esc(value)+'"'+(selected?' selected':'')+'>'+esc(text)+'</option>';}
   function imageTag(item,size=48){const src=images[item?.id];return src?'<img src="'+src+'" alt="'+esc(item.name)+'" width="'+size+'" height="'+size+'" loading="lazy" decoding="async">':'<span class="lab-empty-slot" aria-hidden="true">◇</span>';}
   function avatarStatus(result){
-    const status=$('lab-avatar-status'),canvas=$('lab-avatar-canvas'),fallback=$('lab-doll');
+    const status=$('lab-avatar-status'),canvas=$('lab-avatar-canvas'),fallback=$('lab-doll'),button=$('lab-avatar-open');
     if(!status||!canvas||!fallback)return;
-    const stateName=result?.state||'loading',failed=stateName==='error'||stateName==='fallback';
+    const stateName=result?.state||'loading',failed=stateName==='error'||stateName==='fallback',downloading=stateName==='downloading';
+    const show3d=!failed&&!downloading;
     status.dataset.state=stateName;status.textContent=result?.message||'正在准备 3D 预览。';
-    canvas.hidden=failed;fallback.hidden=!failed;fallback.style.display=failed?'':'none';
-    $('lab-avatar-hint').textContent=failed?'兼容模式 · 二维部位示意':'拖动旋转 · 滚轮缩放';
-    for(const id of ['lab-avatar-front','lab-avatar-back','lab-avatar-zoom-in','lab-avatar-zoom-out','lab-avatar-reset'])$(id).disabled=failed;
+    canvas.hidden=!show3d;fallback.hidden=show3d;fallback.style.display=show3d?'none':'';
+    $('lab-avatar-hint').textContent=show3d?'拖动旋转 · 滚轮缩放':'点击部位 · 二维装备预览';
+    root.querySelector('.lab-avatar-toolbar').hidden=!show3d;
+    root.querySelector('.lab-avatar-actions').hidden=!show3d;
+    for(const id of ['lab-avatar-front','lab-avatar-back','lab-avatar-zoom-in','lab-avatar-zoom-out','lab-avatar-reset'])$(id).disabled=!show3d;
+    const retryTextures=stateName==='ready'&&result.textureFailures>0;
+    button.hidden=show3d&&!retryTextures;
+    button.disabled=downloading;
+    button.textContent=downloading?'正在载入 3D…':retryTextures?'重试 3D 纹理':failed?'重试打开 3D 试装':'打开 3D 试装';
+    button.setAttribute('aria-busy',String(downloading));
+  }
+  function openAvatarPreview(){
+    if(avatarLoading)return avatarLoading;
+    avatarStatus({state:'downloading',message:'正在载入 3D 模型，期间可继续二维配装、比较和对战。'});
+    avatarLoading=(async()=>{
+      if(!avatarResourcesReady){
+        if(!window.WestlandAssets)throw Error('3D 加载器不可用。请刷新页面后重试。');
+        await window.WestlandAssets.load('lab/data/avatar.js');
+        await Promise.all(['lab/data/avatar-meshes.js','lab/data/avatar-textures.js','lab/offline-textures.js','lab/loadout-avatar3d-engine.js'].map(path=>window.WestlandAssets.load(path)));
+        if(!window.WESTLAND_LAB_DATA.avatar?.meshes||!window.WESTLAND_LAB_DATA.avatar?.textures||!window.WestlandAvatar3D)throw Error('3D 模型资源不完整。');
+        avatarResourcesReady=true;
+      }
+      avatarThemeObserver?.disconnect();avatarThemeObserver=null;
+      avatarPreview?.dispose();avatarPreview=null;avatarAttempted=false;avatarSelectionKey='';
+      renderAvatarPreview();
+    })().catch(()=>{
+      avatarStatus({state:'error',message:'3D 试装未能载入。请检查网络后重试；二维配装和对战仍可使用。'});
+    }).finally(()=>{avatarLoading=null;});
+    return avatarLoading;
   }
   function renderAvatarPreview(){
+    if(!avatarResourcesReady)return;
     if(!avatarAttempted){
       avatarAttempted=true;
       try{
@@ -175,7 +204,7 @@
           avatarThemeObserver=new MutationObserver(()=>avatarPreview?.setTheme(document.documentElement.dataset.theme||'dark'));
           avatarThemeObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
         }
-      }catch(error){avatarStatus({state:'fallback',message:error.message});}
+      }catch(error){avatarPreview?.dispose();avatarPreview=null;avatarStatus({state:'fallback',message:error.message});}
     }
     if(!avatarPreview)return;
     const key=avatarGender+'|'+SLOTS.map(([slot])=>state.slots[slot].id).join('|');
@@ -254,6 +283,7 @@
   function download(name,value){const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json;charset=utf-8'}));a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function guarded(fn){return event=>{try{fn(event);}catch(error){message(error.message,true);}};}
   function wire(){root.addEventListener('click',guarded(event=>{const slot=event.target.closest('[data-lab-slot]');if(slot){activeSlot=slot.dataset.labSlot;$('lab-item-search').value='';renderModel();renderEditor();}}));$('lab-doll').addEventListener('keydown',event=>{if(['Enter',' '].includes(event.key)&&event.target.closest('[data-lab-slot]')){event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+    $('lab-avatar-open').addEventListener('click',()=>{void openAvatarPreview();});
     $('lab-avatar-gender').addEventListener('change',guarded(()=>{const value=$('lab-avatar-gender').value;if(!['male','female'].includes(value))throw Error('未知人物外观。');avatarGender=value;avatarSelectionKey='';renderAvatarPreview();}));
     for(const [id,action] of [['lab-avatar-front',()=>avatarPreview?.view('front')],['lab-avatar-back',()=>avatarPreview?.view('back')],['lab-avatar-zoom-in',()=>avatarPreview?.zoom(.2)],['lab-avatar-zoom-out',()=>avatarPreview?.zoom(-.2)],['lab-avatar-reset',()=>avatarPreview?.resetView()]])$(id).addEventListener('click',guarded(action));
     $('lab-item-search').addEventListener('input',renderItemOptions);$('lab-item-select').addEventListener('change',guarded(()=>{const id=$('lab-item-select').value,item=byId.get(id);if(id&&!allowed(item,activeSlot))throw Error('装备与槽位不匹配。');const level=state.slots[activeSlot].level;state.slots[activeSlot]={...emptySlot(),id,level};changed(true);}));$('lab-level').addEventListener('change',guarded(()=>{state.slots[activeSlot].level=readInput($('lab-level'),1,3000,true)??1;changed(true);}));$('lab-current-durability').addEventListener('change',guarded(()=>{state.slots[activeSlot].currentDurability=readInput($('lab-current-durability'),0,gearView[activeSlot]?.maxDurability||1e7,true);changed(true);}));

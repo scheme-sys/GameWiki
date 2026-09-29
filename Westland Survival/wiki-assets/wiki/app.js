@@ -1,5 +1,7 @@
 'use strict';
-const DB=window.WIKI_DB;
+let DB=window.WIKI_DB;
+const bootstrapMeta=DB._bootstrap;
+let catalogPending=null,catalogRequested=false;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clean=v=>String(v??'').replace(/<[^>]*>/g,'').replace(/\\n/g,'\n').trim();
@@ -9,18 +11,11 @@ const RARITY={common:'普通',uncommon:'优秀',rare:'稀有',epic:'史诗',lege
 const RANK={common:1,uncommon:2,rare:3,epic:4,legendary:5};
 const EQUIPMENT={weapon:'武器',armor:'护甲',tool:'采集工具',backpack:'背包',accessory:'饰品',mount_equipment:'坐骑装备'};
 const PAGE_SIZE=60;
-const equipmentById=new Map(DB.equipment.map(x=>[x.item_id,x]));
+let equipmentById,items,pets,skins,perks,all,entityMap,itemById,searchIndex;
 const categories=Array.isArray(DB.inventory.categories)?DB.inventory.categories:Object.entries(DB.inventory.categories).map(([id,x])=>typeof x==='object'?{id,...x}:{id,label:id,count:x});
 const categoryById=new Map(categories.map(c=>[c.id,c]));
 const categoryOrder=new Map(categories.map((c,i)=>[c.id,i]));
 const historical=x=>Boolean(x.legacy||x.placeholder_image||['special_legacy','special_bound_legacy'].includes(equipmentById.get(x.equipment_id||x.id)?.official_inclusion_status));
-const items=DB.inventory.items.map(x=>({...x,_kind:'item',subcategory_label:x.subcategory_label||x.subcategory,numeric:equipmentById.get(x.equipment_id||x.id)?.numeric||x.numeric})).sort((a,b)=>(categoryOrder.get(a.category)-categoryOrder.get(b.category))||(Number(historical(a))-Number(historical(b)))||((Number(a.tier)||0)-(Number(b.tier)||0))||((RANK[a.rarity]||0)-(RANK[b.rarity]||0)));
-const pets=[...DB.pets,...DB.decor].map(x=>({...x,_kind:'pet',name:x.display_zh||x.name_zh||'名称待补充',name_en:x.display_en,category:x.type,description:x.description_zh||''}));
-const skins=DB.skin_catalog.map(x=>({...x,_kind:'skin',name:x.name_zh||'名称待补充',description:x.description_zh,name_en:x.name_en}));
-const perks=Object.values(DB.perks).map(x=>({...x,_kind:'perk',name:x.name_zh||'名称待补充',description:x.description_text||x.description_zh,name_en:x.name_en}));
-const all=[...items,...pets,...skins,...perks];
-const entityMap=new Map(all.map(x=>[x._kind+':'+x.id,x]));
-const itemById=new Map(items.map(x=>[x.id,x]));
 const state={domain:'items',category:'all',subcategory:'all',tier:'all',rarity:'all',sort:'default',page:1,mode:'grid'};
 let selected=null,previousFocus=null,detailHistory=[],detailRequest=0;
 const statDisplay=s=>s.display??(Array.isArray(s.value)?s.value.map(fmt).join('–'):fmt(s.value))+(s.unit||'');
@@ -41,7 +36,38 @@ function basicStats(x){
   return values;
 }
 function searchText(x){if(x._search_text!==undefined)return x._search_text.toLowerCase();return [name(x),x.id,x.name_en,description(x),categoryName(x),x.subcategory_label,x.subcategory,x.species_zh,x.species,x.search_text,x.usage,x.uses,x.workbenches,x.locations,(Array.isArray(x.stats)?x.stats:[]).map(s=>[s.label,s.display,s.value].join(' ')),(x.skins||[]).map(s=>s.name_zh)].flat(2).filter(Boolean).join(' ').toLowerCase()}
-const searchIndex=new Map(all.map(x=>[x._kind+':'+x.id,searchText(x)]));
+function refreshCatalog(){
+  equipmentById=new Map(DB.equipment.map(x=>[x.item_id,x]));
+items=DB.inventory.items.map(x=>({...x,_kind:'item',subcategory_label:x.subcategory_label||x.subcategory,numeric:equipmentById.get(x.equipment_id||x.id)?.numeric||x.numeric})).sort((a,b)=>(categoryOrder.get(a.category)-categoryOrder.get(b.category))||(Number(historical(a))-Number(historical(b)))||((Number(a.tier)||0)-(Number(b.tier)||0))||((RANK[a.rarity]||0)-(RANK[b.rarity]||0)));
+pets=[...DB.pets,...DB.decor].map(x=>({...x,_kind:'pet',name:x.display_zh||x.name_zh||'名称待补充',name_en:x.display_en,category:x.type,description:x.description_zh||''}));
+skins=DB.skin_catalog.map(x=>({...x,_kind:'skin',name:x.name_zh||'名称待补充',description:x.description_zh,name_en:x.name_en}));
+perks=Object.values(DB.perks).map(x=>({...x,_kind:'perk',name:x.name_zh||'名称待补充',description:x.description_text||x.description_zh,name_en:x.name_en}));
+all=[...items,...pets,...skins,...perks];
+entityMap=new Map(all.map(x=>[x._kind+':'+x.id,x]));
+itemById=new Map(items.map(x=>[x.id,x]));
+  searchIndex=new Map(all.map(x=>[x._kind+':'+x.id,searchText(x)]));
+}
+refreshCatalog();
+const catalogCounts=bootstrapMeta?.counts||{items:items.length,pets:pets.length,skins:skins.length,perks:perks.length,all:all.length};
+function catalogStatus(failed=false){
+  $('#view').setAttribute('aria-busy',String(!failed));
+  $('#resultCount').textContent=failed?'完整资料暂未加载成功。':'正在读取完整资料，您的筛选条件会保留…';
+  if(failed){const retry=document.createElement('button');retry.type='button';retry.className='secondary-button';retry.dataset.retryCatalog='';retry.textContent='重新读取';$('#resultCount').append(' ',retry)}
+}
+function loadFullCatalog(){
+  if(!DB._bootstrap)return Promise.resolve();
+  if(!catalogPending){
+    catalogStatus();
+    catalogPending=window.WestlandAssets.load('wiki/data/index.js').then(()=>{
+      if(window.WIKI_DB._bootstrap||!Array.isArray(window.WIKI_DB.inventory?.items))throw Error('Incomplete catalog');
+      DB=window.WIKI_DB;refreshCatalog();
+      $('#view').removeAttribute('aria-busy');renderFilters();render();
+    }).catch(error=>{catalogPending=null;catalogStatus(true);throw error});
+  }
+  return catalogPending;
+}
+function requestCatalog(){catalogRequested=true;loadFullCatalog().catch(()=>{});}
+
 function sourceRows(){return state.domain==='items'?items:state.domain==='pets'?pets:state.domain==='skins'?skins:state.domain==='perks'?perks:all}
 function categoryRows(){return sourceRows().filter(x=>state.category==='all'||x.category===state.category||x.type===state.category)}
 function filteredRows(){
@@ -54,10 +80,18 @@ function filteredRows(){
 }
 function setOptions(id,values,defaultLabel,label=v=>v){const el=$('#'+id);el.innerHTML=`<option value="all">${esc(defaultLabel)}</option>`+values.map(v=>`<option value="${esc(v)}">${esc(label(v))}</option>`).join('');if(!values.map(String).includes(state[id]))state[id]='all';el.value=state[id]}
 function renderFilters(){
+  if(DB._bootstrap&&catalogRequested)return;
   const rows=sourceRows();
   const groups=state.domain==='items'?categories.map(c=>({id:c.id,label:c.label,count:c.count})):state.domain==='pets'?['combat','mount','decor'].map(id=>({id,label:{combat:'战斗宠物',mount:'坐骑',decor:'家园宠物'}[id],count:pets.filter(x=>x.type===id).length})):[];
   const symbols=['◈','⌁','◇','⊞','♧','◉','✧','▧','◎','▤','♢','⊡'];
-  $('#categoryList').innerHTML=[{id:'all',label:state.domain==='items'?'全部物品':state.domain==='all'?'全部内容':'全部条目',count:rows.length},...groups].map((c,i)=>`<button class="category-button ${state.category===c.id?'active':''}" data-category="${esc(c.id)}" aria-pressed="${state.category===c.id}"><span class="cat-symbol" aria-hidden="true">${symbols[i%symbols.length]}</span><span class="cat-label">${esc(c.label)}</span><span class="cat-count">${fmt(c.count)}</span></button>`).join('');
+  $('#categoryList').innerHTML=[{id:'all',label:state.domain==='items'?'全部物品':state.domain==='all'?'全部内容':'全部条目',count:DB._bootstrap?catalogCounts.items:rows.length},...groups].map((c,i)=>`<button class="category-button ${state.category===c.id?'active':''}" data-category="${esc(c.id)}" aria-pressed="${state.category===c.id}"><span class="cat-symbol" aria-hidden="true">${symbols[i%symbols.length]}</span><span class="cat-label">${esc(c.label)}</span><span class="cat-count">${fmt(c.count)}</span></button>`).join('');
+  if(DB._bootstrap){
+    const filters=bootstrapMeta.filters;
+    setOptions('subcategory',filters.subcategory.map(row=>row.value),'全部类型',v=>filters.subcategory.find(row=>row.value===v).label);
+    setOptions('tier',filters.tier,'全部阶级',v=>'T'+v);
+    setOptions('rarity',filters.rarity,'全部品质',v=>RARITY[v]||v);
+    return;
+  }
   const subset=categoryRows();
   const subs=[...new Set(subset.map(x=>x.subcategory||x.species).filter(Boolean))];
   setOptions('subcategory',subs,'全部类型',v=>{const x=subset.find(x=>(x.subcategory||x.species)===v);return x.subcategory_label||x.species_zh||v});
@@ -68,11 +102,12 @@ function renderFilters(){
 function resetFilters(clearSearch=true){Object.assign(state,{category:'all',subcategory:'all',tier:'all',rarity:'all',sort:'default',page:1});if(clearSearch)$('#search').value='';$('#sort').value='default';renderFilters();render()}
 function changeDomain(domain,keepSearch=false){if(!['items','pets','skins','perks','all'].includes(domain))domain='items';state.domain=domain;resetFilters(!keepSearch);$$('[data-domain]').forEach(b=>{b.classList.toggle('active',b.dataset.domain===domain);b.setAttribute('aria-current',b.dataset.domain===domain?'page':'false')});const titles={items:['每一件物品，都有据可查。','从一根松木到一把左轮，查找物品、了解用途，出发前心中有数。'],pets:['一路同行的西部伙伴。','了解每种宠物与坐骑的属性、成长、繁育及专属技能。'],skins:['熟悉的伙伴，不同的模样。','浏览宠物的官方外观，查看描述与关联信息。'],perks:['读懂伙伴的每一项本领。','查看宠物技能、作用效果、触发几率与冷却时间。'],all:['让每一次查找，都有答案。','同时搜索物品、宠物、外观与技能，支持中文名称、英文名称和用途。']};$('#pageTitle').textContent=titles[domain][0];$('#pageDescription').textContent=titles[domain][1];$('#search').placeholder=domain==='items'?'搜索物品名称或用途…':'搜索名称或说明…';}
 function render(){
-  const rows=filteredRows(),pageCount=Math.max(1,Math.ceil(rows.length/PAGE_SIZE));state.page=Math.min(state.page,pageCount);
+  if(DB._bootstrap&&catalogRequested){requestCatalog();return}
+  const rows=filteredRows(),total=DB._bootstrap?catalogCounts.items:rows.length,pageCount=Math.max(1,Math.ceil(total/PAGE_SIZE));state.page=Math.min(state.page,pageCount);
   const start=(state.page-1)*PAGE_SIZE,visible=rows.slice(start,start+PAGE_SIZE);
   const section=state.category!=='all'?$('#categoryList [data-category="'+CSS.escape(state.category)+'"] .cat-label')?.textContent:null;
   $('#sectionTitle').textContent=section||({items:'全部物品',pets:'宠物与坐骑',skins:'宠物外观',perks:'宠物技能',all:'全站检索'}[state.domain]);
-  $('#resultCount').textContent=rows.length?`共 ${fmt(rows.length)} 项 · 当前 ${fmt(start+1)}–${fmt(start+visible.length)} 项`:'没有找到匹配的条目';
+  $('#resultCount').textContent=rows.length?`共 ${fmt(total)} 项 · 当前 ${fmt(start+1)}–${fmt(start+visible.length)} 项`:'没有找到匹配的条目';
   const filters=[];if($('#search').value.trim())filters.push('搜索：'+$('#search').value.trim());for(const id of ['subcategory','tier','rarity'])if(state[id]!=='all')filters.push($('#'+id).selectedOptions[0]?.textContent);
   $('#activeFilters').innerHTML=filters.map(t=>`<button class="active-chip" data-clear-filters>${esc(t)} ×</button>`).join('');
   $('#view').innerHTML=!rows.length?`<div class="empty"><h3>暂时没有找到</h3><p>试试更短的关键词，或清除筛选后重新查找。</p><button data-clear-filters>清除筛选</button></div>`:state.mode==='table'?renderTable(visible):`<div class="grid">${visible.map(card).join('')}</div>`;
@@ -123,7 +158,7 @@ function skinDetail(x){const related=pets.filter(p=>(p.skins||[]).some(s=>s.id==
 function perkDetail(x){const chance=x.chance!=null?(Math.abs(x.chance)<=1?fmt(x.chance*100):fmt(x.chance))+'%':null;return section('技能属性',facts(pairs([['适用宠物',{combat:'战斗宠物',mount:'坐骑'}[x.pet_type]],['稀有度',RARITY[x.rarity]],['触发概率',chance],['持续时间',x.duration,'秒'],['冷却时间',x.cooldown,'秒']]),true))}
 function detailMarkup(x,content){return `<header class="modal-head">${picture(x)}<div class="modal-title"><div class="modal-eyebrow">${esc(categoryName(x))} / FIELD GUIDE</div><h2 id="detailTitle">${esc(name(x))}</h2>${x.name_en?`<p class="english-name">${esc(x.name_en)}</p>`:''}${badges(x)}</div><button class="close" data-close aria-label="关闭详情">×</button></header><div class="modal-body">${detailHistory.length?'<button class="detail-back" data-detail-back>← 返回上一条目</button>':''}${description(x)?`<p class="detail-description">${esc(description(x))}</p>`:''}${content}<div class="item-id">数据版本 12.0.1</div></div>`}
 async function openDetail(kind,id,fromHistory=false){
-  const x=entityMap.get(kind+':'+id);if(!x)return;
+  let x=entityMap.get(kind+':'+id);if(!x)return;
   const request=++detailRequest;
   if($('#detail').open&&selected&&!fromHistory)detailHistory.push(selected._kind+':'+selected.id);
   if(!$('#detail').open){previousFocus=document.activeElement;detailHistory=[]}
@@ -132,6 +167,9 @@ async function openDetail(kind,id,fromHistory=false){
   if(!$('#detail').open)$('#detail').showModal();document.body.classList.add('modal-open');$('#detail').scrollTop=0;
   window.WIKI_RUNTIME.observeImages($('#detail'));$('#detail [data-close]').focus({preventScroll:true});
   try{
+    await loadFullCatalog();
+    if(request!==detailRequest||!$('#detail').open)return;
+    x=entityMap.get(kind+':'+id);selected=x;
     await window.WIKI_RUNTIME.hydrate(x);
     if(request!==detailRequest||!$('#detail').open)return;
     const content=x._kind==='item'?itemDetail(x):x._kind==='pet'?petDetail(x):x._kind==='skin'?skinDetail(x):perkDetail(x);
@@ -144,12 +182,21 @@ async function openDetail(kind,id,fromHistory=false){
   }
 }
 function init(){
-  $('#navItemCount').textContent=fmt(items.length);$('#navPetCount').textContent=fmt(pets.length);$('#navSkinCount').textContent=fmt(skins.length);$('#navPerkCount').textContent=fmt(perks.length);
-  $('#collectionStats').innerHTML=[[items.length,'件实体物品'],[categories.length,'个物品大类'],[pets.length,'种宠物配置'],[skins.length,'款宠物外观']].map(([n,label])=>`<span><b>${fmt(n)}</b>${esc(label)}</span>`).join('');
-  $('#coverageNote').textContent=`已收录 ${fmt(items.length)} 件实体物品，${categories.length} 个大类。工作台插件按实际条目分别收录，可用细分类型与搜索进一步查找。`;
+  document.addEventListener('click',e=>{
+    if(e.target.closest('#topnav [data-domain],.brand,#categoryList [data-category],#searchAll,[data-page],[data-clear-filters],#reset,[data-retry-catalog]')){
+      catalogRequested=true;
+      if(e.target.closest('[data-retry-catalog]'))requestCatalog();
+    }
+  },true);
+  for(const event of ['input','change'])document.addEventListener(event,e=>{
+    if(e.target.matches('#search,#subcategory,#tier,#rarity,#sort'))catalogRequested=true;
+  },true);
+  $('#navItemCount').textContent=fmt(catalogCounts.items);$('#navPetCount').textContent=fmt(catalogCounts.pets);$('#navSkinCount').textContent=fmt(catalogCounts.skins);$('#navPerkCount').textContent=fmt(catalogCounts.perks);
+  $('#collectionStats').innerHTML=[[catalogCounts.items,'件实体物品'],[categories.length,'个物品大类'],[catalogCounts.pets,'种宠物配置'],[catalogCounts.skins,'款宠物外观']].map(([n,label])=>`<span><b>${fmt(n)}</b>${esc(label)}</span>`).join('');
+  $('#coverageNote').textContent=`已收录 ${fmt(catalogCounts.items)} 件实体物品，${categories.length} 个大类。工作台插件按实际条目分别收录，可用细分类型与搜索进一步查找。`;
   $('#topnav').addEventListener('click',e=>{const b=e.target.closest('[data-domain]');if(b){changeDomain(b.dataset.domain);history.replaceState(null,'','#'+b.dataset.domain)}});
   $('.brand').addEventListener('click',e=>{e.preventDefault();changeDomain('items');history.replaceState(null,'','#items')});
-  window.addEventListener('hashchange',()=>changeDomain(location.hash.slice(1)));
+  window.addEventListener('hashchange',()=>{catalogRequested=true;changeDomain(location.hash.slice(1))});
   $('#categoryList').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;state.category=b.dataset.category;state.subcategory='all';state.page=1;renderFilters();render()});
   ['subcategory','tier','rarity','sort'].forEach(id=>$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;state.page=1;render()}));
   $('#reset').addEventListener('click',()=>resetFilters());
@@ -162,7 +209,8 @@ function init(){
   $('#detail').addEventListener('click',e=>{if(e.target===$('#detail')){const r=$('#detail').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('#detail').close()}});
   $('#detail').addEventListener('close',()=>{if($('#detail').open)return;detailRequest++;document.body.classList.remove('modal-open');selected=null;detailHistory=[];if(previousFocus?.isConnected)previousFocus.focus({preventScroll:true})});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!$('#detail').open&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();$('#search').focus()}});
-  changeDomain(location.hash.slice(1)||'items');
+  changeDomain('items');
+  if(location.hash&&location.hash!=='#items'){catalogRequested=true;changeDomain(location.hash.slice(1))}
 }
 function setMode(mode){state.mode=mode;for(const key of ['grid','table']){const b=$('#'+key+'Mode');b.classList.toggle('active',key===mode);b.setAttribute('aria-pressed',String(key===mode))}render()}
 init();

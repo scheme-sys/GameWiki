@@ -4,7 +4,7 @@
 
 ## 数据与资源
 
-`wiki-assets/wiki/` 保存百科运行脚本、样式、初始目录、图片映射和 105 个按需加载的详情块。当前有 4,567 件物品、913 条装备记录、203 个宠物、4 个装饰伙伴、133 个外观和 113 个宠物技能。
+`wiki-assets/wiki/` 保存百科运行脚本、样式、首屏目录、完整索引、图片映射和 105 个按需加载的详情块。当前有 4,567 件物品、913 条装备记录、203 个宠物、4 个装饰伙伴、133 个外观和 113 个宠物技能。
 
 `wiki-assets/lab/` 保存配装界面、网页计算引擎和标准化数据：225 件装备、饰品、食物、技能、25 个动物变体，以及三维试装所需的网格、材质和纹理映射。`wiki-assets/base/` 保存本网站编写的基地生成及交互代码。
 
@@ -20,7 +20,7 @@
 
 ## 本地预览
 
-保留本目录与仓库根 `assets/` 的相对位置，直接打开 HTML，或在仓库根运行 `python -m http.server 4173` 后访问 `http://localhost:4173/`。百科详情与图片按需加载；实验室在线使用独立纹理，本地双击时使用离线纹理兼容机制。
+保留本目录与仓库根 `assets/` 的相对位置，直接打开 HTML，或在仓库根运行 `python -m http.server 4173` 后访问 `http://localhost:4173/`。百科先展示 60 条首屏记录及完整分类统计；首次搜索、分类切换、翻页或查看详情时才读取完整索引，加载期间保留最新操作，失败可重试。详情块和图片继续按需读取。配装页先使用二维示意，点击“打开 3D 试装”才读取模型；计算、配装与战斗不必等待三维资源。实验室在线使用独立纹理，本地双击时使用离线纹理兼容机制。
 
 ## 维护与导入
 
@@ -33,7 +33,17 @@ python "Westland Survival/tools/verify_assets.py"
 python -m unittest discover -s "Westland Survival/tools" -p test_player_schema.py
 ```
 
-校验器按格式 2 的 `asset-manifest.json` 检查 114 个数据文件、玩家字段摘要、全部原图与离线纹理；同时要求数据符合 `tools/player_schema.py` 的保留字段白名单。未登记的数据文件、额外原始配置和技术来源会被拒绝，不能通过单纯更新文件哈希绕过字段检查。
+校验器按格式 2 的 `asset-manifest.json` 检查 115 个数据文件、玩家字段摘要、全部原图与离线纹理；同时要求数据符合 `tools/player_schema.py` 的保留字段白名单。未登记的数据文件、额外原始配置和技术来源会被拒绝，不能通过单纯更新文件哈希绕过字段检查。
+
+`wiki-assets/lazy-manifest.js` 登记按需脚本及其内容 SHA-256 查询版本；`lazy-loader.js` 只读取清单内的同目录经典脚本，兼容 `file://`，并合并重复请求、处理超时及失败重试。`tools/update_lazy.py` 从完整索引重新生成首屏记录、所有筛选选项与统计，并刷新资源版本和校验清单。它不删减完整目录、详情块或模型数据。修改完整索引、详情数据、百科 `app.js` 或按需加载的三维脚本后执行：
+
+```sh
+python "Westland Survival/tools/update_lazy.py"
+python "Westland Survival/tools/verify_assets.py"
+python scripts/test-westland-loading.py
+```
+
+浏览器测试需要 Python Playwright 和已安装的 Chrome；设置 `LCZ_BROWSER=msedge` 可使用系统 Edge。首屏不会偷偷预取完整索引或模型。统计和完整筛选项来自同一维护源，校验器会拒绝首屏遗漏、失配的资源版本和过期的清单。
 
 如果收到新的自包含 Wiki HTML，在另一个目录保管输入文件，再运行：
 

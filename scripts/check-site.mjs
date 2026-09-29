@@ -211,6 +211,13 @@ for (const file of files) {
           }
         }
       }
+      if (relative(file) === 'Westland Survival/wiki-assets/lazy-manifest.js') {
+        try {
+          const context = { window: {} };
+          vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
+          for (const url of Object.values(context.window.WESTLAND_RESOURCES.files)) checkReference(url, file);
+        } catch (error) { errors.push(`${relative(file)}: cannot validate Westland manifest: ${error.message}`); }
+      }
       if (relative(file) === 'Day R Survival/wiki-assets/data/lazy-manifest.js') {
         try {
           const context = { window: {} };

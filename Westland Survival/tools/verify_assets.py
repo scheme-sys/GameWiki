@@ -11,6 +11,8 @@ from player_schema import ROOT, data_files, read_data, sanitize, find_unsafe, di
 
 
 def verify(root=ROOT):
+    from update_lazy import verify as verify_lazy
+    verify_lazy(root)
     manifest = json.loads((root / 'wiki-assets/asset-manifest.json').read_text(encoding='utf-8'))
     assert manifest.get('format') == 2, 'Legacy unsanitized manifest is not accepted.'
     registered = {row['file']: row for row in manifest['data']}

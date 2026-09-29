@@ -69,6 +69,7 @@
   });
 
   function syncMotion() {
+    document.body.classList.toggle('scene-still', reducedMotion.matches || document.hidden || !info.hidden || search.open);
     field.setReducedMotion(reducedMotion.matches);
     if (reducedMotion.matches || document.hidden || !info.hidden || search.open || (gesture && !gesture.moved)) field.stop();
     else field.start();

@@ -4,6 +4,7 @@ import tempfile
 import unittest
 
 import extract_legacy
+import update_lazy
 from player_schema import sanitize, find_unsafe, read_data
 
 
@@ -83,6 +84,44 @@ class PlayerSchemaTests(unittest.TestCase):
             sanitize('wiki-assets/lab/data/new-raw-file.js', {})
         self.assertTrue(find_unsafe({'raw': {'unused': True}}))
         self.assertTrue(find_unsafe({'description': 'example.bundle'}))
+
+
+class LazyArchiveTests(unittest.TestCase):
+    def test_first_page_keeps_full_counts_filters_and_original_data(self):
+        rows = [{'id': 'item-' + str(number), 'name': '物品 ' + str(number), 'category': 'weapon',
+                 'subcategory': '末尾类型' if number == 70 else '普通类型', 'tier': number,
+                 'rarity': 'epic' if number == 70 else 'common'} for number in range(70, 0, -1)]
+        original = {'meta': {'version': 'test'}, 'images': {}, 'equipment': [],
+                    'inventory': {'categories': [{'id': 'weapon', 'label': '武器', 'count': 70}], 'items': rows},
+                    'pets': [{'id': 'pet-one'}], 'decor': [], 'skin_catalog': [], 'perks': {}}
+        untouched = copy.deepcopy(original)
+        initial = update_lazy.bootstrap(original)
+        self.assertEqual([row['id'] for row in initial['inventory']['items']], ['item-' + str(n) for n in range(1, 61)])
+        self.assertEqual(initial['_bootstrap']['counts']['items'], 70)
+        self.assertEqual(initial['_bootstrap']['counts']['pets'], 1)
+        self.assertEqual(initial['_bootstrap']['counts']['all'], 71)
+        self.assertIn('末尾类型', [row['value'] for row in initial['_bootstrap']['filters']['subcategory']])
+        self.assertIn(70, initial['_bootstrap']['filters']['tier'])
+        self.assertIn('epic', initial['_bootstrap']['filters']['rarity'])
+        self.assertEqual(original, untouched)
+        self.assertEqual(sanitize('wiki-assets/wiki/data/bootstrap.js', initial), initial)
+
+    def test_dynamic_versions_change_only_with_their_own_file_contents(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            paths = ['wiki/data/index.js', 'wiki/app.js', 'lab/data/avatar.js', 'lab/data/avatar-meshes.js',
+                     'lab/data/avatar-textures.js', 'lab/data/offline-textures.js', 'lab/offline-textures.js',
+                     'lab/loadout-avatar3d-engine.js', 'wiki/data/chunks/inventory-0.js']
+            for path in paths:
+                file = root / 'wiki-assets' / path
+                file.parent.mkdir(parents=True, exist_ok=True)
+                file.write_text('original', encoding='utf-8')
+            before = update_lazy.resource_map(root)
+            target = 'wiki/data/chunks/inventory-0.js'
+            (root / 'wiki-assets' / target).write_text('updated', encoding='utf-8')
+            after = update_lazy.resource_map(root)
+            self.assertEqual([key for key in paths if before['files'][key] != after['files'][key]], [target])
+            self.assertRegex(after['files'][target], r'inventory-0\.js\?v=[a-f0-9]{64}$')
 
 
 if __name__ == '__main__':

@@ -129,7 +129,8 @@
   <div class="lab-workbench">
     <article class="panel lab-model-panel">
       <div class="lab-card-heading"><h3>测试角色</h3><span id="lab-equipped-count" class="count"></span></div>
-      <div class="lab-avatar-toolbar"><label>人物外观<select id="lab-avatar-gender" aria-label="3D 人物外观"><option value="male">男性</option></select></label><button id="lab-avatar-front" type="button" class="lab-small-button">正面</button><button id="lab-avatar-back" type="button" class="lab-small-button">背面</button></div>
+      <button id="lab-avatar-open" type="button" class="lab-avatar-open" aria-controls="lab-avatar-canvas" aria-describedby="lab-avatar-status">打开 3D 试装</button>
+      <div class="lab-avatar-toolbar" hidden><label>人物外观<select id="lab-avatar-gender" aria-label="3D 人物外观"><option value="male">男性</option></select></label><button id="lab-avatar-front" type="button" class="lab-small-button">正面</button><button id="lab-avatar-back" type="button" class="lab-small-button">背面</button></div>
       <div class="lab-mannequin">
         <canvas id="lab-avatar-canvas" hidden aria-label="可拖动旋转、滚轮缩放的原版装备 3D 穿戴预览" tabindex="0"></canvas>
         <svg id="lab-doll" viewBox="0 0 300 410" role="img" aria-label="可点击装备部位的二维人物模型">
@@ -147,13 +148,13 @@
           <g fill="none" stroke="var(--line)" stroke-dasharray="3 5"><path d="M45 89h62M193 89h62M39 162h56M206 162h55M42 261h52M202 261h58"/></g>
           <g id="lab-doll-images"></g>
         </svg>
-        <span id="lab-avatar-hint" class="lab-model-caption">正在准备 3D 预览</span>
+        <span id="lab-avatar-hint" class="lab-model-caption">点击部位 · 二维装备预览</span>
       </div>
-      <div class="lab-avatar-actions"><button id="lab-avatar-zoom-in" type="button" class="lab-small-button" aria-label="放大人物">＋ 放大</button><button id="lab-avatar-zoom-out" type="button" class="lab-small-button" aria-label="缩小人物">－ 缩小</button><button id="lab-avatar-reset" type="button" class="lab-small-button">重置视角</button></div>
-      <p id="lab-avatar-status" class="lab-avatar-status mini-note" role="status" aria-live="polite">正在载入内嵌的原版模型。</p>
+      <div class="lab-avatar-actions" hidden><button id="lab-avatar-zoom-in" type="button" class="lab-small-button" aria-label="放大人物">＋ 放大</button><button id="lab-avatar-zoom-out" type="button" class="lab-small-button" aria-label="缩小人物">－ 缩小</button><button id="lab-avatar-reset" type="button" class="lab-small-button">重置视角</button></div>
+      <p id="lab-avatar-status" class="lab-avatar-status mini-note" role="status" aria-live="polite">二维配装已就绪。需要查看装备外观时，再打开 3D 试装（首次约 11 MB）。</p>
       <div id="lab-slot-buttons" class="lab-slot-buttons" aria-label="角色装备部位"></div>
       <p class="mini-note">主武器、四件护甲、背包、双戒指与项链分别配置。仅允许放入对应槽位的装备。</p>
-      <details class="lab-avatar-notes"><summary>试装显示说明</summary><p id="lab-avatar-coverage" class="mini-note"></p><p class="mini-note">这是静态试装，不运行游戏动作或战斗动画。没有独立可见模型的饰品不会伪造外观；不能使用 WebGL 的环境保留明确标注的二维部位示意。</p></details>
+      <details class="lab-avatar-notes"><summary>试装显示说明</summary><p id="lab-avatar-coverage" class="mini-note">3D 模型按需载入；二维配装、比较与对战无需等待模型下载。</p><p class="mini-note">这是静态试装，不运行游戏动作或战斗动画。没有独立可见模型的饰品不会伪造外观；不能使用 WebGL 的环境保留明确标注的二维部位示意。</p></details>
     </article>
 
     <article class="panel lab-editor">
@@ -237,11 +238,8 @@
 <script src="wiki-assets/lab/design-controller.js"></script>
 <!-- LOADOUT_LAB_SCRIPTS_BEGIN -->
 <script src="wiki-assets/lab/data/loadout.js"></script>
-<script src="wiki-assets/lab/data/avatar.js"></script>
-<script src="wiki-assets/lab/data/avatar-meshes.js"></script>
-<script src="wiki-assets/lab/data/avatar-textures.js"></script>
-<script src="wiki-assets/lab/offline-textures.js"></script>
-<script src="wiki-assets/lab/loadout-avatar3d-engine.js" id="loadout-avatar3d-engine"></script>
+<script src="wiki-assets/lazy-manifest.js"></script>
+<script src="wiki-assets/lazy-loader.js"></script>
 <script src="wiki-assets/lab/loadout-lab-engine.js" id="loadout-lab-engine"></script>
 <script src="wiki-assets/lab/loadout-lab-controller.js" id="loadout-lab-controller"></script>
 <!-- LOADOUT_LAB_SCRIPTS_END -->

@@ -137,8 +137,8 @@
     let gl = null, program = null, locations = null, white = null, uintIndices = false, disposed = false, lost = false, observer = null;
     let parts = [], missing = [], partial = [], config = { gender: 'male', slots: {} }, theme = 'dark', yaw = 0, pitch = 0.06, zoomFactor = 1, drag = null;
     let center = [0, 1, 0], halfSize = [0.4, 1, 0.3], radius = 1, eye = [0, 1, 4], viewProjection = new Float32Array(IDENTITY), inverseVP = new Float32Array(IDENTITY), lastStatus = null;
-    function notify(state, message) {
-      lastStatus = { state, message, missing: missing.map(item => ({ ...item })), partial: partial.map(item => ({ ...item })) };
+    function notify(state, message, detail = {}) {
+      lastStatus = { ...detail, state, message, missing: missing.map(item => ({ ...item })), partial: partial.map(item => ({ ...item })) };
       if (options.status) { options.status.textContent = message; if (options.status.dataset) options.status.dataset.state = state; }
       if (typeof options.onStatus === 'function') options.onStatus(lastStatus);
     }
@@ -147,7 +147,7 @@
       const pending = activeTextures.some(texture => texture.pending), failed = activeTextures.filter(texture => texture.failed).length;
       const detail = missing.length ? '；'+missing.length+'处装备暂缺3D外观，其他部件仍可预览' : '';
       const partialDetail = partial.length ? '；主体网格已显示，但附加组件尚未完整呈现：' + partial.slice(0, 4).map(item => (LABELS[item.slot] || item.slot) + '（' + item.name + '）').join('、') + (partial.length > 4 ? '，另 ' + (partial.length - 4) + ' 项' : '') : '';
-      notify(pending ? 'loading' : 'ready', '原始 3D 网格 · ' + parts.length + ' 个部件' + (pending ? '；纹理加载中' : '') + (failed ? '；' + failed + ' 张纹理不可用，显示材质底色' : '') + detail + partialDetail);
+      notify(pending ? 'loading' : 'ready', '原始 3D 网格 · ' + parts.length + ' 个部件' + (pending ? '；纹理加载中' : '') + (failed ? '；' + failed + ' 张纹理不可用，显示材质底色' : '') + detail + partialDetail, { textureFailures: failed });
     }
     function listen(type, handler, settings) { canvas.addEventListener(type, handler, settings); listeners.push([type, handler, settings]); }
     function shader(kind, source) {

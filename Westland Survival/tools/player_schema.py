@@ -70,7 +70,7 @@ def record(section, value):
 def sanitize(relative, original):
     value = json.loads(json.dumps(original, ensure_ascii=False))
     relative = str(relative).replace('\\', '/')
-    if relative == 'wiki-assets/wiki/data/index.js':
+    if relative in {'wiki-assets/wiki/data/index.js', 'wiki-assets/wiki/data/bootstrap.js'}:
         value['meta'] = pick(value.get('meta', {}), {'version', 'pet_counts'})
         value['inventory'] = pick(value['inventory'], {'schema', 'categories', 'items'})
         value['inventory']['items'] = [record('inventory', row) for row in value['inventory']['items']]

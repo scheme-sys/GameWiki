@@ -48,9 +48,10 @@ test('CLI checks maintained JSON as well as browser payloads and supports split 
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, source);
   };
-  write('assets/games.js', 'window.LCZ_GAMES=[{links:[{href:"Example/index.html"}]}];');
+  write('assets/games.js', 'window.LCZ_GAMES=[{links:[{href:"Example/index.html"}]},{links:[{href:"DawnofZombiewiki/index.html"}]}];');
   write('Example/data/catalog.js', 'window.DATA={id:1,image:"assets/images/example.png",stats:{damage:12}};');
   write('Example/lab/data/avatar-meshes.js', 'window.WESTLAND_LAB_DATA.avatar.meshes={demo:{positions:"AAAA"}};');
+  write('DawnofZombiewiki/data/lazy/detail-0-fixture.js', 'window.DOZ_DATA_PARTS["detail-0"]={id:1,stats:{damage:12}};');
   write('Example/runtime.js', 'class PlayerView { render() { document.body.textContent="Demo"; } }');
   const run = () => spawnSync(process.execPath, [path.join(repo, 'scripts/check-player-data.mjs'), '--root', fixture], { encoding: 'utf8' });
   let result = run();

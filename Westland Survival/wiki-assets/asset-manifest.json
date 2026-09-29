@@ -31,6 +31,10 @@
       "canonical_sha256": "4424cee47508477eb42b1b2e7a5800330425b0c368d54291df6ca49983af919c"
     },
     {
+      "file": "wiki-assets/wiki/data/bootstrap.js",
+      "canonical_sha256": "84bfeeae157c050c24e51941d101e1d60d3f944d6b8c2e6bdd9706ea375fa110"
+    },
+    {
       "file": "wiki-assets/wiki/data/chunks/decor-0.js",
       "canonical_sha256": "fa4470c2ca551dbac54b5d17d165ddd08faf6585a619135096182ab72953359a"
     },
@@ -9715,6 +9719,7 @@
       "wiki-assets/lab/data/equipment.js": "a207f84b4989e259fbc633499a9c8344ef4615a7eed45d4f73cbe5c30bcaa921",
       "wiki-assets/lab/data/loadout.js": "fdca8ead5036c90b4d4c6b8c9d8c9b8f801d0a85b183cca3f81baec6afc5a6d4",
       "wiki-assets/lab/data/offline-textures.js": "4424cee47508477eb42b1b2e7a5800330425b0c368d54291df6ca49983af919c",
+      "wiki-assets/wiki/data/bootstrap.js": "84bfeeae157c050c24e51941d101e1d60d3f944d6b8c2e6bdd9706ea375fa110",
       "wiki-assets/wiki/data/chunks/decor-0.js": "fa4470c2ca551dbac54b5d17d165ddd08faf6585a619135096182ab72953359a",
       "wiki-assets/wiki/data/chunks/equipment-0.js": "8904113c9177d7ef09955d728d72c21cc3909159c752c0349fc3974a0c77579c",
       "wiki-assets/wiki/data/chunks/equipment-1.js": "322764ef2020201d29b50a214e59f5e1cff3d402dcb6cf4e1b6db5a4ca2796d6",

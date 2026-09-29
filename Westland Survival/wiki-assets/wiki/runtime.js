@@ -10,15 +10,7 @@
   const statistics = { decodedChunks: 0, decodedImages: 0, detailRequests: 0 };
   const yieldFrame = () => new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)));
 
-  function loadScript(relative) {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = new URL(relative, assetBase).href;
-      script.onload = () => { script.remove(); resolve(); };
-      script.onerror = () => { script.remove(); reject(new Error('Archive resource unavailable: ' + relative)); };
-      document.head.append(script);
-    });
-  }
+  function loadScript(relative) { return window.WestlandAssets.load('wiki/' + relative); }
 
   function loadChunk(id) {
     if (!/^wiki-chunk-[a-z0-9_-]+$/.test(id)) return Promise.reject(new Error('Invalid archive block'));

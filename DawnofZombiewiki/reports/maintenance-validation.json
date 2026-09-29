@@ -3,8 +3,7 @@
   "checks": [
     "Every local image matches its SHA-256 record; no missing or unlisted image",
     "Complete lazy details, recipes, datasets and mechanics reconstruct source JSON; content hashes and static references match",
-    "All player export cells and guide paragraphs match the cleaned JSON source",
-    "Page resources resolve within this Wiki/shared assets, and navigation links stay inside the site"
+    "All player export cells and guide paragraphs match the cleaned JSON source"
   ],
   "errors": [],
   "warnings": [],

@@ -3,22 +3,14 @@
  */
 (() => {
   'use strict';
-  const base = new URL('.', document.currentScript.src);
   let offlineReady;
 
   window.WestlandTextureURL = async uri => {
     if (location.protocol !== 'file:' || uri.startsWith('data:')) return uri;
     if (!offlineReady) {
-      offlineReady = new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = new URL('data/offline-textures.js', base).href;
-        script.onload = () => {
-          script.remove();
-          if (window.WESTLAND_OFFLINE_TEXTURES) resolve(window.WESTLAND_OFFLINE_TEXTURES);
-          else reject(new Error('Offline texture archive is incomplete'));
-        };
-        script.onerror = () => { script.remove(); reject(new Error('Offline textures could not be loaded')); };
-        document.head.append(script);
+      offlineReady = window.WestlandAssets.load('lab/data/offline-textures.js').then(() => {
+        if (!window.WESTLAND_OFFLINE_TEXTURES) throw new Error('Offline texture archive is incomplete');
+        return window.WESTLAND_OFFLINE_TEXTURES;
       }).catch(error => { offlineReady = undefined; throw error; });
     }
     const textures = await offlineReady;
