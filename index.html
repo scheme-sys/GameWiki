@@ -58,11 +58,11 @@
   </aside>
 
   <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
-    <div class="dialog-header"><div><span class="eyebrow">LCZ / SEARCH</span><h2 id="search-title">搜索游戏</h2></div><button class="icon-button dialog-close" type="button" aria-label="关闭搜索">×</button></div>
+    <div class="dialog-header"><h2 id="search-title">搜索游戏</h2><button class="icon-button dialog-close" type="button" aria-label="关闭搜索">×</button></div>
     <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" id="game-search" placeholder="游戏名称、类型或资料" autocomplete="off" aria-label="搜索游戏名称、类型或资料"><kbd>ESC</kbd></label>
-    <p class="search-summary" id="search-summary" role="status"></p>
-    <div id="search-results"></div>
-    <p class="empty-state" id="search-empty" hidden>没有找到这个游戏。<span>试试“西部”“装备”或英文名称。</span></p>
+    <p class="sr-only" id="search-summary" role="status" aria-live="polite"></p>
+    <div class="search-results" id="search-results"></div>
+    <p class="empty-state" id="search-empty" hidden>未找到相关游戏</p>
   </dialog>
 
 

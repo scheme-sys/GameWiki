@@ -274,7 +274,7 @@ def search_and_return(page):
     expect(page.locator("#game-search")).to_be_focused()
     page.locator("#game-search").fill("西部")
     expect(page.locator(".search-result")).to_have_count(1)
-    expect(page.locator(".result-links a")).to_have_count(3)
+    expect(page.locator("a.search-result")).to_have_attribute("href", "Westland%20Survival/westland_wiki.html")
     page.locator("#game-search").fill("craft")
     expect(page.locator(".search-result")).to_have_count(1)
     page.locator("#game-search").fill("<script>no-such-game</script>")

@@ -299,22 +299,21 @@
     const games = GAMES.filter((game) => terms.every((term) =>
       (game.nameZh + ' ' + game.name + ' ' + game.keywords).toLocaleLowerCase().includes(term)));
     $('#search-results').replaceChildren(...games.map((game) => {
-      const result = document.createElement('article');
-      result.className = 'search-result';
+      const result = makeLink({ href: game.links[0].href, title: '' }, 'search-result');
+      result.setAttribute('aria-label', game.nameZh + '，' + game.name);
       const image = document.createElement('img');
-      image.src = game.image; image.alt = ''; image.width = image.height = 56;
-      const content = document.createElement('div');
-      const title = makeLink({ href: game.links[0].href, title: game.nameZh }, 'result-title');
-      const english = document.createElement('p');
+      image.src = game.image; image.alt = ''; image.width = image.height = 48;
+      const content = document.createElement('span');
+      content.className = 'result-copy';
+      const title = document.createElement('span');
+      title.className = 'result-title'; title.textContent = game.nameZh;
+      const english = document.createElement('span');
       english.className = 'result-english'; english.textContent = game.name;
-      const links = document.createElement('div');
-      links.className = 'result-links';
-      links.append(...game.links.map((entry) => makeLink(entry)));
-      content.append(title, english, links);
+      content.append(title, english);
       result.append(image, content);
       return result;
     }));
-    $('#search-summary').textContent = games.length ? '选择游戏或直接打开所需资料' : '没有匹配的结果';
+    $('#search-summary').textContent = games.length ? games.length + ' 个游戏' : '没有匹配的结果';
     $('#search-empty').hidden = games.length > 0;
   }
   function openDialog(dialog, trigger) {
