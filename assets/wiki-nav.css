@@ -39,8 +39,8 @@
 .atlas-nav .atlas-switch summary::-webkit-details-marker { display: none; }
 .atlas-nav .atlas-switch summary::after { content: "+"; color: #93abe0; font: 18px/1 Consolas, monospace; }
 .atlas-nav .atlas-switch[open] summary::after { content: "−"; }
-.atlas-nav .atlas-menu { position: absolute; top: calc(100% + 13px); right: 0; width: min(268px, calc(100vw - 36px)); padding: 8px; border: 1px solid #afc5ff30; border-radius: 12px; background: #10172cf5; box-shadow: 0 18px 60px #0007; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
-.atlas-nav .atlas-menu a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px; border-radius: 7px; font-size: 12px; }
+.atlas-nav .atlas-menu { position: absolute; top: calc(100% + 13px); right: 0; width: min(268px, calc(100vw - 36px)); padding: 8px; border: 1px solid #afc5ff30; border-radius: 0; background: #10172cf5; box-shadow: 0 18px 60px #0007; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.atlas-nav .atlas-menu a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px; border-radius: 0; font-size: 12px; }
 .atlas-nav .atlas-menu a:hover { background: #adc5ff10; }
 .atlas-nav .atlas-menu a::after { content: "↗"; color: #7a91ba; font-size: 14px; }
 .atlas-nav .atlas-menu a[aria-current] { background: #adc5ff0c; color: #e5edff; }
@@ -55,3 +55,6 @@
 }
 
 @media print { .atlas-nav { display: none; } }
+
+/* Shared popup frames stay rectangular across all game themes. */
+body dialog, body dialog[class] { border-radius: 0; }

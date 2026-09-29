@@ -8,6 +8,29 @@ const layouts = [
   { name: 'landscape', width: 544, height: 232, radii: [50, 49, 51, 52] },
   { name: 'desktop', width: 1392, height: 776, radii: [88, 84, 92, 96] }
 ];
+const gameSizes = [164, 152, 160, 156, 156];
+const positions = {
+  desktop: [[.27,.24],[.73,.26],[.26,.73],[.74,.74],[.50,.49]],
+  tablet: [[.25,.22],[.75,.24],[.25,.78],[.75,.80],[.50,.51]],
+  mobile: [[.25,.18],[.75,.20],[.25,.78],[.75,.80],[.50,.49]],
+  landscape: [[.105,.34],[.3025,.66],[.50,.34],[.6975,.66],[.895,.34]]
+};
+function fiveGameLayout(viewportWidth, viewportHeight) {
+  const kind = viewportHeight <= 500 && viewportWidth > viewportHeight ? 'landscape'
+    : viewportWidth <= 600 ? 'mobile' : viewportWidth <= 900 ? 'tablet' : 'desktop';
+  const width = viewportWidth - (viewportWidth <= 900 ? 24 : 48);
+  const height = viewportHeight - (kind === 'landscape' ? 88 : viewportWidth <= 900 ? 142 : 124);
+  const radii = gameSizes.map(size => {
+    const diameter = kind === 'landscape' ? Math.min(94, height * .38, (width - 72) / gameSizes.length)
+      : kind === 'mobile' ? Math.min(112, width * .32) * size / 164 : size * (kind === 'tablet' ? .84 : 1);
+    return diameter / 2 + 8;
+  });
+  return {name: `five-${viewportWidth}x${viewportHeight}`, width, height, radii,
+    points: positions[kind].map(([x,y]) => [x*width,y*height])};
+}
+const fiveLayouts = [[320,568],[360,640],[390,844],[600,900],[768,1024],[1024,768],[1440,960],[568,320],[844,390],[480,320]].map(([width,height]) => fiveGameLayout(width,height));
+layouts.push(...fiveLayouts);
+
 function valid(field, useAnchors = false, allowOverlap = false) {
   const bodies = field.getBodies().map(body => useAnchors ? {...body, x: body.anchorX, y: body.anchorY} : body);
   for (let i = 0; i < bodies.length; i++) {
@@ -31,12 +54,44 @@ function fieldFor(config, points) {
   return field;
 }
 
-test('four coincident circles settle at actual phone, landscape and desktop sizes', () => {
+test('four and five coincident circles settle at phone, tablet, landscape and desktop sizes', () => {
   for (const layout of layouts) {
     const field = fieldFor(layout);
     valid(field);
-    assert.equal(field.getBodies().length, 4);
+    assert.equal(field.getBodies().length, layout.radii.length);
   }
+});
+
+test('five-game suggested layouts fit without moving any intended starting centre', () => {
+  for (const layout of fiveLayouts) {
+    const field = fieldFor(layout,layout.points);
+    valid(field);
+    for (const [index,body] of field.getBodies().entries()) {
+      assert.ok(Math.hypot(body.x-layout.points[index][0],body.y-layout.points[index][1])<0.6,
+        `${layout.name} should not rearrange its designed starting layout`);
+    }
+  }
+});
+
+test('five saved game anchors survive portrait to landscape resizing and another release', () => {
+  const field=fieldFor(fiveLayouts[0],fiveLayouts[0].points);
+  const fifth=field.getBodies()[4], first=field.getBodies()[0];
+  field.dragTo(fifth.id,first.x,first.y);
+  assert.ok(Math.hypot(field.getBodies()[4].x-first.x,field.getBodies()[4].y-first.y)<1);
+  field.release();valid(field,true);
+  for(let i=0;i<70;i++)field.step(1/60);
+  valid(field);
+  const portrait=field.getBodies(), landscape=fiveGameLayout(568,320);
+  // Portal resizing recomputes icon radii and restores the active layout's anchors.
+  field.resize(landscape.width,landscape.height);
+  field.setBodies(landscape.radii.map((radius,index)=>({id:`game-${index}`,radius,x:landscape.points[index][0],y:landscape.points[index][1]})));
+  valid(field);
+  field.resize(296,426).setBodies(portrait);valid(field);
+  field.dragTo('game-4',field.getBodies()[1].x,field.getBodies()[1].y).release();
+  valid(field,true);field.stop();valid(field);
+  const saved=anchors(field);
+  field.resize(296,426);
+  assert.deepEqual(anchors(field),saved);
 });
 
 test('drag follows the pointer through neighbours; release separates smoothly to saved targets', () => {
@@ -221,9 +276,9 @@ test('seeded corner and direction changes allow overlaps but resolve all release
   let operations = 0, worst = 0, elapsed = 0;
   for (const config of layouts) {
     for (let trial = 0; trial < 100; trial++) {
-      const field = fieldFor(config, Array.from({ length: 4 }, () => [random() * config.width, random() * config.height]));
+      const field = fieldFor(config, Array.from({ length: config.radii.length }, () => [random() * config.width, random() * config.height]));
       valid(field);
-      const id = 'game-' + Math.floor(random() * 4);
+      const id = 'game-' + Math.floor(random() * config.radii.length);
       field.grab(id);
       const targets = [[-100,-100],[config.width+100,-100],[config.width+100,config.height+100],[-100,config.height+100],
         ...Array.from({ length: 8 }, () => [random() * config.width, random() * config.height])];

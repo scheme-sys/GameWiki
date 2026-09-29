@@ -41,6 +41,7 @@ function walk(directory) {
         const sandbox = { window: {} };
         if (/\/lab\/data\/avatar-(?:meshes|textures)\.js$/.test(relative)) sandbox.window.WESTLAND_LAB_DATA = { avatar: {} };
         if (relative.startsWith('DawnofZombiewiki/data/lazy/')) sandbox.window.DOZ_DATA_PARTS = {};
+        if (relative.startsWith('LDOE_Wiki/data/lazy/')) sandbox.window.LDOE_PARTS = {};
         vm.runInNewContext(source, sandbox, { filename: relative, timeout: 5000 });
         issues = inspectPlayerData(sandbox.window);
       }

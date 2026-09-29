@@ -181,6 +181,19 @@ for (const file of files) {
     });
     for (const match of markup.matchAll(/\b(?:src|href|poster)\s*=\s*(['"])(.*?)\1/gi)) checkReference(match[2], file);
     for (const match of markup.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style\s*>/gi)) checkCss(match[1], file);
+    const menu = markup.match(/<div\b[^>]*class=["']atlas-menu["'][^>]*>([\s\S]*?)<\/div>/i);
+    if (menu) {
+      const destinations = new Set();
+      for (const link of menu[1].matchAll(/\bhref\s*=\s*(["'])(.*?)\1/gi)) {
+        try { destinations.add(path.resolve(path.dirname(file), decodeURIComponent(link[2].split(/[?#]/)[0]))); }
+        catch { /* The ordinary link check reports invalid encodings. */ }
+      }
+      for (const game of games) {
+        const target = path.resolve(root, decodeURIComponent(game.links[0].href.split(/[?#]/)[0]));
+        if (!destinations.has(target)) errors.push(`${relative(file)}: game switcher is missing ${game.id}`);
+      }
+    }
+
   } else if (extension === '.css') {
     checkCss(source, file);
   } else {
@@ -191,6 +204,19 @@ for (const file of files) {
     const gameDirectory = directories.find((directory) => directory !== 'assets' && relative(file).startsWith(`${directory}/`));
     if (gameDirectory) {
       const documentBase = path.join(root, gameDirectory);
+      if (gameDirectory === 'LDOE_Wiki' && /^LDOE_Wiki\/data\/(?:bootstrap|lazy\/[a-z0-9-]+\.[a-f0-9]{16})\.js$/.test(relative(file))) {
+        try {
+          const context = { window: { LDOE_PARTS: {} } };
+          vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
+          const visit = value => {
+            if (typeof value === 'string' && /^(?:assets\/|data\/lazy\/)/.test(value)) {
+              checkReference(value, file, documentBase, true);
+            } else if (Array.isArray(value)) value.forEach(visit);
+            else if (value && typeof value === 'object') Object.values(value).forEach(visit);
+          };
+          visit(context.window);
+        } catch (error) { errors.push(`${relative(file)}: cannot validate LDOE data: ${error.message}`); }
+      }
       if (gameDirectory === 'DawnofZombiewiki') {
         if (/\/data\/(?:bootstrap|asset-map|site-meta|lazy\/[a-z0-9-]+)\.js$/.test(relative(file))) {
           try {

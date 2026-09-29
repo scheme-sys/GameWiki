@@ -105,3 +105,46 @@ test('Lazy manifests must reference published chunks and maintenance catalogs st
   result = check(root);
   assert.equal(result.status, 0, result.stdout + result.stderr);
 });
+
+
+test('LDOE publishes only runtime data and validates every lazy image and chunk reference', () => {
+  for (const name of ['index.html', 'styles.css', 'app.js', 'data-loader.js', 'favicon.svg', 'assets/hero.webp', 'assets/items/example.webp', 'data/bootstrap.js', 'data/lazy/details-item-0.0123456789abcdef.js']) {
+    assert.equal(isPublicFile('LDOE_Wiki/' + name), true, name);
+  }
+  for (const name of ['data/catalog.js', 'data/world.js', 'data/lazy/private.js', 'data/source.json', 'tools/import.js', 'reports/example.json', 'README.md']) {
+    assert.equal(isPublicFile('LDOE_Wiki/' + name), false, name);
+  }
+  const root = fixture('ldoe');
+  write(root, 'assets/games.js', 'window.ORBIT_GAMES=[{id:"ldoe",name:"LDOE",image:"assets/icon.svg",links:[{href:"LDOE_Wiki/index.html"}]}];');
+  write(root, 'index.html', '<script src="assets/games.js"></script><a href="LDOE_Wiki/index.html">LDOE</a>');
+  write(root, 'LDOE_Wiki/index.html', '<script src="data/bootstrap.js"></script>');
+  write(root, 'LDOE_Wiki/data/bootstrap.js', 'window.LDOE_BOOTSTRAP={manifest:{"details-item-0":"data/lazy/details-item-0.0123456789abcdef.js"}};');
+  let result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource data\/lazy\/details-item-0/);
+  write(root, 'LDOE_Wiki/data/lazy/details-item-0.0123456789abcdef.js', 'window.LDOE_PARTS["details-item-0"]=[{id:"item-1",image:"assets/items/example.webp"}];');
+  result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource assets\/items\/example.webp/);
+  write(root, 'LDOE_Wiki/assets/items/example.webp', 'fixture image');
+  write(root, 'LDOE_Wiki/data/catalog.js', 'MAINTENANCE_ONLY');
+  write(root, 'LDOE_Wiki/data/world.js', 'MAINTENANCE_ONLY');
+  const output = path.join(workspace, 'ldoe-published');
+  result = check(root, '--stage', output);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.equal(fs.existsSync(path.join(output, 'LDOE_Wiki/data/catalog.js')), false);
+  assert.equal(fs.existsSync(path.join(output, 'LDOE_Wiki/data/world.js')), false);
+  assert.deepEqual(fs.readFileSync(path.join(output, 'LDOE_Wiki/assets/items/example.webp')), fs.readFileSync(path.join(root, 'LDOE_Wiki/assets/items/example.webp')));
+});
+
+
+test('Every shared game switcher includes all registered games', () => {
+  const root = fixture('navigation');
+  write(root, 'DawnofZombiewiki/index.html', '<nav class="atlas-nav"><div class="atlas-menu"><a href="../index.html">Home</a></div></nav>');
+  let result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /game switcher is missing dawn/);
+  write(root, 'DawnofZombiewiki/index.html', '<nav class="atlas-nav"><div class="atlas-menu"><a href="index.html">Dawn</a></div></nav>');
+  result = check(root);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+});

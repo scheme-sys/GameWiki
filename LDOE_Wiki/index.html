@@ -4,15 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111713">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://cdn.busuanzi.cc; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="description" content="Last Day on Earth 地球末日生存中文玩家图鉴：查询武器装备、怪物、制作材料与探索地点。">
   <title>LDOE WIKI · 地球末日生存图鉴</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="data/catalog.js"></script>
-  <script defer src="data/world.js"></script>
+  <link rel="stylesheet" href="../assets/wiki-nav.css">
+  <link rel="stylesheet" href="../assets/site-stats.css">
+  <script defer src="../assets/wiki-nav.js"></script>
+  <script defer src="../assets/site-stats.js"></script>
+  <script defer src="data/bootstrap.js"></script>
+  <script defer src="data-loader.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
+  <nav class="atlas-nav" data-game="ldoe" aria-label="游戏星图导航">
+    <a class="atlas-home" href="../index.html"><span class="atlas-home-mark" aria-hidden="true">✧</span><span>返回星空</span></a>
+    <span class="atlas-label">LCZ</span>
+    <div class="site-stats" data-site-stats data-compact="true"></div>
+    <details class="atlas-switch"><summary>切换游戏</summary><div class="atlas-menu">
+      <a href="../Craft%20of%20Survival/wiki.html">Craft of Survival</a>
+      <a href="../Day%20R%20Survival/wiki_dayR.html">Day R Survival</a>
+      <a href="../Westland%20Survival/westland_wiki.html">Westland Survival</a>
+      <a href="../DawnofZombiewiki/index.html">Dawn of Zombies</a>
+      <a href="../LDOE_Wiki/index.html" aria-current="page">Last Day on Earth: Survival</a>
+    </div></details>
+  </nav>
   <a class="skip-link" href="#main">跳到图鉴内容</a>
   <div class="mobile-shade" id="mobile-shade"></div>
   <aside class="sidebar" id="sidebar" aria-label="主导航">

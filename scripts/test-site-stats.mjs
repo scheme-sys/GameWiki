@@ -75,11 +75,11 @@ test('one POST sends only the fixed project namespace; separate PV/IP fields ign
   assert.equal(env.timers.size, 0);
 });
 
-test('both deployment paths and all seven pages share the same single canonical project request', async () => {
+test('both deployment paths and all eight pages share the same single canonical project request', async () => {
   const paths = [
     '', 'index.html', 'Craft%20of%20Survival/wiki.html', 'Day%20R%20Survival/wiki_dayR.html',
     'Westland%20Survival/westland_wiki.html', 'Westland%20Survival/westland_difficulty_design.html',
-    'Westland%20Survival/%E5%9F%BA%E5%9C%B0.html', 'DawnofZombiewiki/', 'DawnofZombiewiki/index.html',
+    'Westland%20Survival/%E5%9F%BA%E5%9C%B0.html', 'DawnofZombiewiki/', 'DawnofZombiewiki/index.html', 'LDOE_Wiki/', 'LDOE_Wiki/index.html',
   ];
   for (const base of [origin, legacyOrigin]) for (const path of paths) {
     const env = environment(base + path + '?q=private-query#private-hash');
@@ -100,6 +100,7 @@ test('local files, previews, other repositories and unknown paths never send hit
     'https://scheme-sys.github.io/LCZ-GameWiki-other/', 'https://scheme-sys.github.io/another/GameWiki/',
     origin + '404.html', origin + '%zz', legacyOrigin + '404.html', legacyOrigin + '%zz',
     legacyOrigin + 'index.html/other', legacyOrigin + 'Craft%20of%20Survival/unknown.html',
+    origin + 'LDOE_Wiki/unknown.html', 'https://scheme-sys.github.io/LDOE_Wiki/',
     origin + 'DawnofZombiewiki/unknown.html', 'https://scheme-sys.github.io/DawnofZombiewiki/',
   ]) {
     const env = environment(url);

@@ -23,6 +23,7 @@
     "Westland Survival/基地.html",
     "DawnofZombiewiki/",
     "DawnofZombiewiki/index.html",
+    "LDOE_Wiki/", "LDOE_Wiki/index.html",
   ]);
   const formatter = new Intl.NumberFormat("zh-CN");
   const compactFormatter = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 1 });
