@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111713">
+  <meta name="description" content="Last Day on Earth 地球末日生存中文玩家图鉴：查询武器装备、怪物、制作材料与探索地点。">
+  <title>LDOE WIKI · 地球末日生存图鉴</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/catalog.js"></script>
+  <script defer src="data/world.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到图鉴内容</a>
+  <div class="mobile-shade" id="mobile-shade"></div>
+  <aside class="sidebar" id="sidebar" aria-label="主导航">
+    <a class="brand" href="#" aria-label="LDOE Wiki 首页"><span class="brand-mark">L<span>↗</span></span><span><strong>LDOE<span class="brand-wiki"> WIKI</span></strong><small>地球末日 · 生存百科</small></span></a>
+    <div class="edition"><span class="status-dot"></span> 生存档案 <span>v1.52.0</span></div>
+    <div class="nav-heading">探索百科 <span>EXPLORE</span></div>
+    <nav id="primary-nav"></nav>
+    <div class="nav-heading lower-heading">我的生存手册</div>
+    <nav class="personal-nav">
+      <button data-view="favorites"><span data-icon="bookmark"></span>我的收藏 <span class="nav-count" id="favorites-count">0</span></button>
+      <button data-action="compare"><span data-icon="compare"></span>装备对比 <span class="nav-count" id="compare-count">0</span></button>
+      <button data-action="about"><span data-icon="info"></span>关于这份图鉴</button>
+    </nav>
+    <div class="sidebar-bottom"><span class="compass" data-icon="compass"></span><strong>准备充分，才能走得更远。</strong><p>每一次出发，都值得认真对待。</p><a href="https://kefirgames.helpshift.com/hc/en/5-last-day-on-earth/" target="_blank" rel="noopener noreferrer">官方生存帮助 <span>↗</span></a><small>非官方中文玩家资料站</small></div>
+  </aside>
+  <div class="page-shell">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menu-toggle" aria-label="展开导航" aria-expanded="false"><span data-icon="menu"></span></button>
+      <div class="breadcrumb"><span>LDOE WIKI</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-current">生存指南</strong></div>
+      <label class="global-search"><span data-icon="search"></span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索全部图鉴"><kbd>/</kbd></label>
+      <span class="top-version"><span class="status-dot"></span> 中文图鉴</span>
+    </header>
+    <main id="main">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-grid"></div>
+        <div class="hero-content"><div class="eyebrow"><span class="tiny-line"></span> THE SURVIVOR’S FIELD GUIDE</div><h1 id="hero-title">末日之下，<br>知识就是生存力<span>。</span></h1><p>从第一把长矛到未知的禁区。<br>你的装备、敌人和下一站，都在这里。</p><button class="primary-button" data-view="weapons">探索武器图鉴 <span data-icon="arrow"></span></button></div>
+        <div class="hero-coordinate">LAST DAY ON EARTH <span>生存档案 / 001</span></div>
+        <div class="hero-stamp"><span class="status-dot"></span> 为每一位幸存者而整理</div>
+      </section>
+      <section class="overview-stats" id="overview-stats" aria-label="图鉴收录数量"></section>
+      <section class="catalog-section" aria-labelledby="catalog-title">
+        <div class="section-heading"><div><div class="eyebrow section-eyebrow" id="section-eyebrow">SURVIVAL ENCYCLOPEDIA</div><h2 id="catalog-title">探索生存图鉴<span class="title-dot">.</span></h2><p id="catalog-description">出发前，先了解你手中的装备。</p></div><button class="text-button" data-action="about">收录说明 <span data-icon="arrow-up-right"></span></button></div>
+        <div class="category-tabs" id="category-tabs" role="group" aria-label="图鉴分类"></div>
+        <div class="collection-bar">
+          <div class="filter-chips" id="filter-chips" role="group" aria-label="细分类别"></div>
+          <div class="collection-controls"><label class="sort-label"><span data-icon="sort"></span><select id="sort-select" aria-label="排序方式"><option value="default">默认排序</option><option value="name">名称排序</option><option value="stat">主要数值 ↓</option></select></label><div class="view-toggle" role="group" aria-label="显示方式"><button class="active" data-layout="grid" aria-label="卡片视图" aria-pressed="true"><span data-icon="grid"></span></button><button data-layout="list" aria-label="列表视图" aria-pressed="false"><span data-icon="list"></span></button></div></div>
+        </div>
+        <div class="results-line"><span id="result-count" aria-live="polite"></span><span id="collection-hint">点击条目查看详细资料 <span>↗</span></span></div>
+        <div id="catalog-grid" class="catalog-grid"></div>
+        <div id="pagination" class="pagination"></div>
+        <div class="catalog-note"><span data-icon="info"></span><p>图鉴依据本地 1.52.0 资料整理。部分条目属于活动或历史内容；实际获取方式与属性以游戏内为准。<button data-action="about">了解数据范围</button></p></div>
+      </section>
+      <section class="field-notes" id="field-notes"><div><span class="eyebrow">BEFORE YOU GO</span><h3>下一次出发，心中有数。</h3><p>查装备，备材料，认识你的敌人。</p></div><button data-view="recipes"><span data-icon="craft"></span><span><strong>制作清单</strong><small>材料需求，一目了然</small></span><span data-icon="arrow"></span></button><button data-view="creatures"><span data-icon="skull"></span><span><strong>认识威胁</strong><small>查看敌人的基础属性</small></span><span data-icon="arrow"></span></button></section>
+      <footer><span><strong>LDOE WIKI</strong> <span class="footer-divider">/</span> 幸存者的随身百科</span><span>游戏内容与图像版权归 Kefir 所有 · 非官方网站</span><a href="#main">返回顶部 ↑</a></footer>
+    </main>
+  </div>
+  <div class="compare-tray" id="compare-tray" hidden><div><strong>装备对比</strong><span id="compare-summary"></span></div><button data-action="compare" class="primary-button">开始对比 <span data-icon="arrow"></span></button><button class="icon-button" data-action="clear-compare" aria-label="清空对比"><span data-icon="x"></span></button></div>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div><button class="dialog-close icon-button" id="dialog-close" aria-label="关闭详情"><span data-icon="x"></span></button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="no-script">请开启浏览器 JavaScript，以使用搜索和图鉴。本站不需要网络连接即可浏览本地内容。</p></noscript>
+</body>
+</html>

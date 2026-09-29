@@ -6,6 +6,10 @@
   const universe = $('#game-universe');
   const info = $('#game-info');
   const search = $('#search-dialog');
+  const community = $('#community-dialog');
+  const dialogs = [search, community];
+  const dialogTriggers = new WeakMap();
+  const hasOpenDialog = () => dialogs.some(dialog => dialog.open);
   const storage = {
     get(key) { try { return JSON.parse(localStorage.getItem('lcz:' + key)); } catch { return null; } },
     set(key, value) { try { localStorage.setItem('lcz:' + key, JSON.stringify(value)); } catch { /* Storage is optional. */ } }
@@ -19,7 +23,7 @@
   let dragFrame = 0, pendingDrag = null;
   let width = 0, height = 0, layoutKey = 'desktop';
   let gesture = null, suppressClick = null, previewGame = null;
-  let hideTimer, dialogTrigger, lastPointerType = 'mouse', ignoreFocus = false;
+  let hideTimer, lastPointerType = 'mouse', ignoreFocus = false;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
 
@@ -62,7 +66,7 @@
     onSettle() {
       // Finish the release animation before a moving circle opens its preview.
       requestAnimationFrame(() => {
-        if (document.hidden || gesture || search.open || lastPointerType !== 'mouse') return;
+        if (document.hidden || gesture || hasOpenDialog() || lastPointerType !== 'mouse') return;
         const hovered = [...nodes].find(([, node]) => node.querySelector('a').matches(':hover'));
         if (hovered) showInfo(hovered[0]);
       });
@@ -77,9 +81,9 @@
   });
 
   function syncMotion() {
-    document.body.classList.toggle('scene-still', reducedMotion.matches || document.hidden || !info.hidden || search.open);
+    document.body.classList.toggle('scene-still', reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog());
     field.setReducedMotion(reducedMotion.matches);
-    if (reducedMotion.matches || document.hidden || !info.hidden || search.open || (gesture && !gesture.moved)) field.stop();
+    if (reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog() || (gesture && !gesture.moved)) field.stop();
     else field.start();
   }
   function savePositions() {
@@ -123,7 +127,7 @@
     info.style.top = y + 'px';
   }
   function showInfo(id, touch = false) {
-    if (gesture?.moved || search.open || (!touch && field.isSettling())) return;
+    if (gesture?.moved || hasOpenDialog() || (!touch && field.isSettling())) return;
     clearTimeout(hideTimer);
     previewGame = id;
     const game = GAMES.find((entry) => entry.id === id);
@@ -317,19 +321,23 @@
     $('#search-empty').hidden = games.length > 0;
   }
   function openDialog(dialog, trigger) {
+    if (hasOpenDialog()) return;
     cancelGesture();
     hideInfo();
-    dialogTrigger = trigger;
+    dialogTriggers.set(dialog, trigger);
+    trigger.setAttribute('aria-expanded', 'true');
     document.body.classList.add('dialog-open');
     dialog.showModal();
     if (dialog === search) {
       $('#game-search').value = '';
       renderResults('');
       $('#game-search').focus();
+    } else if (dialog === community) {
+      loadCommunityQr();
     }
     syncMotion();
   }
-  for (const dialog of [search]) {
+  for (const dialog of dialogs) {
     dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {
       if (event.target !== dialog) return;
@@ -337,11 +345,37 @@
       if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
     });
     dialog.addEventListener('close', () => {
-      document.body.classList.remove('dialog-open');
-      dialogTrigger?.focus({ preventScroll: true });
+      const trigger = dialogTriggers.get(dialog);
+      trigger?.setAttribute('aria-expanded', 'false');
+      if (!hasOpenDialog()) {
+        document.body.classList.remove('dialog-open');
+        trigger?.focus({ preventScroll: true });
+      }
       syncMotion();
     });
   }
+  const communityQr = $('#community-qr');
+  const qrStatus = $('#community-qr-status');
+  const qrRetry = $('#community-qr-retry');
+  function loadCommunityQr() {
+    if (communityQr.hasAttribute('src')) return;
+    community.dataset.qrState = 'loading';
+    qrStatus.textContent = '正在加载二维码…';
+    qrRetry.hidden = true;
+    communityQr.src = communityQr.dataset.src;
+  }
+  communityQr.addEventListener('load', () => {
+    community.dataset.qrState = 'ready';
+    qrStatus.textContent = '二维码已加载';
+  });
+  communityQr.addEventListener('error', () => {
+    community.dataset.qrState = 'error';
+    communityQr.removeAttribute('src');
+    qrStatus.textContent = '二维码暂时无法加载';
+    qrRetry.hidden = false;
+  });
+  qrRetry.addEventListener('click', loadCommunityQr);
+  $('#community-open').addEventListener('click', (event) => openDialog(community, event.currentTarget));
   $('#search-open').addEventListener('click', (event) => openDialog(search, event.currentTarget));
   $('#game-search').addEventListener('input', (event) => renderResults(event.target.value));
   document.addEventListener('keydown', (event) => {
@@ -349,12 +383,13 @@
     if (event.key === 'Escape') {
       cancelGesture();
       hideInfo();
-      if (search.open) {
+      const activeDialog = dialogs.find(dialog => dialog.open);
+      if (activeDialog) {
         event.preventDefault();
-        search.close();
+        activeDialog.close();
       }
     }
-    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey && !search.open &&
+    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey && !hasOpenDialog() &&
       !event.target.matches('input,textarea,[contenteditable="true"]')) {
       event.preventDefault();
       openDialog(search, $('#search-open'));

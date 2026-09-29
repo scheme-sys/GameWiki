@@ -136,7 +136,7 @@ def home_render(page):
     expect(page.locator("#game-info")).to_be_hidden()
     assert page.locator("canvas,.planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
     assert page.locator(".world-caption,#motion-toggle,#reset-map,#help-open,.scene-footer").count() == 0
-    expect(page.locator('.community-number')).to_have_text('1045051029')
+    expect(page.locator('.community-number')).to_have_text('1067536816')
     assert page.locator('.world-link').evaluate_all('links=>links.every(a=>a.getAttribute("aria-label").includes("Wiki"))')
     assert page.locator('.app-shell').evaluate('(e)=>Math.abs(e.getBoundingClientRect().height-innerHeight)<1')
     requests = page.evaluate('performance.getEntriesByType("resource").map(r=>r.name)')

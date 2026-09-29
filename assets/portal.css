@@ -36,8 +36,9 @@ svg { display: block; }
 .brand-group { display: flex; align-items: center; gap: 26px; min-width: 0; }
 .brand { font-family: "Bahnschrift","Aptos","Segoe UI",sans-serif; font-size: 32px; font-weight: 600; line-height: 1; letter-spacing: .19em; text-shadow: 0 0 25px #b7d7e820; display: inline-flex; align-items: flex-start; gap: 4px; flex-shrink: 0; color: #f1f4f6; }
 .brand-dot { display: block; width: 3px; height: 3px; border-radius: 50%; background: #d6e5e4; margin-top: 2px; box-shadow: 0 0 7px #d6e5e433; }
-.community { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #bdd9d3; letter-spacing: .035em; white-space: nowrap; text-shadow: 0 0 12px #98dfd14d; animation: community-glow 6s ease-in-out infinite; }
+.community { min-height: 44px; padding: 0; border-radius: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #bdd9d3; letter-spacing: .035em; white-space: nowrap; text-shadow: 0 0 12px #98dfd14d; animation: community-glow 6s ease-in-out infinite; }
 .community-number { color: #d0e8df; font: 500 14px var(--mono); letter-spacing: .025em; user-select: text; }
+.community:hover .community-number,.community[aria-expanded="true"] .community-number { color: #e7faf0; text-shadow: 0 0 14px #a9eadf66; }
 .brand-group .site-stats { border-left: 1px solid var(--line); padding-left: 23px; color: #788b9e; }
 .brand-group .site-stats-panel { border-radius: 4px; background: #101c2bf7; }
 /* Opaque inner gradients keep the luminous border clear without masks or extra layers. */
@@ -84,6 +85,22 @@ main { position: absolute; inset: calc(100px + env(safe-area-inset-top)) max(24p
 .info-links a:hover { background-color: #bddfea12; color: #f0f8fb; }
 dialog { color: var(--ink); background: linear-gradient(135deg,#142231fc,#0c1521fc); border: 1px solid #b7d5e332; border-radius: 7px; padding: 30px; width: min(590px,calc(100vw - 28px)); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); box-shadow: 0 30px 120px #000a; overscroll-behavior: contain; }
 .search-dialog { border-color: transparent; background: linear-gradient(135deg,#142231,#0c1521) padding-box,var(--search-edge) border-box; box-shadow: 0 30px 120px #000a,0 0 28px #88d9e018,0 0 9px #b0a4e51a; }
+.community-dialog { width: min(326px,calc(100vw - 28px)); padding: 20px; border-color: transparent; background: linear-gradient(140deg,#142433,#0c1623) padding-box,var(--search-edge) border-box; box-shadow: 0 24px 80px #0009,0 0 24px #8cccd516; }
+.community-dialog[open] { animation: community-reveal .2s cubic-bezier(.2,.7,.2,1); }
+.community-dialog::backdrop { background: #0308139c; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.community-dialog .dialog-header { margin-bottom: 16px; }
+.community-dialog .dialog-header h2 { font-size: 18px; letter-spacing: .06em; }
+/* Present the central QR card; the saved file remains the complete original poster. */
+.community-image { position: relative; aspect-ratio: 5 / 6; overflow: hidden; border-radius: 5px; background: #fff; }
+.community-image>img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity .18s; }
+.community-dialog[data-qr-state="ready"] .community-image>img { opacity: 1; }
+.community-image-state { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; color: #677580; font-size: 12px; }
+.community-dialog[data-qr-state="ready"] .community-image-state { display: none; }
+.community-image-state p { margin: 0; }
+.community-image-state button { min-height: 44px; padding: 8px 16px; margin-top: 8px; border: 1px solid #afbbc8; border-radius: 4px; color: #344e63; }
+.community-download { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 14px; border: 1px solid #b5d5e330; border-radius: 4px; background: #a7cde408; color: #c0d9e3; font-size: 12px; letter-spacing: .06em; }
+.community-download:hover,.community-download:focus-visible { color: #edf7fb; background: #a7cde414; border-color: #b5d5e368; }
+@keyframes community-reveal { from { opacity: 0; transform: translateY(7px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
 dialog::backdrop { background: #030813c9; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 22px; }
 .dialog-header h2 { margin: 0; font-size: 23px; font-weight: 500; letter-spacing: .045em; }

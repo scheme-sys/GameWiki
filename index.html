@@ -24,17 +24,27 @@
   <a class="skip-link" href="#game-universe">跳到游戏气泡</a>
   <div class="space-haze" aria-hidden="true"></div>
   <svg class="constellations" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g class="star-lines"><path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810"/></g>
-    <g class="star-points"><circle cx="70" cy="330" r="1.4"/><circle cx="152" cy="280" r="1.8"/><circle cx="223" cy="303" r="1"/><circle cx="268" cy="223" r="1.5"/><circle cx="1160" cy="138" r="1.2"/><circle cx="1230" cy="188" r="1.7"/><circle cx="1340" cy="163" r="1"/><circle cx="1180" cy="775" r="1.3"/><circle cx="1300" cy="815" r="1.7"/><circle cx="1380" cy="740" r="1.2"/><circle cx="325" cy="835" r="1"/><circle cx="390" cy="787" r="1.6"/><circle cx="475" cy="810" r="1"/><circle cx="530" cy="127" r="1.1"/><circle cx="860" cy="217" r="1"/><circle cx="727" cy="574" r="1.4"/><circle cx="1450" cy="443" r="1"/><circle cx="89" cy="712" r="1.1"/><circle cx="994" cy="900" r="1.3"/><circle cx="1015" cy="420" r="1"/></g>
+    <g class="star-lines">
+      <path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810"/>
+      <path d="M385 178 440 222 516 204M680 344 730 292 803 322 862 283M955 523 1044 492 1112 544M618 740 690 706 765 763 843 730"/>
+    </g>
+    <g class="star-points"><circle cx="70" cy="330" r="1.4"/><circle cx="152" cy="280" r="1.8"/><circle cx="223" cy="303" r="1"/><circle cx="268" cy="223" r="1.5"/><circle cx="1160" cy="138" r="1.2"/><circle cx="1230" cy="188" r="1.7"/><circle cx="1340" cy="163" r="1"/><circle cx="1180" cy="775" r="1.3"/><circle cx="1300" cy="815" r="1.7"/><circle cx="1380" cy="740" r="1.2"/><circle cx="325" cy="835" r="1"/><circle cx="390" cy="787" r="1.6"/><circle cx="475" cy="810" r="1"/><circle cx="530" cy="127" r="1.1"/><circle cx="860" cy="217" r="1"/><circle cx="727" cy="574" r="1.4"/><circle cx="1450" cy="443" r="1"/><circle cx="89" cy="712" r="1.1"/><circle cx="994" cy="900" r="1.3"/><circle cx="1015" cy="420" r="1"/>
+      <circle cx="385" cy="178" r="1.1"/><circle cx="440" cy="222" r="1.5"/><circle cx="516" cy="204" r="1"/>
+      <circle cx="680" cy="344" r="1.1"/><circle cx="730" cy="292" r="1.6"/><circle cx="803" cy="322" r="1.2"/><circle cx="862" cy="283" r="1"/>
+      <circle cx="955" cy="523" r="1.2"/><circle cx="1044" cy="492" r="1.6"/><circle cx="1112" cy="544" r="1"/>
+      <circle cx="618" cy="740" r="1"/><circle cx="690" cy="706" r="1.5"/><circle cx="765" cy="763" r="1.3"/><circle cx="843" cy="730" r="1"/>
+      <circle cx="550" cy="460" r="1"/><circle cx="930" cy="110" r="1.2"/><circle cx="355" cy="560" r=".9"/><circle cx="1060" cy="606" r="1.1"/>
+      <circle cx="720" cy="925" r="1"/><circle cx="902" cy="400" r="1.2"/><circle cx="1178" cy="350" r=".9"/><circle cx="1350" cy="910" r="1.1"/>
+    </g>
   </svg>
   <div class="app-shell">
     <header class="site-header">
       <div class="brand-group">
         <a class="brand" href="index.html" aria-label="LCZ 游戏 Wiki 首页">LCZ<span class="brand-dot" aria-hidden="true"></span></a>
-        <span class="community"><span>群 QQ：</span><span class="community-number">1045051029</span></span>
+        <button class="community" id="community-open" type="button" aria-label="查看QQ群1067536816的二维码" aria-haspopup="dialog" aria-controls="community-dialog" aria-expanded="false"><span>群 QQ：</span><span class="community-number">1067536816</span></button>
         <div data-site-stats data-compact="true" class="site-stats"></div>
       </div>
-      <button class="search-trigger" type="button" id="search-open" aria-label="搜索游戏">
+      <button class="search-trigger" type="button" id="search-open" aria-label="搜索游戏" aria-haspopup="dialog" aria-controls="search-dialog" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
         <span>搜索游戏</span><kbd>/</kbd>
       </button>
@@ -56,6 +66,15 @@
     <div class="info-tags" id="info-tags"></div>
     <div class="info-links" id="info-links"></div>
   </aside>
+
+  <dialog class="community-dialog" id="community-dialog" aria-labelledby="community-title" data-qr-state="loading">
+    <div class="dialog-header"><h2 id="community-title">QQ 交流群</h2><button class="icon-button dialog-close" type="button" aria-label="关闭群二维码" autofocus>×</button></div>
+    <div class="community-image">
+      <img id="community-qr" data-src="assets/community/qq-group-1067536816.jpg" alt="QQ群1067536816的加群二维码" width="1284" height="2283" decoding="async">
+      <div class="community-image-state"><p id="community-qr-status" role="status">正在加载二维码…</p><button id="community-qr-retry" type="button" hidden>重新加载</button></div>
+    </div>
+    <a class="community-download" id="community-download" href="assets/community/qq-group-1067536816.jpg" download="LCZ-QQ群-1067536816.jpg">保存二维码</a>
+  </dialog>
 
   <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
     <div class="dialog-header"><h2 id="search-title">搜索游戏</h2><button class="icon-button dialog-close" type="button" aria-label="关闭搜索">×</button></div>
