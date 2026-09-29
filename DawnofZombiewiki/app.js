@@ -458,7 +458,7 @@
     }
   });
   document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement && !e.target.dataset.failed){e.target.dataset.failed='true';const span=document.createElement('span');span.className='empty-art';span.textContent='图鉴图片暂不可用';e.target.replaceWith(span);}},true);
-  $('#detail-dialog').addEventListener('close',()=>{++detailToken;});
+  $('#detail-dialog').addEventListener('close',()=>{if(!$('#detail-dialog').open)++detailToken;});
   ['detail-dialog','compare-dialog'].forEach(id=>$('#'+id).addEventListener('click',e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.currentTarget.close();}));
   $('#mobile-menu').addEventListener('click',()=>setMenu(!$('#sidebar').classList.contains('open')));
   $('#menu-close').addEventListener('click',()=>setMenu(false,true));

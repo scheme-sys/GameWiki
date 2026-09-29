@@ -1,5 +1,10 @@
 'use strict';
   const DATA = window.DAYR_DATA;
+  const MONSTERS = window.DAYR_MONSTER_MANIFEST;
+  const monsterIds = new Set(MONSTERS?.ids || []);
+  const dataBase = new URL('../data/', document.currentScript.src);
+  let monsterState = Array.isArray(DATA.monsters) ? 'ready' : 'idle', monsterPromise = null, navigationRevision = 0;
+
   const HERO_IMAGE = 'wiki-assets/images/hero.jpg';
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -20,11 +25,52 @@
   const recordKey = item => item._type + ':' + item.id;
   const recordMap = new Map(allRecords.map(item => [recordKey(item),item]));
   const textIndex = new Map(allRecords.map(item => [recordKey(item), [item.name,item.nameEn,item.id,item.description,item.category,item.subcategory,...item.tags].map(display).join(' ').normalize('NFKC').toLocaleLowerCase()]));
+  const knownRecord = key => typeof key === 'string' && (recordMap.has(key) || key.startsWith('monster:') && monsterIds.has(key.slice(8)));
+  const loadStatus = document.createElement('div');
+  loadStatus.id = 'archive-load-status'; loadStatus.className = 'empty'; loadStatus.hidden = true;
+  loadStatus.setAttribute('role', 'status'); $('cardGrid').before(loadStatus);
+  function showMonsterLoad(failed = false) {
+    loadStatus.hidden = false; $('cardGrid').hidden = true; $('pageButtons').hidden = true;
+    loadStatus.innerHTML = failed ? '<h3>怪物资料暂时未能打开</h3><p>请检查连接后重试。</p><button type="button" id="retry-monsters">重新加载资料</button>' : '<h3>正在打开怪物资料…</h3><p>首次打开需要加载，之后可直接继续查阅。</p>';
+    $('retry-monsters')?.addEventListener('click', () => /^#monster=/.test(location.hash) && state.scope !== 'monsters' ? readHash() : setScope(state.scope));
+  }
+  function hideMonsterLoad() { loadStatus.hidden = true; $('cardGrid').hidden = false; $('pageButtons').hidden = false; }
+  function needsMonsters() { return state.scope === 'monsters' || state.scope === 'favorites' && [...favorites].some(key => key.startsWith('monster:')); }
+  function ensureMonsters() {
+    if (monsterState === 'ready') return Promise.resolve();
+    if (monsterPromise) return monsterPromise;
+    monsterState = 'loading';
+    monsterPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script'); let ended = false;
+      const finish = error => {
+        if (ended) return; ended = true; clearTimeout(timer); script.remove();
+        if (error) reject(error); else resolve();
+      };
+      const timer = setTimeout(() => finish(new Error('怪物资料加载超时')), 15000);
+      if (!MONSTERS || MONSTERS.schema !== 1 || !/^monsters\.js\?v=[a-f0-9]{16}$/.test(MONSTERS.url)) { finish(new Error('怪物资料目录缺失')); return; }
+      script.src = new URL(MONSTERS.url, dataBase).href;
+      script.onload = () => {
+        try {
+          const rows = DATA.monsters;
+          if (!Array.isArray(rows) || rows.length !== MONSTERS.count || new Set(rows.map(row => String(row.id))).size !== MONSTERS.count || rows.some(row => !monsterIds.has(String(row.id)))) throw new Error('怪物资料不完整');
+          for (const [index, row] of rows.entries()) {
+            const item = normalize(row, 'monster', index), key = recordKey(item);
+            monsters.push(item); allRecords.push(item); recordMap.set(key, item);
+            textIndex.set(key, [item.name,item.nameEn,item.id,item.description,item.category,item.subcategory,...item.tags].map(display).join(' ').normalize('NFKC').toLocaleLowerCase());
+          }
+          monsterState = 'ready'; finish();
+        } catch (error) { finish(error); }
+      };
+      script.onerror = () => finish(new Error('怪物资料加载失败'));
+      document.head.append(script);
+    }).catch(error => { monsterState = 'error'; monsterPromise = null; throw error; });
+    return monsterPromise;
+  }
   const state = {scope:'items',category:'',query:'',sort:'original',page:1};
   const PAGE_SIZE = 48;
   const favoriteStorageKey = 'day-r-field-archive-favorites-v1';
   let favorites = new Set(), activeRecord = null, toastTimer, lastTrigger = null;
-  try { const stored = JSON.parse(localStorage.getItem(favoriteStorageKey) || '[]'); if (Array.isArray(stored)) favorites = new Set(stored.filter(key => typeof key === 'string' && recordMap.has(key))); } catch (_) {}
+  try { const stored = JSON.parse(localStorage.getItem(favoriteStorageKey) || '[]'); if (Array.isArray(stored)) favorites = new Set(stored.filter(knownRecord)); } catch (_) {}
   const scopeInfo = {
     items:{title:'全部物品',en:'ITEM INDEX',kicker:'SUPPLIES & EQUIPMENT',description:'从一枚螺母到一把步枪，寻找你需要的生存物资。'},
     weapons:{title:'武器图鉴',en:'WEAPON INDEX',kicker:'ARMORY & COMBAT',description:'认识每一件武器，在废土中争取更多生存机会。'},
@@ -55,14 +101,14 @@
   function updateFavoriteCount(){$('navFavorites').textContent=formatNumber(favorites.size);}
   function toggleFavorite(item){const key=recordKey(item),wasSaved=favorites.has(key);if(wasSaved)favorites.delete(key);else favorites.add(key);const persisted=saveFavorites();updateFavoriteCount();document.querySelectorAll('[data-favorite]').forEach(button=>{if(button.dataset.favorite===key){button.setAttribute('aria-pressed',String(!wasSaved));button.setAttribute('aria-label',(wasSaved?'收藏':'取消收藏')+' '+item.name);}});if(activeRecord && recordKey(activeRecord)===key){$('detailFavorite').setAttribute('aria-pressed',String(!wasSaved));$('detailFavorite').setAttribute('aria-label',wasSaved?'收藏此档案':'取消收藏此档案');}if(state.scope==='favorites'){renderCategories();render();}announce((wasSaved?'已取消收藏':'已加入收藏')+(persisted?'':' · 浏览器禁止本地存储，仅本次有效'));}
   function renderCategories(){const categories=categoryCounts();if(state.category&&!categories.some(([name])=>name===state.category))state.category='';$('categorySelect').innerHTML='<option value="">全部分类 ('+formatNumber(baseRecords().length)+')</option>'+categories.map(([name,count])=>'<option value="'+esc(name)+'">'+esc(name)+' ('+formatNumber(count)+')</option>').join('');$('categorySelect').value=state.category;const popular=categories.slice(0,7);if(state.category&&!popular.some(([name])=>name===state.category)){const selected=categories.find(([name])=>name===state.category);if(selected)popular.push(selected);}const chip=(name,label)=>'<button class="chip'+(state.category===name?' active':'')+'" data-category="'+esc(name)+'" aria-pressed="'+String(state.category===name)+'">'+esc(label)+'</button>';$('chipRow').innerHTML='<span class="chip-label">快速筛选</span>'+chip('','全部')+popular.map(([name])=>chip(name,name)).join('')+'<button class="filter-reset" id="resetFilters">'+icon('reset')+'重置筛选</button>';$('resetFilters').hidden=!state.category&&!state.query&&state.sort==='original';}
-  function setScope(scope){if(!scopeInfo[scope])return;state.scope=scope;state.category='';state.page=1;const info=scopeInfo[scope];$('catalogTitle').innerHTML=esc(info.title)+' <span>'+esc(info.en)+'</span>';$('sectionKicker').textContent=info.kicker;$('sectionDescription').textContent=info.description;document.querySelectorAll('[data-scope]').forEach(button=>{const active=button.dataset.scope===scope;button.classList.toggle('active',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});renderCategories();render();}
+  async function setScope(scope){if(!scopeInfo[scope])return;const revision=++navigationRevision;state.scope=scope;state.category='';state.page=1;const info=scopeInfo[scope];$('catalogTitle').innerHTML=esc(info.title)+' <span>'+esc(info.en)+'</span>';$('sectionKicker').textContent=info.kicker;$('sectionDescription').textContent=info.description;document.querySelectorAll('[data-scope]').forEach(button=>{const active=button.dataset.scope===scope;button.classList.toggle('active',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});if(needsMonsters()&&monsterState!=='ready'){showMonsterLoad();try{await ensureMonsters();}catch(_){if(revision===navigationRevision)showMonsterLoad(true);return;}if(revision!==navigationRevision)return;}hideMonsterLoad();renderCategories();render();}
   function filteredRecords(){const words=state.query.normalize('NFKC').toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);let rows=baseRecords().filter(item=>(!state.category||categoryOf(item)===state.category)&&words.every(word=>textIndex.get(recordKey(item)).includes(word)));if(state.sort==='name')rows.sort((a,b)=>a.name.localeCompare(b.name,'zh-CN',{numeric:true}));else if(state.sort==='id')rows.sort((a,b)=>a.id.localeCompare(b.id,'en',{numeric:true}));else if(state.sort==='category')rows.sort((a,b)=>categoryOf(a).localeCompare(categoryOf(b),'zh-CN')||a.name.localeCompare(b.name,'zh-CN'));return rows;}
   function cardMarkup(item) {
     const key=recordKey(item),saved=favorites.has(key),stats=briefStats(item),img=safeImage(item.image),symbol=item._type==='monster'?'skull':isWeapon(item)?'weapon':'box';
     return '<article class="card"><button class="card-fav" data-favorite="'+esc(key)+'" aria-label="'+(saved?'取消收藏':'收藏')+' '+esc(item.name)+'" aria-pressed="'+saved+'">'+icon('star')+'</button><button class="card-main" data-record="'+esc(key)+'" aria-label="查看 '+esc(item.name)+' 的完整档案"><div class="card-picture"><span class="card-type">'+esc(categoryOf(item))+'</span><span class="card-placeholder"'+(img?' hidden':'')+'>'+icon(symbol)+'<span>暂无图像</span></span>'+(img?'<img class="card-image" src="'+esc(img)+'" alt="" loading="lazy" decoding="async">':'')+'<span class="card-index">'+(item._type==='monster'?'战斗单位':'物品档案')+'</span></div><div class="card-body"><h3 class="card-title">'+esc(item.name)+'</h3>'+(item.nameEn?'<div class="card-en">'+esc(item.nameEn)+'</div>':'')+'<div class="card-stats">'+(stats.length?stats.map(([k,v])=>'<span class="card-stat">'+esc(k)+'<b>'+esc(display(v))+'</b></span>').join(''):'<span class="card-stats-empty">查看档案资料</span>')+'</div></div><div class="card-footer"><span>查看详情</span>'+icon('arrow')+'</div></button></article>';
   }
   function bindImageFallbacks(container){container.querySelectorAll('img').forEach(img=>{const fail=()=>{img.hidden=true;const placeholder=img.parentElement.querySelector('.card-placeholder');if(placeholder)placeholder.hidden=false;};img.addEventListener('error',fail,{once:true});if(img.complete&&img.naturalWidth===0)fail();});}
-  function render(){const rows=filteredRecords(),pages=Math.max(1,Math.ceil(rows.length/PAGE_SIZE));state.page=Math.max(1,Math.min(state.page,pages));const start=(state.page-1)*PAGE_SIZE,end=Math.min(start+PAGE_SIZE,rows.length);$('clearSearch').hidden=!state.query;$('catalogReadout').textContent='CATALOG / '+String(baseRecords().length).padStart(4,'0');$('resultsText').innerHTML='找到 <strong>'+formatNumber(rows.length)+'</strong> 条档案'+(rows.length?' <span class="dot-sep">/</span> 正在显示 '+formatNumber(start+1)+'–'+formatNumber(end):'');$('cardGrid').innerHTML=rows.length?rows.slice(start,end).map(cardMarkup).join(''):'<div class="empty">'+icon(state.scope==='favorites'&&!state.query&&!state.category?'star':'search')+'<h3>'+(state.scope==='favorites'&&!favorites.size?'你的档案袋还是空的':'没有找到匹配的档案')+'</h3><p>'+(state.scope==='favorites'&&!favorites.size?'点击物品或怪物卡片右上角的星标，把它加入收藏。':'尝试减少搜索关键词，或切换分类。支持物品名称、英文名称与说明关键词。')+'</p><button data-empty-reset>'+(state.scope==='favorites'&&!favorites.size?'浏览全部物品':'清除筛选条件')+'</button></div>';bindImageFallbacks($('cardGrid'));$('pageReadout').textContent='PAGE '+String(state.page).padStart(2,'0')+' / '+String(pages).padStart(2,'0');const slots=new Set([1,pages,state.page-1,state.page,state.page+1]);if(state.page<=2){slots.add(2);slots.add(3);}if(state.page>=pages-1){slots.add(pages-1);slots.add(pages-2);}const numbers=[...slots].filter(n=>n>0&&n<=pages).sort((a,b)=>a-b);let last=0;const button=(page,label,aria,active=false,disabled=false)=>'<button class="page-btn'+(active?' active':'')+'" data-page="'+page+'" aria-label="'+aria+'"'+(active?' aria-current="page"':'')+(disabled?' disabled':'')+'>'+label+'</button>';$('pageButtons').innerHTML=button(state.page-1,icon('prev'),'上一页',false,state.page<=1)+numbers.map(n=>{const gap=last&&n-last>1?'<span class="page-gap" aria-hidden="true">…</span>':'';last=n;return gap+button(n,String(n),'第 '+n+' 页',n===state.page);}).join('')+button(state.page+1,icon('next'),'下一页',false,state.page>=pages);const reset=$('resetFilters');if(reset)reset.hidden=!state.category&&!state.query&&state.sort==='original';}
+  function render(){if(needsMonsters()&&monsterState!=='ready'){showMonsterLoad(monsterState==='error');return;}hideMonsterLoad();const rows=filteredRecords(),pages=Math.max(1,Math.ceil(rows.length/PAGE_SIZE));state.page=Math.max(1,Math.min(state.page,pages));const start=(state.page-1)*PAGE_SIZE,end=Math.min(start+PAGE_SIZE,rows.length);$('clearSearch').hidden=!state.query;$('catalogReadout').textContent='CATALOG / '+String(baseRecords().length).padStart(4,'0');$('resultsText').innerHTML='找到 <strong>'+formatNumber(rows.length)+'</strong> 条档案'+(rows.length?' <span class="dot-sep">/</span> 正在显示 '+formatNumber(start+1)+'–'+formatNumber(end):'');$('cardGrid').innerHTML=rows.length?rows.slice(start,end).map(cardMarkup).join(''):'<div class="empty">'+icon(state.scope==='favorites'&&!state.query&&!state.category?'star':'search')+'<h3>'+(state.scope==='favorites'&&!favorites.size?'你的档案袋还是空的':'没有找到匹配的档案')+'</h3><p>'+(state.scope==='favorites'&&!favorites.size?'点击物品或怪物卡片右上角的星标，把它加入收藏。':'尝试减少搜索关键词，或切换分类。支持物品名称、英文名称与说明关键词。')+'</p><button data-empty-reset>'+(state.scope==='favorites'&&!favorites.size?'浏览全部物品':'清除筛选条件')+'</button></div>';bindImageFallbacks($('cardGrid'));$('pageReadout').textContent='PAGE '+String(state.page).padStart(2,'0')+' / '+String(pages).padStart(2,'0');const slots=new Set([1,pages,state.page-1,state.page,state.page+1]);if(state.page<=2){slots.add(2);slots.add(3);}if(state.page>=pages-1){slots.add(pages-1);slots.add(pages-2);}const numbers=[...slots].filter(n=>n>0&&n<=pages).sort((a,b)=>a-b);let last=0;const button=(page,label,aria,active=false,disabled=false)=>'<button class="page-btn'+(active?' active':'')+'" data-page="'+page+'" aria-label="'+aria+'"'+(active?' aria-current="page"':'')+(disabled?' disabled':'')+'>'+label+'</button>';$('pageButtons').innerHTML=button(state.page-1,icon('prev'),'上一页',false,state.page<=1)+numbers.map(n=>{const gap=last&&n-last>1?'<span class="page-gap" aria-hidden="true">…</span>':'';last=n;return gap+button(n,String(n),'第 '+n+' 页',n===state.page);}).join('')+button(state.page+1,icon('next'),'下一页',false,state.page>=pages);const reset=$('resetFilters');if(reset)reset.hidden=!state.category&&!state.query&&state.sort==='original';}
   function clearFilters(){state.category='';state.query='';state.sort='original';state.page=1;$('search').value='';$('sortSelect').value='original';renderCategories();render();}
   function detailHash(item){return '#'+item._type+'='+encodeURIComponent(item.id);}
   function extraDetails(item) {
@@ -91,8 +137,23 @@
     const dialog=$('detailDialog');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
     if(updateHash){try{history.replaceState(null,'',detailHash(item));}catch(_){location.hash=detailHash(item);}}
   }
-  function closeDetail(){const dialog=$('detailDialog');if(dialog.open)dialog.close();activeRecord=null;try{history.replaceState(null,'',location.pathname+location.search);}catch(_){}if(lastTrigger&&lastTrigger.isConnected)lastTrigger.focus();else $('search').focus();}
-  function readHash(){const match=location.hash.match(/^#(item|monster)=(.*)$/);if(!match)return;try{const item=recordMap.get(match[1]+':'+decodeURIComponent(match[2]));if(item)openDetail(item,false);else announce('未找到此链接对应的档案');}catch(_){announce('档案链接格式不正确');}}
+  function closeDetail(){navigationRevision++;const dialog=$('detailDialog');if(dialog.open)dialog.close();activeRecord=null;try{history.replaceState(null,'',location.pathname+location.search);}catch(_){}if(lastTrigger&&lastTrigger.isConnected)lastTrigger.focus();else $('search').focus();}
+  async function readHash(){
+    const hash=location.hash,match=hash.match(/^#(item|monster)=(.*)$/);if(!match)return;
+    const revision=++navigationRevision;
+    try {
+      const key=match[1]+':'+decodeURIComponent(match[2]);
+      if(!knownRecord(key)){announce('未找到此链接对应的档案');return;}
+      if(match[1]==='monster'&&monsterState!=='ready'){
+        showMonsterLoad();
+        try{await ensureMonsters();}catch(_){if(revision===navigationRevision&&hash===location.hash)showMonsterLoad(true);return;}
+        if(revision!==navigationRevision||hash!==location.hash)return;
+        hideMonsterLoad();
+      }
+      const item=recordMap.get(key);if(item)openDetail(item,false);else announce('未找到此链接对应的档案');
+    }catch(_){announce('档案链接格式不正确');}
+  }
+
   async function copyRecordLink(){if(!activeRecord)return;const url=location.href.split('#')[0]+detailHash(activeRecord);try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url);}else{const textarea=document.createElement('textarea');textarea.value=url;textarea.setAttribute('readonly','');textarea.style.cssText='position:fixed;opacity:0;left:0;top:0;';$('detailDialog').appendChild(textarea);textarea.select();const copied=document.execCommand('copy');textarea.remove();if(!copied)throw new Error('copy');}announce('档案链接已复制');}catch(_){announce('复制受浏览器限制，可从地址栏复制此页面链接。');}}
   document.querySelectorAll('[data-scope]').forEach(button=>button.addEventListener('click',()=>setScope(button.dataset.scope)));
   document.querySelector('.brand').addEventListener('click',event=>{event.preventDefault();clearFilters();setScope('items');window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
@@ -111,9 +172,9 @@
   $('detailContent').addEventListener('click',event=>{const link=event.target.closest('[data-linked-item]');if(link)openDetail(recordMap.get('item:'+link.dataset.linkedItem));});
   document.addEventListener('keydown',event=>{if(event.key==='/'&&!$('detailDialog').open&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){event.preventDefault();$('search').focus();}});
   window.addEventListener('hashchange',()=>{if(/^#(item|monster)=/.test(location.hash))readHash();else if($('detailDialog').open)closeDetail();});
-  window.addEventListener('storage',event=>{if(event.key!==favoriteStorageKey)return;try{const parsed=JSON.parse(event.newValue||'[]');if(Array.isArray(parsed)){favorites=new Set(parsed.filter(key=>recordMap.has(key)));updateFavoriteCount();if(state.scope==='favorites')renderCategories();render();if(activeRecord)$('detailFavorite').setAttribute('aria-pressed',String(favorites.has(recordKey(activeRecord))));}}catch(_){}});
+  window.addEventListener('storage',event=>{if(event.key!==favoriteStorageKey)return;try{const parsed=JSON.parse(event.newValue||'[]');if(Array.isArray(parsed)){favorites=new Set(parsed.filter(knownRecord));updateFavoriteCount();if(state.scope==='favorites')setScope('favorites');else render();if(activeRecord)$('detailFavorite').setAttribute('aria-pressed',String(favorites.has(recordKey(activeRecord))));}}catch(_){}});
   const meta=DATA.meta||{};
-  [['countItems',items.length],['countWeapons',weapons.length],['countMonsters',monsters.length],['navItems',items.length],['navWeapons',weapons.length],['navMonsters',monsters.length]].forEach(([id,count])=>$(id).textContent=formatNumber(count));
+  [['countItems',items.length],['countWeapons',weapons.length],['countMonsters',MONSTERS?.count||monsters.length],['navItems',items.length],['navWeapons',weapons.length],['navMonsters',MONSTERS?.count||monsters.length]].forEach(([id,count])=>$(id).textContent=formatNumber(count));
   updateFavoriteCount();
   if(meta.version){$('sideVersion').textContent='APK / '+display(meta.version);$('heroVersion').textContent='BUILD '+display(meta.version)+' / LOCAL EXTRACTION';}
   $('provenance').textContent='资料版本：'+display(meta.version || '未注明')+'。本页面为非官方玩家资料索引，游戏名称、文本和美术资源归原权利方所有。历史及活动内容不代表当前均可获取。';

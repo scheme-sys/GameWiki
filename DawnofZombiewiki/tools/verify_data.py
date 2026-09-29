@@ -71,7 +71,31 @@ def verify(root, data_only=False):
     for name, expected in generated_files(root).items():
         file = root / name
         require(file_matches(file, expected), f'Generated file out of date: {name}; run tools/update_data.py')
-    checks.append('Runtime JSON wrappers preserve all source fields and metadata is current')
+    expected_lazy={name for name in generated_files(root) if name.startswith('data/lazy/')}
+    actual_lazy={file.relative_to(root).as_posix() for file in (root/'data/lazy').glob('*.js')}
+    require(expected_lazy==actual_lazy,'Generated lazy chunk list differs; run tools/update_data.py')
+    boot=read_js_json(root/'data/bootstrap.js','DOZ_BOOTSTRAP')
+    reconstructed=[]
+    chunks={}
+    for key,reference in boot['manifest'].items():
+        file=local_file(reference)
+        content=file.read_bytes()
+        require(hashlib.sha256(content).hexdigest()[:16] in file.name,'Lazy chunk content hash differs')
+        text=content.decode('utf-8').strip()
+        prefix='window.DOZ_DATA_PARTS['+__import__('json').dumps(key)+'] = '
+        require(text.startswith(prefix) and text.endswith(';'),'Unexpected lazy script wrapper')
+        value=__import__('json').loads(text[len(prefix):-1])
+        chunks[key]=value
+        references(value)
+        if key.startswith('detail-'):reconstructed.extend(value['entries'])
+    require(sorted(reconstructed,key=lambda row:row['id'])==sorted(catalog['entries'],key=lambda row:row['id']),'Lazy details do not preserve every original player field')
+    recipes=[row for i in range((len(catalog['recipes'])+23)//24) for row in chunks['recipes-'+str(i)]]
+    require(recipes==catalog['recipes'],'Lazy recipe pages differ from the complete source')
+    for key,value in catalog.items():
+        if key not in ('entries','meta','categories','recipes'):
+            require(chunks['catalog-'+key]==value,'Lazy dataset differs: '+key)
+    require({**chunks['mechanics-gacha'],**chunks['mechanics-guides']}==mechanics,'Lazy mechanics do not preserve the complete source')
+    checks.append('Complete lazy details, recipes, datasets and mechanics reconstruct source JSON; content hashes and static references match')
 
     exports = player_exports(catalog, mechanics, assets)
     actual_exports = {file.relative_to(root).as_posix() for directory, pattern in [('data/player', '*.csv'), ('guides', '*.md')]

@@ -8,6 +8,7 @@ import json, math, time, re, sys, os
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.verification'/'dawn-ui'
+SOURCE=json.loads((ROOT/'DawnofZombiewiki/data/catalog.json').read_text(encoding='utf-8'))
 OUT.mkdir(parents=True,exist_ok=True)
 class Quiet(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
@@ -20,7 +21,7 @@ def passed(name):report['passed'].append(name);print('PASS '+name,flush=True)
 def capture(page,name):
  page.screenshot(path=str(OUT/(name+'.jpg')),full_page=False,quality=85);report['screenshots'].append(name+'.jpg')
 def route(page,name):
- started=time.perf_counter();page.evaluate('(route)=>{location.hash=route}',name);page.wait_for_function("document.getElementById('main').getAttribute('aria-busy')==='false'");page.wait_for_timeout(70)
+ started=time.perf_counter();page.evaluate('(route)=>{location.hash=route}',name);page.wait_for_function("target=>{const m=document.getElementById('main');return m.getAttribute('aria-busy')==='false'&&m.dataset.route===target}",arg=name.split('?')[0] if name.split('?')[0] in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search'] else 'home');page.wait_for_timeout(70)
  report['timings'].setdefault('routes',{})[name]=round((time.perf_counter()-started)*1000,1)
  assert page.locator('#main').inner_text().strip()
 def no_overflow(page,label):
@@ -48,14 +49,57 @@ try:
   report['timings']['initialImageRequests']=page.evaluate("performance.getEntriesByType('resource').filter(r=>r.initiatorType==='img').length")
   assert report['timings']['initialImageRequests']<30
   passed('First load shows all data-backed navigation and lazily requests fewer than 30 images')
+  initial=page.evaluate("()=>performance.getEntriesByType('resource').map(r=>({url:r.name.split('/DawnofZombiewiki/').pop(),body:r.decodedBodySize,kind:r.initiatorType}))")
+  report['timings']['initialResources']=initial
+  report['timings']['initialDataBytes']=sum(r['body'] for r in initial if r['url'].startswith('data/'))
+  assert report['timings']['initialDataBytes']<100000,report['timings']['initialDataBytes']
+  assert page.evaluate("DOZ_DATA.loaded()")==[]
+  page.wait_for_timeout(1100)
+  assert page.evaluate("DOZ_DATA.loaded()")==[]
+  assert not any('/lazy/' in r['url'] or r['url'] in ['data/catalog.js','data/mechanics.js'] for r in initial)
+  passed('Home loads under 100 KB of data and does not silently prefetch unused datasets')
+  route(page,'weapon')
+  assert page.evaluate("DOZ_DATA.loaded()")==['index-weapon']
+  before_count=page.evaluate("performance.getEntriesByType('resource').filter(r=>r.name.includes('/lazy/')).length")
+  route(page,'home');route(page,'weapon')
+  assert before_count==page.evaluate("performance.getEntriesByType('resource').filter(r=>r.name.includes('/lazy/')).length")
+  passed('Opening one category loads only its index and revisits reuse the loaded part')
+  page.locator('#hidden-filter').check()
+  expect(page.locator('#hidden-filter')).to_be_checked()
+  page.wait_for_function("DOZ_DATA.loaded().includes('index-weapon-hidden')")
+  assert not page.evaluate("DOZ_DATA.loaded().some(k=>k.startsWith('detail-'))")
+  passed('Special or hidden entries load only after their explicit filter is enabled')
+  # A failed request remains retryable instead of poisoning the promise cache.
+  failed=[]
+  def fail_armor(request):
+   failed.append(request.request.url);request.abort()
+  page.route('**/index-armor-*.js',fail_armor)
+  route(page,'armor');expect(page.locator('#retry-view')).to_be_visible()
+  page.unroute('**/index-armor-*.js',fail_armor)
+  page.locator('#retry-view').click();expect(page.locator('.catalog-grid .item-card').first).to_be_visible()
+  assert len(failed)==1
+  passed('A failed category request has an inline retry and successfully recovers')
+  # Hold a request without blocking the browser, navigate away, then release it.
+  held=[]
+  page.route('**/index-enemy-*.js',lambda request:held.append(request))
+  page.evaluate("location.hash='enemy'");page.wait_for_timeout(100);assert held
+  route(page,'home');held.pop().continue_();page.wait_for_timeout(150)
+  page.unroute('**/index-enemy-*.js')
+  expect(page.locator('#crumb')).to_have_text('资料总览');assert page.locator('.hero').count()==1
+  passed('A stale category response cannot replace a newer page')
+
   for name in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search']:
    route(page,name);no_overflow(page,name);no_player_codes(page,name)
   passed('All 18 routes render without document overflow')
-  preserved_details=page.evaluate("""()=>{const rows=window.DOZ_CATALOG.entries;return [
-   {row:rows.find(e=>e.scenarioStats?.length),field:'scenarioStats',heading:'不同场景的属性候选'},
-   {row:rows.find(e=>e.abilities?.some(a=>a.cooldown>0)),field:'abilities',heading:'特殊能力'},
-   {row:rows.find(e=>e.levelStats?.length),field:'levelStats',heading:'等级分段属性'}
-  ].map(({row,field,heading})=>({id:row.id,category:row.category,heading,value:String(field==='abilities'?row.abilities.find(a=>a.cooldown>0).cooldown:row[field][0].value)}));}""")
+  rows=SOURCE['entries']
+  preserved_details=[]
+  for field,heading,predicate in [
+   ('scenarioStats','不同场景的属性候选',lambda e:bool(e.get('scenarioStats'))),
+   ('abilities','特殊能力',lambda e:any(a.get('cooldown',0)>0 for a in e.get('abilities',[]))),
+   ('levelStats','等级分段属性',lambda e:bool(e.get('levelStats')))]:
+   row=next(e for e in rows if predicate(e))
+   value=next(a['cooldown'] for a in row['abilities'] if a.get('cooldown',0)>0) if field=='abilities' else row[field][0]['value']
+   preserved_details.append({'id':row['id'],'category':row['category'],'heading':heading,'value':str(int(value)) if isinstance(value,float) and value.is_integer() else str(value)})
   for entry in preserved_details:
    route(page,entry['category']+'?entry='+str(entry['id']));expect(page.locator('#detail-dialog')).to_be_visible()
    expect(page.locator('#detail-dialog')).to_contain_text(entry['heading']);expect(page.locator('#detail-dialog')).to_contain_text(entry['value']);page.locator('#detail-dialog [data-close]').click()
@@ -66,7 +110,7 @@ try:
   page.locator('#catalog-search').fill(name);page.wait_for_timeout(220)
   assert page.locator('.catalog-grid .item-card').count()>0
   page.locator('.catalog-grid .card-main').first.click();expect(page.locator('#detail-dialog')).to_be_visible()
-  assert name in page.locator('#detail-dialog h2').inner_text()
+  expect(page.locator('#detail-dialog h2')).to_contain_text(name)
   capture(page,'detail-desktop')
   page.locator('#detail-dialog [data-save]').click();expect(page.locator('#saved-count')).to_have_text('1')
   page.locator('#detail-dialog [data-close]').click()
@@ -160,7 +204,7 @@ try:
    passed(f'{width}x{height} routes, menu and detail remain usable')
   report['csp']+=page.evaluate('window.__csp');assert not report['csp'],report['csp'];assert not report['errors'],report['errors'];assert not report['external'],report['external']
   passed('Normal interaction produces no CSP violations, JavaScript errors or external requests')
-  local=context.new_page();local.goto((ROOT/'DawnofZombiewiki/index.html').as_uri(),wait_until='load');expect(local.locator('#main h1')).to_be_visible();local.evaluate("location.hash='weapon'");local.wait_for_timeout(150);local.locator('.catalog-grid .card-main').first.click();expect(local.locator('#detail-dialog')).to_be_visible();passed('Direct local file supports catalog and details')
+  local=context.new_page();local.goto((ROOT/'DawnofZombiewiki/index.html').as_uri(),wait_until='load');expect(local.locator('#main h1')).to_be_visible();local.evaluate("location.hash='weapon'");local.wait_for_function("document.querySelector('#catalog-search')!==null");local.locator('.catalog-grid .card-main').first.click();expect(local.locator('#detail-dialog')).to_be_visible();passed('Direct local file supports catalog and details')
   media=context.new_page();media.on('pageerror',lambda e:report['errors'].append(str(e)))
   media.add_init_script("window.__csp=[];document.addEventListener('securitypolicyviolation',e=>window.__csp.push({directive:e.effectiveDirective,uri:e.blockedURI}));")
   media.goto(BASE.replace('index.html','materials.html'),wait_until='networkidle')

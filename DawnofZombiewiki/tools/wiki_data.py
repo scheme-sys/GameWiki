@@ -196,6 +196,8 @@ def generated_files(root=ROOT):
     outputs['reports/size-audit.json'] = json_bytes({
         'images': len(assets['images']), 'imageBytes': site['coverage']['assetStats']['imageBytes'],
         'maintenanceJsonBytes': sum((root / f'data/{name}.json').stat().st_size for name in JSON_NAMES),
-        'playerRuntimeDataBytes': sum(len(outputs[f'data/{name}.js']) for name in (*JSON_NAMES, 'site-meta')),
+        'playerRuntimeDataBytes': sum(len(value) for name,value in outputs.items() if name=='data/bootstrap.js' or name.startswith('data/lazy/') or name in ('data/asset-map.js','data/site-meta.js')),
+        'initialRuntimeDataBytes': sum(len(outputs[name]) for name in ('data/bootstrap.js','data/asset-map.js','data/site-meta.js')),
+        'lazyChunks': len([name for name in outputs if name.startswith('data/lazy/')]),
     }, pretty=True)
     return outputs
