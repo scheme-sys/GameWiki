@@ -383,6 +383,17 @@ try:
                 if (width,height) in [(390,844),(320,568),(568,320),(844,390),(1920,1080)]:
                     screenshot(page, f"layout-{width}x{height}")
             run_case(f"Viewport {width}x{height} keeps full-screen circles in bounds", responsive, width=width, height=height, mobile=width<=844)
+        def narrow_mouse(page, _):
+            load(page)
+            pause(page)
+            x,y = icon_center(page)
+            page.mouse.move(x,y)
+            expect(page.locator('#game-info')).to_be_visible()
+            box=page.locator('#game-info').bounding_box()
+            assert box['x'] >= 0 and box['x']+box['width'] <= 320, box
+            page.locator('#info-close').click()
+            expect(page.locator('#game-info')).to_be_hidden()
+        run_case("Narrow mouse viewport keeps square info and close button in bounds", narrow_mouse, width=320, height=568)
         run_case("Dawn search, entry, shared navigation and return", dawn_entry_and_switch)
         run_case("Real touch long press, second tap and direct tap entry", touch_longpress, width=390, height=844, mobile=True)
         run_case("Real touch repulsion, cancel and long-press movement threshold", touch_drag_and_cancel, width=390, height=844, mobile=True)
