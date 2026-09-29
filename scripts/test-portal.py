@@ -76,7 +76,8 @@ def check_geometry(page, width, height):
         });
         return {id:node.dataset.game, icon:rect(icon.getBoundingClientRect()), labels, radius:getComputedStyle(icon).borderRadius};
       });
-      return {worlds, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight,
+      const widgets=[...document.querySelectorAll(".brand,.community,.site-stats-summary,#search-open")].map(e=>rect(e.getBoundingClientRect()));
+      return {worlds, widgets, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight,
         header:rect(document.querySelector('.site-header').getBoundingClientRect()), scene:rect(document.querySelector('.app-shell').getBoundingClientRect())};
     }""")
     assert geometry["scrollWidth"] <= width + 1, f"Horizontal overflow at {width}x{height}: {geometry['scrollWidth']}"
@@ -92,6 +93,10 @@ def check_geometry(page, width, height):
     def intersects(a, b):
         return min(a["right"], b["right"]) - max(a["x"], b["x"]) > 1 and min(a["bottom"], b["bottom"]) - max(a["y"], b["y"]) > 1
 
+    for i,widget in enumerate(geometry['widgets']):
+        assert widget['x'] >= 0 and widget['right'] <= width + 1, ('Header overflow',widget)
+        for other in geometry['widgets'][i+1:]:
+            assert not intersects(widget,other), ('Header overlap',widget,other)
     for index, first in enumerate(geometry["worlds"]):
         a = first["icon"]
         for second in geometry["worlds"][index + 1:]:
@@ -136,7 +141,8 @@ def home_render(page):
     summary = page.locator("[data-site-stats] summary")
     assert summary.get_attribute('title') is None, 'Native unstyled tooltip returned'
     summary.hover()
-    assert summary.evaluate('(e)=>getComputedStyle(e,"::after").content').strip('"') == '点击查看本站与当前页面的访问统计'
+    tooltip_text = summary.evaluate('(e)=>getComputedStyle(e,"::after").content')
+    assert "PV" in tooltip_text and "IP" in tooltip_text, tooltip_text
     tooltip_color = summary.evaluate('(e)=>getComputedStyle(e,"::after").backgroundColor')
     assert max(map(int, re.findall(r'\d+', tooltip_color)[:3])) < 70, tooltip_color
     summary.click()
@@ -211,6 +217,47 @@ def desktop_drag(page):
     page.keyboard.press("Enter")
     page.wait_for_url("**/wiki_dayR.html")
     expect(page.locator(".atlas-home")).to_be_visible()
+
+
+def overlap_then_release(page, context, mobile=False):
+    load(page)
+    start = icon_center(page)
+    target = icon_center(page, 'craft')
+    if mobile:
+        cdp = context.new_cdp_session(page)
+        touch(cdp, 'touchStart', [start])
+    else:
+        page.mouse.move(*start)
+        page.mouse.down()
+    before = snapshot(page)
+    if mobile:
+        touch(cdp, 'touchMove', [target])
+    else:
+        page.mouse.move(*target, steps=12)
+    page.wait_for_timeout(70)
+    overlapping = snapshot(page)
+    assert distance(overlapping['dayr'], overlapping['craft']) < 3, overlapping
+    assert distance(before['craft'], overlapping['craft']) < 1, 'Neighbour moved before release'
+    expect(page.locator('#game-info')).to_be_hidden()
+    if mobile:
+        touch(cdp, 'touchEnd')
+    else:
+        page.mouse.up()
+    released = snapshot(page)
+    assert distance(released['dayr'], overlapping['dayr']) < 12, 'Release jumped instantly'
+    page.wait_for_timeout(180)
+    midway = snapshot(page)
+    assert distance(midway['dayr'], midway['craft']) > 10, 'Release did not start easing apart'
+    expect(page.locator('#game-info')).to_be_hidden()
+    page.wait_for_timeout(1200)
+    assert page.url == BASE, 'Dragging navigated to a game'
+    check_geometry(page, 390 if mobile else 1440, 844 if mobile else 960)
+    final = snapshot(page)
+    area = page.locator('#game-universe').bounding_box()
+    saved = page.evaluate("JSON.parse(localStorage.getItem('lcz:positions-v4:craft,dawn,dayr,westland'))")
+    layout = saved['mobile' if mobile else 'desktop']
+    assert all(distance([layout[k]['x']*area['width'],layout[k]['y']*area['height']],v) < 4 for k,v in final.items()), 'Saved anchors differ from resolved pose'
+    screenshot(page, 'release-touch' if mobile else 'release-mouse')
 
 
 def search_and_return(page):
@@ -374,6 +421,8 @@ try:
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
         run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
         run_case("Mouse drag, anchor persistence, keyboard and Escape", lambda page, _: desktop_drag(page))
+        run_case("Mouse may overlap during drag then eases apart on release", overlap_then_release)
+        run_case("Touch may overlap during drag then eases apart on release", lambda page, context: overlap_then_release(page, context, True), width=390, height=844, mobile=True)
         run_case("Search, keyboard entry and real Wiki return", lambda page, _: search_and_return(page))
         for width, height in [(1920,1080),(1440,960),(1024,768),(768,1024),(600,900),(390,844),(360,640),(320,568),(568,320),(844,390)]:
             def responsive(page, _, width=width, height=height):

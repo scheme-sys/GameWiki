@@ -175,6 +175,7 @@
       avatarThemeObserver?.disconnect();avatarThemeObserver=null;
       avatarPreview?.dispose();avatarPreview=null;avatarAttempted=false;avatarSelectionKey='';
       renderAvatarPreview();
+      if(!$('lab-avatar-canvas').hidden)$('lab-avatar-canvas').focus({preventScroll:true});
     })().catch(()=>{
       avatarStatus({state:'error',message:'3D 试装未能载入。请检查网络后重试；二维配装和对战仍可使用。'});
     }).finally(()=>{avatarLoading=null;});

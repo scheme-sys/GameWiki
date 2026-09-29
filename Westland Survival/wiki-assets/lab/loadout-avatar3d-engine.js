@@ -200,7 +200,7 @@
         if (draw() !== false) readyStatus();
       };
       image.onerror = function () { if (disposed || lost || textures.get(id) !== entry) return; entry.pending = false; entry.failed = true; if (draw() !== false) readyStatus(); };
-      if (root.WestlandTextureURL) { root.WestlandTextureURL(uri).then(value => { if (!disposed && !lost && textures.get(id) === entry) image.src = value; }).catch(() => image.onerror()); } else { image.src = uri; } return entry.texture;
+      if (root.WestlandTextureURL) { root.WestlandTextureURL(uri).then(value => { if (!disposed && !lost && textures.get(id) === entry) image.src = value; }).catch(() => { if (typeof image.onerror === 'function') image.onerror(); }); } else { image.src = uri; } return entry.texture;
     }
     function updateBounds() {
       const bounds = { min: [Infinity, Infinity, Infinity], max: [-Infinity, -Infinity, -Infinity] };

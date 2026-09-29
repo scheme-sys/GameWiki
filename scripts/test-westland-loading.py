@@ -166,4 +166,5 @@ except Exception as error:
  raise
 finally:
  (OUT/'wiki-report.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf-8')
+ (OUT/('wiki-report-'+os.environ.get('LCZ_BROWSER','chrome')+'.json')).write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf-8')
  server.shutdown()

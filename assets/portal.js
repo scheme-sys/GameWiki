@@ -59,6 +59,14 @@
 
   const field = new window.LCZBubbleField({
     width: 1, height: 1, padding: 2, gap: 12,
+    onSettle() {
+      // Finish the release animation before a moving circle opens its preview.
+      requestAnimationFrame(() => {
+        if (document.hidden || gesture || search.open || lastPointerType !== 'mouse') return;
+        const hovered = [...nodes].find(([, node]) => node.querySelector('a').matches(':hover'));
+        if (hovered) showInfo(hovered[0]);
+      });
+    },
     onUpdate(bodies) {
       for (const body of bodies) {
         const node = nodes.get(body.id);
@@ -115,7 +123,7 @@
     info.style.top = y + 'px';
   }
   function showInfo(id, touch = false) {
-    if (gesture?.moved || search.open) return;
+    if (gesture?.moved || search.open || (!touch && field.isSettling())) return;
     clearTimeout(hideTimer);
     previewGame = id;
     const game = GAMES.find((entry) => entry.id === id);

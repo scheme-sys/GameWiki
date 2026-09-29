@@ -1,4 +1,4 @@
-/* Shared public page-view counters. Configuration and scope: docs/visits.md. */
+/* Project PV and provider-defined IP visitors. Scope: docs/visits.md. */
 (() => {
   "use strict";
 
@@ -7,39 +7,39 @@
   const hosts = [...document.querySelectorAll("[data-site-stats]")];
   if (!hosts.length) return;
 
-  // Keep these keys stable across releases; changing them starts new counters.
   const DEPLOYMENT = {
     origin: "https://scheme-sys.github.io",
-    // Both repository names belong to this project and share the existing keys.
     basePaths: ["/LCZ-GameWiki/", "/GameWiki/"],
+    // All supported pages share one provider page bucket, isolated from other repos.
+    canonical: "https://scheme-sys.github.io/LCZ-GameWiki/",
   };
-  const COUNTER_API = "https://countapi.mileshilliard.com/api/v1/hit/";
-  const KEY_PREFIX = "scheme_sys_lcz_gamewiki_v1_";
-  const PAGE_KEYS = new Map([
-    ["", "home"],
-    ["index.html", "home"],
-    ["Craft of Survival/wiki.html", "craft"],
-    ["Day R Survival/wiki_dayR.html", "dayr"],
-    ["Westland Survival/westland_wiki.html", "westland"],
-    ["Westland Survival/westland_difficulty_design.html", "westland_lab"],
-    ["Westland Survival/基地.html", "westland_base"],
-    ["DawnofZombiewiki/", "dawn"],
-    ["DawnofZombiewiki/index.html", "dawn"],
+  const COUNTER_API = "https://cdn.busuanzi.cc/api.php";
+  const PAGE_PATHS = new Set([
+    "", "index.html",
+    "Craft of Survival/wiki.html",
+    "Day R Survival/wiki_dayR.html",
+    "Westland Survival/westland_wiki.html",
+    "Westland Survival/westland_difficulty_design.html",
+    "Westland Survival/基地.html",
+    "DawnofZombiewiki/",
+    "DawnofZombiewiki/index.html",
   ]);
   const formatter = new Intl.NumberFormat("zh-CN");
   const compactFormatter = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 1 });
-  const values = { site: null, page: null };
+  const values = { pv: null, ip: null };
+  const scopeNote = "IP访客按服务端IP去重，不等于真实人数；去重周期依服务口径。";
 
   for (const host of hosts) {
     host.classList.add("site-stats");
     host.innerHTML = `<details class="site-stats-disclosure">
-      <summary class="site-stats-summary" aria-label="查看访问统计">
+      <summary class="site-stats-summary" aria-label="查看浏览量与IP访客">
         <svg class="site-stats-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M1.5 10s3-5.5 8.5-5.5 8.5 5.5 8.5 5.5-3 5.5-8.5 5.5S1.5 10 1.5 10Z"/><circle cx="10" cy="10" r="2.3"/></svg>
-        <span>访问</span><strong data-stat-total>—</strong>
+        <span class="site-stats-metric"><span>PV</span><strong data-stat-pv-short>—</strong></span>
+        <span class="site-stats-metric"><span>IP</span><strong data-stat-ip-short>—</strong></span>
       </summary>
       <div class="site-stats-panel">
-        <div class="site-stats-row"><span>本站累计</span><strong data-stat-site>—</strong></div>
-        <div class="site-stats-row"><span>当前页面</span><strong data-stat-page>—</strong></div>
+        <div class="site-stats-row"><span>浏览量 PV</span><strong data-stat-pv>—</strong></div>
+        <div class="site-stats-row"><span>IP访客</span><strong data-stat-ip>—</strong></div>
         <p class="site-stats-note" data-stat-note role="status" aria-live="polite">正在加载访问统计</p>
       </div>
     </details>`;
@@ -48,19 +48,19 @@
   function render(status, note) {
     for (const host of hosts) {
       host.dataset.statsState = status;
-      const total = values.site === null ? "—" : formatter.format(values.site);
-      const page = values.page === null ? "—" : formatter.format(values.page);
-      host.querySelector("[data-stat-total]").textContent = values.site === null ? "—" : compactFormatter.format(values.site);
-      host.querySelector("[data-stat-site]").textContent = total;
-      host.querySelector("[data-stat-page]").textContent = page;
+      const pv = values.pv === null ? "—" : formatter.format(values.pv);
+      const ip = values.ip === null ? "—" : formatter.format(values.ip);
+      host.querySelector("[data-stat-pv-short]").textContent = values.pv === null ? "—" : compactFormatter.format(values.pv);
+      host.querySelector("[data-stat-ip-short]").textContent = values.ip === null ? "—" : compactFormatter.format(values.ip);
+      host.querySelector("[data-stat-pv]").textContent = pv;
+      host.querySelector("[data-stat-ip]").textContent = ip;
       host.querySelector("[data-stat-note]").textContent = note;
       const summary = host.querySelector("summary");
-      summary.setAttribute("data-tooltip", "点击查看本站与当前页面的访问统计");
-      summary.setAttribute("aria-label", `访问统计，本站 ${total} 次，当前页面 ${page} 次。${note}`);
+      summary.setAttribute("data-tooltip", "点击查看浏览量 PV 与按服务口径去重的 IP访客");
+      summary.setAttribute("aria-label", `访问统计，浏览量 PV ${pv} 次，IP访客 ${ip}。${note}`);
     }
   }
 
-  // A native details popup is available by tap and keyboard, including phones.
   document.addEventListener("pointerdown", (event) => {
     for (const host of hosts) {
       if (!host.contains(event.target)) host.querySelector("details").open = false;
@@ -76,38 +76,46 @@
     }
   });
 
-  let pageKey;
+  let permitted = false;
   try {
     const current = new URL(window.location.href);
     if (current.origin === DEPLOYMENT.origin) {
       const basePath = DEPLOYMENT.basePaths.find((path) => current.pathname.startsWith(path));
-      if (basePath) pageKey = PAGE_KEYS.get(decodeURIComponent(current.pathname.slice(basePath.length)));
+      if (basePath) permitted = PAGE_PATHS.has(decodeURIComponent(current.pathname.slice(basePath.length)));
     }
-  } catch { /* A malformed or file URL is a preview, never a public visit. */ }
-  if (!pageKey) {
-    render("preview", "本地或预览页面不计数；发布后显示公开访问量。");
+  } catch { /* Malformed paths and file URLs never produce a public visit. */ }
+  if (!permitted) {
+    render("preview", "本地或预览页面不计数；发布后显示浏览量与IP访客。");
     return;
   }
 
-  async function hit(key) {
+  function count(value) {
+    if (!(typeof value === "number" || (typeof value === "string" && /^\d+$/.test(value)))) {
+      throw new Error("Invalid counter response");
+    }
+    const number = Number(value);
+    if (!Number.isSafeInteger(number) || number < 0) throw new Error("Invalid counter value");
+    return number;
+  }
+
+  async function hitProject() {
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 7000);
     try {
-      const response = await fetch(`${COUNTER_API}${KEY_PREFIX}${key}`, {
+      const response = await fetch(COUNTER_API, {
+        method: "POST",
         mode: "cors",
         credentials: "omit",
         referrerPolicy: "no-referrer",
         cache: "no-store",
         signal: controller.signal,
+        // Never send the visited page, its query/hash, the referrer or a browser IP lookup.
+        body: JSON.stringify({ url: DEPLOYMENT.canonical, referrer: "" }),
       });
       if (!response.ok) throw new Error("Counter unavailable");
       const data = await response.json();
-      if (!(typeof data.value === "number" || (typeof data.value === "string" && /^\d+$/.test(data.value)))) {
-        throw new Error("Invalid counter response");
-      }
-      const count = Number(data.value);
-      if (!Number.isSafeInteger(count) || count < 0) throw new Error("Invalid counter value");
-      return count;
+      // Provider site_* merges other repositories on this hostname; do not use it.
+      return { pv: count(data.busuanzi_page_pv), ip: count(data.busuanzi_page_uv) };
     } finally {
       window.clearTimeout(timeout);
     }
@@ -122,14 +130,12 @@
       return;
     }
     render("loading", "正在加载访问统计");
-    // Exactly one increment per counter, with no automatic retry after failure.
-    const results = await Promise.allSettled([hit("site"), hit(`page_${pageKey}`)]);
-    values.site = results[0].status === "fulfilled" ? results[0].value : null;
-    values.page = results[1].status === "fulfilled" ? results[1].value : null;
-    const complete = values.site !== null && values.page !== null;
-    render(complete ? "ready" : "unavailable", complete
-      ? "累计浏览次数，包含主页与全部资料页。"
-      : (values.site === null && values.page === null ? "访问统计暂不可用，请稍后刷新页面。" : "部分统计暂不可用；已返回的数字仍为公开累计浏览量。"));
+    try {
+      Object.assign(values, await hitProject());
+      render("ready", scopeNote);
+    } catch {
+      render("unavailable", "访问统计暂不可用，请稍后刷新页面。");
+    }
   }
 
   document.addEventListener("visibilitychange", countVisit);

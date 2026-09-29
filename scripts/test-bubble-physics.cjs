@@ -8,14 +8,14 @@ const layouts = [
   { name: 'landscape', width: 544, height: 232, radii: [50, 49, 51, 52] },
   { name: 'desktop', width: 1392, height: 776, radii: [88, 84, 92, 96] }
 ];
-function valid(field) {
-  const bodies = field.getBodies();
+function valid(field, useAnchors = false, allowOverlap = false) {
+  const bodies = field.getBodies().map(body => useAnchors ? {...body, x: body.anchorX, y: body.anchorY} : body);
   for (let i = 0; i < bodies.length; i++) {
     const a = bodies[i], inset = a.radius + field.padding;
     for (const value of [a.x, a.y, a.anchorX, a.anchorY]) assert.ok(Number.isFinite(value));
     assert.ok(a.x >= inset - 0.001 && a.x <= field.width - inset + 0.001, `${a.id} exceeds horizontal bounds`);
     assert.ok(a.y >= inset - 0.001 && a.y <= field.height - inset + 0.001, `${a.id} exceeds vertical bounds`);
-    for (let j = i + 1; j < bodies.length; j++) {
+    for (let j = i + 1; !allowOverlap && j < bodies.length; j++) {
       const b = bodies[j];
       assert.ok(Math.hypot(a.x - b.x, a.y - b.y) >= a.radius + b.radius + field.gap - 0.001,
         `${a.id} overlaps ${b.id}`);
@@ -39,29 +39,91 @@ test('four coincident circles settle at actual phone, landscape and desktop size
   }
 });
 
-test('a rapid drag sweeps through neighbours without tunnelling or losing anchors', () => {
+test('drag follows the pointer through neighbours; release separates smoothly to saved targets', () => {
   const config = { width: 544, height: 232, radii: [50, 50, 50, 50] };
   const field = fieldFor(config, [[56,116],[200,116],[344,116],[488,116]]);
+  field.drift = 0;
+  const original = field.getBodies();
   field.grab('game-0');
+  field.dragTo('game-0', 200, 116);
+  assert.equal(field.getBodies()[0].x, 200);
+  assert.equal(field.getBodies()[1].x, 200, 'Dragged bubbles may completely cover neighbours');
   field.dragTo('game-0', 10000, 116);
-  valid(field);
-  assert.ok(field.getBodies()[1].x > 200, 'The swept path must push the first neighbour');
-  const afterDrag = field.getBodies();
-  const pushed = afterDrag.map((body,index) => Math.abs(body.x - [56,200,344,488][index]) > 0.001);
-  const held = afterDrag[0];
-  assert.ok(held.x > 145, 'A packed row should transfer the available space through every neighbour');
+  assert.equal(field.getBodies()[0].x, 492, 'Even fast moves reach the pointer boundary directly');
+  assert.deepEqual(field.getBodies().slice(1), original.slice(1), 'Dragging must not push neighbours');
+  const held = field.getBodies();
   for (let frame = 0; frame < 120; frame++) field.step(1 / 60);
-  assert.equal(field.getBodies()[0].x, held.x);
-  assert.equal(field.getBodies()[0].y, held.y);
-  valid(field);
+  assert.deepEqual(field.getBodies(), held, 'Held circles and their neighbours stay steady');
   field.release();
+  assert.ok(field.isSettling());
   for (const [index,body] of field.getBodies().entries()) {
-    if (pushed[index]) { assert.equal(body.anchorX, body.x); assert.equal(body.anchorY, body.y); }
-    else { assert.equal(body.anchorX, afterDrag[index].anchorX); assert.equal(body.anchorY, afterDrag[index].anchorY); }
+    assert.equal(body.x, held[index].x, 'Pointer release must not teleport a circle');
+    assert.equal(body.y, held[index].y);
   }
-  const saved = anchors(field);
-  for (let frame = 0; frame < 60; frame++) field.step(1 / 60);
-  assert.deepEqual(anchors(field), saved);
+  valid(field, true); // The portal may persist legal anchors immediately.
+  const saved = anchors(field), distances = field.getBodies().map(body => Math.hypot(body.x-body.anchorX,body.y-body.anchorY));
+  let previous = field.getBodies(), firstMovement = 0, peakMovement = 0;
+  for (let frame = 0; frame < 67; frame++) {
+    field.step(1 / 60); valid(field, false, true);
+    const current = field.getBodies();
+    for (let index = 0; index < current.length; index++) {
+      const delta = Math.hypot(current[index].x-previous[index].x,current[index].y-previous[index].y);
+      assert.ok(delta <= distances[index] * 0.062 + 0.01, 'The damped response must not jump');
+      if (!frame) firstMovement = Math.max(firstMovement, delta);
+      peakMovement = Math.max(peakMovement, delta);
+    }
+    previous = current;
+  }
+  assert.ok(firstMovement > 0 && peakMovement > firstMovement * 2, 'Release accelerates gently from rest');
+  assert.equal(field.isSettling(), false);
+  valid(field);
+  assert.deepEqual(anchors(field), saved, 'Animation never changes the saved destinations');
+});
+
+test('release trajectory agrees at 15, 30, 60 and 120 fps without overshooting boundaries', () => {
+  const samples = [15,30,60,120].map(fps => {
+    const field = fieldFor(layouts[0]);
+    field.dragTo('game-0', 270, 360).release();
+    valid(field,true);
+    for(let frame=0;frame<fps*.4;frame++)field.step(1/fps);
+    valid(field,false,true);
+    return field.getBodies();
+  });
+  for (const sample of samples) for (let index=0;index<sample.length;index++) {
+    assert.ok(Math.hypot(sample[index].x-samples[0][index].x,sample[index].y-samples[0][index].y)<0.001);
+  }
+});
+
+test('settling can be interrupted by a new drag; stop, resize and reduced motion finish safely', () => {
+  let completed=0;
+  const field=new BubbleField({width:544,height:232,padding:2,gap:12,onSettle(){completed++;}});
+  field.setBodies([0,1,2,3].map(id=>({id,radius:50,x:56+id*144,y:116})));
+  field.start().dragTo(0,200,116).release();field.step(.1);
+  const midway=field.getBodies();field.grab(1);
+  for(const [index,body] of field.getBodies().entries())assert.equal(body.x,midway[index].x);
+  field.dragTo(1,344,116).release();assert.ok(field.isSettling());
+  const saved=anchors(field);field.stop();
+  assert.equal(field.isSettling(),false);valid(field);valid(field,true);
+  assert.deepEqual(anchors(field),saved);assert.equal(completed,1);
+  field.start().dragTo(0,field.getBodies()[1].x,field.getBodies()[1].y).release();
+  assert.ok(field.isSettling());field.setReducedMotion(true);
+  assert.equal(field.isSettling(),false);valid(field);assert.equal(completed,2);
+  field.setReducedMotion(false).dragTo(0,300,180).release().resize(296,422);
+  assert.equal(field.isSettling(),false);valid(field);
+});
+
+test('cancelling a drag restores the pre-gesture coordinates and saved anchors', () => {
+  const field=fieldFor(layouts[0]);
+  field.step(.1);
+  const before=field.getBodies();
+  field.grab('game-0');
+  field.dragTo('game-0',before[1].x,before[1].y);
+  assert.ok(Math.hypot(field.getBodies()[0].x-before[1].x,field.getBodies()[0].y-before[1].y)<10);
+  // The portal handles Escape/pointercancel by restoring this same snapshot.
+  field.setBodies(before);
+  assert.deepEqual(field.getBodies(),before);
+  assert.equal(field.isSettling(),false);
+  valid(field);
 });
 
 test('two minutes of crowded drift stay slow, local and free of overlaps', () => {
@@ -153,7 +215,7 @@ test('resize repairs saved collisions; legal supplied anchors survive unchanged'
   }
 });
 
-test('seeded corner and direction-change stress keeps every displayed drag pose legal', () => {
+test('seeded corner and direction changes allow overlaps but resolve all release targets', () => {
   let seed = 0x1c29ab;
   const random = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296; };
   let operations = 0, worst = 0, elapsed = 0;
@@ -168,11 +230,13 @@ test('seeded corner and direction-change stress keeps every displayed drag pose 
       for (const [x,y] of targets) {
         const start = performance.now(); field.dragTo(id,x,y); const duration = performance.now() - start;
         worst = Math.max(worst,duration); elapsed += duration; operations++;
-        valid(field);
+        valid(field, false, true);
       }
       field.release();
+      valid(field,true);
       const saved = anchors(field);
-      for (let frame = 0; frame < 20; frame++) { field.step(frame % 2 ? 1/15 : 1/120); valid(field); }
+      for (let frame = 0; frame < 36; frame++) { field.step(frame % 2 ? 1/15 : 1/120); valid(field,false,true); }
+      assert.equal(field.isSettling(),false);valid(field);
       assert.deepEqual(anchors(field),saved);
     }
   }

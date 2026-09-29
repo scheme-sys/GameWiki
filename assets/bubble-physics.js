@@ -1,4 +1,4 @@
-/* Lightweight circular constraints. Persist anchors; idle animation never edits them. */
+/* Direct dragging may overlap. Released circles ease into separated, saved anchors. */
 (function (root) {
   'use strict';
 
@@ -21,6 +21,7 @@
       this.drift = clamp(finite(options.drift, 8), 0, 15);
       this.maxDriftSpeed = clamp(finite(options.maxDriftSpeed, 3), 0, 5);
       this.onUpdate = typeof options.onUpdate === 'function' ? options.onUpdate : () => {};
+      this.onSettle = typeof options.onSettle === 'function' ? options.onSettle : () => {};
       this._raf = options.requestAnimationFrame || (root.requestAnimationFrame && root.requestAnimationFrame.bind(root));
       this._caf = options.cancelAnimationFrame || (root.cancelAnimationFrame && root.cancelAnimationFrame.bind(root));
       this._bodies = [];
@@ -29,6 +30,8 @@
       this._dragDidMove = false;
       this._reducedMotion = false;
       this._running = false;
+      this._paused = false;
+      this._settlement = null;
       this._destroyed = false;
       this._frameId = null;
       this._lastTime = null;
@@ -46,6 +49,7 @@
       if (this._destroyed) return this;
       this._grabbed = null;
       this._dragDidMove = false;
+      this._settlement = null;
       const seen = new Set();
       this._bodies = bodies.filter((body) => {
         if (body.id == null || seen.has(body.id)) return false;
@@ -58,7 +62,7 @@
           anchorX: finite(body.anchorX, x), anchorY: finite(body.anchorY, y),
           phase: seedFor(body.id) * Math.PI * 2,
           frequency: 0.18 + seedFor(`${body.id}:speed`) * 0.04,
-          vx: 0, vy: 0, pushed: false
+          vx: 0, vy: 0
         };
         this._setBounds(next);
         return next;
@@ -80,6 +84,7 @@
 
     resize(width, height) {
       if (this._destroyed) return this;
+      this._finishSettlement();
       this.width = Math.max(1, finite(width, this.width));
       this.height = Math.max(1, finite(height, this.height));
       for (const body of this._bodies) this._setBounds(body);
@@ -88,12 +93,20 @@
       return this;
     }
 
-    start() { if (!this._destroyed) { this._running = true; this._schedule(); } return this; }
-    stop() { this._running = false; this._cancelFrame(); return this; }
+    start() { if (!this._destroyed) { this._running = true; this._paused = false; this._schedule(); } return this; }
+    stop() {
+      this._running = false; this._paused = true; this._cancelFrame();
+      if (this._finishSettlement()) this._emit();
+      return this;
+    }
+    isSettling() { return this._settlement !== null; }
     setReducedMotion(enabled) {
       this._reducedMotion = Boolean(enabled);
       for (const body of this._bodies) body.vx = body.vy = 0;
-      if (this._reducedMotion) this._cancelFrame(); else this._schedule();
+      if (this._reducedMotion) {
+        this._cancelFrame();
+        if (this._finishSettlement()) this._emit();
+      } else this._schedule();
       return this;
     }
 
@@ -102,10 +115,11 @@
       if (!body || this._destroyed) return false;
       if (this._grabbed === id) return true;
       if (this._grabbed !== null) this.release();
+      this._settlement = null;
       this._grabbed = id;
       this._dragDidMove = false;
+      this._cancelFrame();
       body.vx = body.vy = 0;
-      for (const other of this._bodies) other.pushed = false;
       this._emit();
       return true;
     }
@@ -114,54 +128,72 @@
       const body = this._find(id);
       if (!body || this._destroyed) return this;
       if (this._grabbed !== id) this.grab(id);
-      const dx = clamp(finite(x, body.x), body.minX, body.maxX) - body.x;
-      const dy = clamp(finite(y, body.y), body.minY, body.maxY) - body.y;
-      const distance = Math.hypot(dx, dy);
-      if (distance < EPSILON) return this;
-      // Sweep small distances so even a single fast pointer event cannot tunnel.
-      const stride = Math.max(4, Math.min(...this._bodies.map((other) => other.radius)) / 3);
-      const count = Math.max(1, Math.ceil(distance / stride));
-      let moved = false;
-      for (let step = 0; step < count; step++) {
-        this._remember();
-        body.x += dx / count;
-        body.y += dy / count;
-        if (!this._solve(48, false)) {
-          // A packed cluster has no legal movement in this direction. Retain the
-          // last valid pose instead of teleporting another bubble to a free slot.
-          this._restore();
-          break;
-        }
-        for (const other of this._bodies) {
-          const changed = Math.hypot(other.x - other.oldX, other.y - other.oldY) > EPSILON;
-          if (changed) {
-            moved = true;
-            other.vx = other.vy = 0;
-            if (other !== body) other.pushed = true;
-          }
-        }
-      }
-      if (moved) {
-        this._dragDidMove = true;
-        body.anchorX = body.x; body.anchorY = body.y;
-        this._emit();
-      }
+      const nextX = clamp(finite(x, body.x), body.minX, body.maxX);
+      const nextY = clamp(finite(y, body.y), body.minY, body.maxY);
+      if (Math.hypot(nextX - body.x, nextY - body.y) < EPSILON) return this;
+      // The pointer controls this circle directly; neighbours stay where they
+      // are until release. Even one fast pointer event may cross the whole field.
+      body.x = body.anchorX = nextX;
+      body.y = body.anchorY = nextY;
+      body.vx = body.vy = 0;
+      this._dragDidMove = true;
+      this._emit();
       return this;
     }
 
     release(id = this._grabbed) {
       if (this._grabbed === null || id !== this._grabbed) return this;
-      for (const body of this._bodies) {
-        if (this._dragDidMove && (body.id === id || body.pushed)) {
-          body.anchorX = body.x; body.anchorY = body.y;
-          body.vx = body.vy = 0;
-        }
-        body.pushed = false;
-      }
+      const moved = this._dragDidMove;
       this._grabbed = null;
       this._dragDidMove = false;
+      if (moved || !this._valid()) this._beginSettlement();
+      if (this._reducedMotion || this._paused) this._finishSettlement();
       this._emit();
+      this._schedule();
       return this;
+    }
+
+    _beginSettlement() {
+      this._remember();
+      if (!this._solve(60, false)) this._packInitialLayout();
+      const points = this._bodies.map((body) => ({ body, x: body.oldX, y: body.oldY,
+        targetX: body.x, targetY: body.y }));
+      // Save legal destinations immediately. A reload during the easing phase
+      // therefore restores the resolved layout, rather than an overlapped pose.
+      for (const point of points) {
+        const body = point.body;
+        body.anchorX = point.targetX; body.anchorY = point.targetY;
+        body.x = point.x; body.y = point.y;
+        body.vx = body.vy = 0;
+      }
+      this._settlement = points.some((point) => Math.hypot(point.x - point.targetX, point.y - point.targetY) > EPSILON)
+        ? { points, elapsed: 0, duration: 1.1 } : null;
+    }
+
+    _advanceSettlement(dt) {
+      const settlement = this._settlement;
+      settlement.elapsed = Math.min(settlement.duration, settlement.elapsed + dt);
+      // Analytic critically damped response: starts at rest, decelerates without
+      // overshooting, and gives the same displayed pose at different frame rates.
+      const time = settlement.elapsed, omega = 10;
+      const ease = 1 - (1 + omega * time) * Math.exp(-omega * time);
+      for (const point of settlement.points) {
+        point.body.x = point.x + (point.targetX - point.x) * ease;
+        point.body.y = point.y + (point.targetY - point.y) * ease;
+      }
+      if (time >= settlement.duration - EPSILON) this._finishSettlement();
+      return true;
+    }
+
+    _finishSettlement() {
+      if (!this._settlement) return false;
+      for (const point of this._settlement.points) {
+        point.body.x = point.targetX; point.body.y = point.targetY;
+        point.body.vx = point.body.vy = 0;
+      }
+      this._settlement = null;
+      this.onSettle(this.getBodies());
+      return true;
     }
 
     setPosition(id, x, y) {
@@ -175,23 +207,25 @@
     }
 
     step(seconds) {
-      if (this._destroyed || this._reducedMotion || !this.drift || !this.maxDriftSpeed) return this;
+      if (this._destroyed || this._reducedMotion || this._grabbed !== null || (!this._settlement && (!this.drift || !this.maxDriftSpeed))) return this;
       // Process slow frames at normal speed, discard long hidden-tab catch-up.
       const dt = clamp(finite(seconds, 0), 0, 0.1);
       if (!dt) return this;
       const count = Math.max(1, Math.ceil(dt / MAX_STEP));
       let moved = false;
-      for (let index = 0; index < count; index++) moved = this._advance(dt / count) || moved;
+      for (let index = 0; index < count; index++) {
+        moved = (this._settlement ? this._advanceSettlement(dt / count) : this._advance(dt / count)) || moved;
+      }
       if (moved) this._emit();
       return this;
     }
 
     destroy() {
       this.stop(); this._destroyed = true;
-      this._bodies = []; this._pairs = []; this.onUpdate = () => {};
+      this._bodies = []; this._pairs = []; this.onUpdate = this.onSettle = () => {};
     }
 
-    _canAnimate() { return this._running && !this._destroyed && !this._reducedMotion && this.drift > 0 && this.maxDriftSpeed > 0 && this._bodies.length > 0 && this._raf; }
+    _canAnimate() { return this._running && !this._destroyed && !this._reducedMotion && this._grabbed === null && (this._settlement || (this.drift > 0 && this.maxDriftSpeed > 0)) && this._bodies.length > 0 && this._raf; }
     _schedule() {
       if (this._canAnimate() && this._frameId === null) this._frameId = this._raf(this._frame);
       else if (!this._canAnimate()) this._cancelFrame();
@@ -301,7 +335,7 @@
         const targetY = clamp(body.anchorY + Math.cos(angle * 0.83 + body.phase * 0.2) * this.drift * 0.56, body.minY, body.maxY);
         body.dx = (targetX - body.x) * 0.8;
         body.dy = (targetY - body.y) * 0.8;
-        body.fixed = body.id === this._grabbed || body.pushed;
+        body.fixed = body.id === this._grabbed;
       }
       // Repulsion starts before contact; the circular solver is a last boundary.
       const reach = Math.max(4, this.drift * 1.5);
