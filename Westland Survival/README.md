@@ -1,6 +1,6 @@
 # Westland Survival 资料与设计实验
 
-三个入口保持不变，并通过 LCZ 导航返回主页或相互切换：`westland_wiki.html` 是百科，`westland_difficulty_design.html` 是难度与配装实验室，`基地.html` 是随机基地设计预览。资料来自用户提供的游戏素材；游戏文本、美术和模型归原权利人所有。实验室和基地是网页演示，不修改游戏。
+三个入口保持不变，并通过 LCZ 导航返回主页或相互切换：`westland_wiki.html` 是百科，`westland_difficulty_design.html` 是配装对战实验室（附带独立的 `westland_difficulty_analysis.html` 难度与数据分析页），`基地.html` 是随机基地设计预览。资料来自用户提供的游戏素材；游戏文本、美术和模型归原权利人所有。实验室和基地是网页演示，不修改游戏。
 
 ## 数据与资源
 
@@ -21,6 +21,21 @@
 ## 本地预览
 
 保留本目录与仓库根 `assets/` 的相对位置，直接打开 HTML，或在仓库根运行 `python -m http.server 4173` 后访问 `http://localhost:4173/`。百科先展示 60 条首屏记录及完整分类统计；首次搜索、分类切换、翻页或查看详情时才读取完整索引，加载期间保留最新操作，失败可重试。详情块和图片继续按需读取。配装页先使用二维示意，点击“打开 3D 试装”才读取模型；计算、配装与战斗不必等待三维资源。实验室在线使用独立纹理，本地双击时使用离线纹理兼容机制。
+
+## 配装工作区维护
+
+配装页使用紧凑双列工作区；手机依次显示部位与换装、实时指标、属性调整和可展开设置。HTML 负责结构，`wiki-assets/lab/loadout.css` 负责响应式布局，`loadout-lab-controller.js` 负责选择、方案和实验交互。不要把全部数据或模型嵌回页面；角色试装默认折叠，只有点击“打开 3D 试装”才加载三维资源。游戏计算规则仍由 `difficulty-model.js` 和 `loadout-lab-engine.js` 维护。
+
+三个工作方案包含各自的装备、食物、技能、对手与实验设置，可改名或复制。对照 A 是独立的共享快照，切换方案时可以继续比较。自动保存仍使用 `westland-loadout-lab-v1`，兼容旧 `{config, reference}`；新增的 `workspace` 保存当前方案序号及三个 `{name, config}`。导入导出继续使用原来的单方案格式；导入及重置只作用于当前方案。离开页面时会补存；禁止本地存储时保留当前页面的内存操作并提示导出，不承诺刷新后恢复。
+
+装备搜索与阶级筛选共同决定上一件 / 下一件的范围；当前装备不符合筛选时仍明确保留，不擅自换装。维护时保留现有控件 ID、键盘焦点和横向部位栏的位置。快捷方案或搜索不应触发三维资源下载。
+
+交互回归需要 Python Playwright，可分别选择已安装的 Chrome 或 Edge：
+
+```sh
+python scripts/test-westland-loadout.py --channels chrome
+python scripts/test-westland-loadout.py --channels msedge
+```
 
 ## 维护与导入
 

@@ -54,26 +54,72 @@
 <!-- LOADOUT_LAB_BODY_BEGIN -->
 <section class="section lab-system" id="loadout-lab" aria-labelledby="lab-heading">
   <header class="lab-intro">
-    <div class="lab-intro-copy"><span class="num">WESTLAND SURVIVAL / BUILD &amp; BATTLE</span><h1 id="lab-heading">配装对战实验室</h1><p>搭配装备、餐食与技能，比较角色指标，再用一场模拟对战检验你的选择。</p>
-      <div class="lab-intro-actions"><a class="lab-hero-primary" href="#lab-config">开始配装 <span aria-hidden="true">↘</span></a><a href="#lab-arena">进入对战 <span aria-hidden="true">↘</span></a><a class="lab-analysis-link" href="westland_difficulty_analysis.html">游戏难度调节与数据分析 <span aria-hidden="true">↗</span></a></div>
-      <div class="lab-intro-features"><span>自由配装</span><span>方案对照</span><span>单场 / 批量对战</span><span>按需 3D 试装</span></div>
-    </div>
+    <div class="lab-intro-copy"><span class="num">WESTLAND / BUILD &amp; BATTLE</span><h1 id="lab-heading">配装对战实验室</h1><p>自由换装，即时对比，让搭配上场。</p></div>
+    <div class="lab-intro-actions"><a class="lab-hero-primary" href="#lab-arena">模拟对战 <span aria-hidden="true">↘</span></a><a class="lab-analysis-link" href="westland_difficulty_analysis.html">难度调节与数据分析 <span aria-hidden="true">↗</span></a></div>
   </header>
   <div class="panel lab-config" id="lab-config">
-    <div class="lab-card-heading"><h2>搭配工作台</h2><span class="mini-note">从预设开始，也可以逐件调整</span></div>
-    <div class="lab-config-row">
-      <label>快速搭配<select id="lab-preset"><option value="starter">T1 · 入门弓手</option><option value="rifle" selected>T3 · 步枪探索</option><option value="melee">T5 · 近战生存</option><option value="epic">T7 · 史诗套装</option></select></label>
-      <button id="lab-apply-preset" type="button">应用搭配</button>
-      <label class="lab-short">全套图纸等级<input id="lab-all-level" type="number" min="1" max="3000" step="1" value="1"></label><button id="lab-set-all-level" type="button">统一设置</button>
+    <div class="lab-plan-caption"><h2>我的方案</h2><span id="lab-save-status" class="mini-note" role="status">修改自动保留</span></div>
+    <div id="lab-plan-buttons" class="lab-plan-buttons" role="group" aria-label="切换工作方案">
+      <button type="button" data-lab-plan="0" aria-pressed="true">方案 1</button><button type="button" data-lab-plan="1" aria-pressed="false">方案 2</button><button type="button" data-lab-plan="2" aria-pressed="false">方案 3</button>
     </div>
-    <div class="lab-difficulty-tools"><button id="lab-apply-difficulty" type="button" class="lab-small-button">套用难度强化</button><span id="lab-difficulty-summary" class="mini-note"></span></div>
-    <div class="lab-config-row lab-secondary-actions"><button id="lab-save-a" type="button">记为对照 A</button><button id="lab-load-a" type="button" disabled>还原对照 A</button><button id="lab-export" type="button">导出搭配</button><button id="lab-import" type="button">导入搭配</button><input id="lab-import-file" type="file" accept=".json,application/json" hidden><button id="lab-reset" type="button">重置实验室</button><span id="lab-save-status" class="mini-note" role="status">本地自动保存</span></div>
     <p id="lab-message" class="lab-message" role="status" aria-live="polite"></p>
   </div>
-
   <div class="lab-workbench" id="lab-workbench">
-    <article class="panel lab-model-panel">
-      <div class="lab-card-heading"><h3>测试角色</h3><span id="lab-equipped-count" class="count"></span></div>
+    <section class="panel lab-equipment-panel" aria-label="装备工作区">
+      <div class="lab-slot-picker"><div class="lab-slot-caption"><span>选择部位</span><span id="lab-equipped-count" class="count"></span></div>
+      <div id="lab-slot-buttons" class="lab-slot-buttons" role="group" aria-label="角色装备部位"></div></div>
+<article class="lab-editor" aria-labelledby="lab-slot-title"><div class="lab-selection">
+      <div class="lab-card-heading"><h3 id="lab-slot-title">主武器</h3><button id="lab-clear-slot" type="button" class="lab-small-button">卸下</button></div>
+      <div class="lab-item-filters"><label><span class="sr-only">搜索当前部位的装备</span><input id="lab-item-search" type="search" placeholder="搜索名称或品质" autocomplete="off"></label><label><span class="sr-only">装备阶级</span><select id="lab-item-tier"><option value="all">全部阶级</option><option value="1">T1</option><option value="2">T2</option><option value="3">T3</option><option value="4">T4</option><option value="5">T5</option><option value="6">T6</option><option value="7">T7</option></select></label></div>
+      <div class="lab-select-caption"><label for="lab-item-select">选择装备</label><small id="lab-item-count" role="status"></small></div>
+      <div class="lab-item-picker"><button id="lab-item-prev" type="button" aria-label="换上上一件匹配的装备" title="上一件装备">‹</button><select id="lab-item-select"></select><button id="lab-item-next" type="button" aria-label="换上下一件匹配的装备" title="下一件装备">›</button></div>
+      <div class="lab-item-header"><div id="lab-item-art" class="lab-item-art"></div><div><strong id="lab-selected-name"></strong><div id="lab-item-description" class="mini-note"></div></div></div>
+      <div class="lab-two-fields"><label>图纸等级<input id="lab-level" type="number" min="1" max="3000" step="1" value="1"></label><label>耐久 · 留空为满耐久<input id="lab-current-durability" type="number" min="0" step="1" placeholder="默认满耐久"></label></div>
+      <div class="lab-compare-actions"><button id="lab-save-a" type="button">设为对照 A</button><button id="lab-load-a" type="button" disabled>还原对照 A</button><a href="#lab-arena">去对战 <span aria-hidden="true">↘</span></a></div>
+</div><div class="lab-attributes">
+      <div class="lab-card-heading lab-space"><h4>这件装备的属性</h4><button id="lab-reset-item" type="button" class="lab-small-button">恢复本件默认</button></div>
+      <div class="lab-stat-head"><span>属性 / 默认值</span><span>手动覆盖</span></div>
+      <div id="lab-item-stats" class="lab-item-stats"></div>
+      <div id="lab-weapon-fields" hidden><details><summary>武器节奏与距离 · 仅网页模拟</summary><div class="lab-two-fields"><label>基础攻击次数 / 秒<input id="lab-weapon-speed" type="number" min="0.05" max="20" step="any" placeholder="武器默认"></label><label>攻击距离<input id="lab-weapon-range" type="number" min="0.1" max="30" step="any" placeholder="武器默认"></label></div><p class="mini-note">这是模拟输入，不是新增的合法装备词条，也不写入游戏的共享武器模板。</p></details></div>
+      <details class="lab-field-help"><summary>属性怎么填写？</summary><p>留空使用默认值；百分比输入 20 即为 20%。图纸等级上限 3000，未解锁属性不可编辑；调整等级后默认属性自动重算，耐久不超过新上限。</p></details>
+    </div></article>
+    </section>
+    <aside class="panel lab-results-panel" aria-label="实时配装指标">
+      <div class="lab-card-heading"><h3>实时指标</h3><span class="badge">随换装更新</span></div>
+      <div id="lab-main-metrics" class="lab-main-metrics" aria-live="polite"></div>
+
+    </aside>
+    <aside class="lab-workbench-tools" aria-label="方案与角色设置">
+      <details class="lab-side-section lab-bulk-tools"><summary>预设套装与批量调整 <small>快速起步 / 全套等级</small></summary>
+        <div class="lab-config-row"><label>预设套装<select id="lab-preset"><option value="starter">T1 · 入门弓手</option><option value="rifle" selected>T3 · 步枪探索</option><option value="melee">T5 · 近战生存</option><option value="epic">T7 · 史诗套装</option></select></label><button id="lab-apply-preset" type="button">应用套装</button></div>
+        <div class="lab-config-row"><label>全套图纸等级<input id="lab-all-level" type="number" min="1" max="3000" step="1" value="1"></label><button id="lab-set-all-level" type="button">统一设置</button></div>
+        <div class="lab-difficulty-tools"><button id="lab-apply-difficulty" type="button">套用难度强化</button><span id="lab-difficulty-summary" class="mini-note"></span></div>
+        <p class="mini-note">套装会替换当前方案的装备。餐食、技能与对手设置保留。</p>
+      </details>
+      <details class="lab-side-section lab-plan-tools"><summary>方案管理 <small>命名 / 复制 / 导入导出</small></summary>
+        <label>当前方案名称<input id="lab-plan-name" type="text" maxlength="24" autocomplete="off" placeholder="给这套搭配起个名字"></label>
+        <div class="lab-config-row"><label>复制当前方案到<select id="lab-copy-target"><option value="0">方案 1</option><option value="1">方案 2</option><option value="2">方案 3</option></select></label><button id="lab-copy-plan" type="button">复制方案</button></div>
+        <div class="lab-config-row lab-file-actions"><button id="lab-export" type="button">导出当前方案</button><button id="lab-import" type="button">导入当前方案</button><input id="lab-import-file" type="file" accept=".json,application/json" hidden><button id="lab-reset" type="button">重置当前方案</button></div>
+        <p class="mini-note">三个方案各自保留装备、餐食、技能与对战设置。仅保存在此浏览器，换设备前请导出。</p>
+      </details>
+      <details class="lab-side-section"><summary>角色基础值与属性点</summary><p class="mini-note">默认基础生命 200，未计入角色等级加成；需要时直接填入目标人物的裸装生命。体力影响普通抗性，力量影响伤害。这里不读取设备上的人物。</p><div id="lab-base-fields" class="lab-two-fields"></div></details>
+      <details class="lab-side-section"><summary>全部汇总属性 / 对照</summary><p class="mini-note">理论 DPS 含暴击期望，但不包含目标防御、闪避及对动物增伤；实际本场有效 DPS 请看下方战报。</p><div class="table-wrap"><table class="lab-compact-table"><thead><tr><th>属性</th><th>当前值</th><th>对照 A</th></tr></thead><tbody id="lab-total-stats"></tbody></table></div></details>
+
+      <details class="lab-side-section"><summary>餐食与恢复品 <small>战前增益 / 自动恢复</small></summary><div class="lab-side-content">
+      <label>战前餐食 / 饮品 · 同时一种<select id="lab-food"></select></label><div id="lab-food-effects" class="lab-effect-summary"></div>
+      <details><summary>手调当前食物效果</summary><div id="lab-food-overrides" class="lab-two-fields"></div><p class="mini-note">留空采用提取的效果。不模拟饥饿、口渴等探索消耗；没有确认的状态不会凭空算作战斗收益。</p></details>
+      <div class="lab-two-fields lab-space"><label>自动恢复品<select id="lab-healing"></select></label><label>携带数量<input id="lab-heal-count" type="number" min="0" max="99" step="1" value="0"></label><label>生命低于此百分比时使用<input id="lab-heal-threshold" type="number" min="1" max="99" step="any" value="40"></label><label>恢复品间隔 · 秒<input id="lab-heal-cooldown" type="number" min="0.1" max="600" step="any" value="10"></label></div>
+      <p id="lab-healing-note" class="mini-note"></p>
+
+      </div></details>
+      <details class="lab-side-section"><summary>人物技能 <small>技能等级与效果</small></summary><div class="lab-side-content"><div class="lab-card-heading"><span class="mini-note">设置当前方案的技能</span><button id="lab-clear-skills" type="button" class="lab-small-button">全部归零</button></div>
+      <label>筛选技能<input id="lab-skill-search" type="search" placeholder="技能名称或效果"></label>
+      <div id="lab-skills" class="lab-skills"></div><p id="lab-skill-note" class="mini-note"></p>
+
+      </div></details>
+      <details class="lab-side-section lab-preview"><summary>角色试装 <small>二维预览 / 按需 3D</small></summary>
+<div class="lab-model-panel">
+
       <button id="lab-avatar-open" type="button" class="lab-avatar-open" aria-controls="lab-avatar-canvas" aria-describedby="lab-avatar-status">打开 3D 试装</button>
       <div class="lab-avatar-toolbar" hidden><label>人物外观<select id="lab-avatar-gender" aria-label="3D 人物外观"><option value="male">男性</option></select></label><button id="lab-avatar-front" type="button" class="lab-small-button">正面</button><button id="lab-avatar-back" type="button" class="lab-small-button">背面</button></div>
       <div class="lab-mannequin">
@@ -97,49 +143,16 @@
       </div>
       <div class="lab-avatar-actions" hidden><button id="lab-avatar-zoom-in" type="button" class="lab-small-button" aria-label="放大人物">＋ 放大</button><button id="lab-avatar-zoom-out" type="button" class="lab-small-button" aria-label="缩小人物">－ 缩小</button><button id="lab-avatar-reset" type="button" class="lab-small-button">重置视角</button></div>
       <p id="lab-avatar-status" class="lab-avatar-status mini-note" role="status" aria-live="polite">二维配装已就绪。需要查看装备外观时，再打开 3D 试装（首次约 11 MB）。</p>
-      <div id="lab-slot-buttons" class="lab-slot-buttons" aria-label="角色装备部位"></div>
-      <p class="mini-note">主武器、四件护甲、背包、双戒指与项链分别配置。仅允许放入对应槽位的装备。</p>
       <details class="lab-avatar-notes"><summary>试装显示说明</summary><p id="lab-avatar-coverage" class="mini-note">3D 模型按需载入；二维配装、比较与对战无需等待模型下载。</p><p class="mini-note">这是静态试装，不运行游戏动作或战斗动画。没有独立可见模型的饰品不会伪造外观；不能使用 WebGL 的环境保留明确标注的二维部位示意。</p></details>
-    </article>
-
-    <article class="panel lab-editor">
-      <div class="lab-card-heading"><h3 id="lab-slot-title">主武器</h3><button id="lab-clear-slot" type="button" class="lab-small-button">卸下</button></div>
-      <label>筛选本部位装备<input id="lab-item-search" type="search" placeholder="输入名称、品质或地区阶级"></label>
-      <label class="lab-space">选择装备<select id="lab-item-select"></select></label>
-      <div class="lab-item-header"><div id="lab-item-art" class="lab-item-art"></div><div><strong id="lab-selected-name"></strong><div id="lab-item-description" class="mini-note"></div></div></div>
-      <div class="lab-two-fields"><label>图纸等级 · 1—3000<input id="lab-level" type="number" min="1" max="3000" step="1" value="1"></label><label>当前耐久 · 留空为满耐久<input id="lab-current-durability" type="number" min="0" step="1" placeholder="默认满耐久"></label></div>
-      <div class="lab-card-heading lab-space"><h4>这件装备的属性</h4><button id="lab-reset-item" type="button" class="lab-small-button">恢复本件默认</button></div>
-      <div class="lab-stat-head"><span>合法属性 / 默认值</span><span>手动覆盖</span></div>
-      <div id="lab-item-stats" class="lab-item-stats"></div>
-      <div id="lab-weapon-fields" hidden><details><summary>武器节奏与距离 · 仅网页模拟</summary><div class="lab-two-fields"><label>基础攻击次数 / 秒<input id="lab-weapon-speed" type="number" min="0.05" max="20" step="any" placeholder="武器默认"></label><label>攻击距离<input id="lab-weapon-range" type="number" min="0.1" max="30" step="any" placeholder="武器默认"></label></div><p class="mini-note">这是模拟输入，不是新增的合法装备词条，也不写入游戏的共享武器模板。</p></details></div>
-      <p class="mini-note">百分比直接输入百分数：例如 20 表示 20%。只有该物品定义、并在当前图纸等级解锁的属性可以编辑；未解锁项会禁用。等级改变后留空字段自动重算，当前耐久不会超过调整后的上限。</p>
-    </article>
-
-    <aside class="panel lab-results-panel">
-      <div class="lab-card-heading"><h3>搭配后指标</h3><span class="badge">实时演算</span></div>
-      <div id="lab-main-metrics" class="lab-main-metrics" aria-live="polite"></div>
-      <div id="lab-compare-summary" class="mini-note"></div>
-      <details open><summary>角色基础值与属性点</summary><p class="mini-note">默认基础生命 200，未计入角色等级加成；需要时直接填入目标人物的裸装生命。体力影响普通抗性，力量影响伤害。这里不读取设备上的人物。</p><div id="lab-base-fields" class="lab-two-fields"></div></details>
-      <details><summary>全部汇总属性 / 对照</summary><p class="mini-note">理论 DPS 含暴击期望，但不包含目标防御、闪避及对动物增伤；实际本场有效 DPS 请看下方战报。</p><div class="table-wrap"><table class="lab-compact-table"><thead><tr><th>属性</th><th>当前值</th><th>对照 A</th></tr></thead><tbody id="lab-total-stats"></tbody></table></div></details>
+    </div>
+      </details>
+      <details class="lab-side-section"><summary>对照与配装提示</summary><div id="lab-compare-summary" class="mini-note"></div></details>
       <div id="lab-build-warnings" class="lab-notes"></div>
     </aside>
   </div>
 
-  <div class="grid2 lab-space">
-    <article class="panel"><div class="lab-card-heading"><h3>食物与补给</h3><span class="badge">原始配方效果</span></div>
-      <label>战前餐食 / 饮品 · 同时一种<select id="lab-food"></select></label><div id="lab-food-effects" class="lab-effect-summary"></div>
-      <details><summary>手调当前食物效果</summary><div id="lab-food-overrides" class="lab-two-fields"></div><p class="mini-note">留空采用提取的效果。不模拟饥饿、口渴等探索消耗；没有确认的状态不会凭空算作战斗收益。</p></details>
-      <div class="lab-two-fields lab-space"><label>自动恢复品<select id="lab-healing"></select></label><label>携带数量<input id="lab-heal-count" type="number" min="0" max="99" step="1" value="0"></label><label>生命低于此百分比时使用<input id="lab-heal-threshold" type="number" min="1" max="99" step="any" value="40"></label><label>恢复品间隔 · 秒<input id="lab-heal-cooldown" type="number" min="0.1" max="600" step="any" value="10"></label></div>
-      <p id="lab-healing-note" class="mini-note"></p>
-    </article>
-    <article class="panel"><div class="lab-card-heading"><h3>人物技能</h3><button id="lab-clear-skills" type="button" class="lab-small-button">全部归零</button></div>
-      <label>筛选技能<input id="lab-skill-search" type="search" placeholder="技能名称或效果"></label>
-      <div id="lab-skills" class="lab-skills"></div><p id="lab-skill-note" class="mini-note"></p>
-    </article>
-  </div>
-
   <article class="panel lab-arena lab-space" id="lab-arena">
-    <div class="heading"><div><span class="num">BATTLE / 对战模拟</span><h2>让这套配装上场</h2><p>默认正面交战，无走位风筝、队友和宠物。可选开局接近距离；模拟不会改变配装或消耗你的游戏物品。</p></div><span id="lab-result-state" class="badge">等待实验</span></div>
+    <div class="heading"><div><span class="num">BATTLE / 对战模拟</span><h2>让这套配装上场</h2><p>默认正面交战，无走位风筝、队友和宠物。可选开局接近距离；模拟不会改变配装或消耗你的游戏物品。</p></div><div class="lab-arena-links"><a href="#lab-config">返回换装 ↑</a><span id="lab-result-state" class="badge">等待实验</span></div></div>
     <div class="lab-arena-setup"><div class="lab-opponent-art"><img id="lab-animal-image" alt="预设动物" width="160" height="160"><strong id="lab-animal-name"></strong><small id="lab-animal-source"></small></div><div><div class="lab-two-fields"><label>动物原型<select id="lab-animal"></select></label><label>动物难度<select id="lab-animal-tier"></select></label><label>无尽层数<input id="lab-animal-layer" type="number" min="0" max="1000000" step="1" value="0"></label><label>起始间距<input id="lab-start-distance" type="number" min="0" max="30" step="any" value="0"></label></div><div id="lab-animal-metrics" class="lab-inline-metrics"></div><details><summary>手动调整此动物的模拟数值</summary><div id="lab-animal-overrides" class="lab-two-fields"></div><button id="lab-reset-animal" type="button" class="lab-small-button lab-space">恢复该难度预设</button></details></div></div>
     <details class="lab-sim-options"><summary>实验设置与明确假设</summary><div class="lab-sim-fields"><label>随机种子<input id="lab-seed" type="number" min="0" max="4294967295" step="1" value="1602026"></label><label>单场最长秒数<input id="lab-time-limit" type="number" min="1" max="600" step="1" value="120"></label><label>批量实验场数<input id="lab-runs" type="number" min="1" max="500" step="1" value="100"></label><label>武器每次攻击耐久消耗<input id="lab-wear" type="number" min="0" max="1000" step="any" value="1"></label></div><div id="lab-simulation-assumptions" class="lab-notes"></div></details>
     <div class="lab-run-actions"><button id="lab-run-once" class="lab-primary" type="button">模拟一场</button><button id="lab-run-batch" type="button">批量对战 · 统计胜率</button><button id="lab-cancel" type="button" disabled>停止实验</button><button id="lab-export-report" type="button" disabled>导出战斗报告</button><span id="lab-progress" class="mini-note" role="status" aria-live="polite"></span></div>

@@ -35,7 +35,7 @@
   const BASE_FIELDS=[['health','基础生命',1,1e7],['strength','力量点数',0,1e4],['stamina','体力点数',0,1e4],['dexterity','灵巧点数',0,1e4],['wisdom','精神点数',0,1e4],['damage','空手基础伤害',0,1e7],['armor','本体防护点数',0,1e7],['resistance','本体普通抗性',0,1e7]];
   const ANIMAL_FIELDS=[['health','生命',1,1e9],['damage','主伤害',0,1e7],['penetrating_damage','穿刺伤害',0,1e7],['armor','防护',0,1e7],['resistance','普通抗性',0,1e7],['attackSpeed','攻击次数 / 秒',.01,20],['range','攻击距离',.1,30],['moveSpeed','接近速度',.1,30]];
   let state,reference=null,activeSlot='weapon',lastReport=null,busy=false,runToken=0,saveTimer=0,configRevision=0,importToken=0;
-  let playerView,enemyView,gearView={},storeAvailable=true;
+  let playerView,enemyView,gearView={},storeAvailable=true,workspace=null,pendingInput=null,flushingSave=false;
   let avatarPreview=null,avatarAttempted=false,avatarGender='male',avatarSelectionKey='',avatarThemeObserver=null;
   let avatarResourcesReady=false,avatarLoading=null;
   function statText(key,value){return Number.isFinite(value)?fmt(percents.has(key)?value*100:value,key==='max_durability'?0:2)+(percents.has(key)?'%':key.endsWith('_time')||key==='duration'?' 秒':''):'未解锁';}
@@ -140,7 +140,101 @@
     return {stats:derived,totals:{...gearTotals},foodStats,skillStats,views,capacity,additionalCapacity,warnings:[...warnings,...(derived.warnings||[])]};
   }
   function buildEnemy(config){const animal=animalById.get(config.enemy.id);const result=E.transformAnimal(animal?.base||{},config.enemy.tier,config.enemy.layer);Object.assign(result,config.enemy.overrides);result.name=animal?.name||'预设动物';result.id=animal?.id;result.targetType='player';return result;}
-  function scheduleSave(){clearTimeout(saveTimer);saveTimer=setTimeout(()=>{try{localStorage.setItem(STORE,JSON.stringify({config:state,reference}));$('lab-save-status').textContent='已自动保存到此浏览器';storeAvailable=true;}catch(_){storeAvailable=false;$('lab-save-status').textContent='浏览器不允许本地保存；可导出搭配';}},220);}
+  function defaultPlanName(index){return '方案 '+(index+1);}
+  function planName(value,index){return typeof value==='string'&&value.trim()?value.trim().slice(0,24):defaultPlanName(index);}
+  function checkedConfig(value){const config=normalizeConfig(value);buildCharacter(config);buildEnemy(config);return config;}
+  function initialWorkspace(config){return {active:0,plans:Array.from({length:3},(_,index)=>({name:defaultPlanName(index),config:clone(config)}))};}
+  function restoreWorkspace(saved){
+    const restored=initialWorkspace(state),source=saved?.workspace;
+    if(source==null)return {workspace:restored,partial:false};
+    if(!plain(source))return {workspace:restored,partial:true};
+    let partial=false;
+    const activeValid=Number.isInteger(source.active)&&source.active>=0&&source.active<3;
+    restored.active=activeValid?source.active:0;
+    if(!activeValid)partial=true;
+    if(!Array.isArray(source.plans))return {workspace:restored,partial:true};
+    if(source.plans.length!==3)partial=true;
+    for(let index=0;index<3;index++){
+      const plan=source.plans[index];
+      if(!plain(plan)){partial=true;continue;}
+      try{restored.plans[index]={name:planName(plan.name,index),config:checkedConfig(plan.config)};}
+      catch{partial=true;}
+    }
+    // An invalid active index cannot identify the last edited plan. Preserve the
+    // compatible top-level config as plan 1 while salvaging the other two plans.
+    if(!activeValid)restored.plans[0].config=clone(state);
+    return {workspace:restored,partial};
+  }
+  function syncCurrentPlan(){if(workspace&&state)workspace.plans[workspace.active].config=clone(state);}
+  function commitPendingInput(){
+    const input=pendingInput;
+    if(!input||!input.isConnected||input!==document.activeElement)return;
+    if(!input.validity.valid){
+      pendingInput=null;
+      message('尚未完成或超出范围的输入没有保存，已保留上次有效值。',true);
+      return;
+    }
+    input.dispatchEvent(new Event('change',{bubbles:true}));
+  }
+  function flushSave(commitDraft=false){
+    if(flushingSave||!state||!workspace)return;
+    flushingSave=true;
+    try{
+      if(commitDraft)commitPendingInput();
+      clearTimeout(saveTimer);saveTimer=0;syncCurrentPlan();
+      try{localStorage.setItem(STORE,JSON.stringify({config:state,reference,workspace}));$('lab-save-status').textContent='3 个方案 · 已保存本机';storeAvailable=true;}
+      catch{storeAvailable=false;$('lab-save-status').textContent='方案暂存在本页；浏览器禁止本地保存，可导出备份';}
+    }finally{flushingSave=false;}
+  }
+  function scheduleSave(){
+    syncCurrentPlan();clearTimeout(saveTimer);
+    $('lab-save-status').textContent=storeAvailable?'正在保存方案…':'方案暂存在本页，可导出备份';
+    saveTimer=setTimeout(flushSave,220);
+  }
+  function renderWorkspace(){
+    if(!workspace)return;
+    const buttons=$('lab-plan-buttons');
+    buttons?.querySelectorAll('[data-lab-plan]').forEach(button=>{
+      const index=Number(button.dataset.labPlan),plan=workspace.plans[index];
+      if(!plan)return;
+      button.textContent=plan.name;button.setAttribute('aria-pressed',String(index===workspace.active));
+    });
+    const input=$('lab-plan-name');
+    if(input&&document.activeElement!==input)input.value=workspace.plans[workspace.active].name;
+    const target=$('lab-copy-target');
+    if(target)for(const option of target.options){const index=Number(option.value);if(workspace.plans[index])option.textContent=workspace.plans[index].name+(index===workspace.active?'（当前）':'');}
+    const button=$('lab-copy-plan'),index=Number(target?.value);
+    if(button)button.disabled=!target||!Number.isInteger(index)||index<0||index>2||index===workspace.active;
+  }
+  function switchPlan(index){
+    if(!Number.isInteger(index)||index<0||index>2||index===workspace.active)return;
+    syncCurrentPlan();
+    const previous=workspace.active;
+    workspace.active=index;
+    try{commitConfig(workspace.plans[index].config);}
+    catch(error){workspace.active=previous;renderWorkspace();throw error;}
+    flushSave();message('已切换到“'+workspace.plans[index].name+'”，原方案的修改已保留。');
+  }
+  function renamePlan(finalize=false){
+    const input=$('lab-plan-name');if(!input||!workspace)return;
+    workspace.plans[workspace.active].name=planName(input.value,workspace.active);
+    if(finalize)input.value=workspace.plans[workspace.active].name;
+    renderWorkspace();scheduleSave();
+  }
+  function sameConfig(left,right){
+    if(left===right)return true;
+    if(!plain(left)||!plain(right))return false;
+    const keys=Object.keys(left);
+    return keys.length===Object.keys(right).length&&keys.every(key=>Object.hasOwn(right,key)&&sameConfig(left[key],right[key]));
+  }
+  function copyPlan(){
+    const index=Number($('lab-copy-target')?.value);
+    if(!Number.isInteger(index)||index<0||index>2||index===workspace.active)return;
+    syncCurrentPlan();
+    const config=checkedConfig(state),target=workspace.plans[index];
+    if(!sameConfig(config,target.config)&&!window.confirm('将当前搭配复制到“'+target.name+'”？该方案的现有搭配会被覆盖。'))return;
+    target.config=clone(config);flushSave();renderWorkspace();message('已复制到“'+target.name+'”，当前方案保持不变。');
+  }
   function markChanged(){configRevision++;if(busy)cancelExperiment();if(lastReport){$('lab-result-state').textContent='旧结果 · 配置已修改';$('lab-result-state').classList.add('lab-stale');}scheduleSave();}
   function clampDurability(config){for(const record of Object.values(config.slots)){const view=slotValues(record);if(view&&record.currentDurability!=null)record.currentDurability=view.currentDurability;}}
   function commitConfig(input){const next=normalizeConfig(input);clampDurability(next);buildCharacter(next);buildEnemy(next);const previous=state;state=next;try{renderAll();}catch(error){state=previous;try{renderAll();}catch(_){}throw error;}markChanged();}
@@ -202,7 +296,7 @@
         const meshes=Object.keys(data.meshes||{}),coverage=data.coverage||{},missing=Array.isArray(coverage.missing)?coverage.missing.length:finite(coverage.missing),partial=Object.values(data.items||{}).filter(item=>item.partial).length;
         $('lab-avatar-coverage').textContent='收录 '+meshes.length+' 个原版网格；'+finite(coverage.visible)+' 件装备有可见模型，'+finite(coverage.nonVisual)+' 件饰品无独立可见外观'+(missing?'，另有 '+missing+' 件尚未覆盖':'，可见装备主体全部覆盖')+'。'+(partial?'其中 '+partial+' 件的附加组件还未完整显示。':'')+'采用静态试装姿态，光照及原版色板着色为网页近似，不运行原版动画与特殊材质特效。';
         canvas.hidden=false;$('lab-doll').hidden=true;$('lab-doll').style.display='none';
-        avatarPreview=window.WestlandAvatar3D.create({canvas,status:$('lab-avatar-status'),data,onStatus:avatarStatus,onSelectSlot:slot=>{if(Object.hasOwn(NAMES,slot)){activeSlot=slot;$('lab-item-search').value='';renderModel();renderEditor();}}});
+        avatarPreview=window.WestlandAvatar3D.create({canvas,status:$('lab-avatar-status'),data,onStatus:avatarStatus,onSelectSlot:slot=>selectSlot(slot,true)});
         if(!avatarPreview?.supported)throw Error('浏览器未能建立 WebGL 预览，配装和对战仍可正常使用。');
         avatarPreview.setTheme(document.documentElement.dataset.theme||'dark');
         if(typeof MutationObserver==='function'){
@@ -217,12 +311,85 @@
     try{avatarPreview.setLoadout({gender:avatarGender,slots:state.slots});avatarSelectionKey=key;}
     catch(error){avatarStatus({state:'error',message:'3D 试装暂不可用：'+error.message});}
   }
-  function renderModel(){let equipped=0;$('lab-slot-buttons').innerHTML=SLOTS.map(([slot,name])=>{const view=gearView[slot];if(view)equipped++;return '<button type="button" class="lab-slot-button" data-lab-slot="'+slot+'" aria-pressed="'+(activeSlot===slot)+'" title="'+esc(name+'：'+(view?.item.name||'未装备'))+'">'+imageTag(view?.item,32)+'<span>'+name+'</span><small>'+esc(view?.item.name||'未装备')+'</small></button>';}).join('');$('lab-equipped-count').textContent=equipped+' / 9 部位';const placements={head:[125,33,50],body:[116,132,68],legs:[126,240,49],boots:[126,334,49],weapon:[28,139,53],backpack:[224,142,49],ring1:[24,262,34],ring2:[244,262,34],neck:[135,99,30]};$('lab-doll-images').innerHTML=SLOTS.map(([slot,name])=>{const [x,y,size]=placements[slot],item=gearView[slot]?.item,src=images[item?.id];return '<g role="button" tabindex="0" data-lab-slot="'+slot+'" class="'+(activeSlot===slot?'lab-doll-selected':'')+'" aria-label="'+esc(name+'：'+(item?.name||'未装备'))+'"><title>'+esc(name+'：'+(item?.name||'未装备'))+'</title><rect class="lab-doll-slot" x="'+x+'" y="'+y+'" width="'+size+'" height="'+size+'" rx="8"/>'+(src?'<image href="'+src+'" x="'+(x+2)+'" y="'+(y+2)+'" width="'+(size-4)+'" height="'+(size-4)+'" preserveAspectRatio="xMidYMid meet"/>':'<text x="'+(x+size/2)+'" y="'+(y+size/2+4)+'" text-anchor="middle" font-size="12" fill="var(--muted)">+</text>')+'</g>';}).join('');renderAvatarPreview();}
-  function filteredItems(){const query=$('lab-item-search').value.trim().toLowerCase();return catalog.filter(item=>allowed(item,activeSlot)&&(!query||(item.name+' '+item.en+' '+(RAR[item.rarity]||'')+' t'+item.tier).toLowerCase().includes(query))).sort((a,b)=>a.tier-b.tier||a.name.localeCompare(b.name,'zh-CN'));}
-  function renderItemOptions(){const selected=state.slots[activeSlot].id,list=filteredItems();let html=option('','不装备',!selected);if(selected&&!list.some(item=>item.id===selected)){const item=byId.get(selected);html+=option(selected,item.name+'（当前选择，筛选外）',true);}for(const item of list)html+=option(item.id,'T'+item.tier+' · '+item.name+' · '+(RAR[item.rarity]||item.rarity),item.id===selected);$('lab-item-select').innerHTML=html;}
+  function renderModel(){
+    const strip=$('lab-slot-buttons'),scrollLeft=strip.scrollLeft,focused=document.activeElement?.closest('[data-lab-slot]');
+    const focusHost=focused&&(strip.contains(focused)?strip:$('lab-doll-images').contains(focused)?$('lab-doll-images'):null);
+    const focusSlot=focusHost?focused.dataset.labSlot:null;
+    let equipped=0;$('lab-slot-buttons').innerHTML=SLOTS.map(([slot,name])=>{const view=gearView[slot];if(view)equipped++;return '<button type="button" class="lab-slot-button" data-lab-slot="'+slot+'" aria-pressed="'+(activeSlot===slot)+'" title="'+esc(name+'：'+(view?.item.name||'未装备'))+'">'+imageTag(view?.item,32)+'<span>'+name+'</span><small>'+esc(view?.item.name||'未装备')+'</small></button>';}).join('');$('lab-equipped-count').textContent=equipped+' / 9 部位';const placements={head:[125,33,50],body:[116,132,68],legs:[126,240,49],boots:[126,334,49],weapon:[28,139,53],backpack:[224,142,49],ring1:[24,262,34],ring2:[244,262,34],neck:[135,99,30]};$('lab-doll-images').innerHTML=SLOTS.map(([slot,name])=>{const [x,y,size]=placements[slot],item=gearView[slot]?.item,src=images[item?.id];return '<g role="button" tabindex="0" data-lab-slot="'+slot+'" class="'+(activeSlot===slot?'lab-doll-selected':'')+'" aria-label="'+esc(name+'：'+(item?.name||'未装备'))+'"><title>'+esc(name+'：'+(item?.name||'未装备'))+'</title><rect class="lab-doll-slot" x="'+x+'" y="'+y+'" width="'+size+'" height="'+size+'" rx="8"/>'+(src?'<image href="'+src+'" x="'+(x+2)+'" y="'+(y+2)+'" width="'+(size-4)+'" height="'+(size-4)+'" preserveAspectRatio="xMidYMid meet"/>':'<text x="'+(x+size/2)+'" y="'+(y+size/2+4)+'" text-anchor="middle" font-size="12" fill="var(--muted)">+</text>')+'</g>';}).join('');renderAvatarPreview();
+    if(focusHost&&focusSlot)focusHost.querySelector('[data-lab-slot="'+focusSlot+'"]')?.focus({preventScroll:true});
+    strip.scrollLeft=scrollLeft;
+  }
+  function renderItemTiers(){
+    const input=$('lab-item-tier');if(!input)return;
+    const selected=input.value,tiers=[...new Set(catalog.filter(item=>allowed(item,activeSlot)).map(item=>item.tier))].sort((a,b)=>a-b);
+    const current=tiers.some(tier=>String(tier)===selected)?selected:'all';
+    input.innerHTML=option('all','全部阶级',current==='all')+tiers.map(tier=>option(tier,'T'+tier,String(tier)===current)).join('');
+  }
+  function filteredItems(){
+    const query=$('lab-item-search').value.trim().toLowerCase(),tier=$('lab-item-tier')?.value||'all';
+    return catalog.filter(item=>allowed(item,activeSlot)&&(tier==='all'||String(item.tier)===tier)&&(!query||(item.name+' '+item.en+' '+(RAR[item.rarity]||'')+' t'+item.tier).toLowerCase().includes(query))).sort((a,b)=>a.tier-b.tier||a.name.localeCompare(b.name,'zh-CN'));
+  }
+  function renderItemOptions(){
+    renderItemTiers();
+    const selected=state.slots[activeSlot].id,list=filteredItems(),index=list.findIndex(item=>item.id===selected);
+    let html=option('','不装备',!selected);
+    if(selected&&index<0){const item=byId.get(selected);html+=option(selected,item.name+'（当前选择，筛选外）',true);}
+    for(const item of list)html+=option(item.id,'T'+item.tier+' · '+item.name+' · '+(RAR[item.rarity]||item.rarity),item.id===selected);
+    $('lab-item-select').innerHTML=html;$('lab-item-select').disabled=!list.length;
+    const previous=$('lab-item-prev'),next=$('lab-item-next'),count=$('lab-item-count');
+    if(previous)previous.disabled=!list.length||index===0;
+    if(next)next.disabled=!list.length||index===list.length-1;
+    if(count)count.textContent=!list.length?'没有匹配装备':index<0?list.length+' 件匹配':(index+1)+' / '+list.length+' 件';
+  }
+  function selectItem(id){
+    const item=byId.get(id);if(id&&!allowed(item,activeSlot))throw Error('装备与槽位不匹配。');
+    const level=state.slots[activeSlot].level;state.slots[activeSlot]={...emptySlot(),id,level};changed(true);
+  }
+  function stepItem(direction){
+    const list=filteredItems();if(!list.length)return;
+    const current=list.findIndex(item=>item.id===state.slots[activeSlot].id);
+    const index=current<0?(direction>0?0:list.length-1):current+direction;
+    if(index>=0&&index<list.length)selectItem(list[index].id);
+  }
+  function selectSlot(slot,reveal=false){
+    if(!Object.hasOwn(NAMES,slot))return;
+    if(slot!==activeSlot){$('lab-item-search').value='';if($('lab-item-tier'))$('lab-item-tier').value='all';}
+    activeSlot=slot;renderModel();renderEditor();
+    if(reveal){
+      const button=$('lab-slot-buttons').querySelector('[data-lab-slot="'+slot+'"]');
+      const selection=root.querySelector('.lab-selection'),picker=root.querySelector('.lab-slot-picker'),strip=$('lab-slot-buttons');
+      const bounds=selection?.getBoundingClientRect(),header=document.querySelector('.top')?.getBoundingClientRect();
+      const coveredTop=header&&header.top<=0?header.bottom:0;
+      const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';
+      button?.focus({preventScroll:true});
+      if(button){
+        const buttonBox=button.getBoundingClientRect(),railBox=strip.getBoundingClientRect();
+        if(buttonBox.left<railBox.left)strip.scrollLeft+=buttonBox.left-railBox.left;
+        else if(buttonBox.right>railBox.right)strip.scrollLeft+=buttonBox.right-railBox.right;
+      }
+      if(bounds&&(bounds.top<coveredTop||bounds.bottom>innerHeight))picker?.scrollIntoView({block:'start',behavior});
+    }
+  }
+  function patchItemStats(markup){
+    const host=$('lab-item-stats'),template=document.createElement('template');
+    template.innerHTML=markup;
+    const current=[...host.querySelectorAll('input[data-lab-stat]')],next=[...template.content.querySelectorAll('input[data-lab-stat]')];
+    if(!current.length||current.length!==next.length||current.some((input,index)=>input.dataset.labStat!==next[index].dataset.labStat)){
+      host.replaceChildren(template.content);return;
+    }
+    for(let index=0;index<current.length;index++){
+      const input=current[index],replacement=next[index],row=input.closest('.lab-stat-row'),nextRow=replacement.closest('.lab-stat-row');
+      const value=input===pendingInput?input.value:replacement.value;
+      row.className=nextRow.className;
+      row.querySelector('label').innerHTML=nextRow.querySelector('label').innerHTML;
+      for(const attribute of [...input.attributes])if(!replacement.hasAttribute(attribute.name))input.removeAttribute(attribute.name);
+      for(const attribute of replacement.attributes)input.setAttribute(attribute.name,attribute.value);
+      if(input.value!==value)input.value=value;
+    }
+  }
   function renderEditor(){const record=state.slots[activeSlot],view=slotValues(record);$('lab-slot-title').textContent=NAMES[activeSlot];renderItemOptions();$('lab-selected-name').textContent=view?.item.name||'未装备';$('lab-item-art').innerHTML=imageTag(view?.item,56);$('lab-item-description').textContent=view?'T'+view.item.tier+' · '+(RAR[view.item.rarity]||view.item.rarity)+' · '+Object.keys(view.item.curves).filter(k=>k!=='item_level').length+' 项定义属性':'从上方列表选择当前部位的装备。';$('lab-level').value=record.level;$('lab-level').disabled=!view;$('lab-current-durability').disabled=!view||!Object.hasOwn(view.stats,'max_durability');$('lab-current-durability').value=record.currentDurability??'';$('lab-current-durability').placeholder=view?'满耐久 '+fmt(view.maxDurability,0):'默认满耐久';$('lab-current-durability').max=view?.maxDurability||1e7;$('lab-weapon-fields').hidden=activeSlot!=='weapon'||!view;$('lab-weapon-speed').value=record.weaponSpeed??'';$('lab-weapon-range').value=record.weaponRange??'';$('lab-weapon-speed').placeholder=String(view?.item.aps||1);$('lab-weapon-range').placeholder=String(view?.item.range||1);
     const ordered=['damage','penetrating_damage','armor','health_increment','strength','stamina','dexterity','wisdom','critical_hit_chance','critical_modifier','max_durability'];const keys=view?Object.keys(view.defaults).sort((a,b)=>(ordered.indexOf(a)<0?99:ordered.indexOf(a))-(ordered.indexOf(b)<0?99:ordered.indexOf(b))):[];
-    $('lab-item-stats').innerHTML=keys.map((key,i)=>{const natural=view.defaults[key],locked=!Number.isFinite(natural),edited=Object.hasOwn(record.overrides,key),factor=percents.has(key)?100:1,[min,max]=domain(key),inputId='lab-stat-'+i;return '<div class="lab-stat-row'+(locked?' lab-locked':'')+'"><label for="'+inputId+'">'+esc(labels[key]||'未标注属性')+(percents.has(key)?'（%）':'')+'<small>默认 '+statText(key,natural)+(edited?' · <span class="lab-edited">当前 '+statText(key,view.stats[key])+'</span>':'')+'</small></label><input id="'+inputId+'" data-lab-stat="'+esc(key)+'" type="number" min="'+min*factor+'" max="'+max*factor+'" step="'+(key==='max_durability'?'1':'any')+'" placeholder="'+(locked?'未解锁':fmt(natural*factor))+'" value="'+(edited&&!locked?record.overrides[key]*factor:'')+'"'+(locked?' disabled':'')+' aria-label="'+esc(labels[key]||'未标注属性')+'手动覆盖"></div>';}).join('')||'<p class="mini-note">未选择装备，无额外属性。空手基础伤害可在右侧调整。</p>';
+    patchItemStats(keys.map((key,i)=>{const natural=view.defaults[key],locked=!Number.isFinite(natural),edited=Object.hasOwn(record.overrides,key),factor=percents.has(key)?100:1,[min,max]=domain(key),inputId='lab-stat-'+i;return '<div class="lab-stat-row'+(locked?' lab-locked':'')+'"><label for="'+inputId+'">'+esc(labels[key]||'未标注属性')+(percents.has(key)?'（%）':'')+'<small>默认 '+statText(key,natural)+(edited?' · <span class="lab-edited">当前 '+statText(key,view.stats[key])+'</span>':'')+'</small></label><input id="'+inputId+'" data-lab-stat="'+esc(key)+'" type="number" min="'+min*factor+'" max="'+max*factor+'" step="'+(key==='max_durability'?'1':'any')+'" placeholder="'+(locked?'未解锁':fmt(natural*factor))+'" value="'+(edited&&!locked?record.overrides[key]*factor:'')+'"'+(locked?' disabled':'')+' aria-label="'+esc(labels[key]||'未标注属性')+'手动覆盖"></div>';}).join('')||'<p class="mini-note">未选择装备，无额外属性。空手基础伤害可在右侧调整。</p>');
   }
   function renderBase(){ $('lab-base-fields').innerHTML=BASE_FIELDS.map(([key,name,min,max])=>'<label>'+name+'<input type="number" data-lab-base="'+key+'" min="'+min+'" max="'+max+'" step="any" value="'+state.base[key]+'"></label>').join(''); }
   function renderMetrics(){const p=playerView.stats,a=reference?buildCharacter(reference).stats:null;const metrics=[['health','最大生命',p.health],['damage','主伤害 / 次',p.damage],['penetrating_damage','穿刺 / 次',p.penetrating_damage],['attackSpeed','攻击次数 / 秒',p.attackSpeed],['armor','防护点数',p.armor],['evasion','闪避率',p.evasion]];$('lab-main-metrics').innerHTML=metrics.map(([key,name,value])=>{const diff=a?finite(value)-finite(a[key]):0;return '<div class="lab-metric"><small>'+name+'</small><strong>'+statText(key,value)+'</strong>'+(a?'<span class="lab-delta"'+(diff?' data-positive="'+(diff>0)+'"':'')+'>对照 A '+(diff>0?'+':'')+statText(key,diff)+'</span>':'<span class="lab-delta">当前搭配</span>')+'</div>';}).join('');$('lab-compare-summary').textContent=(reference?'已保存对照 A；绿色表示该指标数值增加，不代表必然更强。':'记为对照 A 后，可实时比较调整前后的差异。')+' 背包容量：基础 '+playerView.capacity+' 格'+(playerView.additionalCapacity?' + 分类格 '+playerView.additionalCapacity:'')+'。';$('lab-load-a').disabled=!reference;
@@ -247,7 +414,7 @@
       .replace(/即时恢复 health/g,'即时恢复量').replace(/SHA-256 锁校验/g,'资料核验');
   }
   function renderEvidence(){const assumptions=E.ASSUMPTIONS||E.assumptions||[];$('lab-simulation-assumptions').innerHTML='<ul>'+assumptions.map(x=>'<li>'+esc(typeof x==='string'?x:x.text||x.description||'')+'</li>').join('')+'</ul>';const notes=[...(D.notes||[]),...(D.sourceDescription||[]).map(x=>typeof x==='string'?x:(x.description||''))];$('lab-evidence').innerHTML='<p>本模块的装备自然曲线来自原有 225 件定制目录，并增加本地目录中可合法装备的戒指、项链；食物、技能与动物数据由本地游戏静态资料整理。手动值是当前测试方案的输入，并非对游戏存档的写入。</p>'+notes.filter(Boolean).map(text=>'<p>'+esc(readableNote(text))+'</p>').join('')+'<p>战斗统计以模型内真实累计的有效伤害为准：致死溢出不计入有效 DPS；未结束、事件上限或超时单独统计，不当作胜利。</p>';}
-  function renderAll(){renderBase();renderFood();renderSkills();refreshMetrics();renderEditor();renderEnemyInputs();renderExperiment();renderEvidence();renderDifficultySelection();}
+  function renderAll(){renderWorkspace();renderBase();renderFood();renderSkills();refreshMetrics();renderEditor();renderEnemyInputs();renderExperiment();renderEvidence();renderDifficultySelection();}
   function renderDifficultySelection(){
     const selection=design.readSelection(),name=design.TIERS[selection.tier].name,level=design.levelFor(selection.tier,selection);
     const button=$('lab-apply-difficulty');
@@ -300,11 +467,23 @@
   window.addEventListener('storage',event=>{if(!event.key||event.key===design.selectionKey)renderDifficultySelection();});
   window.addEventListener('westland:difficulty-selection',renderDifficultySelection);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderDifficultySelection();});
-  function wire(){root.addEventListener('click',guarded(event=>{const slot=event.target.closest('[data-lab-slot]');if(slot){activeSlot=slot.dataset.labSlot;$('lab-item-search').value='';renderModel();renderEditor();}}));$('lab-doll').addEventListener('keydown',event=>{if(['Enter',' '].includes(event.key)&&event.target.closest('[data-lab-slot]')){event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+  function wire(){root.addEventListener('click',guarded(event=>{const slot=event.target.closest('[data-lab-slot]');if(slot)selectSlot(slot.dataset.labSlot,$('lab-doll').contains(slot));}));$('lab-doll').addEventListener('keydown',event=>{if(['Enter',' '].includes(event.key)&&event.target.closest('[data-lab-slot]')){event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+    root.addEventListener('input',event=>{if(event.target.matches('input[type="number"]'))pendingInput=event.target;});
+    root.addEventListener('change',event=>{if(event.target===pendingInput)pendingInput=null;});
+    $('lab-plan-buttons')?.addEventListener('click',guarded(event=>{const button=event.target.closest('[data-lab-plan]');if(button)switchPlan(Number(button.dataset.labPlan));}));
+    $('lab-plan-name')?.addEventListener('input',()=>renamePlan());
+    $('lab-plan-name')?.addEventListener('change',()=>renamePlan(true));
+    $('lab-copy-target')?.addEventListener('change',renderWorkspace);
+    $('lab-copy-plan')?.addEventListener('click',guarded(copyPlan));
+    $('lab-item-tier')?.addEventListener('change',renderItemOptions);
+    $('lab-item-prev')?.addEventListener('click',guarded(()=>stepItem(-1)));
+    $('lab-item-next')?.addEventListener('click',guarded(()=>stepItem(1)));
+    window.addEventListener('pagehide',()=>flushSave(true));
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)flushSave(true);});
     $('lab-avatar-open').addEventListener('click',()=>{void openAvatarPreview();});
     $('lab-avatar-gender').addEventListener('change',guarded(()=>{const value=$('lab-avatar-gender').value;if(!['male','female'].includes(value))throw Error('未知人物外观。');avatarGender=value;avatarSelectionKey='';renderAvatarPreview();}));
     for(const [id,action] of [['lab-avatar-front',()=>avatarPreview?.view('front')],['lab-avatar-back',()=>avatarPreview?.view('back')],['lab-avatar-zoom-in',()=>avatarPreview?.zoom(.2)],['lab-avatar-zoom-out',()=>avatarPreview?.zoom(-.2)],['lab-avatar-reset',()=>avatarPreview?.resetView()]])$(id).addEventListener('click',guarded(action));
-    $('lab-item-search').addEventListener('input',renderItemOptions);$('lab-item-select').addEventListener('change',guarded(()=>{const id=$('lab-item-select').value,item=byId.get(id);if(id&&!allowed(item,activeSlot))throw Error('装备与槽位不匹配。');const level=state.slots[activeSlot].level;state.slots[activeSlot]={...emptySlot(),id,level};changed(true);}));$('lab-level').addEventListener('change',guarded(()=>{state.slots[activeSlot].level=readInput($('lab-level'),1,3000,true)??1;changed(true);}));$('lab-current-durability').addEventListener('change',guarded(()=>{state.slots[activeSlot].currentDurability=readInput($('lab-current-durability'),0,gearView[activeSlot]?.maxDurability||1e7,true);changed(true);}));
+    $('lab-item-search').addEventListener('input',renderItemOptions);$('lab-item-select').addEventListener('change',guarded(()=>selectItem($('lab-item-select').value)));$('lab-level').addEventListener('change',guarded(()=>{state.slots[activeSlot].level=readInput($('lab-level'),1,3000,true)??1;changed(true);}));$('lab-current-durability').addEventListener('change',guarded(()=>{state.slots[activeSlot].currentDurability=readInput($('lab-current-durability'),0,gearView[activeSlot]?.maxDurability||1e7,true);changed(true);}));
     $('lab-item-stats').addEventListener('change',guarded(event=>{const input=event.target.closest('[data-lab-stat]');if(!input)return;const key=input.dataset.labStat,factor=percents.has(key)?100:1,[min,max]=domain(key),value=readInput(input,min*factor,max*factor,key==='max_durability');const overrides=state.slots[activeSlot].overrides;if(value==null)delete overrides[key];else overrides[key]=value/factor;changed(true);}));
     $('lab-base-fields').addEventListener('change',guarded(event=>{const input=event.target.closest('[data-lab-base]');if(!input)return;const key=input.dataset.labBase,field=BASE_FIELDS.find(f=>f[0]===key);state.base[key]=readInput(input,field[2],field[3])??defaultBase()[key];input.value=state.base[key];changed();}));
     for(const [id,key,min,max] of [['lab-weapon-speed','weaponSpeed',.05,20],['lab-weapon-range','weaponRange',.1,30]])$(id).addEventListener('change',guarded(()=>{state.slots.weapon[key]=readInput($(id),min,max);changed(true);}));
@@ -331,8 +510,22 @@
       }catch(error){if(token===importToken)message('导入失败，原搭配未更改：'+error.message,true);}
       finally{if(token===importToken)event.target.value='';}
     });
-    $('lab-reset').addEventListener('click',()=>{if(!window.confirm('重置本页实验室的搭配、食物、技能和对照 A？不会改动游戏。'))return;state=applyPreset('rifle',initialState());reference=null;lastReport=null;$('lab-battle-results').hidden=true;$('lab-export-report').disabled=true;$('lab-result-state').textContent='等待实验';$('lab-result-state').classList.remove('lab-stale');markChanged();renderAll();message('实验室已恢复默认。');});$('lab-run-once').addEventListener('click',()=>runExperiment(false));$('lab-run-batch').addEventListener('click',()=>runExperiment(true));$('lab-cancel').addEventListener('click',cancelExperiment);$('lab-export-report').addEventListener('click',()=>{if(lastReport)download('westland-battle-report.json',lastReport);});
+    $('lab-reset').addEventListener('click',()=>{if(!window.confirm('重置当前方案的搭配、食物、技能与模拟设置？其他方案和对照 A 会保留。'))return;state=applyPreset('rifle',initialState());lastReport=null;$('lab-battle-results').hidden=true;$('lab-export-report').disabled=true;$('lab-result-state').textContent='等待实验';$('lab-result-state').classList.remove('lab-stale');markChanged();renderAll();message('当前方案已恢复默认。');});$('lab-run-once').addEventListener('click',()=>runExperiment(false));$('lab-run-batch').addEventListener('click',()=>runExperiment(true));$('lab-cancel').addEventListener('click',cancelExperiment);$('lab-export-report').addEventListener('click',()=>{if(lastReport)download('westland-battle-report.json',lastReport);});
   }
-  try{if(!E||typeof E.deriveCharacter!=='function'||!animals.length)throw Error('实验数据或战斗引擎尚未完整载入。');state=applyPreset('rifle',initialState());try{const saved=JSON.parse(localStorage.getItem(STORE)||'null');if(saved){const savedState=normalizeConfig(saved.config),savedReference=saved.reference?normalizeConfig(saved.reference):null;buildCharacter(savedState);buildEnemy(savedState);state=savedState;reference=savedReference;}}catch(error){$('lab-save-status').textContent='未载入旧缓存；可以重新配置或导入方案。';}wire();renderAll();window.westlandLoadoutLab=Object.freeze({getState:()=>clone(state),getReference:()=>reference?clone(reference):null,normalizeConfig,buildCharacter,buildEnemy,slotValues,allowed,run:runExperiment,cancel:cancelExperiment,getReport:()=>lastReport?clone(lastReport):null,isBusy:()=>busy,loadConfig:commitConfig,version:1});}
+  try{
+    if(!E||typeof E.deriveCharacter!=='function'||!animals.length)throw Error('实验数据或战斗引擎尚未完整载入。');
+    state=applyPreset('rifle',initialState());
+    let saved=null,partial=false;
+    try{saved=JSON.parse(localStorage.getItem(STORE)||'null');}
+    catch{partial=true;}
+    if(saved!=null&&!plain(saved)){saved=null;partial=true;}
+    if(saved?.config){try{state=checkedConfig(saved.config);}catch{partial=true;}}
+    if(saved?.reference){try{reference=checkedConfig(saved.reference);}catch{partial=true;}}
+    const restored=restoreWorkspace(saved);workspace=restored.workspace;partial=partial||restored.partial;
+    state=clone(workspace.plans[workspace.active].config);
+    wire();renderAll();
+    if(partial)$('lab-save-status').textContent='部分缓存未能恢复；可用方案与对照已保留。';
+    window.westlandLoadoutLab=Object.freeze({getState:()=>clone(state),getReference:()=>reference?clone(reference):null,getWorkspace:()=>{syncCurrentPlan();return clone(workspace);},normalizeConfig,buildCharacter,buildEnemy,slotValues,allowed,run:runExperiment,cancel:cancelExperiment,getReport:()=>lastReport?clone(lastReport):null,isBusy:()=>busy,loadConfig:commitConfig,version:1});
+  }
   catch(error){message('装备实验室初始化失败：'+error.message,true);console.error('Westland loadout lab:',error);}
 })();

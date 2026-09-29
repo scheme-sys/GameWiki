@@ -14,52 +14,218 @@ html[data-theme=light] .lab-system{--lab-figure-dark:#c5c9bd;--lab-figure-light:
 
 .lab-avatar-open{width:100%;min-height:44px;margin:0 0 8px;white-space:normal}.lab-avatar-open[aria-busy="true"]{cursor:progress}@media(max-width:700px){.lab-model-panel>.lab-avatar-open{grid-column:1/-1}}
 
-/* The interactive loadout lab is the first destination below the shared navigation. */
-.lab-system:first-child{padding-top:32px}
-.lab-system #lab-heading{font-size:clamp(28px,3.2vw,42px);letter-spacing:-.7px}
-
-/* Battle is the main destination; supporting analysis lives on its own page. */
-.lab-page .lab-system:first-child{padding-top:28px}
-.lab-intro{position:relative;isolation:isolate;overflow:hidden;padding:34px 36px 25px;border:1px solid var(--line);border-radius:0;background:linear-gradient(95deg,#101712f7 0%,#141b16ef 44%,#121811b0 72%,#10161165),url('../../../assets/game-covers/westland.webp') 70% 45%/cover;box-shadow:0 18px 48px #0002}
+/* Compact workstation: equipment and live comparison stay in one view. */
+.lab-page .lab-system:first-child{padding-top:16px}
+.lab-system button,.lab-system input,.lab-system select,.lab-system details,.lab-system .badge{border-radius:0}
+.lab-system button,.lab-system summary{touch-action:manipulation}
+.lab-system input,.lab-system select{min-height:40px}
+.lab-system input[type=text]{padding:8px 10px}
+.lab-system details>summary{min-height:24px}
+.lab-system details>summary small{font-size:10px;color:var(--muted);margin-left:8px;letter-spacing:0}
+.lab-page .panel,.lab-page .lab-mannequin,.lab-page .lab-item-art,.lab-page .lab-opponent-art,.lab-page .lab-health-chart,.lab-page .lab-metric,.lab-page .lab-batch-summary{border-radius:0}
+.lab-intro{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;isolation:isolate;overflow:hidden;padding:21px 24px;border:1px solid var(--line);background:linear-gradient(95deg,#101712f7,#141b16eb 45%,#12181185),url('../../../assets/game-covers/westland.webp') 70% 45%/cover}
 .lab-intro:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--accent),#d9c59c88,transparent);pointer-events:none}
-.lab-intro-copy{position:relative;max-width:950px}
-.lab-intro .num{font-size:10px;letter-spacing:2.2px;color:#d8b486;margin-bottom:14px}
-.lab-system .lab-intro #lab-heading{font-size:clamp(28px,3.4vw,44px);font-weight:600;letter-spacing:.025em;color:#f4f1e7}
-.lab-intro p{max-width:590px;font-size:13px;line-height:1.9;color:#c0c7b7;margin:15px 0 23px}
-.lab-intro-actions{display:flex;gap:10px;flex-wrap:wrap}
-.lab-intro-actions a{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:44px;padding:10px 16px;border:1px solid #c3baa64d;background:#11170fc9;color:#e1dfd1;font-size:12px;transition:background .18s,border-color .18s}
+.lab-intro .num{font-size:9px;letter-spacing:1.8px;color:#d8b486;margin-bottom:5px}
+.lab-system .lab-intro #lab-heading{font-size:clamp(23px,2.5vw,30px);font-weight:600;letter-spacing:.02em;color:#f4f1e7}
+.lab-intro p{font-size:12px;line-height:1.6;color:#c0c7b7;margin:6px 0 0}
+.lab-intro-actions{display:flex;gap:8px;align-items:center}
+.lab-intro-actions a{display:inline-flex;align-items:center;justify-content:space-between;gap:15px;min-height:44px;padding:9px 14px;border:1px solid #c3baa64d;background:#11170fc9;color:#e1dfd1;font-size:12px;transition:background .18s,border-color .18s;white-space:nowrap}
 .lab-intro-actions a:hover{border-color:#e9b77e;background:#243022}
 .lab-intro-actions a.lab-hero-primary{background:var(--accent);border-color:var(--accent);color:#172014;font-weight:600}
-.lab-intro-actions a.lab-analysis-link{margin-left:3px;color:#c9c9b9}
 .lab-intro-actions a>span{opacity:.65;font-size:15px}
-.lab-intro-features{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:23px;padding-top:16px;border-top:1px solid #c3baa626;color:#aab9a4;font-size:10px;letter-spacing:.04em}
-.lab-intro-features span{display:inline-flex;align-items:center;gap:7px}
-.lab-intro-features span:before{content:"";width:3px;height:3px;background:#dcb583}
-.lab-page .panel,.lab-page .lab-mannequin,.lab-page .lab-item-art,.lab-page .lab-opponent-art,.lab-page .lab-health-chart,.lab-page .lab-metric,.lab-page .lab-batch-summary{border-radius:0}
-.lab-page .lab-config{margin-top:18px;padding:22px 24px}
-.lab-page .lab-config h2,.lab-page .lab-arena h2{font-size:23px;letter-spacing:-.3px}
-.lab-page .lab-config .lab-card-heading>.mini-note{margin:0}
-.lab-difficulty-tools{display:flex;align-items:center;gap:9px 15px;flex-wrap:wrap;margin-top:13px}
-.lab-difficulty-tools .mini-note{margin:0;line-height:1.6}
-.lab-page .lab-secondary-actions{border-top:1px solid var(--line);padding-top:13px}
-.lab-page .lab-config button,.lab-page .lab-slot-button,.lab-page .lab-run-actions button{border-radius:0}
-.lab-page #lab-apply-preset{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));color:var(--accent)}
-.lab-page .lab-workbench{margin-top:18px}
-.lab-page .lab-arena{border-top:2px solid var(--accent);margin-top:25px}
-.lab-page .lab-arena .heading{align-items:flex-start}
+.lab-page .lab-config{margin-top:12px;padding:12px 16px}
+.lab-config .lab-message{display:block;min-height:18px;margin:5px 0 0;font-size:10px;line-height:1.8}
+.lab-plan-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.lab-page .lab-plan-caption h2{font-size:13px;letter-spacing:.08em}
+.lab-plan-caption .mini-note{margin:0;font-size:10px;text-align:right}
+.lab-plan-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.lab-plan-buttons button{min-height:40px;position:relative;text-align:left;padding:7px 12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:var(--panel2);font-weight:500}
+.lab-plan-buttons button:before{content:"";display:inline-block;width:5px;height:5px;border:1px solid var(--muted);margin-right:8px;vertical-align:2px}
+.lab-plan-buttons button[aria-pressed=true]{color:var(--accent);border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--panel))}
+.lab-plan-buttons button[aria-pressed=true]:before{background:var(--accent);border-color:var(--accent)}
+.lab-page .lab-workbench{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);grid-template-rows:auto 1fr;gap:12px;margin-top:12px;align-items:start}
+.lab-workbench>.lab-equipment-panel{grid-column:1;grid-row:1/3;padding:16px}
+.lab-workbench>.lab-results-panel{grid-column:2;grid-row:1;display:block;padding:14px 16px}
+.lab-workbench>.lab-workbench-tools{grid-column:2;grid-row:2;min-width:0}
+.lab-slot-caption{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);gap:8px;margin-bottom:7px}
+.lab-slot-buttons{grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin:0;padding:3px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.lab-slot-button{padding:6px 2px!important;gap:2px;min-height:74px;position:relative}
+.lab-slot-button[aria-pressed=true]:after{content:"";position:absolute;inset:auto 0 0;height:2px;background:var(--accent)}
+.lab-slot-button img,.lab-slot-button .lab-empty-slot{height:27px;width:27px;line-height:27px;font-size:22px}
+.lab-slot-button small{display:block;font-size:9px;line-height:1.4}
+.lab-slot-button span{font-size:10px}
+.lab-editor{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.lab-card-heading{margin-bottom:10px;gap:8px}
+.lab-card-heading h3,.lab-results-panel h3{font-size:16px}
+.lab-editor .lab-card-heading{margin-bottom:8px}
+.lab-system .lab-small-button{min-height:34px;padding:5px 9px!important}
+.lab-item-filters{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:8px}
+.lab-item-filters label input,.lab-item-filters label select{margin:0;width:100%}
+.lab-select-caption{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:8px;margin-bottom:4px}
+.lab-select-caption small{font-size:10px}
+.lab-item-picker{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;gap:6px}
+.lab-item-picker button{font-size:23px;line-height:1;padding:0}
+.lab-item-picker select{width:100%;margin:0}
+.lab-item-header{gap:10px;padding:11px 0}
+.lab-item-header strong{font-size:15px}
+.lab-item-art{width:48px;height:48px}
+.lab-item-art img{width:44px;height:44px}
+.lab-item-header .mini-note{font-size:10px;line-height:1.5;margin-top:3px}
+.lab-two-fields{gap:8px}
+.lab-two-fields input,.lab-two-fields select{margin-top:4px}
+.lab-editor .lab-space{margin-top:14px}
+.lab-stat-head,.lab-stat-row{grid-template-columns:minmax(0,1fr) 115px;gap:10px}
+.lab-stat-head{padding-bottom:5px}
+.lab-stat-row{padding:5px 0}
+.lab-stat-row small{margin-top:0;font-size:10px;line-height:1.4}
+.lab-stat-row input{min-height:34px;padding:6px 8px}
+.lab-item-stats{max-height:260px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.lab-system .lab-field-help{padding:9px 11px}
+.lab-system .lab-field-help summary{font-size:11px}
+.lab-main-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.lab-metric{padding:8px 9px;min-width:0}
+.lab-metric small{font-size:10px;line-height:1.5;white-space:nowrap}
+.lab-metric strong{font-size:21px;line-height:1.4;font-weight:500}
+.lab-metric .lab-delta{display:block;font-size:9px;line-height:1.5}
+.lab-compare-actions{display:flex;align-items:center;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid var(--line)}
+.lab-compare-actions button{padding:6px 8px;font-size:10px;min-height:36px}
+.lab-compare-actions a{margin-left:auto;font-size:11px;color:var(--accent);white-space:nowrap;padding:7px 0}
+.lab-system .lab-side-section{margin:0 0 7px;padding:11px 13px;background:var(--panel);min-width:0}
+.lab-side-section>summary{font-size:12px}
+.lab-side-section[open]>summary{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.lab-side-section .lab-side-section{background:var(--panel2)}
+.lab-side-section label{font-size:11px}
+.lab-side-section .mini-note{font-size:10px;line-height:1.6;margin-top:9px}
+.lab-side-section .lab-config-row{gap:7px;flex-wrap:nowrap;margin-top:9px}
+.lab-side-section .lab-config-row label{min-width:0;flex:1}
+.lab-side-section .lab-config-row button{min-height:40px;white-space:nowrap;flex:none}
+.lab-side-section .lab-file-actions{flex-wrap:wrap}
+.lab-side-section .lab-file-actions button{flex:1;font-size:11px}
+.lab-side-section .lab-file-actions #lab-reset{color:var(--muted)}
+.lab-difficulty-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lab-difficulty-tools .mini-note{margin:0}
+.lab-side-content>.lab-card-heading>.mini-note{margin:0}
+.lab-side-section .lab-effect-summary{margin:8px 0;font-size:11px}
+.lab-side-section .lab-space{margin-top:12px}
+.lab-side-section .lab-skills{margin-top:7px;max-height:300px}
+.lab-system .lab-model-panel{display:block;position:static;padding:0}
+.lab-model-panel .lab-mannequin{height:260px}
+.lab-model-panel .lab-mannequin svg{height:100%;max-height:240px}
+.lab-model-panel .lab-avatar-status{font-size:10px}
+.lab-notes:empty{display:none}
+.lab-workbench-tools .lab-warning{margin:7px 0;font-size:10px}
+.lab-page .lab-arena{padding:20px;border-top:2px solid var(--accent);margin-top:16px}
+.lab-page .lab-arena .heading{align-items:flex-start;margin-bottom:16px}
+.lab-page .lab-arena h2{font-size:23px}
+.lab-arena .heading p{font-size:12px;max-width:680px}
+.lab-arena-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:11px}
+.lab-arena-links a{color:var(--accent);min-height:40px;display:flex;align-items:center}
+.lab-page .lab-run-actions{margin:14px 0}
 .lab-page .lab-run-actions .lab-primary{min-height:44px;padding-inline:22px}
-.lab-page #lab-config,.lab-page #lab-arena,.lab-page #lab-rules{scroll-margin-top:18px}
-.lab-page .top nav,.analysis-page .top nav{white-space:nowrap}
+.lab-page #lab-config,.lab-page #lab-arena,.lab-page #lab-rules{scroll-margin-top:12px}
+.lab-page .top nav{white-space:nowrap}
 .lab-page .top nav a[href="#lab-arena"]{color:var(--accent)}
-html[data-theme=light] .lab-intro{background:linear-gradient(95deg,#f5f0e6fc 0%,#f4efe6f2 44%,#efeee4c9 72%,#e9e7d88a),url('../../../assets/game-covers/westland.webp') 70% 45%/cover}
+html[data-theme=light] .lab-intro{background:linear-gradient(95deg,#f5f0e6fc,#f4efe6f2 45%,#e9e7d8a6),url('../../../assets/game-covers/westland.webp') 70% 45%/cover}
 html[data-theme=light] .lab-intro .num{color:#825730}
 html[data-theme=light] .lab-system .lab-intro #lab-heading{color:#252b21}
 html[data-theme=light] .lab-intro p{color:#53604e}
 html[data-theme=light] .lab-intro-actions a{border-color:#77745570;background:#ffffffe0;color:#485239}
 html[data-theme=light] .lab-intro-actions a:hover{background:#e6ebdc;border-color:var(--accent)}
 html[data-theme=light] .lab-intro-actions a.lab-hero-primary{background:var(--accent);color:#fff}
-html[data-theme=light] .lab-intro-features{color:#59694e;border-color:#686f522e}
-@media(max-width:1000px){.lab-intro{padding:28px}.lab-intro-copy{max-width:700px}.lab-intro-actions a.lab-analysis-link{margin-left:0}}
-@media(max-width:700px){.lab-page .lab-system:first-child{padding-top:18px}.lab-intro{padding:24px 20px 20px;background-position:60% 50%}.lab-intro .num{font-size:8px;letter-spacing:1.5px}.lab-intro p{font-size:12px;margin:12px 0 18px}.lab-intro-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lab-intro-actions a{padding:9px 12px;font-size:11px;gap:10px}.lab-intro-actions a.lab-analysis-link{grid-column:1/-1}.lab-intro-features{gap:9px 16px;font-size:9px;margin-top:18px;padding-top:13px}.lab-page .lab-config{padding:18px}.lab-page .lab-config h2,.lab-page .lab-arena h2{font-size:21px}.lab-page .lab-config .lab-card-heading{align-items:flex-start;flex-direction:column;gap:7px}.lab-page .lab-config-row button{min-height:44px}.lab-page .lab-difficulty-tools{gap:7px}.lab-page .lab-difficulty-tools .mini-note{font-size:10px}.lab-page .lab-secondary-actions{gap:7px}.lab-page .lab-arena>.heading{flex-direction:column;gap:12px}}
+@media(max-width:1100px){
+ .lab-page .lab-workbench{grid-template-columns:minmax(0,1.4fr) minmax(290px,1fr)}
+ .lab-slot-buttons{grid-template-columns:repeat(9,65px)}
+ .lab-intro{padding:18px}
+ .lab-intro-actions{flex-direction:column;align-items:stretch;gap:6px}
+ .lab-intro-actions a{min-height:38px;padding:7px 12px}
+}
+@media(max-width:1100px){
+ .lab-page .top .wrap{display:flex;min-height:52px;flex-wrap:nowrap;padding-top:6px;padding-bottom:6px;gap:10px}
+ .lab-page .top .brand{display:none}
+ .lab-page .top nav{order:0;width:auto;flex:1;gap:14px;font-size:11px}
+ .lab-page .top .top-actions{margin:0;flex:none}
+ .lab-page .theme-switch button{padding:6px;min-height:36px;min-width:34px}
+ .lab-page .theme-switch button span{display:none}
+}
+@media(pointer:coarse){
+ .lab-plan-buttons button,.lab-item-picker button,.lab-item-picker select,.lab-item-filters input,.lab-item-filters select{min-height:44px}
+}
+@media(max-width:800px){
+ .lab-page .lab-workbench{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;gap:10px}
+ .lab-workbench>.lab-results-panel{grid-column:1;grid-row:3;padding:10px 12px}
+ .lab-workbench>.lab-equipment-panel,.lab-equipment-panel>.lab-editor{display:contents}
+ .lab-slot-picker{grid-column:1;grid-row:1;padding:10px 12px 0;background:var(--panel);border:1px solid var(--line);border-bottom:0;margin-bottom:-10px}
+ .lab-selection{grid-column:1;grid-row:2;padding:10px 12px 12px;background:var(--panel);border:1px solid var(--line);border-top:0}
+ .lab-attributes{grid-column:1;grid-row:4;padding:12px;background:var(--panel);border:1px solid var(--line)}
+ .lab-attributes>.lab-card-heading.lab-space{margin-top:0}
+ .lab-workbench>.lab-workbench-tools{grid-column:1;grid-row:5}
+ .lab-results-panel>.lab-card-heading{margin:0 0 7px}
+ .lab-results-panel .lab-card-heading h3{font-size:12px}
+ .lab-results-panel .badge{border:0;padding:0;font-size:9px}
+ .lab-main-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ .lab-metric{padding:5px 8px}
+ .lab-metric strong{font-size:19px;line-height:1.3}
+ .lab-metric small{font-size:9px}
+ .lab-compare-actions{margin-top:7px}
+ .lab-compare-actions button{min-height:36px}
+ .lab-slot-buttons{grid-template-columns:repeat(9,70px);gap:5px}
+ .lab-slot-button{min-height:72px}
+ .lab-slot-button img,.lab-slot-button .lab-empty-slot{height:26px;width:26px;font-size:22px;line-height:26px}
+ .lab-slot-button small{display:block}
+ .lab-side-section>summary{min-height:28px}
+}
+@media(max-width:700px){
+ .lab-page .lab-system:first-child{padding-top:10px}
+ .lab-intro{display:block;padding:13px 14px}
+ .lab-intro .num{font-size:8px;margin-bottom:3px}
+ .lab-system .lab-intro #lab-heading{font-size:23px}
+ .lab-intro p{display:none}
+ .lab-intro-actions{flex-direction:row;gap:7px;margin-top:9px}
+ .lab-intro-actions a{font-size:10px;padding:7px 9px;min-height:38px;gap:8px}
+ .lab-page .lab-config{margin-top:10px;padding:10px 12px}
+ .lab-plan-caption{margin-bottom:6px}
+ .lab-plan-buttons{gap:5px}
+ .lab-plan-buttons button{min-height:44px;padding:7px 8px;font-size:12px}
+ .lab-plan-buttons button:before{margin-right:6px}
+ .lab-system input,.lab-system select{font-size:16px;min-height:44px}
+ .lab-system .lab-small-button{min-height:40px}
+ .lab-item-filters{grid-template-columns:minmax(0,1fr) 108px}
+ .lab-item-picker{grid-template-columns:44px minmax(0,1fr) 44px}
+ .lab-item-picker button{min-height:44px;font-size:24px}
+ .lab-item-header strong{font-size:14px}
+ .lab-item-stats{max-height:248px}
+ .lab-stat-head,.lab-stat-row{grid-template-columns:minmax(0,1fr) 102px}
+ .lab-stat-row input{min-height:40px}
+ .lab-compare-actions button{min-height:44px;font-size:11px}
+ .lab-compare-actions a{min-height:40px;display:flex;align-items:center}
+ .lab-side-section .lab-config-row button{min-height:44px}
+ .lab-page .lab-arena{padding:14px}
+ .lab-page .lab-arena .heading{gap:9px;flex-direction:column}
+ .lab-arena-links{width:100%;justify-content:space-between}
+ .lab-page .lab-arena h2{font-size:21px}
+ .lab-arena .heading p{font-size:11px}
+ .lab-run-actions button{font-size:12px}
+}
+@media(max-width:370px){
+ .lab-page .wrap{padding-left:12px;padding-right:12px}
+ .lab-page .top .wrap{gap:6px}
+ .lab-page .top nav{gap:10px;font-size:10px}
+ .lab-page .theme-switch button{min-width:30px;padding:5px}
+ .lab-workbench>.lab-equipment-panel{padding:10px}
+ .lab-page .lab-system .lab-results-panel{padding:10px}
+ .lab-plan-caption .mini-note{font-size:9px}
+ .lab-main-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .lab-item-filters{grid-template-columns:minmax(0,1fr) 100px}
+ .lab-intro-actions a{font-size:10px;padding:7px;gap:6px}
+ .lab-metric{padding:5px 6px}
+ .lab-metric strong{font-size:18px}
+ .lab-slot-buttons{grid-template-columns:repeat(9,68px)}
+}
 @media(prefers-reduced-motion:reduce){.lab-intro-actions a{transition:none}}
-@media print{.lab-intro{background:none!important;box-shadow:none;padding:12px 0;border:0}.lab-intro-actions{display:none}.lab-system .lab-intro #lab-heading,.lab-intro p,.lab-intro .num,.lab-intro-features{color:#222!important}}
+@media print{
+ .lab-intro{background:none!important;box-shadow:none;padding:12px 0;border:0}
+ .lab-intro-actions,.lab-plan-buttons,.lab-compare-actions{display:none}
+ .lab-system .lab-intro #lab-heading,.lab-intro p,.lab-intro .num{color:#222!important}
+ .lab-page .lab-workbench{display:block}
+ .lab-slot-buttons{grid-template-columns:repeat(9,minmax(0,1fr))}
+}
