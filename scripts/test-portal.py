@@ -25,7 +25,13 @@ class QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
-server = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietHandler, directory=str(ROOT)))
+class PreviewServer(ThreadingHTTPServer):
+    # Chromium can open several speculative/image connections during navigation.
+    # Avoid Windows refusing a burst at Python's small default accept backlog.
+    request_queue_size = 128
+
+
+server = PreviewServer(("127.0.0.1", 0), partial(QuietHandler, directory=str(ROOT)))
 Thread(target=server.serve_forever, daemon=True).start()
 BASE = f"http://127.0.0.1:{server.server_port}/"
 results = {"passed": [], "failed": [], "errors": [], "screenshots": [], "counter_requests": []}
