@@ -13,3 +13,53 @@ html[data-theme=light] .lab-system{--lab-figure-dark:#c5c9bd;--lab-figure-light:
 @media(max-width:700px){.lab-model-panel>.lab-avatar-toolbar,.lab-model-panel>.lab-avatar-actions,.lab-model-panel>.lab-avatar-status,.lab-model-panel>.lab-avatar-notes{grid-column:1/-1}.lab-model-panel>.lab-avatar-toolbar,.lab-model-panel>.lab-avatar-actions{margin:0}.lab-avatar-notes{margin-top:0!important}}
 
 .lab-avatar-open{width:100%;min-height:44px;margin:0 0 8px;white-space:normal}.lab-avatar-open[aria-busy="true"]{cursor:progress}@media(max-width:700px){.lab-model-panel>.lab-avatar-open{grid-column:1/-1}}
+
+/* The interactive loadout lab is the first destination below the shared navigation. */
+.lab-system:first-child{padding-top:32px}
+.lab-system #lab-heading{font-size:clamp(28px,3.2vw,42px);letter-spacing:-.7px}
+
+/* Battle is the main destination; supporting analysis lives on its own page. */
+.lab-page .lab-system:first-child{padding-top:28px}
+.lab-intro{position:relative;isolation:isolate;overflow:hidden;padding:34px 36px 25px;border:1px solid var(--line);border-radius:0;background:linear-gradient(95deg,#101712f7 0%,#141b16ef 44%,#121811b0 72%,#10161165),url('../../../assets/game-covers/westland.webp') 70% 45%/cover;box-shadow:0 18px 48px #0002}
+.lab-intro:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--accent),#d9c59c88,transparent);pointer-events:none}
+.lab-intro-copy{position:relative;max-width:950px}
+.lab-intro .num{font-size:10px;letter-spacing:2.2px;color:#d8b486;margin-bottom:14px}
+.lab-system .lab-intro #lab-heading{font-size:clamp(28px,3.4vw,44px);font-weight:600;letter-spacing:.025em;color:#f4f1e7}
+.lab-intro p{max-width:590px;font-size:13px;line-height:1.9;color:#c0c7b7;margin:15px 0 23px}
+.lab-intro-actions{display:flex;gap:10px;flex-wrap:wrap}
+.lab-intro-actions a{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:44px;padding:10px 16px;border:1px solid #c3baa64d;background:#11170fc9;color:#e1dfd1;font-size:12px;transition:background .18s,border-color .18s}
+.lab-intro-actions a:hover{border-color:#e9b77e;background:#243022}
+.lab-intro-actions a.lab-hero-primary{background:var(--accent);border-color:var(--accent);color:#172014;font-weight:600}
+.lab-intro-actions a.lab-analysis-link{margin-left:3px;color:#c9c9b9}
+.lab-intro-actions a>span{opacity:.65;font-size:15px}
+.lab-intro-features{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:23px;padding-top:16px;border-top:1px solid #c3baa626;color:#aab9a4;font-size:10px;letter-spacing:.04em}
+.lab-intro-features span{display:inline-flex;align-items:center;gap:7px}
+.lab-intro-features span:before{content:"";width:3px;height:3px;background:#dcb583}
+.lab-page .panel,.lab-page .lab-mannequin,.lab-page .lab-item-art,.lab-page .lab-opponent-art,.lab-page .lab-health-chart,.lab-page .lab-metric,.lab-page .lab-batch-summary{border-radius:0}
+.lab-page .lab-config{margin-top:18px;padding:22px 24px}
+.lab-page .lab-config h2,.lab-page .lab-arena h2{font-size:23px;letter-spacing:-.3px}
+.lab-page .lab-config .lab-card-heading>.mini-note{margin:0}
+.lab-difficulty-tools{display:flex;align-items:center;gap:9px 15px;flex-wrap:wrap;margin-top:13px}
+.lab-difficulty-tools .mini-note{margin:0;line-height:1.6}
+.lab-page .lab-secondary-actions{border-top:1px solid var(--line);padding-top:13px}
+.lab-page .lab-config button,.lab-page .lab-slot-button,.lab-page .lab-run-actions button{border-radius:0}
+.lab-page #lab-apply-preset{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));color:var(--accent)}
+.lab-page .lab-workbench{margin-top:18px}
+.lab-page .lab-arena{border-top:2px solid var(--accent);margin-top:25px}
+.lab-page .lab-arena .heading{align-items:flex-start}
+.lab-page .lab-run-actions .lab-primary{min-height:44px;padding-inline:22px}
+.lab-page #lab-config,.lab-page #lab-arena,.lab-page #lab-rules{scroll-margin-top:18px}
+.lab-page .top nav,.analysis-page .top nav{white-space:nowrap}
+.lab-page .top nav a[href="#lab-arena"]{color:var(--accent)}
+html[data-theme=light] .lab-intro{background:linear-gradient(95deg,#f5f0e6fc 0%,#f4efe6f2 44%,#efeee4c9 72%,#e9e7d88a),url('../../../assets/game-covers/westland.webp') 70% 45%/cover}
+html[data-theme=light] .lab-intro .num{color:#825730}
+html[data-theme=light] .lab-system .lab-intro #lab-heading{color:#252b21}
+html[data-theme=light] .lab-intro p{color:#53604e}
+html[data-theme=light] .lab-intro-actions a{border-color:#77745570;background:#ffffffe0;color:#485239}
+html[data-theme=light] .lab-intro-actions a:hover{background:#e6ebdc;border-color:var(--accent)}
+html[data-theme=light] .lab-intro-actions a.lab-hero-primary{background:var(--accent);color:#fff}
+html[data-theme=light] .lab-intro-features{color:#59694e;border-color:#686f522e}
+@media(max-width:1000px){.lab-intro{padding:28px}.lab-intro-copy{max-width:700px}.lab-intro-actions a.lab-analysis-link{margin-left:0}}
+@media(max-width:700px){.lab-page .lab-system:first-child{padding-top:18px}.lab-intro{padding:24px 20px 20px;background-position:60% 50%}.lab-intro .num{font-size:8px;letter-spacing:1.5px}.lab-intro p{font-size:12px;margin:12px 0 18px}.lab-intro-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lab-intro-actions a{padding:9px 12px;font-size:11px;gap:10px}.lab-intro-actions a.lab-analysis-link{grid-column:1/-1}.lab-intro-features{gap:9px 16px;font-size:9px;margin-top:18px;padding-top:13px}.lab-page .lab-config{padding:18px}.lab-page .lab-config h2,.lab-page .lab-arena h2{font-size:21px}.lab-page .lab-config .lab-card-heading{align-items:flex-start;flex-direction:column;gap:7px}.lab-page .lab-config-row button{min-height:44px}.lab-page .lab-difficulty-tools{gap:7px}.lab-page .lab-difficulty-tools .mini-note{font-size:10px}.lab-page .lab-secondary-actions{gap:7px}.lab-page .lab-arena>.heading{flex-direction:column;gap:12px}}
+@media(prefers-reduced-motion:reduce){.lab-intro-actions a{transition:none}}
+@media print{.lab-intro{background:none!important;box-shadow:none;padding:12px 0;border:0}.lab-intro-actions{display:none}.lab-system .lab-intro #lab-heading,.lab-intro p,.lab-intro .num,.lab-intro-features{color:#222!important}}

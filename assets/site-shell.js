@@ -4,7 +4,7 @@
   const root = new URL('../', document.currentScript.src);
   const parameter = '__lcz_page';
   const pages = new Set(['', 'index.html', 'Craft of Survival/wiki.html', 'Day R Survival/wiki_dayR.html',
-    'Westland Survival/westland_wiki.html', 'Westland Survival/westland_difficulty_design.html', 'Westland Survival/基地.html',
+    'Westland Survival/westland_wiki.html', 'Westland Survival/westland_difficulty_design.html', 'Westland Survival/westland_difficulty_analysis.html', 'Westland Survival/基地.html',
     'DawnofZombiewiki/', 'DawnofZombiewiki/index.html', 'LDOE_Wiki/', 'LDOE_Wiki/index.html', 'grimsoul_Wiki/', 'grimsoul_Wiki/index.html']);
   let parentSite = null;
   try { if (window.parent !== window && window.parent.LCZSite?.owns(window)) parentSite = window.parent.LCZSite; } catch { /* Cross-origin embedding is independent. */ }

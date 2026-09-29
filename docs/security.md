@@ -2,7 +2,7 @@
 
 本站按维护者意愿，向爬虫声明不抓取、不收录。实现仅增加静态声明，不增加玩家操作步骤，也不加入验证码、访问等待、禁复制、反调试或客户端限流。玩家仍可直接打开、搜索、拖动气泡、浏览资料和使用原有导入导出功能。
 
-8 个公开 HTML 页面均设置 `robots` 元信息，包含 `noindex`；覆盖主页、404、Craft Wiki、Day R Wiki、Westland Wiki、难度实验室、基地规划页和 Dawn 玩家百科。支持该声明的搜索引擎需要实际读取页面后才能处理它；这不是访问权限控制，也不能保证所有搜索引擎立即移除已收录的页面。[Google noindex 说明](https://developers.google.com/search/docs/crawling-indexing/block-indexing)
+10 个公共入口及 404 页，共 11 个公开 HTML 页面均设置 `robots` 元信息，包含 `noindex`；覆盖主页、Craft Wiki、Day R Wiki、Westland Wiki、配装实验室、难度分析、基地规划页、Dawn 玩家百科、LDOE Wiki、Grim Soul Wiki 和 404 页。支持该声明的搜索引擎需要实际读取页面后才能处理它；这不是访问权限控制，也不能保证所有搜索引擎立即移除已收录的页面。[Google noindex 说明](https://developers.google.com/search/docs/crawling-indexing/block-indexing)
 
 ## robots.txt 的部署位置
 
@@ -27,13 +27,13 @@ GitHub Pages 提供静态 HTML、CSS 和 JavaScript 托管，本项目没有可�
 
 ## 发布检查
 
-运行 `node scripts/check-site.mjs --stage _site` 会打包存在的根 `robots.txt`，继续为 HTML 引用的本地 JavaScript/CSS 添加内容版本，并检查产物资源。开发文档、`deploy/` 模板和检查脚本不进入 Pages 产物；它们仍随公开仓库可见。运行 `node --test scripts/test-asset-versions.mjs` 可检查 robots 打包与模板排除，同时回归内容版本化行为。
+运行 `node scripts/check-site.mjs --stage _site` 会打包存在的根 `robots.txt`，继续为 HTML 引用的本地 JavaScript/CSS 添加内容版本，并检查产物资源。Westland 难度分析 HTML 及其引用的本地资源随已登记的 Westland 游戏目录发布，无需在主页游戏目录或全站导航新增链接。开发文档、`deploy/` 模板和检查脚本不进入 Pages 产物；它们仍随公开仓库可见。运行 `node --test scripts/test-asset-versions.mjs` 可检查 robots 打包与模板排除，同时回归内容版本化行为。
 
 ## 页面安全策略
 
 全部公开 HTML 页面在加载脚本之前声明 Content Security Policy（CSP），浏览器只执行本站脚本，阻止未授权的内联脚本、HTML 事件处理器以及动态字符串求值。404 页面需要在任意缺失路径下独立显示，其唯一内联脚本通过精确 SHA-256 授权；修改代码时须更新摘要并运行安全检查。
 
-图片允许本站资源和页面现有的 data/blob 资源；网络请求只允许现有访问计数服务。限制外部脚本、插件、外站嵌入页面、Worker、表单提交及 base URL 改写。主页和 8 个资料页仅允许同源媒体及同源子页面，用于本地音频和保持播放的站内导航；404 继续禁用媒体与嵌入页面。导航另外校验固定项目路径白名单，拒绝跨站地址、未知目录及下载文件。保留原有动态样式所需的样式权限，Craft 页面继续使用更严格的样式策略。页面还设置 no-referrer，外链请求不携带本站完整网址。
+图片允许本站资源和页面现有的 data/blob 资源；网络请求只允许现有访问计数服务。限制外部脚本、插件、外站嵌入页面、Worker、表单提交及 base URL 改写。主页和 9 个资料页仅允许同源媒体及同源子页面，用于本地音频和保持播放的站内导航；404 继续禁用媒体与嵌入页面。导航另外校验固定项目路径白名单，涵盖上述 10 个公共入口，拒绝跨站地址、未知目录及下载文件。Westland 难度分析从配装实验室内部按钮进入，沿用相同的 CSP、统计与连续音乐导航限制。保留原有动态样式所需的样式权限，Craft 页面继续使用更严格的样式策略。页面还设置 no-referrer，外链请求不携带本站完整网址。
 
 这些规则用于降低脚本注入与非预期资源加载风险，并不负责识别或阻止爬虫。本项目没有把需要 HTTP 响应头才能生效的 frame-ancestors、X-Frame-Options 或 Permissions-Policy 写成无效的 meta 标签，也未声称已经实施点击劫持防护、服务端限流或防火墙。[MDN CSP 说明](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP)
 

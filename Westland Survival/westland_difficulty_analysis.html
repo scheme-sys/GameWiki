@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://cdn.busuanzi.cc; object-src 'none'; frame-src 'self'; worker-src 'none'; media-src 'self'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#111211">
+<meta name="description" content="Westland 游戏难度调节与数据分析：比较七档难度、动态动物、装备成长、人型套装与无尽层数，并将选择带回配装实验室。">
+<title>游戏难度调节与数据分析 · Westland</title>
+  <link rel="stylesheet" href="../assets/site-shell.css">
+  <link rel="stylesheet" href="../assets/music-player.css">
+  <script defer src="../assets/site-shell.js"></script>
+  <script defer src="../assets/music-player.js"></script>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<script src="wiki-assets/lab/theme-controller.js" id="theme-controller"></script>
+<link rel="stylesheet" href="wiki-assets/lab/design.css">
+<link rel="stylesheet" href="../assets/wiki-nav.css">
+  <script defer src="../assets/wiki-nav.js"></script>
+  <link rel="stylesheet" href="../assets/site-stats.css">
+  <script defer src="../assets/site-stats.js"></script>
+  <link rel="stylesheet" href="../assets/community-panel.css">
+  <script defer src="../assets/community-panel.js"></script>
+</head>
+<body class="analysis-page">
+<nav class="atlas-nav" data-game="westland" aria-label="游戏星图导航">
+  <a class="atlas-home" href="../index.html"><span class="atlas-home-mark" aria-hidden="true">✧</span><span>返回星空</span></a>
+  <div class="atlas-branding"><span class="atlas-label">LCZ</span><a class="lcz-community-trigger" data-lcz-community href="../assets/community/qq-group-1067536816.jpg">群 QQ：<span>1067536816</span></a></div>
+  <div class="site-stats" data-site-stats data-compact="true"></div>
+  <div class="atlas-pages" aria-label="Westland 资料页面">
+    <a href="westland_wiki.html">物品百科</a>
+    <a href="westland_difficulty_design.html">配装实验室</a>
+    <a href="%E5%9F%BA%E5%9C%B0.html">基地设计</a>
+  </div>
+  <details class="atlas-switch">
+    <summary>切换游戏</summary>
+    <div class="atlas-menu">
+      <a href="../Craft%20of%20Survival/wiki.html">Craft of Survival</a>
+      <a href="../Day%20R%20Survival/wiki_dayR.html">Day R Survival</a>
+      <a href="../Westland%20Survival/westland_wiki.html" aria-current="true">Westland Survival</a>
+      <a href="../DawnofZombiewiki/index.html">Dawn of Zombies</a>
+      <a href="../LDOE_Wiki/index.html">Last Day on Earth</a>
+      <a href="../grimsoul_Wiki/index.html">Grim Soul</a>
+    </div>
+  </details>
+</nav>
+<header class="top"><div class="wrap"><a href="#top" class="brand">WESTLAND<span>DIFFICULTY · ANALYSIS</span></a><nav aria-label="页面导航"><a href="westland_difficulty_design.html">返回配装对战</a><a href="#tiers">七档难度</a><a href="#bestiary">刷怪图鉴</a><a href="#equipment">装备演算</a><a href="#loadouts">人型套装</a><a href="#endless">无尽成长</a></nav><div class="top-actions"><span class="stamp">难度与数据分析</span><div class="theme-switch" role="group" aria-label="网页白天与黑夜主题"><button type="button" data-theme-mode="light" aria-pressed="false" title="切换白天主题，仅改变网页配色"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 1v2m0 14v2M1 10h2m14 0h2M3.6 3.6 5 5m10 10 1.4 1.4M3.6 16.4 5 15M15 5l1.4-1.4"/></svg><span>白天</span></button><button type="button" data-theme-mode="dark" aria-pressed="true" title="切换黑夜主题，仅改变网页配色"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M17.8 11.4A8 8 0 0 1 8.6 2.2 8 8 0 1 0 17.8 11.4Z"/></svg><span>黑夜</span></button></div></div><span id="theme-status" class="sr-only" role="status"></span></div></header>
+<main class="wrap" id="top">
+
+<section class="hero">
+<div><div class="eyebrow">THE FRONTIER HAS SEVEN FACES</div><h1>把荒野，<br>推向<em>极限。</em></h1><p>从原版生存，到持续来袭的无尽炼狱。用清楚的数值，定义每一次升档：敌人更强、装备更狠，交战也更密集。</p><div class="hero-tags"><span class="badge">07 档难度</span><span class="badge">225 件真实装备</span><span class="badge">32 种已有属性</span><span class="badge good">单文件 · 完全离线</span></div></div>
+<div class="terrain" aria-hidden="true"><svg viewBox="0 0 530 280"><defs><linearGradient id="rise" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#6d8c75"/><stop offset=".5" stop-color="#d19a58"/><stop offset="1" stop-color="#d1665b"/></linearGradient><linearGradient id="shade" x2="0" y2="1"><stop stop-color="#d7945335"/><stop offset="1" stop-color="#d7945300"/></linearGradient></defs><circle cx="425" cy="78" r="52" fill="#d59b6512" stroke="#d59b6520"/><circle cx="425" cy="78" r="38" fill="none" stroke="#d59b6515"/><path d="M5 240 L85 223 L153 193 L219 161 L285 122 L351 79 L418 28 L502 252 Z" fill="url(#shade)"/><path d="M5 240 L85 223 L153 193 L219 161 L285 122 L351 79 L418 28" fill="none" stroke="url(#rise)" stroke-width="3"/><g stroke="#60634a44" fill="none"><path d="M0 260 L91 243 L162 215 L228 184 L293 147 L360 108 L427 57 L530 237"/><path d="M0 275 L99 267 L173 242 L239 213 L306 181 L372 141 L439 92 L530 257"/><path d="M34 277 L160 266 L244 248 L320 218 L388 183 L455 137 L530 273"/></g><g fill="#111211" stroke="url(#rise)" stroke-width="2"><circle cx="85" cy="223" r="5"/><circle cx="153" cy="193" r="5"/><circle cx="219" cy="161" r="5"/><circle cx="285" cy="122" r="5"/><circle cx="351" cy="79" r="5"/><circle cx="418" cy="28" r="6"/></g><g fill="#c6b79b" font-size="10" font-family="monospace"><text x="64" y="208">02</text><text x="133" y="177">03</text><text x="200" y="145">04</text><text x="264" y="106">05</text><text x="330" y="63">06</text><text x="435" y="29">07 / ∞</text></g></svg><span class="terrain-caption">THREAT PROFILE / CONCEPT CURVE</span></div>
+</section>
+<div class="intro-note">本页保留七档难度 V2 的设计演算，新增配图按 1.6.0 动态刷怪范围核对。七档难度已在 1.6.0 落地；网页不是设备实时监控，历史设计说明与游戏实际行为有差异时，以当前版本实现为准。</div>
+
+<section class="section" id="tiers">
+<div class="heading"><div><span class="num">01 / ENCOUNTER DESIGN</span><h2>每升一档，发生什么？</h2><p>选择难度，调整原版刷怪参数，直接比较生成节奏与强度。</p></div><span class="badge warn">默认选中：噩梦</span></div>
+<div class="tabs" id="difficulty-tabs" aria-label="难度选择"></div>
+<div class="panel"><div class="selected-tier" aria-live="polite"><span class="selected-index" id="tier-index">04</span><div><h3 id="tier-name">噩梦</h3><p id="tier-description"></p></div><span class="badge" id="tier-level"></span></div>
+<div class="metrics" id="metrics"></div>
+<div class="toolbar" style="margin-top:23px"><label>原版刷怪器参考<select id="preset"><option value="sample">演算样例 · 50% / 120秒 / 8轮</option><option value="bot">T1 玩家外观 Bot · 50% / 300秒 / 3轮</option><option value="wood5">T5 木材地图 PvE · 90% / 45秒 / 10轮</option><option value="wendigo">夜间温迪戈 · 40% / 60秒 / 1轮</option><option value="shootup">枪战事件 · 100% / 65秒 / 8轮</option></select></label><button id="reset-inputs">恢复样例</button></div>
+<div class="controls"><label>原版概率 P₀（%）<input id="base-prob" type="number" min="0" max="100" step="1" value="50"></label><label>原版周期 T₀（秒）<input id="base-period" type="number" min="1" max="86400" step="1" value="120"></label><label>原版尝试轮数 R₀<input id="base-rounds" type="number" min="0" max="30" step="1" value="8"></label><label>原版每组人数 N₀<input id="base-group" type="number" min="1" max="30" step="1" value="1"></label></div>
+<p class="mini-note">预设中的概率、周期和轮数取自当前本地配置；每组人数默认 1，复杂随机组请填其平均规模。昼夜、任务、光源和原地图触发条件仍适用。</p>
+<div class="table-wrap"><table id="spawn-table"><thead><tr><th>难度</th><th>检查间隔</th><th>触发概率</th><th>尝试轮数</th><th>平均每组</th><th>新增调度预算¹</th><th>理论新增/分钟²</th></tr></thead><tbody></tbody></table></div>
+<div class="grid2" style="margin-top:20px"><div><div class="subheading"><h4>理论生成速率</h4><small>每分钟预计新增个数</small></div><div class="bars" id="rate-bars" role="img" aria-label="七档理论生成速率对比"></div><p class="mini-note">² 按条件一直满足、未达到存活上限、候选组足够计算；不含单怪战斗强度。有限轮数耗尽后停止。</p></div><div><div class="subheading"><h4>可复算的规则</h4></div><div class="formula">P = 1 − (1 − P₀)<sup>k</sup><br>T = min(T₀, max(5, round(T₀ × 周期系数)))<br>R[d] = max(R[d−1] + 1, ceil(R₀ × 轮数系数))<br>生成速率 = 60 ÷ T × P × 平均组人数</div></div></div>
+<div class="alert" id="spawn-alert"></div>
+<details><summary>次数、概率、数量与性能预算的精确定义</summary><ul class="list"><li>简单完整旁路：原版概率、轮数、敌人装备、掉落和保存逻辑均不改；即使原版超过建议预算，也不干预。</li><li>P₀=0 或 R₀=0 的配置在本设计中保留为关闭；P₀=100% 已到概率上限。禁止把关闭的剧情或特殊刷怪器自动开启。</li><li>普通至炼狱尝试轮数递增至少 1。原版只有 1 轮时依次为 1、2、3、4、5、6、持续，避免取整造成相邻档次数相同。</li><li>原版概率失败也消耗尝试轮数。本稿保留此含义；未通过条件、容量不足或未准备好时不扣增强调度轮数。生成过程一旦结果不确定，停止该次请求，不自动重试。</li><li>组数量倍率用固定种子的余数累计；×1.15 表示长期平均多 15%，不是每轮把 1 只取整为 2 只。只在确定成功生成后提交余数。</li><li>¹ 6 / 9 / 12 / 18 / 24 / 30 是增强调度的全地图起始预算建议，尚未做设备性能验证。计数包含活跃敌人及预留生成名额；原版已超过预算时暂停新增，不删除原版敌人。</li><li>原版 MaxAliveAvatars 是刷怪器范围内的计数；增强版仍要单独设置并校验它，不能当作全地图上限。候选名单变化时同步刷新 PossibleAvatarIds。</li><li>增强生成的计划组若大于当前总预算，按可用名额拆为有限子批：同一时刻只保留这一组的剩余成员，待死亡释放名额后续发，最多 ceil(N₀ × 5) 个计划成员，不再排后续组。原生必须整体出现的剧情/挑战组不拆分，保留原流程。空间不足时不积累无限欠账。原生会预加载未来组，超过 30 轮和无尽模式必须使用有限小批次的循环池，不能一次准备全部未来敌人。</li></ul></details>
+</div>
+<div class="subheading"><h3>单怪本体的变化</h3><span class="badge dim">全部相对同原型的自然状态</span></div>
+<div class="table-wrap"><table id="body-table"><thead><tr><th>难度</th><th>本体生命</th><th>无装备攻击伤害</th><th>基础防护点数</th><th>精英选择权重</th><th>总攻速增幅上限</th><th>总移速增幅上限</th></tr></thead><tbody></tbody></table></div>
+<p class="mini-note">装备攻击的人型怪不叠加“无装备攻击伤害”倍率。本体生命、防护只作用于基础贡献，装备加成单独结算。防护点数不是减伤百分比；精英权重会归一化，原组无精英时不会凭空增加精英。非武器技能须单独适配。</p>
+</section>
+
+<section class="section" id="bestiary">
+<div class="heading"><div><span class="num">01B / FIELD BESTIARY</span><h2>会遇见谁？先看清对手。</h2><p>25 种动态动物变体的原始图像，按真实角色标识逐一匹配。点击卡片可放大查看。</p></div><span class="badge good">游戏原始图片 · 内嵌离线</span></div>
+<div class="intro-note">这是候选图鉴，不是一次刷怪的阵容。不同地点按各自候选组抽取；图片数量不代表出现概率，也没有固定的远程枪手占比。难度改变后续生成的强度和节奏，不会把所有地图的怪物换成同一批。</div>
+<div id="bestiary-tier" class="bestiary-tier" aria-live="polite"></div>
+<div class="bestiary-toolbar"><label>查找动物<input id="beast-search" type="search" placeholder="名称、种类或 T 等阶"></label><label>物种<select id="beast-family"><option value="all">全部物种</option><option value="wolf">狼</option><option value="coyote">郊狼</option><option value="lynx">中型猫科</option><option value="direwolf">精英狼</option><option value="bear">熊</option><option value="puma">大型猫科</option><option value="crocodile">鳄鱼</option></select></label><label>怪物级别<select id="beast-rank"><option value="all">普通 + 精英</option><option value="common">普通</option><option value="elite">精英</option></select></label><span id="beast-count" class="count" role="status"></span></div>
+<div id="beast-grid" class="beast-grid" aria-label="动态动物图鉴"></div>
+<p class="mini-note">T 等阶表示原怪物的地区/原型等阶，与七档难度、装备图纸等级不是同一个数值。图片是该角色对应的游戏图标，不是当前 MuMu 的截图。</p>
+<details class="gallery-source"><summary>配图来源与覆盖范围</summary><p id="beast-coverage"></p><p>动物配图与相应种类和外观逐一核对。同名动物、相似物种和活动外观不会相互替代；点击图片可查看该动物的难度预览。</p><p>普通动态增强范围之外的 Boss、剧情/挑战波次与联盟守军不计入这 25 种动物。人形怪按要求不配图，保留原来的文字与套装演算。原始图片版权归游戏权利人；本页仅作本地设计和测试参考。</p></details>
+</section>
+<dialog id="beast-dialog" class="beast-dialog" aria-labelledby="beast-dialog-name"><div class="beast-dialog-head"><h3 id="beast-dialog-name"></h3><button id="beast-dialog-close" type="button" aria-label="关闭怪物图片">关闭 ×</button></div><figure><img id="beast-dialog-image" alt=""></figure><p id="beast-dialog-description"></p><div id="beast-dialog-source" class="source-path"></div></dialog>
+
+<section class="section" id="equipment">
+<div class="heading"><div><span class="num">02 / EQUIPMENT LAB</span><h2>把“强装备”，写成明确属性。</h2><p>内嵌当前正式定制目录的 225 件装备。选择物品，只展示它自身真实存在的属性。</p></div><span class="badge good">真实 R14 曲线 + 1.5.7 等级兼容</span></div>
+<div class="intro-note">本稿把上一版未定义的“综合战力 ×12”替换为逐属性规则。下表倍率乘在所选图纸等级的自然值上，再写入最终绝对值；因此包含“等级成长 × 额外强化”两段效果。网页会显示相对原等级的最终倍数，这是一版更明确、也更激进的方案。</div>
+<div class="table-wrap"><table id="equipment-tier-table"><thead><tr><th>难度</th><th>图纸随机范围</th><th>伤害/护甲点数</th><th>穿刺伤害</th><th>装备生命点数</th><th>最大耐久</th><th>初始耐久比例</th></tr></thead><tbody></tbody></table></div>
+<div class="panel" style="margin-top:20px">
+<div class="toolbar"><label>物品类别<select id="category-filter"><option value="weapon">武器 · 106</option><option value="armor">护甲 · 97</option><option value="backpack">背包 · 22</option></select></label><label>搜索装备名称<input type="search" id="item-search" placeholder="例如：步枪、背心、传奇"></label><label>原版这件装备的等级<input id="original-level" type="number" min="1" max="3000" step="1" value="1"></label></div>
+<div class="equip-layout"><aside class="item-picker"><div class="subheading" style="margin-top:0"><h4>合法候选目录</h4><span class="count" id="item-count"></span></div><div class="equipment-list" id="item-list" aria-label="装备列表"></div><p class="mini-note">“目录中合法”表示物品与属性定义合法；该人型怪能否使用相应武器动作，还需 AI 白名单验证。</p></aside><div class="equip-detail"><div class="item-title"><div class="item-icon" id="item-icon"></div><div><h3 id="item-name"></h3><div class="chips" id="item-chips"></div><div class="item-id" id="item-id"></div></div></div>
+<div class="controls" style="grid-template-columns:1fr 1fr"><label>本档目标图纸等级<input id="target-level" type="number" min="1" max="3000" step="1" value="126"></label><label>随机分位：<span id="quantile-label">50%</span><input id="quantile" type="range" min="0" max="100" value="50"></label></div>
+<p class="mini-note" id="level-note"></p>
+<div class="table-wrap"><table id="item-stat-table"><thead><tr><th>合法属性</th><th>原等级</th><th>目标等级自然值</th><th>强化后</th><th>规则</th></tr></thead><tbody></tbody></table></div>
+<div class="alert" id="item-summary"></div><p class="mini-note" id="fixed-fields"></p>
+</div></div>
+<p class="mini-note">自然值按嵌入曲线演算，正式正成长属性考虑当前 1.5.7 的 3000 级兼容。范围型定义取默认值，并非宣称 NPC 随机实例必取该值；实际接入必须先读回实例。概率、抗性和暴伤列为“单件独占预算时”的预览，完整套装按下一节统一分配。</p>
+</div>
+<div class="details-grid">
+<article class="panel"><span class="rule-tag">RULE / ABSOLUTE VALUE</span><h3>最终值只写一次</h3><p>例如自然伤害 6,000，选择地狱额外 ×4.5，写入绝对值 27,000。后续读取直接返回 27,000；不会再次套图纸成长，也不会再乘动物的伤害倍率。</p></article>
+<article class="panel"><span class="rule-tag">RULE / PER-ITEM MASK</span><h3>没有的属性，不追加</h3><p>胡奥特步枪有暴击率、穿刺、减速，但没有暴击伤害词条。暴伤可来自本身具备该属性的背包。护甲和背包均不添加伤害、穿刺；尚未解锁的词条也不提前点亮。</p></article>
+<article class="panel"><span class="rule-tag">RULE / POINTS ≠ PERCENT</span><h3>单位决定强化方法</h3><p>灵巧是属性点，20 点不等于攻速 +20%。普通抗性是点数，枪抗是比例。容量来自背包定义；选择大背包可以换容量，当前属性接口不能把 15 格直接改为 100 格。</p></article>
+</div>
+<details open><summary>32 种合法属性：具体怎么强化、哪些保持原生</summary><p>以下是每件物品确实存在的属性的处理规则。百分比增强按百分点预算处理；数值输入中的 20% 写入值为 0.20。技术可写范围来自当前定制实现，推荐上限是本设计的单独约束。</p><div class="table-wrap"><table id="rules-table"><thead><tr><th>属性</th><th>适用目录</th><th>建议强化规则</th><th>边界与备注</th></tr></thead><tbody></tbody></table></div></details>
+<details><summary>随机等级、品质、词条与职业的一致性</summary><ul class="list"><li>简单不接管装备生成。增强档目标等级 L = min(3000, max(原版等级, min(档位上限, 档位下限 + floor(u × (档位上限 − 档位下限 + 1)))))，u 使用相同出生种子的同一分位；网页滑块用于重现实验。</li><li>同一人型怪先选地图 Tier、职业，再抽一个完整护甲套装和兼容武器。Tier 是物品地区阶级，图纸等级决定同一件装备的成长，普通/优秀/稀有/史诗是品质，三者独立。</li><li>全游戏候选套装需四个正式槽位都存在。某地区没有指定品质的完整套装时，重新归一化该地区合法候选权重；不会补入游戏中不存在的装备。</li><li>普通品质权重 50/40/10/0，困难 25/45/25/5，噩梦 10/25/45/20，地狱 0/10/40/50，炼狱 0/0/25/75，无尽 0/0/0/100。顺序为普通/优秀/稀有/史诗；这是候选偏好，不保证低阶地图凭空有史诗全套。</li><li>完整四件护甲最低概率：普通 70%、困难 85%、噩梦起 100%；原版更高则不降低。武器和背包槽只在该角色支持时启用。</li><li>一次随机一个套装；四件装备不独立跨套抽取。副武器仅在 AI 确认支持第二武器/切换流程时提供；同一组候选装备也可能是随机选用，不能据此断言同时佩戴两把。</li><li>比较基准为同地图、职业、模板、种子和随机分位。不同类型随机敌人之间不保证每只高档怪都碾压所有低档怪；主属性在该基准下逐级提升，达到明确上限时除外。</li></ul></details>
+</section>
+
+<section class="section" id="loadouts">
+<div class="heading"><div><span class="num">03 / HUMANOID LOADOUT</span><h2>先搭套装，再算整个人。</h2><p>演示一个完整 T7 装备组合，说明枪抗、暴伤、灵巧为什么不能逐件无限加。</p></div><span class="badge warn">整套分配示例 · NPC 接入待验证</span></div>
+<div class="grid2"><div class="panel"><div class="toolbar"><label>装备角色示例<select id="role-select"><option value="rifle">步枪手 · 胡奥特步枪 + 里约布拉沃全套</option><option value="pistol">手枪手 · 火山手枪 + 里约布拉沃全套</option></select></label></div><div class="loadout" id="loadout-cards"></div><div class="alert" id="loadout-summary"></div><p class="mini-note">固定 T7 组合用于比较数值，不表示所有低阶地图都配发 T7。显示数值是装备属性值，尚未代入原生减伤、暴击、角色天赋和攻击动作公式。</p></div>
+<div class="panel"><h3>全套预算，按已有部位分摊</h3><div class="table-wrap"><table id="budget-table"><thead><tr><th>同类属性</th><th>自然合计</th><th>本档增量预算</th><th>允许增量</th><th>目标合计</th></tr></thead><tbody></tbody></table></div>
+<div class="formula" style="margin-top:18px">B = 同类自然词条之和（预算模型）<br>Δ = min(本档预算, max(0, 设计上限 − B))<br>Δᵢ = Δ × 本部位自然值 ÷ B<br>部位最终值 = 自然值 + Δᵢ</div><p class="mini-note">只向已有且激活的词条分配。B=0 时不分配。B 已高于上限则保持原生、不额外增加。本表的合计用于预算，不代表引擎一定采用相加结算；接入时核对角色实际结果，超预算则回退新增部分。</p>
+<div class="alert">例如四件护甲本来各有 20% 枪抗，词条相加已达 80%。不能再给每件额外加 18 个百分点；本稿对新增枪抗使用全套 70% 上限，所以此套不再追加枪抗，改由生命、防护与输出形成升档差异。</div>
+</div></div>
+<div class="flow"><div><b>01 · SELECT</b>官方槽位与 AI 武器白名单</div><div><b>02 · READ</b>设等级，读取自然属性</div><div><b>03 · BUDGET</b>计算每件数值和全套预算</div><div><b>04 · EQUIP</b>写实例，穿戴并刷新模型</div><div><b>05 · VERIFY</b>读取真实战斗属性确认</div></div>
+<details><summary>攻速、减速、持续伤害与掉落的处理</summary><ul class="list"><li>攻速只设一个最终目标：普通到无尽相对同原型自然装备状态的上限分别为 +5/+12/+20/+30/+45/+60%。例如原本每秒攻击 1 次，无尽档总目标上限为每秒 1.6 次（完整攻击周期约 0.625 秒）；不是把攻击间隔减少 60%。先算装备灵巧，再校正角色修正，不能两边各乘一次。灵巧到攻击节奏的 NPC 映射未验证前，额外灵巧只作为待接入项。</li><li>移速同理，用角色最终速度限制额外贡献。原模板的攻击距离、攻击准备/收招时间不作为单件装备属性改写。</li><li>减速强度建议总上限 50%，一次作用持续时间建议最高 3 秒；同类重复命中刷新或叠加机制待验证。首次适配若无法限制永久控制，则保留原生减速时间和強度。</li><li>持续伤害仅增强 伤害量，持续时间 保持原生，避免伤害量和时长双重叠加。该数值在具体武器动作中表示总伤害还是每次伤害，接入时回读和日志核对，本页不估算持续伤害 DPS。</li><li>对动物/对强盗增伤只对真实匹配的目标生效，不能把它们换算为对玩家的通用增伤。宠物、温度、精神和隐蔽等特殊属性暂不计作 NPC 战力。</li><li>建议默认独立处理奖励：沿用原奖励抽选；超出原生水平的临时实例强化在掉落转交时剥离，装备等级/耐久还原到原掉落抽选结果，原配置不可掉落的 NPC 专用物品仍不可掉落。新增副本敌人的经验和物资是否保留，属于待采纳的玩法选项。</li><li>目前定制接口的已实现目的地是玩家背包。给 NPC 穿戴、刷新属性/外观、对象池重复使用时清除上次强化，需要新增适配；本页不表示这些步骤已完成。</li></ul></details>
+</section>
+
+
+<section class="section" id="endless">
+<div class="heading"><div><span class="num">04 / ENDLESS INFERNO</span><h2>战斗无尽，数值有界。</h2><p>每击杀 20 只本次调度登记的敌人，提升一层；已有敌人保留出生时的属性。</p></div><span class="badge warn">展示无尽档 · 不受上方档位影响</span></div>
+<div class="grid2"><div class="panel endless"><div class="toolbar"><h3>无尽炼狱 / 层数预览</h3><span class="badge" style="margin-left:auto" id="kill-count"></span></div><div class="endless-n" id="endless-stage">0</div><label>层数 0—100<input id="endless-slider" type="range" min="0" max="100" value="0"></label><div class="controls" style="grid-template-columns:1fr 1fr"><label>原版敌人本体生命<input id="endless-base-hp" type="number" min="1" max="1000000000" value="1000"></label><label>装备原生伤害（已算等级）<input id="endless-base-damage" type="number" min="1" max="10000000" value="6000"></label></div><div class="endless-values" id="endless-values"></div><p class="mini-note">伤害示例只计算装备主伤害；动物改用原生无装备伤害 ×6.5。穿刺、抗性、控制时长不会随层数无限放大。</p></div>
+<div class="panel"><h3>持续推进的规则</h3><div class="formula" style="margin-top:18px">生命 = 原生本体生命 × 12 × 1.12<sup>层数</sup><br>武器主伤害 = 图纸自然伤害 × 12 × 1.08<sup>层数</sup><br>检查周期 = max(5秒, 无尽初始周期 × 0.98<sup>层数</sup>)<br>组数量倍率 = min(5, 3 + 0.1 × floor(层数/3))</div><ul class="list"><li>击杀唯一记账；回收、逃离、离图销毁、生成失败都不算击杀。死亡回调重复触发也只记一次。</li><li>进入一个新地点会话从第 0 层开始；仅保留难度选择。退出/切档先停止调度并处理回收，切档在下一地点生效。</li><li>第 0 层与上方无尽档使用同一初始强化。之后生命/主伤害的成长上限，取 1,000,000 与第 0 层增强后值的较大者，避免进入无尽反而降级；装备初始值仍受当前单件技术域限制。角色生命的可用上限需在接入时核实，这里是待评审目标。</li><li>对指数先取对数判断是否达到上限，再计算有限值。触顶后仍持续刷新，不承诺数值无限增长。</li><li>全地图增强生成预算 30，包含正在创建的名额。对象池小批次预加载、死亡归还、重新出借清空旧装备修正与击杀标记。</li></ul><div class="alert" id="endless-alert"></div></div></div>
+</section>
+
+<footer class="footer"><div>WESTLAND · 游戏难度调节与数据分析<br><small>查看七档难度、刷怪图鉴与装备成长；网页演算不改变游戏。</small></div><div class="foot-actions"><button id="export-design">保存当前装备预览</button><button id="print-page">打印 / 保存 PDF</button><a class="badge" href="#top">返回顶部 ↑</a></div></footer>
+<noscript><p>此设计页需要浏览器启用 JavaScript 才能显示交互计算器。静态规则说明仍可阅读。</p></noscript>
+</main>
+<script src="wiki-assets/lab/data/equipment.js"></script>
+<!-- SPAWN_GALLERY_DATA_BEGIN -->
+<script src="wiki-assets/lab/data/beasts.js"></script>
+<!-- SPAWN_GALLERY_DATA_END -->
+<script src="wiki-assets/lab/difficulty-model.js"></script>
+<script src="wiki-assets/lab/design-controller.js"></script>
+</body>
+</html>

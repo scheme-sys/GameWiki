@@ -48,7 +48,7 @@ Thread(target=server.serve_forever, daemon=True).start()
 BASE = f'http://127.0.0.1:{server.server_port}'+PREFIX
 report = {'passed': [], 'failed': [], 'errors': [], 'missing': [], 'external': []}
 PAGES = ['index.html', 'Craft of Survival/wiki.html', 'Day R Survival/wiki_dayR.html',
-         'Westland Survival/westland_wiki.html', 'Westland Survival/westland_difficulty_design.html',
+         'Westland Survival/westland_wiki.html', 'Westland Survival/westland_difficulty_design.html', 'Westland Survival/westland_difficulty_analysis.html',
          'Westland Survival/基地.html', 'DawnofZombiewiki/index.html', 'LDOE_Wiki/index.html', 'grimsoul_Wiki/index.html']
 
 def load(page, path='index.html'):

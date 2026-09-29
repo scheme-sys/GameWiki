@@ -76,10 +76,10 @@ test('one POST sends only the fixed project namespace; separate PV/IP fields ign
   assert.equal(env.timers.size, 0);
 });
 
-test('both deployment paths and all nine pages share the same single canonical project request', async () => {
+test('both deployment paths and all ten pages share the same single canonical project request', async () => {
   const paths = [
     '', 'index.html', 'Craft%20of%20Survival/wiki.html', 'Day%20R%20Survival/wiki_dayR.html',
-    'Westland%20Survival/westland_wiki.html', 'Westland%20Survival/westland_difficulty_design.html',
+    'Westland%20Survival/westland_wiki.html', 'Westland%20Survival/westland_difficulty_design.html', 'Westland%20Survival/westland_difficulty_analysis.html',
     'Westland%20Survival/%E5%9F%BA%E5%9C%B0.html', 'DawnofZombiewiki/', 'DawnofZombiewiki/index.html', 'LDOE_Wiki/', 'LDOE_Wiki/index.html', 'grimsoul_Wiki/', 'grimsoul_Wiki/index.html',
   ];
   for (const base of [origin, legacyOrigin]) for (const path of paths) {
@@ -102,6 +102,8 @@ test('local files, previews, other repositories and unknown paths never send hit
     origin + '404.html', origin + '%zz', legacyOrigin + '404.html', legacyOrigin + '%zz',
     legacyOrigin + 'index.html/other', legacyOrigin + 'Craft%20of%20Survival/unknown.html',
     origin + 'LDOE_Wiki/unknown.html', origin + 'grimsoul_Wiki/unknown.html', 'https://scheme-sys.github.io/grimsoul_Wiki/', 'https://scheme-sys.github.io/LDOE_Wiki/',
+    origin + 'Westland%20Survival/westland_difficulty_analysis.html/other',
+    origin + 'Westland%20Survival/unknown.html',
     origin + 'DawnofZombiewiki/unknown.html', 'https://scheme-sys.github.io/DawnofZombiewiki/',
   ]) {
     const env = environment(url);

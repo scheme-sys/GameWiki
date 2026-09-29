@@ -21,6 +21,7 @@
     "Day R Survival/wiki_dayR.html",
     "Westland Survival/westland_wiki.html",
     "Westland Survival/westland_difficulty_design.html",
+    "Westland Survival/westland_difficulty_analysis.html",
     "Westland Survival/基地.html",
     "DawnofZombiewiki/",
     "DawnofZombiewiki/index.html",

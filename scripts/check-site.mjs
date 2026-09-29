@@ -21,6 +21,8 @@ const stageRoot = option('--stage');
 const errors = [];
 const requiredFiles = ['index.html', '404.html', '.nojekyll'];
 const optionalFiles = ['robots.txt'];
+// Internal pages stay reachable without adding them to the global game menu.
+const internalPages = ['Westland Survival/westland_difficulty_analysis.html'];
 
 
 function loadGames(directory) {
@@ -163,6 +165,10 @@ for (const game of games) {
   checkReference(game.image, registry, root);
   if (game.cover?.image) checkReference(game.cover.image, registry, root);
   for (const link of game.links) checkReference(link.href, registry, root);
+}
+
+for (const page of internalPages) {
+  if (directories.includes(page.split('/')[0])) checkReference(page, registry, root);
 }
 
 for (const file of files) {

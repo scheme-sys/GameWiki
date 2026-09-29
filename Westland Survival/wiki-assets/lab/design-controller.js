@@ -2,20 +2,13 @@
 const DATA=window.WESTLAND_LAB_DATA.equipment;
 const BESTIARY=window.WESTLAND_LAB_DATA.beasts;
 const $=id=>document.getElementById(id);
-const TIERS=[
-{name:'简单',en:'VANILLA',tone:'#9bbb9a',t:1,k:1,r:1,n:1,cap:null,hp:1,hit:1,def:1,elite:1,atk:0,mov:0,lv:[1,1],power:1,pierce:1,ehp:1,dur:1,dp:[0,0],pct:0,crit:0,critd:0,dx:1,sl:0,desc:'完整保留原版生成与装备。所有增强逻辑旁路，作为比较基线。'},
-{name:'普通',en:'NORMAL',tone:'#c0bd76',t:.8,k:1.5,r:1.3,n:1.15,cap:6,hp:1.35,hit:1.2,def:1.1,elite:1.5,atk:5,mov:2,lv:[3,5],power:1.25,pierce:1.2,ehp:1.2,dur:1.25,dp:[40,65],pct:.02,crit:.02,critd:.1,dx:1.1,sl:.02,desc:'更完整的装备、更快的遭遇。仍保留大部分原版探索节奏。'},
-{name:'困难',en:'HARD',tone:'#dab072',t:.62,k:2.25,r:1.7,n:1.35,cap:9,hp:1.9,hit:1.55,def:1.25,elite:2.25,atk:12,mov:4,lv:[6,50],power:1.75,pierce:1.55,ehp:1.6,dur:1.5,dp:[55,75],pct:.04,crit:.04,critd:.2,dx:1.2,sl:.04,desc:'开始出现明显的装备差距和小队压力，容错空间收窄。'},
-{name:'噩梦',en:'NIGHTMARE',tone:'#eea768',t:.46,k:3.5,r:2.3,n:1.65,cap:12,hp:3,hit:2.2,def:1.5,elite:3.5,atk:20,mov:6,lv:[51,200],power:2.75,pierce:2.25,ehp:2.4,dur:2,dp:[70,90],pct:.07,crit:.07,critd:.4,dx:1.35,sl:.07,desc:'完整套装成为常态。高图纸等级叠加实例属性强化，形成持续交战。'},
-{name:'地狱',en:'HELL',tone:'#e88c5e',t:.33,k:5.5,r:3.2,n:2,cap:18,hp:5,hit:3.2,def:1.85,elite:5.5,atk:30,mov:8,lv:[201,500],power:4.5,pierce:3.5,ehp:3.8,dur:3,dp:[85,100],pct:.1,crit:.1,critd:.65,dx:1.5,sl:.1,desc:'武器、护甲与生命同步提高。群体数量和精英密度都构成主要威胁。'},
-{name:'炼狱',en:'INFERNO',tone:'#dc7360',t:.23,k:9,r:4.5,n:2.5,cap:24,hp:8,hit:4.8,def:2.3,elite:8,atk:45,mov:10,lv:[501,1500],power:7.5,pierce:5.5,ehp:6,dur:4.5,dp:[95,100],pct:.14,crit:.14,critd:1,dx:1.7,sl:.14,desc:'接近必刷的高压战场，靠显著的主属性增幅维持难度，控制效果仍有界。'},
-{name:'无尽炼狱',en:'ENDLESS',tone:'#cf727e',t:.16,k:null,r:null,n:3,cap:30,hp:12,hit:6.5,def:2.8,elite:12,atk:60,mov:12,lv:[1501,3000],power:12,pierce:8,ehp:9,dur:6,dp:[100,100],pct:.18,crit:.18,critd:1.5,dx:1.9,sl:.18,desc:'持续生成，击杀推进层数。达到属性与数量上限后，战斗依然可以继续。'}
-];
+const difficulty=window.WestlandDifficulty;
+const {TIERS,natural,scalar,budget,enhance,spawnRow,cappedPower}=difficulty;
 const LABELS={animal_damage_modifier:'对动物伤害',armor:'防护点数',bandit_damage_modifier:'对强盗伤害',cool_modifier:'耐热',critical_hit_chance:'暴击率',critical_modifier:'暴击伤害加成',damage:'伤害',death_penalty_reduction:'死亡耐久损失降低',dexterity:'灵巧',dot_amount:'持续伤害量',dot_time:'持续伤害时间',evasion:'闪避率',fire_resistance:'火焰抗性',firearm_resistance:'枪械抗性',health_increment:'生命点数加成',health_modifier:'生命比例加成',max_durability:'最大耐久',mosquito_invulnerability:'蚊虫防护',move_speed_modifier:'移动速度加成',penetrating_damage:'穿刺伤害',penetrating_damage_resistance:'穿刺抗性',pet_damage_modifier:'宠物伤害',pet_health_increment:'宠物生命',reduced_detection_radius:'隐蔽',resistance:'普通抗性点数',slow_modifier:'减速强度',slow_time:'减速时间',snow_resistance:'雪地减速抗性',swamp_animal_resistance:'沼泽动物抗性',warm_modifier:'御寒',water_pressure_resistance:'沼泽水域减速抗性',wisdom:'精神'};
 const PERCENT=new Set(['animal_damage_modifier','bandit_damage_modifier','critical_hit_chance','critical_modifier','death_penalty_reduction','evasion','fire_resistance','firearm_resistance','health_modifier','mosquito_invulnerability','move_speed_modifier','penetrating_damage_resistance','pet_damage_modifier','reduced_detection_radius','slow_modifier','snow_resistance','swamp_animal_resistance','water_pressure_resistance']);
-const EXTENDED=new Set(['damage','armor','health_increment','dexterity','wisdom','pet_health_increment']);
 const CAT={weapon:'武器',armor:'护甲',backpack:'背包'},RAR={common:'普通',uncommon:'优秀',rare:'稀有',epic:'史诗'};
-let tier=3,selected='wls2_weapon_range_rifle_7_epic',manualLevel=false;
+const savedDifficulty=difficulty.readSelection();
+let tier=savedDifficulty.tier,selected='wls2_weapon_range_rifle_7_epic',manualLevel=false;
 const itemsById=Object.fromEntries(DATA.items.map(x=>[x.id,x]));
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function equipmentImage(it,className){return '<img class="'+className+'" src="'+BESTIARY.images[it.id]+'" alt="'+esc(it.name)+'的游戏图标" width="68" height="68" loading="lazy" decoding="async">';}
@@ -23,15 +16,10 @@ function fmt(n,d=2){return Number.isFinite(n)?n.toLocaleString('zh-CN',{maximumF
 function vfmt(k,n){if(n===null||!Number.isFinite(n))return '未解锁/待确认';return fmt(PERCENT.has(k)?n*100:n,k==='max_durability'?0:2)+(PERCENT.has(k)?'%':k.endsWith('_time')?' 秒':k==='dexterity'||k==='wisdom'?' 点':'');}
 function readNum(id,fallback,min,max){const e=$(id),x=e.valueAsNumber;return Number.isFinite(x)?Math.min(max,Math.max(min,x)):fallback;}
 function base(){return {p:readNum('base-prob',50,0,100)/100,t:Math.round(readNum('base-period',120,1,86400)),r:Math.round(readNum('base-rounds',8,0,30)),n:readNum('base-group',1,1,30)};}
-function spawnRow(d,b){const q=TIERS[d];let r=b.r;for(let j=1;j<=Math.min(d,5);j++)r=b.r?Math.max(r+1,Math.ceil(b.r*TIERS[j].r)):0;if(d===6&&b.r)r=Infinity;const t=d?Math.min(b.t,Math.max(5,Math.round(b.t*q.t))):b.t;const p=b.p===0?0:d===6?1:1-Math.pow(1-b.p,q.k);const n=b.n*q.n;return {t,p,r,n,rate:b.r&&b.p?60/t*p*n:0,cap:q.cap};}
 function originalLevel(){return Math.round(readNum('original-level',1,1,3000));}
-function levelFor(d){if(d===0)return originalLevel();const range=TIERS[d].lv,u=readNum('quantile',50,0,100)/100;return Math.min(3000,Math.max(originalLevel(),Math.min(range[1],range[0]+Math.floor(u*(range[1]-range[0]+1)))));}
+function levelFor(d){return difficulty.levelFor(d,{originalLevel:originalLevel(),quantile:readNum('quantile',50,0,100)});}
+function saveDifficultySelection(){difficulty.saveSelection({tier,originalLevel:originalLevel(),quantile:readNum('quantile',50,0,100)});}
 function selectedLevel(){return tier===0?originalLevel():Math.round(readNum('target-level',levelFor(tier),1,3000));}
-function natural(curve,level,key){if(!curve)return null;const points=Object.keys(curve).filter(k=>/^\d+$/.test(k)).map(k=>[Number(k),curve[k]]).sort((a,b)=>a[0]-b[0]);if(points.length){const p=points.filter(x=>x[0]<=level).pop();if(!p)return Number.isFinite(curve.default)?curve.default:null;let v=p[1],last=points[points.length-1];if(level>last[0]&&Number.isFinite(curve.per_level_after_max)){v+=curve.per_level_after_max*(level-last[0]);const cap=EXTENDED.has(key)&&curve.per_level_after_max>0?Math.max(curve.max??(last[1]+1000),last[1]+curve.per_level_after_max*(3000-last[0])):(curve.max??(last[1]+1000));v=Math.min(v,cap);}return v;}
-if(!Number.isFinite(curve.default))return null;if(Number.isFinite(curve.max)&&curve.max<curve.default)return null;let v=curve.default;if(Number.isFinite(curve.per_level))v=Math.max(v,v+curve.per_level*level);return Number.isFinite(curve.max)?Math.min(v,curve.max):v;}
-function scalar(k){return ['damage','armor','resistance'].includes(k)?'power':k==='penetrating_damage'?'pierce':['health_increment','dot_amount'].includes(k)?'ehp':k==='max_durability'?'dur':k==='dexterity'?'dx':null;}
-function budget(k,d){const q=TIERS[d];if(k==='critical_hit_chance')return {add:q.crit,cap:.45};if(k==='critical_modifier')return {add:q.critd,cap:2};if(k==='evasion')return {add:q.pct/2,cap:.30};if(['firearm_resistance','fire_resistance'].includes(k))return {add:q.pct,cap:.70};if(k==='penetrating_damage_resistance')return {add:q.pct,cap:.50};if(k==='health_modifier')return {add:q.pct*2,cap:1};if(k==='slow_modifier')return {add:q.sl,cap:.50};return null;}
-function enhance(k,n,d){if(n===null||!Number.isFinite(n))return {value:null,label:'不填补缺失属性',status:'keep'};if(!d)return {value:n,label:'保留原版',status:'keep'};if(n===0)return {value:0,label:'不激活零值词条',status:'keep'};const q=TIERS[d],s=scalar(k);if(s){const limit=k==='dot_amount'?500000:k==='dexterity'?10000:10000000;let v=Math.min(n*q[s],limit);v=Math.max(n,v);if(k==='max_durability')v=Math.round(v);return {value:v,label:'×'+q[s]+(k==='dexterity'?' · 待总攻速校准':''),status:k==='dexterity'?'budget':'extra'};}const b=budget(k,d);if(b)return {value:n+Math.min(b.add,Math.max(0,b.cap-n)),label:'整套 +'+fmt(b.add*100)+'pp 预算',status:'budget'};if(k==='slow_time')return {value:n+Math.min(d*.15,Math.max(0,3-n)),label:'每档 +0.15秒 · 待控制验证',status:'budget'};return {value:n,label:'维持自然值',status:'keep'};}
 function ruleFor(k){
 const s=scalar(k);if(s)return {text:k==='dexterity'?'自然灵巧 × 1/1.1/1.2/1.35/1.5/1.7/1.9；再由角色总攻速上限校准':'按七档表的 '+({power:'伤害/防护',pierce:'穿刺',ehp:'生命/持续伤害量',dur:'最大耐久'}[s])+' 倍率，写绝对值',note:k==='max_durability'?'四舍五入整数，1—10,000,000；当前耐久单独计算':k==='dot_amount'?'仅调整伤害量，保留时间；最大500,000；NPC作用语义待验证':k==='dexterity'?'属性点；最大10,000。有效攻速映射未确认前不启用额外值':'没有该属性或尚未解锁则跳过；不把防护点数解释成减伤率'};
 const b=budget(k,6);if(b)return {text:'全套增量预算 '+TIERS.map((q,d)=>fmt(budget(k,d).add*100)).join(' / ')+' 个百分点',note:'新增后的全套预算上限 '+fmt(b.cap*100)+'%；原值更高时保留，不再追加。总值不是最终战斗结算'};
@@ -68,7 +56,6 @@ function renderLoadout(){const list=loadout(),l=levelFor(tier),slotNames=['主�
 const bd=['critical_hit_chance','critical_modifier','firearm_resistance','fire_resistance','penetrating_damage_resistance'];document.querySelector('#budget-table tbody').innerHTML=bd.map(k=>{const b=list.reduce((sum,x)=>sum+(natural(x.curves[k],l,k)||0),0),rule=budget(k,tier),delta=b>0?Math.min(rule.add,Math.max(0,rule.cap-b)):0;return '<tr><td>'+LABELS[k]+'</td><td>'+vfmt(k,b)+'</td><td>+'+fmt(rule.add*100)+'pp</td><td class="strong">+'+fmt(delta*100)+'pp</td><td>'+vfmt(k,b+delta)+'</td></tr>';}).join('');
 const hp=list.reduce((s,x)=>s+(enhance('health_increment',natural(x.curves.health_increment,l,'health_increment'),tier).value||0),0);$('loadout-summary').textContent='此套图纸 '+l+' 级，装备生命点数合计 '+fmt(hp)+'。本体生命另外按 ×'+TIERS[tier].hp+' 计算；不把全部装备生命再乘一次本体生命倍率。';
 }
-function cappedPower(initial,base,stage,cap){const limit=Math.max(initial,cap);if(initial<=0)return 0;if(Math.log(initial)+stage*Math.log(base)>=Math.log(limit))return limit;return initial*Math.pow(base,stage);}
 function renderEndless(){const n=Math.round(readNum('endless-slider',0,0,100)),hp=readNum('endless-base-hp',1000,1,1e9),dmg=readNum('endless-base-damage',6000,1,1e7),hp0=hp*12,dmg0=enhance('damage',dmg,6).value,h=cappedPower(hp0,1.12,n,1e6),d=cappedPower(dmg0,1.08,n,1e6),b=base(),start=spawnRow(6,b).t,t=Math.min(start,Math.max(5,Math.round(start*Math.pow(.98,n)))),group=Math.min(5,3+.1*Math.floor(n/3));
 $('endless-stage').textContent=n;$('kill-count').textContent=fmt(n*20,0)+' 次有效击杀';$('endless-values').innerHTML=[['本体生命',fmt(Math.round(h),0)],['主武器伤害',fmt(d)],['检查间隔',t+' 秒'],['平均组倍率','×'+fmt(group)]].map(a=>'<div><small>'+a[0]+'</small><strong>'+a[1]+'</strong></div>').join('');
 const capped=[];if(h>=Math.max(hp0,1e6))capped.push('本体生命');if(d>=Math.max(dmg0,1e6))capped.push('主伤害');if(group===5)capped.push('组数量');if(t<=5)capped.push('周期');
@@ -84,14 +71,14 @@ $('beast-coverage').textContent='按当前 1.6.0 范围，剔除专属 Boss 组�
 }
 function openBeast(id){const a=BESTIARY.animals.find(x=>x.id===id);if(!a)return;const q=TIERS[tier];$('beast-dialog-name').textContent=a.name+' · T'+a.tier;$('beast-dialog-image').src=BESTIARY.images[a.image];$('beast-dialog-image').alt=a.name+'的游戏原始图像';$('beast-dialog-description').textContent=(a.rank==='elite'?'精英动物':'普通动物')+'。'+(tier?'当前'+q.name+'预览：本体生命 ×'+q.hp+'，无装备攻击伤害 ×'+q.hit+'，基础防护 ×'+q.def+'。':'当前简单档：保留原版生成与数值。')+'这张图片不随难度改变；实际是否出现取决于当前地图的候选组。';$('beast-dialog-source').textContent='配图来源：游戏原始图像 · 资料版本 12.0.1';$('beast-dialog').showModal();}
 function renderAll(){renderTiers();renderSpawn();renderItems();renderItem();renderLoadout();renderEndless();renderBestiary();}
-$('difficulty-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tier]');if(!b)return;tier=Number(b.dataset.tier);manualLevel=false;renderAll();});
+$('difficulty-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tier]');if(!b)return;tier=Number(b.dataset.tier);manualLevel=false;renderAll();saveDifficultySelection();});
 $('item-list').addEventListener('click',e=>{const b=e.target.closest('[data-item]');if(!b)return;selected=b.dataset.item;renderItems();renderItem();});
 $('category-filter').addEventListener('change',()=>{const defaults={weapon:'wls2_weapon_range_rifle_7_epic',armor:'wls2_armor_body_7_epic',backpack:'wls2_backpack_cowboy_7_rare'};selected=defaults[$('category-filter').value];$('item-search').value='';renderItems();renderItem();});
 $('item-search').addEventListener('input',renderItems);
 ['base-prob','base-period','base-rounds','base-group'].forEach(id=>$(id).addEventListener('input',()=>{renderSpawn();renderEndless();}));
-$('original-level').addEventListener('input',()=>{manualLevel=false;renderItem();renderLoadout();});
+$('original-level').addEventListener('input',()=>{manualLevel=false;renderItem();renderLoadout();saveDifficultySelection();});
 $('target-level').addEventListener('change',()=>{manualLevel=true;renderItem();});
-$('quantile').addEventListener('input',()=>{manualLevel=false;renderItem();renderLoadout();});
+$('quantile').addEventListener('input',()=>{manualLevel=false;renderItem();renderLoadout();saveDifficultySelection();});
 $('role-select').addEventListener('change',renderLoadout);
 ['beast-search','beast-family','beast-rank'].forEach(id=>$(id).addEventListener(id==='beast-search'?'input':'change',renderBestiary));
 $('beast-grid').addEventListener('click',e=>{const button=e.target.closest('[data-beast]');if(button)openBeast(button.dataset.beast);});
@@ -110,6 +97,6 @@ $('export-design').addEventListener('click',()=>{
   const a=document.createElement('a'),url=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'}));
   a.href=url;a.download='westland-equipment-preview.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
+$('original-level').value=savedDifficulty.originalLevel;
+$('quantile').value=savedDifficulty.quantile;
 renderRules();renderAll();
-window.designLab={TIERS,DATA,natural,enhance,spawnRow,levelFor,budget,cappedPower,version:2};
-window.designLab.bestiary=BESTIARY;

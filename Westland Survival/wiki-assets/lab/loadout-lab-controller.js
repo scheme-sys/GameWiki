@@ -10,7 +10,11 @@
   const finite=(x,f=0)=>Number.isFinite(Number(x))?Number(x):f;
   const clamp=(x,min,max)=>Math.min(max,Math.max(min,x));
   const STORE='westland-loadout-lab-v1',SCHEMA='WLO-LOADOUT-LAB-1';
-  const D=window.WESTLAND_LAB_DATA.loadout,design=window.designLab,E=window.WestlandBattle;
+  const D=window.WESTLAND_LAB_DATA?.loadout,design=window.WestlandDifficulty||window.designLab,E=window.WestlandBattle;
+  if(!D||!design?.DATA?.items||!design?.bestiary?.images||typeof design.readSelection!=='function'){
+    message('配装资料尚未完整载入，请刷新页面后重试。',true);
+    return;
+  }
   const SLOTS=[['weapon','主武器'],['head','头部'],['body','上身'],['legs','腿部'],['boots','足部'],['backpack','背包'],['ring1','戒指Ⅰ'],['ring2','戒指Ⅱ'],['neck','项链']];
   const NAMES=Object.fromEntries(SLOTS),RAR={common:'普通',uncommon:'优秀',rare:'稀有',epic:'史诗'};
   const labels={animal_damage_modifier:'对动物伤害',armor:'防护点数',bandit_damage_modifier:'对强盗伤害',cool_modifier:'耐热',critical_hit_chance:'暴击率',critical_modifier:'暴击伤害加成',damage:'主伤害',death_penalty_reduction:'死亡耐久损失降低',dexterity:'灵巧',dot_amount:'持续伤害量',dot_time:'持续伤害时间',evasion:'闪避率',fire_resistance:'火焰抗性',firearm_resistance:'枪械抗性',health_increment:'装备生命加成',health_modifier:'生命比例加成',max_durability:'最大耐久',mosquito_invulnerability:'蚊虫防护',move_speed_modifier:'移速加成',penetrating_damage:'穿刺伤害',penetrating_damage_resistance:'穿刺抗性',pet_damage_modifier:'宠物伤害',pet_health_increment:'宠物生命',reduced_detection_radius:'隐蔽',resistance:'普通抗性点数',slow_modifier:'减速强度',slow_time:'减速时间',snow_resistance:'雪地减速抗性',swamp_animal_resistance:'沼泽动物抗性',warm_modifier:'御寒',water_pressure_resistance:'水域减速抗性',wisdom:'精神',strength:'力量',stamina:'体力',health:'生命上限',attackSpeed:'攻击次数 / 秒',range:'攻击距离',heal:'恢复生命',duration:'持续时间',damage_modifier:'通用伤害加成',attack_speed_modifier:'额外攻速加成',moveSpeed:'移动速度'};
@@ -243,8 +247,16 @@
       .replace(/即时恢复 health/g,'即时恢复量').replace(/SHA-256 锁校验/g,'资料核验');
   }
   function renderEvidence(){const assumptions=E.ASSUMPTIONS||E.assumptions||[];$('lab-simulation-assumptions').innerHTML='<ul>'+assumptions.map(x=>'<li>'+esc(typeof x==='string'?x:x.text||x.description||'')+'</li>').join('')+'</ul>';const notes=[...(D.notes||[]),...(D.sourceDescription||[]).map(x=>typeof x==='string'?x:(x.description||''))];$('lab-evidence').innerHTML='<p>本模块的装备自然曲线来自原有 225 件定制目录，并增加本地目录中可合法装备的戒指、项链；食物、技能与动物数据由本地游戏静态资料整理。手动值是当前测试方案的输入，并非对游戏存档的写入。</p>'+notes.filter(Boolean).map(text=>'<p>'+esc(readableNote(text))+'</p>').join('')+'<p>战斗统计以模型内真实累计的有效伤害为准：致死溢出不计入有效 DPS；未结束、事件上限或超时单独统计，不当作胜利。</p>';}
-  function renderAll(){renderBase();renderFood();renderSkills();refreshMetrics();renderEditor();renderEnemyInputs();renderExperiment();renderEvidence();}
-  function applyDifficulty(){const tier=design.TIERS.findIndex(q=>q.name===document.getElementById('tier-name')?.textContent);const d=tier<0?0:tier,level=design.levelFor(d);for(const [slot] of SLOTS){const record=state.slots[slot];if(!record.id)continue;record.level=level;record.overrides={};record.currentDurability=null;}const views=SLOTS.map(([slot])=>[slot,slotValues(state.slots[slot])]).filter(([,view])=>view);const sums={};for(const [,view] of views)sumInto(sums,view.stats);for(const [slot,view] of views){const record=state.slots[slot];for(const [key,n] of Object.entries(view.stats)){if(!(n>0)||!d)continue;const allocation=design.budget(key,d);let value=n;if(allocation){const total=sums[key]||0;value=n+(total?Math.min(allocation.add,Math.max(0,allocation.cap-total))*n/total:0);}else if(key!=='slow_time'&&key!=='slow_modifier')value=design.enhance(key,n,d).value;if(Number.isFinite(value)&&value!==n)record.overrides[key]=clamp(value,...domain(key));}}$('lab-all-level').value=level;changed(true);message('已将“'+design.TIERS[d].name+'”装备提案应用到当前搭配，按全套预算分配百分比词条；不额外放大玩家本体生命，动物难度独立选择。');}
+  function renderAll(){renderBase();renderFood();renderSkills();refreshMetrics();renderEditor();renderEnemyInputs();renderExperiment();renderEvidence();renderDifficultySelection();}
+  function renderDifficultySelection(){
+    const selection=design.readSelection(),name=design.TIERS[selection.tier].name,level=design.levelFor(selection.tier,selection);
+    const button=$('lab-apply-difficulty');
+    button.textContent='套用难度强化 · '+name;
+    button.setAttribute('aria-label','套用'+name+'难度强化，目标图纸 '+level+' 级');
+    const summary=$('lab-difficulty-summary');
+    if(summary)summary.textContent='原版 Lv.'+selection.originalLevel+' · 分位 '+fmt(selection.quantile)+'% · 套用后图纸 '+level+' 级';
+  }
+  function applyDifficulty(){const selection=design.readSelection(),d=selection.tier,level=design.levelFor(d,selection);renderDifficultySelection();for(const [slot] of SLOTS){const record=state.slots[slot];if(!record.id)continue;record.level=level;record.overrides={};record.currentDurability=null;}const views=SLOTS.map(([slot])=>[slot,slotValues(state.slots[slot])]).filter(([,view])=>view);const sums={};for(const [,view] of views)sumInto(sums,view.stats);for(const [slot,view] of views){const record=state.slots[slot];for(const [key,n] of Object.entries(view.stats)){if(!(n>0)||!d)continue;const allocation=design.budget(key,d);let value=n;if(allocation){const total=sums[key]||0;value=n+(total?Math.min(allocation.add,Math.max(0,allocation.cap-total))*n/total:0);}else if(key!=='slow_time'&&key!=='slow_modifier')value=design.enhance(key,n,d).value;if(Number.isFinite(value)&&value!==n)record.overrides[key]=clamp(value,...domain(key));}}$('lab-all-level').value=level;changed(true);message('已将“'+design.TIERS[d].name+'”装备提案应用到当前搭配，按全套预算分配百分比词条；不额外放大玩家本体生命，动物难度独立选择。');}
   function setBusy(value){busy=value;for(const id of ['lab-run-once','lab-run-batch'])$(id).disabled=value;$('lab-cancel').disabled=!value;}
   function cancelExperiment(){runToken++;setBusy(false);$('lab-progress').textContent='实验已停止；尚未完成的批次不产生统计报告。';}
   function simulationOptions(config){const food=foodById.get(config.healing.id);return {...config.experiment,healing:{amount:finite(food?.heal),count:config.healing.count,threshold:config.healing.threshold,cooldown:config.healing.cooldown}};}
@@ -283,6 +295,11 @@
   function renderChart(result,player,enemy){const points=result.timeline||[];if(!points.length){$('lab-health-chart').textContent='本场没有可绘制的轨迹。';return;}const w=500,h=225,left=40,right=12,top=12,bottom=28,duration=Math.max(.001,result.duration),pw=w-left-right,ph=h-top-bottom;function path(key,max){return points.map((point,i)=>(i?'L':'M')+(left+clamp(point.time/duration,0,1)*pw).toFixed(2)+','+(top+(1-clamp(finite(point[key])/Math.max(1,max),0,1))*ph).toFixed(2)).join(' ');}let grid='';for(let i=0;i<=4;i++){const y=top+i*ph/4;grid+='<path class="lab-chart-grid" d="M'+left+' '+y+'H'+(w-right)+'"/><text x="'+(left-5)+'" y="'+(y+4)+'" text-anchor="end">'+(100-i*25)+'%</text>';const x=left+i*pw/4;grid+='<text x="'+x+'" y="'+(h-7)+'" text-anchor="middle">'+fmt(duration*i/4,1)+'s</text>';}$('lab-health-chart').innerHTML='<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="角色与动物剩余生命百分比随时间变化">'+grid+'<path class="lab-chart-player" d="'+path('playerHp',player.health)+'"/><path class="lab-chart-enemy" d="'+path('enemyHp',enemy.health)+'"/></svg>';}
   function download(name,value){const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json;charset=utf-8'}));a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function guarded(fn){return event=>{try{fn(event);}catch(error){message(error.message,true);}};}
+  window.addEventListener('pageshow',renderDifficultySelection);
+  window.addEventListener('focus',renderDifficultySelection);
+  window.addEventListener('storage',event=>{if(!event.key||event.key===design.selectionKey)renderDifficultySelection();});
+  window.addEventListener('westland:difficulty-selection',renderDifficultySelection);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderDifficultySelection();});
   function wire(){root.addEventListener('click',guarded(event=>{const slot=event.target.closest('[data-lab-slot]');if(slot){activeSlot=slot.dataset.labSlot;$('lab-item-search').value='';renderModel();renderEditor();}}));$('lab-doll').addEventListener('keydown',event=>{if(['Enter',' '].includes(event.key)&&event.target.closest('[data-lab-slot]')){event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
     $('lab-avatar-open').addEventListener('click',()=>{void openAvatarPreview();});
     $('lab-avatar-gender').addEventListener('change',guarded(()=>{const value=$('lab-avatar-gender').value;if(!['male','female'].includes(value))throw Error('未知人物外观。');avatarGender=value;avatarSelectionKey='';renderAvatarPreview();}));

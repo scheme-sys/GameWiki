@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/games.js'), 'utf8'), context);
-const pages = [...new Set(['index.html', '404.html', ...context.window.ORBIT_GAMES.flatMap(game =>
+const pages = [...new Set(['index.html', '404.html', 'Westland Survival/westland_difficulty_analysis.html', ...context.window.ORBIT_GAMES.flatMap(game =>
   game.links.map(link => decodeURIComponent(link.href.split(/[?#]/)[0])))])];
 const attribute = (tag, key) => tag.match(new RegExp('\\b' + key + '\\s*=\\s*(["\\\'])(.*?)\\1', 'i'))?.[2];
 const documents = pages.map(name => ({ name, html: fs.readFileSync(path.join(root, name), 'utf8') }));

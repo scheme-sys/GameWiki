@@ -32,16 +32,18 @@
 | --- | --- | --- |
 | 生存工艺 / Craft of Survival | 暗黑奇幻 · 生存 | [物品 Wiki](Craft%20of%20Survival/wiki.html)，含 3,843 条物品资料、4 项货币资料及 1,189 个图标 |
 | 辐射生存 / Day R Survival | 废土末日 · 生存 | [物品、武器与怪物档案](Day%20R%20Survival/wiki_dayR.html)，含 2,157 件物品与 2,643 个战斗单位 |
-| 西部世界 / Westland Survival | 西部冒险 · 生存 | [物品 Wiki](Westland%20Survival/westland_wiki.html)、[难度与配装实验室](Westland%20Survival/westland_difficulty_design.html)、[基地设计提案](Westland%20Survival/基地.html) |
+| 西部世界 / Westland Survival | 西部冒险 · 生存 | [物品 Wiki](Westland%20Survival/westland_wiki.html)、[配装对战实验室](Westland%20Survival/westland_difficulty_design.html)、[基地设计提案](Westland%20Survival/基地.html) |
 | 僵尸的黎明 / Dawn of Zombies | 废土末日 · 生存 | [玩家百科](DawnofZombiewiki/index.html)，含 5,635 条默认可见图鉴记录、1,515 条配方、175 个地点、2,786 条任务及 3,687 张原图 |
 | 地球末日生存 / Last Day on Earth | 废土末日 · 生存 | [玩家图鉴](LDOE_Wiki/index.html)，含 1,414 件物品、224 个生物、46 个地点与 459 条制作维修配方 |
 | 冷酷灵魂 / Grim Soul | 暗黑幻想 · 生存 | [玩家百科](grimsoul_Wiki/index.html)，含 2,780 条资料，覆盖武器、装备、怪物、制作、地点等 11 个分类 |
+
+Westland 配装对战实验室保留原 `westland_difficulty_design.html` 地址；难度分析独立为 `westland_difficulty_analysis.html`，从实验室内部按钮进入。主页与游戏切换菜单仍收录六款游戏，Westland 全站导航保留 Wiki、配装实验室、基地三项。
 
 游戏页面保留原有资料与功能，顶部提供返回星图的统一入口。主页图标来自各游戏官方 Google Play 商店页面，来源、英文名称与文件摘要见 [assets/game-icons/README.md](assets/game-icons/README.md)。游戏名称、图标及相关资料归各自权利人所有；本站是非官方资料整理项目。
 
 ## 访问统计
 
-导航中的 PV / IP 分别提供本站累计浏览量（PV）与按服务规则去重的 IP 访客数，汇总主页与全部游戏子页，由免账号第三方服务统计。IP 访客不等同于真实人数；去重周期以服务规则为准。只有正式发布路径会产生统计请求；本地与预览页面显示 `—`，不会伪造访问数字。离线或服务不可用时，统计失败不影响 Wiki 操作。
+导航中的 PV / IP 分别提供本站累计浏览量（PV）与按服务规则去重的 IP 访客数，汇总主页与九个游戏资料页共 10 个公共入口（含 Westland 独立难度分析页），由免账号第三方服务统计。IP 访客不等同于真实人数；去重周期以服务规则为准。只有正式发布路径会产生统计请求；本地与预览页面显示 `—`，不会伪造访问数字。离线或服务不可用时，统计失败不影响 Wiki 操作。
 
 计数范围、隐私说明、服务限制及新增页面的方法见 [docs/visits.md](docs/visits.md)。
 
@@ -82,7 +84,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；已清理的维护 JSON、校验报告与工具留在仓库。
 
-发布产物包含根入口、404 页面、`.nojekyll`，以及公共 `assets/` 和已登记游戏目录内的 HTML、CSS、JavaScript、图片与字体。README、开发脚本、维护 JSON 与校验清单保留在仓库，不包含在 Pages 产物中。游戏资料通过本地普通 JavaScript 文件载入；访问统计另行请求外部服务的 JSON。
+发布产物包含根入口、404 页面、`.nojekyll`，以及公共 `assets/` 和已登记游戏目录内的 HTML、CSS、JavaScript、图片与字体；Westland 独立难度分析页随该游戏目录发布。README、开发脚本、维护 JSON 与校验清单保留在仓库，不包含在 Pages 产物中。游戏资料通过本地普通 JavaScript 文件载入；访问统计另行请求外部服务的 JSON。
 
 GitHub 的设置说明见[使用自定义工作流部署 Pages](https://docs.github.com/zh/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
 
@@ -227,4 +229,4 @@ python scripts/test-ldoe.py
 python scripts/test-grim.py
 ```
 
-脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-music.py` 检查自动启播、手动静音、三乐章衔接与连续导航；`test-wiki-nav.py` 检查八个 Wiki 入口的手机菜单位置、滚动、旋转和链接点击。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-music.py` 检查自动启播、手动静音、三乐章衔接与连续导航；`test-wiki-nav.py` 检查九个 Wiki 资料入口（含 Westland 难度分析页）的手机菜单位置、滚动、旋转和链接点击。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。

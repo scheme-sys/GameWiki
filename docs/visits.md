@@ -1,6 +1,6 @@
 # 访问统计的范围与维护
 
-主页和八个游戏资料页共用 `assets/site-stats.js` 与 `assets/site-stats.css`。导航分别显示 **PV** 和 **IP**；点击或轻触可查看完整数字及统计口径。提示使用深色 CSS 弹层，不使用浏览器原生 `title`。
+主页和九个游戏资料页共 10 个公共入口，共用 `assets/site-stats.js` 与 `assets/site-stats.css`。导航分别显示 **PV** 和 **IP**；点击或轻触可查看完整数字及统计口径。提示使用深色 CSS 弹层，不使用浏览器原生 `title`。
 
 ## 两个数字代表什么
 
@@ -22,10 +22,13 @@
 | Day R Wiki | `Day R Survival/wiki_dayR.html` |
 | Westland 物品 Wiki | `Westland Survival/westland_wiki.html` |
 | Westland 配装实验室 | `Westland Survival/westland_difficulty_design.html` |
+| Westland 难度分析 | `Westland Survival/westland_difficulty_analysis.html` |
 | Westland 基地设计 | `Westland Survival/基地.html` |
 | Dawn of Zombies Wiki | `DawnofZombiewiki/`、`DawnofZombiewiki/index.html` |
 | Last Day on Earth Wiki | `LDOE_Wiki/`、`LDOE_Wiki/index.html` |
 | Grim Soul Wiki | `grimsoul_Wiki/`、`grimsoul_Wiki/index.html` |
+
+Westland 难度分析从配装实验室内部按钮进入，也计入同一个项目统计桶。主页和游戏切换菜单仍展示六款游戏，Westland 的全站导航仍为 Wiki、配装实验室、基地三项。
 
 每个允许页面只向 `https://cdn.busuanzi.cc/api.php` 发送 **一次 POST**，使用同一个稳定的项目地址：
 

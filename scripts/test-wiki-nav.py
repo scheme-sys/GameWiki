@@ -24,6 +24,7 @@ PAGES = {
     "dayr": "Day R Survival/wiki_dayR.html",
     "westland": "Westland Survival/westland_wiki.html",
     "westland-lab": "Westland Survival/westland_difficulty_design.html",
+    "westland-analysis": "Westland Survival/westland_difficulty_analysis.html",
     "westland-base": "Westland Survival/\u57fa\u5730.html",
     "dawn": "DawnofZombiewiki/index.html",
     "ldoe": "LDOE_Wiki/index.html",

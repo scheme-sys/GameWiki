@@ -218,3 +218,24 @@ test('Only the three reviewed recordings publish; missing playlist audio is reje
   write(root,'assets/music/moonlight-1.mp3','reviewed recording');
   assert.equal(check(root).status,0);
 });
+
+
+test('Westland internal analysis publishes without adding a fourth global game link', () => {
+  const root = fixture('westland-analysis');
+  const registry = path.join(root, 'assets/games.js');
+  const game = ',{id:"westland",name:"Westland",image:"assets/icon.svg",links:[{href:"Westland%20Survival/westland_difficulty_design.html"}]}];';
+  fs.writeFileSync(registry, fs.readFileSync(registry, 'utf8').replace(/\];$/, game));
+  const analysis = 'Westland Survival/westland_difficulty_analysis.html';
+  write(root, 'Westland Survival/westland_difficulty_design.html', '<a href="westland_difficulty_analysis.html">Difficulty analysis</a>');
+  assert.equal(isPublicFile(analysis), true);
+  assert.notEqual(check(root).status, 0, 'The registered internal page must exist');
+  write(root, analysis, '<link rel="stylesheet" href="../assets/shared.css"><script src="../assets/shared.js"></script><a href="westland_difficulty_design.html">Back to lab</a>');
+  assert.equal(check(root).status, 0);
+  const output = path.join(workspace, 'westland-analysis-artifact');
+  const result = check(root, '--stage', output);
+  assert.equal(result.status, 0, result.stderr + result.stdout);
+  assert.ok(fs.existsSync(path.join(output, analysis)));
+  assert.match(fs.readFileSync(path.join(output, analysis), 'utf8'), /shared\.js\?v=[a-f0-9]{64}/);
+  assert.ok(!fs.readFileSync(path.join(output, 'assets/games.js'), 'utf8').includes('westland_difficulty_analysis'));
+  assert.equal(check(output).status, 0, 'The standalone artifact keeps the internal destination');
+});
