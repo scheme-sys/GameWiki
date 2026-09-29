@@ -49,8 +49,9 @@
 @media (max-width: 760px) {
   .atlas-nav { gap: 0 14px; padding: 8px 18px; min-height: 54px; }
   .atlas-nav .atlas-label { display: none; }
+  .atlas-nav .atlas-home, .atlas-nav .atlas-switch summary { min-height: 44px; }
   .atlas-nav .atlas-pages { order: 3; width: 100%; margin: 3px 0 0; padding-top: 7px; border-top: 1px solid #a7c1ff18; }
-  .atlas-nav .atlas-pages a { flex: 1; justify-content: center; padding: 5px 7px; }
+  .atlas-nav .atlas-pages a { flex: 1; justify-content: center; min-height: 44px; padding: 5px 7px; }
 }
 
 @media print { .atlas-nav { display: none; } }

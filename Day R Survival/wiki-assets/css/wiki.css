@@ -9,3 +9,11 @@
     .detail-caution{border-left:2px solid var(--orange);background:#332819;color:#d7bd92;padding:11px 13px;font-size:11px;line-height:1.9;margin-bottom:19px}.detail-table-wrap{overflow:auto;border:1px solid #36452a}.detail-table{width:100%;border-collapse:collapse;font-size:11px;min-width:380px}.detail-table th{text-align:left;color:#94a97c;font-weight:400;background:#15200e;font-size:10px;padding:10px 12px;white-space:nowrap}.detail-table td{padding:11px 12px;border-top:1px solid #35452a;color:#c5d4b2;vertical-align:top}.detail-table td small{display:block;color:#7f9667;font:9px/1.7 var(--mono);overflow-wrap:anywhere}.detail-table td:not(:first-child){font-family:var(--mono)}.record-link{color:#d8b58e;padding:0;text-align:left;text-decoration:underline;text-underline-offset:3px;font-size:11px}.record-link:hover{color:var(--orange)}.detail-perks{display:flex;flex-wrap:wrap;gap:6px}.detail-perks code{font:10px/1.7 var(--mono);padding:4px 7px;background:#1d2b13;color:#b4c69c;border:1px solid #3b4d2a;overflow-wrap:anywhere;max-width:100%}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   #catalog{scroll-margin-top:75px}.card-placeholder>span{letter-spacing:1px}.detail-caution{margin-bottom:18px}
+
+/* Keep all four archive modes available on narrow phones without page overflow. */
+@media (max-width: 380px) {
+  .sidebar .brand { width: 44px; }
+  .sidebar .nav { min-width: 0; padding-right: 4px; }
+  .sidebar .nav-btn { min-width: 0; min-height: 44px; flex-direction: column; gap: 2px; padding: 5px 2px; font-size: 10px; }
+  .sidebar .nav-btn svg { width: 14px; height: 14px; }
+}

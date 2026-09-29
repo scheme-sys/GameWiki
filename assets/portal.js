@@ -1,307 +1,381 @@
 (() => {
   'use strict';
 
-  const GAMES = window.ORBIT_GAMES;
+  const GAMES = window.LCZ_GAMES;
   const $ = (selector) => document.querySelector(selector);
-  // Render from a single game directory; no duplicate card configuration.
-  const worldContainer = $('#worlds');
-  const categoryLabels = new Map();
-  for (const game of GAMES) {
-    const article = document.createElement('article');
-    article.className = 'world';
-    article.dataset.game = game.id;
-    article.dataset.category = game.category;
-    article.style.setProperty('--world-color', game.color);
+  const universe = $('#game-universe');
+  const info = $('#game-info');
+  const search = $('#search-dialog');
+  const help = $('#help-dialog');
+  const storage = {
+    get(key) { try { return JSON.parse(localStorage.getItem('lcz:' + key)); } catch { return null; } },
+    set(key, value) { try { localStorage.setItem('lcz:' + key, JSON.stringify(value)); } catch { /* Storage is optional. */ } }
+  };
+  const saved = storage.get('positions-v2');
+  const positions = saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {};
+  const nodes = new Map();
+  let width = 0, height = 0, layoutKey = 'desktop';
+  let gesture = null, suppressClick = null, previewGame = null;
+  let hideTimer, dialogTrigger, lastPointerType = 'mouse', ignoreFocus = false;
+  let paused = storage.get('paused') === true;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const coarsePointer = matchMedia('(pointer: coarse)');
+
+  function announce(message) { $('#live-status').textContent = message; }
+  function makeLink(entry, className = '') {
     const link = document.createElement('a');
-    link.className = 'world-link';
-    link.href = game.links[0].href;
+    link.href = entry.href;
+    link.textContent = entry.title;
+    link.className = className;
+    return link;
+  }
+  for (const game of GAMES) {
+    const node = document.createElement('article');
+    node.className = 'world';
+    node.dataset.game = game.id;
+    node.style.setProperty('--world-color', game.color);
+    const link = makeLink({ href: game.links[0].href, title: '' }, 'world-link');
     link.draggable = false;
-    link.setAttribute('aria-label', '进入 ' + game.name + ' ' + game.genre + ' Wiki；支持拖动或方向键移动');
+    link.setAttribute('aria-label', game.nameZh + '，' + game.name + '。点击进入 Wiki；长按查看介绍，拖动或用方向键移动。');
+    link.setAttribute('aria-controls', 'game-info');
+    link.setAttribute('aria-expanded', 'false');
     const visual = document.createElement('div');
     visual.className = 'world-visual';
-    const atmosphere = document.createElement('div');
-    atmosphere.className = 'world-atmosphere';
     const image = document.createElement('img');
     image.className = 'game-icon';
     image.src = game.image;
-    image.alt = game.name + ' 游戏图标';
+    image.alt = '';
     image.width = image.height = 256;
     image.draggable = false;
-    const marker = document.createElement('span');
-    marker.className = 'planet-marker';
-    marker.textContent = game.number;
-    marker.setAttribute('aria-hidden', 'true');
-    const arrow = document.createElement('span');
-    arrow.className = 'planet-enter';
-    arrow.textContent = '↗';
-    arrow.setAttribute('aria-hidden', 'true');
-    visual.append(atmosphere, image, marker, arrow);
+    visual.append(image);
     const caption = document.createElement('div');
     caption.className = 'world-caption';
-    const genre = document.createElement('span');
-    genre.className = 'world-genre';
-    genre.textContent = game.sector + ' / ' + game.genre;
-    const title = document.createElement('h2');
-    title.textContent = game.name;
-    const tagline = document.createElement('p');
-    tagline.textContent = game.tagline;
-    caption.append(genre, title, tagline);
+    const chinese = document.createElement('h2');
+    chinese.textContent = game.nameZh;
+    const english = document.createElement('p');
+    english.textContent = game.name;
+    caption.append(chinese, english);
     link.append(visual, caption);
-    article.append(link);
-    worldContainer.append(article);
-    categoryLabels.set(game.category, game.categoryLabel);
-  }
-  for (const [category, label] of categoryLabels) {
-    const button = document.createElement('button');
-    button.className = 'filter-chip';
-    button.type = 'button';
-    button.dataset.filter = category;
-    button.setAttribute('aria-pressed', 'false');
-    button.textContent = label;
-    $('.filter-group').append(button);
-  }
-  $('#game-count').textContent = String(GAMES.length).padStart(2, '0');
-  $('.nav-count').textContent = String(GAMES.length).padStart(2, '0');
-  $('#entry-count').textContent = String(GAMES.reduce((total, game) => total + game.links.length, 0)).padStart(2, '0');
-  const worldNodes = [...document.querySelectorAll('.world')];
-  const universe = $('#game-universe');
-  const status = $('#live-status');
-  const storage = {
-    get(key) { try { return JSON.parse(localStorage.getItem(`orbit:${key}`)); } catch { return null; } },
-    set(key, value) { try { localStorage.setItem(`orbit:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
-  };
-  const storedPositions = storage.get('positions-v1');
-  const positions = storedPositions && typeof storedPositions === 'object' ? storedPositions : {};
-  let selectedGame = GAMES[0].id;
-  let activeFilter = 'all';
-  let activeDrag = null;
-  let suppressClick = null;
-  let suppressTimer;
-  let width = 0;
-  let height = 0;
-  let mobile = false;
-  let layoutKey = 'desktop';
-
-  function announce(message) { status.textContent = message; }
-  function linkElement(link, className = '') {
-    const element = document.createElement('a');
-    element.href = link.href;
-    if (className) element.className = className;
-    element.textContent = link.title;
-    const arrow = document.createElement('span');
-    arrow.textContent = '↗';
-    arrow.setAttribute('aria-hidden', 'true');
-    element.append(arrow);
-    return element;
-  }
-  function selectGame(id) {
-    const game = GAMES.find((entry) => entry.id === id);
-    if (!game) return;
-    selectedGame = id;
-    $('#detail-kicker').textContent = `发现世界 / ${game.number}`;
-    $('#detail-title').textContent = game.name;
-    $('#detail-index').textContent = game.number;
-    $('#detail-description').textContent = game.description;
-    $('#detail-tags').replaceChildren(...game.tags.map((tag) => {
-      const span = document.createElement('span'); span.textContent = tag; return span;
-    }));
-    $('#detail-links').replaceChildren(...game.links.map((link) => linkElement(link)));
-    worldNodes.forEach((node) => node.classList.toggle('selected', node.dataset.game === id));
+    node.append(link);
+    $('#worlds').append(node);
+    nodes.set(game.id, node);
   }
 
-  function defaultPosition(id) {
-    const game = GAMES.find((entry) => entry.id === id);
-    const index = GAMES.indexOf(game);
-    const point = game.position?.[layoutKey] || [.4 + (index % 3) * .19, .3 + Math.floor(index / 3) * .25];
-    return { x: point[0], y: point[1] };
+  const field = new window.LCZBubbleField({
+    width: 1, height: 1, padding: 3, gap: 10,
+    onUpdate(bodies) {
+      for (const body of bodies) {
+        const node = nodes.get(body.id);
+        const half = parseFloat(node.style.getPropertyValue('--diameter')) / 2 || 0;
+        node.style.transform = 'translate3d(' + (body.x - half) + 'px,' + (body.y - half) + 'px,0)';
+        node.dataset.x = body.x;
+        node.dataset.y = body.y;
+      }
+    }
+  });
+
+  function syncMotion() {
+    const quiet = paused || reducedMotion.matches;
+    field.setReducedMotion(quiet);
+    if (quiet || document.hidden || !info.hidden || search.open || help.open || (gesture && !gesture.moved)) field.stop();
+    else field.start();
+    const toggle = $('#motion-toggle');
+    toggle.classList.toggle('motion-paused', quiet);
+    toggle.setAttribute('aria-pressed', String(quiet));
+    toggle.setAttribute('aria-label', reducedMotion.matches ? '已遵循系统设置，暂停漂浮' : paused ? '恢复漂浮' : '暂停漂浮');
+    toggle.title = toggle.getAttribute('aria-label');
   }
-  function diameterFor(id) {
-    const game = GAMES.find((entry) => entry.id === id);
-    if (mobile) return game.size * .66 * Math.min(1, width / 342);
-    return game.size * Math.min(1.13, Math.max(.73, width / 1325));
+  function savePositions() {
+    positions[layoutKey] = Object.fromEntries(field.getBodies().map((body) =>
+      [body.id, { x: body.anchorX / width, y: body.anchorY / height }]));
+    storage.set('positions-v2', positions);
   }
-  function clampPosition(node, point) {
-    const halfWidth = node.offsetWidth / 2 + (mobile ? 12 : 40);
-    const halfHeight = (node.offsetHeight || halfWidth * 2 + 75) / 2;
-    const top = mobile ? 365 : 56;
-    const bottom = mobile ? height - 305 : height - 50;
-    return {
-      x: Math.min(width - halfWidth - 6, Math.max(halfWidth + 6, point.x)),
-      y: Math.min(bottom - halfHeight, Math.max(top + halfHeight, point.y))
-    };
-  }
-  function putNode(node, point) {
-    const clamped = clampPosition(node, point);
-    node.style.setProperty('--x', `${clamped.x}px`);
-    node.style.setProperty('--y', `${clamped.y}px`);
-    node.dataset.x = clamped.x;
-    node.dataset.y = clamped.y;
-    return clamped;
-  }
-  function saveNode(node) {
-    if (!positions[layoutKey] || typeof positions[layoutKey] !== 'object') positions[layoutKey] = {};
-    positions[layoutKey][node.dataset.game] = { x: Number(node.dataset.x) / width, y: Number(node.dataset.y) / height };
-    storage.set('positions-v1', positions);
-  }
-  function layoutWorlds() {
+  function layout() {
+    cancelGesture();
+    hideInfo();
     width = universe.clientWidth;
     height = universe.clientHeight;
-    mobile = window.innerWidth <= 600;
-    layoutKey = mobile ? 'mobile' : width < 720 ? 'tablet' : 'desktop';
-    for (const node of worldNodes) {
-      node.style.setProperty('--diameter', `${diameterFor(node.dataset.game)}px`);
-      const saved = positions[layoutKey]?.[node.dataset.game];
-      const point = saved && Number.isFinite(saved.x) && Number.isFinite(saved.y) ? saved : defaultPosition(node.dataset.game);
-      putNode(node, { x: point.x * width, y: point.y * height });
-    }
+    layoutKey = innerHeight <= 500 && innerWidth > innerHeight ? 'landscape'
+      : innerWidth <= 600 ? 'mobile' : innerWidth <= 900 ? 'tablet' : 'desktop';
+    field.resize(width, height);
+    field.setBodies(GAMES.map((game) => {
+      const node = nodes.get(game.id);
+      const size = layoutKey === 'landscape' ? Math.min(102, height * .43, width * .17)
+        : layoutKey === 'mobile' ? Math.min(122, width * .33) * game.size / 164
+        : game.size * (layoutKey === 'tablet' ? .87 : 1);
+      node.style.setProperty('--diameter', size + 'px');
+      const caption = node.querySelector('.world-caption');
+      // A slightly wider invisible collision area protects the text from edges
+      // and gives adjacent circles some breathing room without a visible ring.
+      const radius = Math.max(size / 2 + 14, caption.offsetWidth / 2);
+      const labelHeight = Math.max(0, node.offsetHeight - size / 2 - radius);
+      const point = positions[layoutKey]?.[game.id];
+      const initial = game.position[layoutKey];
+      const valid = point && Number.isFinite(point.x) && Number.isFinite(point.y);
+      return { id: game.id, x: (valid ? point.x : initial[0]) * width,
+        y: (valid ? point.y : initial[1]) * height, radius, labelHeight };
+    }));
+    syncMotion();
   }
 
-  for (const node of worldNodes) {
+  function positionInfo() {
+    if (!previewGame || info.hidden) return;
+    const rect = nodes.get(previewGame).querySelector('.world-visual').getBoundingClientRect();
+    const box = info.getBoundingClientRect();
+    let x = rect.right + 24;
+    if (x + box.width > innerWidth - 12) x = rect.left - box.width - 24;
+    x = Math.max(12, Math.min(innerWidth - box.width - 12, x));
+    const y = Math.max(12, Math.min(innerHeight - box.height - 12, rect.top + rect.height / 2 - box.height / 2));
+    info.style.left = x + 'px';
+    info.style.top = y + 'px';
+  }
+  function showInfo(id, touch = false) {
+    if (gesture?.moved || search.open || help.open) return;
+    clearTimeout(hideTimer);
+    previewGame = id;
+    const game = GAMES.find((entry) => entry.id === id);
+    $('#info-title').textContent = game.nameZh;
+    $('#info-english').textContent = game.name;
+    $('#info-description').textContent = game.description;
+    $('#info-tags').replaceChildren(...game.tags.map((tag) => {
+      const span = document.createElement('span'); span.textContent = tag; return span;
+    }));
+    $('#info-links').replaceChildren(...game.links.map((entry) => makeLink(entry)));
+    info.classList.toggle('touch-preview', touch);
+    info.hidden = false;
+    for (const [key, node] of nodes) {
+      node.classList.toggle('active', key === id);
+      node.querySelector('a').setAttribute('aria-expanded', String(key === id));
+    }
+    positionInfo();
+    syncMotion();
+    if (touch) announce(game.nameZh + '介绍已打开；再次点击气泡或选择入口进入 Wiki。');
+  }
+  function hideInfo() {
+    clearTimeout(hideTimer);
+    info.hidden = true;
+    previewGame = null;
+    for (const node of nodes.values()) {
+      node.classList.remove('active');
+      node.querySelector('a').setAttribute('aria-expanded', 'false');
+    }
+    syncMotion();
+  }
+  function scheduleHide() {
+    clearTimeout(hideTimer);
+    if (info.classList.contains('touch-preview') || gesture) return;
+    hideTimer = setTimeout(() => {
+      if (!info.matches(':hover') && !info.contains(document.activeElement)) hideInfo();
+    }, 220);
+  }
+
+  function finishGesture(cancel = false) {
+    if (!gesture) return;
+    const current = gesture;
+    gesture = null;
+    clearTimeout(current.timer);
+    if (cancel) {
+      field.setBodies(current.before);
+      suppressClick = current.id;
+    } else {
+      field.release(current.id);
+      if (current.moved) {
+        savePositions();
+        announce('气泡位置已保存');
+      }
+      if (current.moved || current.longPressed) suppressClick = current.id;
+    }
+    current.node.classList.remove('dragging');
+    document.body.classList.remove('is-dragging');
+    if (current.link.hasPointerCapture(current.pointerId)) current.link.releasePointerCapture(current.pointerId);
+    if (cancel || current.moved) hideInfo();
+    syncMotion();
+  }
+  function cancelGesture() { finishGesture(true); }
+
+  document.addEventListener('pointerdown', (event) => {
+    lastPointerType = event.pointerType;
+    if (gesture && event.pointerId !== gesture.pointerId) cancelGesture();
+    if (!info.hidden && !info.contains(event.target) && !event.target.closest('.world-link')) hideInfo();
+  }, true);
+  for (const [id, node] of nodes) {
     const link = node.querySelector('a');
-    node.addEventListener('pointerenter', () => { if (!activeDrag) selectGame(node.dataset.game); });
-    link.addEventListener('focus', () => selectGame(node.dataset.game));
+    link.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse' && !gesture) showInfo(id);
+    });
+    link.addEventListener('pointerleave', (event) => {
+      if (event.pointerType === 'mouse') scheduleHide();
+    });
+    link.addEventListener('focus', () => {
+      if (!ignoreFocus && lastPointerType === 'mouse' && link.matches(':focus-visible')) showInfo(id, coarsePointer.matches);
+    });
+    link.addEventListener('blur', scheduleHide);
     link.addEventListener('dragstart', (event) => event.preventDefault());
+    link.addEventListener('contextmenu', (event) => event.preventDefault());
     link.addEventListener('pointerdown', (event) => {
-      if (event.button !== 0 || !event.isPrimary || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey || activeDrag) return;
+      if (event.button !== 0 || !event.isPrimary || gesture || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
       suppressClick = null;
-      clearTimeout(suppressTimer);
-      activeDrag = { node, link, pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: Number(node.dataset.x), originY: Number(node.dataset.y), moved: false };
-      selectGame(node.dataset.game);
+      const body = field.getBodies().find((entry) => entry.id === id);
+      gesture = { id, node, link, pointerId: event.pointerId, pointerType: event.pointerType,
+        startX: event.clientX, startY: event.clientY, originX: body.x, originY: body.y,
+        before: field.getBodies(), moved: false, longPressed: false, timer: null };
+      field.grab(id);
+      if (event.pointerType !== 'mouse') {
+        const current = gesture;
+        current.timer = setTimeout(() => {
+          if (gesture !== current || current.moved) return;
+          current.longPressed = true;
+          showInfo(id, true);
+        }, 520);
+      }
+      syncMotion();
     });
     link.addEventListener('click', (event) => {
-      if (suppressClick === node) { event.preventDefault(); suppressClick = null; }
+      if (suppressClick === id && event.detail !== 0) {
+        event.preventDefault();
+        suppressClick = null;
+      }
     });
     link.addEventListener('keydown', (event) => {
-      const directions = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
-      const direction = directions[event.key];
+      const direction = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[event.key];
       if (!direction || event.ctrlKey || event.metaKey || event.altKey) return;
       event.preventDefault();
-      const step = event.shiftKey ? 30 : 12;
-      putNode(node, { x: Number(node.dataset.x) + direction[0] * step, y: Number(node.dataset.y) + direction[1] * step });
-      saveNode(node);
-      announce(`${GAMES.find((game) => game.id === node.dataset.game).name} 位置已更新`);
+      const body = field.getBodies().find((entry) => entry.id === id);
+      const distance = event.shiftKey ? 30 : 12;
+      field.setPosition(id, body.x + direction[0] * distance, body.y + direction[1] * distance);
+      savePositions();
+      positionInfo();
+      announce(GAMES.find((game) => game.id === id).nameZh + '位置已更新');
     });
   }
   window.addEventListener('pointermove', (event) => {
-    if (!activeDrag || activeDrag.pointerId !== event.pointerId) return;
-    const drag = activeDrag;
-    const dx = event.clientX - drag.startX;
-    const dy = event.clientY - drag.startY;
-    if (!drag.moved && Math.hypot(dx, dy) < 7) return;
-    if (!drag.moved) {
-      drag.moved = true;
-      drag.link.setPointerCapture(event.pointerId);
-      drag.node.classList.add('dragging');
+    if (!gesture || event.pointerId !== gesture.pointerId) return;
+    const current = gesture;
+    const dx = event.clientX - current.startX, dy = event.clientY - current.startY;
+    if (!current.moved && Math.hypot(dx, dy) <= 8) return;
+    if (!current.moved) {
+      clearTimeout(current.timer);
+      current.moved = true;
+      current.link.setPointerCapture(current.pointerId);
+      current.node.classList.add('dragging');
       document.body.classList.add('is-dragging');
+      hideInfo();
     }
     event.preventDefault();
-    const point = putNode(drag.node, { x: drag.originX + dx, y: drag.originY + dy });
-    $('#coordinates').textContent = `X ${String(Math.round(point.x)).padStart(3, '0')} · Y ${String(Math.round(point.y)).padStart(3, '0')}`;
+    field.dragTo(current.id, current.originX + dx, current.originY + dy);
   }, { passive: false });
-  function finishDrag(cancel = false) {
-    if (!activeDrag) return;
-    const drag = activeDrag;
-    activeDrag = null;
-    if (drag.moved) {
-      if (cancel) putNode(drag.node, { x: drag.originX, y: drag.originY });
-      else saveNode(drag.node);
-      suppressClick = drag.node;
-      clearTimeout(suppressTimer);
-      suppressTimer = setTimeout(() => { suppressClick = null; }, 450);
-      announce(cancel ? '已取消移动' : '气泡位置已保存');
-    }
-    drag.node.classList.remove('dragging');
-    document.body.classList.remove('is-dragging');
-    if (drag.link.hasPointerCapture(drag.pointerId)) drag.link.releasePointerCapture(drag.pointerId);
-  }
-  window.addEventListener('pointerup', (event) => { if (activeDrag?.pointerId === event.pointerId) finishDrag(); });
-  window.addEventListener('pointercancel', (event) => { if (activeDrag?.pointerId === event.pointerId) finishDrag(true); });
-  window.addEventListener('blur', () => finishDrag(true));
+  window.addEventListener('pointerup', (event) => {
+    if (gesture?.pointerId === event.pointerId) finishGesture();
+  });
+  window.addEventListener('pointercancel', (event) => {
+    if (gesture?.pointerId === event.pointerId) cancelGesture();
+  });
+  window.addEventListener('blur', () => { cancelGesture(); hideInfo(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) cancelGesture();
+    syncMotion();
+  });
+  info.addEventListener('pointerenter', () => clearTimeout(hideTimer));
+  info.addEventListener('pointerleave', scheduleHide);
+  info.addEventListener('focusout', scheduleHide);
+  $('#info-close').addEventListener('click', () => {
+    const link = previewGame && nodes.get(previewGame).querySelector('a');
+    hideInfo();
+    ignoreFocus = true;
+    link?.focus({ preventScroll: true });
+    ignoreFocus = false;
+  });
+  $('#motion-toggle').addEventListener('click', () => {
+    paused = !paused;
+    storage.set('paused', paused);
+    syncMotion();
+    announce(reducedMotion.matches ? '已遵循系统的减少动态效果设置' : paused ? '已暂停漂浮' : '已恢复轻微漂浮');
+  });
+  reducedMotion.addEventListener('change', syncMotion);
   $('#reset-map').addEventListener('click', () => {
-    finishDrag(true);
+    cancelGesture();
     delete positions[layoutKey];
-    storage.set('positions-v1', positions);
-    layoutWorlds();
-    $('#coordinates').textContent = 'X 000 · Y 000';
-    announce('气泡已回到初始位置');
+    storage.set('positions-v2', positions);
+    layout();
+    announce('气泡已恢复初始排列');
   });
 
-  document.querySelectorAll('[data-filter]').forEach((button) => {
-    button.addEventListener('click', () => {
-      finishDrag(true);
-      activeFilter = button.dataset.filter;
-      document.querySelectorAll('[data-filter]').forEach((filter) => {
-        const active = filter === button; filter.classList.toggle('active', active); filter.setAttribute('aria-pressed', String(active));
-      });
-      worldNodes.forEach((node) => { node.hidden = activeFilter !== 'all' && node.dataset.category !== activeFilter; });
-      const visible = GAMES.filter((game) => activeFilter === 'all' || game.category === activeFilter);
-      if (!visible.some((game) => game.id === selectedGame)) selectGame(visible[0].id);
-      layoutWorlds();
-      announce(`显示 ${visible.length} 个游戏世界`);
-    });
-  });
-
-  // Dialogs retain real links; no routing library or remote requests are required.
-  const archive = $('#archive-dialog');
-  const help = $('#help-dialog');
-  let dialogTrigger = null;
+  function renderResults(query) {
+    const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+    const games = GAMES.filter((game) => terms.every((term) =>
+      (game.nameZh + ' ' + game.name + ' ' + game.keywords).toLocaleLowerCase().includes(term)));
+    $('#search-results').replaceChildren(...games.map((game) => {
+      const result = document.createElement('article');
+      result.className = 'search-result';
+      const image = document.createElement('img');
+      image.src = game.image; image.alt = ''; image.width = image.height = 56;
+      const content = document.createElement('div');
+      const title = makeLink({ href: game.links[0].href, title: game.nameZh }, 'result-title');
+      const english = document.createElement('p');
+      english.className = 'result-english'; english.textContent = game.name;
+      const links = document.createElement('div');
+      links.className = 'result-links';
+      links.append(...game.links.map((entry) => makeLink(entry)));
+      content.append(title, english, links);
+      result.append(image, content);
+      return result;
+    }));
+    $('#search-summary').textContent = games.length ? '选择游戏或直接打开所需资料' : '没有匹配的结果';
+    $('#search-empty').hidden = games.length > 0;
+  }
   function openDialog(dialog, trigger) {
+    cancelGesture();
+    hideInfo();
     dialogTrigger = trigger;
     document.body.classList.add('dialog-open');
     dialog.showModal();
-    if (dialog === archive) { $('#game-search').value = ''; renderResults(''); $('#game-search').focus(); }
+    if (dialog === search) {
+      $('#game-search').value = '';
+      renderResults('');
+      $('#game-search').focus();
+    }
+    syncMotion();
   }
-  [archive, help].forEach((dialog) => {
+  for (const dialog of [search, help]) {
     dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {
       if (event.target !== dialog) return;
       const rect = dialog.getBoundingClientRect();
       if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
     });
-    dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); dialogTrigger?.focus(); });
-  });
-  $('#search-open').addEventListener('click', (event) => openDialog(archive, event.currentTarget));
-  $('#archive-open').addEventListener('click', (event) => openDialog(archive, event.currentTarget));
-  $('#list-open').addEventListener('click', (event) => openDialog(archive, event.currentTarget));
-  $('#help-open').addEventListener('click', (event) => openDialog(help, event.currentTarget));
-  function renderResults(query) {
-    const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
-    const games = GAMES.filter((game) => terms.every((term) => `${game.name} ${game.genre} ${game.keywords}`.toLocaleLowerCase().includes(term)));
-    const entries = games.map((game) => {
-      const article = document.createElement('article'); article.className = 'archive-result';
-      const img = document.createElement('img'); img.src = game.image; img.alt = ''; img.width = 67; img.height = 67;
-      const content = document.createElement('div');
-      const heading = document.createElement('div'); heading.className = 'result-heading';
-      const title = document.createElement('h3');
-      const titleLink = document.createElement('a'); titleLink.href = game.links[0].href; titleLink.textContent = game.name; title.append(titleLink);
-      const number = document.createElement('span'); number.textContent = game.number; heading.append(title, number);
-      const description = document.createElement('p'); description.textContent = `${game.genre} · ${game.summary}`;
-      const links = document.createElement('div'); links.className = 'result-links'; links.append(...game.links.map((link) => linkElement(link)));
-      content.append(heading, description, links); article.append(img, content); return article;
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('dialog-open');
+      dialogTrigger?.focus({ preventScroll: true });
+      syncMotion();
     });
-    $('#archive-results').replaceChildren(...entries);
-    $('#search-empty').hidden = games.length > 0;
-    $('#search-summary').textContent = `${games.length} 个世界 · ${games.reduce((count, game) => count + game.links.length, 0)} 个探索入口`;
   }
+  $('#search-open').addEventListener('click', (event) => openDialog(search, event.currentTarget));
+  $('#help-open').addEventListener('click', (event) => openDialog(help, event.currentTarget));
   $('#game-search').addEventListener('input', (event) => renderResults(event.target.value));
   document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab') lastPointerType = 'mouse';
     if (event.key === 'Escape') {
-      finishDrag(true);
-      const open = archive.open ? archive : help.open ? help : null;
-      if (open) { event.preventDefault(); open.close(); }
-      return;
+      cancelGesture();
+      hideInfo();
+      if (search.open || help.open) {
+        event.preventDefault();
+        (search.open ? search : help).close();
+      }
     }
-    if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey || archive.open || help.open || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || event.target.isContentEditable) return;
-    event.preventDefault(); openDialog(archive, $('#search-open'));
+    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey && !search.open && !help.open &&
+      !event.target.matches('input,textarea,[contenteditable="true"]')) {
+      event.preventDefault();
+      openDialog(search, $('#search-open'));
+    }
   });
-
-  // Deliberately static: no continuous animation, parallax, or particle loop.
   let resizeFrame;
-  window.addEventListener('resize', () => {
+  new ResizeObserver(() => {
     cancelAnimationFrame(resizeFrame);
-    resizeFrame = requestAnimationFrame(() => { finishDrag(true); layoutWorlds(); });
-  });
-  window.addEventListener('pageshow', () => { finishDrag(true); layoutWorlds(); });
-  selectGame(GAMES[0].id);
-  layoutWorlds();
+    resizeFrame = requestAnimationFrame(() => {
+      if (universe.clientWidth !== width || universe.clientHeight !== height) layout();
+    });
+  }).observe(universe);
+  window.addEventListener('pagehide', () => field.stop());
+  window.addEventListener('pageshow', syncMotion);
+  layout();
 })();

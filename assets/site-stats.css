@@ -1,0 +1,22 @@
+/* Small, touch-accessible counters shared by the portal and game navigation. */
+.site-stats { position: relative; flex: 0 0 auto; color: #93a5bf; font: 11px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; }
+.site-stats, .site-stats * { box-sizing: border-box; }
+.site-stats .site-stats-disclosure { position: relative; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; color: inherit; }
+.site-stats .site-stats-summary { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; max-width: 150px; margin: 0; padding: 6px 4px; border: 0; border-radius: 6px; background: none; color: inherit; font: inherit; list-style: none; white-space: nowrap; cursor: pointer; }
+.site-stats .site-stats-summary::-webkit-details-marker { display: none; }
+.site-stats .site-stats-summary::after, .site-stats .site-stats-summary::before { content: none; }
+.site-stats .site-stats-summary:hover { color: #d9e9fa; }
+.site-stats .site-stats-summary:focus-visible { outline: 2px solid #82ddd8; outline-offset: 3px; }
+.site-stats .site-stats-summary strong { min-width: 10px; color: #cae2ed; font: 500 11px/1.5 "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+.site-stats .site-stats-icon { display: block; width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.2; }
+.site-stats .site-stats-panel { position: absolute; z-index: 100; top: calc(100% + 8px); left: 0; width: 226px; padding: 16px; border: 1px solid #80d7e52e; border-radius: 12px; background: #0d1829fa; box-shadow: 0 16px 40px #0007; color: #aebfd4; font: 12px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+.site-stats .site-stats-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 0 6px; }
+.site-stats .site-stats-row strong { color: #e0f1f5; font: 500 13px/1.6 "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.site-stats .site-stats-note { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid #85c3da21; color: #879db7; font: 11px/1.7 "Segoe UI", "Microsoft YaHei", sans-serif; }
+.atlas-nav .site-stats { margin-left: -10px; }
+@media (max-width: 480px) {
+  .site-stats .site-stats-summary { gap: 5px; min-height: 44px; }
+  .site-stats .site-stats-panel { left: -32px; width: 214px; }
+  .atlas-nav .site-stats { margin-left: -6px; }
+}
+@media print { .site-stats { display: none; } }
