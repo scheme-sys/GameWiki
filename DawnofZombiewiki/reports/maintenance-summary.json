@@ -1,9 +1,9 @@
 {
   "source": "data/catalog.json, data/mechanics.json, data/asset-map.json",
   "sourceSHA256": {
-    "catalog": "fe43bde114b6d3a17b6fd3b5135348c9fb40bc1de6b78424ad0443330f847036",
-    "mechanics": "85c861235138efa55feb917fce634c7384d93dbd5fccd0df4023cd75f569c4af",
-    "asset-map": "b924a5a65a18df800f2fb09377655a23cb75abbd56dff2940e3c96692becd0f6"
+    "catalog": "19cb090fc7d4a50f071af7dd02fe3e38bed30927ee9916fd7c4ccceaf415010f",
+    "mechanics": "762e96821282c7adaf6d81064c602e4f99d9688403139cf48e231356a764a9a9",
+    "asset-map": "1a198d79bf506f72e677bdfd1cf93d0fc38c8cc447b69f056bbbb60cf6934153"
   },
   "datasets": {
     "categories": 8,
@@ -28,7 +28,7 @@
   "images": {
     "exported": 3687,
     "imageBytes": 343838419,
-    "mappedBundleImages": 3690,
+    "localImages": 3687,
     "categories": {
       "补给消耗品": 228,
       "资源材料": 919,

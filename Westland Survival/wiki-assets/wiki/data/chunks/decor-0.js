@@ -18,17 +18,6 @@ window.WIKI_CHUNKS["wiki-chunk-decor-0"] = {
       "heal_amount": null,
       "heal_cooldown": null,
       "heal_distance": null,
-      "avatar_id": "wls2_pet_home_bunny",
-      "icon_path": "UI_WW_AlphaBinary06/rabbit_easter_icon",
-      "primary_icon_sprite": "rabbit_easter_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/rabbit_easter_icon.png",
-        "width": 154,
-        "height": 154,
-        "sha256": "57dae2955d24b281943db50193c6c7c4d95bb9447561953b704640d6c977eab8",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "rabbit_easter_icon"
-      },
       "image_key": "57dae2955d24b281943db50193c6c7c4d95bb9447561953b704640d6c977eab8",
       "numeric": {
         "summary": [],
@@ -57,17 +46,6 @@ window.WIKI_CHUNKS["wiki-chunk-decor-0"] = {
         "hours": 22
       },
       "heal_distance": 3,
-      "avatar_id": "wls2_pet_home_fbo_cat",
-      "icon_path": "UI_WW_AlphaBinary06/wls2_COcat_cat",
-      "primary_icon_sprite": "wls2_COcat_cat",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/wls2_COcat_cat.png",
-        "width": 154,
-        "height": 154,
-        "sha256": "0eed6f94bcc73ba3b8d10df190b35bc6ddeb76413a741899701e7ab65dd931a3",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wls2_COcat_cat"
-      },
       "image_key": "0eed6f94bcc73ba3b8d10df190b35bc6ddeb76413a741899701e7ab65dd931a3",
       "numeric": {
         "summary": [
@@ -118,17 +96,6 @@ window.WIKI_CHUNKS["wiki-chunk-decor-0"] = {
         "hours": 22
       },
       "heal_distance": 3,
-      "avatar_id": "wls2_pet_home_fbo_dog",
-      "icon_path": "UI_WW_AlphaBinary07/wls2_COcat_dog",
-      "primary_icon_sprite": "wls2_COcat_dog",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/wls2_COcat_dog.png",
-        "width": 154,
-        "height": 154,
-        "sha256": "35d4fdea4d6279a2de7d9f5ddc5f4503bb7615c75b23dc7edb106701e4330a3d",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-        "source_sprite": "wls2_COcat_dog"
-      },
       "image_key": "35d4fdea4d6279a2de7d9f5ddc5f4503bb7615c75b23dc7edb106701e4330a3d",
       "numeric": {
         "summary": [
@@ -177,17 +144,6 @@ window.WIKI_CHUNKS["wiki-chunk-decor-0"] = {
       "heal_amount": null,
       "heal_cooldown": null,
       "heal_distance": null,
-      "avatar_id": "wls2_pet_home_turkey",
-      "icon_path": "UI_WW_AlphaBinary07/wls2_COcat_dog",
-      "primary_icon_sprite": "wls2_COcat_dog",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/wls2_COcat_dog.png",
-        "width": 154,
-        "height": 154,
-        "sha256": "35d4fdea4d6279a2de7d9f5ddc5f4503bb7615c75b23dc7edb106701e4330a3d",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-        "source_sprite": "wls2_COcat_dog"
-      },
       "image_key": "35d4fdea4d6279a2de7d9f5ddc5f4503bb7615c75b23dc7edb106701e4330a3d",
       "numeric": {
         "summary": [],

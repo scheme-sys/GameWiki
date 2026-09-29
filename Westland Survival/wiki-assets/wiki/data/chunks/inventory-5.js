@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
   "records": [
     {
       "id": "wls2_xmas_23_weapon_range_rifle_7_epic",
-      "item_id": "wls2_xmas_23_weapon_range_rifle_7_epic",
       "name": "极光",
       "name_en": "Aurora",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_xmas_22_weapon_range_rifle_5_rare",
-      "image_id": "wls2_xmas_23_weapon_range_rifle_7_epic",
       "equipment_id": "wls2_xmas_23_weapon_range_rifle_7_epic",
       "stats": [
         {
@@ -98,24 +94,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_xmas_23_weapon_range_rifle_7_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_xmas_22_weapon_range_rifle_5_rare_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8313d4dc889e82562cb7a523732290388598154edb06726be707d104d33fa470"
     },
     {
       "id": "wls2_weapon_range_rifle_7_common",
-      "item_id": "wls2_weapon_range_rifle_7_common",
       "name": "温彻斯特 1907",
       "name_en": "Winchester 1907",
       "name_source": "official_zh",
@@ -126,12 +108,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_rifle_7_common_icon",
-      "image_id": "wls2_weapon_range_rifle_7_common",
       "equipment_id": "wls2_weapon_range_rifle_7_common",
       "stats": [
         {
@@ -244,24 +223,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_7_common",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_rifle_7_common_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "31e6df53d3a7a1cbf1ae78a3513d6e1779b17bcc6086cfa1a7c937d2eb3043bd"
     },
     {
       "id": "wls2_weapon_range_rifle_7_epic",
-      "item_id": "wls2_weapon_range_rifle_7_epic",
       "name": "胡奥特自动步枪",
       "name_en": "Huot automatic rifle",
       "name_source": "official_zh",
@@ -272,12 +237,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_rifle_7_epic_icon",
-      "image_id": "wls2_weapon_range_rifle_7_epic",
       "equipment_id": "wls2_weapon_range_rifle_7_epic",
       "stats": [
         {
@@ -452,24 +414,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_7_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_rifle_7_epic_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "22ac74a40c7aa1929850ac130e03c1da76f6e2625cef30692a775873bc90816f"
     },
     {
       "id": "wls2_weapon_range_rifle_7_rare",
-      "item_id": "wls2_weapon_range_rifle_7_rare",
       "name": "蒙德拉贡 M1908",
       "name_en": "Mondragón M1908",
       "name_source": "official_zh",
@@ -480,12 +428,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_rifle_7_rare_icon",
-      "image_id": "wls2_weapon_range_rifle_7_rare",
       "equipment_id": "wls2_weapon_range_rifle_7_rare",
       "stats": [
         {
@@ -632,24 +577,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_7_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_rifle_7_rare_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0ea43203febbe2e2aa959eb60cca8133e400e6f74b5f0dd95b5c641d8fb3bb75"
     },
     {
       "id": "wls2_weapon_range_rifle_7_uncommon",
-      "item_id": "wls2_weapon_range_rifle_7_uncommon",
       "name": "雷明顿8型",
       "name_en": "Remington Model 8",
       "name_source": "official_zh",
@@ -660,12 +591,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_rifle_7_uncommon_icon",
-      "image_id": "wls2_weapon_range_rifle_7_uncommon",
       "equipment_id": "wls2_weapon_range_rifle_7_uncommon",
       "stats": [
         {
@@ -778,24 +706,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_7_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_rifle_7_uncommon_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "7c9d2edef4c8092aa8ff59c2262640fae8542c5796eedc35a9dc4f3c7b3f4b17"
     },
     {
       "id": "wls2_weapon_melee_knife_7_uncommon",
-      "item_id": "wls2_weapon_melee_knife_7_uncommon",
       "name": "屠夫的刀",
       "name_en": "Butcher's Blade",
       "name_source": "official_zh",
@@ -806,12 +720,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_melee_knife_7_uncommon_icon",
-      "image_id": "wls2_weapon_melee_knife_7_uncommon",
       "equipment_id": "wls2_weapon_melee_knife_7_uncommon",
       "stats": [
         {
@@ -919,24 +830,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_7_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_knife_7_uncommon_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e9799651a65766b99a5536f0c99f41efc73c515fdb5d089045c6ebd2c24b6502"
     },
     {
       "id": "wls2_weapon_melee_knife_7_common",
-      "item_id": "wls2_weapon_melee_knife_7_common",
       "name": "德玛格刺刀",
       "name_en": "Bayonet Demag",
       "name_source": "official_zh",
@@ -947,12 +844,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_melee_knife_7_common_icon",
-      "image_id": "wls2_weapon_melee_knife_7_common",
       "equipment_id": "wls2_weapon_melee_knife_7_common",
       "stats": [
         {
@@ -1060,24 +954,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_7_common",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_knife_7_common_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "92d378fd4d99ffe5885989a141a45355f2a6a24f76c4c912aa0437b0d5b956c0"
     },
     {
       "id": "wls2_weapon_melee_knife_7_rare",
-      "item_id": "wls2_weapon_melee_knife_7_rare",
       "name": "战壕刀 M1918",
       "name_en": "Trench Knife M1918",
       "name_source": "official_zh",
@@ -1088,12 +968,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_melee_knife_7_rare_icon",
-      "image_id": "wls2_weapon_melee_knife_7_rare",
       "equipment_id": "wls2_weapon_melee_knife_7_rare",
       "stats": [
         {
@@ -1229,24 +1106,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_7_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_knife_7_rare_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e6787308b2d6b6faf7e25a5baa0cef8ad5c1feaa6949cc36b1df08493b2bf3c0"
     },
     {
       "id": "wls2_weapon_melee_knife_7_epic",
-      "item_id": "wls2_weapon_melee_knife_7_epic",
       "name": "猎人小刀",
       "name_en": "Hunter's knife",
       "name_source": "official_zh",
@@ -1257,12 +1120,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_melee_knife_7_epic_icon",
-      "image_id": "wls2_weapon_melee_knife_7_epic",
       "equipment_id": "wls2_weapon_melee_knife_7_epic",
       "stats": [
         {
@@ -1431,24 +1291,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_7_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_knife_7_epic_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c4d084a9c83639ea848ac9eb8cb50714b509da5165c93f549862f181c4fc4c9a"
     },
     {
       "id": "wls2_weapon_range_shotgun_7_uncommon",
-      "item_id": "wls2_weapon_range_shotgun_7_uncommon",
       "name": "Sjogren 霰弹枪",
       "name_en": "Sjogren Shotgun",
       "name_source": "official_zh",
@@ -1459,12 +1305,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_shotgun_7_uncommon_icon",
-      "image_id": "wls2_weapon_range_shotgun_7_uncommon",
       "equipment_id": "wls2_weapon_range_shotgun_7_uncommon",
       "stats": [
         {
@@ -1571,24 +1414,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_7_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_shotgun_7_uncommon_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a89f7aabe9ec9db7d146c2c07986eb3d47a896679e0a46221143c26017e495ee"
     },
     {
       "id": "wls2_weapon_range_shotgun_7_epic",
-      "item_id": "wls2_weapon_range_shotgun_7_epic",
       "name": "伊萨卡 模型 37",
       "name_en": "Ithaka Model 37",
       "name_source": "official_zh",
@@ -1599,12 +1428,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_shotgun_7_epic_icon",
-      "image_id": "wls2_weapon_range_shotgun_7_epic",
       "equipment_id": "wls2_weapon_range_shotgun_7_epic",
       "stats": [
         {
@@ -1773,24 +1599,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_7_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_shotgun_7_epic_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "46da834f84afe2a0d558e95bf7fbc9cf65e954e4c5802af685281f98b87c002b"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_3_t7",
-      "item_id": "wls2_weapon_easter_22_shotgun_3_t7",
       "name": "吉尔的霰弹枪",
       "name_en": "Jill's Shotgun",
       "name_source": "official_zh",
@@ -1801,12 +1613,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_3",
-      "image_id": "wls2_weapon_easter_22_shotgun_3_t7",
       "equipment_id": "wls2_weapon_easter_22_shotgun_3_t7",
       "stats": [
         {
@@ -1937,24 +1746,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_3_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_3_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b603fc5880f23feb9453ab8321797febd8f12e94181fa85643ed60dc0dad717d"
     },
     {
       "id": "wls2_weapon_ws_day2024_shotgun_7",
-      "item_id": "wls2_weapon_ws_day2024_shotgun_7",
       "name": "周年庆散弹枪",
       "name_en": "Anniversary shotgun",
       "name_source": "official_zh",
@@ -1965,12 +1760,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_shotgun",
-      "image_id": "wls2_weapon_ws_day2024_shotgun_7",
       "equipment_id": "wls2_weapon_ws_day2024_shotgun_7",
       "stats": [
         {
@@ -2137,24 +1929,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2024_shotgun_7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2021_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6bdc4c31a15835b2cc5bb429be5dc30f4a657f1c3c5d2641401f1392035faeaf"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_1_t7",
-      "item_id": "wls2_weapon_easter_22_shotgun_1_t7",
       "name": "彩炮 II",
       "name_en": "Confetti II",
       "name_source": "official_zh",
@@ -2165,12 +1943,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_1",
-      "image_id": "wls2_weapon_easter_22_shotgun_1_t7",
       "equipment_id": "wls2_weapon_easter_22_shotgun_1_t7",
       "stats": [
         {
@@ -2273,24 +2048,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_1_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_1_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d1c2b456a47cdd2eb077a97ca0c3442c116588041d48920508ec0f8f5b65f6a6"
     },
     {
       "id": "wls2_weapon_xmas2024_shotgun_7",
-      "item_id": "wls2_weapon_xmas2024_shotgun_7",
       "name": "暴风雪",
       "name_en": "Blizzard",
       "name_source": "official_zh",
@@ -2301,12 +2062,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_xmas_24_shotgun",
-      "image_id": "wls2_weapon_xmas2024_shotgun_7",
       "equipment_id": "wls2_weapon_xmas2024_shotgun_7",
       "stats": [
         {
@@ -2488,24 +2246,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_xmas2024_shotgun_7",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_xmas2024_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a9b84b7752f67ea6e3a9a3123f0817d61b81d6a079e2cefec840bddc456043fb"
     },
     {
       "id": "wls2_weapon_range_shotgun_7_rare",
-      "item_id": "wls2_weapon_range_shotgun_7_rare",
       "name": "温彻斯特 模型 1912",
       "name_en": "Winchester Model 1912",
       "name_source": "official_zh",
@@ -2516,12 +2260,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_shotgun_7_rare_icon",
-      "image_id": "wls2_weapon_range_shotgun_7_rare",
       "equipment_id": "wls2_weapon_range_shotgun_7_rare",
       "stats": [
         {
@@ -2656,24 +2397,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_7_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_shotgun_7_rare_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf80aec6fc64d114e414bb249cc0ab1cf76e2120b38ea7c8249ac4c6c09e4e35"
     },
     {
       "id": "wls2_weapon_lunar_shotgun_7_rare",
-      "item_id": "wls2_weapon_lunar_shotgun_7_rare",
       "name": "火焰 霰弹枪",
       "name_en": "Flame shotgun",
       "name_source": "official_zh",
@@ -2684,12 +2411,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_shotgun_lunar_icon",
-      "image_id": "wls2_weapon_lunar_shotgun_7_rare",
       "equipment_id": "wls2_weapon_lunar_shotgun_7_rare",
       "stats": [
         {
@@ -2849,24 +2573,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_lunar_shotgun_7_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_lunar_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf5e960bdef4f9f82aa0c8fc9494b6b25d6bddc4b3cfc1186206b9538776e403"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_2_t7",
-      "item_id": "wls2_weapon_easter_22_shotgun_2_t7",
       "name": "爆笑",
       "name_en": "Killing Joke",
       "name_source": "official_zh",
@@ -2877,12 +2587,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_2",
-      "image_id": "wls2_weapon_easter_22_shotgun_2_t7",
       "equipment_id": "wls2_weapon_easter_22_shotgun_2_t7",
       "stats": [
         {
@@ -2985,24 +2692,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_2_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_2_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ff8ebdcba688f7fb3994b9092f379473e9608ad1274854dabfeed893e32aad40"
     },
     {
       "id": "wls2_weapon_range_shotgun_7_common",
-      "item_id": "wls2_weapon_range_shotgun_7_common",
       "name": "自动 & 盗贼 枪",
       "name_en": "Auto & Burglar Gun",
       "name_source": "official_zh",
@@ -3013,12 +2706,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_shotgun_7_common_icon",
-      "image_id": "wls2_weapon_range_shotgun_7_common",
       "equipment_id": "wls2_weapon_range_shotgun_7_common",
       "stats": [
         {
@@ -3125,24 +2815,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_7_common",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_shotgun_7_common_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ddccce5beaf13585b0a6b247f145f05e6034950d6926bfc38384192679d1a5bd"
     },
     {
       "id": "wls_xmas2019_red_jacket",
-      "item_id": "wls_xmas2019_red_jacket",
       "name": "圣诞老人的红色外套",
       "name_en": "Santa's red jacket",
       "name_source": "official_zh",
@@ -3153,12 +2829,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_jacket",
-      "image_id": "wls_xmas2019_red_jacket",
       "equipment_id": "wls_xmas2019_red_jacket",
       "stats": [
         {
@@ -3205,24 +2878,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_red_jacket",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_jacket_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c501388d571f728bcee3cf8d3307ca2fe635b2232e4d9476682197b34c5ab0c9"
     },
     {
       "id": "wls_xmas_red_jacket",
-      "item_id": "wls_xmas_red_jacket",
       "name": "圣诞老人的红色外套",
       "name_en": "Santa's red jacket",
       "name_source": "official_zh",
@@ -3233,12 +2892,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_jacket",
-      "image_id": "wls_xmas_red_jacket",
       "equipment_id": "wls_xmas_red_jacket",
       "stats": [
         {
@@ -3285,24 +2941,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_red_jacket",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_jacket_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c501388d571f728bcee3cf8d3307ca2fe635b2232e4d9476682197b34c5ab0c9"
     },
     {
       "id": "wls_xmas2019_green_jacket",
-      "item_id": "wls_xmas2019_green_jacket",
       "name": "圣诞老人的绿色外套",
       "name_en": "Santa's green jacket",
       "name_source": "official_zh",
@@ -3313,12 +2955,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_jacket",
-      "image_id": "wls_xmas2019_green_jacket",
       "equipment_id": "wls_xmas2019_green_jacket",
       "stats": [
         {
@@ -3365,24 +3004,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_green_jacket",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_jacket_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ecd1c33dc41a62b77a64fe947b9a7c1308c82a2aab31b6241103be10e4682597"
     },
     {
       "id": "wls_xmas_green_jacket",
-      "item_id": "wls_xmas_green_jacket",
       "name": "圣诞老人的绿色外套",
       "name_en": "Santa's green jacket",
       "name_source": "official_zh",
@@ -3393,12 +3018,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_jacket",
-      "image_id": "wls_xmas_green_jacket",
       "equipment_id": "wls_xmas_green_jacket",
       "stats": [
         {
@@ -3445,24 +3067,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_green_jacket",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_jacket_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ecd1c33dc41a62b77a64fe947b9a7c1308c82a2aab31b6241103be10e4682597"
     },
     {
       "id": "wls2_armor_body_1_uncommon",
-      "item_id": "wls2_armor_body_1_uncommon",
       "name": "背心",
       "name_en": "Waistcoat",
       "name_source": "official_zh",
@@ -3473,12 +3081,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_vest_jacketed_1.5",
-      "image_id": "wls2_armor_body_1_uncommon",
       "equipment_id": "wls2_armor_body_1_uncommon",
       "stats": [
         {
@@ -3606,24 +3211,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_1_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_body_1_uncommon_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ad3a2c57fd5ccadfae75effb5711647df04d390137173ba538b831a87f0a4f8e"
     },
     {
       "id": "wls2_armor_body_upgrade_1",
-      "item_id": "wls2_armor_body_upgrade_1",
       "name": "背心衬衫",
       "name_en": "Vest with a shirt",
       "name_source": "official_zh",
@@ -3634,12 +3225,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_vest_jacketed_1.5",
-      "image_id": "wls2_armor_body_upgrade_1",
       "equipment_id": "wls2_armor_body_upgrade_1",
       "stats": [
         {
@@ -3669,24 +3257,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_upgrade_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_vest_jacketed_1.5_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ad3a2c57fd5ccadfae75effb5711647df04d390137173ba538b831a87f0a4f8e"
     },
     {
       "id": "wls2_armor_body_1",
-      "item_id": "wls2_armor_body_1",
       "name": "衬衫",
       "name_en": "Shirt",
       "name_source": "official_zh",
@@ -3697,12 +3271,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_shirt_1",
-      "image_id": "wls2_armor_body_1",
       "equipment_id": "wls2_armor_body_1",
       "stats": [
         {
@@ -3732,24 +3303,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_shirt_1_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9c2bc3ebfc1059d1028b6b6123d7fc7116519636ce46b719c507134ce584dcc7"
     },
     {
       "id": "wls2_armor_body_1_common",
-      "item_id": "wls2_armor_body_1_common",
       "name": "衬衫",
       "name_en": "Shirt",
       "name_source": "official_zh",
@@ -3760,12 +3317,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_shirt_1",
-      "image_id": "wls2_armor_body_1_common",
       "equipment_id": "wls2_armor_body_1_common",
       "stats": [
         {
@@ -3866,24 +3420,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_1_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_body_1_common_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9c2bc3ebfc1059d1028b6b6123d7fc7116519636ce46b719c507134ce584dcc7"
     },
     {
       "id": "wls_xmas2019_red_pants",
-      "item_id": "wls_xmas2019_red_pants",
       "name": "圣诞老人的红色裤子",
       "name_en": "Santa's red pants",
       "name_source": "official_zh",
@@ -3894,12 +3434,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_pants",
-      "image_id": "wls_xmas2019_red_pants",
       "equipment_id": "wls_xmas2019_red_pants",
       "stats": [
         {
@@ -3946,24 +3483,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_red_pants",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_pants_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d220312076e1a330731e2e7294b90e87b0ae6859fb8ccbe085fa7ba1b4cf7fdd"
     },
     {
       "id": "wls_xmas_red_pants",
-      "item_id": "wls_xmas_red_pants",
       "name": "圣诞老人的红色裤子",
       "name_en": "Santa's red pants",
       "name_source": "official_zh",
@@ -3974,12 +3497,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_pants",
-      "image_id": "wls_xmas_red_pants",
       "equipment_id": "wls_xmas_red_pants",
       "stats": [
         {
@@ -4026,24 +3546,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_red_pants",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_pants_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d220312076e1a330731e2e7294b90e87b0ae6859fb8ccbe085fa7ba1b4cf7fdd"
     },
     {
       "id": "wls_xmas2019_green_pants",
-      "item_id": "wls_xmas2019_green_pants",
       "name": "圣诞老人的绿色裤子",
       "name_en": "Santa's green pants",
       "name_source": "official_zh",
@@ -4054,12 +3560,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_pants",
-      "image_id": "wls_xmas2019_green_pants",
       "equipment_id": "wls_xmas2019_green_pants",
       "stats": [
         {
@@ -4106,24 +3609,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_green_pants",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_pants_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "13f9f0b146e868612e7fff6eebaee2b42767623bdf51f67ed440e819a693b0d0"
     },
     {
       "id": "wls_xmas_green_pants",
-      "item_id": "wls_xmas_green_pants",
       "name": "圣诞老人的绿色裤子",
       "name_en": "Santa's green pants",
       "name_source": "official_zh",
@@ -4134,12 +3623,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_pants",
-      "image_id": "wls_xmas_green_pants",
       "equipment_id": "wls_xmas_green_pants",
       "stats": [
         {
@@ -4186,24 +3672,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_green_pants",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_pants_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "13f9f0b146e868612e7fff6eebaee2b42767623bdf51f67ed440e819a693b0d0"
     },
     {
       "id": "wls2_armor_legs_1_uncommon",
-      "item_id": "wls2_armor_legs_1_uncommon",
       "name": "精良长裤",
       "name_en": "Fine trousers",
       "name_source": "official_zh",
@@ -4214,12 +3686,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_trousers_reinforced_1.5",
-      "image_id": "wls2_armor_legs_1_uncommon",
       "equipment_id": "wls2_armor_legs_1_uncommon",
       "stats": [
         {
@@ -4347,24 +3816,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_legs_1_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_legs_1_uncommon_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "238a3c63a6b6c7ee85698d99cb6aaf596a83dada08c6caeadf13884b1fef24a3"
     },
     {
       "id": "wls2_armor_legs_upgrade_1",
-      "item_id": "wls2_armor_legs_upgrade_1",
       "name": "结实的裤子",
       "name_en": "Sturdy pants",
       "name_source": "official_zh",
@@ -4375,12 +3830,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_trousers_reinforced_1.5",
-      "image_id": "wls2_armor_legs_upgrade_1",
       "equipment_id": "wls2_armor_legs_upgrade_1",
       "stats": [
         {
@@ -4410,24 +3862,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_legs_upgrade_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_trousers_reinforced_1.5_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "238a3c63a6b6c7ee85698d99cb6aaf596a83dada08c6caeadf13884b1fef24a3"
     },
     {
       "id": "wls2_armor_legs_1",
-      "item_id": "wls2_armor_legs_1",
       "name": "裤子",
       "name_en": "Pants",
       "name_source": "official_zh",
@@ -4438,12 +3876,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_trousers_1",
-      "image_id": "wls2_armor_legs_1",
       "equipment_id": "wls2_armor_legs_1",
       "stats": [
         {
@@ -4473,24 +3908,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_legs_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_trousers_1_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "52b471a83b178d77fbcbeff6ac98efff137fc5f37828e3d706054540e491222d"
     },
     {
       "id": "wls2_armor_legs_1_common",
-      "item_id": "wls2_armor_legs_1_common",
       "name": "裤子",
       "name_en": "Pants",
       "name_source": "official_zh",
@@ -4501,12 +3922,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_trousers_1",
-      "image_id": "wls2_armor_legs_1_common",
       "equipment_id": "wls2_armor_legs_1_common",
       "stats": [
         {
@@ -4607,24 +4025,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_legs_1_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_legs_1_common_name",
-        "sorting_group": "armor_legs",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "52b471a83b178d77fbcbeff6ac98efff137fc5f37828e3d706054540e491222d"
     },
     {
       "id": "wls2_halloween_armor_head_1",
-      "item_id": "wls2_halloween_armor_head_1",
       "name": "南瓜头盔",
       "name_en": "Pumpkin Helmet",
       "name_source": "official_zh",
@@ -4635,12 +4039,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_halloween_armor_head_1",
-      "image_id": "wls2_halloween_armor_head_1",
       "equipment_id": "wls2_halloween_armor_head_1",
       "stats": [
         {
@@ -4716,24 +4117,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_halloween_armor_head_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_halloween_head_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "050cec842c9abab557e4c5395a32ac16a9ab194a96415f9db455bea74eeaedff"
     },
     {
       "id": "wls_xmas2019_red_hat",
-      "item_id": "wls_xmas2019_red_hat",
       "name": "圣诞老人的红色毛帽",
       "name_en": "Santa's red cap",
       "name_source": "official_zh",
@@ -4744,12 +4131,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_hat",
-      "image_id": "wls_xmas2019_red_hat",
       "equipment_id": "wls_xmas2019_red_hat",
       "stats": [
         {
@@ -4796,24 +4180,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_red_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "66bd2803d0637af52c9ccb0edbf4b7de9d586f48d6b1d6885de14bc1bc529f35"
     },
     {
       "id": "wls_xmas_red_hat",
-      "item_id": "wls_xmas_red_hat",
       "name": "圣诞老人的红色毛帽",
       "name_en": "Santa's red cap",
       "name_source": "official_zh",
@@ -4824,12 +4194,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_hat",
-      "image_id": "wls_xmas_red_hat",
       "equipment_id": "wls_xmas_red_hat",
       "stats": [
         {
@@ -4876,24 +4243,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_red_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "66bd2803d0637af52c9ccb0edbf4b7de9d586f48d6b1d6885de14bc1bc529f35"
     },
     {
       "id": "wls_xmas2019_green_hat",
-      "item_id": "wls_xmas2019_green_hat",
       "name": "圣诞老人的绿色毛帽",
       "name_en": "Santa's green cap",
       "name_source": "official_zh",
@@ -4904,12 +4257,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_hat",
-      "image_id": "wls_xmas2019_green_hat",
       "equipment_id": "wls_xmas2019_green_hat",
       "stats": [
         {
@@ -4956,24 +4306,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_green_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ed74abe9200be9cd494b710260922e9f98a121f7b593f15243328587d519c9c8"
     },
     {
       "id": "wls_xmas_green_hat",
-      "item_id": "wls_xmas_green_hat",
       "name": "圣诞老人的绿色毛帽",
       "name_en": "Santa's green cap",
       "name_source": "official_zh",
@@ -4984,12 +4320,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_hat",
-      "image_id": "wls_xmas_green_hat",
       "equipment_id": "wls_xmas_green_hat",
       "stats": [
         {
@@ -5036,24 +4369,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_green_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ed74abe9200be9cd494b710260922e9f98a121f7b593f15243328587d519c9c8"
     },
     {
       "id": "wls2_armor_head_1",
-      "item_id": "wls2_armor_head_1",
       "name": "帽子",
       "name_en": "Hat",
       "name_source": "official_zh",
@@ -5064,12 +4383,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_hat_1",
-      "image_id": "wls2_armor_head_1",
       "equipment_id": "wls2_armor_head_1",
       "stats": [
         {
@@ -5099,24 +4415,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_head_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_hat_1_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4748537df9868cfef94b2cd9fd72dba88c6afbe3cf288242d5338f6e62496222"
     },
     {
       "id": "wls_injun_hunter_hat",
-      "item_id": "wls_injun_hunter_hat",
       "name": "玛卡娅之羽",
       "name_en": "Makya's Feather",
       "name_source": "official_zh",
@@ -5127,12 +4429,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_injun_hunter_hat",
-      "image_id": "wls_injun_hunter_hat",
       "equipment_id": "wls_injun_hunter_hat",
       "stats": [
         {
@@ -5186,24 +4485,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_injun_hunter_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_injun_hunter_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "da455dcd59f7aa644396598d55712f6304c07b07d5a38936a2f7592b787cdbf7"
     },
     {
       "id": "wls2_armor_head_1_common",
-      "item_id": "wls2_armor_head_1_common",
       "name": "草帽",
       "name_en": "Straw hat",
       "name_source": "official_zh",
@@ -5214,12 +4499,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_hat_1",
-      "image_id": "wls2_armor_head_1_common",
       "equipment_id": "wls2_armor_head_1_common",
       "stats": [
         {
@@ -5330,24 +4612,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_head_1_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_head_1_common_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4748537df9868cfef94b2cd9fd72dba88c6afbe3cf288242d5338f6e62496222"
     },
     {
       "id": "wls_injun_spirit_hat",
-      "item_id": "wls_injun_spirit_hat",
       "name": "鹿灵之羽",
       "name_en": "Chuchip's Feather",
       "name_source": "official_zh",
@@ -5358,12 +4626,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_injun_spirit_hat",
-      "image_id": "wls_injun_spirit_hat",
       "equipment_id": "wls_injun_spirit_hat",
       "stats": [
         {
@@ -5417,24 +4682,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_injun_spirit_hat",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_injun_spirit_hat_name",
-        "sorting_group": "armor_head",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ca5b0caf99d8321c5dae0364862bbf1563752efba312f5377198ab1d589c2075"
     },
     {
       "id": "wls_xmas2019_red_boots",
-      "item_id": "wls_xmas2019_red_boots",
       "name": "圣诞老人的红色靴子",
       "name_en": "Santa's red boots",
       "name_source": "official_zh",
@@ -5445,12 +4696,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_boots",
-      "image_id": "wls_xmas2019_red_boots",
       "equipment_id": "wls_xmas2019_red_boots",
       "stats": [
         {
@@ -5503,24 +4751,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_red_boots",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_boots_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b45f6221df7319425dedd8013e453ec614ebe2b8bf95954512c159945d69e97d"
     },
     {
       "id": "wls_xmas_red_boots",
-      "item_id": "wls_xmas_red_boots",
       "name": "圣诞老人的红色靴子",
       "name_en": "Santa's red boots",
       "name_source": "official_zh",
@@ -5531,12 +4765,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_red_boots",
-      "image_id": "wls_xmas_red_boots",
       "equipment_id": "wls_xmas_red_boots",
       "stats": [
         {
@@ -5589,24 +4820,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_red_boots",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_red_boots_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b45f6221df7319425dedd8013e453ec614ebe2b8bf95954512c159945d69e97d"
     },
     {
       "id": "wls_xmas2019_green_boots",
-      "item_id": "wls_xmas2019_green_boots",
       "name": "圣诞老人的绿色靴子",
       "name_en": "Santa's green boots",
       "name_source": "official_zh",
@@ -5617,12 +4834,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_boots",
-      "image_id": "wls_xmas2019_green_boots",
       "equipment_id": "wls_xmas2019_green_boots",
       "stats": [
         {
@@ -5675,24 +4889,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas2019_green_boots",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_boots_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8420d8dcdf845804f0543cb04b8de08e5e3a3316573cf9606d539d376b87ad07"
     },
     {
       "id": "wls_xmas_green_boots",
-      "item_id": "wls_xmas_green_boots",
       "name": "圣诞老人的绿色靴子",
       "name_en": "Santa's green boots",
       "name_source": "official_zh",
@@ -5703,12 +4903,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_xmas_green_boots",
-      "image_id": "wls_xmas_green_boots",
       "equipment_id": "wls_xmas_green_boots",
       "stats": [
         {
@@ -5761,24 +4958,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_xmas_green_boots",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_xmas_green_boots_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8420d8dcdf845804f0543cb04b8de08e5e3a3316573cf9606d539d376b87ad07"
     },
     {
       "id": "wls2_armor_boots_1_uncommon",
-      "item_id": "wls2_armor_boots_1_uncommon",
       "name": "简易靴子",
       "name_en": "Simple boots",
       "name_source": "official_zh",
@@ -5789,12 +4972,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_boots_fortified_1",
-      "image_id": "wls2_armor_boots_1_uncommon",
       "equipment_id": "wls2_armor_boots_1_uncommon",
       "stats": [
         {
@@ -5933,24 +5113,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_boots_1_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_boots_1_uncommon_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "55f7d198cb8ae94f203cd820b5f6662674fbdcff55e0e95f4d19ef64943f0648"
     },
     {
       "id": "wls2_armor_boots_upgrade_1",
-      "item_id": "wls2_armor_boots_upgrade_1",
       "name": "结实的靴子",
       "name_en": "Sturdy boots",
       "name_source": "official_zh",
@@ -5961,12 +5127,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_boots_fortified_1",
-      "image_id": "wls2_armor_boots_upgrade_1",
       "equipment_id": "wls2_armor_boots_upgrade_1",
       "stats": [
         {
@@ -6002,24 +5165,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_boots_upgrade_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_boots_fortified_1.5_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "55f7d198cb8ae94f203cd820b5f6662674fbdcff55e0e95f4d19ef64943f0648"
     },
     {
       "id": "wls2_armor_boots_1",
-      "item_id": "wls2_armor_boots_1",
       "name": "靴子",
       "name_en": "Boots",
       "name_source": "official_zh",
@@ -6030,12 +5179,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_boots_1",
-      "image_id": "wls2_armor_boots_1",
       "equipment_id": "wls2_armor_boots_1",
       "stats": [
         {
@@ -6071,24 +5217,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_boots_1",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_boots_1_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b3f7481a31fe58f7438c4c6e65d9805e5cd1c708806314bab3eb38904d6bd7cd"
     },
     {
       "id": "wls2_armor_boots_1_common",
-      "item_id": "wls2_armor_boots_1_common",
       "name": "靴子",
       "name_en": "Boots",
       "name_source": "official_zh",
@@ -6099,12 +5231,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_boots_1",
-      "image_id": "wls2_armor_boots_1_common",
       "equipment_id": "wls2_armor_boots_1_common",
       "stats": [
         {
@@ -6221,24 +5350,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_boots_1_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_boots_1_common_name",
-        "sorting_group": "armor_boots",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b3f7481a31fe58f7438c4c6e65d9805e5cd1c708806314bab3eb38904d6bd7cd"
     },
     {
       "id": "wls2_armor_xmas2024_body_2_rare",
-      "item_id": "wls2_armor_xmas2024_body_2_rare",
       "name": "奶奶的复仇",
       "name_en": "Grandma's Revenge",
       "name_source": "official_zh",
@@ -6249,12 +5364,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_armor_xmas2024_body",
-      "image_id": "wls2_armor_xmas2024_body_2_rare",
       "equipment_id": "wls2_armor_xmas2024_body_2_rare",
       "stats": [
         {
@@ -6386,24 +5498,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_xmas2024_body_2_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_armor_xmas2024_body_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4db205d05f980c2d4b30cfee1c759581bfe489d1e019b923bb243af4e6f8fb96"
     },
     {
       "id": "wls2_diary_armor_body_2_rare",
-      "item_id": "wls2_diary_armor_body_2_rare",
       "name": "孤星风衣",
       "name_en": "Lone Star Trench Coat",
       "name_source": "official_zh",
@@ -6414,12 +5512,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_halloween_armor_body_3",
-      "image_id": "wls2_diary_armor_body_2_rare",
       "equipment_id": "wls2_diary_armor_body_2_rare",
       "stats": [
         {
@@ -6461,24 +5556,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_diary_armor_body_2_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_diary_armor_body_2_rare_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a7976e8cba44799bab58d3e460f3bc2fd012ad03d2ea0d804f57e8c3ec59920d"
     },
     {
       "id": "wls2_halloween_23_armor_body_2_rare",
-      "item_id": "wls2_halloween_23_armor_body_2_rare",
       "name": "幽灵骑士的外套",
       "name_en": "Phantom Rider's Coat",
       "name_source": "official_zh",
@@ -6489,12 +5570,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_halloween_23_armor_body_rare_icon",
-      "image_id": "wls2_halloween_23_armor_body_2_rare",
       "equipment_id": "wls2_halloween_23_armor_body_2_rare",
       "stats": [
         {
@@ -6632,24 +5710,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_halloween_23_armor_body_2_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_halloween_23_armor_body_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "819ad205a1c59c896d6a23499c187165db05be54cf9406cb30da9edd42d35da5"
     },
     {
       "id": "wls2_armor_body_upgrade_2",
-      "item_id": "wls2_armor_body_upgrade_2",
       "name": "强化的皮夹克",
       "name_en": "Reinforced leather jacket",
       "name_source": "official_zh",
@@ -6660,12 +5724,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_strong_leather_jacket_2.5",
-      "image_id": "wls2_armor_body_upgrade_2",
       "equipment_id": "wls2_armor_body_upgrade_2",
       "stats": [
         {
@@ -6695,24 +5756,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_upgrade_2",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_strong_leather_jacket_2.5_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5c73d3fe35a85213de374f29a67629b3b3d10de7c56ea6eeea8c89e76cde13c3"
     },
     {
       "id": "wls2_armor_body_fbo_2_rare",
-      "item_id": "wls2_armor_body_fbo_2_rare",
       "name": "无名英雄披风",
       "name_en": "Nameless Hero Poncho",
       "name_source": "official_zh",
@@ -6723,12 +5770,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_armor_body_fbo_epic",
-      "image_id": "wls2_armor_body_fbo_2_rare",
       "equipment_id": "wls2_armor_body_fbo_2_rare",
       "stats": [
         {
@@ -6781,24 +5825,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_fbo_2_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_body_fbo_epic_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "eccc2f343666095bf4934411b4a3bf1e8d6437756431d3c485cf23f0b4a15bf0"
     },
     {
       "id": "wls2_armor_easter_2026_body_2_epic",
-      "item_id": "wls2_armor_easter_2026_body_2_epic",
       "name": "春季 骑手 外套",
       "name_en": "Spring Rider Coat",
       "name_source": "official_zh",
@@ -6809,12 +5839,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_armor_body_easter_2026",
-      "image_id": "wls2_armor_easter_2026_body_2_epic",
       "equipment_id": "wls2_armor_easter_2026_body_2_epic",
       "stats": [
         {
@@ -6946,24 +5973,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_easter_2026_body_2_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_armor_easter_2026_body_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "730908f8485703e047c2fca1fd34ca35fda83364fe1cb39254b4b8d15e89b021"
     },
     {
       "id": "wls2_bp_season_flame_armor_body_2_epic",
-      "item_id": "wls2_bp_season_flame_armor_body_2_epic",
       "name": "炽热骑手衬衫",
       "name_en": "Blazing Rider shirt",
       "name_source": "official_zh",
@@ -6974,12 +5987,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_armor_MBP_2025_body",
-      "image_id": "wls2_bp_season_flame_armor_body_2_epic",
       "equipment_id": "wls2_bp_season_flame_armor_body_2_epic",
       "stats": [
         {
@@ -7111,24 +6121,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_bp_season_flame_armor_body_2_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_bp_season_flame_armor_body_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2eef92ba7d9e6d5e0fadfed06140b155cd666d38414964732795d095ffc36712"
     },
     {
       "id": "wls2_armor_st_patrick_jacket_t2_2026",
-      "item_id": "wls2_armor_st_patrick_jacket_t2_2026",
       "name": "爱尔兰运气夹克",
       "name_en": "Irish Luck Jacket",
       "name_source": "official_zh",
@@ -7139,12 +6135,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_armor_patrick2026_body",
-      "image_id": "wls2_armor_st_patrick_jacket_t2_2026",
       "equipment_id": "wls2_armor_st_patrick_jacket_t2_2026",
       "stats": [
         {
@@ -7276,24 +6269,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_st_patrick_jacket_t2_2026",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_armor_st_patrick_jacket_2026_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8bdc140f7e751a2f4dbec6abb5dca50b28855135b55145f43e250c137228260e"
     },
     {
       "id": "wls_injun_hunter_armor",
-      "item_id": "wls_injun_hunter_armor",
       "name": "玛卡娅之绘",
       "name_en": "Makya's Paintings",
       "name_source": "official_zh",
@@ -7304,12 +6283,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_injun_hunter_armor",
-      "image_id": "wls_injun_hunter_armor",
       "equipment_id": "wls_injun_hunter_armor",
       "stats": [
         {
@@ -7363,24 +6339,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_injun_hunter_armor",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_injun_hunter_armor_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e31dfd3dd2f19bad15489aa26435067d88d260a95779cb3d68c8db15aba36fa6"
     },
     {
       "id": "wls2_armor_body_2",
-      "item_id": "wls2_armor_body_2",
       "name": "皮夹克",
       "name_en": "Leather jacket",
       "name_source": "official_zh",
@@ -7391,12 +6353,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": null,
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_leather_jacket_2",
-      "image_id": "wls2_armor_body_2",
       "equipment_id": "wls2_armor_body_2",
       "stats": [
         {
@@ -7426,24 +6385,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_2",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls_clothes_leather_jacket_2_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5aba4b97bfc78e47e10af373d95f461b294a0e8a9eb77560b32d804ff05d86b3"
     },
     {
       "id": "wls2_armor_body_2_common",
-      "item_id": "wls2_armor_body_2_common",
       "name": "皮夹克",
       "name_en": "Leather jacket",
       "name_source": "official_zh",
@@ -7454,12 +6399,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_leather_jacket_2",
-      "image_id": "wls2_armor_body_2_common",
       "equipment_id": "wls2_armor_body_2_common",
       "stats": [
         {
@@ -7572,24 +6514,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_2_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_body_2_common_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5aba4b97bfc78e47e10af373d95f461b294a0e8a9eb77560b32d804ff05d86b3"
     },
     {
       "id": "wls2_armor_body_2_uncommon",
-      "item_id": "wls2_armor_body_2_uncommon",
       "name": "结实的夹克",
       "name_en": "Sturdy jacket",
       "name_source": "official_zh",
@@ -7600,12 +6528,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "tier": 2,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls_clothes_strong_leather_jacket_2.5",
-      "image_id": "wls2_armor_body_2_uncommon",
       "equipment_id": "wls2_armor_body_2_uncommon",
       "stats": [
         {
@@ -7741,19 +6666,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-5"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_armor_body_2_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_armor_body_2_uncommon_name",
-        "sorting_group": "armor_body",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5c73d3fe35a85213de374f29a67629b3b3d10de7c56ea6eeea8c89e76cde13c3"
     }
   ]

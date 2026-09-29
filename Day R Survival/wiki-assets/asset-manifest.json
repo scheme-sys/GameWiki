@@ -1,8 +1,5 @@
 {
-  "schema": "dayr-static-assets-v1",
-  "sourceHtmlSha256": "b7c387a2094e984ecb85294564bc47276cfb84184237e079fa02f2c9a5320865",
-  "sourceHtmlBytes": 37892782,
-  "originalDataSha256": "ec79b1ddc7c5f38fee03b83d642b14e3bd0d2b5a3ef4820c5454e322bd0a1444",
+  "schema": "dayr-player-assets-v2",
   "counts": {
     "items": 2157,
     "monsters": 2643,
@@ -14072,5 +14069,10 @@
       "bytes": 4452,
       "sha256": "ce0abd445859cd94cea8d6f8af9f8f23e6e3787a0a4c2e65bd99a060396ac421"
     }
-  ]
+  ],
+  "playerDataSha256": "432dddc1b034d3366a2528a036ecaf6d30105b4f91d4355e0b5388c65397784c",
+  "playerRecordSha256": {
+    "items": "888f19fe9cd533f408796fe29b9c7a2c6df1790ea1302b3d9c815dd0aa52cada",
+    "monsters": "6310b9fa0a19b1d30a14b1b3990dfb54bcf9cbae5e2e2eb7c9551f49232b3c4d"
+  }
 }

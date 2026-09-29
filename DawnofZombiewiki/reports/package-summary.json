@@ -1,1 +1,7 @@
-{"sourceDirectory":"../_Wiki","destinationDirectory":"DawnofZombiewiki","images":3687,"imageBytes":343838419,"imageGroups":{"补给消耗品":228,"资源材料":919,"其他物品":897,"地图地点":105,"任务":229,"建筑设施":255,"武器":415,"防具装备":325,"随从":212,"技能":61,"怪物":16,"故事笔记":24,"页面背景":1},"catalogueRows":15491,"visiblePlayerRows":5635,"preserved":["Full player Wiki pages and features","All catalogue datasets","All referenced icon mappings and hero artwork","15 Chinese player CSVs","7 player guides"],"excluded":["Unity source bundles","Models and animations","Unreferenced textures and duplicate atlases","Unused audio and fonts","Raw 366-table multi-language export","Extractor dependencies","Large reverse-engineering and resource-link reports"],"originalFilesModified":false}
+{
+  "status": "maintained",
+  "currentSummary": "maintenance-summary.json",
+  "images": 3687,
+  "catalogueRows": 15491,
+  "visiblePlayerRows": 5635
+}

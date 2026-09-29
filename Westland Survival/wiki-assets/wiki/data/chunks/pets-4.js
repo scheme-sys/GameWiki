@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T7 · 稀有",
       "display_en": "Coyote T7 · Rare",
-      "tier_id": "coyote_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -936,75 +934,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -2949,7 +2887,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T7 · 史诗",
       "display_en": "Coyote T7 · Epic",
-      "tier_id": "coyote_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -2972,7 +2909,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -3873,75 +3809,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -5886,7 +5762,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Crocodile",
       "display_zh": "鳄鱼 T4 · 稀有",
       "display_en": "Crocodile T4 · Rare",
-      "tier_id": "crocodile_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -5909,7 +5784,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "marsh",
       "habitat_zh": "沼泽",
       "habitat_en": "Marsh",
       "habitat_bonus": 0.1,
@@ -6455,101 +6329,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "crocodile_skin_1",
           "name_zh": "短吻鳄",
           "name_en": "Alligator",
-          "description_zh": "与鳄鱼不同，短吻鳄不能在咸水中游泳。",
-          "description_en": "Unlike crocodiles alligators cannot swim in salt water.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_1_icon",
-          "icon_sprite": "crocodile_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-            "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_1_icon"
-          },
           "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5"
         },
         {
           "id": "crocodile_skin_2",
           "name_zh": "成年短吻鳄",
           "name_en": "Mature alligator",
-          "description_zh": "短吻鳄是牙齿最多的爬行动物。它的下颚大约有五十颗牙齿。",
-          "description_en": "Alligator is the most toothy reptile. It's around fifty teeth in its jaws.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_2_icon",
-          "icon_sprite": "crocodile_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_elite_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_2.png",
-            "sha256": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_2_icon"
-          },
           "image_key": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416"
         },
         {
           "id": "crocodile_skin_albino",
           "name_zh": "白化 短吻鳄",
           "name_en": "Albino alligator",
-          "description_zh": "沼泽的白色恐怖。不要看眼睛。",
-          "description_en": "The white terror of the swamps. Avoid eye contact.",
-          "icon_path": "UI_WW_AlphaBinary10/crocodile_albino_icon",
-          "icon_sprite": "crocodile_albino_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/crocodile_albino_cub_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_pet",
-          "child_avatar_view_id": "wls2_mob_animal_albino_child_alligator",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_albino.png",
-            "sha256": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "crocodile_albino_icon"
-          },
           "image_key": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769"
         }
       ],
-      "primary_skin_id": "crocodile_skin_1",
-      "primary_icon_sprite": "crocodile_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-        "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "crocodile_skin_1_icon"
-      },
       "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
       "numeric": {
         "summary": [
@@ -7714,7 +7508,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Crocodile",
       "display_zh": "鳄鱼 T5 · 普通",
       "display_en": "Crocodile T5 · Common",
-      "tier_id": "crocodile_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -7737,7 +7530,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "marsh",
       "habitat_zh": "沼泽",
       "habitat_en": "Marsh",
       "habitat_bonus": 0.1,
@@ -8403,101 +8195,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "crocodile_skin_1",
           "name_zh": "短吻鳄",
           "name_en": "Alligator",
-          "description_zh": "与鳄鱼不同，短吻鳄不能在咸水中游泳。",
-          "description_en": "Unlike crocodiles alligators cannot swim in salt water.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_1_icon",
-          "icon_sprite": "crocodile_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-            "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_1_icon"
-          },
           "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5"
         },
         {
           "id": "crocodile_skin_2",
           "name_zh": "成年短吻鳄",
           "name_en": "Mature alligator",
-          "description_zh": "短吻鳄是牙齿最多的爬行动物。它的下颚大约有五十颗牙齿。",
-          "description_en": "Alligator is the most toothy reptile. It's around fifty teeth in its jaws.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_2_icon",
-          "icon_sprite": "crocodile_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_elite_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_2.png",
-            "sha256": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_2_icon"
-          },
           "image_key": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416"
         },
         {
           "id": "crocodile_skin_albino",
           "name_zh": "白化 短吻鳄",
           "name_en": "Albino alligator",
-          "description_zh": "沼泽的白色恐怖。不要看眼睛。",
-          "description_en": "The white terror of the swamps. Avoid eye contact.",
-          "icon_path": "UI_WW_AlphaBinary10/crocodile_albino_icon",
-          "icon_sprite": "crocodile_albino_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/crocodile_albino_cub_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_pet",
-          "child_avatar_view_id": "wls2_mob_animal_albino_child_alligator",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_albino.png",
-            "sha256": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "crocodile_albino_icon"
-          },
           "image_key": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769"
         }
       ],
-      "primary_skin_id": "crocodile_skin_1",
-      "primary_icon_sprite": "crocodile_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-        "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "crocodile_skin_1_icon"
-      },
       "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
       "numeric": {
         "summary": [
@@ -9922,7 +9634,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Crocodile",
       "display_zh": "鳄鱼 T5 · 优秀",
       "display_en": "Crocodile T5 · Uncommon",
-      "tier_id": "crocodile_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -9945,7 +9656,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "marsh",
       "habitat_zh": "沼泽",
       "habitat_en": "Marsh",
       "habitat_bonus": 0.1,
@@ -10611,101 +10321,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "crocodile_skin_1",
           "name_zh": "短吻鳄",
           "name_en": "Alligator",
-          "description_zh": "与鳄鱼不同，短吻鳄不能在咸水中游泳。",
-          "description_en": "Unlike crocodiles alligators cannot swim in salt water.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_1_icon",
-          "icon_sprite": "crocodile_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-            "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_1_icon"
-          },
           "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5"
         },
         {
           "id": "crocodile_skin_2",
           "name_zh": "成年短吻鳄",
           "name_en": "Mature alligator",
-          "description_zh": "短吻鳄是牙齿最多的爬行动物。它的下颚大约有五十颗牙齿。",
-          "description_en": "Alligator is the most toothy reptile. It's around fifty teeth in its jaws.",
-          "icon_path": "UI_WW_AlphaBinary06/crocodile_skin_2_icon",
-          "icon_sprite": "crocodile_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/crocodile_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_alligator_5",
-          "child_avatar_view_id": "wls2_pet_elite_animal_alligator_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_2.png",
-            "sha256": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "crocodile_skin_2_icon"
-          },
           "image_key": "83d83c598a40801ab90a03d99a71730d24b06fc46a29c6bac365bf05cf5c0416"
         },
         {
           "id": "crocodile_skin_albino",
           "name_zh": "白化 短吻鳄",
           "name_en": "Albino alligator",
-          "description_zh": "沼泽的白色恐怖。不要看眼睛。",
-          "description_en": "The white terror of the swamps. Avoid eye contact.",
-          "icon_path": "UI_WW_AlphaBinary10/crocodile_albino_icon",
-          "icon_sprite": "crocodile_albino_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/crocodile_albino_cub_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_pet",
-          "child_avatar_view_id": "wls2_mob_animal_albino_child_alligator",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/crocodile_skin_albino.png",
-            "sha256": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "crocodile_albino_icon"
-          },
           "image_key": "cd1f4f49b6fd196f9dc4ea24f2ee85eec64cdca63572d108ff807550df859769"
         }
       ],
-      "primary_skin_id": "crocodile_skin_1",
-      "primary_icon_sprite": "crocodile_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/crocodile_skin_1.png",
-        "sha256": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "crocodile_skin_1_icon"
-      },
       "image_key": "366533b8b8b4b42752e7dbd4d24e1d25bbfd0cd651c6a97c83674da1406980d5",
       "numeric": {
         "summary": [
@@ -12130,7 +11760,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T1 · 普通",
       "display_en": "Dire wolf T1 · Common",
-      "tier_id": "direwolf_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 25,
@@ -12153,7 +11782,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -12341,43 +11969,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_1",
           "name_zh": "灰狼王",
           "name_en": "Grey alpha wolf",
-          "description_zh": "在狼群间的战斗中，胜利者通常不会屠杀整个狼群，而只会杀死一位领导者。",
-          "description_en": "In fights between wolves packs winners usually don't kill a whole pack but only a leader.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_1_icon",
-          "icon_sprite": "direwolf_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_1",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_1.png",
-            "sha256": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_1_icon"
-          },
           "image_key": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef"
         }
       ],
-      "primary_skin_id": "direwolf_skin_1",
-      "primary_icon_sprite": "direwolf_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_1.png",
-        "sha256": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_1_icon"
-      },
       "image_key": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
       "numeric": {
         "summary": [
@@ -12762,7 +12356,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T1 · 优秀",
       "display_en": "Dire wolf T1 · Uncommon",
-      "tier_id": "direwolf_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 25,
@@ -12785,7 +12378,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -12973,43 +12565,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_1",
           "name_zh": "灰狼王",
           "name_en": "Grey alpha wolf",
-          "description_zh": "在狼群间的战斗中，胜利者通常不会屠杀整个狼群，而只会杀死一位领导者。",
-          "description_en": "In fights between wolves packs winners usually don't kill a whole pack but only a leader.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_1_icon",
-          "icon_sprite": "direwolf_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_1",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_1.png",
-            "sha256": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_1_icon"
-          },
           "image_key": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef"
         }
       ],
-      "primary_skin_id": "direwolf_skin_1",
-      "primary_icon_sprite": "direwolf_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_1.png",
-        "sha256": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_1_icon"
-      },
       "image_key": "edea5aa0d993d55a61db48dab9079610794aa04ba5991dd8f6f5910d28b15cef",
       "numeric": {
         "summary": [
@@ -13394,7 +12952,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T2 · 普通",
       "display_en": "Dire wolf T2 · Common",
-      "tier_id": "direwolf_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -13417,7 +12974,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -13725,43 +13281,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_2",
           "name_zh": "布法罗狼王",
           "name_en": "Buffalo alpha wolf",
-          "description_zh": "每个狼群不仅有一只雄性头狼，也有一只雌性头狼。",
-          "description_en": "Every wolf pack has not only an alpha male but also an alpha female.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_2_icon",
-          "icon_sprite": "direwolf_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_2",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_2.png",
-            "sha256": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_2_icon"
-          },
           "image_key": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd"
         }
       ],
-      "primary_skin_id": "direwolf_skin_2",
-      "primary_icon_sprite": "direwolf_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_2.png",
-        "sha256": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_2_icon"
-      },
       "image_key": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
       "numeric": {
         "summary": [
@@ -14406,7 +13928,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T2 · 优秀",
       "display_en": "Dire wolf T2 · Uncommon",
-      "tier_id": "direwolf_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -14429,7 +13950,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -14737,43 +14257,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_2",
           "name_zh": "布法罗狼王",
           "name_en": "Buffalo alpha wolf",
-          "description_zh": "每个狼群不仅有一只雄性头狼，也有一只雌性头狼。",
-          "description_en": "Every wolf pack has not only an alpha male but also an alpha female.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_2_icon",
-          "icon_sprite": "direwolf_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_2",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_2.png",
-            "sha256": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_2_icon"
-          },
           "image_key": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd"
         }
       ],
-      "primary_skin_id": "direwolf_skin_2",
-      "primary_icon_sprite": "direwolf_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_2.png",
-        "sha256": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_2_icon"
-      },
       "image_key": "ee86fef32e63531e8301bccef28ce3bad44dc258fe7f3f7aea050ceb649e36fd",
       "numeric": {
         "summary": [
@@ -15418,7 +14904,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T3 · 普通",
       "display_en": "Dire wolf T3 · Common",
-      "tier_id": "direwolf_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -15441,7 +14926,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -15869,43 +15353,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_3",
           "name_zh": "西北头狼",
           "name_en": "Northwestern alpha wolf",
-          "description_zh": "头狼及其伴侣的幼崽，通常由整个狼群抚养长大。",
-          "description_en": "The cubs of the leader and his partner, are usually brought up by the entire pack.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_3_icon",
-          "icon_sprite": "direwolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-            "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_3_icon"
-          },
           "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3"
         }
       ],
-      "primary_skin_id": "direwolf_skin_3",
-      "primary_icon_sprite": "direwolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-        "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_3_icon"
-      },
       "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
       "numeric": {
         "summary": [
@@ -16810,7 +16260,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T3 · 优秀",
       "display_en": "Dire wolf T3 · Uncommon",
-      "tier_id": "direwolf_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -16833,7 +16282,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -17261,43 +16709,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_3",
           "name_zh": "西北头狼",
           "name_en": "Northwestern alpha wolf",
-          "description_zh": "头狼及其伴侣的幼崽，通常由整个狼群抚养长大。",
-          "description_en": "The cubs of the leader and his partner, are usually brought up by the entire pack.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_3_icon",
-          "icon_sprite": "direwolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-            "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_3_icon"
-          },
           "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3"
         }
       ],
-      "primary_skin_id": "direwolf_skin_3",
-      "primary_icon_sprite": "direwolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-        "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_3_icon"
-      },
       "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
       "numeric": {
         "summary": [
@@ -18202,7 +17616,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T3 · 稀有",
       "display_en": "Dire wolf T3 · Rare",
-      "tier_id": "direwolf_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -18225,7 +17638,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -18653,127 +18065,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_3",
           "name_zh": "西北头狼",
           "name_en": "Northwestern alpha wolf",
-          "description_zh": "头狼及其伴侣的幼崽，通常由整个狼群抚养长大。",
-          "description_en": "The cubs of the leader and his partner, are usually brought up by the entire pack.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_3_icon",
-          "icon_sprite": "direwolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-            "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_3_icon"
-          },
           "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3"
         },
         {
           "id": "direwolf_skin_easter_25",
           "name_zh": "白牙",
           "name_en": "White Fang",
-          "description_zh": "传说说它的深红色标记讲述了很久以前的战斗的故事",
-          "description_en": "Legends say its crimson markings tell the tales of battles long past",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_alaska_easter25_icon",
-          "icon_sprite": "wolf_alaska_easter25_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_alaska_pup_easter25_icon",
-          "avatar_id": "wls2_mob_direwolf_easter_25",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_easter_25",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_easter_25.png",
-            "sha256": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_alaska_easter25_icon"
-          },
           "image_key": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589"
         },
         {
           "id": "direwolf_green_aghanim",
           "name_zh": "翡翠 狼",
           "name_en": "Emerald wolf",
-          "description_zh": "忠诚的伙伴，被部落的幸运和保护的标志标记",
-          "description_en": "A loyal partner, marked by tribal signs of luck and protection",
-          "icon_path": "UI_WW_AlphaBinary09/direwolf_green_aghanim_icon",
-          "icon_sprite": "direwolf_green_aghanim_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_green_pup_aghanim_icon",
-          "avatar_id": "wls2_mob_direwolf_green_aghanim",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_green_aghanim",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_green_aghanim.png",
-            "sha256": "66c79a1daa4821fa3e4c6049c01f3dce2b313f830ffe3e20fc713543697395e5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "direwolf_green_aghanim_icon"
-          },
           "image_key": "66c79a1daa4821fa3e4c6049c01f3dce2b313f830ffe3e20fc713543697395e5"
         },
         {
           "id": "direwolf_skin_shadow",
           "name_zh": "暗影阿尔法狼",
           "name_en": "Shadow Alfa Wolf",
-          "description_zh": "它那发光的眼睛刺穿黑暗",
-          "description_en": "Its glowing eyes pierce the darkness",
-          "icon_path": "UI_WW_AlphaBinary11/direwolf_skin_shadow_icon",
-          "icon_sprite": "direwolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/direwolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_direwolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_direwolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_shadow.png",
-            "sha256": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "direwolf_skin_shadow_icon"
-          },
           "image_key": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a"
         }
       ],
-      "primary_skin_id": "direwolf_skin_3",
-      "primary_icon_sprite": "direwolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_3.png",
-        "sha256": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_3_icon"
-      },
       "image_key": "fbe70086c30a9e40f5eccc4dc3db788871dc6fc6c331891c1a0bbac60dc658c3",
       "numeric": {
         "summary": [
@@ -19678,7 +18990,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T4 · 普通",
       "display_en": "Dire wolf T4 · Common",
-      "tier_id": "direwolf_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -19701,7 +19012,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -20249,43 +19559,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_4",
           "name_zh": "黑狼王",
           "name_en": "Black alpha wolf",
-          "description_zh": "狼的听觉异常灵敏，远远超出人类的听觉范围。",
-          "description_en": "Wolves have extremely sensitive hearing, much above range of human hearing.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_4_icon",
-          "icon_sprite": "direwolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-            "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_4_icon"
-          },
           "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb"
         }
       ],
-      "primary_skin_id": "direwolf_skin_4",
-      "primary_icon_sprite": "direwolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-        "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_4_icon"
-      },
       "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
       "numeric": {
         "summary": [
@@ -21450,7 +20726,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T4 · 优秀",
       "display_en": "Dire wolf T4 · Uncommon",
-      "tier_id": "direwolf_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -21473,7 +20748,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -22021,43 +21295,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_4",
           "name_zh": "黑狼王",
           "name_en": "Black alpha wolf",
-          "description_zh": "狼的听觉异常灵敏，远远超出人类的听觉范围。",
-          "description_en": "Wolves have extremely sensitive hearing, much above range of human hearing.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_4_icon",
-          "icon_sprite": "direwolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-            "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_4_icon"
-          },
           "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb"
         }
       ],
-      "primary_skin_id": "direwolf_skin_4",
-      "primary_icon_sprite": "direwolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-        "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_4_icon"
-      },
       "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
       "numeric": {
         "summary": [
@@ -23222,7 +22462,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T4 · 稀有",
       "display_en": "Dire wolf T4 · Rare",
-      "tier_id": "direwolf_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -23245,7 +22484,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -23793,127 +23031,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_4",
           "name_zh": "黑狼王",
           "name_en": "Black alpha wolf",
-          "description_zh": "狼的听觉异常灵敏，远远超出人类的听觉范围。",
-          "description_en": "Wolves have extremely sensitive hearing, much above range of human hearing.",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_4_icon",
-          "icon_sprite": "direwolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-            "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_4_icon"
-          },
           "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb"
         },
         {
           "id": "direwolf_skin_easter_25",
           "name_zh": "白牙",
           "name_en": "White Fang",
-          "description_zh": "传说说它的深红色标记讲述了很久以前的战斗的故事",
-          "description_en": "Legends say its crimson markings tell the tales of battles long past",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_alaska_easter25_icon",
-          "icon_sprite": "wolf_alaska_easter25_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_alaska_pup_easter25_icon",
-          "avatar_id": "wls2_mob_direwolf_easter_25",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_easter_25",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_easter_25.png",
-            "sha256": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_alaska_easter25_icon"
-          },
           "image_key": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589"
         },
         {
           "id": "direwolf_green_aghanim",
           "name_zh": "翡翠 狼",
           "name_en": "Emerald wolf",
-          "description_zh": "忠诚的伙伴，被部落的幸运和保护的标志标记",
-          "description_en": "A loyal partner, marked by tribal signs of luck and protection",
-          "icon_path": "UI_WW_AlphaBinary09/direwolf_green_aghanim_icon",
-          "icon_sprite": "direwolf_green_aghanim_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_green_pup_aghanim_icon",
-          "avatar_id": "wls2_mob_direwolf_green_aghanim",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_green_aghanim",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_green_aghanim.png",
-            "sha256": "66c79a1daa4821fa3e4c6049c01f3dce2b313f830ffe3e20fc713543697395e5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "direwolf_green_aghanim_icon"
-          },
           "image_key": "66c79a1daa4821fa3e4c6049c01f3dce2b313f830ffe3e20fc713543697395e5"
         },
         {
           "id": "direwolf_skin_shadow",
           "name_zh": "暗影阿尔法狼",
           "name_en": "Shadow Alfa Wolf",
-          "description_zh": "它那发光的眼睛刺穿黑暗",
-          "description_en": "Its glowing eyes pierce the darkness",
-          "icon_path": "UI_WW_AlphaBinary11/direwolf_skin_shadow_icon",
-          "icon_sprite": "direwolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/direwolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_direwolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_direwolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_shadow.png",
-            "sha256": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "direwolf_skin_shadow_icon"
-          },
           "image_key": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a"
         }
       ],
-      "primary_skin_id": "direwolf_skin_4",
-      "primary_icon_sprite": "direwolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_4.png",
-        "sha256": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_4_icon"
-      },
       "image_key": "ac25b4456713c249ee7e3f743f09d10897264dda944092a9f7139a323c9a5abb",
       "numeric": {
         "summary": [
@@ -25078,7 +24216,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T5 · 普通",
       "display_en": "Dire wolf T5 · Common",
-      "tier_id": "direwolf_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -25101,7 +24238,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -25876,41 +25012,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-4"] = {
           "id": "direwolf_skin_5",
           "name_zh": "红狼王",
           "name_en": "Red alpha wolf",
-          "description_zh": "与被驯化的近亲：狗相比，狼的智力水平高于平均水平",
-          "description_en": "Wolves level of intelligence is above-average comparing with domesticated relatives — dogs",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_5_icon",
-          "icon_sprite": "direwolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-            "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_5_icon"
-          },
           "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45"
         }
       ],
-      "primary_skin_id": "direwolf_skin_5",
-      "primary_icon_sprite": "direwolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-        "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_5_icon"
-      },
       "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
       "numeric": {
         "summary": [

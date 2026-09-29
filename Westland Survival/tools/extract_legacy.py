@@ -14,6 +14,7 @@ import gzip
 import hashlib
 import json
 import re
+from player_schema import sanitize, build_manifest, find_unsafe
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +50,9 @@ def write_ui(relative: str, value: str) -> None:
 
 
 def write_data(relative: str, target: str, value, prefix: str = '') -> None:
+    value = sanitize(relative, value)
+    if find_unsafe(value):
+        raise ValueError('Unsupported technical metadata in player data: ' + relative)
     body = json.dumps(value, ensure_ascii=False, indent=2) + ';\n'
     write(relative, '/* Game archive data. See ../README.md for update instructions. */\n' + prefix + target + ' = ' + body)
 
@@ -256,7 +260,8 @@ def main():
         manifest['pages'].append({'file': name, 'before_bytes': len(original.encode('utf-8')), 'after_bytes': (ROOT / name).stat().st_size})
     manifest['unique_images'] = len({image['path'] for image in manifest['images']})
     manifest['image_references'] = len(manifest['images'])
-    write('wiki-assets/asset-manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
+    # Only the approved player schema and current file hashes enter the repository.
+    write('wiki-assets/asset-manifest.json', json.dumps(build_manifest(ROOT), ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'pages': manifest['pages'], 'data_blocks': len(manifest['data']), 'unique_images': manifest['unique_images'], 'image_references': manifest['image_references']}, ensure_ascii=True))
 
 

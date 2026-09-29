@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
   "records": [
     {
       "id": "wls2_consumable_pet_bait_wolfs_4",
-      "item_id": "wls2_consumable_pet_bait_wolfs_4",
       "name": "狼诱饵 IV",
       "name_en": "Wolf bait IV",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_wolfs_4_icon",
-      "image_id": "wls2_consumable_pet_bait_wolfs_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -55,24 +51,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_wolfs_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_wolfs_4_name",
-        "sorting_group": "pet_bait_wolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3369b88c88fc28cc72f065a546e5be1b3f115a30cd12a526bda24f74aed2a243"
     },
     {
       "id": "wls2_consumable_pet_bait_lynx_4",
-      "item_id": "wls2_consumable_pet_bait_lynx_4",
       "name": "山猫诱饵 IV",
       "name_en": "Lynx bait IV",
       "name_source": "official_zh",
@@ -83,12 +65,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_lynx_4_icon",
-      "image_id": "wls2_consumable_pet_bait_lynx_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -152,24 +131,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_lynx_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_lynx_4_name",
-        "sorting_group": "pet_bait_lynx",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "fd29cddc02f9551c845b483cc1948f3324817157a957e3ba3d1705012b8cf813"
     },
     {
       "id": "wls2_consumable_pet_bait_pumas_4",
-      "item_id": "wls2_consumable_pet_bait_pumas_4",
       "name": "美洲狮诱饵 IV",
       "name_en": "Puma bait IV",
       "name_source": "official_zh",
@@ -180,12 +145,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_pumas_4_icon",
-      "image_id": "wls2_consumable_pet_bait_pumas_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -224,24 +186,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_pumas_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_pumas_4_name",
-        "sorting_group": "pet_bait_pumas",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f35965b2cae37aced216a0635eb898f55c61d760dc2da3599ba853561105b831"
     },
     {
       "id": "wls2_consumable_pet_bait_universal_4",
-      "item_id": "wls2_consumable_pet_bait_universal_4",
       "name": "雷利的通用诱饵 IV",
       "name_en": "Railey's Universal Bait IV",
       "name_source": "official_zh",
@@ -252,12 +200,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_pet_bait_universal_4_icon",
-      "image_id": "wls2_consumable_pet_bait_universal_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -270,24 +215,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_universal_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_universal_4_name",
-        "sorting_group": "pet_bait_universal",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0966e17eb423f124de73f3a093434def4ff761f77f10ccf416ecbb8cb9498e58"
     },
     {
       "id": "wls2_consumable_pet_bait_boars_4",
-      "item_id": "wls2_consumable_pet_bait_boars_4",
       "name": "野猪诱饵IV",
       "name_en": "Boar bait IV",
       "name_source": "official_zh",
@@ -298,12 +229,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_pet_bait_boars_4_icon",
-      "image_id": "wls2_consumable_pet_bait_boars_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -347,24 +275,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_boars_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_boars_4_name",
-        "sorting_group": "pet_bait_boars",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8adb4562b76b22fbd3aef58509e549ad8969c28e7e8230f9f8cfe9621ca9c69d"
     },
     {
       "id": "wls2_consumable_mounts_fertility_restorer_5",
-      "item_id": "wls2_consumable_mounts_fertility_restorer_5",
       "name": "马匹神圣灵药",
       "name_en": "Equine sacred elixir",
       "name_source": "official_zh",
@@ -375,12 +289,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_mounts_fertility_restorer_5_icon",
-      "image_id": "wls2_consumable_mounts_fertility_restorer_5",
       "equipment_id": null,
       "stats": [
         {
@@ -406,19 +317,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_mounts_fertility_restorer_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_mounts_fertility_restorer_5_name",
-        "sorting_group": "horse_mounts_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "15f6431e5d21e5a350347b7f17821b46183d00193d3da666e79186552e3c9aba",
       "numeric": {
         "summary": [
@@ -447,7 +345,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_heal_5",
-      "item_id": "wls2_consumable_pet_heal_5",
       "name": "纯净疗愈饼干",
       "name_en": "Pure healing cracker",
       "name_source": "official_zh",
@@ -458,12 +355,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_heal_5_icon",
-      "image_id": "wls2_consumable_pet_heal_5",
       "equipment_id": null,
       "stats": [
         {
@@ -536,19 +430,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_heal_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_heal_5_name",
-        "sorting_group": "pet_heal",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "395db8a5432987ddd927069df7e399a2b5cf93b7a02bbd77f91477a262ca057c",
       "numeric": {
         "summary": [
@@ -570,7 +451,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pets_fertility_restorer_5",
-      "item_id": "wls2_consumable_pets_fertility_restorer_5",
       "name": "宠物圣丹",
       "name_en": "Pets sacred elixir",
       "name_source": "official_zh",
@@ -581,12 +461,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_pets_fertility_restorer_5",
-      "image_id": "wls2_consumable_pets_fertility_restorer_5",
       "equipment_id": null,
       "stats": [
         {
@@ -612,19 +489,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pets_fertility_restorer_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_pets_fertility_restorer_5_name",
-        "sorting_group": "pets_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "fd6cc3bcefaaa27f255a4a44198c17540adac961be668b1f985d056fa8382683",
       "numeric": {
         "summary": [
@@ -653,7 +517,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_bait_direwolfs_5",
-      "item_id": "wls2_consumable_pet_bait_direwolfs_5",
       "name": "头狼诱饵 V",
       "name_en": "Alpha wolf bait V",
       "name_source": "official_zh",
@@ -664,12 +527,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_direwolfs_5_icon",
-      "image_id": "wls2_consumable_pet_bait_direwolfs_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -708,24 +568,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_direwolfs_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_direwolfs_5_name",
-        "sorting_group": "pet_bait_direwolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9fa16c74bda5637cd1c0f427f826e2c9e513d63d0eb01513485ce94152f2821d"
     },
     {
       "id": "wls2_consumable_pet_bait_bears_5",
-      "item_id": "wls2_consumable_pet_bait_bears_5",
       "name": "熊诱饵 V",
       "name_en": "Bear bait V",
       "name_source": "official_zh",
@@ -736,12 +582,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_bears_5_icon",
-      "image_id": "wls2_consumable_pet_bait_bears_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -785,24 +628,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_bears_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_bears_5_name",
-        "sorting_group": "pet_bait_bears",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cf045d4588eb0c3f0388a07a19c273c3e21ebadcd8a22749ed5c1d3868790eb4"
     },
     {
       "id": "wls2_consumable_pet_bait_wolfs_5",
-      "item_id": "wls2_consumable_pet_bait_wolfs_5",
       "name": "狼诱饵 V",
       "name_en": "Wolf bait V",
       "name_source": "official_zh",
@@ -813,12 +642,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_wolfs_5_icon",
-      "image_id": "wls2_consumable_pet_bait_wolfs_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -852,24 +678,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_wolfs_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_wolfs_5_name",
-        "sorting_group": "pet_bait_wolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "7ab932b0d64cb8bee2477b78a63c9d6fe042dc37f7520f60ac1a8ae5bc0dc0a2"
     },
     {
       "id": "wls2_consumable_pet_bait_lynx_5",
-      "item_id": "wls2_consumable_pet_bait_lynx_5",
       "name": "山猫诱饵 V",
       "name_en": "Lynx bait V",
       "name_source": "official_zh",
@@ -880,12 +692,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_lynx_5_icon",
-      "image_id": "wls2_consumable_pet_bait_lynx_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -924,24 +733,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_lynx_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_lynx_5_name",
-        "sorting_group": "pet_bait_lynx",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0b9f7b46900e8b0441129d7c89d61aa395756826808025bbbb5171590026f3e2"
     },
     {
       "id": "wls2_consumable_pet_bait_pumas_5",
-      "item_id": "wls2_consumable_pet_bait_pumas_5",
       "name": "美洲狮诱饵 V",
       "name_en": "Puma bait V",
       "name_source": "official_zh",
@@ -952,12 +747,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_pumas_5_icon",
-      "image_id": "wls2_consumable_pet_bait_pumas_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -996,24 +788,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_pumas_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_pumas_5_name",
-        "sorting_group": "pet_bait_pumas",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f8ba65b723924a23455385d682eef49d934c03d4fc65cbc49d70ac933c19cab4"
     },
     {
       "id": "wls2_consumable_pet_bait_universal_5",
-      "item_id": "wls2_consumable_pet_bait_universal_5",
       "name": "雷利的通用诱饵五",
       "name_en": "Railey's Universal Bait V",
       "name_source": "official_zh",
@@ -1024,12 +802,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_pet_bait_universal_5_icon",
-      "image_id": "wls2_consumable_pet_bait_universal_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1042,24 +817,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_universal_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_universal_5_name",
-        "sorting_group": "pet_bait_universal",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "04f6fc0f169cbc62712c40e63d1f34d8cb45ecd2d51f4a50d8715ec4979b9aa9"
     },
     {
       "id": "wls2_consumable_pet_bait_elite_crocodiles_5",
-      "item_id": "wls2_consumable_pet_bait_elite_crocodiles_5",
       "name": "短吻鳄诱饵",
       "name_en": "Alligator bait",
       "name_source": "official_zh",
@@ -1070,12 +831,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_pet_bait_crocodiles_5_icon",
-      "image_id": "wls2_consumable_pet_bait_elite_crocodiles_5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1119,24 +877,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_elite_crocodiles_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_crocodiles_5_name",
-        "sorting_group": "pet_bait_crocodiles",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5ceb240c2d1c85cd3b3e630fcd45013a778f19181bb22ea0869bdb778d95d5d0"
     },
     {
       "id": "wls2_consumable_mounts_fertility_restorer_6",
-      "item_id": "wls2_consumable_mounts_fertility_restorer_6",
       "name": "马极地灵药",
       "name_en": "Equine polar elixir",
       "name_source": "official_zh",
@@ -1147,12 +891,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_mounts_fertility_restorer_6_icon",
-      "image_id": "wls2_consumable_mounts_fertility_restorer_6",
       "equipment_id": null,
       "stats": [
         {
@@ -1178,19 +919,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_mounts_fertility_restorer_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_mounts_fertility_restorer_6_name",
-        "sorting_group": "horse_mounts_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "32a58edf7b048831f9f689e376320a9221bfc47eb7590281dd8d83994ecd205f",
       "numeric": {
         "summary": [
@@ -1219,7 +947,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_heal_6",
-      "item_id": "wls2_consumable_pet_heal_6",
       "name": "特效疗愈饼干",
       "name_en": "Special healing cracker",
       "name_source": "official_zh",
@@ -1230,12 +957,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_heal_6_icon",
-      "image_id": "wls2_consumable_pet_heal_6",
       "equipment_id": null,
       "stats": [
         {
@@ -1286,19 +1010,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_heal_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_heal_6_name",
-        "sorting_group": "pet_heal",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "58aee5ff84377c7b674a9f4efd3a68bbe7dad3fbca91f1d8c8a939efaa804d93",
       "numeric": {
         "summary": [
@@ -1320,7 +1031,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pets_fertility_restorer_6",
-      "item_id": "wls2_consumable_pets_fertility_restorer_6",
       "name": "宠物 极地 灵药",
       "name_en": "Pets polar elixir",
       "name_source": "official_zh",
@@ -1331,12 +1041,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_pets_fertility_restorer_6",
-      "image_id": "wls2_consumable_pets_fertility_restorer_6",
       "equipment_id": null,
       "stats": [
         {
@@ -1362,19 +1069,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pets_fertility_restorer_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_pets_fertility_restorer_6_name",
-        "sorting_group": "pets_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "56293186af004961cf9c044eecba3708276c04acac3d17eb5f6d4f8a1325b264",
       "numeric": {
         "summary": [
@@ -1403,7 +1097,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_bait_direwolfs_6",
-      "item_id": "wls2_consumable_pet_bait_direwolfs_6",
       "name": "阿尔法狼诱饵 VI",
       "name_en": "Alpha wolf bait VI",
       "name_source": "official_zh",
@@ -1414,12 +1107,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_bait_direwolfs_6_icon",
-      "image_id": "wls2_consumable_pet_bait_direwolfs_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1458,24 +1148,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_direwolfs_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_direwolfs_6_name",
-        "sorting_group": "pet_bait_direwolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2c42be8237e7b3684e2066e3099e9a5a30bd67d40295030e669d4373f5c57d10"
     },
     {
       "id": "wls2_consumable_pet_bait_bears_6",
-      "item_id": "wls2_consumable_pet_bait_bears_6",
       "name": "熊诱饵VI",
       "name_en": "Bear bait VI",
       "name_source": "official_zh",
@@ -1486,12 +1162,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_bait_bears_6_icon",
-      "image_id": "wls2_consumable_pet_bait_bears_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1535,24 +1208,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_bears_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_bears_6_name",
-        "sorting_group": "pet_bait_bears",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e508b2edfef3434a4effbfce135ab04c50d06a081dae9d6f4b66e62946c7bb6d"
     },
     {
       "id": "wls2_consumable_pet_bait_wolfs_6",
-      "item_id": "wls2_consumable_pet_bait_wolfs_6",
       "name": "狼诱饵 VI",
       "name_en": "Wolf bait VI",
       "name_source": "official_zh",
@@ -1563,12 +1222,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_bait_wolfs_6_icon",
-      "image_id": "wls2_consumable_pet_bait_wolfs_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1602,24 +1258,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_wolfs_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_wolfs_6_name",
-        "sorting_group": "pet_bait_wolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "78b129c24b5157afb02cdd86e17e22097a91856b4a48f0044acbaf22939e1441"
     },
     {
       "id": "wls2_consumable_pet_bait_lynx_6",
-      "item_id": "wls2_consumable_pet_bait_lynx_6",
       "name": "猞猁诱饵VI",
       "name_en": "Lynx bait VI",
       "name_source": "official_zh",
@@ -1630,12 +1272,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_bait_lynx_6_icon",
-      "image_id": "wls2_consumable_pet_bait_lynx_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1674,24 +1313,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_lynx_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_lynx_6_name",
-        "sorting_group": "pet_bait_lynx",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6b376a871d44a0d0a78ae85fcbafcc12e29d7ff7579933689d26ce00931ed884"
     },
     {
       "id": "wls2_consumable_pet_bait_pumas_6",
-      "item_id": "wls2_consumable_pet_bait_pumas_6",
       "name": "彪马诱饵 VI",
       "name_en": "Puma bait VI",
       "name_source": "official_zh",
@@ -1702,12 +1327,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_pet_bait_pumas_6_icon",
-      "image_id": "wls2_consumable_pet_bait_pumas_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1746,24 +1368,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_pumas_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_pumas_6_name",
-        "sorting_group": "pet_bait_pumas",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e7971744d90e0a08a532036a1566f3503c654e88d12f7fc926fb45f52d375034"
     },
     {
       "id": "wls2_consumable_pet_bait_universal_6",
-      "item_id": "wls2_consumable_pet_bait_universal_6",
       "name": "雷利的通用诱饵六",
       "name_en": "Railey's Universal Bait VI",
       "name_source": "official_zh",
@@ -1774,12 +1382,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_pet_bait_universal_6_icon",
-      "image_id": "wls2_consumable_pet_bait_universal_6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1792,24 +1397,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_universal_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_universal_6_name",
-        "sorting_group": "pet_bait_universal",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "54620844336f6dfe4c7abff9336a6d0f91720fb873de1e271d26206da5112fb2"
     },
     {
       "id": "wls2_consumable_mounts_fertility_restorer_7",
-      "item_id": "wls2_consumable_mounts_fertility_restorer_7",
       "name": "马的终极灵药",
       "name_en": "Equine ultimate elixir",
       "name_source": "official_zh",
@@ -1820,12 +1411,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_mounts_fertility_restorer_7_icon",
-      "image_id": "wls2_consumable_mounts_fertility_restorer_7",
       "equipment_id": null,
       "stats": [
         {
@@ -1851,19 +1439,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_mounts_fertility_restorer_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_mounts_fertility_restorer_7_name",
-        "sorting_group": "horse_mounts_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "04000b020808ed59b3bd923ab0a0dafd74d5ff0aa419a7057694df95fac5e35f",
       "numeric": {
         "summary": [
@@ -1892,7 +1467,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_heal_7",
-      "item_id": "wls2_consumable_pet_heal_7",
       "name": "鼠尾草治疗饼干",
       "name_en": "Sage healing cracker",
       "name_source": "official_zh",
@@ -1903,12 +1477,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_heal_7_icon",
-      "image_id": "wls2_consumable_pet_heal_7",
       "equipment_id": null,
       "stats": [
         {
@@ -1959,19 +1530,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_heal_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_heal_7_name",
-        "sorting_group": "pet_heal",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3958a83f9520990623a5963349478068a4ea158ab1a02e0d6a6607592372ae94",
       "numeric": {
         "summary": [
@@ -1993,7 +1551,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pets_fertility_restorer_7",
-      "item_id": "wls2_consumable_pets_fertility_restorer_7",
       "name": "宠物终极灵药",
       "name_en": "Pets ultimate elixir",
       "name_source": "official_zh",
@@ -2004,12 +1561,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pets_fertility_restorer_6",
-      "image_id": "wls2_consumable_pets_fertility_restorer_7",
       "equipment_id": null,
       "stats": [
         {
@@ -2035,19 +1589,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pets_fertility_restorer_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_wls2_consumable_pets_fertility_restorer_7_name",
-        "sorting_group": "pets_fertility",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e9e5b1a1653c3553361139121ba536741aa671d60d5e1223902136909711848e",
       "numeric": {
         "summary": [
@@ -2076,7 +1617,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_pet_bait_direwolfs_7",
-      "item_id": "wls2_consumable_pet_bait_direwolfs_7",
       "name": "头狼诱饵 VII",
       "name_en": "Alpha wolf bait VII",
       "name_source": "official_zh",
@@ -2087,12 +1627,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_direwolfs_7",
-      "image_id": "wls2_consumable_pet_bait_direwolfs_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2131,24 +1668,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_direwolfs_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_direwolfs_7_name",
-        "sorting_group": "pet_bait_direwolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1f7f0b638c18efc41ca2c4af6e08b70882488a74067e3ad325e134c3d570082a"
     },
     {
       "id": "wls2_consumable_pet_bait_bears_7",
-      "item_id": "wls2_consumable_pet_bait_bears_7",
       "name": "熊诱饵 VII",
       "name_en": "Bear bait VII",
       "name_source": "official_zh",
@@ -2159,12 +1682,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_bears_7",
-      "image_id": "wls2_consumable_pet_bait_bears_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2208,24 +1728,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_bears_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_bears_7_name",
-        "sorting_group": "pet_bait_bears",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "07244b85e3eefb9be09b76cc17c9a9223f83bf73757921767c22dbf92bd84aab"
     },
     {
       "id": "wls2_consumable_pet_bait_wolfs_7",
-      "item_id": "wls2_consumable_pet_bait_wolfs_7",
       "name": "狼诱饵 VII",
       "name_en": "Wolf bait VII",
       "name_source": "official_zh",
@@ -2236,12 +1742,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_wolfs_7",
-      "image_id": "wls2_consumable_pet_bait_wolfs_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2280,24 +1783,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_wolfs_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_wolfs_7_name",
-        "sorting_group": "pet_bait_wolfs",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "338ba1f27dc5d0219d3573af9d745a39ab376e73374a8e58fd2b67026198af1b"
     },
     {
       "id": "wls2_consumable_pet_bait_lynx_7",
-      "item_id": "wls2_consumable_pet_bait_lynx_7",
       "name": "山猫诱饵 VII",
       "name_en": "Lynx bait VII",
       "name_source": "official_zh",
@@ -2308,12 +1797,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_lynx_7",
-      "image_id": "wls2_consumable_pet_bait_lynx_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2352,24 +1838,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_lynx_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_lynx_7_name",
-        "sorting_group": "pet_bait_lynx",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "252093a758a61f39a1e85dd8521ae0e6cd98d1a0e9707690b7aa585b9f7effbf"
     },
     {
       "id": "wls2_consumable_pet_bait_pumas_7",
-      "item_id": "wls2_consumable_pet_bait_pumas_7",
       "name": "美洲狮诱饵 VII",
       "name_en": "Puma bait VII",
       "name_source": "official_zh",
@@ -2380,12 +1852,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_pumas_7",
-      "image_id": "wls2_consumable_pet_bait_pumas_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2424,24 +1893,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_pumas_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_pumas_7_name",
-        "sorting_group": "pet_bait_pumas",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "de902a0bc305baa60f3d2ac7e7fc3d38ac99573e804f40790cef957b90221d12"
     },
     {
       "id": "wls2_consumable_pet_bait_universal_7",
-      "item_id": "wls2_consumable_pet_bait_universal_7",
       "name": "雷利的通用诱饵7",
       "name_en": "Railey's Universal Bait VII",
       "name_source": "official_zh",
@@ -2452,12 +1907,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_universal_7_icon",
-      "image_id": "wls2_consumable_pet_bait_universal_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2470,24 +1922,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_universal_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_universal_7_name",
-        "sorting_group": "pet_bait_universal",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1314ae42d7cb55c2950e2717b82e3a8fbb8e84930dca83ad61161eb837a830ba"
     },
     {
       "id": "wls2_consumable_pet_bait_boars_7",
-      "item_id": "wls2_consumable_pet_bait_boars_7",
       "name": "野猪诱饵VII",
       "name_en": "Boar bait VII",
       "name_source": "official_zh",
@@ -2498,12 +1936,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pet_bait_boars_7_icon",
-      "image_id": "wls2_consumable_pet_bait_boars_7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2547,24 +1982,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pet_bait_boars_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pet_bait_boars_7_name",
-        "sorting_group": "pet_bait_boars",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0da2e5a2888122fa9c047cee2f191fcd90369ce9544c2b5e88eeab8b15590a3c"
     },
     {
       "id": "wls2_consumable_repair_kit_1_epic",
-      "item_id": "wls2_consumable_repair_kit_1_epic",
       "name": "铜修理工具包",
       "name_en": "Copper repair kit",
       "name_source": "official_zh",
@@ -2575,12 +1996,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 1,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_1",
-      "image_id": "wls2_consumable_repair_kit_1_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2600,19 +2018,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_1_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_1_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3ed48bdea5bf7363f7eeea0f887f3326c6c416243e094d8225ff96274022e198",
       "numeric": {
         "summary": [
@@ -2634,7 +2039,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_1_rare",
-      "item_id": "wls2_consumable_repair_kit_1_rare",
       "name": "铜修理工具包",
       "name_en": "Copper repair kit",
       "name_source": "official_zh",
@@ -2645,12 +2049,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_1",
-      "image_id": "wls2_consumable_repair_kit_1_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2670,19 +2071,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_1_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_1_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3ed48bdea5bf7363f7eeea0f887f3326c6c416243e094d8225ff96274022e198",
       "numeric": {
         "summary": [
@@ -2704,7 +2092,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_2_epic",
-      "item_id": "wls2_consumable_repair_kit_2_epic",
       "name": "青铜修理工具包",
       "name_en": "Bronze repair kit",
       "name_source": "official_zh",
@@ -2715,12 +2102,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 2,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_2",
-      "image_id": "wls2_consumable_repair_kit_2_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2740,19 +2124,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_2_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_2_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "72c4af71d3ace5151284b4e8f1025dd759fcffef3384ecd9f6701bc845482090",
       "numeric": {
         "summary": [
@@ -2774,7 +2145,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_2_rare",
-      "item_id": "wls2_consumable_repair_kit_2_rare",
       "name": "青铜修理工具包",
       "name_en": "Bronze repair kit",
       "name_source": "official_zh",
@@ -2785,12 +2155,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_2",
-      "image_id": "wls2_consumable_repair_kit_2_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2810,19 +2177,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_2_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_2_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "72c4af71d3ace5151284b4e8f1025dd759fcffef3384ecd9f6701bc845482090",
       "numeric": {
         "summary": [
@@ -2844,7 +2198,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_3_epic",
-      "item_id": "wls2_consumable_repair_kit_3_epic",
       "name": "铁修理工具包",
       "name_en": "Iron repair kit",
       "name_source": "official_zh",
@@ -2855,12 +2208,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_3",
-      "image_id": "wls2_consumable_repair_kit_3_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2880,19 +2230,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_3_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_3_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cefce3294641f9bab75291c6f8b3898311243642fc64df20fa062f54ff817bdd",
       "numeric": {
         "summary": [
@@ -2914,7 +2251,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_3_rare",
-      "item_id": "wls2_consumable_repair_kit_3_rare",
       "name": "铁修理工具包",
       "name_en": "Iron repair kit",
       "name_source": "official_zh",
@@ -2925,12 +2261,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 3,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_3",
-      "image_id": "wls2_consumable_repair_kit_3_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2950,19 +2283,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_3_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_3_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cefce3294641f9bab75291c6f8b3898311243642fc64df20fa062f54ff817bdd",
       "numeric": {
         "summary": [
@@ -2984,7 +2304,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_4_epic",
-      "item_id": "wls2_consumable_repair_kit_4_epic",
       "name": "钢修理工具包",
       "name_en": "Steel repair kit",
       "name_source": "official_zh",
@@ -2995,12 +2314,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_4",
-      "image_id": "wls2_consumable_repair_kit_4_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3020,19 +2336,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_4_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_4_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a0177e5138c34c483c84834b0d8fbe7073c4ddc19d6b7964641307c77b29aa24",
       "numeric": {
         "summary": [
@@ -3054,7 +2357,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_4_rare",
-      "item_id": "wls2_consumable_repair_kit_4_rare",
       "name": "钢修理工具包",
       "name_en": "Steel repair kit",
       "name_source": "official_zh",
@@ -3065,12 +2367,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_4",
-      "image_id": "wls2_consumable_repair_kit_4_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3090,19 +2389,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_4_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_4_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a0177e5138c34c483c84834b0d8fbe7073c4ddc19d6b7964641307c77b29aa24",
       "numeric": {
         "summary": [
@@ -3124,7 +2410,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_5_epic",
-      "item_id": "wls2_consumable_repair_kit_5_epic",
       "name": "镍修理工具包",
       "name_en": "Nickel-plated repair kit",
       "name_source": "official_zh",
@@ -3135,12 +2420,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_5",
-      "image_id": "wls2_consumable_repair_kit_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3160,19 +2442,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_5_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_5_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a5a20108ae0d7e2741f1d273ef79aab66edb1570b5acf7e3080bfe74d63c62e1",
       "numeric": {
         "summary": [
@@ -3194,7 +2463,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_5_rare",
-      "item_id": "wls2_consumable_repair_kit_5_rare",
       "name": "镍修理工具包",
       "name_en": "Nickel-plated repair kit",
       "name_source": "official_zh",
@@ -3205,12 +2473,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_consumable_repair_tools_5",
-      "image_id": "wls2_consumable_repair_kit_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3230,19 +2495,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_5_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_5_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a5a20108ae0d7e2741f1d273ef79aab66edb1570b5acf7e3080bfe74d63c62e1",
       "numeric": {
         "summary": [
@@ -3264,7 +2516,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_6_epic",
-      "item_id": "wls2_consumable_repair_kit_6_epic",
       "name": "钨修理工具组",
       "name_en": "Tungsten repair kit",
       "name_source": "official_zh",
@@ -3275,12 +2526,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_repair_tools_6",
-      "image_id": "wls2_consumable_repair_kit_6_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3300,19 +2548,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_6_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_6_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "fb7b08aa1d406deff400e0f6982824bb7eb1710e6c229c12e3f76cebd8d4ad8a",
       "numeric": {
         "summary": [
@@ -3334,7 +2569,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_6_rare",
-      "item_id": "wls2_consumable_repair_kit_6_rare",
       "name": "钨修理工具包",
       "name_en": "Tungsten repair kit",
       "name_source": "official_zh",
@@ -3345,12 +2579,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_repair_tools_6",
-      "image_id": "wls2_consumable_repair_kit_6_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3370,19 +2601,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_6_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_6_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "fb7b08aa1d406deff400e0f6982824bb7eb1710e6c229c12e3f76cebd8d4ad8a",
       "numeric": {
         "summary": [
@@ -3404,7 +2622,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_7_epic",
-      "item_id": "wls2_consumable_repair_kit_7_epic",
       "name": "钼修理套件",
       "name_en": "Molybdenum repair kit",
       "name_source": "official_zh",
@@ -3415,12 +2632,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_repair_tools_7",
-      "image_id": "wls2_consumable_repair_kit_7_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3440,19 +2654,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_7_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_epic_7_name",
-        "sorting_group": "repair_kits_epic",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4c71f1ddf9483f463959430aca668914cb90c880deb357573753c9d2fe57d28",
       "numeric": {
         "summary": [
@@ -3474,7 +2675,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_consumable_repair_kit_7_rare",
-      "item_id": "wls2_consumable_repair_kit_7_rare",
       "name": "钼修理套件",
       "name_en": "Molybdenum repair kit",
       "name_source": "official_zh",
@@ -3485,12 +2685,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_repair_tools_7",
-      "image_id": "wls2_consumable_repair_kit_7_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3510,19 +2707,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_repair_kit_7_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_repair_kit_7_name",
-        "sorting_group": "repair_kits_rare",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4c71f1ddf9483f463959430aca668914cb90c880deb357573753c9d2fe57d28",
       "numeric": {
         "summary": [
@@ -3544,7 +2728,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
     },
     {
       "id": "wls2_lootbox_blueprint_custom_caravan",
-      "item_id": "wls2_lootbox_blueprint_custom_caravan",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3555,12 +2738,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_caravan",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3579,24 +2759,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_caravan",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_enemybase",
-      "item_id": "wls2_lootbox_blueprint_custom_enemybase",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3607,12 +2773,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_enemybase",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3631,24 +2794,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_enemybase",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_uncommon_t1",
-      "item_id": "wls2_lootbox_blueprint_custom_uncommon_t1",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3659,12 +2808,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_uncommon_t1",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3683,24 +2829,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_uncommon_t1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_uncommon_t2",
-      "item_id": "wls2_lootbox_blueprint_custom_uncommon_t2",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3711,12 +2843,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_uncommon_t2",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3735,24 +2864,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_uncommon_t2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_uncommon_t3",
-      "item_id": "wls2_lootbox_blueprint_custom_uncommon_t3",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3763,12 +2878,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_uncommon_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3787,24 +2899,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_uncommon_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_uncommon_t4",
-      "item_id": "wls2_lootbox_blueprint_custom_uncommon_t4",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3815,12 +2913,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_uncommon_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3839,24 +2934,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_uncommon_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_uncommon_t5",
-      "item_id": "wls2_lootbox_blueprint_custom_uncommon_t5",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3867,12 +2948,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_uncommon_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3891,24 +2969,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_uncommon_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_uncommon",
-      "item_id": "wls2_lootbox_blueprint_uncommon",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3919,12 +2983,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_uncommon",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3980,24 +3041,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": true
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_xmas2020_lootbox_blueprint",
-      "item_id": "wls2_xmas2020_lootbox_blueprint",
       "name": "冬季节日圆筒",
       "name_en": "Winter fest tube",
       "name_source": "official_zh",
@@ -4008,12 +3055,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_xmas2020_lootbox_blueprint",
-      "image_id": "wls2_xmas2020_lootbox_blueprint",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4032,24 +3076,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_xmas2020_lootbox_blueprint",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_xmas2020_lootbox_blueprint_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf5a7db4569be3c348cf9723773ed3c27668af65e89004aa9f16701d7375aa19"
     },
     {
       "id": "wls2_xmas2020_lootbox_blueprint_fixed",
-      "item_id": "wls2_xmas2020_lootbox_blueprint_fixed",
       "name": "冬季节日圆筒",
       "name_en": "Winter fest tube",
       "name_source": "official_zh",
@@ -4060,12 +3090,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_xmas2020_lootbox_blueprint",
-      "image_id": "wls2_xmas2020_lootbox_blueprint_fixed",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4084,24 +3111,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_xmas2020_lootbox_blueprint_fixed",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_xmas2020_lootbox_blueprint_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf5a7db4569be3c348cf9723773ed3c27668af65e89004aa9f16701d7375aa19"
     },
     {
       "id": "wls2_lootbox_blueprint_backpack_indian",
-      "item_id": "wls2_lootbox_blueprint_backpack_indian",
       "name": "印第安圆筒",
       "name_en": "Indigenous tube",
       "name_source": "official_zh",
@@ -4112,12 +3125,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_injun_backpack_icon",
-      "image_id": "wls2_lootbox_blueprint_backpack_indian",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4136,24 +3146,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_backpack_indian",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_blueprint_backpack_indian_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ee76b797785297a5426365a927c3736cd6fceb103bd705b6b5549283b3d7a1a8"
     },
     {
       "id": "wls2_lootbox_blueprint_epic",
-      "item_id": "wls2_lootbox_blueprint_epic",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -4164,12 +3160,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4188,24 +3181,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_epic_custom_t3_body",
-      "item_id": "wls2_lootbox_blueprint_epic_custom_t3_body",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -4216,12 +3195,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic_custom_t3_body",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4240,24 +3216,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_custom_t3_body",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_epic_custom_t3_boots",
-      "item_id": "wls2_lootbox_blueprint_epic_custom_t3_boots",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -4268,12 +3230,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic_custom_t3_boots",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4292,24 +3251,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_custom_t3_boots",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_epic_custom_t3_head",
-      "item_id": "wls2_lootbox_blueprint_epic_custom_t3_head",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -4320,12 +3265,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic_custom_t3_head",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4344,24 +3286,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_custom_t3_head",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_epic_custom_t3_knife",
-      "item_id": "wls2_lootbox_blueprint_epic_custom_t3_knife",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -4372,12 +3300,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic_custom_t3_knife",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4396,19 +3321,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-20"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_custom_t3_knife",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     }
   ]

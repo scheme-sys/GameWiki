@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T5 · 普通",
       "display_en": "Boar T5 · Common",
-      "tier_id": "boar_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -696,73 +694,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -2187,7 +2127,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T5 · 优秀",
       "display_en": "Boar T5 · Uncommon",
-      "tier_id": "boar_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -2210,7 +2149,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -2871,73 +2809,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -4362,7 +4242,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T5 · 稀有",
       "display_en": "Boar T5 · Rare",
-      "tier_id": "boar_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -4385,7 +4264,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -5046,73 +4924,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -6537,7 +6357,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T5 · 史诗",
       "display_en": "Boar T5 · Epic",
-      "tier_id": "boar_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -6560,7 +6379,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -7221,73 +7039,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -8712,7 +8472,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T6 · 普通",
       "display_en": "Boar T6 · Common",
-      "tier_id": "boar_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -8735,7 +8494,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -9516,73 +9274,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -11267,7 +10967,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T6 · 优秀",
       "display_en": "Boar T6 · Uncommon",
-      "tier_id": "boar_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -11290,7 +10989,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -12071,73 +11769,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -13822,7 +13462,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T6 · 稀有",
       "display_en": "Boar T6 · Rare",
-      "tier_id": "boar_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -13845,7 +13484,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -14626,73 +14264,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -16377,7 +15957,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T6 · 史诗",
       "display_en": "Boar T6 · Epic",
-      "tier_id": "boar_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -16400,7 +15979,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -17181,73 +16759,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -18932,7 +18452,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T7 · 普通",
       "display_en": "Boar T7 · Common",
-      "tier_id": "boar_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -18955,7 +18474,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -19856,103 +19374,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         },
         {
           "id": "boar_skin_7",
           "name_zh": "猪鹿",
           "name_en": "Peccary",
-          "description_zh": "沙漠出生和仙人掌喂养，猪鹿的建造是为了生存",
-          "description_en": "Desert-born and cactus-fed, the peccary's built to survive.",
-          "icon_path": "UI_WW_AlphaBinary09/boar_T7_icon",
-          "icon_sprite": "boar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/boar_piglet_T7_icon",
-          "avatar_id": "wls2_mob_animal_boar_7",
-          "child_avatar_view_id": "wls2_pet_boar_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_7.png",
-            "sha256": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "boar_T7_icon"
-          },
           "image_key": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -21897,7 +21333,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T7 · 优秀",
       "display_en": "Boar T7 · Uncommon",
-      "tier_id": "boar_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -21920,7 +21355,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -22821,103 +22255,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         },
         {
           "id": "boar_skin_7",
           "name_zh": "猪鹿",
           "name_en": "Peccary",
-          "description_zh": "沙漠出生和仙人掌喂养，猪鹿的建造是为了生存",
-          "description_en": "Desert-born and cactus-fed, the peccary's built to survive.",
-          "icon_path": "UI_WW_AlphaBinary09/boar_T7_icon",
-          "icon_sprite": "boar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/boar_piglet_T7_icon",
-          "avatar_id": "wls2_mob_animal_boar_7",
-          "child_avatar_view_id": "wls2_pet_boar_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_7.png",
-            "sha256": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "boar_T7_icon"
-          },
           "image_key": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -24862,7 +24214,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T7 · 稀有",
       "display_en": "Boar T7 · Rare",
-      "tier_id": "boar_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -24885,7 +24236,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -25786,103 +25136,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         },
         {
           "id": "boar_skin_7",
           "name_zh": "猪鹿",
           "name_en": "Peccary",
-          "description_zh": "沙漠出生和仙人掌喂养，猪鹿的建造是为了生存",
-          "description_en": "Desert-born and cactus-fed, the peccary's built to survive.",
-          "icon_path": "UI_WW_AlphaBinary09/boar_T7_icon",
-          "icon_sprite": "boar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/boar_piglet_T7_icon",
-          "avatar_id": "wls2_mob_animal_boar_7",
-          "child_avatar_view_id": "wls2_pet_boar_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_7.png",
-            "sha256": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "boar_T7_icon"
-          },
           "image_key": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -27827,7 +27095,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Boar",
       "display_zh": "野猪 T7 · 史诗",
       "display_en": "Boar T7 · Epic",
-      "tier_id": "boar_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -27850,7 +27117,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -28751,103 +28017,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "boar_skin_1",
           "name_zh": "野猪",
           "name_en": "Wild pig",
-          "description_zh": "野猪喜欢在泥坑里打滚。",
-          "description_en": "Wild pigs adore wallowing in mud pits.",
-          "icon_path": "UI_WW_AlphaBinary06/boar_skin_1_icon",
-          "icon_sprite": "boar_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_1",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-            "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "boar_skin_1_icon"
-          },
           "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498"
         },
         {
           "id": "boar_skin_4",
           "name_zh": "野猪",
           "name_en": "Wild boar",
-          "description_zh": "一头凶猛的野猪，是家猪的远祖",
-          "description_en": "A fierce wild boar, a distant ancestor of the domestic pig",
-          "icon_path": "UI_WW_AlphaBinary07/boar_skin_2_icon",
-          "icon_sprite": "boar_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/boar_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_boar_4",
-          "child_avatar_view_id": "wls2_pet_boar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_4.png",
-            "sha256": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "boar_skin_2_icon"
-          },
           "image_key": "1570330ad2bde13c0413385059e62d07ed1063000f24738ab31367a121f19da3"
         },
         {
           "id": "boar_skin_7",
           "name_zh": "猪鹿",
           "name_en": "Peccary",
-          "description_zh": "沙漠出生和仙人掌喂养，猪鹿的建造是为了生存",
-          "description_en": "Desert-born and cactus-fed, the peccary's built to survive.",
-          "icon_path": "UI_WW_AlphaBinary09/boar_T7_icon",
-          "icon_sprite": "boar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/boar_piglet_T7_icon",
-          "avatar_id": "wls2_mob_animal_boar_7",
-          "child_avatar_view_id": "wls2_pet_boar_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/boar_skin_7.png",
-            "sha256": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "boar_T7_icon"
-          },
           "image_key": "7292cde498ace7201672aa595a329546ef93da0112ff55c81b28baf3fd43fa02"
         }
       ],
-      "primary_skin_id": "boar_skin_1",
-      "primary_icon_sprite": "boar_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/boar_skin_1.png",
-        "sha256": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "boar_skin_1_icon"
-      },
       "image_key": "ac5b0865e8dc26b95837c218e9f27855246d1ed5cd1d6ea3adb2eee3fd773498",
       "numeric": {
         "summary": [
@@ -30792,7 +29976,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T1 · 普通",
       "display_en": "Coyote T1 · Common",
-      "tier_id": "coyote_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 25,
@@ -30815,7 +29998,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -30996,75 +30178,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -31449,7 +30571,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T1 · 优秀",
       "display_en": "Coyote T1 · Uncommon",
-      "tier_id": "coyote_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 25,
@@ -31472,7 +30593,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -31653,107 +30773,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         },
         {
           "id": "coyote_skin_3",
           "name_zh": "白丛林狼",
           "name_en": "White coyote",
-          "description_zh": "凭借其雪白的皮毛从其他丛林狼中脱颖而出。这是自然界中极为罕见的一种颜色。",
-          "description_en": "Stands out from the other coyotes with its snow-white hair. This is an extremely rare color in nature.",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_3_icon",
-          "icon_sprite": "coyote_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_charles_pet",
-          "child_avatar_view_id": "wls2_pet_coyote_white_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_3.png",
-            "sha256": "371461ff39cf55ba7c6c5c2530d3c53fa977023150c84023b7df2991da0b5d99",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_3_icon"
-          },
           "image_key": "371461ff39cf55ba7c6c5c2530d3c53fa977023150c84023b7df2991da0b5d99"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -32138,7 +31172,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T2 · 普通",
       "display_en": "Coyote T2 · Common",
-      "tier_id": "coyote_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -32161,7 +31194,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -32462,75 +31494,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -33175,7 +32147,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T2 · 优秀",
       "display_en": "Coyote T2 · Uncommon",
-      "tier_id": "coyote_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -33198,7 +32169,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -33499,75 +32469,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-2"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [

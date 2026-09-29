@@ -8,6 +8,8 @@ import io
 import json
 from pathlib import Path
 
+from player_schema import validate_player_data
+
 ROOT = Path(__file__).resolve().parents[1]
 JSON_NAMES = ('catalog', 'mechanics', 'asset-map')
 VARIABLES = {'catalog': 'DOZ_CATALOG', 'mechanics': 'DOZ_MECHANICS', 'asset-map': 'DOZ_ASSETS'}
@@ -32,7 +34,9 @@ def load_json(path):
 
 
 def load_data(root=ROOT):
-    return tuple(load_json(root / f'data/{name}.json') for name in JSON_NAMES)
+    data = tuple(load_json(root / f'data/{name}.json') for name in JSON_NAMES)
+    validate_player_data(*data)
+    return data
 
 
 def json_bytes(value, pretty=False):
@@ -58,11 +62,8 @@ def read_js_json(path, variable):
 
 
 def image_for(row, assets):
-    for key in ('iconBundleId', 'iconSmallBundleId', 'referenceIconBundleId'):
-        image = assets['byBundleId'].get(str(row.get(key)))
-        if image:
-            return image, '同模型参考图' if key == 'referenceIconBundleId' else '原版图鉴'
-    return '', '暂缺'
+    image = row.get('image', '')
+    return (image, '同模型参考图' if row.get('referenceImage') else '原版图鉴') if image else ('', '暂缺')
 
 
 def csv_value(value):
@@ -134,18 +135,18 @@ def metadata(root, catalog, mechanics, assets):
             'visibleWithImage': sum(bool(image_for(entry, assets)[0]) for entry in visible),
             'visibleReferenceImages': sum(image_for(entry, assets)[1] == '同模型参考图' for entry in visible),
         }
-    media = assets['assets']
+    media = assets['images']
     stats = {'exported': len(media), 'imageBytes': sum(row['bytes'] for row in media),
-             'mappedBundleImages': len(assets['byBundleId']),
+             'localImages': len(media),
              'categories': dict(Counter(row['categoryLabel'] for row in media))}
     coverage = {
         'builtAt': catalog['meta'].get('builtAt'), 'version': catalog['meta']['version'],
-        'deployVersion': catalog['meta'].get('deployVersion'), 'entries': len(entries),
+        'entries': len(entries),
         'visibleEntries': sum(row['visible'] for row in categories.values()),
         'visibleWithImage': sum(row['visibleWithImage'] for row in categories.values()),
         'categories': categories, 'datasets': {key: len(value) for key, value in catalog.items() if isinstance(value, list)},
         'assetStats': stats, 'missingImages': sum(not image_for(entry, assets)[0] for entry in entries),
-        'brokenImagePaths': [], 'scope': 'Player Wiki data; original JSON and images retained in the repository.',
+        'brokenImagePaths': [], 'scope': 'Player data and local images only; maintenance sources are validated before generation.',
     }
     downloads = {'csv': [], 'guides': []}
     for file in sorted((root / 'data/player').glob('*.csv')):
@@ -162,9 +163,9 @@ def generated_files(root=ROOT):
     catalog, mechanics, assets = load_data(root)
     outputs = {}
     for name, data in zip(JSON_NAMES, (catalog, mechanics, assets)):
-        value = {key: value for key, value in data.items() if key != 'assets'} if name == 'asset-map' else data
+        value = {key: data[key] for key in ('version', 'hero')} if name == 'asset-map' else data
         outputs[f'data/{name}.js'] = js_bytes(VARIABLES[name], value)
-    outputs['data/media.js'] = js_bytes('DOZ_MEDIA', assets['assets'])
+    outputs['data/media.js'] = js_bytes('DOZ_MEDIA', assets['images'])
     site = metadata(root, catalog, mechanics, assets)
     outputs['data/site-meta.js'] = js_bytes('DOZ_SITE_META', site)
     outputs['reports/coverage.json'] = json_bytes(site['coverage'], pretty=True)
@@ -176,4 +177,23 @@ def generated_files(root=ROOT):
         'images': site['coverage']['assetStats'], 'downloads': site['downloads'],
     }
     outputs['reports/maintenance-summary.json'] = json_bytes(summary, pretty=True)
+    # Keep legacy maintenance report paths usable, without archived origin details.
+    outputs['reports/package-summary.json'] = json_bytes({
+        'status': 'maintained', 'currentSummary': 'maintenance-summary.json',
+        'images': len(assets['images']), 'catalogueRows': len(catalog['entries']),
+        'visiblePlayerRows': site['coverage']['visibleEntries'],
+    }, pretty=True)
+    outputs['reports/package-validation.json'] = json_bytes({
+        'status': 'use-current-report', 'currentReport': 'maintenance-validation.json',
+    }, pretty=True)
+    outputs['reports/export-compatibility.json'] = json_bytes({
+        'status': 'synchronized', 'csvFiles': len(site['downloads']['csv']),
+        'guideFiles': len(site['downloads']['guides']),
+        'verification': 'All download cells are checked against the current player JSON.',
+    }, pretty=True)
+    outputs['reports/size-audit.json'] = json_bytes({
+        'images': len(assets['images']), 'imageBytes': site['coverage']['assetStats']['imageBytes'],
+        'maintenanceJsonBytes': sum((root / f'data/{name}.json').stat().st_size for name in JSON_NAMES),
+        'playerRuntimeDataBytes': sum(len(outputs[f'data/{name}.js']) for name in (*JSON_NAMES, 'site-meta')),
+    }, pretty=True)
     return outputs

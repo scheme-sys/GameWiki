@@ -1,20 +1,30 @@
-﻿# Craft of Survival 离线 Wiki
+# Craft of Survival 玩家 Wiki
 
-双击 wiki.html，用浏览器打开即可使用，无需安装或联网。
+入口是 `wiki.html`，无需构建。部署时保留本文件夹和仓库根目录的 `assets/`，也可直接打开 HTML 查阅本地资料。
 
 ## 文件说明
-- wiki.html：页面入口。
-- wiki-assets/wiki.css：页面样式。
-- wiki-assets/wiki-app.js：搜索、筛选、分页和物品详情功能。
-- wiki-assets/wiki-data.js：3,843 条物品资料及 4 项货币资料。
-- wiki-assets/icons/：1,189 个图标文件。
-- wiki-assets/mailbox-article-whitelist.json：物品白名单。
-- wiki-assets/provenance.json：原始数据来源记录。
-- wiki-assets/VALIDATION.json：原项目附带的历史校验报告。
-- package-validation.json：本次整理的文件清单、SHA-256 和资源引用校验结果。
 
-移动或分享时请复制整个 Craft of Survival 文件夹，保持 wiki.html 与 wiki-assets 的相对位置。
+- `wiki-assets/wiki-app.js`：搜索、筛选、分页和详情。
+- `wiki-assets/wiki-data.js`：3,843 条物品、4 项货币和分类统计。
+- `wiki-assets/icons/`：1,189 个原画质图标文件。
+- `wiki-assets/provenance.json`：游戏版本、概要来源、玩家数据摘要及图标 SHA-256。
+- `package-validation.json`：当前发布文件清单、大小及 SHA-256。每项 `hashMode` 明确校验模式：文本以 UTF-8 / LF 规范化后计算大小和摘要，避免 Windows / Linux 换行差异；图片始终按原始字节校验。
+- `wiki-assets/tools/validate_assets.py`：玩家字段边界、数值摘要、图标字节、页面引用及脚本语法校验。
 
-本副本来自桌面的 craftsurvival 项目。原页面和资源保留不动；本文件夹包含页面运行所需的资源，不包含 APK、存档或逆向分析工具。来源记录中的原项目路径仅供追溯，不是页面运行依赖。
+## 数据边界与更新
 
-本次已检查资源引用、页面元素引用及所有复制文件的 SHA-256。浏览器检查工具不可用，尚未实际验证浏览器中的交互操作。
+发布数据只服务玩家资料。已移除未使用的内部类名、本地化检索键、源程序与素材包路径、历史白名单和旧构建报告；它们不再随网页分发。搜索使用物品名称、说明、类型、品质和分类。
+
+稳定物品 ID 用于条目关联，资源 ID 与本地图标路径用于图片对应。分类枚举、品质、背包标记、堆叠信息、全部基础属性与制作花费均保留。请勿为了隐藏编号而改动关联 ID 或删减玩家数值。
+
+更新条目时保留现有字段约定，缺失数值保持缺失。不要重新加入原始配置、函数引用或分析工具输出。若需要增加字段，先确认玩家用途并相应更新校验白名单。更新数据摘要前，应逐字段复核玩家名称、数值、材料数量和图片关联；不能仅覆盖摘要使测试通过。
+
+图片未经重编码。更换图片须核实用途和来源，再更新图标摘要与文件清单。已删除的历史导出文件不属于运行依赖。
+
+```powershell
+python "Craft of Survival/wiki-assets/tools/validate_assets.py"
+```
+
+需要 Python 3.9+ 和 Node.js。浏览器回归应覆盖搜索、分类、品质筛选、分页、详情、制作花费和男女外观切换。
+
+资料来自用户提供的游戏素材（5.7 / 2887）。游戏名称、文本和美术归原权利方所有；收录内容不代表当前全部可获取。

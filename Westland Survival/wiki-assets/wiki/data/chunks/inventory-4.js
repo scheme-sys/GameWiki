@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
   "records": [
     {
       "id": "wls2_weapon_melee_knife_5_epic",
-      "item_id": "wls2_weapon_melee_knife_5_epic",
       "name": "军用匕首",
       "name_en": "Army knife",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_melee_knife_5_epic_icon",
-      "image_id": "wls2_weapon_melee_knife_5_epic",
       "equipment_id": "wls2_weapon_melee_knife_5_epic",
       "stats": [
         {
@@ -190,24 +186,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_5_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_knife_5_epic_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c93ccc4462e9f0a650c899046230a58e0c1fd4e468c0a1b5356e5b5bdb1f3f10"
     },
     {
       "id": "wls2_weapon_melee_knife_5_common",
-      "item_id": "wls2_weapon_melee_knife_5_common",
       "name": "刺刀",
       "name_en": "Bayonet knife",
       "name_source": "official_zh",
@@ -218,12 +200,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_sword_bayonet",
-      "image_id": "wls2_weapon_melee_knife_5_common",
       "equipment_id": "wls2_weapon_melee_knife_5_common",
       "stats": [
         {
@@ -341,24 +320,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_5_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_5_common_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9bde81ccf9c28842ce25dc8d8303239e9dd88a9616c6d842929809ef4487a0f1"
     },
     {
       "id": "wls2_weapon_melee_knife_5_uncommon",
-      "item_id": "wls2_weapon_melee_knife_5_uncommon",
       "name": "警长匕首",
       "name_en": "Sheriff's knife",
       "name_source": "official_zh",
@@ -369,12 +334,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls2_weapon_melee_knife_5_uncommon_icon",
-      "image_id": "wls2_weapon_melee_knife_5_uncommon",
       "equipment_id": "wls2_weapon_melee_knife_5_uncommon",
       "stats": [
         {
@@ -492,24 +454,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_5_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_5_uncommon_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cfa91458167610e3681beae112870c9949832b9172e74be987a24358ff2a3e4b"
     },
     {
       "id": "wls2_weapon_melee_sabre_5_rare",
-      "item_id": "wls2_weapon_melee_sabre_5_rare",
       "name": "军官军刀",
       "name_en": "Officer's saber",
       "name_source": "official_zh",
@@ -520,12 +468,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls2_weapon_melee_sabre_5_rare_icon",
-      "image_id": "wls2_weapon_melee_sabre_5_rare",
       "equipment_id": "wls2_weapon_melee_sabre_5_rare",
       "stats": [
         {
@@ -695,24 +640,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_sabre_5_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_sabre_5_rare_name",
-        "sorting_group": "weapon_melee_spear_saber",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a7de822386947698e8df1a90adfbfd15fc6187066b4bf9c8a3ecbe9184825b4e"
     },
     {
       "id": "wls2_weapon_melee_sabre_5_epic",
-      "item_id": "wls2_weapon_melee_sabre_5_epic",
       "name": "军用军刀",
       "name_en": "Army saber",
       "name_source": "official_zh",
@@ -723,12 +654,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_melee_sabre_5_epic_icon",
-      "image_id": "wls2_weapon_melee_sabre_5_epic",
       "equipment_id": "wls2_weapon_melee_sabre_5_epic",
       "stats": [
         {
@@ -909,24 +837,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_sabre_5_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_melee_sabre_5_epic_name",
-        "sorting_group": "weapon_melee_spear_saber",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5bb36d7742e4081b4bd59a60651a0d146cbe2f2e1cfa54af560c42fadbf5e3fb"
     },
     {
       "id": "wls2_weapon_melee_sabre_5_common",
-      "item_id": "wls2_weapon_melee_sabre_5_common",
       "name": "同盟军刀",
       "name_en": "Confederate saber",
       "name_source": "official_zh",
@@ -937,12 +851,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_confiderate_saber",
-      "image_id": "wls2_weapon_melee_sabre_5_common",
       "equipment_id": "wls2_weapon_melee_sabre_5_common",
       "stats": [
         {
@@ -1060,24 +971,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_sabre_5_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_sabre_5_common_name",
-        "sorting_group": "weapon_melee_spear_saber",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "65cae350a1044c67a7b6aca8ba8041053c9c62e6276136edfe3152e70da9ea1f"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_3_t5",
-      "item_id": "wls2_weapon_easter_22_shotgun_3_t5",
       "name": "吉尔的霰弹枪",
       "name_en": "Jill's Shotgun",
       "name_source": "official_zh",
@@ -1088,12 +985,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_3",
-      "image_id": "wls2_weapon_easter_22_shotgun_3_t5",
       "equipment_id": "wls2_weapon_easter_22_shotgun_3_t5",
       "stats": [
         {
@@ -1224,24 +1118,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_3_t5",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_3_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b603fc5880f23feb9453ab8321797febd8f12e94181fa85643ed60dc0dad717d"
     },
     {
       "id": "wls2_weapon_ws_day2024_shotgun_5",
-      "item_id": "wls2_weapon_ws_day2024_shotgun_5",
       "name": "周年庆散弹枪",
       "name_en": "Anniversary shotgun",
       "name_source": "official_zh",
@@ -1252,12 +1132,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_shotgun",
-      "image_id": "wls2_weapon_ws_day2024_shotgun_5",
       "equipment_id": "wls2_weapon_ws_day2024_shotgun_5",
       "stats": [
         {
@@ -1424,24 +1301,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2024_shotgun_5",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2021_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6bdc4c31a15835b2cc5bb429be5dc30f4a657f1c3c5d2641401f1392035faeaf"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_1_t5",
-      "item_id": "wls2_weapon_easter_22_shotgun_1_t5",
       "name": "彩炮 II",
       "name_en": "Confetti II",
       "name_source": "official_zh",
@@ -1452,12 +1315,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_1",
-      "image_id": "wls2_weapon_easter_22_shotgun_1_t5",
       "equipment_id": "wls2_weapon_easter_22_shotgun_1_t5",
       "stats": [
         {
@@ -1560,24 +1420,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_1_t5",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_1_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d1c2b456a47cdd2eb077a97ca0c3442c116588041d48920508ec0f8f5b65f6a6"
     },
     {
       "id": "wls2_weapon_range_shotgun_5_rare",
-      "item_id": "wls2_weapon_range_shotgun_5_rare",
       "name": "战壕枪",
       "name_en": "Trench gun",
       "name_source": "official_zh",
@@ -1588,12 +1434,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls2_weapon_range_shotgun_5_rare_icon",
-      "image_id": "wls2_weapon_range_shotgun_5_rare",
       "equipment_id": "wls2_weapon_range_shotgun_5_rare",
       "stats": [
         {
@@ -1728,24 +1571,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_5_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_5_rare_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ffd852a11a83d35540fe6a802f73043bb0cb2cdc810d11989f0b045ef04802c5"
     },
     {
       "id": "wls2_weapon_xmas2024_shotgun_5",
-      "item_id": "wls2_weapon_xmas2024_shotgun_5",
       "name": "暴风雪",
       "name_en": "Blizzard",
       "name_source": "official_zh",
@@ -1756,12 +1585,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_xmas_24_shotgun",
-      "image_id": "wls2_weapon_xmas2024_shotgun_5",
       "equipment_id": "wls2_weapon_xmas2024_shotgun_5",
       "stats": [
         {
@@ -1943,24 +1769,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_xmas2024_shotgun_5",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_xmas2024_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a9b84b7752f67ea6e3a9a3123f0817d61b81d6a079e2cefec840bddc456043fb"
     },
     {
       "id": "wls2_weapon_range_shotgun_5_epic",
-      "item_id": "wls2_weapon_range_shotgun_5_epic",
       "name": "温彻斯特 M1897",
       "name_en": "Winchester Model 1897",
       "name_source": "official_zh",
@@ -1971,12 +1783,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_range_shotgun_5_epic_icon",
-      "image_id": "wls2_weapon_range_shotgun_5_epic",
       "equipment_id": "wls2_weapon_range_shotgun_5_epic",
       "stats": [
         {
@@ -2145,24 +1954,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_5_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_shotgun_5_epic_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d434921f6cc377838e7d2ff2100c3213e25661c09018de7f0899d4403b9156d2"
     },
     {
       "id": "wls2_weapon_lunar_shotgun_5_rare",
-      "item_id": "wls2_weapon_lunar_shotgun_5_rare",
       "name": "火焰 霰弹枪",
       "name_en": "Flame shotgun",
       "name_source": "official_zh",
@@ -2173,12 +1968,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_shotgun_lunar_icon",
-      "image_id": "wls2_weapon_lunar_shotgun_5_rare",
       "equipment_id": "wls2_weapon_lunar_shotgun_5_rare",
       "stats": [
         {
@@ -2338,24 +2130,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_lunar_shotgun_5_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_lunar_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf5e960bdef4f9f82aa0c8fc9494b6b25d6bddc4b3cfc1186206b9538776e403"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_2_t5",
-      "item_id": "wls2_weapon_easter_22_shotgun_2_t5",
       "name": "爆笑",
       "name_en": "Killing Joke",
       "name_source": "official_zh",
@@ -2366,12 +2144,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_2",
-      "image_id": "wls2_weapon_easter_22_shotgun_2_t5",
       "equipment_id": "wls2_weapon_easter_22_shotgun_2_t5",
       "stats": [
         {
@@ -2474,24 +2249,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_2_t5",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_2_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ff8ebdcba688f7fb3994b9092f379473e9608ad1274854dabfeed893e32aad40"
     },
     {
       "id": "wls2_weapon_ws_day2023_shotgun_uncommon_5",
-      "item_id": "wls2_weapon_ws_day2023_shotgun_uncommon_5",
       "name": "节日霰弹枪 1889",
       "name_en": "Festive Shotgun 1889",
       "name_source": "official_zh",
@@ -2502,12 +2263,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_confetti",
-      "image_id": "wls2_weapon_ws_day2023_shotgun_uncommon_5",
       "equipment_id": "wls2_weapon_ws_day2023_shotgun_uncommon_5",
       "stats": [
         {
@@ -2558,24 +2316,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2023_shotgun_uncommon_5",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2023_confetti_name_3",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "19ec3b11c91c9510b1a9197e8884c5ce5b8a9e2754ed229399c39ef895a55950"
     },
     {
       "id": "wls2_weapon_range_shotgun_5_common",
-      "item_id": "wls2_weapon_range_shotgun_5_common",
       "name": "马车夫之枪",
       "name_en": "Coach gun",
       "name_source": "official_zh",
@@ -2586,12 +2330,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_henry_.44",
-      "image_id": "wls2_weapon_range_shotgun_5_common",
       "equipment_id": "wls2_weapon_range_shotgun_5_common",
       "stats": [
         {
@@ -2717,24 +2458,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_5_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_5_common_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c6d6dc0eb93fa94cc56e2507388471cc20ec8576fd72ccc7a196f0d82bd6795c"
     },
     {
       "id": "wls2_weapon_range_bow_6_common",
-      "item_id": "wls2_weapon_range_bow_6_common",
       "name": "力量 弓",
       "name_en": "Power bow",
       "name_source": "official_zh",
@@ -2745,12 +2472,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_weapon_range_bow_6_common_icon",
-      "image_id": "wls2_weapon_range_bow_6_common",
       "equipment_id": "wls2_weapon_range_bow_6_common",
       "stats": [
         {
@@ -2852,24 +2576,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_bow_6_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_bow_6_common_name",
-        "sorting_group": "bow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6ad44f0f9f56ea3f67467c1560a0d4a0767e7be21a968a86d886961d1b18b317"
     },
     {
       "id": "wls2_weapon_easter_22_bow_t6",
-      "item_id": "wls2_weapon_easter_22_bow_t6",
       "name": "胡咧咧弓",
       "name_en": "Balderdash",
       "name_source": "official_zh",
@@ -2880,12 +2590,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_bow",
-      "image_id": "wls2_weapon_easter_22_bow_t6",
       "equipment_id": "wls2_weapon_easter_22_bow_t6",
       "stats": [
         {
@@ -3017,24 +2724,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_bow_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_bow_name",
-        "sorting_group": "bow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2425b779a25241ed1a0fbfd05ad4b6714587e6454870ea15a5599bab34883655"
     },
     {
       "id": "wls2_weapon_easter_22_crossbow_t6",
-      "item_id": "wls2_weapon_easter_22_crossbow_t6",
       "name": "胡萝卜弩",
       "name_en": "Carrotbow",
       "name_source": "official_zh",
@@ -3045,12 +2738,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_crossbow",
-      "image_id": "wls2_weapon_easter_22_crossbow_t6",
       "equipment_id": "wls2_weapon_easter_22_crossbow_t6",
       "stats": [
         {
@@ -3176,24 +2866,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_crossbow_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_crossbow_name",
-        "sorting_group": "crossbow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a1542e4b88b3b40e4786fe8c7f9cd22aab6f9dd7d1f6a59fe93990301703047a"
     },
     {
       "id": "wls2_weapon_range_revolver_6_uncommon",
-      "item_id": "wls2_weapon_range_revolver_6_uncommon",
       "name": "博查德自动手枪",
       "name_en": "Borchardt Auto Pistol",
       "name_source": "official_zh",
@@ -3204,12 +2880,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_revolver_6_uncommon",
-      "image_id": "wls2_weapon_range_revolver_6_uncommon",
       "equipment_id": "wls2_weapon_range_revolver_6_uncommon",
       "stats": [
         {
@@ -3317,24 +2990,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_6_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_revolver_6_uncommon_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0ae8062ef9830c0732a5411f6161fba5a7614c082dfa83f8a87d23aea549dfb2"
     },
     {
       "id": "wls2_weapon_ws_day2024_colt_6",
-      "item_id": "wls2_weapon_ws_day2024_colt_6",
       "name": "周年庆左轮手枪",
       "name_en": "Anniversary revolver",
       "name_source": "official_zh",
@@ -3345,12 +3004,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_colt",
-      "image_id": "wls2_weapon_ws_day2024_colt_6",
       "equipment_id": "wls2_weapon_ws_day2024_colt_6",
       "stats": [
         {
@@ -3518,24 +3174,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2024_colt_6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2021_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "7ce8cf8bb085e07e25cdaea78af5b06425dee0b735aebbe5754c3e3fe4f6c910"
     },
     {
       "id": "wls2_weapon_range_revolver_6_rare",
-      "item_id": "wls2_weapon_range_revolver_6_rare",
       "name": "巴拉贝勒姆",
       "name_en": "Parabellum",
       "name_source": "official_zh",
@@ -3546,12 +3188,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_revolver_6_rare",
-      "image_id": "wls2_weapon_range_revolver_6_rare",
       "equipment_id": "wls2_weapon_range_revolver_6_rare",
       "stats": [
         {
@@ -3687,24 +3326,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_revolver_6_rare_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d5b147d592c6a47c0d1aae1b4e8bf426c387c05f17cb770e7577101193eedb3f"
     },
     {
       "id": "wls2_weapon_range_revolver_6_common",
-      "item_id": "wls2_weapon_range_revolver_6_common",
       "name": "布朗宁No.1",
       "name_en": "Browning No.1",
       "name_source": "official_zh",
@@ -3715,12 +3340,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_revolver_6_common",
-      "image_id": "wls2_weapon_range_revolver_6_common",
       "equipment_id": "wls2_weapon_range_revolver_6_common",
       "stats": [
         {
@@ -3828,24 +3450,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_6_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_revolver_6_common_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b61b5e4f15a5b31481307abce34c6a420e3846fc58ff901ead93f4e79b23e1d1"
     },
     {
       "id": "wls2_weapon_range_halloween_23_pistol_6",
-      "item_id": "wls2_weapon_range_halloween_23_pistol_6",
       "name": "恶灵的恐怖",
       "name_en": "Terror of Spirits",
       "name_source": "official_zh",
@@ -3856,12 +3464,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_halloween_range_revolver",
-      "image_id": "wls2_weapon_range_halloween_23_pistol_6",
       "equipment_id": "wls2_weapon_range_halloween_23_pistol_6",
       "stats": [
         {
@@ -3999,24 +3604,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_halloween_23_pistol_6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_halloween_23_pistol_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "dd1ce2c981e1f8db3aea5221fc903d64f2725ee6eb1e76b5fac9e36bbb30e04c"
     },
     {
       "id": "wls2_weapon_range_revolver_6_epic",
-      "item_id": "wls2_weapon_range_revolver_6_epic",
       "name": "毛瑟扫帚手枪",
       "name_en": "Mauser Broomhandle",
       "name_source": "official_zh",
@@ -4027,12 +3618,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_revolver_6_epic",
-      "image_id": "wls2_weapon_range_revolver_6_epic",
       "equipment_id": "wls2_weapon_range_revolver_6_epic",
       "stats": [
         {
@@ -4196,24 +3784,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_6_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_revolver_6_epic_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0775273df6034152545d3eea59f0efb461f7d94f1f2797233b6f16ddf24e2981"
     },
     {
       "id": "wls2_weapon_easter_22_6_epic_colt",
-      "item_id": "wls2_weapon_easter_22_6_epic_colt",
       "name": "集市柯尔特左轮",
       "name_en": "Fair Colt",
       "name_source": "official_zh",
@@ -4224,12 +3798,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_colt",
-      "image_id": "wls2_weapon_easter_22_6_epic_colt",
       "equipment_id": "wls2_weapon_easter_22_6_epic_colt",
       "stats": [
         {
@@ -4389,24 +3960,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_6_epic_colt",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4ad6966c738dbe7f579ff441f1819c0a24401d3d06b6a75b47cd52a88d1fcb0f"
     },
     {
       "id": "wls2_weapon_easter_22_colt_t6",
-      "item_id": "wls2_weapon_easter_22_colt_t6",
       "name": "集市柯尔特左轮",
       "name_en": "Fair Colt",
       "name_source": "official_zh",
@@ -4417,12 +3974,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_colt",
-      "image_id": "wls2_weapon_easter_22_colt_t6",
       "equipment_id": "wls2_weapon_easter_22_colt_t6",
       "stats": [
         {
@@ -4554,24 +4108,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_colt_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4ad6966c738dbe7f579ff441f1819c0a24401d3d06b6a75b47cd52a88d1fcb0f"
     },
     {
       "id": "wls2_weapon_easter_22_pepperbox_t6",
-      "item_id": "wls2_weapon_easter_22_pepperbox_t6",
       "name": "集市胡椒盒手枪",
       "name_en": "Fair Pepperbox",
       "name_source": "official_zh",
@@ -4582,12 +4122,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_pepperbox",
-      "image_id": "wls2_weapon_easter_22_pepperbox_t6",
       "equipment_id": "wls2_weapon_easter_22_pepperbox_t6",
       "stats": [
         {
@@ -4719,24 +4256,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_pepperbox_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_pepperbox_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "48dbba8973c8ec0a2f19a45a194fd7defe67d00f08f7e838e203f59413ea1fb2"
     },
     {
       "id": "wls2_weapon_easter_22_mallet_t6",
-      "item_id": "wls2_weapon_easter_22_mallet_t6",
       "name": "复活节木槌",
       "name_en": "Easter Mallet",
       "name_source": "official_zh",
@@ -4747,12 +4270,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_mallet",
-      "image_id": "wls2_weapon_easter_22_mallet_t6",
       "equipment_id": "wls2_weapon_easter_22_mallet_t6",
       "stats": [
         {
@@ -4878,24 +4398,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_mallet_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_mallet_name",
-        "sorting_group": "weapon_melee_mace_mallet",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "860034db285f055a40f2f5eed90b3fd608bd3c29d8adae878d8038239224dd46"
     },
     {
       "id": "wls2_weapon_easter_22_mace_t6",
-      "item_id": "wls2_weapon_easter_22_mace_t6",
       "name": "彩绘狼牙棒",
       "name_en": "Painted Mace",
       "name_source": "official_zh",
@@ -4906,12 +4412,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_mace",
-      "image_id": "wls2_weapon_easter_22_mace_t6",
       "equipment_id": "wls2_weapon_easter_22_mace_t6",
       "stats": [
         {
@@ -5060,24 +4563,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_mace_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_mace_name",
-        "sorting_group": "weapon_melee_mace_mallet",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4359f4620e9a54f4108fa4f18a03fef601cfd512f8801a51b0ee2b8b24c18150"
     },
     {
       "id": "wls2_weapon_range_rifle_6_rare",
-      "item_id": "wls2_weapon_range_rifle_6_rare",
       "name": "克拉格-约尔根森",
       "name_en": "Krag-Jorgensen",
       "name_source": "official_zh",
@@ -5088,12 +4577,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_rifle_6_rare",
-      "image_id": "wls2_weapon_range_rifle_6_rare",
       "equipment_id": "wls2_weapon_range_rifle_6_rare",
       "stats": [
         {
@@ -5240,24 +4726,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_rifle_6_rare_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "44ceb3a56f7565dd815fdded8b9448e80c589686a772a9f04ff4bfd25586b142"
     },
     {
       "id": "wls2_weapon_range_rifle_6_uncommon",
-      "item_id": "wls2_weapon_range_rifle_6_uncommon",
       "name": "李-恩菲尔德",
       "name_en": "Lee–Enfield",
       "name_source": "official_zh",
@@ -5268,12 +4740,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_rifle_6_uncommon",
-      "image_id": "wls2_weapon_range_rifle_6_uncommon",
       "equipment_id": "wls2_weapon_range_rifle_6_uncommon",
       "stats": [
         {
@@ -5386,24 +4855,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_6_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_rifle_6_uncommon_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "38cff034e1a5bb98be20b512e18d599b04372ba61926424dc76a8bdd68e0ab69"
     },
     {
       "id": "wls2_xmas_23_weapon_range_rifle_6_epic",
-      "item_id": "wls2_xmas_23_weapon_range_rifle_6_epic",
       "name": "极光",
       "name_en": "Aurora",
       "name_source": "official_zh",
@@ -5414,12 +4869,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_xmas_22_weapon_range_rifle_5_rare",
-      "image_id": "wls2_xmas_23_weapon_range_rifle_6_epic",
       "equipment_id": "wls2_xmas_23_weapon_range_rifle_6_epic",
       "stats": [
         {
@@ -5496,24 +4948,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_xmas_23_weapon_range_rifle_6_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_xmas_22_weapon_range_rifle_5_rare_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8313d4dc889e82562cb7a523732290388598154edb06726be707d104d33fa470"
     },
     {
       "id": "wls2_weapon_range_rifle_6_common",
-      "item_id": "wls2_weapon_range_rifle_6_common",
       "name": "温彻斯特画廊枪",
       "name_en": "Winchester Gallery Gun",
       "name_source": "official_zh",
@@ -5524,12 +4962,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_rifle_6_common",
-      "image_id": "wls2_weapon_range_rifle_6_common",
       "equipment_id": "wls2_weapon_range_rifle_6_common",
       "stats": [
         {
@@ -5642,24 +5077,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_6_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_rifle_6_common_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f0f8cba5c4b967a36f2281a090489fd2ad85b179ae29b75caddf1a3392ade7dc"
     },
     {
       "id": "wls2_weapon_range_rifle_6_epic",
-      "item_id": "wls2_weapon_range_rifle_6_epic",
       "name": "野蛮模型99",
       "name_en": "Savage Model 99",
       "name_source": "official_zh",
@@ -5670,12 +5091,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_rifle_6_epic",
-      "image_id": "wls2_weapon_range_rifle_6_epic",
       "equipment_id": "wls2_weapon_range_rifle_6_epic",
       "stats": [
         {
@@ -5850,24 +5268,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_rifle_6_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_rifle_6_epic_name",
-        "sorting_group": "weapon_range_rifle",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0fa77c1ae88248e5354a445ad06d2c6bdb21d05916cbdd2ec56844fe39d218fe"
     },
     {
       "id": "wls2_weapon_melee_knife_6_common",
-      "item_id": "wls2_weapon_melee_knife_6_common",
       "name": "捕鲸刀",
       "name_en": "Whaling knife",
       "name_source": "official_zh",
@@ -5878,12 +5282,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_melee_knife_6_common",
-      "image_id": "wls2_weapon_melee_knife_6_common",
       "equipment_id": "wls2_weapon_melee_knife_6_common",
       "stats": [
         {
@@ -5991,24 +5392,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_6_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_6_common_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "18c75d7a90f5820b498ef3abdae1fc96bc0c3203fbfb8d416c455cf8de71256a"
     },
     {
       "id": "wls2_weapon_melee_knife_6_uncommon",
-      "item_id": "wls2_weapon_melee_knife_6_uncommon",
       "name": "推剑",
       "name_en": "Push dagger",
       "name_source": "official_zh",
@@ -6019,12 +5406,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_melee_knife_6_uncommon",
-      "image_id": "wls2_weapon_melee_knife_6_uncommon",
       "equipment_id": "wls2_weapon_melee_knife_6_uncommon",
       "stats": [
         {
@@ -6132,24 +5516,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_6_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_6_uncommon_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a89726a6b02ffa66cde911f57e4340ee70a5e1bb6971fb2a3bc1306fb29cd3bf"
     },
     {
       "id": "wls2_weapon_melee_knife_6_rare",
-      "item_id": "wls2_weapon_melee_knife_6_rare",
       "name": "海军短剑",
       "name_en": "Naval dirk dagger",
       "name_source": "official_zh",
@@ -6160,12 +5530,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_melee_knife_6_rare",
-      "image_id": "wls2_weapon_melee_knife_6_rare",
       "equipment_id": "wls2_weapon_melee_knife_6_rare",
       "stats": [
         {
@@ -6301,24 +5668,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_6_rare_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "59841b9e5f0b2696730d51381c445fbcfb8d6d1c52521fc953f5f2ba3e89bbf2"
     },
     {
       "id": "wls2_weapon_melee_knife_6_epic",
-      "item_id": "wls2_weapon_melee_knife_6_epic",
       "name": "狗拉雪橇者的刀",
       "name_en": "Musher's knife",
       "name_source": "official_zh",
@@ -6329,12 +5682,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_musher's_knife_6_epic",
-      "image_id": "wls2_weapon_melee_knife_6_epic",
       "equipment_id": "wls2_weapon_melee_knife_6_epic",
       "stats": [
         {
@@ -6503,24 +5853,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_knife_6_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_knife_6_epic_name",
-        "sorting_group": "weapon_melee_knife",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ba80c48d7dec416161c2c793f6e2f7876026550bdb2a6fc6268a3aa7e8e0c559"
     },
     {
       "id": "wls2_weapon_melee_spear_6_rare",
-      "item_id": "wls2_weapon_melee_spear_6_rare",
       "name": "坚固的鱼叉",
       "name_en": "Rugged Harpoon",
       "name_source": "official_zh",
@@ -6531,12 +5867,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_melee_spear_6_rare",
-      "image_id": "wls2_weapon_melee_spear_6_rare",
       "equipment_id": "wls2_weapon_melee_spear_6_rare",
       "stats": [
         {
@@ -6683,24 +6016,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_melee_spear_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_melee_spear_6_rare_name",
-        "sorting_group": "weapon_melee_spear_saber",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "82aacb9084fb329315fe2311b358dd05812fb4a7ee8091d20d268410db80dd02"
     },
     {
       "id": "wls2_weapon_range_shotgun_6_common",
-      "item_id": "wls2_weapon_range_shotgun_6_common",
       "name": "Rem M10 暴乱",
       "name_en": "Rem M10 Riot",
       "name_source": "official_zh",
@@ -6711,12 +6030,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_shotgun_6_common",
-      "image_id": "wls2_weapon_range_shotgun_6_common",
       "equipment_id": "wls2_weapon_range_shotgun_6_common",
       "stats": [
         {
@@ -6823,24 +6139,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_6_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_6_common_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2dca6cc36316a013fa1c188bcfb4f51621045f124811c6802b36b1a22dbd63bc"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_3_t6",
-      "item_id": "wls2_weapon_easter_22_shotgun_3_t6",
       "name": "吉尔的霰弹枪",
       "name_en": "Jill's Shotgun",
       "name_source": "official_zh",
@@ -6851,12 +6153,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_3",
-      "image_id": "wls2_weapon_easter_22_shotgun_3_t6",
       "equipment_id": "wls2_weapon_easter_22_shotgun_3_t6",
       "stats": [
         {
@@ -6987,24 +6286,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_3_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_3_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b603fc5880f23feb9453ab8321797febd8f12e94181fa85643ed60dc0dad717d"
     },
     {
       "id": "wls2_weapon_ws_day2024_shotgun_6",
-      "item_id": "wls2_weapon_ws_day2024_shotgun_6",
       "name": "周年庆散弹枪",
       "name_en": "Anniversary shotgun",
       "name_source": "official_zh",
@@ -7015,12 +6300,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_shotgun",
-      "image_id": "wls2_weapon_ws_day2024_shotgun_6",
       "equipment_id": "wls2_weapon_ws_day2024_shotgun_6",
       "stats": [
         {
@@ -7187,24 +6469,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2024_shotgun_6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2021_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6bdc4c31a15835b2cc5bb429be5dc30f4a657f1c3c5d2641401f1392035faeaf"
     },
     {
       "id": "wls2_weapon_range_shotgun_6_epic",
-      "item_id": "wls2_weapon_range_shotgun_6_epic",
       "name": "寡妇制造者",
       "name_en": "Widowmaker",
       "name_source": "official_zh",
@@ -7215,12 +6483,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_range_shotgun_6_epic_icon",
-      "image_id": "wls2_weapon_range_shotgun_6_epic",
       "equipment_id": "wls2_weapon_range_shotgun_6_epic",
       "stats": [
         {
@@ -7389,24 +6654,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_6_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_6_epic_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b116963d6bb55281e31c82ace74fb302d633979ba58de4dfb2bfe98a3828947e"
     },
     {
       "id": "wls2_weapon_range_shotgun_6_rare",
-      "item_id": "wls2_weapon_range_shotgun_6_rare",
       "name": "座头鲸",
       "name_en": "Humpback",
       "name_source": "official_zh",
@@ -7417,12 +6668,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_shotgun_6_rare",
-      "image_id": "wls2_weapon_range_shotgun_6_rare",
       "equipment_id": "wls2_weapon_range_shotgun_6_rare",
       "stats": [
         {
@@ -7557,24 +6805,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_6_rare_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "014f89fc55425ceba6ad805d2117ce64642fe39af5dbdf087986091cba9cb383"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_1_t6",
-      "item_id": "wls2_weapon_easter_22_shotgun_1_t6",
       "name": "彩炮 II",
       "name_en": "Confetti II",
       "name_source": "official_zh",
@@ -7585,12 +6819,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_1",
-      "image_id": "wls2_weapon_easter_22_shotgun_1_t6",
       "equipment_id": "wls2_weapon_easter_22_shotgun_1_t6",
       "stats": [
         {
@@ -7693,24 +6924,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_1_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_1_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d1c2b456a47cdd2eb077a97ca0c3442c116588041d48920508ec0f8f5b65f6a6"
     },
     {
       "id": "wls2_weapon_xmas2024_shotgun_6",
-      "item_id": "wls2_weapon_xmas2024_shotgun_6",
       "name": "暴风雪",
       "name_en": "Blizzard",
       "name_source": "official_zh",
@@ -7721,12 +6938,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_xmas_24_shotgun",
-      "image_id": "wls2_weapon_xmas2024_shotgun_6",
       "equipment_id": "wls2_weapon_xmas2024_shotgun_6",
       "stats": [
         {
@@ -7908,24 +7122,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_xmas2024_shotgun_6",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_xmas2024_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a9b84b7752f67ea6e3a9a3123f0817d61b81d6a079e2cefec840bddc456043fb"
     },
     {
       "id": "wls2_weapon_lunar_shotgun_6_rare",
-      "item_id": "wls2_weapon_lunar_shotgun_6_rare",
       "name": "火焰 霰弹枪",
       "name_en": "Flame shotgun",
       "name_source": "official_zh",
@@ -7936,12 +7136,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_shotgun_lunar_icon",
-      "image_id": "wls2_weapon_lunar_shotgun_6_rare",
       "equipment_id": "wls2_weapon_lunar_shotgun_6_rare",
       "stats": [
         {
@@ -8101,24 +7298,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_lunar_shotgun_6_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_lunar_shotgun_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bf5e960bdef4f9f82aa0c8fc9494b6b25d6bddc4b3cfc1186206b9538776e403"
     },
     {
       "id": "wls2_weapon_easter_22_shotgun_2_t6",
-      "item_id": "wls2_weapon_easter_22_shotgun_2_t6",
       "name": "爆笑",
       "name_en": "Killing Joke",
       "name_source": "official_zh",
@@ -8129,12 +7312,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_shotgun_2",
-      "image_id": "wls2_weapon_easter_22_shotgun_2_t6",
       "equipment_id": "wls2_weapon_easter_22_shotgun_2_t6",
       "stats": [
         {
@@ -8237,24 +7417,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_shotgun_2_t6",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_shotgun_2_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ff8ebdcba688f7fb3994b9092f379473e9608ad1274854dabfeed893e32aad40"
     },
     {
       "id": "wls2_weapon_range_shotgun_6_uncommon",
-      "item_id": "wls2_weapon_range_shotgun_6_uncommon",
       "name": "雷明顿打发",
       "name_en": "Remington Whipped",
       "name_source": "official_zh",
@@ -8265,12 +7431,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_weapon_range_shotgun_6_uncommon",
-      "image_id": "wls2_weapon_range_shotgun_6_uncommon",
       "equipment_id": "wls2_weapon_range_shotgun_6_uncommon",
       "stats": [
         {
@@ -8377,24 +7540,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_shotgun_6_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_shotgun_6_uncommon_name",
-        "sorting_group": "weapon_range_shotgun",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6d828245f283a56e1f2f13e748a22f659e8b047a85d3cda635b67a993fc8f393"
     },
     {
       "id": "wls2_weapon_easter_22_bow_t7",
-      "item_id": "wls2_weapon_easter_22_bow_t7",
       "name": "胡咧咧弓",
       "name_en": "Balderdash",
       "name_source": "official_zh",
@@ -8405,12 +7554,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_bow",
-      "image_id": "wls2_weapon_easter_22_bow_t7",
       "equipment_id": "wls2_weapon_easter_22_bow_t7",
       "stats": [
         {
@@ -8542,24 +7688,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_bow_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_bow_name",
-        "sorting_group": "bow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2425b779a25241ed1a0fbfd05ad4b6714587e6454870ea15a5599bab34883655"
     },
     {
       "id": "wls2_weapon_range_bow_7_common",
-      "item_id": "wls2_weapon_range_bow_7_common",
       "name": "野马弓",
       "name_en": "Bronco bow",
       "name_source": "official_zh",
@@ -8570,12 +7702,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_bow_7_common_icon",
-      "image_id": "wls2_weapon_range_bow_7_common",
       "equipment_id": "wls2_weapon_range_bow_7_common",
       "stats": [
         {
@@ -8677,24 +7806,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_bow_7_common",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_bow_7_common_name",
-        "sorting_group": "bow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9dd59939882e269c94820b61c9cb104b4c752f6c14b32c90a0b33e254c5f499d"
     },
     {
       "id": "wls2_weapon_easter_22_crossbow_t7",
-      "item_id": "wls2_weapon_easter_22_crossbow_t7",
       "name": "胡萝卜弩",
       "name_en": "Carrotbow",
       "name_source": "official_zh",
@@ -8705,12 +7820,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_crossbow",
-      "image_id": "wls2_weapon_easter_22_crossbow_t7",
       "equipment_id": "wls2_weapon_easter_22_crossbow_t7",
       "stats": [
         {
@@ -8836,24 +7948,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_crossbow_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_crossbow_name",
-        "sorting_group": "crossbow",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a1542e4b88b3b40e4786fe8c7f9cd22aab6f9dd7d1f6a59fe93990301703047a"
     },
     {
       "id": "wls2_weapon_range_revolver_7_rare",
-      "item_id": "wls2_weapon_range_revolver_7_rare",
       "name": "伯格曼 火星 1903",
       "name_en": "Bergmann mars 1903",
       "name_source": "official_zh",
@@ -8864,12 +7962,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_revolver_7_rare_icon",
-      "image_id": "wls2_weapon_range_revolver_7_rare",
       "equipment_id": "wls2_weapon_range_revolver_7_rare",
       "stats": [
         {
@@ -9005,24 +8100,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_7_rare",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_revolver_7_rare_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "07220d8bab51df916c0939c58e612d10280ab808179b08e2bac2e0f7f5ee8034"
     },
     {
       "id": "wls2_weapon_ws_day2024_colt_7",
-      "item_id": "wls2_weapon_ws_day2024_colt_7",
       "name": "周年庆左轮手枪",
       "name_en": "Anniversary revolver",
       "name_source": "official_zh",
@@ -9033,12 +8114,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_weapon_ws_day2021_colt",
-      "image_id": "wls2_weapon_ws_day2024_colt_7",
       "equipment_id": "wls2_weapon_ws_day2024_colt_7",
       "stats": [
         {
@@ -9206,24 +8284,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_ws_day2024_colt_7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_ws_day2021_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "7ce8cf8bb085e07e25cdaea78af5b06425dee0b735aebbe5754c3e3fe4f6c910"
     },
     {
       "id": "wls2_weapon_range_halloween_23_pistol_7",
-      "item_id": "wls2_weapon_range_halloween_23_pistol_7",
       "name": "恶灵的恐怖",
       "name_en": "Terror of Spirits",
       "name_source": "official_zh",
@@ -9234,12 +8298,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_halloween_range_revolver",
-      "image_id": "wls2_weapon_range_halloween_23_pistol_7",
       "equipment_id": "wls2_weapon_range_halloween_23_pistol_7",
       "stats": [
         {
@@ -9377,24 +8438,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_halloween_23_pistol_7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_range_halloween_23_pistol_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "dd1ce2c981e1f8db3aea5221fc903d64f2725ee6eb1e76b5fac9e36bbb30e04c"
     },
     {
       "id": "wls2_weapon_range_revolver_7_epic",
-      "item_id": "wls2_weapon_range_revolver_7_epic",
       "name": "火山手枪",
       "name_en": "Volcanic pistol",
       "name_source": "official_zh",
@@ -9405,12 +8452,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_weapon_range_revolver_7_epic_icon",
-      "image_id": "wls2_weapon_range_revolver_7_epic",
       "equipment_id": "wls2_weapon_range_revolver_7_epic",
       "stats": [
         {
@@ -9574,24 +8618,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_7_epic",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_revolver_7_epic_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "78f65abe60a51c14a46906cb41b3fda42fb93369901996987dacd298402ef410"
     },
     {
       "id": "wls2_weapon_range_revolver_7_common",
-      "item_id": "wls2_weapon_range_revolver_7_common",
       "name": "纳甘 M1910",
       "name_en": "Nagant M1910",
       "name_source": "official_zh",
@@ -9602,12 +8632,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_revolver_7_common_icon",
-      "image_id": "wls2_weapon_range_revolver_7_common",
       "equipment_id": "wls2_weapon_range_revolver_7_common",
       "stats": [
         {
@@ -9715,24 +8742,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_7_common",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_revolver_7_common_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4b097d4fea1af29eeda7d919913f2c32eac914baf06519af05dd55181db56c42"
     },
     {
       "id": "wls2_weapon_range_revolver_7_uncommon",
-      "item_id": "wls2_weapon_range_revolver_7_uncommon",
       "name": "罗斯-斯泰尔 1907",
       "name_en": "Roth-Steyr 1907",
       "name_source": "official_zh",
@@ -9743,12 +8756,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_weapon_range_revolver_7_uncommon_icon",
-      "image_id": "wls2_weapon_range_revolver_7_uncommon",
       "equipment_id": "wls2_weapon_range_revolver_7_uncommon",
       "stats": [
         {
@@ -9856,24 +8866,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_range_revolver_7_uncommon",
-        "reason": "audited_player_equipment",
-        "name_key": "wls2_weapon_range_revolver_7_uncommon_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c18a4bdbc1c14b20df8b29fb19dcc82b9e2e14a21e0666249bd6057bf2031ae3"
     },
     {
       "id": "wls2_weapon_easter_22_7_epic_colt",
-      "item_id": "wls2_weapon_easter_22_7_epic_colt",
       "name": "集市柯尔特左轮",
       "name_en": "Fair Colt",
       "name_source": "official_zh",
@@ -9884,12 +8880,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_colt",
-      "image_id": "wls2_weapon_easter_22_7_epic_colt",
       "equipment_id": "wls2_weapon_easter_22_7_epic_colt",
       "stats": [
         {
@@ -10049,24 +9042,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_7_epic_colt",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4ad6966c738dbe7f579ff441f1819c0a24401d3d06b6a75b47cd52a88d1fcb0f"
     },
     {
       "id": "wls2_weapon_easter_22_colt_t7",
-      "item_id": "wls2_weapon_easter_22_colt_t7",
       "name": "集市柯尔特左轮",
       "name_en": "Fair Colt",
       "name_source": "official_zh",
@@ -10077,12 +9056,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_colt",
-      "image_id": "wls2_weapon_easter_22_colt_t7",
       "equipment_id": "wls2_weapon_easter_22_colt_t7",
       "stats": [
         {
@@ -10214,24 +9190,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_colt_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_colt_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4ad6966c738dbe7f579ff441f1819c0a24401d3d06b6a75b47cd52a88d1fcb0f"
     },
     {
       "id": "wls2_weapon_easter_22_pepperbox_t7",
-      "item_id": "wls2_weapon_easter_22_pepperbox_t7",
       "name": "集市胡椒盒手枪",
       "name_en": "Fair Pepperbox",
       "name_source": "official_zh",
@@ -10242,12 +9204,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_pepperbox",
-      "image_id": "wls2_weapon_easter_22_pepperbox_t7",
       "equipment_id": "wls2_weapon_easter_22_pepperbox_t7",
       "stats": [
         {
@@ -10379,24 +9338,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_pepperbox_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_pepperbox_name",
-        "sorting_group": "weapon_range_pistol",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "48dbba8973c8ec0a2f19a45a194fd7defe67d00f08f7e838e203f59413ea1fb2"
     },
     {
       "id": "wls2_weapon_easter_22_mallet_t7",
-      "item_id": "wls2_weapon_easter_22_mallet_t7",
       "name": "复活节木槌",
       "name_en": "Easter Mallet",
       "name_source": "official_zh",
@@ -10407,12 +9352,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_mallet",
-      "image_id": "wls2_weapon_easter_22_mallet_t7",
       "equipment_id": "wls2_weapon_easter_22_mallet_t7",
       "stats": [
         {
@@ -10538,24 +9480,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_mallet_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_mallet_name",
-        "sorting_group": "weapon_melee_mace_mallet",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "860034db285f055a40f2f5eed90b3fd608bd3c29d8adae878d8038239224dd46"
     },
     {
       "id": "wls2_weapon_easter_22_mace_t7",
-      "item_id": "wls2_weapon_easter_22_mace_t7",
       "name": "彩绘狼牙棒",
       "name_en": "Painted Mace",
       "name_source": "official_zh",
@@ -10566,12 +9494,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "durability",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_easter_range_mace",
-      "image_id": "wls2_weapon_easter_22_mace_t7",
       "equipment_id": "wls2_weapon_easter_22_mace_t7",
       "stats": [
         {
@@ -10720,19 +9645,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-4"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_weapon_easter_22_mace_t7",
-        "reason": "audited_player_equipment",
-        "name_key": "inventory_stack_view_wls2_weapon_easter_mace_name",
-        "sorting_group": "weapon_melee_mace_mallet",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4359f4620e9a54f4108fa4f18a03fef601cfd512f8801a51b0ee2b8b24c18150"
     }
   ]

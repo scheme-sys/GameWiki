@@ -29,14 +29,25 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Check Dawn data and original image integrity
-        run: python DawnofZombiewiki/tools/verify_package.py --data-only
+      - name: Check player data boundaries
+        run: |
+          node scripts/test-player-data-policy.mjs
+          node scripts/check-player-data.mjs
+
+      - name: Check player records and original image integrity
+        run: |
+          python "Craft of Survival/wiki-assets/tools/validate_assets.py"
+          python "Day R Survival/wiki-assets/tools/validate_assets.py"
+          python "Westland Survival/tools/verify_assets.py"
+          python DawnofZombiewiki/tools/verify_package.py --data-only
 
       - name: Check crawler directives and page security
         run: node scripts/test-site-security.mjs
 
       - name: Prepare and check public files
-        run: node scripts/check-site.mjs --stage _site
+        run: |
+          node scripts/check-site.mjs --stage _site
+          node scripts/check-player-data.mjs --root _site
 
       - name: Upload the public site
         uses: actions/upload-pages-artifact@v4

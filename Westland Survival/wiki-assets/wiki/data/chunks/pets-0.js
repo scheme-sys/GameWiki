@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T1 · 普通",
       "display_en": "Bear T1 · Common",
-      "tier_id": "bear_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 25,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -215,43 +213,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_1",
           "name_zh": "肉桂熊",
           "name_en": "Cinnamon bear",
-          "description_zh": "肉桂熊的记忆力极佳。",
-          "description_en": "Cinnamon bears have an excellent memory.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_1_icon",
-          "icon_sprite": "bear_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_1",
-          "child_avatar_view_id": "wls2_pet_bear_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_1.png",
-            "sha256": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_1_icon"
-          },
           "image_key": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4"
         }
       ],
-      "primary_skin_id": "bear_skin_1",
-      "primary_icon_sprite": "bear_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_1.png",
-        "sha256": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_1_icon"
-      },
       "image_key": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
       "numeric": {
         "summary": [
@@ -636,7 +600,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T1 · 优秀",
       "display_en": "Bear T1 · Uncommon",
-      "tier_id": "bear_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 25,
@@ -659,7 +622,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -839,43 +801,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_1",
           "name_zh": "肉桂熊",
           "name_en": "Cinnamon bear",
-          "description_zh": "肉桂熊的记忆力极佳。",
-          "description_en": "Cinnamon bears have an excellent memory.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_1_icon",
-          "icon_sprite": "bear_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_1",
-          "child_avatar_view_id": "wls2_pet_bear_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_1.png",
-            "sha256": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_1_icon"
-          },
           "image_key": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4"
         }
       ],
-      "primary_skin_id": "bear_skin_1",
-      "primary_icon_sprite": "bear_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_1.png",
-        "sha256": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_1_icon"
-      },
       "image_key": "3541c03763d3e3ec299500e44add2db4bb520f9d7a761327766fa1cb0f1ea0e4",
       "numeric": {
         "summary": [
@@ -1260,7 +1188,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T2 · 普通",
       "display_en": "Bear T2 · Common",
-      "tier_id": "bear_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -1283,7 +1210,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -1583,43 +1509,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_2",
           "name_zh": "黑熊",
           "name_en": "Black bear",
-          "description_zh": "黑熊有出色的嗅觉。然而，在视觉方面却不可等同视之。",
-          "description_en": "Black bears have excellent sense of smell. However,  the same cannot be said about vision.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_2_icon",
-          "icon_sprite": "bear_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_2",
-          "child_avatar_view_id": "wls2_pet_bear_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            1,
-            2,
-            3
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_2.png",
-            "sha256": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_2_icon"
-          },
           "image_key": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614"
         }
       ],
-      "primary_skin_id": "bear_skin_2",
-      "primary_icon_sprite": "bear_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_2.png",
-        "sha256": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_2_icon"
-      },
       "image_key": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
       "numeric": {
         "summary": [
@@ -2264,7 +2156,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T2 · 优秀",
       "display_en": "Bear T2 · Uncommon",
-      "tier_id": "bear_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -2287,7 +2178,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -2587,43 +2477,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_2",
           "name_zh": "黑熊",
           "name_en": "Black bear",
-          "description_zh": "黑熊有出色的嗅觉。然而，在视觉方面却不可等同视之。",
-          "description_en": "Black bears have excellent sense of smell. However,  the same cannot be said about vision.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_2_icon",
-          "icon_sprite": "bear_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_2",
-          "child_avatar_view_id": "wls2_pet_bear_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            1,
-            2,
-            3
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_2.png",
-            "sha256": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_2_icon"
-          },
           "image_key": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614"
         }
       ],
-      "primary_skin_id": "bear_skin_2",
-      "primary_icon_sprite": "bear_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_2.png",
-        "sha256": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_2_icon"
-      },
       "image_key": "69d5174fa15fa3b0ef2ce289ddba1da4137c1021ca561fda204db0df3b830614",
       "numeric": {
         "summary": [
@@ -3268,7 +3124,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T3 · 普通",
       "display_en": "Bear T3 · Common",
-      "tier_id": "bear_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -3291,7 +3146,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -3711,71 +3565,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_3",
           "name_zh": "冰川熊",
           "name_en": "Glacier bear",
-          "description_zh": "冰川熊因其银蓝的毛色而得名。",
-          "description_en": "Glacier bear got its name due to a silver-blue coat color.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_3_icon",
-          "icon_sprite": "bear_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            55,
-            40,
-            5
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-            "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_3_icon"
-          },
           "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19"
         },
         {
           "id": "bear_skin_6_xmas_22",
           "name_zh": "北极熊",
           "name_en": "Polar bear",
-          "description_zh": "尽管白极熊看起来白绒绒，毛皮之下的皮肤其实是黑色的！",
-          "description_en": "Polar bears have black skin, but you won't see it because of their white fur.",
-          "icon_path": "UI_WW_AlphaBinary07/bear_skin_6_icon",
-          "icon_sprite": "bear_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_xmas_22_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_polar_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6_xmas_22.png",
-            "sha256": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "bear_skin_6_icon"
-          },
           "image_key": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55"
         }
       ],
-      "primary_skin_id": "bear_skin_3",
-      "primary_icon_sprite": "bear_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-        "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_3_icon"
-      },
       "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
       "numeric": {
         "summary": [
@@ -4680,7 +4478,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T3 · 优秀",
       "display_en": "Bear T3 · Uncommon",
-      "tier_id": "bear_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -4703,7 +4500,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -5123,43 +4919,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_3",
           "name_zh": "冰川熊",
           "name_en": "Glacier bear",
-          "description_zh": "冰川熊因其银蓝的毛色而得名。",
-          "description_en": "Glacier bear got its name due to a silver-blue coat color.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_3_icon",
-          "icon_sprite": "bear_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            55,
-            40,
-            5
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-            "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_3_icon"
-          },
           "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19"
         }
       ],
-      "primary_skin_id": "bear_skin_3",
-      "primary_icon_sprite": "bear_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-        "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_3_icon"
-      },
       "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
       "numeric": {
         "summary": [
@@ -6064,7 +5826,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T3 · 稀有",
       "display_en": "Bear T3 · Rare",
-      "tier_id": "bear_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -6087,7 +5848,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -6507,127 +6267,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_3",
           "name_zh": "冰川熊",
           "name_en": "Glacier bear",
-          "description_zh": "冰川熊因其银蓝的毛色而得名。",
-          "description_en": "Glacier bear got its name due to a silver-blue coat color.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_3_icon",
-          "icon_sprite": "bear_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            55,
-            40,
-            5
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-            "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_3_icon"
-          },
           "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19"
         },
         {
           "id": "bear_skin_6_xmas_22",
           "name_zh": "北极熊",
           "name_en": "Polar bear",
-          "description_zh": "尽管白极熊看起来白绒绒，毛皮之下的皮肤其实是黑色的！",
-          "description_en": "Polar bears have black skin, but you won't see it because of their white fur.",
-          "icon_path": "UI_WW_AlphaBinary07/bear_skin_6_icon",
-          "icon_sprite": "bear_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_xmas_22_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_polar_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6_xmas_22.png",
-            "sha256": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "bear_skin_6_icon"
-          },
           "image_key": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55"
         },
         {
           "id": "bear_skin_halloween_25",
           "name_zh": "幽灵熊",
           "name_en": "Ghost Bear",
-          "description_zh": "当夜晚变长和威士忌干涸时的一个可怕伙伴",
-          "description_en": "A spooky partner for when the nights get long and the whiskey runs dry",
-          "icon_path": "UI_WW_AlphaBinary10/bear_2025_halloween_icon",
-          "icon_sprite": "bear_2025_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/bear_cub_2025_halloween_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_halloween_25",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_halloween_25",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_halloween_25.png",
-            "sha256": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "bear_2025_halloween_icon"
-          },
           "image_key": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19"
         },
         {
           "id": "bear_skin_shadow",
           "name_zh": "暗影熊",
           "name_en": "Shadow Bear",
-          "description_zh": "被活生生的黑暗笼罩的巨兽",
-          "description_en": "A massive beast wrapped in living darkness",
-          "icon_path": "UI_WW_AlphaBinary11/bear_skin_shadow_icon",
-          "icon_sprite": "bear_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/bear_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_shadow.png",
-            "sha256": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "bear_skin_shadow_icon"
-          },
           "image_key": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9"
         }
       ],
-      "primary_skin_id": "bear_skin_3",
-      "primary_icon_sprite": "bear_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_3.png",
-        "sha256": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_3_icon"
-      },
       "image_key": "025c9528ffa6e23dc4703af05c8b88e6108ed3e7935465b6d7c07247f07c5c19",
       "numeric": {
         "summary": [
@@ -7532,7 +7192,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T4 · 普通",
       "display_en": "Bear T4 · Common",
-      "tier_id": "bear_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -7555,7 +7214,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -8095,43 +7753,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_4",
           "name_zh": "灰熊",
           "name_en": "Grizzly bear",
-          "description_zh": "灰熊用后腿站立，身高可达 3 米。",
-          "description_en": "Standing on its back legs, Grizzly bear reaches a height of 10 ft.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_4_icon",
-          "icon_sprite": "bear_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_4",
-          "child_avatar_view_id": "wls2_pet_bear_brown_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            93,
-            6,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-            "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_4_icon"
-          },
           "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4"
         }
       ],
-      "primary_skin_id": "bear_skin_4",
-      "primary_icon_sprite": "bear_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-        "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_4_icon"
-      },
       "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
       "numeric": {
         "summary": [
@@ -9296,7 +8920,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T4 · 优秀",
       "display_en": "Bear T4 · Uncommon",
-      "tier_id": "bear_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -9319,7 +8942,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -9859,43 +9481,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_4",
           "name_zh": "灰熊",
           "name_en": "Grizzly bear",
-          "description_zh": "灰熊用后腿站立，身高可达 3 米。",
-          "description_en": "Standing on its back legs, Grizzly bear reaches a height of 10 ft.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_4_icon",
-          "icon_sprite": "bear_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_4",
-          "child_avatar_view_id": "wls2_pet_bear_brown_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            93,
-            6,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-            "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_4_icon"
-          },
           "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4"
         }
       ],
-      "primary_skin_id": "bear_skin_4",
-      "primary_icon_sprite": "bear_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-        "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_4_icon"
-      },
       "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
       "numeric": {
         "summary": [
@@ -11060,7 +10648,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T4 · 稀有",
       "display_en": "Bear T4 · Rare",
-      "tier_id": "bear_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -11083,7 +10670,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -11623,127 +11209,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_4",
           "name_zh": "灰熊",
           "name_en": "Grizzly bear",
-          "description_zh": "灰熊用后腿站立，身高可达 3 米。",
-          "description_en": "Standing on its back legs, Grizzly bear reaches a height of 10 ft.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_4_icon",
-          "icon_sprite": "bear_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_4",
-          "child_avatar_view_id": "wls2_pet_bear_brown_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            93,
-            6,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-            "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_4_icon"
-          },
           "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4"
         },
         {
           "id": "bear_skin_6_xmas_22",
           "name_zh": "北极熊",
           "name_en": "Polar bear",
-          "description_zh": "尽管白极熊看起来白绒绒，毛皮之下的皮肤其实是黑色的！",
-          "description_en": "Polar bears have black skin, but you won't see it because of their white fur.",
-          "icon_path": "UI_WW_AlphaBinary07/bear_skin_6_icon",
-          "icon_sprite": "bear_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_xmas_22_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_polar_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6_xmas_22.png",
-            "sha256": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "bear_skin_6_icon"
-          },
           "image_key": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55"
         },
         {
           "id": "bear_skin_halloween_25",
           "name_zh": "幽灵熊",
           "name_en": "Ghost Bear",
-          "description_zh": "当夜晚变长和威士忌干涸时的一个可怕伙伴",
-          "description_en": "A spooky partner for when the nights get long and the whiskey runs dry",
-          "icon_path": "UI_WW_AlphaBinary10/bear_2025_halloween_icon",
-          "icon_sprite": "bear_2025_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/bear_cub_2025_halloween_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_halloween_25",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_halloween_25",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_halloween_25.png",
-            "sha256": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "bear_2025_halloween_icon"
-          },
           "image_key": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19"
         },
         {
           "id": "bear_skin_shadow",
           "name_zh": "暗影熊",
           "name_en": "Shadow Bear",
-          "description_zh": "被活生生的黑暗笼罩的巨兽",
-          "description_en": "A massive beast wrapped in living darkness",
-          "icon_path": "UI_WW_AlphaBinary11/bear_skin_shadow_icon",
-          "icon_sprite": "bear_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/bear_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_shadow.png",
-            "sha256": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "bear_skin_shadow_icon"
-          },
           "image_key": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9"
         }
       ],
-      "primary_skin_id": "bear_skin_4",
-      "primary_icon_sprite": "bear_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_4.png",
-        "sha256": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_4_icon"
-      },
       "image_key": "c95084257a00e1bd79fe2fa5ada1be029e7a7e3b53ff58500d55a7e861e161c4",
       "numeric": {
         "summary": [
@@ -12908,7 +12394,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T5 · 普通",
       "display_en": "Bear T5 · Common",
-      "tier_id": "bear_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -12931,7 +12416,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -13698,41 +13182,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_5",
           "name_zh": "路易斯安那黑熊",
           "name_en": "Louisiana black bear",
-          "description_zh": "路易斯安那黑熊的嗅觉比人类强一百倍。",
-          "description_en": "Louisiana black bear sense of smell a hundred times better than human one.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_5_icon",
-          "icon_sprite": "bear_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_5",
-          "child_avatar_view_id": "wls2_pet_bear_black_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-            "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_5_icon"
-          },
           "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b"
         }
       ],
-      "primary_skin_id": "bear_skin_5",
-      "primary_icon_sprite": "bear_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-        "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_5_icon"
-      },
       "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
       "numeric": {
         "summary": [
@@ -15379,7 +14831,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T5 · 优秀",
       "display_en": "Bear T5 · Uncommon",
-      "tier_id": "bear_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -15402,7 +14853,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -16169,41 +15619,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_5",
           "name_zh": "路易斯安那黑熊",
           "name_en": "Louisiana black bear",
-          "description_zh": "路易斯安那黑熊的嗅觉比人类强一百倍。",
-          "description_en": "Louisiana black bear sense of smell a hundred times better than human one.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_5_icon",
-          "icon_sprite": "bear_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_5",
-          "child_avatar_view_id": "wls2_pet_bear_black_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-            "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_5_icon"
-          },
           "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b"
         }
       ],
-      "primary_skin_id": "bear_skin_5",
-      "primary_icon_sprite": "bear_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-        "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_5_icon"
-      },
       "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
       "numeric": {
         "summary": [
@@ -17850,7 +17268,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T5 · 稀有",
       "display_en": "Bear T5 · Rare",
-      "tier_id": "bear_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -17873,7 +17290,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -18640,97 +18056,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_5",
           "name_zh": "路易斯安那黑熊",
           "name_en": "Louisiana black bear",
-          "description_zh": "路易斯安那黑熊的嗅觉比人类强一百倍。",
-          "description_en": "Louisiana black bear sense of smell a hundred times better than human one.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_5_icon",
-          "icon_sprite": "bear_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_5",
-          "child_avatar_view_id": "wls2_pet_bear_black_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-            "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_5_icon"
-          },
           "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b"
         },
         {
           "id": "bear_skin_6_xmas_22",
           "name_zh": "北极熊",
           "name_en": "Polar bear",
-          "description_zh": "尽管白极熊看起来白绒绒，毛皮之下的皮肤其实是黑色的！",
-          "description_en": "Polar bears have black skin, but you won't see it because of their white fur.",
-          "icon_path": "UI_WW_AlphaBinary07/bear_skin_6_icon",
-          "icon_sprite": "bear_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_xmas_22_bear_3",
-          "child_avatar_view_id": "wls2_pet_bear_polar_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6_xmas_22.png",
-            "sha256": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "bear_skin_6_icon"
-          },
           "image_key": "3d4dbab1588d45e864f75609231b707ed2966584d76973cfc5ab867966e68e55"
         },
         {
           "id": "bear_skin_halloween_25",
           "name_zh": "幽灵熊",
           "name_en": "Ghost Bear",
-          "description_zh": "当夜晚变长和威士忌干涸时的一个可怕伙伴",
-          "description_en": "A spooky partner for when the nights get long and the whiskey runs dry",
-          "icon_path": "UI_WW_AlphaBinary10/bear_2025_halloween_icon",
-          "icon_sprite": "bear_2025_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/bear_cub_2025_halloween_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_halloween_25",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_halloween_25",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_halloween_25.png",
-            "sha256": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "bear_2025_halloween_icon"
-          },
           "image_key": "145eb602d107b1213d763ff54ea14cef8d741278528f5d9036d3ed8779b48d19"
         }
       ],
-      "primary_skin_id": "bear_skin_5",
-      "primary_icon_sprite": "bear_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-        "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_5_icon"
-      },
       "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
       "numeric": {
         "summary": [
@@ -20377,7 +19717,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T5 · 史诗",
       "display_en": "Bear T5 · Epic",
-      "tier_id": "bear_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -20400,7 +19739,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -21167,69 +20505,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_5",
           "name_zh": "路易斯安那黑熊",
           "name_en": "Louisiana black bear",
-          "description_zh": "路易斯安那黑熊的嗅觉比人类强一百倍。",
-          "description_en": "Louisiana black bear sense of smell a hundred times better than human one.",
-          "icon_path": "UI_WW_AlphaBinary06/bear_skin_5_icon",
-          "icon_sprite": "bear_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/bear_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_5",
-          "child_avatar_view_id": "wls2_pet_bear_black_big_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-            "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "bear_skin_5_icon"
-          },
           "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b"
         },
         {
           "id": "bear_skin_shadow",
           "name_zh": "暗影熊",
           "name_en": "Shadow Bear",
-          "description_zh": "被活生生的黑暗笼罩的巨兽",
-          "description_en": "A massive beast wrapped in living darkness",
-          "icon_path": "UI_WW_AlphaBinary11/bear_skin_shadow_icon",
-          "icon_sprite": "bear_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/bear_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_bear_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_bear_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_shadow.png",
-            "sha256": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "bear_skin_shadow_icon"
-          },
           "image_key": "436ccb135b876d726d99ebf2c84b57d0fff017c6b51a171296567939f13bbbb9"
         }
       ],
-      "primary_skin_id": "bear_skin_5",
-      "primary_icon_sprite": "bear_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_5.png",
-        "sha256": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "bear_skin_5_icon"
-      },
       "image_key": "5ee506c96ab9fb85c94ee22abba0cf84a31c58c01d6c727010d46a2316f9829b",
       "numeric": {
         "summary": [
@@ -22876,7 +22160,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T6 · 普通",
       "display_en": "Bear T6 · Common",
-      "tier_id": "bear_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -22899,7 +22182,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -23806,41 +23088,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_6",
           "name_zh": "科迪亚克熊",
           "name_en": "Kodiak bear",
-          "description_zh": "一只可怕的荒野巨兽，拥有巨大的力量和贪婪的食欲。",
-          "description_en": "A formidable giant of the wilderness, possessing immense strength and a voracious appetite",
-          "icon_path": "UI_WW_AlphaBinary08/bear_skin_7_icon",
-          "icon_sprite": "bear_skin_7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/bear_cub_skin_7_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_6",
-          "child_avatar_view_id": "wls2_pet_bear_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6.png",
-            "sha256": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "bear_skin_7_icon"
-          },
           "image_key": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce"
         }
       ],
-      "primary_skin_id": "bear_skin_6",
-      "primary_icon_sprite": "bear_skin_7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_6.png",
-        "sha256": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "bear_skin_7_icon"
-      },
       "image_key": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
       "numeric": {
         "summary": [
@@ -25787,7 +25037,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
       "species_en": "Bear",
       "display_zh": "熊 T6 · 优秀",
       "display_en": "Bear T6 · Uncommon",
-      "tier_id": "bear_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -25810,7 +25059,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -26717,41 +25965,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-0"] = {
           "id": "bear_skin_6",
           "name_zh": "科迪亚克熊",
           "name_en": "Kodiak bear",
-          "description_zh": "一只可怕的荒野巨兽，拥有巨大的力量和贪婪的食欲。",
-          "description_en": "A formidable giant of the wilderness, possessing immense strength and a voracious appetite",
-          "icon_path": "UI_WW_AlphaBinary08/bear_skin_7_icon",
-          "icon_sprite": "bear_skin_7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/bear_cub_skin_7_icon",
-          "avatar_id": "wls2_mob_elite_animal_bear_6",
-          "child_avatar_view_id": "wls2_pet_bear_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/bear_skin_6.png",
-            "sha256": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "bear_skin_7_icon"
-          },
           "image_key": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce"
         }
       ],
-      "primary_skin_id": "bear_skin_6",
-      "primary_icon_sprite": "bear_skin_7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/bear_skin_6.png",
-        "sha256": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "bear_skin_7_icon"
-      },
       "image_key": "039a410c4658404980f13469fdc8c2518fe94a0032a8f3c74689395037cc20ce",
       "numeric": {
         "summary": [

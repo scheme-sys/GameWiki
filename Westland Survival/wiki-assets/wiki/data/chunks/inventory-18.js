@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
   "records": [
     {
       "id": "wls2_consumable_caribu_steak_6_common",
-      "item_id": "wls2_consumable_caribu_steak_6_common",
       "name": "驯鹿牛排",
       "name_en": "Caribou steak",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_caribu_steak_6_common",
-      "image_id": "wls2_consumable_caribu_steak_6_common",
       "equipment_id": null,
       "stats": [
         {
@@ -76,19 +72,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_caribu_steak_6_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_caribu_steak_6_common_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "df875b22dc9feaf5f6aedb38cdae9a7cb999fdb16aeaef26b598d1a5371ec052",
       "numeric": {
         "summary": [
@@ -117,7 +100,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_injun_drink_6_uncommon",
-      "item_id": "wls2_consumable_injun_drink_6_uncommon",
       "name": "因纽特针叶茶",
       "name_en": "Inuit coniferous tea",
       "name_source": "official_zh",
@@ -128,12 +110,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_injun_drink_6_uncommon",
-      "image_id": "wls2_consumable_injun_drink_6_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -201,19 +180,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_injun_drink_6_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_injun_drink_6_uncommon_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "23f726ab739c2ac4a30925ae215dbf16eab8879d79cdd46abb8cea3c034b339e",
       "numeric": {
         "summary": [
@@ -242,7 +208,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_injun_drink_6_rare",
-      "item_id": "wls2_consumable_injun_drink_6_rare",
       "name": "强烈提取",
       "name_en": "Strong extract",
       "name_source": "official_zh",
@@ -253,12 +218,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_injun_drink_6_rare",
-      "image_id": "wls2_consumable_injun_drink_6_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -331,19 +293,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_injun_drink_6_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_injun_drink_6_rare_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4178b53cd96cdc0d7645f69e543f7a551638142d1b4ed03e898f93b0a3e469fe",
       "numeric": {
         "summary": [
@@ -372,7 +321,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_injun_drink_6_common",
-      "item_id": "wls2_consumable_injun_drink_6_common",
       "name": "针叶树提取物",
       "name_en": "Coniferous extract",
       "name_source": "official_zh",
@@ -383,12 +331,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_injun_drink_6_common",
-      "image_id": "wls2_consumable_injun_drink_6_common",
       "equipment_id": null,
       "stats": [
         {
@@ -452,19 +397,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_injun_drink_6_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_injun_drink_6_common_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2e700053d492efc3f922a9163f1a36ebd8ad9339c54f5b55d926b7b6643a77ba",
       "numeric": {
         "summary": [
@@ -493,7 +425,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_st_patricks_day_pie_t7",
-      "item_id": "wls2_consumable_st_patricks_day_pie_t7",
       "name": "三叶草的爱尔兰派",
       "name_en": "Shamrock's Irish Pie",
       "name_source": "official_zh",
@@ -504,12 +435,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_st_patricks_day_pie",
-      "image_id": "wls2_consumable_st_patricks_day_pie_t7",
       "equipment_id": null,
       "stats": [],
       "effects": [
@@ -555,24 +483,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_st_patricks_day_pie_t7",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_consumable_st_patricks_day_pie_name",
-        "sorting_group": "food_dish",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4e724de747000ffe5f925302e0b728ab5f79119edc01a134543377586f07dfc9"
     },
     {
       "id": "wls2_consumable_bass_cakes_7_rare",
-      "item_id": "wls2_consumable_bass_cakes_7_rare",
       "name": "低音蛋糕",
       "name_en": "Bass cakes",
       "name_source": "official_zh",
@@ -583,12 +497,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_bass_cakes_7_rare",
-      "image_id": "wls2_consumable_bass_cakes_7_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -661,19 +572,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_bass_cakes_7_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_bass_cakes_7_rare_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8497dce15251902400f146e97ef2ecade6705ec967c859dd2629bd2a84665c7d",
       "numeric": {
         "summary": [
@@ -702,7 +600,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_taco_7_uncommon",
-      "item_id": "wls2_consumable_taco_7_uncommon",
       "name": "塔可",
       "name_en": "Taco",
       "name_source": "official_zh",
@@ -713,12 +610,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls_2_consumable_taco_7_uncommon",
-      "image_id": "wls2_consumable_taco_7_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -791,19 +685,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_taco_7_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_taco_7_uncommon_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9633d874d20d8cc25149de0cbb067ee0f2290f1be5a119a008cf9e7cde835a17",
       "numeric": {
         "summary": [
@@ -832,7 +713,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_pueblo_firepot_7_uncommon",
-      "item_id": "wls2_consumable_pueblo_firepot_7_uncommon",
       "name": "普韦布洛 火锅",
       "name_en": "Pueblo firepot",
       "name_source": "official_zh",
@@ -843,12 +723,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_pueblo_firepot_7_uncommon",
-      "image_id": "wls2_consumable_pueblo_firepot_7_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -921,19 +798,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_pueblo_firepot_7_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_pueblo_firepot_7_uncommon_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "feef88f956ce78d0a58147313a05f2743fe44826c90ff617894ed30a9b638394",
       "numeric": {
         "summary": [
@@ -962,7 +826,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_stewed_tomato_7_common",
-      "item_id": "wls2_consumable_stewed_tomato_7_common",
       "name": "炖番茄",
       "name_en": "Stewed tomatoes",
       "name_source": "official_zh",
@@ -973,12 +836,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_stewed_tomato_7_common",
-      "image_id": "wls2_consumable_stewed_tomato_7_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1028,19 +888,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_stewed_tomato_7_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_stewed_tomato_7_common_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9e603c8ebbf957ed3c78ba09a4bdee4b1e6c08ca3a30110ba9127a35379264c6",
       "numeric": {
         "summary": [
@@ -1069,7 +916,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_roasted_bone_marrow_t7",
-      "item_id": "wls2_consumable_roasted_bone_marrow_t7",
       "name": "熏骨髓",
       "name_en": "Smoked Marrowbone",
       "name_source": "official_zh",
@@ -1080,12 +926,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_consumable_roasted_bone_marrow",
-      "image_id": "wls2_consumable_roasted_bone_marrow_t7",
       "equipment_id": null,
       "stats": [
         {
@@ -1128,19 +971,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_roasted_bone_marrow_t7",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_consumable_roasted_bone_marrow_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "2bb89d54e55f68147c3d897a4434fac6f67813621ea832f999aac61d2c212355",
       "numeric": {
         "summary": [
@@ -1169,7 +999,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_beef_ragout_7_rare",
-      "item_id": "wls2_consumable_beef_ragout_7_rare",
       "name": "牛肉 炖菜",
       "name_en": "Beef stew",
       "name_source": "official_zh",
@@ -1180,12 +1009,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_beef_ragout_7_rare",
-      "image_id": "wls2_consumable_beef_ragout_7_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1258,19 +1084,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_beef_ragout_7_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_beef_ragout_7_rare_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5489785917637b57a4d05e3b7755147b28844ec8d83b3247f53c2331cfbdb5ef",
       "numeric": {
         "summary": [
@@ -1299,7 +1112,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_rib_steak_7_common",
-      "item_id": "wls2_consumable_rib_steak_7_common",
       "name": "肋骨牛排",
       "name_en": "Rib steak",
       "name_source": "official_zh",
@@ -1310,12 +1122,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_rib_steak_7_common",
-      "image_id": "wls2_consumable_rib_steak_7_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1370,19 +1179,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_rib_steak_7_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_rib_steak_7_common_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "98e0461e101d3469ff407162af6578ae018b2d6da4730172c33a6738e45897d3",
       "numeric": {
         "summary": [
@@ -1411,7 +1207,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_chili_con_carne_7_rare",
-      "item_id": "wls2_consumable_chili_con_carne_7_rare",
       "name": "辣椒与肉",
       "name_en": "Chili con carne",
       "name_source": "official_zh",
@@ -1422,12 +1217,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_chili_con_carne_7_rare",
-      "image_id": "wls2_consumable_chili_con_carne_7_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1500,19 +1292,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_chili_con_carne_7_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_chili_con_carne_7_rare_name",
-        "sorting_group": "food_dish",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a62db4fd72e9eace0e5187dc100e694bba2ac830b9f54f5c06563fb55cd73805",
       "numeric": {
         "summary": [
@@ -1541,7 +1320,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_lime_squash_7_common",
-      "item_id": "wls2_consumable_lime_squash_7_common",
       "name": "石灰鲜榨汁",
       "name_en": "Lime squash",
       "name_source": "official_zh",
@@ -1552,12 +1330,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_lime_squash_7_common",
-      "image_id": "wls2_consumable_lime_squash_7_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1612,19 +1387,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_lime_squash_7_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_lime_squash_7_common_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5d1a990dd75e9dc37ad023513fd51b098dc34e894bf5fcd3fee2b634011f956a",
       "numeric": {
         "summary": [
@@ -1653,7 +1415,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_mohito_7_uncommon",
-      "item_id": "wls2_consumable_mohito_7_uncommon",
       "name": "莫希托",
       "name_en": "Mohito",
       "name_source": "official_zh",
@@ -1664,12 +1425,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_mohito_7_uncommon",
-      "image_id": "wls2_consumable_mohito_7_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1737,19 +1495,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_mohito_7_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_mohito_7_uncommon_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6d9d63913d2afca8c084d3036279a4d37d65734a0914e8f346457145f58a779d",
       "numeric": {
         "summary": [
@@ -1778,7 +1523,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_bloody_molly_7_rare",
-      "item_id": "wls2_consumable_bloody_molly_7_rare",
       "name": "血腥玛丽",
       "name_en": "Bloody Molly",
       "name_source": "official_zh",
@@ -1789,12 +1533,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/wls2_consumable_bloody_molly_7_rare",
-      "image_id": "wls2_consumable_bloody_molly_7_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1867,19 +1608,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_bloody_molly_7_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_bloody_molly_7_rare_name",
-        "sorting_group": "food_drink",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "312eff2c0f7c1679184a86920c07dae0391fd2890df8008a59cd3c26301e8725",
       "numeric": {
         "summary": [
@@ -1908,7 +1636,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_ws_day2021_candy",
-      "item_id": "wls2_ws_day2021_candy",
       "name": "周年庆糖果",
       "name_en": "Anniversary candy",
       "name_source": "official_zh",
@@ -1919,12 +1646,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 8,
       "rarity": "uncommon",
       "max_stack": 50,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_ws_day2021_candy",
-      "image_id": "wls2_ws_day2021_candy",
       "equipment_id": null,
       "stats": [
         {
@@ -1944,19 +1668,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_ws_day2021_candy",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_ws_day2021_candy_name",
-        "sorting_group": "candy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0b79f8da84ea741723842aab2721b518d329a411c7a37dc625592b1a7588c32e",
       "numeric": {
         "summary": [
@@ -1978,7 +1689,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_heal_bandage_1",
-      "item_id": "wls2_consumable_heal_bandage_1",
       "name": "绷带",
       "name_en": "Selfmade bandage",
       "name_source": "official_zh",
@@ -1989,12 +1699,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_heal_bandage_1",
-      "image_id": "wls2_consumable_heal_bandage_1",
       "equipment_id": null,
       "stats": [
         {
@@ -2062,19 +1769,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_heal_bandage_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_bandage_name",
-        "sorting_group": "heal_bandage",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "05dc8afc99c50c548a2e124e41d6290fa1bbb99954a822a6d6ccc74aeb49d9bd",
       "numeric": {
         "summary": [
@@ -2096,7 +1790,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_1",
-      "item_id": "wls2_resourse_miscellaneous_herb_1",
       "name": "医用草药",
       "name_en": "Medicative herb",
       "name_source": "official_zh",
@@ -2107,12 +1800,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/wls_medicative_herb",
-      "image_id": "wls2_resourse_miscellaneous_herb_1",
       "equipment_id": null,
       "stats": [
         {
@@ -2211,22 +1901,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_medicative_herb_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_1",
-          "wls2_loc_farm_wood_1"
-        ],
-        "quest_referenced": true
-      },
       "image_key": "6622167fe2be0f7d861a2daeccb7003d9f6aed70a2c0ccb0d114bc16a24e60e6",
       "numeric": {
         "summary": [
@@ -2248,7 +1922,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_1",
-      "item_id": "wls2_consumable_flask_heal_1",
       "name": "草药溶剂",
       "name_en": "Herbal infusion",
       "name_source": "official_zh",
@@ -2259,12 +1932,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/wls_herbal_infusion",
-      "image_id": "wls2_consumable_flask_heal_1",
       "equipment_id": null,
       "stats": [
         {
@@ -2330,19 +2000,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_herbal_infusion_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "07b68373111b6c89f0a4153475905a12252ee12838fb3e77c59a3b71f6f2dc12",
       "numeric": {
         "summary": [
@@ -2364,7 +2021,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_1",
-      "item_id": "wls2_consumable_oil_heal_1",
       "name": "草本 药膏",
       "name_en": "Herbal ointment",
       "name_source": "official_zh",
@@ -2375,12 +2031,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/wls_salve",
-      "image_id": "wls2_consumable_oil_heal_1",
       "equipment_id": null,
       "stats": [
         {
@@ -2429,19 +2082,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_salve_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "95bfb662c5807058c11d6395726ed54c86efdd77ad8eaba0558cb1a807abad91",
       "numeric": {
         "summary": [
@@ -2463,7 +2103,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_heal_bandage_2",
-      "item_id": "wls2_consumable_heal_bandage_2",
       "name": "轻型绷带",
       "name_en": "Light bandage",
       "name_source": "official_zh",
@@ -2474,12 +2113,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_heal_bandage_2",
-      "image_id": "wls2_consumable_heal_bandage_2",
       "equipment_id": null,
       "stats": [
         {
@@ -2528,19 +2164,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_heal_bandage_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_heal_bandage_2_name",
-        "sorting_group": "heal_bandage",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d69a7ecb4b3b75f00ad4effa405e3b4ad470c13f1c247a8ae84ab15b64a0cf4f",
       "numeric": {
         "summary": [
@@ -2562,7 +2185,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_2",
-      "item_id": "wls2_resourse_miscellaneous_herb_2",
       "name": "车前草",
       "name_en": "Plantago",
       "name_source": "official_zh",
@@ -2573,12 +2195,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_herb_2",
-      "image_id": "wls2_resourse_miscellaneous_herb_2",
       "equipment_id": null,
       "stats": [
         {
@@ -2696,22 +2315,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Resourse_miscellaneous_herb_2_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_2",
-          "wls2_loc_farm_wood_2_legacy"
-        ],
-        "quest_referenced": true
-      },
       "image_key": "00a58fb547a67459d87ca74b1f82e74a45b49406983552320a4dc85ef824c19f",
       "numeric": {
         "summary": [
@@ -2733,7 +2336,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_2",
-      "item_id": "wls2_consumable_flask_heal_2",
       "name": "强力药草溶剂",
       "name_en": "Strong herbal infusion",
       "name_source": "official_zh",
@@ -2744,12 +2346,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_flask_heal_2",
-      "image_id": "wls2_consumable_flask_heal_2",
       "equipment_id": null,
       "stats": [
         {
@@ -2806,19 +2405,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_flask_heal_2_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "64a16c84d191840230737ab1099747ba672d853a0877e12014fa93b2f3d867bb",
       "numeric": {
         "summary": [
@@ -2840,7 +2426,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_2",
-      "item_id": "wls2_consumable_oil_heal_2",
       "name": "强效药膏",
       "name_en": "Strong ointment",
       "name_source": "official_zh",
@@ -2851,12 +2436,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_oil_heal_2",
-      "image_id": "wls2_consumable_oil_heal_2",
       "equipment_id": null,
       "stats": [
         {
@@ -2905,19 +2487,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_oil_heal_2_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": true
-      },
       "image_key": "3d2be31463de1af5a9911a74991cfc93d9f1c085f8cd5bba37d76e27aabcb981",
       "numeric": {
         "summary": [
@@ -2939,7 +2508,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_balm_heal_3",
-      "item_id": "wls2_consumable_balm_heal_3",
       "name": "消毒软膏",
       "name_en": "Disinfectant balm",
       "name_source": "official_zh",
@@ -2950,12 +2518,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_consumable_balm_heal_3_icon",
-      "image_id": "wls2_consumable_balm_heal_3",
       "equipment_id": null,
       "stats": [
         {
@@ -2981,19 +2546,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_balm_heal_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_consumable_balm_heal_3_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "250a74c6444dcd92f2cba3dfdfa1f964e5c60041c5c632bfa4e9c6129f0c452e",
       "numeric": {
         "summary": [
@@ -3022,7 +2574,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_heal_bandage_3",
-      "item_id": "wls2_consumable_heal_bandage_3",
       "name": "绷带",
       "name_en": "Bandage",
       "name_source": "official_zh",
@@ -3033,12 +2584,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_heal_bandage_3",
-      "image_id": "wls2_consumable_heal_bandage_3",
       "equipment_id": null,
       "stats": [
         {
@@ -3095,19 +2643,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_heal_bandage_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_heal_bandage_3_name",
-        "sorting_group": "heal_bandage",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "df73ea9aa62cbd285c5089589729d36ff716cd9b290c4f8e39a8ba493b1784d3",
       "numeric": {
         "summary": [
@@ -3129,7 +2664,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_3",
-      "item_id": "wls2_resourse_miscellaneous_herb_3",
       "name": "藿香",
       "name_en": "Agastache",
       "name_source": "official_zh",
@@ -3140,12 +2674,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_herb_3",
-      "image_id": "wls2_resourse_miscellaneous_herb_3",
       "equipment_id": null,
       "stats": [
         {
@@ -3250,23 +2781,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Resourse_miscellaneous_herb_3_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_3",
-          "Dead_Pine_Forest",
-          "wls2_loc_farm_wood_3"
-        ],
-        "quest_referenced": true
-      },
       "image_key": "0aba29cf573ba6b7a977c8260642e55d9469bb23e06363ef39477b5c39419740",
       "numeric": {
         "summary": [
@@ -3288,7 +2802,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_3",
-      "item_id": "wls2_consumable_flask_heal_3",
       "name": "优质药草溶剂",
       "name_en": "Excellent herbal infusion",
       "name_source": "official_zh",
@@ -3299,12 +2812,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_flask_heal_3",
-      "image_id": "wls2_consumable_flask_heal_3",
       "equipment_id": null,
       "stats": [
         {
@@ -3379,19 +2889,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_flask_heal_3_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c9191d7947832db4b33603586fed43158a01263aae9d597cf3cac56f4228c225",
       "numeric": {
         "summary": [
@@ -3413,7 +2910,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_3",
-      "item_id": "wls2_consumable_oil_heal_3",
       "name": "优秀 药膏",
       "name_en": "Excellent ointment",
       "name_source": "official_zh",
@@ -3424,12 +2920,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_oil_heal_3",
-      "image_id": "wls2_consumable_oil_heal_3",
       "equipment_id": null,
       "stats": [
         {
@@ -3496,19 +2989,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_oil_heal_3_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": true
-      },
       "image_key": "e5e00b0b411110f20c438502a154714759d942584460629ffe50d65399b4c6b0",
       "numeric": {
         "summary": [
@@ -3530,7 +3010,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_balm_heal_4",
-      "item_id": "wls2_consumable_balm_heal_4",
       "name": "医用软膏",
       "name_en": "Medicine balm",
       "name_source": "official_zh",
@@ -3541,12 +3020,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_consumable_balm_heal_4_icon",
-      "image_id": "wls2_consumable_balm_heal_4",
       "equipment_id": null,
       "stats": [
         {
@@ -3572,19 +3048,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_balm_heal_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_consumable_balm_heal_4_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3d6cbbd155932d41504e0b069ef6325ef0abc3d0391ec9dcf15d0e4532b37b21",
       "numeric": {
         "summary": [
@@ -3613,7 +3076,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_heal_bandage_4",
-      "item_id": "wls2_consumable_heal_bandage_4",
       "name": "重型绷带",
       "name_en": "Heavy bandage",
       "name_source": "official_zh",
@@ -3624,12 +3086,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_heal_bandage_4",
-      "image_id": "wls2_consumable_heal_bandage_4",
       "equipment_id": null,
       "stats": [
         {
@@ -3669,19 +3128,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_heal_bandage_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_heal_bandage_4_name",
-        "sorting_group": "heal_bandage",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "717808ff84076a80740d1c0c4a2fca02f49a3687d2f2cb778be35475983be572",
       "numeric": {
         "summary": [
@@ -3703,7 +3149,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_4",
-      "item_id": "wls2_resourse_miscellaneous_herb_4",
       "name": "洋甘菊",
       "name_en": "Matricaria chamomilla",
       "name_source": "official_zh",
@@ -3714,12 +3159,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_herb_4",
-      "image_id": "wls2_resourse_miscellaneous_herb_4",
       "equipment_id": null,
       "stats": [
         {
@@ -3818,24 +3260,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Resourse_miscellaneous_herb_4_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_4",
-          "wls2_loc_farm_wood_4",
-          "wls2_loc_farm_stone_4",
-          "wls2_loc_farm_hide_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "1035b1d41276dd2cfaeb831a27c7a85584002d883eee9271a37fa32065e28452",
       "numeric": {
         "summary": [
@@ -3857,7 +3281,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_4",
-      "item_id": "wls2_consumable_flask_heal_4",
       "name": "印第安人秘密溶剂",
       "name_en": "Indigenous secret infusion",
       "name_source": "official_zh",
@@ -3868,12 +3291,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_flask_heal_4",
-      "image_id": "wls2_consumable_flask_heal_4",
       "equipment_id": null,
       "stats": [
         {
@@ -3948,19 +3368,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_flask_heal_4_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ba632c139057762eaedacdccbc05238a2f2868aae0aa84cf4fa64244bb359d12",
       "numeric": {
         "summary": [
@@ -3982,7 +3389,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_4",
-      "item_id": "wls2_consumable_oil_heal_4",
       "name": "土著 药膏",
       "name_en": "Indigenous ointment",
       "name_source": "official_zh",
@@ -3993,12 +3399,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_oil_heal_4",
-      "image_id": "wls2_consumable_oil_heal_4",
       "equipment_id": null,
       "stats": [
         {
@@ -4074,19 +3477,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_oil_heal_4_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ac9f94dbac26d6676222263f8a89befbe0ad973eca34efed9321e7b2fff3cf75",
       "numeric": {
         "summary": [
@@ -4108,7 +3498,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_balm_heal_5",
-      "item_id": "wls2_consumable_balm_heal_5",
       "name": "军用软膏",
       "name_en": "Army balm",
       "name_source": "official_zh",
@@ -4119,12 +3508,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_consumable_balm_heal_5_icon",
-      "image_id": "wls2_consumable_balm_heal_5",
       "equipment_id": null,
       "stats": [
         {
@@ -4150,19 +3536,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_balm_heal_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_consumable_balm_heal_5_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6fc7c1a9bc7f59d4f014cae52c1a0a12cc92ceabe277504f83e99afa1f678275",
       "numeric": {
         "summary": [
@@ -4191,7 +3564,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_5",
-      "item_id": "wls2_resourse_miscellaneous_herb_5",
       "name": "亚伦的枝条",
       "name_en": "Aaron's rod",
       "name_source": "official_zh",
@@ -4202,12 +3574,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_herb_5",
-      "image_id": "wls2_resourse_miscellaneous_herb_5",
       "equipment_id": null,
       "stats": [
         {
@@ -4281,22 +3650,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Resourse_miscellaneous_herb_5_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_5",
-          "wls2_loc_farm_hide_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "b670ba6bdc9f6699965ef0fed70ba6c6b0cd71bd959ee9868c4e82d45337f70d",
       "numeric": {
         "summary": [
@@ -4318,7 +3671,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_5",
-      "item_id": "wls2_consumable_flask_heal_5",
       "name": "纯粹药草溶剂",
       "name_en": "Pure herbal infusion",
       "name_source": "official_zh",
@@ -4329,12 +3681,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_flask_heal_5",
-      "image_id": "wls2_consumable_flask_heal_5",
       "equipment_id": null,
       "stats": [
         {
@@ -4409,19 +3758,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_flask_heal_5_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1ef6f51a8337a52a95b25b4a586d1950e618fa26b4130f8a97a4f41e566c3b23",
       "numeric": {
         "summary": [
@@ -4443,7 +3779,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_5",
-      "item_id": "wls2_consumable_oil_heal_5",
       "name": "纯软膏",
       "name_en": "Pure ointment",
       "name_source": "official_zh",
@@ -4454,12 +3789,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_oil_heal_5",
-      "image_id": "wls2_consumable_oil_heal_5",
       "equipment_id": null,
       "stats": [
         {
@@ -4508,19 +3840,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Consumable_oil_heal_5_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "dc6bf375fe4c71405488bce0d555b9bb3cea8311a74d304bf26aeabb69cf041c",
       "numeric": {
         "summary": [
@@ -4542,7 +3861,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_balm_heal_6",
-      "item_id": "wls2_consumable_balm_heal_6",
       "name": "六阶治疗膏",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -4553,12 +3871,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": true,
       "legacy": true,
       "placeholder_image": true,
-      "sprite": "UI_WW_AlphaBinary03/Wls_ear",
-      "image_id": "wls2_consumable_balm_heal_6",
       "equipment_id": null,
       "stats": [
         {
@@ -4578,19 +3893,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_balm_heal_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_balm_heal_6_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "fa408c53d428a7a307ee315d103767b4f631905e9ddf5a5ae9ddb932314b7d3a",
       "numeric": {
         "summary": [
@@ -4612,7 +3914,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_6",
-      "item_id": "wls2_resourse_miscellaneous_herb_6",
       "name": "恶魔俱乐部",
       "name_en": "Devil’s club",
       "name_source": "official_zh",
@@ -4623,12 +3924,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_resourse_miscellaneous_herb_6",
-      "image_id": "wls2_resourse_miscellaneous_herb_6",
       "equipment_id": null,
       "stats": [
         {
@@ -4681,23 +3979,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_resourse_miscellaneous_herb_6_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_6",
-          "wls2_loc_farm_wood_6",
-          "wls2_loc_farm_stone_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "3b673572c9bab689767204ca1a21719b1f0596eb18d198c1d99cc2fc58a532ed",
       "numeric": {
         "summary": [
@@ -4719,7 +4000,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_6",
-      "item_id": "wls2_consumable_flask_heal_6",
       "name": "恶魔俱乐部浸泡",
       "name_en": "Devil’s club infusion",
       "name_source": "official_zh",
@@ -4730,12 +4010,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_flask_heal_6",
-      "image_id": "wls2_consumable_flask_heal_6",
       "equipment_id": null,
       "stats": [
         {
@@ -4792,19 +4069,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_flask_heal_6_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "aa63029eb43d5a2ef1037f7a57c4d8d6bbbc8c4adb2b1e3536ad061934305ec5",
       "numeric": {
         "summary": [
@@ -4826,7 +4090,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_6",
-      "item_id": "wls2_consumable_oil_heal_6",
       "name": "恶魔俱乐部膏",
       "name_en": "Devil’s club ointment",
       "name_source": "official_zh",
@@ -4837,12 +4100,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_consumable_oil_heal_6",
-      "image_id": "wls2_consumable_oil_heal_6",
       "equipment_id": null,
       "stats": [
         {
@@ -4882,19 +4142,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_6",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_oil_heal_6_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "37a4b1cd28de1f0eb58a3a1e22da8730335a24cefb0a6bf374784576e92d875b",
       "numeric": {
         "summary": [
@@ -4916,7 +4163,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_herb_7",
-      "item_id": "wls2_resourse_miscellaneous_herb_7",
       "name": "德克萨斯鼠尾草",
       "name_en": "Texas sage",
       "name_source": "official_zh",
@@ -4927,12 +4173,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_resourse_miscellaneous_herb_7_icon",
-      "image_id": "wls2_resourse_miscellaneous_herb_7",
       "equipment_id": null,
       "stats": [
         {
@@ -4991,22 +4234,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_herb_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_resourse_miscellaneous_herb_7_name",
-        "sorting_group": "heal_herb",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_7",
-          "wls2_loc_farm_stone_7"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "043542c869983e669f46ab83b1e9cac294c68a91538ab05133c8dbe261d78c8f",
       "numeric": {
         "summary": [
@@ -5028,7 +4255,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_flask_heal_7",
-      "item_id": "wls2_consumable_flask_heal_7",
       "name": "德克萨斯鼠尾草浸液",
       "name_en": "Texas sage infusion",
       "name_source": "official_zh",
@@ -5039,12 +4265,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_flask_heal_7_icon",
-      "image_id": "wls2_consumable_flask_heal_7",
       "equipment_id": null,
       "stats": [
         {
@@ -5092,19 +4315,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_flask_heal_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_flask_heal_7_name",
-        "sorting_group": "heal_flask",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e62c15c1d7285c6e6a6bd095fe59325f8035efdc071bbbfdaf01db863d362ba7",
       "numeric": {
         "summary": [
@@ -5126,7 +4336,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oil_heal_7",
-      "item_id": "wls2_consumable_oil_heal_7",
       "name": "德克萨斯鼠尾草软膏",
       "name_en": "Texas sage ointment",
       "name_source": "official_zh",
@@ -5137,12 +4346,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 7,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_consumable_oil_heal_7_icon",
-      "image_id": "wls2_consumable_oil_heal_7",
       "equipment_id": null,
       "stats": [
         {
@@ -5182,19 +4388,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oil_heal_7",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_consumable_oil_heal_7_name",
-        "sorting_group": "heal_oil",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "296066d137f2415c770ce878839fa61d7a78e45ac89ebf1d53d383e3e3bd8375",
       "numeric": {
         "summary": [
@@ -5216,7 +4409,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_corn_1",
-      "item_id": "wls2_consumable_corn_1",
       "name": "玉米",
       "name_en": "Corn",
       "name_source": "official_zh",
@@ -5227,12 +4419,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 100,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/wls_corn",
-      "image_id": "wls2_consumable_corn_1",
       "equipment_id": null,
       "stats": [
         {
@@ -5396,19 +4585,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_corn_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_corn_name",
-        "sorting_group": "culture",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4aa3532a01365341dd26cd1ac45d4e0a1580ecc808a122e17a0a4ae4d1abd56b",
       "numeric": {
         "summary": [
@@ -5444,7 +4620,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls_whiskey",
-      "item_id": "wls_whiskey",
       "name": "威士忌",
       "name_en": "Whiskey",
       "name_source": "official_zh",
@@ -5455,12 +4630,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW/wls_whiskey",
-      "image_id": "wls_whiskey",
       "equipment_id": null,
       "stats": [
         {
@@ -5526,19 +4698,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_whiskey",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_whiskey_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "98e3455f1987bb4582aafff4c37635cd95fbb4353d1c520c855c0e103231a914",
       "numeric": {
         "summary": [
@@ -5560,7 +4719,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_salt_1",
-      "item_id": "wls2_resourse_miscellaneous_salt_1",
       "name": "盐",
       "name_en": "Salt",
       "name_source": "official_zh",
@@ -5571,12 +4729,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_resourse_miscellaneous_salt_1",
-      "image_id": "wls2_resourse_miscellaneous_salt_1",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -5722,29 +4877,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_salt_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_salt_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "train_crush_39",
-          "train_raid",
-          "Shootup_01",
-          "wls2_loc_event_escort_01"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "34389f22c5d0a1498213af7b6a42dc5bf0ed2b0c0e50d9e43c13d1a7b0bb159a"
     },
     {
       "id": "wls2_resourse_miscellaneous_spice_1",
-      "item_id": "wls2_resourse_miscellaneous_spice_1",
       "name": "香料",
       "name_en": "Spice",
       "name_source": "official_zh",
@@ -5755,12 +4891,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary03/wls2_resourse_miscellaneous_spice_1",
-      "image_id": "wls2_resourse_miscellaneous_spice_1",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -5897,29 +5030,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_spice_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_spice_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "train_crush_39",
-          "train_raid",
-          "Shootup_01",
-          "wls2_loc_event_escort_01"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "1d80269d1f0f672e2e09dffbc0d0dd641788582810d9a8b49dfbf8730697692b"
     },
     {
       "id": "wls2_resourse_miscellaneous_meat_1",
-      "item_id": "wls2_resourse_miscellaneous_meat_1",
       "name": "硬肉",
       "name_en": "Tough meat",
       "name_source": "official_zh",
@@ -5930,12 +5044,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_meat_tough_icon",
-      "image_id": "wls2_resourse_miscellaneous_meat_1",
       "equipment_id": null,
       "stats": [
         {
@@ -6052,19 +5163,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_meat_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_meat_tough_name",
-        "sorting_group": "ingredient_meat",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": true
-      },
       "image_key": "79f171494983cc4d8d2f27993bf0c00a38adbc758463a101ee0196e692631629",
       "numeric": {
         "summary": [
@@ -6093,7 +5191,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls_fish",
-      "item_id": "wls_fish",
       "name": "水牛鱼",
       "name_en": "Buffalo fish",
       "name_source": "official_zh",
@@ -6104,12 +5201,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary10/Resource_primary_fish_t3_buffalo_fish",
-      "image_id": "wls_fish",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -6133,29 +5227,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_fish",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_fish_name",
-        "sorting_group": "ingredient_fish",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_hide_4",
-          "wls2_loc_farm_hide_5",
-          "wls2_loc_farm_hide_6",
-          "wls2_loc_farm_hide_7"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "b7a0bb07a97898a6740bd1652c0ff47ff1e8d832308edea46f8638dde7f58bc3"
     },
     {
       "id": "wls2_consumable_wheat",
-      "item_id": "wls2_consumable_wheat",
       "name": "小麦",
       "name_en": "Wheat",
       "name_source": "official_zh",
@@ -6166,12 +5241,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 100,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_farm_wheat_icon",
-      "image_id": "wls2_consumable_wheat",
       "equipment_id": null,
       "stats": [
         {
@@ -6293,19 +5365,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_wheat",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_farm_wheat_name",
-        "sorting_group": "culture",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1d297168322a4c786d329446ba0c8353b209e9e800979fc326ebcc7cc2fb24e9",
       "numeric": {
         "summary": [
@@ -6327,7 +5386,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls_cactus_berry",
-      "item_id": "wls_cactus_berry",
       "name": "仙人掌果",
       "name_en": "Cactus fruit",
       "name_source": "official_zh",
@@ -6338,12 +5396,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW/wls_cactus_berry",
-      "image_id": "wls_cactus_berry",
       "equipment_id": null,
       "stats": [
         {
@@ -6493,19 +5548,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_cactus_berry",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_cactus_berry_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "307adc0f5e5932ae54df54bef7b01b2ae75d5243518fffe407d0b6de90aa783c",
       "numeric": {
         "summary": [
@@ -6527,7 +5569,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_cooking_ingredient_meat_white_2",
-      "item_id": "wls2_cooking_ingredient_meat_white_2",
       "name": "白肉",
       "name_en": "White meat",
       "name_source": "official_zh",
@@ -6538,12 +5579,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 2,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_meat_white_icon",
-      "image_id": "wls2_cooking_ingredient_meat_white_2",
       "equipment_id": null,
       "stats": [
         {
@@ -6703,19 +5741,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_cooking_ingredient_meat_white_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_meat_white_name",
-        "sorting_group": "ingredient_meat",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3b48a4b56be6558a028eddb7ac8bf078c9fdc237714f743f3c4285bb0bf02b25",
       "numeric": {
         "summary": [
@@ -6744,7 +5769,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_oat",
-      "item_id": "wls2_consumable_oat",
       "name": "燕麦",
       "name_en": "Oats",
       "name_source": "official_zh",
@@ -6755,12 +5779,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 100,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/wls_oats",
-      "image_id": "wls2_consumable_oat",
       "equipment_id": null,
       "stats": [
         {
@@ -6824,19 +5845,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_oat",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_oats_name",
-        "sorting_group": "culture",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "88ce22f319c4e0c6c194ef619eab16fda63465856a6b9730a0ffe255800553e3",
       "numeric": {
         "summary": [
@@ -6865,7 +5873,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_beans_1",
-      "item_id": "wls2_consumable_beans_1",
       "name": "青豆",
       "name_en": "Green beans",
       "name_source": "official_zh",
@@ -6876,12 +5883,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 100,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Consumable_beans_1",
-      "image_id": "wls2_consumable_beans_1",
       "equipment_id": null,
       "stats": [
         {
@@ -6969,19 +5973,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_beans_1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_beans_name",
-        "sorting_group": "culture",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": true
-      },
       "image_key": "29277157b8759ae48738be2de1cc3fcc8c3d12d4cb1c07093e2a785a16231623",
       "numeric": {
         "summary": [
@@ -7010,7 +6001,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls_berry",
-      "item_id": "wls_berry",
       "name": "蓝莓",
       "name_en": "Blueberry",
       "name_source": "official_zh",
@@ -7021,12 +6011,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW/wls_berry",
-      "image_id": "wls_berry",
       "equipment_id": null,
       "stats": [
         {
@@ -7126,25 +6113,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_berry",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_blueberry_3_common_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_farm_stone_3",
-          "wls2_loc_farm_wood_3",
-          "wls2_loc_farm_hide_3",
-          "wls2_loc_farm_wood_6",
-          "wls2_loc_farm_hide_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "7e02446c908829d856ae985b2ac2c643882c1c83c0c245bc86d1f9e50617ba99",
       "numeric": {
         "summary": [
@@ -7166,7 +6134,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_resourse_miscellaneous_meat_3",
-      "item_id": "wls2_resourse_miscellaneous_meat_3",
       "name": "多汁的肋骨",
       "name_en": "Ribs",
       "name_source": "official_zh",
@@ -7177,12 +6144,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 3,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_meat_3",
-      "image_id": "wls2_resourse_miscellaneous_meat_3",
       "equipment_id": null,
       "stats": [
         {
@@ -7290,19 +6254,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_meat_3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_Resourse_miscellaneous_meat_3_name",
-        "sorting_group": "ingredient_meat",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "333b23d80c5aee1762181118ea088ca0c292626aa2b6118b242845d50667a9eb",
       "numeric": {
         "summary": [
@@ -7331,7 +6282,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_cabbage",
-      "item_id": "wls2_consumable_cabbage",
       "name": "卷心菜",
       "name_en": "Cabbage",
       "name_source": "official_zh",
@@ -7342,12 +6292,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 100,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_farm_cabbage_icon",
-      "image_id": "wls2_consumable_cabbage",
       "equipment_id": null,
       "stats": [
         {
@@ -7442,19 +6389,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_cabbage",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_farm_cabbage_name",
-        "sorting_group": "culture",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b7286577be786915cd868209d1933247f68107e7ff19cf1b73144a3290ef06",
       "numeric": {
         "summary": [
@@ -7483,7 +6417,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_cooking_ingredient_mustard_4",
-      "item_id": "wls2_cooking_ingredient_mustard_4",
       "name": "芥末",
       "name_en": "Mustard",
       "name_source": "official_zh",
@@ -7494,12 +6427,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_cooking_ingredient_mustard_4",
-      "image_id": "wls2_cooking_ingredient_mustard_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -7543,27 +6473,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_cooking_ingredient_mustard_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_mustard_4_common_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_4",
-          "bandit_hideout_01"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "37ce86e7beb4b75fcf91a64b62e080280b014b0fe037bb06f56a3990170e618d"
     },
     {
       "id": "wls2_cooking_ingredient_pack_tea_4",
-      "item_id": "wls2_cooking_ingredient_pack_tea_4",
       "name": "茶包",
       "name_en": "Tea box",
       "name_source": "official_zh",
@@ -7574,12 +6487,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_cooking_ingredient_pack_tea_4",
-      "image_id": "wls2_cooking_ingredient_pack_tea_4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -7616,27 +6526,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       ],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_cooking_ingredient_pack_tea_4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_pack_tea_4_common_name",
-        "sorting_group": "ingredient_geo",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_4",
-          "bandit_hideout_01"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "42ce9cdf418b8f594653588a0bc0a36e3930b4d71faea7e02535a84664dc96a6"
     },
     {
       "id": "wls2_resourse_miscellaneous_meat_2",
-      "item_id": "wls2_resourse_miscellaneous_meat_2",
       "name": "嫩肉",
       "name_en": "Tender meat",
       "name_source": "official_zh",
@@ -7647,12 +6540,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary01/Resourse_miscellaneous_meat_2",
-      "image_id": "wls2_resourse_miscellaneous_meat_2",
       "equipment_id": null,
       "stats": [
         {
@@ -7678,19 +6568,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_miscellaneous_meat_2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_meat_soft_name",
-        "sorting_group": "ingredient_meat",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4732b60de5ffc5a6c820b68fffe9315032fa28999cde48c4b7e7383078e9fb67",
       "numeric": {
         "summary": [
@@ -7719,7 +6596,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
     },
     {
       "id": "wls2_consumable_meat_tenderloin",
-      "item_id": "wls2_consumable_meat_tenderloin",
       "name": "肉片",
       "name_en": "Filet",
       "name_source": "official_zh",
@@ -7730,12 +6606,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "tier": 4,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_consumable_meat_tenderloin_icon",
-      "image_id": "wls2_consumable_meat_tenderloin",
       "equipment_id": null,
       "stats": [
         {
@@ -7957,19 +6830,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-18"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_consumable_meat_tenderloin",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_meat_tenderloin_name",
-        "sorting_group": "ingredient_meat",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b909047bcdb614f58f03f215a81dd01f5a1f5b8550a8e123699d7d35048595a0",
       "numeric": {
         "summary": [

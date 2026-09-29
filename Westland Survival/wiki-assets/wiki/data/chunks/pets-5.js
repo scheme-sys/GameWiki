@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T5 · 优秀",
       "display_en": "Dire wolf T5 · Uncommon",
-      "tier_id": "direwolf_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -810,41 +808,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_5",
           "name_zh": "红狼王",
           "name_en": "Red alpha wolf",
-          "description_zh": "与被驯化的近亲：狗相比，狼的智力水平高于平均水平",
-          "description_en": "Wolves level of intelligence is above-average comparing with domesticated relatives — dogs",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_5_icon",
-          "icon_sprite": "direwolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-            "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_5_icon"
-          },
           "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45"
         }
       ],
-      "primary_skin_id": "direwolf_skin_5",
-      "primary_icon_sprite": "direwolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-        "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_5_icon"
-      },
       "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
       "numeric": {
         "summary": [
@@ -2491,7 +2457,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T5 · 稀有",
       "display_en": "Dire wolf T5 · Rare",
-      "tier_id": "direwolf_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -2514,7 +2479,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -3289,69 +3253,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_5",
           "name_zh": "红狼王",
           "name_en": "Red alpha wolf",
-          "description_zh": "与被驯化的近亲：狗相比，狼的智力水平高于平均水平",
-          "description_en": "Wolves level of intelligence is above-average comparing with domesticated relatives — dogs",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_5_icon",
-          "icon_sprite": "direwolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-            "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_5_icon"
-          },
           "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45"
         },
         {
           "id": "direwolf_skin_easter_25",
           "name_zh": "白牙",
           "name_en": "White Fang",
-          "description_zh": "传说说它的深红色标记讲述了很久以前的战斗的故事",
-          "description_en": "Legends say its crimson markings tell the tales of battles long past",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_alaska_easter25_icon",
-          "icon_sprite": "wolf_alaska_easter25_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_alaska_pup_easter25_icon",
-          "avatar_id": "wls2_mob_direwolf_easter_25",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_easter_25",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_easter_25.png",
-            "sha256": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_alaska_easter25_icon"
-          },
           "image_key": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589"
         }
       ],
-      "primary_skin_id": "direwolf_skin_5",
-      "primary_icon_sprite": "direwolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-        "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_5_icon"
-      },
       "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
       "numeric": {
         "summary": [
@@ -4998,7 +4908,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T5 · 史诗",
       "display_en": "Dire wolf T5 · Epic",
-      "tier_id": "direwolf_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -5021,7 +4930,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -5796,69 +5704,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_5",
           "name_zh": "红狼王",
           "name_en": "Red alpha wolf",
-          "description_zh": "与被驯化的近亲：狗相比，狼的智力水平高于平均水平",
-          "description_en": "Wolves level of intelligence is above-average comparing with domesticated relatives — dogs",
-          "icon_path": "UI_WW_AlphaBinary06/direwolf_skin_5_icon",
-          "icon_sprite": "direwolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/direwolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-            "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "direwolf_skin_5_icon"
-          },
           "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45"
         },
         {
           "id": "direwolf_skin_shadow",
           "name_zh": "暗影阿尔法狼",
           "name_en": "Shadow Alfa Wolf",
-          "description_zh": "它那发光的眼睛刺穿黑暗",
-          "description_en": "Its glowing eyes pierce the darkness",
-          "icon_path": "UI_WW_AlphaBinary11/direwolf_skin_shadow_icon",
-          "icon_sprite": "direwolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/direwolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_direwolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_direwolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_shadow.png",
-            "sha256": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "direwolf_skin_shadow_icon"
-          },
           "image_key": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a"
         }
       ],
-      "primary_skin_id": "direwolf_skin_5",
-      "primary_icon_sprite": "direwolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_5.png",
-        "sha256": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "direwolf_skin_5_icon"
-      },
       "image_key": "adeb86b53d41df739df07f28650bc791cce7a14bfdc0ffa57cf0d2c7135a7d45",
       "numeric": {
         "summary": [
@@ -7505,7 +7359,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T6 · 普通",
       "display_en": "Dire wolf T6 · Common",
-      "tier_id": "direwolf_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -7528,7 +7381,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -8443,71 +8295,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_6",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_6_pack",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6_pack.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         }
       ],
-      "primary_skin_id": "direwolf_skin_6",
-      "primary_icon_sprite": "direwolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-        "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "direwolf_skin_6_icon"
-      },
       "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
       "numeric": {
         "summary": [
@@ -10454,7 +10250,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T6 · 优秀",
       "display_en": "Dire wolf T6 · Uncommon",
-      "tier_id": "direwolf_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -10477,7 +10272,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -11392,71 +11186,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_6",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_6_pack",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6_pack.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         }
       ],
-      "primary_skin_id": "direwolf_skin_6",
-      "primary_icon_sprite": "direwolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-        "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "direwolf_skin_6_icon"
-      },
       "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
       "numeric": {
         "summary": [
@@ -13403,7 +13141,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T6 · 稀有",
       "display_en": "Dire wolf T6 · Rare",
-      "tier_id": "direwolf_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -13426,7 +13163,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -14341,99 +14077,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_6",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_6_pack",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6_pack.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_easter_25",
           "name_zh": "白牙",
           "name_en": "White Fang",
-          "description_zh": "传说说它的深红色标记讲述了很久以前的战斗的故事",
-          "description_en": "Legends say its crimson markings tell the tales of battles long past",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_alaska_easter25_icon",
-          "icon_sprite": "wolf_alaska_easter25_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_alaska_pup_easter25_icon",
-          "avatar_id": "wls2_mob_direwolf_easter_25",
-          "child_avatar_view_id": "wls2_mob_direwolf_child_easter_25",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_easter_25.png",
-            "sha256": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_alaska_easter25_icon"
-          },
           "image_key": "d927499d7ca26a684839802bd68cabeb697b8a0fc1bf475d7c24712db4838589"
         }
       ],
-      "primary_skin_id": "direwolf_skin_6",
-      "primary_icon_sprite": "direwolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-        "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "direwolf_skin_6_icon"
-      },
       "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
       "numeric": {
         "summary": [
@@ -16380,7 +16038,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T6 · 史诗",
       "display_en": "Dire wolf T6 · Epic",
-      "tier_id": "direwolf_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -16403,7 +16060,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -17318,99 +16974,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_6",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_6_pack",
           "name_zh": "阿拉斯加阿尔法狼",
           "name_en": "Alaskan alpha wolf",
-          "description_zh": "以其智慧和群体行为而闻名",
-          "description_en": "Renowned for its intelligence and pack-oriented behavior",
-          "icon_path": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
-          "icon_sprite": "direwolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/direwolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_6_pack.png",
-            "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "direwolf_skin_6_icon"
-          },
           "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142"
         },
         {
           "id": "direwolf_skin_shadow",
           "name_zh": "暗影阿尔法狼",
           "name_en": "Shadow Alfa Wolf",
-          "description_zh": "它那发光的眼睛刺穿黑暗",
-          "description_en": "Its glowing eyes pierce the darkness",
-          "icon_path": "UI_WW_AlphaBinary11/direwolf_skin_shadow_icon",
-          "icon_sprite": "direwolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/direwolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_direwolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_direwolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_shadow.png",
-            "sha256": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "direwolf_skin_shadow_icon"
-          },
           "image_key": "77ce6cb0240a8b4552df6d207b279b2d31b43722462eb3722161c65eef10740a"
         }
       ],
-      "primary_skin_id": "direwolf_skin_6",
-      "primary_icon_sprite": "direwolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_6.png",
-        "sha256": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "direwolf_skin_6_icon"
-      },
       "image_key": "f9f2bca1176889936e726adaf2104b3f0966cf7e827d713e88a18b71ea8c2142",
       "numeric": {
         "summary": [
@@ -19357,7 +18935,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T7 · 普通",
       "display_en": "Dire wolf T7 · Common",
-      "tier_id": "direwolf_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -19380,7 +18957,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -20435,71 +20011,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_7",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         },
         {
           "id": "direwolf_skin_7_pack",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7_pack.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         }
       ],
-      "primary_skin_id": "direwolf_skin_7",
-      "primary_icon_sprite": "red_wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-        "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "red_wolf_T7_icon"
-      },
       "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
       "numeric": {
         "summary": [
@@ -22746,7 +22266,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T7 · 优秀",
       "display_en": "Dire wolf T7 · Uncommon",
-      "tier_id": "direwolf_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -22769,7 +22288,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -23824,71 +23342,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_7",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         },
         {
           "id": "direwolf_skin_7_pack",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7_pack.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         }
       ],
-      "primary_skin_id": "direwolf_skin_7",
-      "primary_icon_sprite": "red_wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-        "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "red_wolf_T7_icon"
-      },
       "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
       "numeric": {
         "summary": [
@@ -26135,7 +25597,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T7 · 稀有",
       "display_en": "Dire wolf T7 · Rare",
-      "tier_id": "direwolf_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -26158,7 +25619,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -27213,71 +26673,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_7",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         },
         {
           "id": "direwolf_skin_7_pack",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7_pack.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         }
       ],
-      "primary_skin_id": "direwolf_skin_7",
-      "primary_icon_sprite": "red_wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-        "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "red_wolf_T7_icon"
-      },
       "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
       "numeric": {
         "summary": [
@@ -29524,7 +28928,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dire wolf",
       "display_zh": "恐狼 T7 · 史诗",
       "display_en": "Dire wolf T7 · Epic",
-      "tier_id": "direwolf_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -29547,7 +28950,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "mine",
       "habitat_zh": "我的",
       "habitat_en": "Mine",
       "habitat_bonus": 0.1,
@@ -30602,71 +30004,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "direwolf_skin_7",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         },
         {
           "id": "direwolf_skin_7_pack",
           "name_zh": "墨西哥阿尔法狼",
           "name_en": "Mexican alpha wolf",
-          "description_zh": "比其他人更强，这个首领不会从战斗中退缩",
-          "description_en": "Stronger than the rest, this alpha doesn't back down from a fight",
-          "icon_path": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
-          "icon_sprite": "red_wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/red_wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_alpha_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/direwolf_skin_7_pack.png",
-            "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "red_wolf_T7_icon"
-          },
           "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9"
         }
       ],
-      "primary_skin_id": "direwolf_skin_7",
-      "primary_icon_sprite": "red_wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/direwolf_skin_7.png",
-        "sha256": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "red_wolf_T7_icon"
-      },
       "image_key": "ac40650a0aebfb895150de5cba5db722cdc1b5b9af165221a1495c49738fc8b9",
       "numeric": {
         "summary": [
@@ -32913,7 +32259,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dog",
       "display_zh": "犬 T1 · 普通",
       "display_en": "Dog T1 · Common",
-      "tier_id": "dog_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 35,
@@ -32931,7 +32276,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "breeding_step": 1,
       "weight": 0,
       "fluctuations": {},
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -33179,95 +32523,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         },
         {
           "id": "pets_teaser_skin",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_teaser_pet",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child_teaser",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/pets_teaser_skin.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -33782,7 +33052,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dog",
       "display_zh": "犬 T1 · 优秀",
       "display_en": "Dog T1 · Uncommon",
-      "tier_id": "dog_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 35,
@@ -33805,7 +33074,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -33993,67 +33261,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -34440,7 +33656,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dog",
       "display_zh": "犬 T2 · 普通",
       "display_en": "Dog T2 · Common",
-      "tier_id": "dog_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -34463,7 +33678,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -34771,67 +33985,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -35476,7 +34638,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dog",
       "display_zh": "犬 T2 · 优秀",
       "display_en": "Dog T2 · Uncommon",
-      "tier_id": "dog_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -35499,7 +34660,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -35807,67 +34967,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -36512,7 +35620,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
       "species_en": "Dog",
       "display_zh": "犬 T3 · 普通",
       "display_en": "Dog T3 · Common",
-      "tier_id": "dog_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -36535,7 +35642,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -36963,67 +36069,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-5"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [

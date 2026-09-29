@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T2 · 优秀",
       "display_en": "Wolf T2 · Uncommon",
-      "tier_id": "wolf_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -345,43 +343,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_2",
           "name_zh": "水牛狼",
           "name_en": "Buffalo wolf",
-          "description_zh": "水牛狼一夜之间可以穿越 80 公里。",
-          "description_en": "Buffalo wolf can cross up to 50 miles in one night.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_2_icon",
-          "icon_sprite": "wolf_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_wolf_2",
-          "child_avatar_view_id": "wls2_pet_wolf_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_2.png",
-            "sha256": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_2_icon"
-          },
           "image_key": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395"
         }
       ],
-      "primary_skin_id": "wolf_skin_2",
-      "primary_icon_sprite": "wolf_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_2.png",
-        "sha256": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_2_icon"
-      },
       "image_key": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
       "numeric": {
         "summary": [
@@ -1026,7 +990,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T3 · 普通",
       "display_en": "Wolf T3 · Common",
-      "tier_id": "wolf_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -1049,7 +1012,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -1479,43 +1441,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_3",
           "name_zh": "西北狼",
           "name_en": "Northwestern wolf",
-          "description_zh": "它们更喜欢成群结队地狩猎。单独一只，危险性要小得多。",
-          "description_en": "They prefer to hunt in packs. Alone, much less dangerous.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_3_icon",
-          "icon_sprite": "wolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-            "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_3_icon"
-          },
           "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14"
         }
       ],
-      "primary_skin_id": "wolf_skin_3",
-      "primary_icon_sprite": "wolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-        "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_3_icon"
-      },
       "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
       "numeric": {
         "summary": [
@@ -2420,7 +2348,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T3 · 优秀",
       "display_en": "Wolf T3 · Uncommon",
-      "tier_id": "wolf_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -2443,7 +2370,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -2873,43 +2799,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_3",
           "name_zh": "西北狼",
           "name_en": "Northwestern wolf",
-          "description_zh": "它们更喜欢成群结队地狩猎。单独一只，危险性要小得多。",
-          "description_en": "They prefer to hunt in packs. Alone, much less dangerous.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_3_icon",
-          "icon_sprite": "wolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-            "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_3_icon"
-          },
           "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14"
         }
       ],
-      "primary_skin_id": "wolf_skin_3",
-      "primary_icon_sprite": "wolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-        "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_3_icon"
-      },
       "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
       "numeric": {
         "summary": [
@@ -3814,7 +3706,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T3 · 稀有",
       "display_en": "Wolf T3 · Rare",
-      "tier_id": "wolf_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -3837,7 +3728,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -4267,73 +4157,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_3",
           "name_zh": "西北狼",
           "name_en": "Northwestern wolf",
-          "description_zh": "它们更喜欢成群结队地狩猎。单独一只，危险性要小得多。",
-          "description_en": "They prefer to hunt in packs. Alone, much less dangerous.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_3_icon",
-          "icon_sprite": "wolf_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_wolf_3",
-          "child_avatar_view_id": "wls2_pet_wolf_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-            "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_3_icon"
-          },
           "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14"
         },
         {
           "id": "wolf_skin_shadow",
           "name_zh": "暗狼",
           "name_en": "Shadow Wolf",
-          "description_zh": "迅捷、不知疲倦，并且对自己的族群无比忠诚",
-          "description_en": "Swift, relentless, and fiercely loyal to its pack",
-          "icon_path": "UI_WW_AlphaBinary11/wolf_skin_shadow_icon",
-          "icon_sprite": "wolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/wolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_wolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_wolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_shadow.png",
-            "sha256": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "wolf_skin_shadow_icon"
-          },
           "image_key": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814"
         }
       ],
-      "primary_skin_id": "wolf_skin_3",
-      "primary_icon_sprite": "wolf_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_3.png",
-        "sha256": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_3_icon"
-      },
       "image_key": "527bd40f3333f53ba44fc61662efcf6cf1cfacdddf384c307736743b43bbec14",
       "numeric": {
         "summary": [
@@ -5238,7 +5070,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T4 · 普通",
       "display_en": "Wolf T4 · Common",
-      "tier_id": "wolf_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -5261,7 +5092,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -5811,43 +5641,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_4",
           "name_zh": "黑狼",
           "name_en": "Black wolf",
-          "description_zh": "黑狼在野外很少有天敌。",
-          "description_en": "The black wolf has very few natural enemies in the wild.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_4_icon",
-          "icon_sprite": "wolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-            "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_4_icon"
-          },
           "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c"
         }
       ],
-      "primary_skin_id": "wolf_skin_4",
-      "primary_icon_sprite": "wolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-        "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_4_icon"
-      },
       "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
       "numeric": {
         "summary": [
@@ -7012,7 +6808,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T4 · 优秀",
       "display_en": "Wolf T4 · Uncommon",
-      "tier_id": "wolf_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -7035,7 +6830,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -7585,43 +7379,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_4",
           "name_zh": "黑狼",
           "name_en": "Black wolf",
-          "description_zh": "黑狼在野外很少有天敌。",
-          "description_en": "The black wolf has very few natural enemies in the wild.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_4_icon",
-          "icon_sprite": "wolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-            "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_4_icon"
-          },
           "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c"
         }
       ],
-      "primary_skin_id": "wolf_skin_4",
-      "primary_icon_sprite": "wolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-        "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_4_icon"
-      },
       "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
       "numeric": {
         "summary": [
@@ -8786,7 +8546,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T4 · 稀有",
       "display_en": "Wolf T4 · Rare",
-      "tier_id": "wolf_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -8809,7 +8568,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -9359,73 +9117,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_4",
           "name_zh": "黑狼",
           "name_en": "Black wolf",
-          "description_zh": "黑狼在野外很少有天敌。",
-          "description_en": "The black wolf has very few natural enemies in the wild.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_4_icon",
-          "icon_sprite": "wolf_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_wolf_4",
-          "child_avatar_view_id": "wls2_pet_wolf_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-            "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_4_icon"
-          },
           "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c"
         },
         {
           "id": "wolf_skin_shadow",
           "name_zh": "暗狼",
           "name_en": "Shadow Wolf",
-          "description_zh": "迅捷、不知疲倦，并且对自己的族群无比忠诚",
-          "description_en": "Swift, relentless, and fiercely loyal to its pack",
-          "icon_path": "UI_WW_AlphaBinary11/wolf_skin_shadow_icon",
-          "icon_sprite": "wolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/wolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_wolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_wolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_shadow.png",
-            "sha256": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "wolf_skin_shadow_icon"
-          },
           "image_key": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814"
         }
       ],
-      "primary_skin_id": "wolf_skin_4",
-      "primary_icon_sprite": "wolf_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_4.png",
-        "sha256": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_4_icon"
-      },
       "image_key": "0699a23d962a16c54c829dccb845d92e3f354348b5412e4149371796006b432c",
       "numeric": {
         "summary": [
@@ -10590,7 +10290,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T5 · 普通",
       "display_en": "Wolf T5 · Common",
-      "tier_id": "wolf_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -10613,7 +10312,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -11390,41 +11088,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_5",
           "name_zh": "红狼",
           "name_en": "Red wolf",
-          "description_zh": "和猫一样，狼在黑暗中看得很清楚。",
-          "description_en": "Like cats, wolves see well in the dark.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_5_icon",
-          "icon_sprite": "wolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-            "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_5_icon"
-          },
           "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f"
         }
       ],
-      "primary_skin_id": "wolf_skin_5",
-      "primary_icon_sprite": "wolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-        "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_5_icon"
-      },
       "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
       "numeric": {
         "summary": [
@@ -13071,7 +12737,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T5 · 优秀",
       "display_en": "Wolf T5 · Uncommon",
-      "tier_id": "wolf_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -13094,7 +12759,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -13871,41 +13535,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_5",
           "name_zh": "红狼",
           "name_en": "Red wolf",
-          "description_zh": "和猫一样，狼在黑暗中看得很清楚。",
-          "description_en": "Like cats, wolves see well in the dark.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_5_icon",
-          "icon_sprite": "wolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-            "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_5_icon"
-          },
           "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f"
         }
       ],
-      "primary_skin_id": "wolf_skin_5",
-      "primary_icon_sprite": "wolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-        "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_5_icon"
-      },
       "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
       "numeric": {
         "summary": [
@@ -15552,7 +15184,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T5 · 稀有",
       "display_en": "Wolf T5 · Rare",
-      "tier_id": "wolf_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -15575,7 +15206,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -16352,41 +15982,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_5",
           "name_zh": "红狼",
           "name_en": "Red wolf",
-          "description_zh": "和猫一样，狼在黑暗中看得很清楚。",
-          "description_en": "Like cats, wolves see well in the dark.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_5_icon",
-          "icon_sprite": "wolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-            "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_5_icon"
-          },
           "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f"
         }
       ],
-      "primary_skin_id": "wolf_skin_5",
-      "primary_icon_sprite": "wolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-        "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_5_icon"
-      },
       "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
       "numeric": {
         "summary": [
@@ -18033,7 +17631,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T5 · 史诗",
       "display_en": "Wolf T5 · Epic",
-      "tier_id": "wolf_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -18056,7 +17653,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -18833,71 +18429,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_5",
           "name_zh": "红狼",
           "name_en": "Red wolf",
-          "description_zh": "和猫一样，狼在黑暗中看得很清楚。",
-          "description_en": "Like cats, wolves see well in the dark.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_5_icon",
-          "icon_sprite": "wolf_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_wolf_5",
-          "child_avatar_view_id": "wls2_pet_wolf_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-            "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_5_icon"
-          },
           "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f"
         },
         {
           "id": "wolf_skin_shadow",
           "name_zh": "暗狼",
           "name_en": "Shadow Wolf",
-          "description_zh": "迅捷、不知疲倦，并且对自己的族群无比忠诚",
-          "description_en": "Swift, relentless, and fiercely loyal to its pack",
-          "icon_path": "UI_WW_AlphaBinary11/wolf_skin_shadow_icon",
-          "icon_sprite": "wolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/wolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_wolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_wolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_shadow.png",
-            "sha256": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "wolf_skin_shadow_icon"
-          },
           "image_key": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814"
         }
       ],
-      "primary_skin_id": "wolf_skin_5",
-      "primary_icon_sprite": "wolf_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_5.png",
-        "sha256": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_5_icon"
-      },
       "image_key": "b39967cf8b60e0b12d2ebf1d4595f736fb11381b43b2337e9207e24e28272a4f",
       "numeric": {
         "summary": [
@@ -20544,7 +20084,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T6 · 普通",
       "display_en": "Wolf T6 · Common",
-      "tier_id": "wolf_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -20567,7 +20106,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -21484,71 +21022,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_6",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         },
         {
           "id": "wolf_skin_6_pack",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6_pack.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         }
       ],
-      "primary_skin_id": "wolf_skin_6",
-      "primary_icon_sprite": "wolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-        "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "wolf_skin_6_icon"
-      },
       "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
       "numeric": {
         "summary": [
@@ -23495,7 +22977,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T6 · 优秀",
       "display_en": "Wolf T6 · Uncommon",
-      "tier_id": "wolf_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -23518,7 +22999,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -24435,71 +23915,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_6",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         },
         {
           "id": "wolf_skin_6_pack",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6_pack.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         }
       ],
-      "primary_skin_id": "wolf_skin_6",
-      "primary_icon_sprite": "wolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-        "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "wolf_skin_6_icon"
-      },
       "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
       "numeric": {
         "summary": [
@@ -26446,7 +25870,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T6 · 稀有",
       "display_en": "Wolf T6 · Rare",
-      "tier_id": "wolf_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -26469,7 +25892,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -27386,71 +26808,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_6",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         },
         {
           "id": "wolf_skin_6_pack",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6_pack.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         }
       ],
-      "primary_skin_id": "wolf_skin_6",
-      "primary_icon_sprite": "wolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-        "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "wolf_skin_6_icon"
-      },
       "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
       "numeric": {
         "summary": [
@@ -29397,7 +28763,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T6 · 史诗",
       "display_en": "Wolf T6 · Epic",
-      "tier_id": "wolf_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -29420,7 +28785,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -30337,101 +29701,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_6",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         },
         {
           "id": "wolf_skin_6_pack",
           "name_zh": "阿拉斯加狼",
           "name_en": "Alaskan wolf",
-          "description_zh": "拥有厚厚的毛皮，适应北方森林严酷的气候。",
-          "description_en": "Has a thick fur coat adapted to withstand the harsh climate of boreal forests",
-          "icon_path": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
-          "icon_sprite": "wolf_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/wolf_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_6",
-          "child_avatar_view_id": "wls2_pet_wolf_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_6_pack.png",
-            "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "wolf_skin_6_icon"
-          },
           "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a"
         },
         {
           "id": "wolf_skin_shadow",
           "name_zh": "暗狼",
           "name_en": "Shadow Wolf",
-          "description_zh": "迅捷、不知疲倦，并且对自己的族群无比忠诚",
-          "description_en": "Swift, relentless, and fiercely loyal to its pack",
-          "icon_path": "UI_WW_AlphaBinary11/wolf_skin_shadow_icon",
-          "icon_sprite": "wolf_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/wolf_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_wolf_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_wolf_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_shadow.png",
-            "sha256": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "wolf_skin_shadow_icon"
-          },
           "image_key": "44916ca2d9e98b14360d4b9d2c745238e82609893c08f7a2bb79d7c018364814"
         }
       ],
-      "primary_skin_id": "wolf_skin_6",
-      "primary_icon_sprite": "wolf_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_6.png",
-        "sha256": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "wolf_skin_6_icon"
-      },
       "image_key": "6c3715252208f3d4dd261cb2b125a2710cf99ec677c686e0e7e03ecd4c94744a",
       "numeric": {
         "summary": [
@@ -32378,7 +31662,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T7 · 普通",
       "display_en": "Wolf T7 · Common",
-      "tier_id": "wolf_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -32401,7 +31684,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -33458,71 +32740,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-10"] = {
           "id": "wolf_skin_7",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         },
         {
           "id": "wolf_skin_7_pack",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7_pack.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         }
       ],
-      "primary_skin_id": "wolf_skin_7",
-      "primary_icon_sprite": "wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-        "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "wolf_T7_icon"
-      },
       "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
       "numeric": {
         "summary": [

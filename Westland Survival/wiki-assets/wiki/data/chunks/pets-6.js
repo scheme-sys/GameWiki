@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T3 · 优秀",
       "display_en": "Dog T3 · Uncommon",
-      "tier_id": "dog_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -463,67 +461,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -1428,7 +1374,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T3 · 稀有",
       "display_en": "Dog T3 · Rare",
-      "tier_id": "dog_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -1451,7 +1396,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -1879,123 +1823,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         },
         {
           "id": "dog_skin_3_halloween_2022",
           "name_zh": "狼狗",
           "name_en": "Werewolf",
-          "description_zh": "一只可怕的狼狗？不，这只是一条普通的哈士奇犬，用磷上了色",
-          "description_en": "Horrific dog-werewolf? No. Just an ordinary husky colored with phosphorus",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_3_icon",
-          "icon_sprite": "dog_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_dog_halloween_2022_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_halloween2022_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_3_halloween_2022.png",
-            "sha256": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_3_icon"
-          },
           "image_key": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564"
         },
         {
           "id": "dog_skin_4_husky_balto",
           "name_zh": "巴尔托",
           "name_en": "Balto",
-          "description_zh": "巴尔托是一只传奇的哈士奇犬，因其在北方荒野的严寒条件下的英勇壮举和惊人耐力而闻名。",
-          "description_en": "Balto is a legendary husky dog, famed for its heroic feat and incredible endurance in the frigid conditions of Boreal Wilds.",
-          "icon_path": "UI_WW_AlphaBinary08/dog_skin_4_icon",
-          "icon_sprite": "dog_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/dog_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_shop_balto_dog_husky_4_rare",
-          "child_avatar_view_id": "wls2_pet_dog_balto_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_4_husky_balto.png",
-            "sha256": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "dog_skin_4_icon"
-          },
           "image_key": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -2900,7 +2748,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T4 · 普通",
       "display_en": "Dog T4 · Common",
-      "tier_id": "dog_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -2923,7 +2770,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -3471,67 +3317,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -4696,7 +4490,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T4 · 优秀",
       "display_en": "Dog T4 · Uncommon",
-      "tier_id": "dog_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -4719,7 +4512,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -5267,67 +5059,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -6492,7 +6232,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T4 · 稀有",
       "display_en": "Dog T4 · Rare",
-      "tier_id": "dog_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -6515,7 +6254,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -7063,123 +6801,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         },
         {
           "id": "dog_skin_3_halloween_2022",
           "name_zh": "狼狗",
           "name_en": "Werewolf",
-          "description_zh": "一只可怕的狼狗？不，这只是一条普通的哈士奇犬，用磷上了色",
-          "description_en": "Horrific dog-werewolf? No. Just an ordinary husky colored with phosphorus",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_3_icon",
-          "icon_sprite": "dog_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_dog_halloween_2022_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_halloween2022_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_3_halloween_2022.png",
-            "sha256": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_3_icon"
-          },
           "image_key": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564"
         },
         {
           "id": "dog_skin_4_husky_balto",
           "name_zh": "巴尔托",
           "name_en": "Balto",
-          "description_zh": "巴尔托是一只传奇的哈士奇犬，因其在北方荒野的严寒条件下的英勇壮举和惊人耐力而闻名。",
-          "description_en": "Balto is a legendary husky dog, famed for its heroic feat and incredible endurance in the frigid conditions of Boreal Wilds.",
-          "icon_path": "UI_WW_AlphaBinary08/dog_skin_4_icon",
-          "icon_sprite": "dog_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/dog_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_shop_balto_dog_husky_4_rare",
-          "child_avatar_view_id": "wls2_pet_dog_balto_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_4_husky_balto.png",
-            "sha256": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "dog_skin_4_icon"
-          },
           "image_key": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -8344,7 +7986,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T5 · 普通",
       "display_en": "Dog T5 · Common",
-      "tier_id": "dog_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -8367,7 +8008,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -9035,67 +8675,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -10520,7 +10108,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T5 · 优秀",
       "display_en": "Dog T5 · Uncommon",
-      "tier_id": "dog_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -10543,7 +10130,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -11211,95 +10797,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         },
         {
           "id": "dog_skin_4_husky_balto",
           "name_zh": "巴尔托",
           "name_en": "Balto",
-          "description_zh": "巴尔托是一只传奇的哈士奇犬，因其在北方荒野的严寒条件下的英勇壮举和惊人耐力而闻名。",
-          "description_en": "Balto is a legendary husky dog, famed for its heroic feat and incredible endurance in the frigid conditions of Boreal Wilds.",
-          "icon_path": "UI_WW_AlphaBinary08/dog_skin_4_icon",
-          "icon_sprite": "dog_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/dog_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_shop_balto_dog_husky_4_rare",
-          "child_avatar_view_id": "wls2_pet_dog_balto_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_4_husky_balto.png",
-            "sha256": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "dog_skin_4_icon"
-          },
           "image_key": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -12724,7 +12236,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T5 · 稀有",
       "display_en": "Dog T5 · Rare",
-      "tier_id": "dog_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -12747,7 +12258,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -13415,123 +12925,27 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         },
         {
           "id": "dog_skin_3_halloween_2022",
           "name_zh": "狼狗",
           "name_en": "Werewolf",
-          "description_zh": "一只可怕的狼狗？不，这只是一条普通的哈士奇犬，用磷上了色",
-          "description_en": "Horrific dog-werewolf? No. Just an ordinary husky colored with phosphorus",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_3_icon",
-          "icon_sprite": "dog_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_dog_halloween_2022_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_halloween2022_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_3_halloween_2022.png",
-            "sha256": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_3_icon"
-          },
           "image_key": "9a7e43a1b4c725060144368e9e7f9b245d54a519cf0c8675cd47554468741564"
         },
         {
           "id": "dog_skin_4_husky_balto",
           "name_zh": "巴尔托",
           "name_en": "Balto",
-          "description_zh": "巴尔托是一只传奇的哈士奇犬，因其在北方荒野的严寒条件下的英勇壮举和惊人耐力而闻名。",
-          "description_en": "Balto is a legendary husky dog, famed for its heroic feat and incredible endurance in the frigid conditions of Boreal Wilds.",
-          "icon_path": "UI_WW_AlphaBinary08/dog_skin_4_icon",
-          "icon_sprite": "dog_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/dog_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_shop_balto_dog_husky_4_rare",
-          "child_avatar_view_id": "wls2_pet_dog_balto_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_4_husky_balto.png",
-            "sha256": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "dog_skin_4_icon"
-          },
           "image_key": "a8f900883533159f2eefe7acb10d9c02e2be3d85844fc171a9cc44030bebe4b2"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -14956,7 +14370,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T5 · 史诗",
       "display_en": "Dog T5 · Epic",
-      "tier_id": "dog_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -14979,7 +14392,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -15647,67 +15059,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -17132,7 +16492,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T6 · 普通",
       "display_en": "Dog T6 · Common",
-      "tier_id": "dog_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -17155,7 +16514,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -17943,67 +17301,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -19688,7 +18994,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T6 · 优秀",
       "display_en": "Dog T6 · Uncommon",
-      "tier_id": "dog_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -19711,7 +19016,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -20499,67 +19803,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -22244,7 +21496,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T6 · 稀有",
       "display_en": "Dog T6 · Rare",
-      "tier_id": "dog_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -22267,7 +21518,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -23055,67 +22305,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -24800,7 +23998,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T6 · 史诗",
       "display_en": "Dog T6 · Epic",
-      "tier_id": "dog_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -24823,7 +24020,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -25611,67 +24807,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -27356,7 +26500,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T7 · 普通",
       "display_en": "Dog T7 · Common",
-      "tier_id": "dog_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -27379,7 +26522,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -28287,67 +27429,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -30292,7 +29382,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T7 · 优秀",
       "display_en": "Dog T7 · Uncommon",
-      "tier_id": "dog_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -30315,7 +29404,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -31223,67 +30311,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -33228,7 +32264,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
       "species_en": "Dog",
       "display_zh": "犬 T7 · 稀有",
       "display_en": "Dog T7 · Rare",
-      "tier_id": "dog_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -33251,7 +32286,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -34159,67 +33193,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-6"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [

@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T7 · 优秀",
       "display_en": "Wolf T7 · Uncommon",
-      "tier_id": "wolf_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -1092,71 +1090,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "wolf_skin_7",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         },
         {
           "id": "wolf_skin_7_pack",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7_pack.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         }
       ],
-      "primary_skin_id": "wolf_skin_7",
-      "primary_icon_sprite": "wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-        "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "wolf_T7_icon"
-      },
       "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
       "numeric": {
         "summary": [
@@ -3403,7 +3345,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T7 · 稀有",
       "display_en": "Wolf T7 · Rare",
-      "tier_id": "wolf_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -3426,7 +3367,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -4483,71 +4423,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "wolf_skin_7",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         },
         {
           "id": "wolf_skin_7_pack",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7_pack.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         }
       ],
-      "primary_skin_id": "wolf_skin_7",
-      "primary_icon_sprite": "wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-        "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "wolf_T7_icon"
-      },
       "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
       "numeric": {
         "summary": [
@@ -6794,7 +6678,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T7 · 史诗",
       "display_en": "Wolf T7 · Epic",
-      "tier_id": "wolf_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -6817,7 +6700,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -7874,71 +7756,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "wolf_skin_7",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         },
         {
           "id": "wolf_skin_7_pack",
           "name_zh": "墨西哥 狼",
           "name_en": "Mexican wolf",
-          "description_zh": "有一件外套与沙子和阴影融合",
-          "description_en": "Has a coat that blends with sand and shadow",
-          "icon_path": "UI_WW_AlphaBinary10/wolf_T7_icon",
-          "icon_sprite": "wolf_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/wolf_puppy_T7_icon",
-          "avatar_id": "wls2_mob_animal_wolf_pack_7",
-          "child_avatar_view_id": "wls2_pet_wolf_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_7_pack.png",
-            "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "wolf_T7_icon"
-          },
           "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e"
         }
       ],
-      "primary_skin_id": "wolf_skin_7",
-      "primary_icon_sprite": "wolf_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_7.png",
-        "sha256": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-        "source_sprite": "wolf_T7_icon"
-      },
       "image_key": "1d002a40915c5974f98ac6fdc12d82d66b586124ed98c9019fce5c701642b98e",
       "numeric": {
         "summary": [
@@ -10185,7 +10011,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T3 · 普通",
       "display_en": "Riding horse T3 · Common",
-      "tier_id": "horse_riding_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 1,
@@ -10210,7 +10035,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -10246,347 +10070,75 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -10636,7 +10188,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T3 · 优秀",
       "display_en": "Riding horse T3 · Uncommon",
-      "tier_id": "horse_riding_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 1,
@@ -10661,7 +10212,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -10697,347 +10247,75 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -11087,7 +10365,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T3 · 稀有",
       "display_en": "Riding horse T3 · Rare",
-      "tier_id": "horse_riding_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 1,
@@ -11112,7 +10389,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -11148,347 +10424,75 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -11538,7 +10542,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T4 · 普通",
       "display_en": "Riding horse T4 · Common",
-      "tier_id": "horse_riding_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 1,
@@ -11563,7 +10566,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -11599,487 +10601,105 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -12129,7 +10749,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T4 · 优秀",
       "display_en": "Riding horse T4 · Uncommon",
-      "tier_id": "horse_riding_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 1,
@@ -12154,7 +10773,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -12190,487 +10808,105 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -12720,7 +10956,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T4 · 稀有",
       "display_en": "Riding horse T4 · Rare",
-      "tier_id": "horse_riding_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 1,
@@ -12745,7 +10980,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -12781,487 +11015,105 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -13311,7 +11163,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T5 · 普通",
       "display_en": "Riding horse T5 · Common",
-      "tier_id": "horse_riding_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 1,
@@ -13336,7 +11187,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -13372,571 +11222,123 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -13986,7 +11388,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T5 · 优秀",
       "display_en": "Riding horse T5 · Uncommon",
-      "tier_id": "horse_riding_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 1,
@@ -14011,7 +11412,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -14047,571 +11447,123 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -14661,7 +11613,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T5 · 稀有",
       "display_en": "Riding horse T5 · Rare",
-      "tier_id": "horse_riding_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 1,
@@ -14686,7 +11637,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -14722,571 +11672,123 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -15336,7 +11838,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T5 · 史诗",
       "display_en": "Riding horse T5 · Epic",
-      "tier_id": "horse_riding_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 1,
@@ -15361,7 +11862,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -15397,599 +11897,129 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         },
         {
           "id": "horse_riding_skin_5_epic_1",
           "name_zh": "贝登摩根",
           "name_en": "Bay Dun Morgan",
-          "description_zh": "一种多才多艺且强壮的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_BayDun_T6_common",
-          "icon_sprite": "Horse_regular_BayDun_T6_common",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_BayDun",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_epic_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_epic_1.png",
-            "sha256": "eebefca1a92f5dda480ec8d48921d969ed42ff2fd162c026f1784f5c9bbf6e39",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_BayDun_T6_common"
-          },
           "image_key": "eebefca1a92f5dda480ec8d48921d969ed42ff2fd162c026f1784f5c9bbf6e39"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -16039,7 +12069,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T6 · 史诗",
       "display_en": "Riding horse T6 · Epic",
-      "tier_id": "horse_riding_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 1,
@@ -16064,7 +12093,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -16100,599 +12128,129 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         },
         {
           "id": "horse_riding_skin_6_epic_1",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_6_epic_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_6_epic_1.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -16742,7 +12300,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Riding horse",
       "display_zh": "骑乘马 T7 · 史诗",
       "display_en": "Riding horse T7 · Epic",
-      "tier_id": "horse_riding_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 1,
@@ -16767,7 +12324,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": -7,
         "endurance_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -16803,627 +12359,135 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_riding_skin_3_common_1",
           "name_zh": "纹状灰色肯塔基马",
           "name_en": "Dapple grey Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_3_uncommon_1",
           "name_zh": "花斑肯塔基马",
           "name_en": "Pinto Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_uncommon_1.png",
-            "sha256": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_uncommon_icon"
-          },
           "image_key": "2fc41dd4b6db68d718c807491fb227d3c5b77065b65088b9ce610f732d30e1aa"
         },
         {
           "id": "horse_riding_skin_3_rare_1",
           "name_zh": "杂色肯塔基马",
           "name_en": "Tobiano Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_1.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_1",
           "name_zh": "奥罗肯塔基马",
           "name_en": "Overo Kentucky Saddler",
-          "description_zh": "一种优雅多才的品种，以其优雅和精致的气质而闻名。",
-          "description_en": "A graceful and versatile breed, known for its elegance and refined temperament.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_1.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_3_rare_2",
           "name_zh": "杂色野马",
           "name_en": "Tobiano Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_rare_icon",
-          "icon_sprite": "horse_riding_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_2.png",
-            "sha256": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_rare_icon"
-          },
           "image_key": "eced5dd7df32148be5dfaa15fbc2b1f24fc293a0159a31fea1114186a9f6c7f1"
         },
         {
           "id": "horse_riding_skin_4_common_2",
           "name_zh": "奥罗野马",
           "name_en": "Overo Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_2.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_4_uncommon_2",
           "name_zh": "浅棕色野马",
           "name_en": "Claybank dun Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_4_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_uncommon_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_uncommon_2.png",
-            "sha256": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_uncommon_icon"
-          },
           "image_key": "674168e0cd1858f7dc3fb186247ad0094efe4e779a79bfdac9651ab7e5680644"
         },
         {
           "id": "horse_riding_skin_4_rare_2",
           "name_zh": "栗色野马",
           "name_en": "Red chestnut Mustang",
-          "description_zh": "野性自由和原始精神的象征，野马是一种迷人而有韧性的品种。",
-          "description_en": "A symbol of untamed freedom and raw spirit, the Mustang is a captivating and resilient breed.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_2.png",
-            "sha256": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_icon"
-          },
           "image_key": "9a9fcecf0532285fba2877f25f0ea3c5961e7409858bbc8991f99763bf632b75"
         },
         {
           "id": "horse_riding_skin_3_common_3",
           "name_zh": "纹状灰色阿帕卢萨马",
           "name_en": "Dapple grey Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_3_common_icon",
-          "icon_sprite": "horse_riding_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_3.png",
-            "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_3_common_icon"
-          },
           "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050"
         },
         {
           "id": "horse_riding_skin_4_common_3",
           "name_zh": "奥罗阿帕卢萨马",
           "name_en": "Overo Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_common_icon",
-          "icon_sprite": "horse_riding_skin_4_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_common_3.png",
-            "sha256": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_common_icon"
-          },
           "image_key": "afcaec15fb726ac4e460c1623da02976e02a4c957c651b908b23ecc548b88431"
         },
         {
           "id": "horse_riding_skin_5_common_3",
           "name_zh": "豹纹阿帕卢萨马",
           "name_en": "Leopard Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_common_icon",
-          "icon_sprite": "horse_riding_skin_5_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_common_3.png",
-            "sha256": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_common_icon"
-          },
           "image_key": "ac9fa568f94731c01c79241c7a1484de66c155bfb3321edec2645c47e6cfa4f9"
         },
         {
           "id": "horse_riding_skin_5_uncommon_3",
           "name_zh": "红毯阿帕卢萨马",
           "name_en": "Red blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_uncommon_icon",
-          "icon_sprite": "horse_riding_skin_5_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_uncommon_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_uncommon_3.png",
-            "sha256": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_uncommon_icon"
-          },
           "image_key": "ce9148e710e6ec074e196a87cd1160fd387488b5959fb64092d8b80454d66690"
         },
         {
           "id": "horse_riding_skin_5_rare_3",
           "name_zh": "灰毯阿帕卢萨马",
           "name_en": "Grulla blanket Appaloosa",
-          "description_zh": "以其引人注目的毛色图案、多功能性和出色的运动能力而闻名的品种。",
-          "description_en": "A breed known for its striking coat patterns, versatility, and exceptional athleticism",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_5_rare_icon",
-          "icon_sprite": "horse_riding_skin_5_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_5_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_rare_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_rare_3.png",
-            "sha256": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_5_rare_icon"
-          },
           "image_key": "65a6e0b933bcde54957901dce7aad6d51ee8b5708dd06c5fd570c9c547d40670"
         },
         {
           "id": "horse_riding_skin_4_rare_arabian",
           "name_zh": "白色阿拉伯马",
           "name_en": "White Arabian",
-          "description_zh": "纯净的优雅和美丽，白色阿拉伯马是一种精美的马种。",
-          "description_en": "A vision of pure grace and beauty, the White Arabian is an exquisite equine specimen.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_riding_skin_4_rare_arabian_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_arabian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_riding_child_skin_4_rare_arabian_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_4_rare_arabian",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_4_rare_arabian.png",
-            "sha256": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_arabian_icon"
-          },
           "image_key": "6ded90af02c6a0021dfcdc4b40b4a3250ea13c4cfb39e5f917aa657ce87fb462"
         },
         {
           "id": "horse_riding_skin_halloween_23",
           "name_zh": "鬼魅骑士",
           "name_en": "Ghost Rider",
-          "description_zh": "在这个幽灵般的夜晚上，骑着这匹神秘的幻影马飞驰而过",
-          "description_en": "Ride through the night on this spooky steed, which is really just a luminous illusion",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_halloween_23.png",
-            "sha256": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_halloween_icon"
-          },
           "image_key": "1a6e2ce55d973f79306387ffab10b287e817fa93a41983922296301ed5fc68d4"
         },
         {
           "id": "horse_riding_skin_easter_24",
           "name_zh": "西奇迹",
           "name_en": "West Wonder",
-          "description_zh": "独角兽的出现赋予了这匹马无法忘怀的优雅和美丽。",
-          "description_en": "The appearance of a unicorn gives this horse an unforgettable grace and beauty",
-          "icon_path": "UI_WW_AlphaBinary06/horse_riding_skin_4_rare_unicorn_icon",
-          "icon_sprite": "horse_riding_skin_4_rare_unicorn_icon",
-          "child_icon_path": "UI_WW_AlphaBinary06/horse_riding_child_skin_4_rare_unicorn_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_easter_24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_easter_24.png",
-            "sha256": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "horse_riding_skin_4_rare_unicorn_icon"
-          },
           "image_key": "0ebee4bf12f5fc21d2e9addfbf13fb1269b2152a0daefd1105abe0acc4ec16c2"
         },
         {
           "id": "horse_riding_skin_3_rare_ws_day24",
           "name_zh": "午夜冲锋",
           "name_en": "Midnight Charge",
-          "description_zh": "以速度和耐力著称，适合在夜间穿越大草原旅行。",
-          "description_en": "Known for its speed and endurance, perfect for night travels across the prairies",
-          "icon_path": "UI_WW_AlphaBinary07/horse_riding_skin_black_icon",
-          "icon_sprite": "horse_riding_skin_black_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/horse_riding_child_skin_black_icon",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_ws_day24",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_ws_day24.png",
-            "sha256": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "horse_riding_skin_black_icon"
-          },
           "image_key": "f919de2385d70b7aea0526f44d2b5367073e0aa8defa31e0842674eb7bb0ede6"
         },
         {
           "id": "horse_riding_skin_3_rare_bp_7_8",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_3_rare_bp_7_8",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_rare_bp_7_8.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "deer_xmas_riding_skin_4_rare",
           "name_zh": "驯鹿",
           "name_en": "Reindeer",
-          "description_zh": "在严酷的北方自然中感觉很棒",
-          "description_en": "Feels great in the harsh northern nature",
-          "icon_path": "UI_WW_AlphaBinary09/deer_xmas_riding_icon",
-          "icon_sprite": "deer_xmas_riding_icon",
-          "child_icon_path": null,
-          "avatar_id": "wls2_deer_xmas_skin_4_rare",
-          "child_avatar_view_id": null,
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/deer_xmas_riding_skin_4_rare.png",
-            "sha256": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "deer_xmas_riding_icon"
-          },
           "image_key": "1f542bfb159a66adce872940d0a4a94859b1497173b54897e6d96de27bedc0e9"
         },
         {
           "id": "horse_riding_skin_steam_dlc",
           "name_zh": "风 灵",
           "name_en": "Wind spirit",
-          "description_zh": "标记在神圣的油漆中，迅速如暴风，这匹马以其祖先的力量奔跑",
-          "description_en": "Marked in sacred paint and swift as a storm, this steed runs with the strength of its ancestors",
-          "icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_icon",
-          "icon_sprite": "horse_riding_indian_icon",
-          "child_icon_path": "UI_WW_AlphaBinary10/horse_riding_indian_child_icon",
-          "avatar_id": "wls2_mob_animal_steam_dlc_horse",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_steam_dlc.png",
-            "sha256": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary10_14fe3992028ff48d36a097dd708754c1.bundle",
-            "source_sprite": "horse_riding_indian_icon"
-          },
           "image_key": "89b45c1672930105ceea0fad5155c4d58c6a780db1d174c29417c9351cebd5cb"
         },
         {
           "id": "horse_riding_skin_6_epic_1",
           "name_zh": "海豹棕摩根",
           "name_en": "Seal Brown Morgan",
-          "description_zh": "一种多才多艺且坚韧的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_seal_brown",
-          "icon_sprite": "Horse_regular_seal_brown",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_seal_brown",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_6_epic_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_6_epic_1.png",
-            "sha256": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_seal_brown"
-          },
           "image_key": "a9a6f1844484286efefdcae0c1931aa030dccf495a14d84ad9ae5206a639b1a0"
         },
         {
           "id": "horse_riding_skin_5_epic_1",
           "name_zh": "贝登摩根",
           "name_en": "Bay Dun Morgan",
-          "description_zh": "一种多才多艺且强壮的马，以其结实的体格和友好的天性而闻名。",
-          "description_en": "A versatile and hardy horse known for its sturdy build and friendly nature",
-          "icon_path": "UI_WW_AlphaBinary07/Horse_regular_BayDun_T6_common",
-          "icon_sprite": "Horse_regular_BayDun_T6_common",
-          "child_icon_path": "UI_WW_AlphaBinary07/Foal_BayDun",
-          "avatar_id": "wls2_mob_mount_horse_riding_skin_5_epic_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_riding_skin_5_epic_1.png",
-            "sha256": "eebefca1a92f5dda480ec8d48921d969ed42ff2fd162c026f1784f5c9bbf6e39",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "Horse_regular_BayDun_T6_common"
-          },
           "image_key": "eebefca1a92f5dda480ec8d48921d969ed42ff2fd162c026f1784f5c9bbf6e39"
         }
       ],
-      "primary_skin_id": "horse_riding_skin_3_common_1",
-      "primary_icon_sprite": "horse_riding_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_riding_skin_3_common_1.png",
-        "sha256": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_riding_skin_3_common_icon"
-      },
       "image_key": "f0433be13a25c9ba22346d1879b29e3d9de3e302feb64bcb090a41f27cfd6050",
       "numeric": {
         "summary": [
@@ -17473,7 +12537,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
       "species_en": "Draft horse",
       "display_zh": "役用马 T3 · 普通",
       "display_en": "Draft horse T3 · Common",
-      "tier_id": "horse_wagon_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 1,
@@ -17498,7 +12561,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
         "endurance_fluct_min": 0,
         "endurance_fluct_max": 0
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -17534,179 +12596,39 @@ window.WIKI_CHUNKS["wiki-chunk-pets-11"] = {
           "id": "horse_wagon_skin_3_common_1",
           "name_zh": "斑点灰比利时马",
           "name_en": "Dapple grey Belgian Draft",
-          "description_zh": "比利时马是一种庞大的动力源，以其纯粹的力量和温和的气质而闻名。",
-          "description_en": "The Belgian Draft is an imposing powerhouse, known for its sheer strength and gentle demeanor.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_3_common_icon",
-          "icon_sprite": "horse_wagon_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_3_common_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_common_1.png",
-            "sha256": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_3_common_icon"
-          },
           "image_key": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b"
         },
         {
           "id": "horse_wagon_skin_3_uncommon_1",
           "name_zh": "杂色比利时马",
           "name_en": "Pinto Belgian Draft",
-          "description_zh": "比利时马是一种庞大的动力源，以其纯粹的力量和温和的气质而闻名。",
-          "description_en": "The Belgian Draft is an imposing powerhouse, known for its sheer strength and gentle demeanor.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_3_uncommon_icon",
-          "icon_sprite": "horse_wagon_skin_3_uncommon_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_3_uncommon_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_3_uncommon_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_uncommon_1.png",
-            "sha256": "c9becef963fbef31df48e20f681157dceea3e35ae5cacd7be142f7f92ecec575",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_3_uncommon_icon"
-          },
           "image_key": "c9becef963fbef31df48e20f681157dceea3e35ae5cacd7be142f7f92ecec575"
         },
         {
           "id": "horse_wagon_skin_3_rare_1",
           "name_zh": "多比利时马",
           "name_en": "Tobiano Belgian Draft",
-          "description_zh": "比利时马是一种庞大的动力源，以其纯粹的力量和温和的气质而闻名。",
-          "description_en": "The Belgian Draft is an imposing powerhouse, known for its sheer strength and gentle demeanor.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_3_rare_icon",
-          "icon_sprite": "horse_wagon_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_3_rare_1",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_rare_1.png",
-            "sha256": "60def429f31c0048e4c1cb21f36f0145367a542fe636932b406ba1b77c843b00",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_3_rare_icon"
-          },
           "image_key": "60def429f31c0048e4c1cb21f36f0145367a542fe636932b406ba1b77c843b00"
         },
         {
           "id": "horse_wagon_skin_3_rare_2",
           "name_zh": "多彩波弗隆马",
           "name_en": "Tobiano Percheron",
-          "description_zh": "一种法国品种，具有卓越的优雅和力量，完美地体现了优雅和力量的和谐统一。",
-          "description_en": "A French breed of remarkable elegance and power, embodies grace and strength in perfect harmony.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_3_rare_icon",
-          "icon_sprite": "horse_wagon_skin_3_rare_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_3_rare_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_3_rare_2",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_rare_2.png",
-            "sha256": "60def429f31c0048e4c1cb21f36f0145367a542fe636932b406ba1b77c843b00",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_3_rare_icon"
-          },
           "image_key": "60def429f31c0048e4c1cb21f36f0145367a542fe636932b406ba1b77c843b00"
         },
         {
           "id": "horse_wagon_skin_3_common_3",
           "name_zh": "斑点灰夏尔马",
           "name_en": "Dapple grey Shire",
-          "description_zh": "一种宏伟的品种，因其庞大的体型、高贵的气场和卓越的力量而受到推崇。",
-          "description_en": "A majestic breed revered for its commanding size, noble presence, and remarkable strength.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_3_common_icon",
-          "icon_sprite": "horse_wagon_skin_3_common_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_3_common_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_3_common_3",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_common_3.png",
-            "sha256": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_3_common_icon"
-          },
           "image_key": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b"
         },
         {
           "id": "horse_wagon_skin_halloween_23",
           "name_zh": "鬼车运输",
           "name_en": "Ghost Hauler",
-          "description_zh": "这匹马的令人不安的外表只是肤浅的；在内部，它充满了马的魅力。",
-          "description_en": "This horse's haunting appearance is only skin-deep; underneath, it's all equine charm.",
-          "icon_path": "UI_WW_AlphaBinary08/horse_wagon_skin_4_rare_halloween_icon",
-          "icon_sprite": "horse_wagon_skin_4_rare_halloween_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/horse_wagon_child_skin_4_rare_halloween_icon",
-          "avatar_id": "wls2_mob_mount_horse_wagon_skin_halloween_23",
-          "child_avatar_view_id": "wls2_mob_mount_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_halloween_23.png",
-            "sha256": "d010215dd8779fa13ff74a2fa77f20cefdb74e4b77e58463921fbcb2541ddd99",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "horse_wagon_skin_4_rare_halloween_icon"
-          },
           "image_key": "d010215dd8779fa13ff74a2fa77f20cefdb74e4b77e58463921fbcb2541ddd99"
         }
       ],
-      "primary_skin_id": "horse_wagon_skin_3_common_1",
-      "primary_icon_sprite": "horse_wagon_skin_3_common_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/horse_wagon_skin_3_common_1.png",
-        "sha256": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "horse_wagon_skin_3_common_icon"
-      },
       "image_key": "d62935f9b35d9551fe3ec531f354039f493c6a3436dd61d4903b02fc83e0372b",
       "numeric": {
         "summary": [

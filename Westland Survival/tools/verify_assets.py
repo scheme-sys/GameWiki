@@ -1,75 +1,57 @@
 #!/usr/bin/env python3
-"""Verify that the split archive still matches the original decoded data."""
+"""Verify approved player data, semantic baselines, local assets and image hashes."""
+from __future__ import annotations
+
 import base64
 import hashlib
 import json
-import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = json.loads((ROOT / 'wiki-assets/asset-manifest.json').read_text(encoding='utf-8'))
+from player_schema import ROOT, data_files, read_data, sanitize, find_unsafe, digest, player_summary
 
 
-def read_assignment(relative):
-    source = (ROOT / relative).read_text(encoding='utf-8')
-    match = re.search(r'^window\.[^\n=]+ = ([{\[].*);\s*$', source, re.M | re.S)
-    assert match, 'Unrecognized data assignment: ' + relative
-    return json.loads(match.group(1))
+def verify(root=ROOT):
+    manifest = json.loads((root / 'wiki-assets/asset-manifest.json').read_text(encoding='utf-8'))
+    assert manifest.get('format') == 2, 'Legacy unsanitized manifest is not accepted.'
+    registered = {row['file']: row for row in manifest['data']}
+    actual = {file.relative_to(root).as_posix() for file in data_files(root)}
+    assert actual == set(registered), 'Data file list changed; register its player schema before importing.'
+    for directory in ['wiki-assets/wiki/data', 'wiki-assets/lab/data']:
+        assert not list((root / directory).rglob('*.json')), 'Unexpected raw JSON in runtime data directory.'
+    for relative, row in registered.items():
+        value = read_data(root / relative)
+        assert sanitize(relative, value) == value, 'Unapproved data fields: ' + relative
+        assert not find_unsafe(value), 'Technical import metadata remains: ' + relative
+        assert digest(value) == row['canonical_sha256'], 'Data hash changed: ' + relative
+    assert player_summary(root) == manifest['playerFields'], 'Player fields, numbers or model inputs changed.'
+
+    image_paths = set()
+    for row in manifest['images']:
+        file = (root / row['path']).resolve()
+        assert file.is_relative_to((root / 'wiki-assets/images').resolve()), row['path']
+        assert row['path'] not in image_paths, 'Duplicate image manifest path.'
+        image_paths.add(row['path'])
+        content = file.read_bytes()
+        assert len(content) == row['bytes'], row['path']
+        assert hashlib.sha256(content).hexdigest() == row['sha256'], row['path']
+    actual_images = {p.relative_to(root).as_posix() for p in (root / 'wiki-assets/images').glob('*') if p.is_file()}
+    assert actual_images == image_paths, 'Missing or unregistered image.'
+
+    index = read_data(root / 'wiki-assets/wiki/data/index.js')
+    images = read_data(root / 'wiki-assets/wiki/data/images.js')
+    assert set(index['images']) == set(images), 'Wiki image mapping keys changed.'
+    assert all(path in image_paths for path in images.values())
+    textures = read_data(root / 'wiki-assets/lab/data/avatar-textures.js')
+    offline = read_data(root / 'wiki-assets/lab/data/offline-textures.js')
+    for path in textures.values():
+        assert path in image_paths, 'Missing avatar texture.'
+        mime, encoded = offline[path].split(';base64,', 1)
+        assert mime.startswith('data:image/')
+        assert base64.b64decode(encoded, validate=True) == (root / path).read_bytes(), 'Offline texture differs.'
+    return {'status': 'PASS', 'data_files': len(registered), 'images': len(image_paths),
+            'player_counts': manifest['playerFields']['counts'],
+            'offline_textures': len(textures), 'approved_schema': True, 'technical_metadata_absent': True}
 
 
-def canonical(value):
-    return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
-
-
-image_paths = {row['path'] for row in MANIFEST['images']}
-
-
-def restore_images(value):
-    if isinstance(value, dict):
-        return {key: restore_images(item) for key, item in value.items()}
-    if isinstance(value, list):
-        return [restore_images(item) for item in value]
-    if isinstance(value, str) and value in image_paths:
-        image = ROOT / value
-        mime = {'.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp'}[image.suffix]
-        return 'data:' + mime + ';base64,' + base64.b64encode(image.read_bytes()).decode('ascii')
-    return value
-
-
-for row in MANIFEST['images']:
-    data = (ROOT / row['path']).read_bytes()
-    assert len(data) == row['bytes'], row['path']
-    assert hashlib.sha256(data).hexdigest() == row['sha256'], row['path']
-
-lab_names = {'equipment-data': 'equipment', 'beast-data': 'beasts', 'loadout-lab-data': 'loadout'}
-for row in MANIFEST['data']:
-    name = row['name']
-    if name == 'wiki-index':
-        data = read_assignment('wiki-assets/wiki/data/index.js')
-    elif name.startswith('wiki-chunk-'):
-        data = read_assignment('wiki-assets/wiki/data/chunks/' + name[len('wiki-chunk-'):] + '.js')
-    elif name in lab_names:
-        data = restore_images(read_assignment('wiki-assets/lab/data/' + lab_names[name] + '.js'))
-    elif name == 'loadout-avatar3d-data':
-        data = read_assignment('wiki-assets/lab/data/avatar.js')
-        data['meshes'] = read_assignment('wiki-assets/lab/data/avatar-meshes.js')
-        data['textures'] = read_assignment('wiki-assets/lab/data/avatar-textures.js')
-        data = restore_images(data)
-    else:
-        raise AssertionError('Unknown data block: ' + name)
-    assert hashlib.sha256(canonical(data)).hexdigest() == row['canonical_sha256'], name
-
-offline = read_assignment('wiki-assets/lab/data/offline-textures.js')
-textures = read_assignment('wiki-assets/lab/data/avatar-textures.js')
-for uri in textures.values():
-    assert offline[uri] == restore_images(uri), 'Offline texture differs: ' + uri
-
-index = read_assignment('wiki-assets/wiki/data/index.js')
-images = read_assignment('wiki-assets/wiki/data/images.js')
-assert set(index['images']) == set(images), 'Wiki image keys changed'
-assert all((ROOT / path).is_file() for path in images.values())
-
-print(json.dumps({'data_blocks_verified': len(MANIFEST['data']),
-                  'image_references_verified': len(MANIFEST['images']),
-                  'unique_images': len(image_paths),
-                  'offline_textures_verified': len(textures)}, ensure_ascii=True))
+if __name__ == '__main__':
+    print(json.dumps(verify(), ensure_ascii=True))

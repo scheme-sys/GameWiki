@@ -68,9 +68,9 @@ python -m http.server 4173 --bind 127.0.0.1
 
 站点使用相对资源路径，兼容 `/LCZ-GameWiki/` 项目子目录。`404.html` 提供返回入口，并兼容原 `/GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。
 
-Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；原始 JSON、素材浏览器、维护报告与工具留在仓库。
+Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；已清理的维护 JSON、校验报告与工具留在仓库。
 
-发布产物包含根入口、404 页面、`.nojekyll`，以及公共 `assets/` 和已登记游戏目录内的 HTML、CSS、JavaScript、图片与字体。README、开发脚本、来源 JSON 与校验清单保留在仓库，不包含在 Pages 产物中。游戏资料通过本地普通 JavaScript 文件载入；访问统计另行请求外部服务的 JSON。
+发布产物包含根入口、404 页面、`.nojekyll`，以及公共 `assets/` 和已登记游戏目录内的 HTML、CSS、JavaScript、图片与字体。README、开发脚本、维护 JSON 与校验清单保留在仓库，不包含在 Pages 产物中。游戏资料通过本地普通 JavaScript 文件载入；访问统计另行请求外部服务的 JSON。
 
 GitHub 的设置说明见[使用自定义工作流部署 Pages](https://docs.github.com/zh/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
 
@@ -92,7 +92,8 @@ Day R Survival/wiki-assets/   分离的 css/、js/、data/、images/
 Westland Survival/wiki-assets/ wiki/、lab/、base/ 与共享 images/
 DawnofZombiewiki/              玩家页面、数据、分类图片、指南与维护工具
 scripts/check-site.mjs         无依赖静态检查与发布打包
-scripts/lib/public-files.mjs   公开文件范围，排除维护页面和原始数据
+scripts/lib/public-files.mjs   公开文件范围，排除维护文件
+scripts/check-player-data.mjs  检查未使用的游戏实现信息是否混入数据
 scripts/test-portal.py         可选的门户浏览器交互检查
 .github/workflows/pages.yml    GitHub Pages 发布工作流
 ```
@@ -109,9 +110,9 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 
 如需让新增游戏在禁用 JavaScript 时也有入口，可在 `index.html` 的 `noscript` 区域补充基础链接。
 
-面向玩家的页面只展示可读名称、属性与玩法说明。内部 ID、资源路径及原始数据保留在资料文件中，不显示在卡片、表格、详情、提示文字里，也不作为缺失名称的替代；未翻译的名称应标注为待补充。已有收藏、关联查询和分享链接继续使用稳定的底层 ID。
+面向玩家的页面只展示可读名称、属性与玩法说明。维护数据和发布数据仅保留玩家资料及网站需要的稳定 ID、关联关系、本地图片路径、统计键和模型映射。未用的游戏函数引用、内部类名、原始配置和提取路径从文件中清除，而非仅在界面隐藏。已有收藏、关联查询和分享链接继续使用稳定 ID；未翻译的名称标注为待补充。清理范围和维护规则见 [数据清理说明](docs/player-data.md)。
 
-各游戏的大图和数据库已独立于 HTML 存放。Day R 按原始分类保存图像，Westland 共享重复图片并按需加载百科详情块。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML。
+各游戏的大图和数据库已独立于 HTML 存放。Day R 按原始分类保存图像，Westland 共享重复图片并按需加载百科详情块。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
 
 详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
 
@@ -124,7 +125,7 @@ python DawnofZombiewiki/tools/update_data.py
 python DawnofZombiewiki/tools/verify_package.py --data-only
 ```
 
-第一个命令同步网页使用的 JS 数据与收录统计，不会改动原始 JSON 或图片。需要同时重建中文 CSV 和 Markdown 指南时使用 `update_data.py --exports`，查看文件差异后提交。详细目录职责、导出差异和新增图片流程见 [Dawn 维护说明](DawnofZombiewiki/README.md)。发布工作流也会校验 Dawn 的数据同步及原图完整性。
+第一个命令从已清理的维护 JSON 同步网页使用的 JS 数据与收录统计，不会改动维护 JSON 或图片。需要同时重建中文 CSV 和 Markdown 指南时使用 `update_data.py --exports`，查看文件差异后提交。详细目录职责、导出差异和新增图片流程见 [Dawn 维护说明](DawnofZombiewiki/README.md)。发布工作流也会校验 Dawn 的数据同步及原图完整性。
 
 ## 检查与发布预览
 
@@ -137,6 +138,8 @@ node scripts/test-site-stats.mjs
 node scripts/test-site-security.mjs
 node scripts/test-asset-versions.mjs
 node scripts/test-public-files.mjs
+node scripts/test-player-data-policy.mjs
+node scripts/check-player-data.mjs
 python DawnofZombiewiki/tools/verify_package.py --data-only
 ```
 

@@ -1,8 +1,7 @@
-"""Verify extracted Day R data, image bytes, local references and JS syntax."""
+"""Verify public player data, original image bytes, references and JS syntax."""
 
 from __future__ import annotations
 
-import base64
 import hashlib
 import json
 import re
@@ -13,6 +12,25 @@ from pathlib import Path
 
 ASSETS = Path(__file__).resolve().parents[1]
 ROOT = ASSETS.parent
+
+RECORD_FIELDS = {
+    "items": {"id", "name", "nameEn", "description", "category", "subcategory", "image", "stats", "tags"},
+    "monsters": {"id", "name", "nameEn", "description", "category", "subcategory", "image", "stats", "tags", "attacks", "loot", "perks", "loaded", "friendly"},
+}
+PRIVATE_KEYS = {"raw", "$ref", "source", "linkedSource", "petConfig", "template", "class", "titleKey", "descriptionKey"}
+PRIVATE_TEXT = re.compile(r"function\s*\(proto=|\b\w+StorageData\b|\bCAB-[a-f0-9]+\b|\.(?:bundle|bun|lu|lua|cs)(?:\b|$)", re.I)
+
+
+def assert_public_data(value: object, location: str = "data") -> None:
+    if isinstance(value, dict):
+        assert not (set(value) & PRIVATE_KEYS), (location, "private source fields")
+        for key, child in value.items():
+            assert_public_data(child, location + "." + key)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            assert_public_data(child, location + "[" + str(index) + "]")
+    elif isinstance(value, str):
+        assert not PRIVATE_TEXT.search(value), (location, "private source text")
 
 
 def digest(value: bytes) -> str:
@@ -33,6 +51,14 @@ def main() -> None:
         filename = "image-index.js" if name == "images" else name + ".js"
         data[name] = load_assignment(filename, "window.DAYR_DATA." + name + " = ", ";")
 
+    assert manifest["schema"] == "dayr-player-assets-v2"
+    assert_public_data(data)
+    for kind, allowed in RECORD_FIELDS.items():
+        for row in data[kind]:
+            assert set(row) == allowed, (kind, row.get("id"), "unexpected or missing fields")
+        canonical_records = json.dumps(data[kind], ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        assert digest(canonical_records.encode("utf-8")) == manifest["playerRecordSha256"][kind], kind
+
     counts = {
         "items": len(data["items"]),
         "monsters": len(data["monsters"]),
@@ -44,7 +70,6 @@ def main() -> None:
     }
     assert counts == manifest["counts"], (counts, manifest["counts"])
     assert len(manifest["images"]) == counts["images"]
-    originals = {}
     for asset in [*manifest["images"], manifest["hero"]]:
         target = (ROOT / asset["path"]).resolve()
         assert target.is_relative_to(ASSETS.resolve()), asset["path"]
@@ -53,12 +78,8 @@ def main() -> None:
         assert digest(raw) == asset["sha256"], asset["path"]
         if "source" in asset:
             assert data["images"][asset["source"]] == asset["path"], asset["source"]
-            originals[asset["source"]] = (
-                "data:" + asset["mime"] + ";base64," + base64.b64encode(raw).decode("ascii")
-            )
-    data["images"] = originals
     canonical = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-    assert digest(canonical.encode("utf-8")) == manifest["originalDataSha256"]
+    assert digest(canonical.encode("utf-8")) == manifest["playerDataSha256"]
 
     page = (ROOT / "wiki_dayR.html").read_text(encoding="utf-8")
     references = re.findall(r'<(?:script|link)\b[^>]*(?:src|href)="([^"]+)"', page)
@@ -78,7 +99,8 @@ def main() -> None:
         "status": "PASS",
         "counts": counts,
         "verifiedImageFiles": len(manifest["images"]) + 1,
-        "originalDataReconstructedExactly": True,
+        "playerDataVerified": True,
+        "privateSourceFieldsAbsent": True,
         "javascriptSyntaxChecks": len(scripts),
         "localReferencesChecked": len(references),
     }, indent=2))

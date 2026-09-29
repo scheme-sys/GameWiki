@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
   "records": [
     {
       "id": "wls2_lootbox_blueprint_epic_custom_t3_legs",
-      "item_id": "wls2_lootbox_blueprint_epic_custom_t3_legs",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_epic_custom_t3_legs",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -40,24 +36,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_custom_t3_legs",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_common",
-      "item_id": "wls2_lootbox_blueprint_common",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -68,12 +50,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_common",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -100,24 +79,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_common_t1",
-      "item_id": "wls2_lootbox_blueprint_custom_common_t1",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -128,12 +93,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_common_t1",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -152,24 +114,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_common_t1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_common_t2",
-      "item_id": "wls2_lootbox_blueprint_custom_common_t2",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -180,12 +128,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_common_t2",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -204,24 +149,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_common_t2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_common_t3",
-      "item_id": "wls2_lootbox_blueprint_custom_common_t3",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -232,12 +163,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_common_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -256,24 +184,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_common_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_common_t4",
-      "item_id": "wls2_lootbox_blueprint_custom_common_t4",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -284,12 +198,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_common_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -308,24 +219,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_common_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_common_t5",
-      "item_id": "wls2_lootbox_blueprint_custom_common_t5",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -336,12 +233,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_common_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -360,24 +254,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_common_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_diary",
-      "item_id": "wls2_lootbox_blueprint_custom_diary",
       "name": "普通圆筒",
       "name_en": "Common tube",
       "name_source": "official_zh",
@@ -388,12 +268,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_diary",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -412,24 +289,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_diary",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_common_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_backpack_cowboy",
-      "item_id": "wls2_lootbox_blueprint_backpack_cowboy",
       "name": "牛仔圆筒",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -440,12 +303,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_cowboy_backpack_icon",
-      "image_id": "wls2_lootbox_blueprint_backpack_cowboy",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -464,24 +324,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_backpack_cowboy",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_blueprint_backpack_cowboy_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d0a43632e1b9906e858b186e060f43a73e07c8d12915a4eaa81455aaa530202a"
     },
     {
       "id": "wls2_halloween_event_lootbox_blueprint",
-      "item_id": "wls2_halloween_event_lootbox_blueprint",
       "name": "白峰圆筒",
       "name_en": "Whitecrest Tube",
       "name_source": "official_zh",
@@ -492,12 +338,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_halloween_icon",
-      "image_id": "wls2_halloween_event_lootbox_blueprint",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -516,24 +359,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_halloween_event_lootbox_blueprint",
-        "reason": "physical_inventory_stack",
-        "name_key": "loot_objects_wls2_halloween_event_lootbox_blueprint_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0d2b6d508b829547ac37ec488f5f10c5bb351ae970e561286b84360561abf3e7"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_rare_t1",
-      "item_id": "wls2_lootbox_blueprint_custom_rare_t1",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -544,12 +373,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_rare_t1",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -568,24 +394,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_rare_t1",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_rare_t2",
-      "item_id": "wls2_lootbox_blueprint_custom_rare_t2",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -596,12 +408,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_rare_t2",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -620,24 +429,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_rare_t2",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_rare_t3",
-      "item_id": "wls2_lootbox_blueprint_custom_rare_t3",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -648,12 +443,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_rare_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -672,24 +464,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_rare_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_rare_t4",
-      "item_id": "wls2_lootbox_blueprint_custom_rare_t4",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -700,12 +478,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_rare_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -724,24 +499,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_rare_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_rare_t5",
-      "item_id": "wls2_lootbox_blueprint_custom_rare_t5",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -752,12 +513,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_rare_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -776,24 +534,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_rare_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_story_quest_9",
-      "item_id": "wls2_lootbox_blueprint_custom_story_quest_9",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -804,12 +548,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_story_quest_9",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -828,24 +569,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_story_quest_9",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_rare",
-      "item_id": "wls2_lootbox_blueprint_rare",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -856,12 +583,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": null,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_rare",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -895,24 +619,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_rare",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint_custom",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_bot",
-      "item_id": "wls2_lootbox_blueprint_custom_bot",
       "name": "牛仔 管",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -923,12 +633,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_bot",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -947,24 +654,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_bot",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t1_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t1_hammer",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t1_hammer",
       "name": "牛仔 管",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -975,12 +668,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 1,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t1_hammer",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -999,24 +689,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t1_hammer",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t1_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t1_hammer",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t1_body",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t1_body",
       "name": "牛仔 管",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -1027,12 +703,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t1_body",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1051,24 +724,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t1_body",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t1_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t1_body",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t1_boots",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t1_boots",
       "name": "牛仔 管",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -1079,12 +738,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t1_boots",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1103,24 +759,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t1_boots",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t1_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t1_boots",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t1_legs",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t1_legs",
       "name": "牛仔 管",
       "name_en": "Cowboy tube",
       "name_source": "official_zh",
@@ -1131,12 +773,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 1,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_common_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t1_legs",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1155,24 +794,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t1_legs",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t1_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t1_legs",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "b9cd4d8c91f0e48ad6e23e8c24f540662b802ff0e0940ccd7df443cbf692d341"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t2_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t2_migration",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -1183,12 +808,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 2,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t2_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1252,24 +874,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 10
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t2_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t2_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_custom_stonefall",
-      "item_id": "wls2_lootbox_blueprint_custom_stonefall",
       "name": "边疆 管",
       "name_en": "Frontier tube",
       "name_source": "official_zh",
@@ -1280,12 +888,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_custom_stonefall",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1304,24 +909,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_custom_stonefall",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t2_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t2_beretta",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t2_beretta",
       "name": "边疆 管",
       "name_en": "Frontier tube",
       "name_source": "official_zh",
@@ -1332,12 +923,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_cowboy_backpack_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t2_beretta",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1356,24 +944,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t2_beretta",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t2_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t2_beretta",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d0a43632e1b9906e858b186e060f43a73e07c8d12915a4eaa81455aaa530202a"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t2_skinner",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t2_skinner",
       "name": "边疆 管",
       "name_en": "Frontier tube",
       "name_source": "official_zh",
@@ -1384,12 +958,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 2,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_cowboy_backpack_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t2_skinner",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1408,24 +979,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t2_skinner",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t2_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t2_skinner",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d0a43632e1b9906e858b186e060f43a73e07c8d12915a4eaa81455aaa530202a"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t2",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t2",
       "name": "边疆 管",
       "name_en": "Frontier tube",
       "name_source": "official_zh",
@@ -1436,12 +993,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 2,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_cowboy_backpack_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t2",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1505,24 +1059,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 6
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t2",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t2_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t2",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d0a43632e1b9906e858b186e060f43a73e07c8d12915a4eaa81455aaa530202a"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t3_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t3_migration",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -1533,12 +1073,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t3_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1607,24 +1144,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 7
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t3_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t3_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_t3_epic",
-      "item_id": "wls2_lootbox_blueprint_t3_epic",
       "name": "山地滑雪圈",
       "name_en": "Mountain tube",
       "name_source": "official_zh",
@@ -1635,12 +1158,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_3_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_t3_epic",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1669,24 +1189,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t3_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t3_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "243bd4fee4508974fb03add4a4484c9e9c88a0d0a9591c70de104cd3ac939d10"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t3",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t3",
       "name": "山管",
       "name_en": "Mountain tube",
       "name_source": "official_zh",
@@ -1697,12 +1203,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_rare_3_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1751,24 +1254,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 9
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t3_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t3",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ffcf9b27cfee8c00392ee05567e88e76f37daae937fe4b79f34042a03fa382ce"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t3",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t3",
       "name": "山管",
       "name_en": "Mountain tube",
       "name_source": "official_zh",
@@ -1779,12 +1268,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_uncommon_3_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1853,24 +1339,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 7
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t3_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t3",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "84452b0b9d88e80a735b87e6136152a58a0881159a7637cc1694bac6f2c947d8"
     },
     {
       "id": "wls2_lootbox_blueprint_epic_t3",
-      "item_id": "wls2_lootbox_blueprint_epic_t3",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -1881,12 +1353,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary07/wls2_lootbox_blueprint_epic_t3",
-      "image_id": "wls2_lootbox_blueprint_epic_t3",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1905,24 +1374,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_epic_t3",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c3453ef988175bac9b9264b69b20f27221a2e649cb0acddf3506849082b0b5f2"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t3_body",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t3_body",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -1933,12 +1388,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t3_body",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -1957,24 +1409,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t3_body",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t3_body",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t3_boots",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t3_boots",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -1985,12 +1423,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t3_boots",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2009,24 +1444,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t3_boots",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t3_boots",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t3_head",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t3_head",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -2037,12 +1458,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t3_head",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2061,24 +1479,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t3_head",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t3_head",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t3_knife",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t3_knife",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -2089,12 +1493,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t3_knife",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2113,24 +1514,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t3_knife",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t3_knife",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t3_legs",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t3_legs",
       "name": "工业圆筒",
       "name_en": "Industrial tube",
       "name_source": "official_zh",
@@ -2141,12 +1528,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t3_legs",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2165,24 +1549,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t3_legs",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t3_legs",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "9df561bc4db32396fd791bd17125fa41520ac99a559af5172779ea62f93b2e84"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t3_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t3_migration",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -2193,12 +1563,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 3,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t3_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2247,24 +1614,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 10
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t3_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t3_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t4_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t4_migration",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -2275,12 +1628,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t4_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2334,24 +1684,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 7
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t4_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t4_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_t4_epic",
-      "item_id": "wls2_lootbox_blueprint_t4_epic",
       "name": "平原管",
       "name_en": "Plains tube",
       "name_source": "official_zh",
@@ -2362,12 +1698,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_4_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_t4_epic",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2396,24 +1729,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t4_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t4_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1880f78e10af16c77765801b9aabbcceb001c44b2486fcb3a95b76fa0ec8f416"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t4",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t4",
       "name": "平原管",
       "name_en": "Plains tube",
       "name_source": "official_zh",
@@ -2424,12 +1743,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_4_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2463,24 +1779,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1832
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_epic_t4_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t4",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1880f78e10af16c77765801b9aabbcceb001c44b2486fcb3a95b76fa0ec8f416"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t4_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t4_migration",
       "name": "平原管",
       "name_en": "Plains tube",
       "name_source": "official_zh",
@@ -2491,12 +1793,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_4_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t4_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2530,24 +1829,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1832
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t4_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t4_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t4_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1880f78e10af16c77765801b9aabbcceb001c44b2486fcb3a95b76fa0ec8f416"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t4",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t4",
       "name": "平原管",
       "name_en": "Plains tube",
       "name_source": "official_zh",
@@ -2558,12 +1843,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_rare_4_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2612,24 +1894,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 9
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t4_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t4",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "edcb8317948c4dd90d91f60fe4c09ba96cdc8abad424b370c619d66817470b52"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t4",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t4",
       "name": "平原管",
       "name_en": "Plains tube",
       "name_source": "official_zh",
@@ -2640,12 +1908,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_uncommon_4_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t4",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2699,24 +1964,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 6
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t4",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t4_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t4",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "761f6b82365d237e1d40c4cd233b6aa6407d30ebc9b56c66a34b50f212a191a8"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t4_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t4_migration",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -2727,12 +1978,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 4,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t4_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2781,24 +2029,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 10
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t4_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t4_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t5_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t5_migration",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -2809,12 +2043,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t5_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2858,24 +2089,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 10
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t5_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t5_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t5",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t5",
       "name": "沼泽地 管",
       "name_en": "Marshland tube",
       "name_source": "official_zh",
@@ -2886,12 +2103,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_5_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -2950,24 +2164,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 436
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_epic_t5_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t5",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3a983f4aa7f866081faec76bd0d95368e90bef8f2e374b71c9505ca8af981fbc"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t5",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t5",
       "name": "沼泽地 管",
       "name_en": "Marshland tube",
       "name_source": "official_zh",
@@ -2978,12 +2178,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_rare_5_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3037,24 +2234,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 15
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t5_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t5",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f5f44a892d55458bff125c6b0ed79c43bf217b9575911621a3eea117e2a5e696"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t5",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t5",
       "name": "沼泽地 管",
       "name_en": "Marshland tube",
       "name_source": "official_zh",
@@ -3065,12 +2248,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_uncommon_5_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t5",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3114,24 +2294,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 10
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t5",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t5_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t5",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "df07ab288e603bd9c1a994916f4a8b2b3d0b1a9033563a852c915c7825c58e0a"
     },
     {
       "id": "wls2_lootbox_blueprint_t5_epic",
-      "item_id": "wls2_lootbox_blueprint_t5_epic",
       "name": "沼泽管",
       "name_en": "Marshland tube",
       "name_source": "official_zh",
@@ -3142,12 +2308,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_5_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_t5_epic",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3176,24 +2339,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t5_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t5_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3a983f4aa7f866081faec76bd0d95368e90bef8f2e374b71c9505ca8af981fbc"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t5_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t5_migration",
       "name": "沼泽管",
       "name_en": "Marshland tube",
       "name_source": "official_zh",
@@ -3204,12 +2353,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_5_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t5_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3268,24 +2414,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 436
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t5_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t5_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t5_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3a983f4aa7f866081faec76bd0d95368e90bef8f2e374b71c9505ca8af981fbc"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t5_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t5_migration",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -3296,12 +2428,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t5_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3355,24 +2484,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 15
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t5_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t5_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_crocodile",
-      "item_id": "wls2_lootbox_blueprint_crocodile",
       "name": "鳄鱼 管",
       "name_en": "Alligator tube",
       "name_source": "official_zh",
@@ -3383,12 +2498,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_5_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_crocodile",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3407,24 +2519,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_crocodile",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_crocodile_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3a983f4aa7f866081faec76bd0d95368e90bef8f2e374b71c9505ca8af981fbc"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_crocodile",
-      "item_id": "wls2_lootbox_blueprint_tube_crocodile",
       "name": "鳄鱼 管",
       "name_en": "Alligator tube",
       "name_source": "official_zh",
@@ -3435,12 +2533,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_5_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_crocodile",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3474,24 +2569,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 25
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_crocodile",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_crocodile_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_crocodile",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "3a983f4aa7f866081faec76bd0d95368e90bef8f2e374b71c9505ca8af981fbc"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t6_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t6_migration",
       "name": "不凡圆筒",
       "name_en": "Uncommon tube",
       "name_source": "official_zh",
@@ -3502,12 +2583,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_uncommon_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t6_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3561,24 +2639,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 7
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t6_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_uncommon_name",
-        "sorting_group": "blueprint_uncommon",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t6_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "8dd80056812932600214df19fb0cecf23bad335589519485ac293eb919460685"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t6",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t6",
       "name": "北方管",
       "name_en": "Boreal tube",
       "name_source": "official_zh",
@@ -3589,12 +2653,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_6_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3648,24 +2709,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1750
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t6",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_epic_t6_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t6",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "46818b27fae43fb6e1870f7ba314b8b0d3e87764644ffda3ca2d3b8ea4bae023"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t6",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t6",
       "name": "北方管",
       "name_en": "Boreal tube",
       "name_source": "official_zh",
@@ -3676,12 +2723,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_lootbox_blueprint_rare_6_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3740,24 +2784,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 15
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t6",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_rare_t6_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t6",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f91c5db4ceb9fd1d794e9d9e225f1a31b05b87058fa0ecdde0ad4bdc8e72d2fa"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_uncommon_t6",
-      "item_id": "wls2_lootbox_blueprint_tube_uncommon_t6",
       "name": "北方管",
       "name_en": "Boreal tube",
       "name_source": "official_zh",
@@ -3768,12 +2798,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_uncommon_6_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_uncommon_t6",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3827,24 +2854,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 7
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_uncommon_t6",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_uncommon_t6_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_uncommon_t6",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "559bceca3ccf24830ccccac0c6b6d088d6009a7793db70d0fb275e3fcee6a778"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_rare_t6_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_rare_t6_migration",
       "name": "稀有圆筒",
       "name_en": "Rare tube",
       "name_source": "official_zh",
@@ -3855,12 +2868,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_rare_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_rare_t6_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3919,24 +2929,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 15
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_rare_t6_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_rare_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_rare_t6_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a010b2b42bc4191958517db1ef55ff9e00d63aca901e2182b5028ef3381bed35"
     },
     {
       "id": "wls2_lootbox_blueprint_t6_epic",
-      "item_id": "wls2_lootbox_blueprint_t6_epic",
       "name": "级极地管",
       "name_en": "Boreal tube",
       "name_source": "official_zh",
@@ -3947,12 +2943,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_6_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_t6_epic",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -3981,24 +2974,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t6_epic",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t6_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "46818b27fae43fb6e1870f7ba314b8b0d3e87764644ffda3ca2d3b8ea4bae023"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t6_migration",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t6_migration",
       "name": "级极地管",
       "name_en": "Boreal tube",
       "name_source": "official_zh",
@@ -4009,12 +2988,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_lootbox_blueprint_6_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t6_migration",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4068,24 +3044,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1750
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t6_migration",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t6_epic_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t6_migration",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "46818b27fae43fb6e1870f7ba314b8b0d3e87764644ffda3ca2d3b8ea4bae023"
     },
     {
       "id": "wls2_lootbox_blueprint_t6_uncommon",
-      "item_id": "wls2_lootbox_blueprint_t6_uncommon",
       "name": "非常规北方管道",
       "name_en": "Uncommon boreal tube",
       "name_source": "official_zh",
@@ -4096,12 +3058,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_uncommon_6_icon",
-      "image_id": "wls2_lootbox_blueprint_t6_uncommon",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4120,24 +3079,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t6_uncommon",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t6_uncommon_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "559bceca3ccf24830ccccac0c6b6d088d6009a7793db70d0fb275e3fcee6a778"
     },
     {
       "id": "wls2_lootbox_blueprint_t6_common",
-      "item_id": "wls2_lootbox_blueprint_t6_common",
       "name": "常见的北方管",
       "name_en": "Common boreal tube",
       "name_source": "official_zh",
@@ -4148,12 +3093,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary08/wls2_lootbox_blueprint_rare_6_icon",
-      "image_id": "wls2_lootbox_blueprint_t6_common",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4172,24 +3114,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": null
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_t6_common",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls2_lootbox_blueprint_t6_common_name",
-        "sorting_group": "blueprint_common",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_legacy_empty",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f91c5db4ceb9fd1d794e9d9e225f1a31b05b87058fa0ecdde0ad4bdc8e72d2fa"
     },
     {
       "id": "wls2_lootbox_blueprint_tube_epic_t7",
-      "item_id": "wls2_lootbox_blueprint_tube_epic_t7",
       "name": "里奥布拉沃管",
       "name_en": "Rio Bravo tube",
       "name_source": "official_zh",
@@ -4200,12 +3128,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
       "tier": 7,
       "rarity": "epic",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_lootbox_blueprint_7_epic_icon",
-      "image_id": "wls2_lootbox_blueprint_tube_epic_t7",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -4259,19 +3184,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-21"] = {
           "weight": 1750
         }
       ],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_lootbox_blueprint_tube_epic_t7",
-        "reason": "physical_inventory_stack",
-        "name_key": "wls2_lootbox_blueprint_tube_epic_t7_name",
-        "sorting_group": "blueprint",
-        "stat_table": null,
-        "behaviour_table": "inventory_stack_behaviours",
-        "augmentation_id": null,
-        "blueprint_lootbox_id": "lootbox_blueprint_tube_epic_t7",
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "17d6da6073ad5796bb01d674f91abbda9abe86fc0248fc34a4b089a0700622dd"
     }
   ]

@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T3 · 普通",
       "display_en": "Coyote T3 · Common",
-      "tier_id": "coyote_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -456,75 +454,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -1429,7 +1367,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T3 · 优秀",
       "display_en": "Coyote T3 · Uncommon",
-      "tier_id": "coyote_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -1452,7 +1389,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -1873,75 +1809,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -2846,7 +2722,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T3 · 稀有",
       "display_en": "Coyote T3 · Rare",
-      "tier_id": "coyote_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -2869,7 +2744,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -3290,75 +3164,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -4263,7 +4077,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T4 · 普通",
       "display_en": "Coyote T4 · Common",
-      "tier_id": "coyote_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -4286,7 +4099,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -4827,75 +4639,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -6060,7 +5812,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T4 · 优秀",
       "display_en": "Coyote T4 · Uncommon",
-      "tier_id": "coyote_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -6083,7 +5834,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -6624,75 +6374,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -7857,7 +7547,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T4 · 稀有",
       "display_en": "Coyote T4 · Rare",
-      "tier_id": "coyote_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -7880,7 +7569,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -8421,75 +8109,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -9654,7 +9282,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T5 · 普通",
       "display_en": "Coyote T5 · Common",
-      "tier_id": "coyote_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -9677,7 +9304,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -10338,75 +9964,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -11831,7 +11397,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T5 · 优秀",
       "display_en": "Coyote T5 · Uncommon",
-      "tier_id": "coyote_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -11854,7 +11419,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -12515,75 +12079,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -14008,7 +13512,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T5 · 稀有",
       "display_en": "Coyote T5 · Rare",
-      "tier_id": "coyote_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -14031,7 +13534,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -14692,75 +14194,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -16185,7 +15627,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T5 · 史诗",
       "display_en": "Coyote T5 · Epic",
-      "tier_id": "coyote_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -16208,7 +15649,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -16869,75 +16309,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -18362,7 +17742,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T6 · 普通",
       "display_en": "Coyote T6 · Common",
-      "tier_id": "coyote_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -18385,7 +17764,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -19166,75 +18544,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -20919,7 +20237,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T6 · 优秀",
       "display_en": "Coyote T6 · Uncommon",
-      "tier_id": "coyote_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -20942,7 +20259,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -21723,75 +21039,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -23476,7 +22732,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T6 · 稀有",
       "display_en": "Coyote T6 · Rare",
-      "tier_id": "coyote_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -23499,7 +22754,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -24280,75 +23534,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -26033,7 +25227,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T6 · 史诗",
       "display_en": "Coyote T6 · Epic",
-      "tier_id": "coyote_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -26056,7 +25249,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -26837,75 +26029,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -28590,7 +27722,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T7 · 普通",
       "display_en": "Coyote T7 · Common",
-      "tier_id": "coyote_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -28613,7 +27744,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -29514,75 +28644,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [
@@ -31527,7 +30597,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
       "species_en": "Coyote",
       "display_zh": "郊狼 T7 · 优秀",
       "display_en": "Coyote T7 · Uncommon",
-      "tier_id": "coyote_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -31550,7 +30619,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": null,
       "habitat_zh": "—",
       "habitat_en": "—",
       "habitat_bonus": null,
@@ -32451,75 +31519,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-3"] = {
           "id": "coyote_skin_1",
           "name_zh": "大平原丛林狼",
           "name_en": "Plains coyote",
-          "description_zh": "如果丛林狼感到危险，它可能会像狗一样开始吠叫！",
-          "description_en": "If a coyote senses danger it may start barking — just like a dog!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
-          "icon_sprite": "coyote_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1",
-          "child_avatar_view_id": "wls2_pet_coyote_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-            "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_1_icon"
-          },
           "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903"
         },
         {
           "id": "coyote_skin_2",
           "name_zh": "山地丛林狼",
           "name_en": "Mountain coyote",
-          "description_zh": "丛林狼选定伴侣后就会相伴一生一世。多么美好的爱情故事啊！",
-          "description_en": "Coyotes choose their partner once and for the whole life. What a love story!",
-          "icon_path": "UI_WW_AlphaBinary06/coyote_skin_2_icon",
-          "icon_sprite": "coyote_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/coyote_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_coyote_1_mountain",
-          "child_avatar_view_id": "wls2_pet_coyote_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/coyote_skin_2.png",
-            "sha256": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "coyote_skin_2_icon"
-          },
           "image_key": "1f3ef3282263066799db8cdc23b34cf545cace446be5e252dc0075f877fcc572"
         }
       ],
-      "primary_skin_id": "coyote_skin_1",
-      "primary_icon_sprite": "coyote_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/coyote_skin_1.png",
-        "sha256": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "coyote_skin_1_icon"
-      },
       "image_key": "1cf16e41ad35e8c488089863e40aa31fbc88e63c9f42badef6d3d69ace579903",
       "numeric": {
         "summary": [

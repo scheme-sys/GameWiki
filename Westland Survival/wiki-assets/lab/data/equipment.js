@@ -11076,7 +11076,6 @@ window.WESTLAND_LAB_DATA.equipment = {
       }
     }
   ],
-  "source_sha": "7bc99d781c574268f952193f4d386f6041e319e308cd85488a529a76ace357da",
   "keys": [
     "animal_damage_modifier",
     "armor",

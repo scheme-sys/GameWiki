@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
   "records": [
     {
       "id": "wls2_resourse_clan_resource_reagents",
-      "item_id": "wls2_resourse_clan_resource_reagents",
       "name": "试剂",
       "name_en": "Reagents",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_resourse_clan_resource_chemical_reagents",
-      "image_id": "wls2_resourse_clan_resource_reagents",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -117,24 +113,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_clan_resource_reagents",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_clan_res_chemical_reagents_name",
-        "sorting_group": "clan",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f82fde51d22b98c4f6ff291089597eded797f37df05114932456d591befb8e98"
     },
     {
       "id": "wls2_resourse_clan_resource_coil",
-      "item_id": "wls2_resourse_clan_resource_coil",
       "name": "铜线卷",
       "name_en": "Copper reel",
       "name_source": "official_zh",
@@ -145,12 +127,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": null,
       "rarity": "common",
       "max_stack": 20,
-      "stack_type": "limited",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/inventory_stack_view_wls_clan_res_coil",
-      "image_id": "wls2_resourse_clan_resource_coil",
       "equipment_id": null,
       "stats": [],
       "effects": [],
@@ -218,24 +197,10 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_resourse_clan_resource_coil",
-        "reason": "physical_inventory_stack",
-        "name_key": "inventory_stack_view_wls_clan_res_coil_name",
-        "sorting_group": "clan",
-        "stat_table": null,
-        "behaviour_table": null,
-        "augmentation_id": null,
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "bb24c2a5a4f7c4d306bfb81842af5c91da85bf2604bccda7009fb4ec16fef289"
     },
     {
       "id": "wls2_extention_well_cashback_common",
-      "item_id": "wls2_extention_well_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -246,12 +211,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_well_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -313,19 +275,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -399,7 +348,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_well_timetobuild_common",
-      "item_id": "wls2_extention_well_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -410,12 +358,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_well_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -461,19 +406,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -547,7 +479,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_well_health_common",
-      "item_id": "wls2_extention_well_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -558,12 +489,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_well_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -609,19 +537,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -695,7 +610,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_well_extraresource_common",
-      "item_id": "wls2_extention_well_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -706,12 +620,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_well_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -757,19 +668,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -843,7 +741,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_recycle_timetofix_common",
-      "item_id": "wls2_extention_recycle_timetofix_common",
       "name": "备件盒",
       "name_en": "Spares Box",
       "name_source": "official_zh",
@@ -854,12 +751,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetofix_common",
-      "image_id": "wls2_extention_recycle_timetofix_common",
       "equipment_id": null,
       "stats": [
         {
@@ -905,19 +799,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "分解台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_recycle_timetofix_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetofix_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_recycle_timetofix_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "1231f77e8a5e0ecc765e060eb02acfe4103aa044ef2380e33c15d79fd3f67642",
       "numeric": {
         "summary": [
@@ -991,7 +872,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_stone_cashback_common",
-      "item_id": "wls2_extention_stone_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -1002,12 +882,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_stone_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1069,19 +946,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "割石机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stone_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_stone_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -1155,7 +1019,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_stone_timetobuild_common",
-      "item_id": "wls2_extention_stone_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -1166,12 +1029,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_stone_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1217,19 +1077,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "割石机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stone_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_stone_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -1303,7 +1150,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_stone_health_common",
-      "item_id": "wls2_extention_stone_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -1314,12 +1160,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_stone_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1365,19 +1208,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "割石机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stone_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_stone_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -1451,7 +1281,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_stone_extraresource_common",
-      "item_id": "wls2_extention_stone_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -1462,12 +1291,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_stone_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1529,19 +1355,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "割石机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stone_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_stone_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -1615,7 +1428,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_stone_levelup_common",
-      "item_id": "wls2_extention_stone_levelup_common",
       "name": "镜头组",
       "name_en": "Lens Set",
       "name_source": "official_zh",
@@ -1626,12 +1438,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_levelup_common",
-      "image_id": "wls2_extention_stone_levelup_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1693,19 +1502,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "割石机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stone_levelup_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_levelup_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_stone_levelup_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d8512ea4a41a5888ec7c940f2d3ee64a7e27e008696bbd2715d9f9878d389bda",
       "numeric": {
         "summary": [
@@ -1779,7 +1575,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_kitchen_cashback_common",
-      "item_id": "wls2_extention_kitchen_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -1790,12 +1585,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_kitchen_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1857,19 +1649,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "厨房"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_kitchen_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_kitchen_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -1943,7 +1722,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_kitchen_timetobuild_common",
-      "item_id": "wls2_extention_kitchen_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -1954,12 +1732,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_kitchen_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2005,19 +1780,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "厨房"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_kitchen_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_kitchen_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -2091,7 +1853,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_kitchen_health_common",
-      "item_id": "wls2_extention_kitchen_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -2102,12 +1863,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_kitchen_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2153,19 +1911,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "厨房"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_kitchen_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_kitchen_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -2239,7 +1984,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_kitchen_extraresource_common",
-      "item_id": "wls2_extention_kitchen_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -2250,12 +1994,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_kitchen_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2317,19 +2058,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "厨房"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_kitchen_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_kitchen_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -2403,7 +2131,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_laboratory_cashback_common",
-      "item_id": "wls2_extention_laboratory_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -2414,12 +2141,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_laboratory_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2481,19 +2205,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -2567,7 +2278,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_laboratory_timetobuild_common",
-      "item_id": "wls2_extention_laboratory_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -2578,12 +2288,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_laboratory_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2629,19 +2336,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -2715,7 +2409,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_laboratory_health_common",
-      "item_id": "wls2_extention_laboratory_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -2726,12 +2419,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_laboratory_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2777,19 +2467,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -2863,7 +2540,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_laboratory_extraresource_common",
-      "item_id": "wls2_extention_laboratory_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -2874,12 +2550,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_laboratory_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2941,19 +2614,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -3027,7 +2687,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_workshop_cashback_common",
-      "item_id": "wls2_extention_workshop_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -3038,12 +2697,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_workshop_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3105,19 +2761,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "工具工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workshop_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workshop_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -3191,7 +2834,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_workshop_timetobuild_common",
-      "item_id": "wls2_extention_workshop_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -3202,12 +2844,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_workshop_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3253,19 +2892,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "工具工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workshop_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workshop_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -3339,7 +2965,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_workshop_health_common",
-      "item_id": "wls2_extention_workshop_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -3350,12 +2975,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_workshop_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3401,19 +3023,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "工具工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workshop_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workshop_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -3487,7 +3096,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_workshop_extraresource_common",
-      "item_id": "wls2_extention_workshop_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -3498,12 +3106,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_workshop_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3565,19 +3170,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "工具工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workshop_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workshop_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -3651,7 +3243,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_armorworkshop_cashback_common",
-      "item_id": "wls2_extention_armorworkshop_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -3662,12 +3253,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_armorworkshop_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3729,19 +3317,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "护甲工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_armorworkshop_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_armoworkshop_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -3815,7 +3390,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_armorworkshop_timetobuild_common",
-      "item_id": "wls2_extention_armorworkshop_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -3826,12 +3400,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_armorworkshop_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3877,19 +3448,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "护甲工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_armorworkshop_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_armoworkshop_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -3963,7 +3521,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_armorworkshop_health_common",
-      "item_id": "wls2_extention_armorworkshop_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -3974,12 +3531,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_armorworkshop_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4025,19 +3579,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "护甲工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_armorworkshop_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_armoworkshop_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -4111,7 +3652,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_armorworkshop_levelup_common",
-      "item_id": "wls2_extention_armorworkshop_levelup_common",
       "name": "镜头组",
       "name_en": "Lens Set",
       "name_source": "official_zh",
@@ -4122,12 +3662,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_levelup_common",
-      "image_id": "wls2_extention_armorworkshop_levelup_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4189,19 +3726,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "护甲工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_armorworkshop_levelup_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_levelup_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_armoworkshop_levelup_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d8512ea4a41a5888ec7c940f2d3ee64a7e27e008696bbd2715d9f9878d389bda",
       "numeric": {
         "summary": [
@@ -4275,7 +3799,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls_workbench_additional_prodiuction_slot",
-      "item_id": "wls_workbench_additional_prodiuction_slot",
       "name": "骨制小刀",
       "name_en": "Bone knife",
       "name_source": "official_zh",
@@ -4286,12 +3809,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": true,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls_workbench_additional_prodiuction_slot",
       "equipment_id": null,
       "stats": [
         {
@@ -4311,19 +3831,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "locations": [],
       "workbenches": [],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls_workbench_additional_prodiuction_slot",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_view_wls_bone_knife_name",
-        "sorting_group": "legasy",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wsl_default_augmentation",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -4345,7 +3852,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_carpentry_cashback_common",
-      "item_id": "wls2_extention_carpentry_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -4356,12 +3862,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_carpentry_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4423,19 +3926,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "木匠桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_carpentry_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_carpentry_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -4509,7 +3999,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_carpentry_timetobuild_common",
-      "item_id": "wls2_extention_carpentry_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -4520,12 +4009,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_carpentry_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4571,19 +4057,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "木匠桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_carpentry_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_carpentry_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -4657,7 +4130,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_carpentry_health_common",
-      "item_id": "wls2_extention_carpentry_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -4668,12 +4140,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_carpentry_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4719,19 +4188,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "木匠桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_carpentry_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_carpentry_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -4805,7 +4261,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_carpentry_extraresource_common",
-      "item_id": "wls2_extention_carpentry_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -4816,12 +4271,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_carpentry_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4883,19 +4335,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "木匠桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_carpentry_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_carpentry_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -4969,7 +4408,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_carpentry_levelup_common",
-      "item_id": "wls2_extention_carpentry_levelup_common",
       "name": "镜头组",
       "name_en": "Lens Set",
       "name_source": "official_zh",
@@ -4980,12 +4418,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_levelup_common",
-      "image_id": "wls2_extention_carpentry_levelup_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5047,19 +4482,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "木匠桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_carpentry_levelup_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_levelup_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_carpentry_stat_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d8512ea4a41a5888ec7c940f2d3ee64a7e27e008696bbd2715d9f9878d389bda",
       "numeric": {
         "summary": [
@@ -5133,7 +4555,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_gunworkshop_cashback_common",
-      "item_id": "wls2_extention_gunworkshop_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -5144,12 +4565,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_gunworkshop_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5211,19 +4629,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "枪械工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_gunworkshop_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_gunworkshop_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -5297,7 +4702,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_gunworkshop_timetobuild_common",
-      "item_id": "wls2_extention_gunworkshop_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -5308,12 +4712,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_gunworkshop_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5359,19 +4760,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "枪械工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_gunworkshop_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_gunworkshop_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -5445,7 +4833,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_gunworkshop_health_common",
-      "item_id": "wls2_extention_gunworkshop_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -5456,12 +4843,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_gunworkshop_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5507,19 +4891,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "枪械工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_gunworkshop_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_gunworkshop_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -5593,7 +4964,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_gunworkshop_levelup_common",
-      "item_id": "wls2_extention_gunworkshop_levelup_common",
       "name": "镜头组",
       "name_en": "Lens Set",
       "name_source": "official_zh",
@@ -5604,12 +4974,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_levelup_common",
-      "image_id": "wls2_extention_gunworkshop_levelup_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5671,19 +5038,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "枪械工坊"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_gunworkshop_levelup_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_levelup_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_gunworkshop_levelup_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d8512ea4a41a5888ec7c940f2d3ee64a7e27e008696bbd2715d9f9878d389bda",
       "numeric": {
         "summary": [
@@ -5757,7 +5111,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_forge_cashback_common",
-      "item_id": "wls2_extention_forge_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -5768,12 +5121,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_forge_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5835,19 +5185,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "熔炉"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_forge_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_forge_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -5921,7 +5258,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_forge_timetobuild_common",
-      "item_id": "wls2_extention_forge_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -5932,12 +5268,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_forge_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -5983,19 +5316,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "熔炉"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_forge_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_forge_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -6069,7 +5389,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_forge_health_common",
-      "item_id": "wls2_extention_forge_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -6080,12 +5399,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_forge_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6131,19 +5447,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "熔炉"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_forge_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_forge_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -6217,7 +5520,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_forge_levelup_common",
-      "item_id": "wls2_extention_forge_levelup_common",
       "name": "镜头组",
       "name_en": "Lens Set",
       "name_source": "official_zh",
@@ -6228,12 +5530,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_levelup_common",
-      "image_id": "wls2_extention_forge_levelup_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6295,19 +5594,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "熔炉"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_forge_levelup_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_levelup_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_forge_levelup_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "d8512ea4a41a5888ec7c940f2d3ee64a7e27e008696bbd2715d9f9878d389bda",
       "numeric": {
         "summary": [
@@ -6381,7 +5667,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_leather_cashback_common",
-      "item_id": "wls2_extention_leather_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -6392,12 +5677,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_leather_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6459,19 +5741,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "皮革烘干器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_leather_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_leather_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -6545,7 +5814,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_leather_timetobuild_common",
-      "item_id": "wls2_extention_leather_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -6556,12 +5824,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_leather_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6607,19 +5872,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "皮革烘干器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_leather_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_leather_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -6693,7 +5945,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_leather_health_common",
-      "item_id": "wls2_extention_leather_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -6704,12 +5955,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_leather_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6755,19 +6003,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "皮革烘干器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_leather_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_leather_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -6841,7 +6076,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_leather_extraresource_common",
-      "item_id": "wls2_extention_leather_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -6852,12 +6086,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_leather_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -6919,19 +6150,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "皮革烘干器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_leather_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_leather_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -7005,7 +6223,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_bonfire_cashback_common",
-      "item_id": "wls2_extention_bonfire_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -7016,12 +6233,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_bonfire_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7083,19 +6297,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "篝火"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_bonfire_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_bonfire_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -7169,7 +6370,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_bonfire_timetobuild_common",
-      "item_id": "wls2_extention_bonfire_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -7180,12 +6380,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_bonfire_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7231,19 +6428,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "篝火"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_bonfire_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_bonfire_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -7317,7 +6501,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_bonfire_health_common",
-      "item_id": "wls2_extention_bonfire_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -7328,12 +6511,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_bonfire_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7379,19 +6559,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "篝火"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_bonfire_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_bonfire_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -7465,7 +6632,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_bonfire_extraresource_common",
-      "item_id": "wls2_extention_bonfire_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -7476,12 +6642,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_bonfire_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7543,19 +6706,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "篝火"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_bonfire_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_bonfire_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -7629,7 +6779,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_sewing_cashback_common",
-      "item_id": "wls2_extention_sewing_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -7640,12 +6789,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_sewing_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7707,19 +6853,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "织布机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_sewing_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_sewing_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -7793,7 +6926,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_sewing_timetobuild_common",
-      "item_id": "wls2_extention_sewing_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -7804,12 +6936,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_sewing_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -7855,19 +6984,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "织布机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_sewing_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_sewing_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -7941,7 +7057,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_sewing_health_common",
-      "item_id": "wls2_extention_sewing_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -7952,12 +7067,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_sewing_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8003,19 +7115,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "织布机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_sewing_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_sewing_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -8089,7 +7188,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_sewing_extraresource_common",
-      "item_id": "wls2_extention_sewing_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -8100,12 +7198,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_sewing_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8167,19 +7262,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "织布机"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_sewing_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_sewing_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -8253,7 +7335,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_repairshop_timetobuild_common",
-      "item_id": "wls2_extention_repairshop_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -8264,12 +7345,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_repairshop_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8315,19 +7393,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "维修商店"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_repairshop_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_repairshop_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -8401,7 +7466,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_repairshop_health_common",
-      "item_id": "wls2_extention_repairshop_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -8412,12 +7476,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_repairshop_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8463,19 +7524,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "维修商店"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_repairshop_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_repairshop_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -8549,7 +7597,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_herbalist_cashback_common",
-      "item_id": "wls2_extention_herbalist_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -8560,12 +7607,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_herbalist_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8627,19 +7671,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "草药桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_herbalist_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_herbalist_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -8713,7 +7744,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_herbalist_timetobuild_common",
-      "item_id": "wls2_extention_herbalist_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -8724,12 +7754,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_herbalist_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8775,19 +7802,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "草药桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_herbalist_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_herbalist_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -8861,7 +7875,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_herbalist_health_common",
-      "item_id": "wls2_extention_herbalist_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -8872,12 +7885,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_herbalist_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -8923,19 +7933,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "草药桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_herbalist_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_herbalist_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -9009,7 +8006,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_herbalist_extraresource_common",
-      "item_id": "wls2_extention_herbalist_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -9020,12 +8016,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_herbalist_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -9087,19 +8080,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "草药桌"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_herbalist_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_herbalist_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [
@@ -9173,7 +8153,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_smelter_cashback_common",
-      "item_id": "wls2_extention_smelter_cashback_common",
       "name": "划线规",
       "name_en": "Marking Gauge",
       "name_source": "official_zh",
@@ -9184,12 +8163,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_common",
-      "image_id": "wls2_extention_smelter_cashback_common",
       "equipment_id": null,
       "stats": [
         {
@@ -9251,19 +8227,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_cashback_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_cashback_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_cashback_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5f41b0668f8d0d33fa8af005b6377cd0f1150e22e634229b3b5861e6faa9a50e",
       "numeric": {
         "summary": [
@@ -9337,7 +8300,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_smelter_timetobuild_common",
-      "item_id": "wls2_extention_smelter_timetobuild_common",
       "name": "建造加速插件",
       "name_en": "",
       "name_source": "descriptive_fallback",
@@ -9348,12 +8310,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary05/wls_bone_knife",
-      "image_id": "wls2_extention_smelter_timetobuild_common",
       "equipment_id": null,
       "stats": [
         {
@@ -9399,19 +8358,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_timetobuild_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetobuild_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_timetobuild_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "a01ec765769152690101d8c94b56686750e2a6b7e78019cb50e1df5e9ed6b6a2",
       "numeric": {
         "summary": [
@@ -9485,7 +8431,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_smelter_health_common",
-      "item_id": "wls2_extention_smelter_health_common",
       "name": "牢固框架",
       "name_en": "Strong frame",
       "name_source": "official_zh",
@@ -9496,12 +8441,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_health_common",
-      "image_id": "wls2_extention_smelter_health_common",
       "equipment_id": null,
       "stats": [
         {
@@ -9547,19 +8489,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_health_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_health_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_health_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e4b6e45338673e194bdc97ae08156d1fc4579e341133ee02b80bb7f8d42a2b96",
       "numeric": {
         "summary": [
@@ -9633,7 +8562,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
     },
     {
       "id": "wls2_extention_smelter_extraresource_common",
-      "item_id": "wls2_extention_smelter_extraresource_common",
       "name": "锋利刀片",
       "name_en": "Sharp Cutter",
       "name_source": "official_zh",
@@ -9644,12 +8572,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
       "tier": 1,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_extraresource_common",
-      "image_id": "wls2_extention_smelter_extraresource_common",
       "equipment_id": null,
       "stats": [
         {
@@ -9711,19 +8636,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-30"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_extraresource_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_extraresource_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_extraresource_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "275bd0e26c5baee3fd57b2bf9e6589e319992998513bff31501f97c4ba2e1887",
       "numeric": {
         "summary": [

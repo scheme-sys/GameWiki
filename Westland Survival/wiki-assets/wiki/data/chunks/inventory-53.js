@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
   "records": [
     {
       "id": "wls2_extention_baitworkbench_damage_lynx_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_damage_lynx_t5_uncommon",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_uncommon",
-      "image_id": "wls2_extention_baitworkbench_damage_lynx_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -43,19 +39,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_lynx_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ec6acca5398dd919c4bed81210328072a4cea50f1183aa006939ce53967aa705",
       "numeric": {
         "summary": [
@@ -77,7 +60,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_puma_t5_common",
-      "item_id": "wls2_extention_baitworkbench_damage_puma_t5_common",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -88,12 +70,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_common",
-      "image_id": "wls2_extention_baitworkbench_damage_puma_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -115,19 +94,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_puma_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c9a2436e3e1e49ea5c1e14c41abaab91eee6c4d94c7c838456e8542ee5041440",
       "numeric": {
         "summary": [
@@ -149,7 +115,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_puma_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_damage_puma_t5_epic",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -160,12 +125,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_damage_puma_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -187,19 +149,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_puma_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ceab9d485f0ec1b281fa7e19c88bf3c5e010e186b78e794f4a28441c10fba54a",
       "numeric": {
         "summary": [
@@ -221,7 +170,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_puma_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_damage_puma_t5_rare",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -232,12 +180,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_damage_puma_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -259,19 +204,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_puma_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ceab9d485f0ec1b281fa7e19c88bf3c5e010e186b78e794f4a28441c10fba54a",
       "numeric": {
         "summary": [
@@ -293,7 +225,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_puma_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_damage_puma_t5_uncommon",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -304,12 +235,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_uncommon",
-      "image_id": "wls2_extention_baitworkbench_damage_puma_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -331,19 +259,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_puma_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ec6acca5398dd919c4bed81210328072a4cea50f1183aa006939ce53967aa705",
       "numeric": {
         "summary": [
@@ -365,7 +280,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_wolf_t5_common",
-      "item_id": "wls2_extention_baitworkbench_damage_wolf_t5_common",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -376,12 +290,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_common",
-      "image_id": "wls2_extention_baitworkbench_damage_wolf_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -403,19 +314,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_wolf_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "c9a2436e3e1e49ea5c1e14c41abaab91eee6c4d94c7c838456e8542ee5041440",
       "numeric": {
         "summary": [
@@ -437,7 +335,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_wolf_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_damage_wolf_t5_epic",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -448,12 +345,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_damage_wolf_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -475,19 +369,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_wolf_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ceab9d485f0ec1b281fa7e19c88bf3c5e010e186b78e794f4a28441c10fba54a",
       "numeric": {
         "summary": [
@@ -509,7 +390,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_wolf_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_damage_wolf_t5_rare",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -520,12 +400,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_damage_wolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -547,19 +424,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_wolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ceab9d485f0ec1b281fa7e19c88bf3c5e010e186b78e794f4a28441c10fba54a",
       "numeric": {
         "summary": [
@@ -581,7 +445,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_damage_wolf_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_damage_wolf_t5_uncommon",
       "name": "发酵调节器",
       "name_en": "Fermentation regulator",
       "name_source": "official_zh",
@@ -592,12 +455,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baitdamage_uncommon",
-      "image_id": "wls2_extention_baitworkbench_damage_wolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -619,19 +479,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_damage_wolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ec6acca5398dd919c4bed81210328072a4cea50f1183aa006939ce53967aa705",
       "numeric": {
         "summary": [
@@ -653,7 +500,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_bear_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_bear_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -664,12 +510,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_bear_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -691,19 +534,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_bear_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -725,7 +555,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_bear_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_bear_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -736,12 +565,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_bear_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -763,19 +589,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_bear_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -797,7 +610,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_bear_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_bear_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -808,12 +620,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_bear_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -835,19 +644,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_bear_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -869,7 +665,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_bear_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_bear_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -880,12 +675,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_bear_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -907,19 +699,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_bear_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -941,7 +720,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_boar_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_boar_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -952,12 +730,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_boar_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -979,19 +754,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_boar_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -1013,7 +775,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_boar_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_boar_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1024,12 +785,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_boar_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1051,19 +809,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_boar_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1085,7 +830,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_boar_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_boar_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1096,12 +840,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_boar_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1123,19 +864,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_boar_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1157,7 +885,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_boar_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_boar_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1168,12 +895,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_boar_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1195,19 +919,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_boar_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -1229,7 +940,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_crocodile_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_crocodile_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1240,12 +950,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_crocodile_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1267,19 +974,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_crocodile_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -1301,7 +995,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_crocodile_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_crocodile_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1312,12 +1005,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_crocodile_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1339,19 +1029,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_crocodile_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1373,7 +1050,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_crocodile_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_crocodile_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1384,12 +1060,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_crocodile_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1411,19 +1084,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_crocodile_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1445,7 +1105,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_crocodile_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_crocodile_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1456,12 +1115,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_crocodile_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1483,19 +1139,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_crocodile_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -1517,7 +1160,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_direwolf_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_direwolf_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1528,12 +1170,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_direwolf_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1555,19 +1194,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_direwolf_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -1589,7 +1215,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_direwolf_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_direwolf_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1600,12 +1225,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_direwolf_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1627,19 +1249,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_direwolf_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1661,7 +1270,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_direwolf_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_direwolf_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1672,12 +1280,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_direwolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1699,19 +1304,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_direwolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1733,7 +1325,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_direwolf_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_direwolf_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1744,12 +1335,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_direwolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1771,19 +1359,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_direwolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -1805,7 +1380,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_lynx_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_lynx_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1816,12 +1390,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_lynx_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1843,19 +1414,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_lynx_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -1877,7 +1435,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_lynx_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_lynx_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1888,12 +1445,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_lynx_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1915,19 +1469,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_lynx_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -1949,7 +1490,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_lynx_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_lynx_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -1960,12 +1500,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_lynx_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1987,19 +1524,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_lynx_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -2021,7 +1545,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_lynx_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_lynx_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2032,12 +1555,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_lynx_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2059,19 +1579,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_lynx_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -2093,7 +1600,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_puma_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_puma_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2104,12 +1610,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_puma_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2131,19 +1634,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_puma_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -2165,7 +1655,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_puma_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_puma_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2176,12 +1665,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_puma_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2203,19 +1689,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_puma_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -2237,7 +1710,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_puma_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_puma_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2248,12 +1720,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_puma_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2275,19 +1744,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_puma_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -2309,7 +1765,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_puma_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_puma_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2320,12 +1775,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_puma_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2347,19 +1799,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_puma_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -2381,7 +1820,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_wolf_t5_common",
-      "item_id": "wls2_extention_baitworkbench_hp_wolf_t5_common",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2392,12 +1830,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_common",
-      "image_id": "wls2_extention_baitworkbench_hp_wolf_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2419,19 +1854,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_wolf_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "35067c1ef404b79958719c88660f48e89c4debf17512ae53b7dbc29f1c759a7c",
       "numeric": {
         "summary": [
@@ -2453,7 +1875,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_wolf_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_hp_wolf_t5_epic",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2464,12 +1885,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_wolf_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2491,19 +1909,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_wolf_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -2525,7 +1930,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_wolf_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_hp_wolf_t5_rare",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2536,12 +1940,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_rare+epic",
-      "image_id": "wls2_extention_baitworkbench_hp_wolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2563,19 +1964,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_wolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "f4d04f8725cd7f7134188ec09bda28203067c375c238fa2b2a0bbb8e3c06c6db",
       "numeric": {
         "summary": [
@@ -2597,7 +1985,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_hp_wolf_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_hp_wolf_t5_uncommon",
       "name": "组件 分配器",
       "name_en": "Components dispenser",
       "name_source": "official_zh",
@@ -2608,12 +1995,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_baitworkbench_baithealth_uncommon",
-      "image_id": "wls2_extention_baitworkbench_hp_wolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2635,19 +2019,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_hp_wolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_baitworkbench_hp_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_hp_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "99073ac8573e9cdc817c5620b65ad01404482d13fd194d93dcf03c2252b68505",
       "numeric": {
         "summary": [
@@ -2669,7 +2040,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_timetocraft_t5_common",
-      "item_id": "wls2_extention_baitworkbench_timetocraft_t5_common",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -2680,12 +2050,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_common",
-      "image_id": "wls2_extention_baitworkbench_timetocraft_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2707,19 +2074,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_timetocraft_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_timetocraft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "194a79e35d64168bf0f3f6d185bbd72aa1c8fc13d25f1c3483f316736b980fa7",
       "numeric": {
         "summary": [
@@ -2741,7 +2095,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_timetocraft_t5_epic",
-      "item_id": "wls2_extention_baitworkbench_timetocraft_t5_epic",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -2752,12 +2105,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_baitworkbench_timetocraft_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2779,19 +2129,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_timetocraft_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_timetocraft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -2813,7 +2150,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_timetocraft_t5_rare",
-      "item_id": "wls2_extention_baitworkbench_timetocraft_t5_rare",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -2824,12 +2160,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_baitworkbench_timetocraft_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2851,19 +2184,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_timetocraft_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_timetocraft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -2885,7 +2205,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_baitworkbench_timetocraft_t5_uncommon",
-      "item_id": "wls2_extention_baitworkbench_timetocraft_t5_uncommon",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -2896,12 +2215,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_uncommon",
-      "image_id": "wls2_extention_baitworkbench_timetocraft_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2923,19 +2239,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "诱饵工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_baitworkbench_timetocraft_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_baitworkbench_timetocraft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0c89940736d311752d87ab6d2d8de11e0704f6f8e61fa2ec9c494d90684fe39c",
       "numeric": {
         "summary": [
@@ -2957,7 +2260,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_smelter_pricetoskip_5_common",
-      "item_id": "wls2_extention_smelter_pricetoskip_5_common",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -2968,12 +2270,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_common",
-      "image_id": "wls2_extention_smelter_pricetoskip_5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2997,21 +2296,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_pricetoskip_5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "93850f0ff7e501c2098e9532cfac2afa11f5a2392ecce6feb69cb14f51f70888",
       "numeric": {
         "summary": [
@@ -3033,7 +2317,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_smelter_pricetoskip_5_epic",
-      "item_id": "wls2_extention_smelter_pricetoskip_5_epic",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3044,12 +2327,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_smelter_pricetoskip_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3073,21 +2353,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_pricetoskip_5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -3109,7 +2374,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_smelter_pricetoskip_5_rare",
-      "item_id": "wls2_extention_smelter_pricetoskip_5_rare",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3120,12 +2384,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_smelter_pricetoskip_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3149,21 +2410,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_pricetoskip_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -3185,7 +2431,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_smelter_pricetoskip_5_uncommon",
-      "item_id": "wls2_extention_smelter_pricetoskip_5_uncommon",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3196,12 +2441,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_uncommon",
-      "image_id": "wls2_extention_smelter_pricetoskip_5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3225,21 +2467,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_pricetoskip_5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "48314ab3c71e3800f04d2efe04885f24443d649dfa71294f9bd2a9bb12d7c810",
       "numeric": {
         "summary": [
@@ -3261,7 +2488,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_smelter_queue_5_rare",
-      "item_id": "wls2_extention_smelter_queue_5_rare",
       "name": "输送机传动装置",
       "name_en": "Conveyor drive",
       "name_source": "official_zh",
@@ -3272,12 +2498,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_uncommon",
-      "image_id": "wls2_extention_smelter_queue_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3301,21 +2524,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "铸造厂"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_smelter_queue_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_queue_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_smelter_queue_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "092aa433907ff34158b7ace2b0a8cb7446c50f8f931a8a9b7b98dedbb4edfe74",
       "numeric": {
         "summary": [
@@ -3337,7 +2545,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_pricetoskip_5_common",
-      "item_id": "wls2_extention_workbench_pricetoskip_5_common",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3348,12 +2555,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_common",
-      "image_id": "wls2_extention_workbench_pricetoskip_5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3377,21 +2581,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_pricetoskip_5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "93850f0ff7e501c2098e9532cfac2afa11f5a2392ecce6feb69cb14f51f70888",
       "numeric": {
         "summary": [
@@ -3413,7 +2602,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_pricetoskip_5_epic",
-      "item_id": "wls2_extention_workbench_pricetoskip_5_epic",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3424,12 +2612,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_workbench_pricetoskip_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3453,21 +2638,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_pricetoskip_5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -3489,7 +2659,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_pricetoskip_5_rare",
-      "item_id": "wls2_extention_workbench_pricetoskip_5_rare",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3500,12 +2669,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_workbench_pricetoskip_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3529,21 +2695,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_pricetoskip_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -3565,7 +2716,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_pricetoskip_5_uncommon",
-      "item_id": "wls2_extention_workbench_pricetoskip_5_uncommon",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -3576,12 +2726,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_uncommon",
-      "image_id": "wls2_extention_workbench_pricetoskip_5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3605,21 +2752,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_pricetoskip_5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "48314ab3c71e3800f04d2efe04885f24443d649dfa71294f9bd2a9bb12d7c810",
       "numeric": {
         "summary": [
@@ -3641,7 +2773,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_timetocraft_5_common",
-      "item_id": "wls2_extention_workbench_timetocraft_5_common",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -3652,12 +2783,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_common",
-      "image_id": "wls2_extention_workbench_timetocraft_5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3681,21 +2809,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_timetocraft_5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "194a79e35d64168bf0f3f6d185bbd72aa1c8fc13d25f1c3483f316736b980fa7",
       "numeric": {
         "summary": [
@@ -3717,7 +2830,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_timetocraft_5_epic",
-      "item_id": "wls2_extention_workbench_timetocraft_5_epic",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -3728,12 +2840,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_workbench_timetocraft_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3757,21 +2866,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_timetocraft_5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -3793,7 +2887,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_timetocraft_5_rare",
-      "item_id": "wls2_extention_workbench_timetocraft_5_rare",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -3804,12 +2897,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_workbench_timetocraft_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3833,21 +2923,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_timetocraft_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -3869,7 +2944,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_timetocraft_5_uncommon",
-      "item_id": "wls2_extention_workbench_timetocraft_5_uncommon",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -3880,12 +2954,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_uncommon",
-      "image_id": "wls2_extention_workbench_timetocraft_5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3909,21 +2980,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_timetocraft_5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "0c89940736d311752d87ab6d2d8de11e0704f6f8e61fa2ec9c494d90684fe39c",
       "numeric": {
         "summary": [
@@ -3945,7 +3001,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_workbench_queue_5_rare",
-      "item_id": "wls2_extention_workbench_queue_5_rare",
       "name": "输送机传动装置",
       "name_en": "Conveyor drive",
       "name_source": "official_zh",
@@ -3956,12 +3011,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_uncommon",
-      "image_id": "wls2_extention_workbench_queue_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3985,21 +3037,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "零件工作台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_workbench_queue_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_queue_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_workbench_queue_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "092aa433907ff34158b7ace2b0a8cb7446c50f8f931a8a9b7b98dedbb4edfe74",
       "numeric": {
         "summary": [
@@ -4021,7 +3058,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_pricetoskip_6_common",
-      "item_id": "wls2_extention_well_pricetoskip_6_common",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -4032,12 +3068,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_common",
-      "image_id": "wls2_extention_well_pricetoskip_6_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4061,21 +3094,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_pricetoskip_6_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "93850f0ff7e501c2098e9532cfac2afa11f5a2392ecce6feb69cb14f51f70888",
       "numeric": {
         "summary": [
@@ -4097,7 +3115,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_pricetoskip_6_epic",
-      "item_id": "wls2_extention_well_pricetoskip_6_epic",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -4108,12 +3125,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_well_pricetoskip_6_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -4137,21 +3151,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_pricetoskip_6_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -4173,7 +3172,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_pricetoskip_6_rare",
-      "item_id": "wls2_extention_well_pricetoskip_6_rare",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -4184,12 +3182,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_well_pricetoskip_6_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4213,21 +3208,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_pricetoskip_6_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -4249,7 +3229,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_pricetoskip_6_uncommon",
-      "item_id": "wls2_extention_well_pricetoskip_6_uncommon",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -4260,12 +3239,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_uncommon",
-      "image_id": "wls2_extention_well_pricetoskip_6_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4289,21 +3265,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_pricetoskip_6_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "48314ab3c71e3800f04d2efe04885f24443d649dfa71294f9bd2a9bb12d7c810",
       "numeric": {
         "summary": [
@@ -4325,7 +3286,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_timetocraft_6_common",
-      "item_id": "wls2_extention_well_timetocraft_6_common",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -4336,12 +3296,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_common",
-      "image_id": "wls2_extention_well_timetocraft_6_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4365,21 +3322,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_timetocraft_6_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "194a79e35d64168bf0f3f6d185bbd72aa1c8fc13d25f1c3483f316736b980fa7",
       "numeric": {
         "summary": [
@@ -4401,7 +3343,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_timetocraft_6_epic",
-      "item_id": "wls2_extention_well_timetocraft_6_epic",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -4412,12 +3353,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_well_timetocraft_6_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -4441,21 +3379,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_timetocraft_6_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -4477,7 +3400,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_timetocraft_6_rare",
-      "item_id": "wls2_extention_well_timetocraft_6_rare",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -4488,12 +3410,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_well_timetocraft_6_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4517,21 +3436,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_timetocraft_6_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -4553,7 +3457,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_well_timetocraft_6_uncommon",
-      "item_id": "wls2_extention_well_timetocraft_6_uncommon",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -4564,12 +3467,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_uncommon",
-      "image_id": "wls2_extention_well_timetocraft_6_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4593,21 +3493,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "井"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_well_timetocraft_6_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_well_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "0c89940736d311752d87ab6d2d8de11e0704f6f8e61fa2ec9c494d90684fe39c",
       "numeric": {
         "summary": [
@@ -4629,7 +3514,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
     },
     {
       "id": "wls2_extention_recycle_pricetoskip_6_common",
-      "item_id": "wls2_extention_recycle_pricetoskip_6_common",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -4640,12 +3524,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
       "tier": 6,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_common",
-      "image_id": "wls2_extention_recycle_pricetoskip_6_common",
       "equipment_id": null,
       "stats": [
         {
@@ -4669,21 +3550,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-53"] = {
         "分解台"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_recycle_pricetoskip_6_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_recycle_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_6"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "93850f0ff7e501c2098e9532cfac2afa11f5a2392ecce6feb69cb14f51f70888",
       "numeric": {
         "summary": [

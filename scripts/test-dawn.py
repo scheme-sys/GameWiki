@@ -51,6 +51,15 @@ try:
   for name in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search']:
    route(page,name);no_overflow(page,name);no_player_codes(page,name)
   passed('All 18 routes render without document overflow')
+  preserved_details=page.evaluate("""()=>{const rows=window.DOZ_CATALOG.entries;return [
+   {row:rows.find(e=>e.scenarioStats?.length),field:'scenarioStats',heading:'不同场景的属性候选'},
+   {row:rows.find(e=>e.abilities?.some(a=>a.cooldown>0)),field:'abilities',heading:'特殊能力'},
+   {row:rows.find(e=>e.levelStats?.length),field:'levelStats',heading:'等级分段属性'}
+  ].map(({row,field,heading})=>({id:row.id,category:row.category,heading,value:String(field==='abilities'?row.abilities.find(a=>a.cooldown>0).cooldown:row[field][0].value)}));}""")
+  for entry in preserved_details:
+   route(page,entry['category']+'?entry='+str(entry['id']));expect(page.locator('#detail-dialog')).to_be_visible()
+   expect(page.locator('#detail-dialog')).to_contain_text(entry['heading']);expect(page.locator('#detail-dialog')).to_contain_text(entry['value']);page.locator('#detail-dialog [data-close]').click()
+  passed('Player abilities, conditional scenario values and level ranges survive data cleanup')
   route(page,'weapon')
   expect(page.locator('.catalog-grid .item-card').first).to_be_visible()
   name=page.locator('.catalog-grid .item-name').first.inner_text()
@@ -152,6 +161,14 @@ try:
   report['csp']+=page.evaluate('window.__csp');assert not report['csp'],report['csp'];assert not report['errors'],report['errors'];assert not report['external'],report['external']
   passed('Normal interaction produces no CSP violations, JavaScript errors or external requests')
   local=context.new_page();local.goto((ROOT/'DawnofZombiewiki/index.html').as_uri(),wait_until='load');expect(local.locator('#main h1')).to_be_visible();local.evaluate("location.hash='weapon'");local.wait_for_timeout(150);local.locator('.catalog-grid .card-main').first.click();expect(local.locator('#detail-dialog')).to_be_visible();passed('Direct local file supports catalog and details')
+  media=context.new_page();media.on('pageerror',lambda e:report['errors'].append(str(e)))
+  media.add_init_script("window.__csp=[];document.addEventListener('securitypolicyviolation',e=>window.__csp.push({directive:e.effectiveDirective,uri:e.blockedURI}));")
+  media.goto(BASE.replace('index.html','materials.html'),wait_until='networkidle')
+  media.locator('#search').fill('频率片段');media.wait_for_timeout(250);expect(media.locator('.media-tile')).to_have_count(4)
+  assert media.locator('.media-tile img').evaluate_all('ns=>ns.every(n=>n.complete&&n.naturalWidth>0&&n.getAttribute("src").includes("%23"))')
+  assert media.evaluate("window.DOZ_MEDIA.every(row=>!('originalName' in row)&&!('searchText' in row))")
+  report['csp']+=media.evaluate('window.__csp');assert not report['csp'],report['csp'];assert not report['errors'],report['errors']
+  passed('Local maintenance image browser uses cleaned names and loads encoded image paths')
   browser.close()
 finally:
  server.shutdown();(OUT/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')

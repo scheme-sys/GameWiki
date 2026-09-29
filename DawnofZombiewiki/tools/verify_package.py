@@ -24,7 +24,7 @@ def main():
     target.write_bytes(json_bytes(report, pretty=True))
     print(f"Dawn data {report['result']}: {report['catalogueRows']:,} catalogue rows, "
           f"{report['visiblePlayerRows']:,} visible rows, {report['images']:,} images "
-          f"({report['sha256SourceRecords']:,} source hashes), "
+          f"({report['imageHashRecords']:,} image hashes), "
           f"{report['csvFiles']} CSVs and {report['guides']} guides.")
     for message in report['errors'][:20]:
         print('ERROR: ' + message)

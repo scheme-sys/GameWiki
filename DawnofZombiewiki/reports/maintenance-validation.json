@@ -1,14 +1,14 @@
 {
   "result": "pass",
   "checks": [
-    "Every unique image matches all source SHA-256 records; no missing or unreferenced image",
+    "Every local image matches its SHA-256 record; no missing or unlisted image",
     "Runtime JSON wrappers preserve all source fields and metadata is current",
-    "All player export cells and guide paragraphs match JSON, except explicitly recorded historical text"
+    "All player export cells and guide paragraphs match the cleaned JSON source"
   ],
   "errors": [],
   "warnings": [],
   "images": 3687,
-  "sha256SourceRecords": 3689,
+  "imageHashRecords": 3687,
   "imageBytes": 343838419,
   "catalogueRows": 15491,
   "visiblePlayerRows": 5635,

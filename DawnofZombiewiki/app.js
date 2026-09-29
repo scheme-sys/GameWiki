@@ -7,7 +7,7 @@
   const plain = v => String(v ?? '').replace(/<[^>]*>/g, '').replace(/\[\/?(?:color|b|i|size)[^\]]*\]/gi, '').replace(/\{\d+\}/g, '').replace(/[：:]\s*$/, '').trim();
   const rich = v => esc(plain(v)).replace(/\n/g, '<br>');
   const C = window.DOZ_CATALOG;
-  const A = window.DOZ_ASSETS || window.DOZ_ASSET_MAP || {byName:{},byBundleId:{}};
+  const A = window.DOZ_ASSETS || {};
   const M = window.DOZ_MECHANICS || {};
   const S = window.DOZ_SITE_META || {};
   const main = $('#main');
@@ -88,10 +88,10 @@
   }
   function imagePath(entry) {
     if (!entry) return '';
-    const value = entry.image || A.byBundleId?.[entry.iconBundleId] || A.byBundleId?.[entry.iconSmallBundleId] || A.byBundleId?.[entry.referenceIconBundleId];
+    const value = entry.image;
     return localPath(typeof value === 'string' ? value : value?.path || value?.image || '', /^assets\/images\//);
   }
-  const art = (e, lazy=true) => imagePath(e) ? `<img src="${esc(imagePath(e))}" alt="${esc(e.name)}${e.referenceIconBundleId?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceIconBundleId?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>暂无独立图鉴图片</span></span>`;
+  const art = (e, lazy=true) => imagePath(e) ? `<img src="${esc(imagePath(e))}" alt="${esc(e.name)}${e.referenceImage?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceImage?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>暂无独立图鉴图片</span></span>`;
   const getName = entry => playerName(entry || {});
   const rarityName = e => e.rarityLabel || (typeof e.rarity === 'string' ? e.rarity : '') || '未标注品质';
   const rarityClass = e => /传说|传奇|独特|橙|金/.test(rarityName(e))?'legendary':/史诗|紫/.test(rarityName(e))?'epic':/稀有|蓝/.test(rarityName(e))?'rare':'common';
@@ -114,7 +114,7 @@
   }
   function sample(category,n=1) {const preferred={weapon:142,armor:188,enemy:5864,companion:12949};const rows=visible.filter(e=>e.category===category&&imagePath(e));return rows.sort((a,b)=>Number(b.id===preferred[category])-Number(a.id===preferred[category])).slice(0,n);}
   function renderHome() {
-    const hero = localPath(A.byName?.firstloading_bkg || '', /^assets\/images\//);
+    const hero = localPath(A.hero || '', /^assets\/images\//);
     const featured = [142,2825,9].map(id=>byId.get(String(id))).filter(e=>e&&imagePath(e));
     if (featured.length<3) featured.push(...visible.filter(e=>e.category==='weapon'&&!featured.includes(e)).slice(0,3-featured.length));
     const tiles = [{key:'weapon',en:'WEAPONS',desc:'火力、近战与战斗选择'},{key:'armor',en:'EQUIPMENT',desc:'防护、品质与装备属性'},{key:'enemy',en:'BESTIARY',desc:'认识废土中的威胁'},{key:'companion',en:'COMPANIONS',desc:'寻找并培养你的伙伴'}];
@@ -188,8 +188,8 @@
     dlg.innerHTML=`<div class="dialog-top"><span>FIELD ARCHIVE / ${esc(e.categoryLabel||labels[e.category]||'图鉴详情')}</span><button class="icon-button" data-close aria-label="关闭详情">×</button></div><div class="detail-body"><div class="detail-overview"><div class="detail-art">${art(e,false)}</div><div class="detail-title"><span class="rarity rarity-${rarityClass(e)}"><i class="rarity-dot"></i>${esc(rarityName(e))}</span><h2>${esc(e.name)}</h2>${e.nameEn?`<div class="english-name">${esc(e.nameEn)}</div>`:''}<p>${rich(e.description)||'当前资料未提供可核实的用途说明。'}</p><div class="tags">${(e.tags||[]).filter(t=>!String(t).includes('_')).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div></div>${e.stats?.length?`<dl class="stat-grid">${e.stats.map(s=>`<div><dt>${esc(s.label)}</dt><dd>${esc(s.value)}${s.unit?` <small>${esc(s.unit)}</small>`:''}</dd></div>`).join('')}</dl>`:''}${e.status?.length?`<div class="notice">${e.status.map(rich).join('<br>')}</div>`:''}${recipes.length?`<div class="detail-section"><h3>相关制作配方</h3>${recipes.map(recipeHtml).join('')}</div>`:''}<div class="detail-section"><h3>档案说明</h3><p>数值来自 2.278 游戏基础资料。装备等级、角色技能、套装效果、敌人变体和活动规则可能改变实战数值。${imagePath(e)?'配图为对应游戏素材。':'这条资料暂无独立图鉴图片，文字与数值仍可查阅。'}</p>${e.sourceHints?.length?`<p class="fine-print">${playerNotes(e.sourceHints).map(rich).join(' · ')}</p>`:''}</div><div class="detail-actions"><button class="secondary-button" data-save="${esc(id)}" aria-pressed="${favorites.has(String(id))}">${favorites.has(String(id))?'★ 已收藏':'☆ 收藏档案'}</button>${['weapon','armor'].includes(e.category)?`<button class="secondary-button" data-compare="${esc(id)}">${comparison.includes(String(id))?'✓ 已加入对比':'＋ 加入装备对比'}</button>`:''}<button class="secondary-button" data-permalink="${esc(id)}">复制档案链接 ↗</button></div></div>`;
     const extra = `${e.variantSummary?`<div class="notice">${rich(e.variantSummary)}</div>`:''}${e.abilities?.length?`<div class="detail-section"><h3>特殊能力</h3>${e.abilities.map(a=>`<div class="info-card"><h3>${rich(a.name)}</h3><p>${rich(a.description)}</p>${a.cooldown!==undefined?`<p>冷却：${esc(a.cooldown)} 秒</p>`:''}</div>`).join('')}</div>`:''}${e.levelStats?.length?`<div class="detail-section"><h3>等级分段属性</h3><div class="table-scroll"><table><thead><tr><th>属性</th><th>适用等级</th><th>基础数值</th></tr></thead><tbody>${e.levelStats.map(s=>`<tr><td>${esc(s.label)}</td><td>${esc(s.minLevel)}–${esc(s.maxLevel)}</td><td>${esc(s.value)}</td></tr>`).join('')}</tbody></table></div></div>`:''}`;
     dlg.querySelector('.detail-section')?.insertAdjacentHTML('beforebegin',extra);
-    if(e.initializationStats?.length){
-      const generated=`<div class="detail-section"><h3>不同场景的属性候选</h3><p>这些数值可能对应敌人在不同场景中的状态，具体触发条件尚未完全核实。不同场景、等级和活动可能使用不同分支，不能将所有候选同时视为固定属性。</p>${e.initializationStats.map(s=>`<details><summary>${esc(s.label)}：${esc(s.value)}</summary>${s.attackInterval!==undefined?`<p>该分支攻击间隔：${esc(s.attackInterval)} 秒</p>`:''}${s.levels?.length?`<div class="table-scroll"><table><thead><tr><th>等级区间</th><th>属性候选值</th></tr></thead><tbody>${s.levels.map(x=>`<tr><td>${esc(x.minLevel)}–${esc(x.maxLevel)}</td><td>${esc(x.value)}</td></tr>`).join('')}</tbody></table></div>`:''}</details>`).join('')}</div>`;
+    if(e.scenarioStats?.length){
+      const generated=`<div class="detail-section"><h3>不同场景的属性候选</h3><p>这些数值可能对应敌人在不同场景中的状态，具体触发条件尚未完全核实。不同场景、等级和活动可能使用不同分支，不能将所有候选同时视为固定属性。</p>${e.scenarioStats.map(s=>`<details><summary>${esc(s.label)}：${esc(s.value)}</summary>${s.attackInterval!==undefined?`<p>该分支攻击间隔：${esc(s.attackInterval)} 秒</p>`:''}${s.levels?.length?`<div class="table-scroll"><table><thead><tr><th>等级区间</th><th>属性候选值</th></tr></thead><tbody>${s.levels.map(x=>`<tr><td>${esc(x.minLevel)}–${esc(x.maxLevel)}</td><td>${esc(x.value)}</td></tr>`).join('')}</tbody></table></div>`:''}</details>`).join('')}</div>`;
       dlg.querySelector('.detail-actions').insertAdjacentHTML('beforebegin',generated);
     }
     if(!dlg.open)dlg.showModal();dlg.scrollTop=0;

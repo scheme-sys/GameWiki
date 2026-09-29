@@ -5,7 +5,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
   "records": [
     {
       "id": "wls2_extention_stable_appetite_draft_t5_epic",
-      "item_id": "wls2_extention_stable_appetite_draft_t5_epic",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -16,12 +15,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Rare+Epic",
-      "image_id": "wls2_extention_stable_appetite_draft_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -43,19 +39,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_draft_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_draft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6722c2be09829b012a8bc324e09906d81d4fefe52ffb2fa009c220c921402f05",
       "numeric": {
         "summary": [
@@ -77,7 +60,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_draft_t5_rare",
-      "item_id": "wls2_extention_stable_appetite_draft_t5_rare",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -88,12 +70,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Rare+Epic",
-      "image_id": "wls2_extention_stable_appetite_draft_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -115,19 +94,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_draft_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_draft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6722c2be09829b012a8bc324e09906d81d4fefe52ffb2fa009c220c921402f05",
       "numeric": {
         "summary": [
@@ -149,7 +115,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_draft_t5_uncommon",
-      "item_id": "wls2_extention_stable_appetite_draft_t5_uncommon",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -160,12 +125,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Uncommon",
-      "image_id": "wls2_extention_stable_appetite_draft_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -187,19 +149,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_draft_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_draft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "67d3140da833f68e4f5699f64121ced8f09f6bfc2970715321e230c6bd34ee6c",
       "numeric": {
         "summary": [
@@ -221,7 +170,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_riding_t5_common",
-      "item_id": "wls2_extention_stable_appetite_riding_t5_common",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -232,12 +180,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Common",
-      "image_id": "wls2_extention_stable_appetite_riding_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -259,19 +204,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_riding_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "ccd37934b05cbbff5a44f0c57e0c49628765d015188aa9e1ba2faf71d22be1e3",
       "numeric": {
         "summary": [
@@ -293,7 +225,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_riding_t5_epic",
-      "item_id": "wls2_extention_stable_appetite_riding_t5_epic",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -304,12 +235,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Rare+Epic",
-      "image_id": "wls2_extention_stable_appetite_riding_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -331,19 +259,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_riding_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6722c2be09829b012a8bc324e09906d81d4fefe52ffb2fa009c220c921402f05",
       "numeric": {
         "summary": [
@@ -365,7 +280,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_riding_t5_rare",
-      "item_id": "wls2_extention_stable_appetite_riding_t5_rare",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -376,12 +290,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Rare+Epic",
-      "image_id": "wls2_extention_stable_appetite_riding_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -403,19 +314,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_riding_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6722c2be09829b012a8bc324e09906d81d4fefe52ffb2fa009c220c921402f05",
       "numeric": {
         "summary": [
@@ -437,7 +335,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_appetite_riding_t5_uncommon",
-      "item_id": "wls2_extention_stable_appetite_riding_t5_uncommon",
       "name": "饲料分配器",
       "name_en": "Feed dispenser",
       "name_source": "official_zh",
@@ -448,12 +345,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_fillhorse_Uncommon",
-      "image_id": "wls2_extention_stable_appetite_riding_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -475,19 +369,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_appetite_riding_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_appetite_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_appetite_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "67d3140da833f68e4f5699f64121ced8f09f6bfc2970715321e230c6bd34ee6c",
       "numeric": {
         "summary": [
@@ -509,7 +390,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_energy_draft_t5_rare",
-      "item_id": "wls2_extention_stable_energy_draft_t5_rare",
       "name": "马 护理",
       "name_en": "Horse care",
       "name_source": "official_zh",
@@ -520,12 +400,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_energy_Rare+Epic",
-      "image_id": "wls2_extention_stable_energy_draft_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -547,19 +424,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_energy_draft_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_energy_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_energy_draft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "559810c31fea0d4e1effb5971ec1d69bc1003e2781f904246d54be1d83d7bce9",
       "numeric": {
         "summary": [
@@ -581,7 +445,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_energy_draft_t5_uncommon",
-      "item_id": "wls2_extention_stable_energy_draft_t5_uncommon",
       "name": "马 护理",
       "name_en": "Horse care",
       "name_source": "official_zh",
@@ -592,12 +455,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_energy_Uncommon",
-      "image_id": "wls2_extention_stable_energy_draft_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -619,19 +479,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_energy_draft_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_energy_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_energy_draft",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "52b05568c56a8b998c24813b62d800563cf43ee318f4fa781c39cc605334f6d7",
       "numeric": {
         "summary": [
@@ -653,7 +500,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_energy_riding_t5_rare",
-      "item_id": "wls2_extention_stable_energy_riding_t5_rare",
       "name": "马 护理",
       "name_en": "Horse care",
       "name_source": "official_zh",
@@ -664,12 +510,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_energy_Rare+Epic",
-      "image_id": "wls2_extention_stable_energy_riding_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -691,19 +534,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_energy_riding_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_energy_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_energy_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "559810c31fea0d4e1effb5971ec1d69bc1003e2781f904246d54be1d83d7bce9",
       "numeric": {
         "summary": [
@@ -725,7 +555,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_stable_energy_riding_t5_uncommon",
-      "item_id": "wls2_extention_stable_energy_riding_t5_uncommon",
       "name": "马 护理",
       "name_en": "Horse care",
       "name_source": "official_zh",
@@ -736,12 +565,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary06/wls2_extention_energy_Uncommon",
-      "image_id": "wls2_extention_stable_energy_riding_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -763,19 +589,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "坐骑喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_stable_energy_riding_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_stable_energy_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_stable_energy_riding",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "52b05568c56a8b998c24813b62d800563cf43ee318f4fa781c39cc605334f6d7",
       "numeric": {
         "summary": [
@@ -797,7 +610,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_pricetoskip_5_common",
-      "item_id": "wls2_extention_laboratory_pricetoskip_5_common",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -808,12 +620,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_common",
-      "image_id": "wls2_extention_laboratory_pricetoskip_5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -837,21 +646,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_pricetoskip_5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "93850f0ff7e501c2098e9532cfac2afa11f5a2392ecce6feb69cb14f51f70888",
       "numeric": {
         "summary": [
@@ -873,7 +667,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_pricetoskip_5_epic",
-      "item_id": "wls2_extention_laboratory_pricetoskip_5_epic",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -884,12 +677,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_laboratory_pricetoskip_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -913,21 +703,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_pricetoskip_5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -949,7 +724,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_pricetoskip_5_rare",
-      "item_id": "wls2_extention_laboratory_pricetoskip_5_rare",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -960,12 +734,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_rare",
-      "image_id": "wls2_extention_laboratory_pricetoskip_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -989,21 +760,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_pricetoskip_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "198f809eee08d02452aafd60687bc71b48e482e6ec2832d2681a9be229015bf5",
       "numeric": {
         "summary": [
@@ -1025,7 +781,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_pricetoskip_5_uncommon",
-      "item_id": "wls2_extention_laboratory_pricetoskip_5_uncommon",
       "name": "主发条",
       "name_en": "Mainspring",
       "name_source": "official_zh",
@@ -1036,12 +791,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_pricetoskip_uncommon",
-      "image_id": "wls2_extention_laboratory_pricetoskip_5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1065,21 +817,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_pricetoskip_5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_pricetoskip_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_pricetoskip_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "48314ab3c71e3800f04d2efe04885f24443d649dfa71294f9bd2a9bb12d7c810",
       "numeric": {
         "summary": [
@@ -1101,7 +838,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_timetocraft_5_common",
-      "item_id": "wls2_extention_laboratory_timetocraft_5_common",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -1112,12 +848,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_common",
-      "image_id": "wls2_extention_laboratory_timetocraft_5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1141,21 +874,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_timetocraft_5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "194a79e35d64168bf0f3f6d185bbd72aa1c8fc13d25f1c3483f316736b980fa7",
       "numeric": {
         "summary": [
@@ -1177,7 +895,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_timetocraft_5_epic",
-      "item_id": "wls2_extention_laboratory_timetocraft_5_epic",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -1188,12 +905,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_laboratory_timetocraft_5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1217,21 +931,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_timetocraft_5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -1253,7 +952,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_timetocraft_5_rare",
-      "item_id": "wls2_extention_laboratory_timetocraft_5_rare",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -1264,12 +962,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_rare",
-      "image_id": "wls2_extention_laboratory_timetocraft_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1293,21 +988,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_timetocraft_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "e2e4bf9daad2316d7e852b3450e45fd8e7f8483c4b5891c52890a7c78125a3eb",
       "numeric": {
         "summary": [
@@ -1329,7 +1009,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_timetocraft_5_uncommon",
-      "item_id": "wls2_extention_laboratory_timetocraft_5_uncommon",
       "name": "转动装置",
       "name_en": "Wheelwork",
       "name_source": "official_zh",
@@ -1340,12 +1019,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_timetocraft_uncommon",
-      "image_id": "wls2_extention_laboratory_timetocraft_5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1369,21 +1045,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_timetocraft_5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_timetocraft_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_timetocraft_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "0c89940736d311752d87ab6d2d8de11e0704f6f8e61fa2ec9c494d90684fe39c",
       "numeric": {
         "summary": [
@@ -1405,7 +1066,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_laboratory_queue_5_rare",
-      "item_id": "wls2_extention_laboratory_queue_5_rare",
       "name": "输送机传动装置",
       "name_en": "Conveyor drive",
       "name_source": "official_zh",
@@ -1416,12 +1076,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary04/wls2_extention_cashback_uncommon",
-      "image_id": "wls2_extention_laboratory_queue_5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1445,21 +1102,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "实验室"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_laboratory_queue_5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "inventory_stack_extention_queue_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_workshop_laboratory_queue_extention",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [
-          "wls2_loc_special_bc_5"
-        ],
-        "quest_referenced": false
-      },
       "image_key": "092aa433907ff34158b7ace2b0a8cb7446c50f8f931a8a9b7b98dedbb4edfe74",
       "numeric": {
         "summary": [
@@ -1481,7 +1123,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_bear_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_bear_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1492,12 +1133,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_bear_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1519,19 +1157,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_bear_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -1553,7 +1178,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_bear_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_bear_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1564,12 +1188,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_bear_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1591,19 +1212,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_bear_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -1625,7 +1233,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_bear_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_bear_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1636,12 +1243,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_bear_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1663,19 +1267,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_bear_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -1697,7 +1288,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_bear_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_bear_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1708,12 +1298,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_bear_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -1735,19 +1322,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_bear_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -1769,7 +1343,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_boar_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_boar_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1780,12 +1353,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_boar_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -1807,19 +1377,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_boar_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -1841,7 +1398,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_boar_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_boar_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1852,12 +1408,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_boar_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -1879,19 +1432,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_boar_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -1913,7 +1453,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_boar_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_boar_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1924,12 +1463,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_boar_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -1951,19 +1487,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_boar_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -1985,7 +1508,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_boar_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_boar_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -1996,12 +1518,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_boar_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2023,19 +1542,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_boar_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -2057,7 +1563,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_crocodile_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_crocodile_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2068,12 +1573,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_crocodile_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2095,19 +1597,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_crocodile_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -2129,7 +1618,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_crocodile_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_crocodile_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2140,12 +1628,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_crocodile_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2167,19 +1652,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_crocodile_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2201,7 +1673,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_crocodile_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_crocodile_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2212,12 +1683,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_crocodile_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2239,19 +1707,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_crocodile_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2273,7 +1728,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_crocodile_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_crocodile_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2284,12 +1738,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_crocodile_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2311,19 +1762,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_crocodile_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -2345,7 +1783,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_direwolf_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_direwolf_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2356,12 +1793,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_direwolf_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2383,19 +1817,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_direwolf_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -2417,7 +1838,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_direwolf_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_direwolf_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2428,12 +1848,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_direwolf_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2455,19 +1872,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_direwolf_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2489,7 +1893,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_direwolf_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_direwolf_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2500,12 +1903,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_direwolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2527,19 +1927,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_direwolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2561,7 +1948,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_direwolf_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_direwolf_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2572,12 +1958,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_direwolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2599,19 +1982,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_direwolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -2633,7 +2003,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_dog_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_dog_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2644,12 +2013,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_dog_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2671,19 +2037,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_dog_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -2705,7 +2058,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_dog_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_dog_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2716,12 +2068,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_dog_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -2743,19 +2092,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_dog_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2777,7 +2113,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_dog_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_dog_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2788,12 +2123,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_dog_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -2815,19 +2147,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_dog_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -2849,7 +2168,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_dog_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_dog_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2860,12 +2178,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_dog_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -2887,19 +2202,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_dog_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -2921,7 +2223,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_lynx_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_lynx_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -2932,12 +2233,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_lynx_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -2959,19 +2257,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_lynx_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -2993,7 +2278,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_lynx_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_lynx_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3004,12 +2288,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_lynx_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3031,19 +2312,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_lynx_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3065,7 +2333,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_lynx_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_lynx_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3076,12 +2343,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_lynx_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3103,19 +2367,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_lynx_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3137,7 +2388,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_lynx_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_lynx_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3148,12 +2398,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_lynx_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3175,19 +2422,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_lynx_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -3209,7 +2443,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_puma_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_puma_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3220,12 +2453,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_puma_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3247,19 +2477,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_puma_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -3281,7 +2498,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_puma_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_puma_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3292,12 +2508,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_puma_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3319,19 +2532,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_puma_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3353,7 +2553,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_puma_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_puma_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3364,12 +2563,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_puma_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3391,19 +2587,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_puma_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3425,7 +2608,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_puma_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_puma_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3436,12 +2618,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_puma_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3463,19 +2642,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_puma_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_puma",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -3497,7 +2663,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_wolf_t5_common",
-      "item_id": "wls2_extention_enclosure_damage_wolf_t5_common",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3508,12 +2673,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "common",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Common",
-      "image_id": "wls2_extention_enclosure_damage_wolf_t5_common",
       "equipment_id": null,
       "stats": [
         {
@@ -3535,19 +2697,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_wolf_t5_common",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "4f573519ce2fc75b590e3c660ecae11a78390cebfcb24d1d33850c10d8df5936",
       "numeric": {
         "summary": [
@@ -3569,7 +2718,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_wolf_t5_epic",
-      "item_id": "wls2_extention_enclosure_damage_wolf_t5_epic",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3580,12 +2728,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "epic",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_wolf_t5_epic",
       "equipment_id": null,
       "stats": [
         {
@@ -3607,19 +2752,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_wolf_t5_epic",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3641,7 +2773,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_wolf_t5_rare",
-      "item_id": "wls2_extention_enclosure_damage_wolf_t5_rare",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3652,12 +2783,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_damage_wolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3679,19 +2807,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_wolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "5672e241dabb92ce8d9c2f7ae1eaf1397ac4831ef3dbfff1d291f2c5007829fe",
       "numeric": {
         "summary": [
@@ -3713,7 +2828,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_damage_wolf_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_damage_wolf_t5_uncommon",
       "name": "力量图腾",
       "name_en": "Totem of Power",
       "name_source": "official_zh",
@@ -3724,12 +2838,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_totem_Uncommon",
-      "image_id": "wls2_extention_enclosure_damage_wolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3751,19 +2862,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_damage_wolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_damage_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_damage_wolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "cca75aead52ebb504032b13eac91eb0d3be4526de23dbc05d23805e7767ad372",
       "numeric": {
         "summary": [
@@ -3785,7 +2883,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_bear_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_bear_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -3796,12 +2893,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_bear_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3823,19 +2917,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_bear_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -3857,7 +2938,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_bear_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_bear_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -3868,12 +2948,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_bear_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -3895,19 +2972,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_bear_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_bear",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [
@@ -3929,7 +2993,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_boar_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_boar_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -3940,12 +3003,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_boar_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -3967,19 +3027,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_boar_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -4001,7 +3048,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_boar_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_boar_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4012,12 +3058,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_boar_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4039,19 +3082,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_boar_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_boar",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [
@@ -4073,7 +3103,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_crocodile_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_crocodile_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4084,12 +3113,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_crocodile_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4111,19 +3137,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_crocodile_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -4145,7 +3158,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_crocodile_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_crocodile_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4156,12 +3168,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_crocodile_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4183,19 +3192,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_crocodile_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_crocodile",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [
@@ -4217,7 +3213,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_direwolf_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_direwolf_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4228,12 +3223,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_direwolf_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4255,19 +3247,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_direwolf_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -4289,7 +3268,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_direwolf_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_direwolf_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4300,12 +3278,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_direwolf_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4327,19 +3302,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_direwolf_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_direwolf",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [
@@ -4361,7 +3323,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_dog_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_dog_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4372,12 +3333,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_dog_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4399,19 +3357,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_dog_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -4433,7 +3378,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_dog_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_dog_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4444,12 +3388,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_dog_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4471,19 +3412,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_dog_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_dog",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [
@@ -4505,7 +3433,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_lynx_t5_rare",
-      "item_id": "wls2_extention_enclosure_healing_lynx_t5_rare",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4516,12 +3443,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "rare",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Rare+Epic",
-      "image_id": "wls2_extention_enclosure_healing_lynx_t5_rare",
       "equipment_id": null,
       "stats": [
         {
@@ -4543,19 +3467,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_lynx_t5_rare",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "0a1470cc6d72533486b9d1245d9d848fca3d4e78085bd2e8395168051bab6e4e",
       "numeric": {
         "summary": [
@@ -4577,7 +3488,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
     },
     {
       "id": "wls2_extention_enclosure_healing_lynx_t5_uncommon",
-      "item_id": "wls2_extention_enclosure_healing_lynx_t5_uncommon",
       "name": "医疗 包",
       "name_en": "Medical kit",
       "name_source": "official_zh",
@@ -4588,12 +3498,9 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
       "tier": 5,
       "rarity": "uncommon",
       "max_stack": 1,
-      "stack_type": "single",
       "bound": false,
       "legacy": false,
       "placeholder_image": false,
-      "sprite": "UI_WW_AlphaBinary09/wls2_extention_healing_Uncommon",
-      "image_id": "wls2_extention_enclosure_healing_lynx_t5_uncommon",
       "equipment_id": null,
       "stats": [
         {
@@ -4615,19 +3522,6 @@ window.WIKI_CHUNKS["wiki-chunk-inventory-46"] = {
         "宠物喂食器"
       ],
       "blueprints": [],
-      "source": {
-        "table": "inventory_stacks",
-        "id": "wls2_extention_enclosure_healing_lynx_t5_uncommon",
-        "reason": "physical_workbench_augmentation",
-        "name_key": "wls2_extention_enclosure_healing_name",
-        "sorting_group": "extention",
-        "stat_table": "inventory_stack_stats",
-        "behaviour_table": null,
-        "augmentation_id": "wls2_extention_enclosure_healing_lynx",
-        "blueprint_lootbox_id": null,
-        "source_location_ids": [],
-        "quest_referenced": false
-      },
       "image_key": "6e1333d8de6989f98d7add54a97c2d14ad41b6e4f592787ccc3dbd28c33b9f38",
       "numeric": {
         "summary": [

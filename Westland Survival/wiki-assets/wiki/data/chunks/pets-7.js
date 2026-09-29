@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Dog",
       "display_zh": "犬 T7 · 史诗",
       "display_en": "Dog T7 · Epic",
-      "tier_id": "dog_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "bc",
       "habitat_zh": "营地",
       "habitat_en": "Camp",
       "habitat_bonus": 0.1,
@@ -943,67 +941,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "dog_skin_1_rottweiler",
           "name_zh": "罗威纳犬",
           "name_en": "Rottweiler",
-          "description_zh": "罗威纳犬是优秀的护卫，随时准备全心全意地保卫自己的主人。",
-          "description_en": "Rottweilers are excellent guards ready to defend their owners with dedication.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_1_icon",
-          "icon_sprite": "dog_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_rottweiler_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_rottweiler_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-            "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_1_icon"
-          },
           "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7"
         },
         {
           "id": "dog_skin_2_husky",
           "name_zh": "哈士奇",
           "name_en": "Husky",
-          "description_zh": "蓝眼睛——这是哈士奇的标志特征。",
-          "description_en": "Blue eyes — a characteristic feature of huskies.",
-          "icon_path": "UI_WW_AlphaBinary06/dog_skin_2_icon",
-          "icon_sprite": "dog_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/dog_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_shop_dog_husky_3_rare",
-          "child_avatar_view_id": "wls2_pet_dog_husky_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/dog_skin_2_husky.png",
-            "sha256": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "dog_skin_2_icon"
-          },
           "image_key": "eff7dbccf63d97973f39140b003bbf2aa27a660d931e00c9cc1a8ff528156b64"
         }
       ],
-      "primary_skin_id": "dog_skin_1_rottweiler",
-      "primary_icon_sprite": "dog_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/dog_skin_1_rottweiler.png",
-        "sha256": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "dog_skin_1_icon"
-      },
       "image_key": "6b0cef95ec92873796ba80b0e7d0bc6060d40e42f161fac8211eefabd139d3d7",
       "numeric": {
         "summary": [
@@ -2948,7 +2894,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T1 · 普通",
       "display_en": "Lynx T1 · Common",
-      "tier_id": "lynx_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 25,
@@ -2971,7 +2916,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -3160,43 +3104,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_1",
           "name_zh": "野猫",
           "name_en": "Wildcat",
-          "description_zh": "野猫比家猫大得多，也更具攻击性。喵！",
-          "description_en": "Wild cats are much larger and more aggressive than domestic ones. Meow!",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_1_icon",
-          "icon_sprite": "lynx_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_cat_1",
-          "child_avatar_view_id": "wls2_pet_lynx_brown_small_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_1.png",
-            "sha256": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_1_icon"
-          },
           "image_key": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f"
         }
       ],
-      "primary_skin_id": "lynx_skin_1",
-      "primary_icon_sprite": "lynx_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_1.png",
-        "sha256": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_1_icon"
-      },
       "image_key": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
       "numeric": {
         "summary": [
@@ -3581,7 +3491,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T1 · 优秀",
       "display_en": "Lynx T1 · Uncommon",
-      "tier_id": "lynx_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 25,
@@ -3604,7 +3513,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -3793,43 +3701,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_1",
           "name_zh": "野猫",
           "name_en": "Wildcat",
-          "description_zh": "野猫比家猫大得多，也更具攻击性。喵！",
-          "description_en": "Wild cats are much larger and more aggressive than domestic ones. Meow!",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_1_icon",
-          "icon_sprite": "lynx_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_cat_1",
-          "child_avatar_view_id": "wls2_pet_lynx_brown_small_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_1.png",
-            "sha256": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_1_icon"
-          },
           "image_key": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f"
         }
       ],
-      "primary_skin_id": "lynx_skin_1",
-      "primary_icon_sprite": "lynx_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_1.png",
-        "sha256": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_1_icon"
-      },
       "image_key": "9717a8a683e28401ab0a0d3711e05543108c13dd157c88fac835e529ee54872f",
       "numeric": {
         "summary": [
@@ -4214,7 +4088,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T2 · 普通",
       "display_en": "Lynx T2 · Common",
-      "tier_id": "lynx_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -4237,7 +4110,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -4546,43 +4418,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_2",
           "name_zh": "猞猁",
           "name_en": "Lynx",
-          "description_zh": "猞猁在奔跑过程中，后脚会正好踩在前爪的脚印上。",
-          "description_en": "During the run, the hind legs of the lynx step exactly on the prints of the front paws.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_2_icon",
-          "icon_sprite": "lynx_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_cat_2",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_small_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_2.png",
-            "sha256": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_2_icon"
-          },
           "image_key": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c"
         }
       ],
-      "primary_skin_id": "lynx_skin_2",
-      "primary_icon_sprite": "lynx_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_2.png",
-        "sha256": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_2_icon"
-      },
       "image_key": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
       "numeric": {
         "summary": [
@@ -5227,7 +5065,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T2 · 优秀",
       "display_en": "Lynx T2 · Uncommon",
-      "tier_id": "lynx_2",
       "tier": 2,
       "rarity": "uncommon",
       "level_cap": 45,
@@ -5250,7 +5087,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -5559,43 +5395,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_2",
           "name_zh": "猞猁",
           "name_en": "Lynx",
-          "description_zh": "猞猁在奔跑过程中，后脚会正好踩在前爪的脚印上。",
-          "description_en": "During the run, the hind legs of the lynx step exactly on the prints of the front paws.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_2_icon",
-          "icon_sprite": "lynx_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_cat_2",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_small_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_2.png",
-            "sha256": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_2_icon"
-          },
           "image_key": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c"
         }
       ],
-      "primary_skin_id": "lynx_skin_2",
-      "primary_icon_sprite": "lynx_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_2.png",
-        "sha256": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_2_icon"
-      },
       "image_key": "47baec9092efdbdb62fc4dc4edfec5b7a2a98bea8256bbf227a4acd2ee53936c",
       "numeric": {
         "summary": [
@@ -6240,7 +6042,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T3 · 普通",
       "display_en": "Lynx T3 · Common",
-      "tier_id": "lynx_3",
       "tier": 3,
       "rarity": "common",
       "level_cap": 65,
@@ -6263,7 +6064,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -6692,75 +6492,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_3",
           "name_zh": "加拿大猞猁",
           "name_en": "Canada lynx",
-          "description_zh": "加拿大猞猁的栖息地是茂密的森林，它们的主要猎物是白野兔。",
-          "description_en": "Canada lynxes habitat are dense forests, along with their main prey — white hare.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_icon",
-          "icon_sprite": "lynx_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_cat_3",
-          "child_avatar_view_id": "wls2_pet_lynx_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-            "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_icon"
-          },
           "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1"
         },
         {
           "id": "lynx_skin_3_summer",
           "name_zh": "红色猞猁",
           "name_en": "Red lynx",
-          "description_zh": "由于红猞猁不同寻常的颜色，偷猎者对它特别感兴趣。",
-          "description_en": "Due to the unusual color red lynx are of particular interest among poachers.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_summer_icon",
-          "icon_sprite": "lynx_skin_3_summer_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_summer_icon",
-          "avatar_id": "wls2_mob_animal_cat_3_summer",
-          "child_avatar_view_id": "wls2_pet_lynx_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3_summer.png",
-            "sha256": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_summer_icon"
-          },
           "image_key": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217"
         }
       ],
-      "primary_skin_id": "lynx_skin_3",
-      "primary_icon_sprite": "lynx_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-        "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_3_icon"
-      },
       "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
       "numeric": {
         "summary": [
@@ -7665,7 +7405,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T3 · 优秀",
       "display_en": "Lynx T3 · Uncommon",
-      "tier_id": "lynx_3",
       "tier": 3,
       "rarity": "uncommon",
       "level_cap": 65,
@@ -7688,7 +7427,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -8117,75 +7855,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_3",
           "name_zh": "加拿大猞猁",
           "name_en": "Canada lynx",
-          "description_zh": "加拿大猞猁的栖息地是茂密的森林，它们的主要猎物是白野兔。",
-          "description_en": "Canada lynxes habitat are dense forests, along with their main prey — white hare.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_icon",
-          "icon_sprite": "lynx_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_cat_3",
-          "child_avatar_view_id": "wls2_pet_lynx_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-            "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_icon"
-          },
           "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1"
         },
         {
           "id": "lynx_skin_3_summer",
           "name_zh": "红色猞猁",
           "name_en": "Red lynx",
-          "description_zh": "由于红猞猁不同寻常的颜色，偷猎者对它特别感兴趣。",
-          "description_en": "Due to the unusual color red lynx are of particular interest among poachers.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_summer_icon",
-          "icon_sprite": "lynx_skin_3_summer_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_summer_icon",
-          "avatar_id": "wls2_mob_animal_cat_3_summer",
-          "child_avatar_view_id": "wls2_pet_lynx_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3_summer.png",
-            "sha256": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_summer_icon"
-          },
           "image_key": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217"
         }
       ],
-      "primary_skin_id": "lynx_skin_3",
-      "primary_icon_sprite": "lynx_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-        "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_3_icon"
-      },
       "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
       "numeric": {
         "summary": [
@@ -9090,7 +8768,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T3 · 稀有",
       "display_en": "Lynx T3 · Rare",
-      "tier_id": "lynx_3",
       "tier": 3,
       "rarity": "rare",
       "level_cap": 65,
@@ -9113,7 +8790,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -9542,105 +9218,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_3",
           "name_zh": "加拿大猞猁",
           "name_en": "Canada lynx",
-          "description_zh": "加拿大猞猁的栖息地是茂密的森林，它们的主要猎物是白野兔。",
-          "description_en": "Canada lynxes habitat are dense forests, along with their main prey — white hare.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_icon",
-          "icon_sprite": "lynx_skin_3_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_icon",
-          "avatar_id": "wls2_mob_animal_cat_3",
-          "child_avatar_view_id": "wls2_pet_lynx_white_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-            "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_icon"
-          },
           "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1"
         },
         {
           "id": "lynx_skin_3_summer",
           "name_zh": "红色猞猁",
           "name_en": "Red lynx",
-          "description_zh": "由于红猞猁不同寻常的颜色，偷猎者对它特别感兴趣。",
-          "description_en": "Due to the unusual color red lynx are of particular interest among poachers.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_3_summer_icon",
-          "icon_sprite": "lynx_skin_3_summer_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_3_summer_icon",
-          "avatar_id": "wls2_mob_animal_cat_3_summer",
-          "child_avatar_view_id": "wls2_pet_lynx_red_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            50,
-            40,
-            10
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_3_summer.png",
-            "sha256": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_3_summer_icon"
-          },
           "image_key": "f1bea2c60e6e809301150cf4ef11d6c2ff2110908827a6451e373c66b74ba217"
         },
         {
           "id": "lynx_skin_shadow",
           "name_zh": "暗影猞猁",
           "name_en": "Shadow Lynx",
-          "description_zh": "一位沉默的猎人，笼罩在黑暗中",
-          "description_en": "A silent hunter cloaked in darkness",
-          "icon_path": "UI_WW_AlphaBinary11/lynx_skin_shadow_icon",
-          "icon_sprite": "lynx_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/lynx_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_lynx_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_lynx_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_shadow.png",
-            "sha256": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "lynx_skin_shadow_icon"
-          },
           "image_key": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5"
         }
       ],
-      "primary_skin_id": "lynx_skin_3",
-      "primary_icon_sprite": "lynx_skin_3_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_3.png",
-        "sha256": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_3_icon"
-      },
       "image_key": "e5654d177150de5616c9b264b67529203ce90a923118a7cf50cba574f5b390a1",
       "numeric": {
         "summary": [
@@ -10545,7 +10137,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T4 · 普通",
       "display_en": "Lynx T4 · Common",
-      "tier_id": "lynx_4",
       "tier": 4,
       "rarity": "common",
       "level_cap": 85,
@@ -10568,7 +10159,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -11117,43 +10707,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_4",
           "name_zh": "南猞猁",
           "name_en": "Southern lynx",
-          "description_zh": "由于南猞猁的皮肤上有斑点，因此能与地形完美地融合在一起。",
-          "description_en": "Due to the spotted skin southern lynx perfectly merges with the terrain.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_4_icon",
-          "icon_sprite": "lynx_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_cat_4",
-          "child_avatar_view_id": "wls2_pet_lynx_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-            "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_4_icon"
-          },
           "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb"
         }
       ],
-      "primary_skin_id": "lynx_skin_4",
-      "primary_icon_sprite": "lynx_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-        "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_4_icon"
-      },
       "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
       "numeric": {
         "summary": [
@@ -12318,7 +11874,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T4 · 优秀",
       "display_en": "Lynx T4 · Uncommon",
-      "tier_id": "lynx_4",
       "tier": 4,
       "rarity": "uncommon",
       "level_cap": 85,
@@ -12341,7 +11896,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -12890,43 +12444,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_4",
           "name_zh": "南猞猁",
           "name_en": "Southern lynx",
-          "description_zh": "由于南猞猁的皮肤上有斑点，因此能与地形完美地融合在一起。",
-          "description_en": "Due to the spotted skin southern lynx perfectly merges with the terrain.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_4_icon",
-          "icon_sprite": "lynx_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_cat_4",
-          "child_avatar_view_id": "wls2_pet_lynx_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-            "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_4_icon"
-          },
           "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb"
         }
       ],
-      "primary_skin_id": "lynx_skin_4",
-      "primary_icon_sprite": "lynx_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-        "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_4_icon"
-      },
       "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
       "numeric": {
         "summary": [
@@ -14091,7 +13611,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T4 · 稀有",
       "display_en": "Lynx T4 · Rare",
-      "tier_id": "lynx_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -14114,7 +13633,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -14663,73 +14181,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_4",
           "name_zh": "南猞猁",
           "name_en": "Southern lynx",
-          "description_zh": "由于南猞猁的皮肤上有斑点，因此能与地形完美地融合在一起。",
-          "description_en": "Due to the spotted skin southern lynx perfectly merges with the terrain.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_4_icon",
-          "icon_sprite": "lynx_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_animal_cat_4",
-          "child_avatar_view_id": "wls2_pet_lynx_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-            "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_4_icon"
-          },
           "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb"
         },
         {
           "id": "lynx_skin_shadow",
           "name_zh": "暗影猞猁",
           "name_en": "Shadow Lynx",
-          "description_zh": "一位沉默的猎人，笼罩在黑暗中",
-          "description_en": "A silent hunter cloaked in darkness",
-          "icon_path": "UI_WW_AlphaBinary11/lynx_skin_shadow_icon",
-          "icon_sprite": "lynx_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/lynx_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_lynx_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_lynx_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_shadow.png",
-            "sha256": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "lynx_skin_shadow_icon"
-          },
           "image_key": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5"
         }
       ],
-      "primary_skin_id": "lynx_skin_4",
-      "primary_icon_sprite": "lynx_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_4.png",
-        "sha256": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_4_icon"
-      },
       "image_key": "259a6412d86b6b5ec22fb68e2e5f0eebf510a9eb203e150fccc00beaf83b2bcb",
       "numeric": {
         "summary": [
@@ -15894,7 +15354,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T5 · 普通",
       "display_en": "Lynx T5 · Common",
-      "tier_id": "lynx_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -15917,7 +15376,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -16693,41 +16151,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_5",
           "name_zh": "路易斯安那山猫",
           "name_en": "Louisiana lynx",
-          "description_zh": "路易斯安那山猫虽然体型小巧，但却是凶猛的掠食者，并因其速度和灵活性而著称。",
-          "description_en": "Though small in size, the Louisiana lynx is a fierce predator, known for its speed and agility.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_5_icon",
-          "icon_sprite": "lynx_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-            "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_5_icon"
-          },
           "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692"
         }
       ],
-      "primary_skin_id": "lynx_skin_5",
-      "primary_icon_sprite": "lynx_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-        "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_5_icon"
-      },
       "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
       "numeric": {
         "summary": [
@@ -18374,7 +17800,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T5 · 优秀",
       "display_en": "Lynx T5 · Uncommon",
-      "tier_id": "lynx_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -18397,7 +17822,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -19173,41 +18597,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_5",
           "name_zh": "路易斯安那山猫",
           "name_en": "Louisiana lynx",
-          "description_zh": "路易斯安那山猫虽然体型小巧，但却是凶猛的掠食者，并因其速度和灵活性而著称。",
-          "description_en": "Though small in size, the Louisiana lynx is a fierce predator, known for its speed and agility.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_5_icon",
-          "icon_sprite": "lynx_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-            "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_5_icon"
-          },
           "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692"
         }
       ],
-      "primary_skin_id": "lynx_skin_5",
-      "primary_icon_sprite": "lynx_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-        "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_5_icon"
-      },
       "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
       "numeric": {
         "summary": [
@@ -20854,7 +20246,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T5 · 稀有",
       "display_en": "Lynx T5 · Rare",
-      "tier_id": "lynx_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -20877,7 +20268,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -21653,41 +21043,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_5",
           "name_zh": "路易斯安那山猫",
           "name_en": "Louisiana lynx",
-          "description_zh": "路易斯安那山猫虽然体型小巧，但却是凶猛的掠食者，并因其速度和灵活性而著称。",
-          "description_en": "Though small in size, the Louisiana lynx is a fierce predator, known for its speed and agility.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_5_icon",
-          "icon_sprite": "lynx_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-            "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_5_icon"
-          },
           "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692"
         }
       ],
-      "primary_skin_id": "lynx_skin_5",
-      "primary_icon_sprite": "lynx_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-        "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_5_icon"
-      },
       "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
       "numeric": {
         "summary": [
@@ -23334,7 +22692,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T5 · 史诗",
       "display_en": "Lynx T5 · Epic",
-      "tier_id": "lynx_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -23357,7 +22714,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -24133,71 +23489,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_5",
           "name_zh": "路易斯安那山猫",
           "name_en": "Louisiana lynx",
-          "description_zh": "路易斯安那山猫虽然体型小巧，但却是凶猛的掠食者，并因其速度和灵活性而著称。",
-          "description_en": "Though small in size, the Louisiana lynx is a fierce predator, known for its speed and agility.",
-          "icon_path": "UI_WW_AlphaBinary06/lynx_skin_5_icon",
-          "icon_sprite": "lynx_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lynx_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_lynx_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-            "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "lynx_skin_5_icon"
-          },
           "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692"
         },
         {
           "id": "lynx_skin_shadow",
           "name_zh": "暗影猞猁",
           "name_en": "Shadow Lynx",
-          "description_zh": "一位沉默的猎人，笼罩在黑暗中",
-          "description_en": "A silent hunter cloaked in darkness",
-          "icon_path": "UI_WW_AlphaBinary11/lynx_skin_shadow_icon",
-          "icon_sprite": "lynx_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/lynx_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_lynx_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_lynx_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_shadow.png",
-            "sha256": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "lynx_skin_shadow_icon"
-          },
           "image_key": "f90bdc9f99c80538577c4dc59de9f768c77d1ff1157f36844301237150ff77a5"
         }
       ],
-      "primary_skin_id": "lynx_skin_5",
-      "primary_icon_sprite": "lynx_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_5.png",
-        "sha256": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "lynx_skin_5_icon"
-      },
       "image_key": "7e007f27e19bc0ae604306fbd923f68676ef858792f13cbbabcdc938e69a3692",
       "numeric": {
         "summary": [
@@ -25844,7 +25144,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
       "species_en": "Lynx",
       "display_zh": "猞猁 T6 · 普通",
       "display_en": "Lynx T6 · Common",
-      "tier_id": "lynx_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -25867,7 +25166,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "lake",
       "habitat_zh": "湖",
       "habitat_en": "Lake",
       "habitat_bonus": 0.2,
@@ -26783,41 +26081,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-7"] = {
           "id": "lynx_skin_6",
           "name_zh": "阿拉斯加猞猁",
           "name_en": "Alaskan lynx",
-          "description_zh": "一位熟练的小型哺乳动物猎手，在雪地中轻松地穿梭。",
-          "description_en": "A skilled hunter of small mammals, navigating the snowy terrain with ease",
-          "icon_path": "UI_WW_AlphaBinary08/lynx_skin_6_icon",
-          "icon_sprite": "lynx_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/lynx_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_animal_cat_6",
-          "child_avatar_view_id": "wls2_pet_lynx_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/lynx_skin_6.png",
-            "sha256": "b81f6761bdff121ded0944e156db46d3c2a627803e567e77ab6fdf6017938c5b",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "lynx_skin_6_icon"
-          },
           "image_key": "b81f6761bdff121ded0944e156db46d3c2a627803e567e77ab6fdf6017938c5b"
         }
       ],
-      "primary_skin_id": "lynx_skin_6",
-      "primary_icon_sprite": "lynx_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/lynx_skin_6.png",
-        "sha256": "b81f6761bdff121ded0944e156db46d3c2a627803e567e77ab6fdf6017938c5b",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "lynx_skin_6_icon"
-      },
       "image_key": "b81f6761bdff121ded0944e156db46d3c2a627803e567e77ab6fdf6017938c5b",
       "numeric": {
         "summary": [

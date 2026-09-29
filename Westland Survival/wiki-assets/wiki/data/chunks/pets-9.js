@@ -12,7 +12,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T4 · 稀有",
       "display_en": "Puma T4 · Rare",
-      "tier_id": "puma_4",
       "tier": 4,
       "rarity": "rare",
       "level_cap": 85,
@@ -35,7 +34,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -583,155 +581,33 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_4",
           "name_zh": "美洲虎",
           "name_en": "Jaguar",
-          "description_zh": "许多美洲土著部落都崇拜美洲狮，认为它们是神圣的动物。",
-          "description_en": "Many Indigenous tribes worship jaguars, finding them sacred animals.",
-          "icon_path": "UI_WW_AlphaBinary06/puma_skin_4_icon",
-          "icon_sprite": "puma_skin_4_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/puma_cub_skin_4_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_4",
-          "child_avatar_view_id": "wls2_pet_puma_jaguar_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1,
-            2
-          ],
-          "baiting_fertility_weights": [
-            90,
-            9,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_4.png",
-            "sha256": "eafa596fe1fb025aea92020731c5133ca2405372616485699420731a90dfb7e4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "puma_skin_4_icon"
-          },
           "image_key": "eafa596fe1fb025aea92020731c5133ca2405372616485699420731a90dfb7e4"
         },
         {
           "id": "leopard_skin_3_xmas_23",
           "name_zh": "雪豹",
           "name_en": "Snow leopard",
-          "description_zh": "一个忠诚可靠的伴侣，时刻准备着保护它的主人。",
-          "description_en": "A loyal and reliable companion always ready to protect its owner",
-          "icon_path": "UI_WW_AlphaBinary08/snow_leopard_skin_1_icon",
-          "icon_sprite": "snow_leopard_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/snow_leopard_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_leopard_3",
-          "child_avatar_view_id": "wls2_pet_leopard_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/leopard_skin_3_xmas_23.png",
-            "sha256": "53ca8323ac1090b94eebc6fcd73a4d705fb0340e2f076d42ec1e8500b3b0509e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "snow_leopard_skin_1_icon"
-          },
           "image_key": "53ca8323ac1090b94eebc6fcd73a4d705fb0340e2f076d42ec1e8500b3b0509e"
         },
         {
           "id": "puma_skin_6_easter_2023",
           "name_zh": "狮子",
           "name_en": "Lion",
-          "description_zh": "狮子拥有健壮的四肢、强有力的下颚，以及巨大的利齿。",
-          "description_en": "Lions have powerful legs, strong jaws, and large fangs.",
-          "icon_path": "UI_WW_AlphaBinary07/lion_skin_1_icon",
-          "icon_sprite": "lion_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lion_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_easter_23_cat_3",
-          "child_avatar_view_id": "wls2_pet_puma_lion_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6_easter_2023.png",
-            "sha256": "09af880111779a5195ccde728dffa5060654726bbe73c88537b3a27d64f333ac",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "lion_skin_1_icon"
-          },
           "image_key": "09af880111779a5195ccde728dffa5060654726bbe73c88537b3a27d64f333ac"
         },
         {
           "id": "puma_skin_3_halloween_2024",
           "name_zh": "幽灵 美洲狮",
           "name_en": "Ghost puma",
-          "description_zh": "一个阴森的捕食者，带有发光的骨头样的标记",
-          "description_en": "A spooky predator with glowing bone-like markings",
-          "icon_path": "UI_WW_AlphaBinary09/puma_halloween_skin_1_icon",
-          "icon_sprite": "puma_halloween_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/puma_halloween_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_halloween_puma_24",
-          "child_avatar_view_id": "wls2_mob_animal_halloween_puma_child_24",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_3_halloween_2024.png",
-            "sha256": "0e3047ef4911e2ba45cf9e63876dc715a7f61331f962d7a846ff74fba3ee38b7",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "puma_halloween_skin_1_icon"
-          },
           "image_key": "0e3047ef4911e2ba45cf9e63876dc715a7f61331f962d7a846ff74fba3ee38b7"
         },
         {
           "id": "puma_skin_shadow",
           "name_zh": "暗影美洲狮",
           "name_en": "Shadow Puma",
-          "description_zh": "一名被暗影能量充盈的敏捷猎人",
-          "description_en": "An agile hunter infused with shadow energy",
-          "icon_path": "UI_WW_AlphaBinary11/puma_skin_shadow_icon",
-          "icon_sprite": "puma_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/puma_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_puma_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_puma_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_shadow.png",
-            "sha256": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "puma_skin_shadow_icon"
-          },
           "image_key": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4"
         }
       ],
-      "primary_skin_id": "puma_skin_4",
-      "primary_icon_sprite": "puma_skin_4_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_4.png",
-        "sha256": "eafa596fe1fb025aea92020731c5133ca2405372616485699420731a90dfb7e4",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "puma_skin_4_icon"
-      },
       "image_key": "eafa596fe1fb025aea92020731c5133ca2405372616485699420731a90dfb7e4",
       "numeric": {
         "summary": [
@@ -1896,7 +1772,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T5 · 普通",
       "display_en": "Puma T5 · Common",
-      "tier_id": "puma_5",
       "tier": 5,
       "rarity": "common",
       "level_cap": 105,
@@ -1919,7 +1794,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -2694,41 +2568,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_5",
           "name_zh": "黑豹",
           "name_en": "Panther",
-          "description_zh": "最好不要激怒黑豹：它们中的大多数都具有攻击性行为模式。",
-          "description_en": "Better not anger black panthers: most of them have a pattern of aggressive behavior.",
-          "icon_path": "UI_WW_AlphaBinary06/puma_skin_5_icon",
-          "icon_sprite": "puma_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/puma_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_puma_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-            "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "puma_skin_5_icon"
-          },
           "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8"
         }
       ],
-      "primary_skin_id": "puma_skin_5",
-      "primary_icon_sprite": "puma_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-        "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "puma_skin_5_icon"
-      },
       "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
       "numeric": {
         "summary": [
@@ -4375,7 +4217,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T5 · 优秀",
       "display_en": "Puma T5 · Uncommon",
-      "tier_id": "puma_5",
       "tier": 5,
       "rarity": "uncommon",
       "level_cap": 105,
@@ -4398,7 +4239,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -5173,41 +5013,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_5",
           "name_zh": "黑豹",
           "name_en": "Panther",
-          "description_zh": "最好不要激怒黑豹：它们中的大多数都具有攻击性行为模式。",
-          "description_en": "Better not anger black panthers: most of them have a pattern of aggressive behavior.",
-          "icon_path": "UI_WW_AlphaBinary06/puma_skin_5_icon",
-          "icon_sprite": "puma_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/puma_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_puma_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-            "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "puma_skin_5_icon"
-          },
           "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8"
         }
       ],
-      "primary_skin_id": "puma_skin_5",
-      "primary_icon_sprite": "puma_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-        "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "puma_skin_5_icon"
-      },
       "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
       "numeric": {
         "summary": [
@@ -6854,7 +6662,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T5 · 稀有",
       "display_en": "Puma T5 · Rare",
-      "tier_id": "puma_5",
       "tier": 5,
       "rarity": "rare",
       "level_cap": 105,
@@ -6877,7 +6684,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -7652,97 +7458,21 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_5",
           "name_zh": "黑豹",
           "name_en": "Panther",
-          "description_zh": "最好不要激怒黑豹：它们中的大多数都具有攻击性行为模式。",
-          "description_en": "Better not anger black panthers: most of them have a pattern of aggressive behavior.",
-          "icon_path": "UI_WW_AlphaBinary06/puma_skin_5_icon",
-          "icon_sprite": "puma_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/puma_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_puma_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-            "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "puma_skin_5_icon"
-          },
           "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8"
         },
         {
           "id": "leopard_skin_3_xmas_23",
           "name_zh": "雪豹",
           "name_en": "Snow leopard",
-          "description_zh": "一个忠诚可靠的伴侣，时刻准备着保护它的主人。",
-          "description_en": "A loyal and reliable companion always ready to protect its owner",
-          "icon_path": "UI_WW_AlphaBinary08/snow_leopard_skin_1_icon",
-          "icon_sprite": "snow_leopard_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary08/snow_leopard_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_leopard_3",
-          "child_avatar_view_id": "wls2_pet_leopard_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/leopard_skin_3_xmas_23.png",
-            "sha256": "53ca8323ac1090b94eebc6fcd73a4d705fb0340e2f076d42ec1e8500b3b0509e",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "snow_leopard_skin_1_icon"
-          },
           "image_key": "53ca8323ac1090b94eebc6fcd73a4d705fb0340e2f076d42ec1e8500b3b0509e"
         },
         {
           "id": "puma_skin_6_easter_2023",
           "name_zh": "狮子",
           "name_en": "Lion",
-          "description_zh": "狮子拥有健壮的四肢、强有力的下颚，以及巨大的利齿。",
-          "description_en": "Lions have powerful legs, strong jaws, and large fangs.",
-          "icon_path": "UI_WW_AlphaBinary07/lion_skin_1_icon",
-          "icon_sprite": "lion_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/lion_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_elite_animal_easter_23_cat_3",
-          "child_avatar_view_id": "wls2_pet_puma_lion_child",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6_easter_2023.png",
-            "sha256": "09af880111779a5195ccde728dffa5060654726bbe73c88537b3a27d64f333ac",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary07_201dcdad5b8791d4bfd5c7c7d8787ad1.bundle",
-            "source_sprite": "lion_skin_1_icon"
-          },
           "image_key": "09af880111779a5195ccde728dffa5060654726bbe73c88537b3a27d64f333ac"
         }
       ],
-      "primary_skin_id": "puma_skin_5",
-      "primary_icon_sprite": "puma_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-        "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "puma_skin_5_icon"
-      },
       "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
       "numeric": {
         "summary": [
@@ -9389,7 +9119,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T5 · 史诗",
       "display_en": "Puma T5 · Epic",
-      "tier_id": "puma_5",
       "tier": 5,
       "rarity": "epic",
       "level_cap": 105,
@@ -9412,7 +9141,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -10187,69 +9915,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_5",
           "name_zh": "黑豹",
           "name_en": "Panther",
-          "description_zh": "最好不要激怒黑豹：它们中的大多数都具有攻击性行为模式。",
-          "description_en": "Better not anger black panthers: most of them have a pattern of aggressive behavior.",
-          "icon_path": "UI_WW_AlphaBinary06/puma_skin_5_icon",
-          "icon_sprite": "puma_skin_5_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/puma_cub_skin_5_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_5",
-          "child_avatar_view_id": "wls2_pet_puma_black_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            98,
-            2
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-            "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "puma_skin_5_icon"
-          },
           "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8"
         },
         {
           "id": "puma_skin_shadow",
           "name_zh": "暗影美洲狮",
           "name_en": "Shadow Puma",
-          "description_zh": "一名被暗影能量充盈的敏捷猎人",
-          "description_en": "An agile hunter infused with shadow energy",
-          "icon_path": "UI_WW_AlphaBinary11/puma_skin_shadow_icon",
-          "icon_sprite": "puma_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/puma_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_puma_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_puma_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_shadow.png",
-            "sha256": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "puma_skin_shadow_icon"
-          },
           "image_key": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4"
         }
       ],
-      "primary_skin_id": "puma_skin_5",
-      "primary_icon_sprite": "puma_skin_5_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_5.png",
-        "sha256": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "puma_skin_5_icon"
-      },
       "image_key": "c8a45f05e88d3bcf340dc4de6fa6bfd435cf3c775124e129c41af1bf140c69d8",
       "numeric": {
         "summary": [
@@ -11896,7 +11570,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T6 · 普通",
       "display_en": "Puma T6 · Common",
-      "tier_id": "puma_6",
       "tier": 6,
       "rarity": "common",
       "level_cap": 125,
@@ -11919,7 +11592,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -12834,41 +12506,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_6",
           "name_zh": "北美美洲狮",
           "name_en": "North American cougar",
-          "description_zh": "以敏捷和优雅的姿态在北方荒野中漫游崎岖的地貌",
-          "description_en": "Roams the rugged and wild Boreal landscapes with agility and grace",
-          "icon_path": "UI_WW_AlphaBinary08/puma_skin_6_icon",
-          "icon_sprite": "puma_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/puma_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_6",
-          "child_avatar_view_id": "wls2_pet_puma_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-            "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "puma_skin_6_icon"
-          },
           "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9"
         }
       ],
-      "primary_skin_id": "puma_skin_6",
-      "primary_icon_sprite": "puma_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-        "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "puma_skin_6_icon"
-      },
       "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
       "numeric": {
         "summary": [
@@ -14815,7 +14455,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T6 · 优秀",
       "display_en": "Puma T6 · Uncommon",
-      "tier_id": "puma_6",
       "tier": 6,
       "rarity": "uncommon",
       "level_cap": 125,
@@ -14838,7 +14477,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -15753,41 +15391,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_6",
           "name_zh": "北美美洲狮",
           "name_en": "North American cougar",
-          "description_zh": "以敏捷和优雅的姿态在北方荒野中漫游崎岖的地貌",
-          "description_en": "Roams the rugged and wild Boreal landscapes with agility and grace",
-          "icon_path": "UI_WW_AlphaBinary08/puma_skin_6_icon",
-          "icon_sprite": "puma_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/puma_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_6",
-          "child_avatar_view_id": "wls2_pet_puma_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-            "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "puma_skin_6_icon"
-          },
           "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9"
         }
       ],
-      "primary_skin_id": "puma_skin_6",
-      "primary_icon_sprite": "puma_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-        "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "puma_skin_6_icon"
-      },
       "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
       "numeric": {
         "summary": [
@@ -17734,7 +17340,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T6 · 稀有",
       "display_en": "Puma T6 · Rare",
-      "tier_id": "puma_6",
       "tier": 6,
       "rarity": "rare",
       "level_cap": 125,
@@ -17757,7 +17362,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -18672,41 +18276,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_6",
           "name_zh": "北美美洲狮",
           "name_en": "North American cougar",
-          "description_zh": "以敏捷和优雅的姿态在北方荒野中漫游崎岖的地貌",
-          "description_en": "Roams the rugged and wild Boreal landscapes with agility and grace",
-          "icon_path": "UI_WW_AlphaBinary08/puma_skin_6_icon",
-          "icon_sprite": "puma_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/puma_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_6",
-          "child_avatar_view_id": "wls2_pet_puma_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-            "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "puma_skin_6_icon"
-          },
           "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9"
         }
       ],
-      "primary_skin_id": "puma_skin_6",
-      "primary_icon_sprite": "puma_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-        "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "puma_skin_6_icon"
-      },
       "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
       "numeric": {
         "summary": [
@@ -20653,7 +20225,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T6 · 史诗",
       "display_en": "Puma T6 · Epic",
-      "tier_id": "puma_6",
       "tier": 6,
       "rarity": "epic",
       "level_cap": 125,
@@ -20676,7 +20247,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -21591,69 +21161,15 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_6",
           "name_zh": "北美美洲狮",
           "name_en": "North American cougar",
-          "description_zh": "以敏捷和优雅的姿态在北方荒野中漫游崎岖的地貌",
-          "description_en": "Roams the rugged and wild Boreal landscapes with agility and grace",
-          "icon_path": "UI_WW_AlphaBinary08/puma_skin_6_icon",
-          "icon_sprite": "puma_skin_6_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/puma_cub_skin_6_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_6",
-          "child_avatar_view_id": "wls2_pet_puma_alaska_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-            "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-            "source_sprite": "puma_skin_6_icon"
-          },
           "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9"
         },
         {
           "id": "puma_skin_shadow",
           "name_zh": "暗影美洲狮",
           "name_en": "Shadow Puma",
-          "description_zh": "一名被暗影能量充盈的敏捷猎人",
-          "description_en": "An agile hunter infused with shadow energy",
-          "icon_path": "UI_WW_AlphaBinary11/puma_skin_shadow_icon",
-          "icon_sprite": "puma_skin_shadow_icon",
-          "child_icon_path": "UI_WW_AlphaBinary11/puma_cub_skin_shadow_icon",
-          "avatar_id": "wls2_mob_animal_puma_skin_shadow",
-          "child_avatar_view_id": "wls2_mob_animal_puma_child_skin_shadow",
-          "skin_weight": 5,
-          "baiting_fertility": [
-            0
-          ],
-          "baiting_fertility_weights": [
-            0
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "preset_exclusive",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_shadow.png",
-            "sha256": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary11_3ac0166e7ac16742075e9f8d0c0e56cc.bundle",
-            "source_sprite": "puma_skin_shadow_icon"
-          },
           "image_key": "485895ad56c8ca93530e579aa8237422def12d0d820d91e7b8c5dd333b55c0f4"
         }
       ],
-      "primary_skin_id": "puma_skin_6",
-      "primary_icon_sprite": "puma_skin_6_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_6.png",
-        "sha256": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary08_2c2674bafeb0e6edb297aa4a65018f2e.bundle",
-        "source_sprite": "puma_skin_6_icon"
-      },
       "image_key": "e77ff8c08b2b5d57e363114909e37c2ea14b4f0662faaea7d632e5c0dd26c8b9",
       "numeric": {
         "summary": [
@@ -23600,7 +23116,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T7 · 普通",
       "display_en": "Puma T7 · Common",
-      "tier_id": "puma_7",
       "tier": 7,
       "rarity": "common",
       "level_cap": 145,
@@ -23623,7 +23138,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -24678,41 +24192,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_7",
           "name_zh": "山地美洲狮",
           "name_en": "Puma concolor",
-          "description_zh": "悬崖的幽灵。一秒钟消失，下一秒 — 你成了晚餐。",
-          "description_en": "A ghost of the cliffs. One second it's gone, the next — you're dinner.",
-          "icon_path": "UI_WW_AlphaBinary09/cougar_T7_icon",
-          "icon_sprite": "cougar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/cougar_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_7",
-          "child_avatar_view_id": "wls2_pet_puma_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-            "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "cougar_T7_icon"
-          },
           "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300"
         }
       ],
-      "primary_skin_id": "puma_skin_7",
-      "primary_icon_sprite": "cougar_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-        "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "cougar_T7_icon"
-      },
       "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
       "numeric": {
         "summary": [
@@ -26959,7 +26441,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T7 · 优秀",
       "display_en": "Puma T7 · Uncommon",
-      "tier_id": "puma_7",
       "tier": 7,
       "rarity": "uncommon",
       "level_cap": 145,
@@ -26982,7 +26463,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -28037,41 +27517,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_7",
           "name_zh": "山地美洲狮",
           "name_en": "Puma concolor",
-          "description_zh": "悬崖的幽灵。一秒钟消失，下一秒 — 你成了晚餐。",
-          "description_en": "A ghost of the cliffs. One second it's gone, the next — you're dinner.",
-          "icon_path": "UI_WW_AlphaBinary09/cougar_T7_icon",
-          "icon_sprite": "cougar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/cougar_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_7",
-          "child_avatar_view_id": "wls2_pet_puma_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-            "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "cougar_T7_icon"
-          },
           "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300"
         }
       ],
-      "primary_skin_id": "puma_skin_7",
-      "primary_icon_sprite": "cougar_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-        "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "cougar_T7_icon"
-      },
       "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
       "numeric": {
         "summary": [
@@ -30318,7 +29766,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T7 · 稀有",
       "display_en": "Puma T7 · Rare",
-      "tier_id": "puma_7",
       "tier": 7,
       "rarity": "rare",
       "level_cap": 145,
@@ -30341,7 +29788,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -31396,41 +30842,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_7",
           "name_zh": "山地美洲狮",
           "name_en": "Puma concolor",
-          "description_zh": "悬崖的幽灵。一秒钟消失，下一秒 — 你成了晚餐。",
-          "description_en": "A ghost of the cliffs. One second it's gone, the next — you're dinner.",
-          "icon_path": "UI_WW_AlphaBinary09/cougar_T7_icon",
-          "icon_sprite": "cougar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/cougar_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_7",
-          "child_avatar_view_id": "wls2_pet_puma_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-            "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "cougar_T7_icon"
-          },
           "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300"
         }
       ],
-      "primary_skin_id": "puma_skin_7",
-      "primary_icon_sprite": "cougar_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-        "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "cougar_T7_icon"
-      },
       "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
       "numeric": {
         "summary": [
@@ -33677,7 +33091,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Puma",
       "display_zh": "美洲狮 T7 · 史诗",
       "display_en": "Puma T7 · Epic",
-      "tier_id": "puma_7",
       "tier": 7,
       "rarity": "epic",
       "level_cap": 145,
@@ -33700,7 +33113,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "plateau",
       "habitat_zh": "高原",
       "habitat_en": "Plateau",
       "habitat_bonus": 0.1,
@@ -34755,41 +34167,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "puma_skin_7",
           "name_zh": "山地美洲狮",
           "name_en": "Puma concolor",
-          "description_zh": "悬崖的幽灵。一秒钟消失，下一秒 — 你成了晚餐。",
-          "description_en": "A ghost of the cliffs. One second it's gone, the next — you're dinner.",
-          "icon_path": "UI_WW_AlphaBinary09/cougar_T7_icon",
-          "icon_sprite": "cougar_T7_icon",
-          "child_icon_path": "UI_WW_AlphaBinary09/cougar_puppy_T7_icon",
-          "avatar_id": "wls2_mob_elite_animal_cat_7",
-          "child_avatar_view_id": "wls2_pet_puma_texas_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            0,
-            1
-          ],
-          "baiting_fertility_weights": [
-            99,
-            1
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-            "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-            "source_sprite": "cougar_T7_icon"
-          },
           "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300"
         }
       ],
-      "primary_skin_id": "puma_skin_7",
-      "primary_icon_sprite": "cougar_T7_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/puma_skin_7.png",
-        "sha256": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary09_3d60e865696ceca4fc65eed11ccd55c6.bundle",
-        "source_sprite": "cougar_T7_icon"
-      },
       "image_key": "9a20c5915bb91c59115510b9a6d5d19bdcb02ad145d426073ef0a7882478b300",
       "numeric": {
         "summary": [
@@ -37036,7 +36416,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T1 · 普通",
       "display_en": "Wolf T1 · Common",
-      "tier_id": "wolf_1",
       "tier": 1,
       "rarity": "common",
       "level_cap": 25,
@@ -37059,7 +36438,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -37249,43 +36627,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "wolf_skin_1",
           "name_zh": "黑狼",
           "name_en": "Gray wolf",
-          "description_zh": "灰狼通常会猎杀弱小的动物：年老或生病的动物。",
-          "description_en": "Gray wolves usually hunt on weak animals: old or ill ones.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_1_icon",
-          "icon_sprite": "wolf_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_wolf_1",
-          "child_avatar_view_id": "wls2_pet_wolf_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_1.png",
-            "sha256": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_1_icon"
-          },
           "image_key": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba"
         }
       ],
-      "primary_skin_id": "wolf_skin_1",
-      "primary_icon_sprite": "wolf_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_1.png",
-        "sha256": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_1_icon"
-      },
       "image_key": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
       "numeric": {
         "summary": [
@@ -37670,7 +37014,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T1 · 优秀",
       "display_en": "Wolf T1 · Uncommon",
-      "tier_id": "wolf_1",
       "tier": 1,
       "rarity": "uncommon",
       "level_cap": 25,
@@ -37693,7 +37036,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -37883,43 +37225,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "wolf_skin_1",
           "name_zh": "黑狼",
           "name_en": "Gray wolf",
-          "description_zh": "灰狼通常会猎杀弱小的动物：年老或生病的动物。",
-          "description_en": "Gray wolves usually hunt on weak animals: old or ill ones.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_1_icon",
-          "icon_sprite": "wolf_skin_1_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_1_icon",
-          "avatar_id": "wls2_mob_animal_wolf_1",
-          "child_avatar_view_id": "wls2_pet_wolf_gray_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            3,
-            4,
-            5
-          ],
-          "baiting_fertility_weights": [
-            33,
-            33,
-            33
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_1.png",
-            "sha256": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_1_icon"
-          },
           "image_key": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba"
         }
       ],
-      "primary_skin_id": "wolf_skin_1",
-      "primary_icon_sprite": "wolf_skin_1_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_1.png",
-        "sha256": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_1_icon"
-      },
       "image_key": "42fea093ba0e528a2a453359cb5d0f311183b22d4573865f17b350a9cc3a57ba",
       "numeric": {
         "summary": [
@@ -38304,7 +37612,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
       "species_en": "Wolf",
       "display_zh": "狼 T2 · 普通",
       "display_en": "Wolf T2 · Common",
-      "tier_id": "wolf_2",
       "tier": 2,
       "rarity": "common",
       "level_cap": 45,
@@ -38327,7 +37634,6 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
         "damage_fluct_min": -7,
         "damage_fluct_max": 7
       },
-      "habitat_id": "forest",
       "habitat_zh": "森林",
       "habitat_en": "Forest",
       "habitat_bonus": 0.2,
@@ -38637,43 +37943,9 @@ window.WIKI_CHUNKS["wiki-chunk-pets-9"] = {
           "id": "wolf_skin_2",
           "name_zh": "水牛狼",
           "name_en": "Buffalo wolf",
-          "description_zh": "水牛狼一夜之间可以穿越 80 公里。",
-          "description_en": "Buffalo wolf can cross up to 50 miles in one night.",
-          "icon_path": "UI_WW_AlphaBinary06/wolf_skin_2_icon",
-          "icon_sprite": "wolf_skin_2_icon",
-          "child_icon_path": "UI_WW_AlphaBinary07/wolf_cub_skin_2_icon",
-          "avatar_id": "wls2_mob_animal_wolf_2",
-          "child_avatar_view_id": "wls2_pet_wolf_brown_child",
-          "skin_weight": 1,
-          "baiting_fertility": [
-            2,
-            3,
-            4
-          ],
-          "baiting_fertility_weights": [
-            50,
-            25,
-            25
-          ],
-          "hidden_encyclopedia": false,
-          "reference_status": "tier_available",
-          "image_meta": {
-            "file": "westland_wiki_assets/pets/skins/wolf_skin_2.png",
-            "sha256": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
-            "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-            "source_sprite": "wolf_skin_2_icon"
-          },
           "image_key": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395"
         }
       ],
-      "primary_skin_id": "wolf_skin_2",
-      "primary_icon_sprite": "wolf_skin_2_icon",
-      "image_meta": {
-        "file": "westland_wiki_assets/pets/skins/wolf_skin_2.png",
-        "sha256": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
-        "source_bundle": "assets/aa/Android/ui-spriteatlases-crossscreen-items_assets_ui_ww_alphabinary06_790cd7b6c054c408ef071f35f04deb0b.bundle",
-        "source_sprite": "wolf_skin_2_icon"
-      },
       "image_key": "b3fbac784b452b188c46efc8b107eb2fe8fe07b7c96d1545db44574e9762b395",
       "numeric": {
         "summary": [

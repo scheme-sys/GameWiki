@@ -62,13 +62,9 @@
       `#${article.id}`,
       article.title,
       article.description,
-      article.titleKey,
-      article.descriptionKey,
       article.type,
       article.wikiGroup,
-      article.class,
       article.quality,
-      article.mailboxExclusionReason,
     ].join(" "));
   }
 

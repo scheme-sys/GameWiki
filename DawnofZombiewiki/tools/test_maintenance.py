@@ -22,16 +22,17 @@ class MaintenanceTests(unittest.TestCase):
         image = b'unchanged image bytes'
         image_path = 'assets/images/example#1.png'
         self.catalog = {
-            'meta': {'version': 'fixture', 'deployVersion': '1', 'builtAt': 'fixed'}, 'categories': [],
-            'entries': [{'id': 123456, 'key': 'DO_NOT_EXPORT_INTERNAL_CODE', 'name': '=danger', 'nameEn': 'Sample',
+            'meta': {'version': 'fixture', 'builtAt': 'fixed'}, 'categories': [],
+            'entries': [{'id': 123456, 'name': '=danger', 'nameEn': 'Sample',
                          'category': 'weapon', 'visible': True, 'stats': [{'label': '伤害', 'value': '230–240'}, {'label': '间隔', 'value': 0.87}],
-                         'iconBundleId': 8, 'abilities': [], 'sourceHints': []},
+                         'image': image_path, 'abilities': [{'name': '技能', 'description': '造成额外伤害', 'cooldown': 9}], 'sourceHints': [],
+                         'scenarioStats': [{'label': '场景生命候选', 'value': '220–900', 'attackInterval': 1.2, 'levels': [{'minLevel': 1, 'maxLevel': 15, 'value': 220}]}]},
                         {'id': 999, 'name': 'HIDDEN_ROW', 'category': 'weapon', 'visible': False}],
             'recipes': [], 'locations': [], 'quests': [], 'companions': [], 'skills': [], 'notes': [], 'factions': [], 'sets': [],
         }
         self.mechanics = {'guides': [{'title': f'Guide {index}', 'summary': 'Summary', 'sections': [{'title': 'Section', 'paragraphs': ['Unchanged paragraph.']}]} for index in range(7)]}
-        self.assets = {'version': 'fixture', 'complete': True, 'byBundleId': {'8': image_path}, 'byName': {},
-                       'assets': [{'path': image_path, 'bytes': len(image), 'categoryLabel': '武器'}]}
+        self.assets = {'version': 'fixture', 'hero': image_path,
+                       'images': [{'path': image_path, 'bytes': len(image), 'categoryLabel': '武器'}]}
         for name, data in [('catalog', self.catalog), ('mechanics', self.mechanics), ('asset-map', self.assets)]:
             self.write(f'data/{name}.json', json_bytes(data))
         self.write(image_path, image)
@@ -63,7 +64,7 @@ class MaintenanceTests(unittest.TestCase):
         self.assertEqual(rows[1][0], "'=danger")
         self.assertIn('230–240', rows[1][5])
         self.assertIn('0.87', rows[1][5])
-        for secret in ('123456', 'DO_NOT_EXPORT_INTERNAL_CODE', 'HIDDEN_ROW', 'iconBundleId'):
+        for secret in ('123456', 'HIDDEN_ROW', 'iconBundleId'):
             self.assertNotIn(secret, value)
 
     def test_update_is_repeatable_and_preserves_source_images_and_ui(self):
@@ -94,12 +95,39 @@ class MaintenanceTests(unittest.TestCase):
         self.write('assets/images/example#1.png', b'changed image bytes!!')
         self.assertTrue(any('Image hash changed' in error for error in verify(self.root, data_only=True)['errors']))
 
-    def test_legacy_importer_cannot_overwrite_current_wiki(self):
-        before = (ROOT / 'app.js').read_bytes()
-        result = subprocess.run([sys.executable, str(ROOT / 'tools/package_wiki.py')], capture_output=True, text=True)
+    def test_removed_technical_fields_block_generation_before_runtime_changes(self):
+        runtime = (self.root / 'data/catalog.js').read_bytes()
+        for field in ('key', 'rarityEvidence', 'initializationStats', 'iconBundleId', 'raw', '$ref'):
+            with self.subTest(field=field):
+                self.catalog['entries'][0][field] = 'synthetic source marker'
+                self.write('data/catalog.json', json_bytes(self.catalog))
+                result = self.command()
+                self.assertNotEqual(result.returncode, 0)
+                self.assertEqual((self.root / 'data/catalog.js').read_bytes(), runtime)
+                del self.catalog['entries'][0][field]
+
+    def test_technical_references_are_rejected_without_echoing_the_value(self):
+        marker = 'function(proto=synthetic-private-reference)'
+        self.catalog['entries'][0]['description'] = marker
+        self.write('data/catalog.json', json_bytes(self.catalog))
+        result = self.command()
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn('Archived one-time importer disabled', result.stderr)
-        self.assertEqual((ROOT / 'app.js').read_bytes(), before)
+        self.assertNotIn(marker, result.stdout + result.stderr)
+
+    def test_player_abilities_and_scenario_numbers_survive_generation(self):
+        runtime = read_js_json(self.root / 'data/catalog.js', 'DOZ_CATALOG')
+        row = runtime['entries'][0]
+        self.assertEqual(row['abilities'][0]['cooldown'], 9)
+        self.assertEqual(row['scenarioStats'][0]['attackInterval'], 1.2)
+        self.assertEqual(row['scenarioStats'][0]['levels'][0]['value'], 220)
+        self.assertEqual(row['image'], 'assets/images/example#1.png')
+
+    def test_manifest_accepts_only_local_image_hash_information(self):
+        path = self.root / 'reports/image-manifest.json'
+        data = json.loads(path.read_text(encoding='utf-8'))
+        data[0]['source'] = 'unused origin'
+        self.write('reports/image-manifest.json', json_bytes(data))
+        self.assertTrue(any('Unexpected image manifest fields' in error for error in verify(self.root, data_only=True)['errors']))
 
 
 if __name__ == '__main__':
