@@ -23,6 +23,8 @@
     ["Westland Survival/westland_wiki.html", "westland"],
     ["Westland Survival/westland_difficulty_design.html", "westland_lab"],
     ["Westland Survival/基地.html", "westland_base"],
+    ["DawnofZombiewiki/", "dawn"],
+    ["DawnofZombiewiki/index.html", "dawn"],
   ]);
   const formatter = new Intl.NumberFormat("zh-CN");
   const compactFormatter = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 1 });

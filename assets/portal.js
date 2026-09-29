@@ -11,7 +11,9 @@
     get(key) { try { return JSON.parse(localStorage.getItem('lcz:' + key)); } catch { return null; } },
     set(key, value) { try { localStorage.setItem('lcz:' + key, JSON.stringify(value)); } catch { /* Storage is optional. */ } }
   };
-  const saved = storage.get('positions-v2');
+  // A changed game roster needs a fresh arrangement; keep layouts for each roster.
+  const positionStorageKey = 'positions-v3:' + GAMES.map(game => game.id).sort().join(',');
+  const saved = storage.get(positionStorageKey);
   const positions = saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {};
   const nodes = new Map();
   let width = 0, height = 0, layoutKey = 'desktop';
@@ -88,7 +90,7 @@
   function savePositions() {
     positions[layoutKey] = Object.fromEntries(field.getBodies().map((body) =>
       [body.id, { x: body.anchorX / width, y: body.anchorY / height }]));
-    storage.set('positions-v2', positions);
+    storage.set(positionStorageKey, positions);
   }
   function layout() {
     cancelGesture();
@@ -97,10 +99,14 @@
     height = universe.clientHeight;
     layoutKey = innerHeight <= 500 && innerWidth > innerHeight ? 'landscape'
       : innerWidth <= 600 ? 'mobile' : innerWidth <= 900 ? 'tablet' : 'desktop';
+    // Keep four captions readable in a short landscape row and two phone columns.
+    const columns = layoutKey === 'landscape' ? GAMES.length : 2;
+    const captionWidth = Math.min(145, (width - 6 - 10 * (columns - 1)) / columns);
+    universe.style.setProperty('--compact-caption-width', captionWidth + 'px');
     field.resize(width, height);
     field.setBodies(GAMES.map((game) => {
       const node = nodes.get(game.id);
-      const size = layoutKey === 'landscape' ? Math.min(102, height * .43, width * .17)
+      const size = layoutKey === 'landscape' ? Math.min(102, height * .43, captionWidth - 28)
         : layoutKey === 'mobile' ? Math.min(122, width * .33) * game.size / 164
         : game.size * (layoutKey === 'tablet' ? .87 : 1);
       node.style.setProperty('--diameter', size + 'px');
@@ -295,7 +301,7 @@
   $('#reset-map').addEventListener('click', () => {
     cancelGesture();
     delete positions[layoutKey];
-    storage.set('positions-v2', positions);
+    storage.set(positionStorageKey, positions);
     layout();
     announce('气泡已恢复初始排列');
   });

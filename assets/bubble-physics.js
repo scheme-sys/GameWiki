@@ -245,12 +245,143 @@
       body.anchorY = limit(body.anchorY, bounds.minY, bounds.maxY);
     }
 
+
+    _captionContact(a, b) {
+      const span = a.radius + b.radius + this.gap;
+      const dx = b.x - a.x;
+      const down = a.y + span + a.labelHeight - b.y;
+      const up = b.y + span + b.labelHeight - a.y;
+      if (span - Math.abs(dx) <= EPSILON || down <= EPSILON || up <= EPSILON) return null;
+      return [
+        { axis: 'x', direction: 1, overlap: span - dx, span },
+        { axis: 'x', direction: -1, overlap: span + dx, span },
+        { axis: 'y', direction: 1, overlap: down, span: span + a.labelHeight },
+        { axis: 'y', direction: -1, overlap: up, span: span + b.labelHeight }
+      ];
+    }
+
+    _separateCaptions(a, b, pinGrabbed) {
+      const contact = this._captionContact(a, b);
+      if (!contact) return 0;
+      const boundsA = this._bounds(a), boundsB = this._bounds(b);
+      const pinnedA = pinGrabbed && a.id === this._grabbed;
+      const pinnedB = pinGrabbed && b.id === this._grabbed;
+      // A smaller penetration is not useful if a wall prevents that movement.
+      // Consider both signs on both axes, and transfer unused movement from a
+      // blocked body to its neighbour instead of losing half the correction.
+      const options = contact.map((move) => {
+        const suffix = move.axis === 'x' ? 'X' : 'Y';
+        const roomA = pinnedA ? 0 : move.direction > 0
+          ? a[move.axis] - boundsA['min' + suffix] : boundsA['max' + suffix] - a[move.axis];
+        const roomB = pinnedB ? 0 : move.direction > 0
+          ? boundsB['max' + suffix] - b[move.axis] : b[move.axis] - boundsB['min' + suffix];
+        return { ...move, roomA, roomB };
+      }).filter((move) => move.roomA + move.roomB >= move.overlap - EPSILON)
+        .sort((first, second) => first.overlap - second.overlap);
+      const move = options[0];
+      if (move) {
+        const shareA = pinnedA ? 0 : pinnedB ? 1 : 0.5;
+        let shiftA = Math.min(move.roomA, move.overlap * shareA);
+        const shiftB = Math.min(move.roomB, move.overlap - shiftA);
+        shiftA += Math.min(move.roomA - shiftA, move.overlap - shiftA - shiftB);
+        a[move.axis] -= move.direction * shiftA;
+        b[move.axis] += move.direction * shiftB;
+        this._clamp(a); this._clamp(b);
+      }
+      return Math.min(...contact.map((move) => move.overlap));
+    }
+
+    _packCaptions(targets) {
+      // A row can be collectively too wide although every pair fits on its own.
+      // In that rare jam, search feasible relative orders instead of repeatedly
+      // pushing the same row into its walls. Four bubbles need at most six pair
+      // constraints. Bounds propagation rejects impossible branches immediately.
+      const bodies = this._bodies;
+      const grabbed = bodies.findIndex((body) => body.id === this._grabbed);
+      const order = bodies.map((_, index) => index);
+      if (grabbed >= 0) order.unshift(...order.splice(grabbed, 1));
+      let best = null, visits = 0;
+      const score = (positions) => {
+        let pointer = 0, neighbours = 0;
+        positions.forEach((position, index) => {
+          const distance = (position.x - targets[index].x) ** 2 + (position.y - targets[index].y) ** 2;
+          if (index === grabbed) pointer = distance;
+          else neighbours += distance;
+        });
+        return { pointer, neighbours };
+      };
+      const better = (left, right) => !right || left.pointer < right.pointer - EPSILON ||
+        (Math.abs(left.pointer - right.pointer) <= EPSILON && left.neighbours < right.neighbours - EPSILON);
+      const project = (edges) => {
+        const ranges = bodies.map((body) => this._bounds(body));
+        const tighten = () => {
+          for (let pass = 0; pass <= bodies.length; pass++) {
+            let changed = false;
+            for (const edge of edges) {
+              const lo = edge.axis === 'x' ? 'minX' : 'minY';
+              const hi = edge.axis === 'x' ? 'maxX' : 'maxY';
+              const from = ranges[edge.from], to = ranges[edge.to];
+              const minimum = Math.max(to[lo], from[lo] + edge.span);
+              const maximum = Math.min(from[hi], to[hi] - edge.span);
+              changed ||= minimum > to[lo] + EPSILON || maximum < from[hi] - EPSILON;
+              to[lo] = minimum; from[hi] = maximum;
+              if (to[lo] > to[hi] + EPSILON || from[lo] > from[hi] + EPSILON) return false;
+            }
+            if (!changed) return true;
+          }
+          return false; // A positive cycle cannot describe a physical layout.
+        };
+        if (!tighten()) return null;
+        const nearest = () => targets.map((target, index) => ({
+          x: limit(target.x, ranges[index].minX, ranges[index].maxX),
+          y: limit(target.y, ranges[index].minY, ranges[index].maxY)
+        }));
+        const lowerBound = score(nearest());
+        if (best && !better(lowerBound, best.score)) return null;
+        // Fix the held bubble first so it follows the pointer whenever the
+        // available space permits; then keep neighbours near their old places.
+        for (const index of order) {
+          const position = nearest()[index];
+          ranges[index].minX = ranges[index].maxX = position.x;
+          ranges[index].minY = ranges[index].maxY = position.y;
+          if (!tighten()) return null;
+        }
+        return nearest();
+      };
+      const search = (edges) => {
+        if (++visits > 8192) return; // Bound the work when more games are added.
+        const positions = project(edges);
+        if (!positions) return;
+        for (let first = 0; first < bodies.length; first++) {
+          for (let second = first + 1; second < bodies.length; second++) {
+            const contact = this._captionContact(
+              { ...bodies[first], ...positions[first] }, { ...bodies[second], ...positions[second] });
+            if (!contact) continue;
+            for (const move of contact.sort((a, b) => a.overlap - b.overlap)) {
+              search([...edges, {
+                axis: move.axis, span: move.span,
+                from: move.direction > 0 ? first : second,
+                to: move.direction > 0 ? second : first
+              }]);
+            }
+            return;
+          }
+        }
+        const candidateScore = score(positions);
+        if (better(candidateScore, best && best.score)) best = { positions, score: candidateScore };
+      };
+      search([]);
+      if (best) best.positions.forEach((position, index) => Object.assign(bodies[index], position));
+    }
+
     _solve(recordPushes = false) {
       const before = recordPushes ? new Map(this._bodies.map((body) => [body.id, [body.x, body.y]])) : null;
       for (const body of this._bodies) this._clamp(body);
+      const hasCaptions = this._bodies.some((body) => body.labelHeight > 0);
+      const targets = hasCaptions ? this._bodies.map(({ x, y }) => ({ x, y })) : null;
       // First keep the grabbed icon under the pointer. If another icon reaches a
       // wall, the final passes also constrain the grabbed icon to avoid overlap.
-      for (let pass = 0; pass < 96; pass++) {
+      for (let pass = 0; pass < (hasCaptions ? 24 : 96); pass++) {
         let deepest = 0;
         for (let first = 0; first < this._bodies.length; first++) {
           const a = this._bodies[first];
@@ -260,12 +391,17 @@
             let dy = b.y - a.y;
             let distance = Math.hypot(dx, dy);
             const separation = a.radius + b.radius + this.gap;
+            let overlap;
+            if (a.labelHeight || b.labelHeight) {
+              deepest = Math.max(deepest, this._separateCaptions(a, b, true));
+              continue;
+            }
             if (distance >= separation - EPSILON) continue;
             if (distance < EPSILON) {
               const angle = seedFor(`${a.id}:${b.id}`) * Math.PI * 2;
               dx = Math.cos(angle); dy = Math.sin(angle); distance = 1;
             }
-            const overlap = separation - Math.hypot(b.x - a.x, b.y - a.y);
+            overlap = separation - Math.hypot(b.x - a.x, b.y - a.y);
             deepest = Math.max(deepest, overlap);
             const pinnedA = pass < 24 && a.id === this._grabbed;
             const pinnedB = pass < 24 && b.id === this._grabbed;
@@ -279,6 +415,9 @@
           }
         }
         if (deepest < EPSILON) break;
+      }
+      if (hasCaptions && this._bodies.some((a, index) => this._bodies.slice(index + 1).some((b) => this._captionContact(a, b)))) {
+        this._packCaptions(targets);
       }
       if (before) {
         for (const body of this._bodies) {

@@ -1,6 +1,6 @@
 # LCZ · 游戏星图
 
-一个以手机体验为优先的游戏 Wiki 集合。主页以圆形游戏图标和中英标题呈现三个世界，气泡轻微漂移，可以拖动，并会自然推开邻近气泡。介绍在需要时出现，游戏资料独立加载。
+一个以手机体验为优先的游戏 Wiki 集合。主页以圆形游戏图标和中英标题呈现四个世界，气泡轻微漂移，可以拖动，并会自然推开邻近气泡。介绍在需要时出现，游戏资料独立加载。
 
 站点内容使用纯 HTML、CSS、JavaScript，无需 npm 安装或站点构建，可直接托管到 GitHub Pages。访问统计使用外部公开计数服务，与 Wiki 资料加载分开运行。
 
@@ -9,7 +9,7 @@
 - **鼠标**：悬停气泡查看介绍，点击进入游戏 Wiki；按住拖动可以调整位置。
 - **手机**：轻触直接进入；长按约 520 毫秒查看介绍，松手保留介绍，再次点击进入。移动手指会转为拖动，取消长按。
 - **动态**：气泡轻微漂移，拖动时相互排斥。可暂停自动漂移；系统开启“减少动态效果”时，会暂停自动漂移。
-- **位置**：桌面、平板、手机竖屏和横屏分别保存摆放锚点。漂移不会改变保存的位置，重置恢复当前布局的初始摆放。
+- **位置**：桌面、平板、手机竖屏和横屏分别保存摆放锚点。漂移不会改变保存的位置，重置恢复当前布局的初始摆放。游戏目录增加或减少时会使用新的初始排列，避免沿用旧布局挤压新气泡。
 - **查找**：搜索支持中文展示名、英文名称和关键词，也可以从游戏目录访问各个百科与工具。
 
 主页采用简洁的圆形气泡布局，介绍不常驻在左侧，也不依靠编号或装饰外圈识别游戏。
@@ -23,6 +23,7 @@
 | 生存工艺 / Craft of Survival | 暗黑奇幻 · 生存 | [物品 Wiki](Craft%20of%20Survival/wiki.html)，含 3,843 条物品资料、4 项货币资料及 1,189 个图标 |
 | 辐射生存 / Day R Survival | 废土末日 · 生存 | [物品、武器与怪物档案](Day%20R%20Survival/wiki_dayR.html)，含 2,157 件物品与 2,643 个战斗单位 |
 | 西部世界 / Westland Survival | 西部冒险 · 生存 | [物品 Wiki](Westland%20Survival/westland_wiki.html)、[难度与配装实验室](Westland%20Survival/westland_difficulty_design.html)、[基地设计提案](Westland%20Survival/基地.html) |
+| 僵尸的黎明 / Dawn of Zombies | 废土末日 · 生存 | [玩家百科](DawnofZombiewiki/index.html)，含 5,635 条默认可见图鉴记录、1,515 条配方、175 个地点、2,786 条任务及 3,687 张原图 |
 
 游戏页面保留原有资料与功能，顶部提供返回星图的统一入口。主页图标来自各游戏官方 Google Play 商店页面，来源、英文名称与文件摘要见 [assets/game-icons/README.md](assets/game-icons/README.md)。游戏名称、图标及相关资料归各自权利人所有；本站是非官方资料整理项目。
 
@@ -37,6 +38,7 @@
 本站向爬虫声明不收录、不跟踪链接、不展示摘要，并通过 CSP 限制未授权脚本和资源加载。玩家可正常浏览、搜索、复制资料和使用导入导出功能，无验证码或等待步骤。
 
 项目目录中的 robots.txt 不能替代域名根的爬虫规则；仓库已提供域名根合并模板。公开静态站及公开仓库无法强制阻止恶意下载。策略、生效范围、部署位置与验证方法见 [docs/security.md](docs/security.md)。
+
 ## 本地打开
 
 直接双击根目录的 `index.html` 即可打开。保持各文件夹相对位置不变，游戏页面也可以独立打开。
@@ -66,6 +68,8 @@ python -m http.server 4173 --bind 127.0.0.1
 
 站点使用相对资源路径，兼容 `/LCZ-GameWiki/` 项目子目录。`404.html` 提供返回入口，并兼容原 `/GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。
 
+Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；原始 JSON、素材浏览器、维护报告与工具留在仓库。
+
 发布产物包含根入口、404 页面、`.nojekyll`，以及公共 `assets/` 和已登记游戏目录内的 HTML、CSS、JavaScript、图片与字体。README、开发脚本、来源 JSON 与校验清单保留在仓库，不包含在 Pages 产物中。游戏资料通过本地普通 JavaScript 文件载入；访问统计另行请求外部服务的 JSON。
 
 GitHub 的设置说明见[使用自定义工作流部署 Pages](https://docs.github.com/zh/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
@@ -86,7 +90,9 @@ docs/visits.md                访问统计范围与维护说明
 Craft of Survival/           Wiki、样式、脚本、数据与图标
 Day R Survival/wiki-assets/   分离的 css/、js/、data/、images/
 Westland Survival/wiki-assets/ wiki/、lab/、base/ 与共享 images/
+DawnofZombiewiki/              玩家页面、数据、分类图片、指南与维护工具
 scripts/check-site.mjs         无依赖静态检查与发布打包
+scripts/lib/public-files.mjs   公开文件范围，排除维护页面和原始数据
 scripts/test-portal.py         可选的门户浏览器交互检查
 .github/workflows/pages.yml    GitHub Pages 发布工作流
 ```
@@ -107,7 +113,18 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 
 各游戏的大图和数据库已独立于 HTML 存放。Day R 按原始分类保存图像，Westland 共享重复图片并按需加载百科详情块。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML。
 
-详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
+详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
+
+### 更新 Dawn of Zombies 资料
+
+以 `DawnofZombiewiki/data/` 内的 JSON 为维护源，图片按分类保存在 `assets/images/`；布局、交互和数据分开维护。更新资料后运行：
+
+```sh
+python DawnofZombiewiki/tools/update_data.py
+python DawnofZombiewiki/tools/verify_package.py --data-only
+```
+
+第一个命令同步网页使用的 JS 数据与收录统计，不会改动原始 JSON 或图片。需要同时重建中文 CSV 和 Markdown 指南时使用 `update_data.py --exports`，查看文件差异后提交。详细目录职责、导出差异和新增图片流程见 [Dawn 维护说明](DawnofZombiewiki/README.md)。发布工作流也会校验 Dawn 的数据同步及原图完整性。
 
 ## 检查与发布预览
 
@@ -119,9 +136,11 @@ node scripts/test-bubble-physics.cjs
 node scripts/test-site-stats.mjs
 node scripts/test-site-security.mjs
 node scripts/test-asset-versions.mjs
+node scripts/test-public-files.mjs
+python DawnofZombiewiki/tools/verify_package.py --data-only
 ```
 
-检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径和 Westland 按需数据块。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。
+检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径、Dawn 玩家下载及图片映射、Westland 按需数据块。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。
 
 生成与 GitHub Actions 完全相同的发布文件并检查：
 
@@ -148,6 +167,7 @@ node scripts/check-site.mjs --root .verification/site-preview
 ```sh
 python -m pip install playwright
 python scripts/test-portal.py
+python scripts/test-dawn.py
 ```
 
-脚本启动独立的无头浏览器和临时本地 HTTP 服务，检查主页交互、移动端布局与页面脚本错误，输出位于 `.verification/portal/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。

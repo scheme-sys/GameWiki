@@ -1,0 +1,69 @@
+{
+  "result": "pass",
+  "checks": [
+    "Every unique image matches all source SHA-256 records; no missing or unreferenced image",
+    "Runtime JSON wrappers preserve all source fields and metadata is current",
+    "All player export cells and guide paragraphs match JSON, except explicitly recorded historical text"
+  ],
+  "errors": [],
+  "warnings": [],
+  "images": 3687,
+  "sha256SourceRecords": 3689,
+  "imageBytes": 343838419,
+  "catalogueRows": 15491,
+  "visiblePlayerRows": 5635,
+  "coverage": {
+    "weapon": {
+      "entries": 461,
+      "withImage": 461
+    },
+    "armor": {
+      "entries": 500,
+      "withImage": 500
+    },
+    "enemy": {
+      "entries": 787,
+      "withImage": 165
+    },
+    "companion": {
+      "entries": 78,
+      "withImage": 76
+    },
+    "resource": {
+      "entries": 1338,
+      "withImage": 1338
+    },
+    "consumable": {
+      "entries": 322,
+      "withImage": 322
+    },
+    "building": {
+      "entries": 289,
+      "withImage": 289
+    },
+    "other": {
+      "entries": 1860,
+      "withImage": 1642
+    }
+  },
+  "csvRows": {
+    "武器图鉴.csv": 461,
+    "防具装备.csv": 500,
+    "怪物档案.csv": 787,
+    "随从图鉴.csv": 78,
+    "资源材料.csv": 1338,
+    "食物药品.csv": 322,
+    "建筑设施.csv": 289,
+    "道具收藏.csv": 1860,
+    "地图地点.csv": 175,
+    "任务档案.csv": 2786,
+    "角色技能.csv": 155,
+    "废土笔记.csv": 408,
+    "势力阵营.csv": 14,
+    "装备套装.csv": 20,
+    "制作配方.csv": 1515
+  },
+  "csvFiles": 15,
+  "guides": 7,
+  "browserTested": false
+}

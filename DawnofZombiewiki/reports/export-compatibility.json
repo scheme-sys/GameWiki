@@ -1,0 +1,48 @@
+{
+  "reason": "Six original CSV label cells were synchronized to the existing conservative JSON classification for three workbench operations. All numeric cells, other CSV cells and guide paragraphs are unchanged. Original labels remain recorded below for audit.",
+  "differences": [
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 208,
+      "column": 1,
+      "preserved": "修理：漫游者衬衫",
+      "json": "处理：漫游者衬衫"
+    },
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 208,
+      "column": 2,
+      "preserved": "修理配方",
+      "json": "工作台处理"
+    },
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 243,
+      "column": 1,
+      "preserved": "修理：升级版镐",
+      "json": "处理：升级版镐"
+    },
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 243,
+      "column": 2,
+      "preserved": "修理配方",
+      "json": "工作台处理"
+    },
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 862,
+      "column": 1,
+      "preserved": "修理：暗黑游荡者战术背心",
+      "json": "处理：暗黑游荡者战术背心"
+    },
+    {
+      "file": "data/player/制作配方.csv",
+      "row": 862,
+      "column": 2,
+      "preserved": "修理配方",
+      "json": "工作台处理"
+    }
+  ],
+  "status": "synchronized"
+}

@@ -1,11 +1,12 @@
 # 访问统计的范围与维护
 
-主页和五个游戏资料页通过 `assets/site-stats.js` 共用公开在线计数器，样式在 `assets/site-stats.css`。点击或轻触导航中的“访问”数字可查看本站累计和当前页面的累计浏览次数。
+主页和六个游戏资料页通过 `assets/site-stats.js` 共用公开在线计数器，样式在 `assets/site-stats.css`。点击或轻触导航中的“访问”数字可查看本站累计和当前页面的累计浏览次数。
 
 ## 统计范围
 
-- 仅当页面来源为 `https://scheme-sys.github.io`、路径为 `/GameWiki/` 或 `/LCZ-GameWiki/` 下列出的六个页面时发送请求。这两个精确项目目录是同一个项目改名前后的允许地址。本地 `file:`、localhost、其他项目、未知页面及预览域名不计数。
+- 仅当页面来源为 `https://scheme-sys.github.io`、路径为 `/GameWiki/` 或 `/LCZ-GameWiki/` 下列出的七个页面时发送请求。这两个精确项目目录是同一个项目改名前后的允许地址。本地 `file:`、localhost、其他项目、未知页面及预览域名不计数。
 - 两个目录的主页（目录入口与 `index.html`）合并为同一个主页计数器；对应游戏子页也共用原有 key，改名后会继续累计，不会清零或分成两套数字。路径以目录边界匹配，`/GameWiki-other/` 等其他仓库不会被计入。
+- `DawnofZombiewiki/` 与 `DawnofZombiewiki/index.html` 合并为同一个 Dawn 页面计数器。
 - 每次新加载的可见页面，分别向项目总计数器和当前页面计数器发送一次增加请求。刷新会计数；返回浏览器保留的页面、切换搜索/筛选、改变 URL 锚点、重复执行脚本不会重复计数。
 - 使用项目专用的固定 key，与 `scheme-sys.github.io` 下其他仓库的流量分离。页面身份来自允许列表，不包含搜索参数或锚点。
 - 统计从首次部署此功能后开始，无法补算功能上线之前的访问量；显示的是页面浏览次数（PV），并非独立访客人数（UV）。
@@ -18,6 +19,7 @@
 | Westland 物品 Wiki | `page_westland` |
 | Westland 配装实验室 | `page_westland_lab` |
 | Westland 基地设计 | `page_westland_base` |
+| Dawn of Zombies Wiki | `page_dawn` |
 | 上述页面总计 | `site` |
 
 所有 key 共用 `scheme_sys_lcz_gamewiki_v1_` 前缀。保持前缀与 key 稳定，版本更新不会清零；修改 key 会创建一个新的计数器。

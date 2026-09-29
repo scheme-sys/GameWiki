@@ -1,10 +1,10 @@
-/* Offline-first player encyclopedia. No network requests or third-party scripts. */
+/* LCZ Dawn player encyclopedia. Game data stays local; UI state is optional. */
 (() => {
   'use strict';
   const $ = (s, root = document) => root.querySelector(s);
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt = v => Number(v || 0).toLocaleString('zh-CN');
-  const plain = v => String(v ?? '').replace(/<[^>]*>/g, '').replace(/\[\/?(?:color|b|i|size)[^\]]*\]/gi, '').trim();
+  const plain = v => String(v ?? '').replace(/<[^>]*>/g, '').replace(/\[\/?(?:color|b|i|size)[^\]]*\]/gi, '').replace(/\{\d+\}/g, '').replace(/[：:]\s*$/, '').trim();
   const rich = v => esc(plain(v)).replace(/\n/g, '<br>');
   const C = window.DOZ_CATALOG;
   const A = window.DOZ_ASSETS || window.DOZ_ASSET_MAP || {byName:{},byBundleId:{}};
@@ -12,10 +12,20 @@
   const S = window.DOZ_SITE_META || {};
   const main = $('#main');
   if (!C || !Array.isArray(C.entries)) {
-    main.innerHTML = '<div class="load-error"><h1>资料文件尚未就绪</h1><p>请确保整个 DawnofZombiewiki 文件夹已完整保留，且 data/catalog.js 位于页面旁的 data 文件夹中。资料生成完成后重新打开此页。</p></div>';
+    main.innerHTML = '<div class="load-error"><h1>资料文件尚未就绪</h1><p>资料暂时未能打开，请刷新后重试。离线使用时，请完整保留下载的页面和图片。</p></div>';
     return;
   }
-  const entries = C.entries;
+  // Keep internal identifiers in the model, never use them as player labels.
+  const technicalText = value => /(?:\b(?:EntityId|entity_id|prefab|assetbundle|bundleId)\b|\b[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+\b|(?:assets|data)[\\/]|\.(?:json|lua|prefab|asset|cs)\b|内部(?:键|编号|代码)|资源路径)/i.test(String(value || ''));
+  const playerName = entry => [entry.name, entry.title, entry.nameEn].map(plain).find(value => value && !technicalText(value) && value !== String(entry.id)) || '名称待补充';
+  const playerNotes = notes => (Array.isArray(notes) ? notes : []).filter(note => !technicalText(note));
+  const playerStats = stats => (Array.isArray(stats) ? stats : [])
+    .filter(stat => !/(?:\bID\b|编号|代码|内部|资源路径)/i.test(stat.label || '') && !technicalText(stat.value))
+    .map(stat => ({...stat, label: plain(stat.label).replace(/（配置）|配置/g, '')}));
+  const entries = C.entries.map(entry => ({...entry,
+    name: playerName(entry), nameEn: technicalText(entry.nameEn) ? '' : plain(entry.nameEn),
+    stats: playerStats(entry.stats), tags: playerNotes(entry.tags), sourceHints: playerNotes(entry.sourceHints)
+  }));
   const byId = new Map(entries.map(e => [String(e.id), e]));
   const visible = entries.filter(e => e.visible !== false);
   const icons = {
@@ -37,27 +47,52 @@
     favorites:'<path d="m12 3 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z"/>'
   };
   const icon = key => `<span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24">${icons[key] || icons.other}</svg></span>`;
-  const labels = {home:'资料总览',weapon:'武器图鉴',armor:'防具装备',enemy:'怪物档案',companion:'随从图鉴',resource:'资源材料',consumable:'补给与消耗品',building:'建筑与设施',other:'其他物品',recipes:'制作配方',locations:'地图地点',quests:'任务档案',gacha:'抽卡与开箱',guides:'生存指南',library:'成长与故事',about:'资料与素材',favorites:'我的收藏',search:'图鉴搜索'};
+  const labels = {home:'资料总览',weapon:'武器图鉴',armor:'防具装备',enemy:'怪物档案',companion:'随从图鉴',resource:'资源材料',consumable:'补给与消耗品',building:'建筑与设施',other:'其他物品',recipes:'制作配方',locations:'地图地点',quests:'任务档案',gacha:'抽卡与开箱',guides:'生存指南',library:'成长与故事',about:'收录与下载',favorites:'我的收藏',search:'图鉴搜索'};
   const navGroups = [{label:'探索百科',items:['home','weapon','armor','enemy','companion']},{label:'生存与制作',items:['resource','consumable','building','other','recipes','locations','quests']},{label:'深入了解',items:['gacha','guides','library','about']}];
   const counts = Object.fromEntries(Object.keys(labels).map(k => [k, visible.filter(e => e.category === k).length]));
   const readStore = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) || fallback;}catch{return fallback;}};
-  let favorites = new Set(readStore('doz-wiki-favorites', []).map(String));
+  const storedFavorites = readStore('doz-wiki-favorites', []);
+  let favorites = new Set((Array.isArray(storedFavorites) ? storedFavorites : [])
+    .filter(id => typeof id === 'string' || typeof id === 'number').map(String).filter(id => byId.has(id)));
   let comparison = [];
   let state = {route:'home',query:'',rarity:'',subtype:'',sort:'default',showHidden:false,page:1,onlyImages:false};
   let listState = {query:'',page:1};
   let libraryTab = 'skills';
   const PAGE = 40;
   let toastTimer;
-  function toast(message) {$('#toast').textContent = message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),2300);}
-  function imagePath(e) {
-    if (!e) return '';
-    if (e.image) return typeof e.image === 'string' ? e.image : e.image.path || '';
-    const val = A.byBundleId?.[e.iconBundleId] || A.byBundleId?.[e.iconSmallBundleId] || A.byBundleId?.[e.referenceIconBundleId];
-    if (val) return typeof val === 'string' ? val : val.path || val.image || '';
-    return '';
+  let searchTimer;
+  function cancelPendingSearch() {
+    clearTimeout(searchTimer);
+    searchTimer = undefined;
   }
-  const art = (e, lazy=true) => imagePath(e) ? `<img src="${esc(imagePath(e))}" alt="${esc(e.name)}${e.referenceIconBundleId?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceIconBundleId?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>${e.iconBundleId||e.iconSmallBundleId?'对应图鉴素材暂缺':'原始配置未提供独立图鉴'}</span></span>`;
-  const getName = e => plain(e?.name || e?.title || '未命名条目');
+  // Search belongs to the input's current view, including library tab changes.
+  function bindSearch(selector, updateQuery, render) {
+    cancelPendingSearch();
+    const input = $(selector);
+    const inputRoute = state.route;
+    input.addEventListener('input', () => {
+      if (!input.isConnected || state.route !== inputRoute) return;
+      updateQuery(input.value);
+      cancelPendingSearch();
+      searchTimer = setTimeout(() => {
+        searchTimer = undefined;
+        if (input.isConnected && state.route === inputRoute) render();
+      }, 140);
+    });
+  }
+  function toast(message) {$('#toast').textContent = message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),2300);}
+  function localPath(path, pattern) {
+    if (typeof path !== 'string' || !pattern.test(path) || path.split('/').some(part => part === '..')) return '';
+    // Filenames contain Chinese, spaces and even #; encode each real segment.
+    return path.split('/').map(part => encodeURIComponent(part)).join('/');
+  }
+  function imagePath(entry) {
+    if (!entry) return '';
+    const value = entry.image || A.byBundleId?.[entry.iconBundleId] || A.byBundleId?.[entry.iconSmallBundleId] || A.byBundleId?.[entry.referenceIconBundleId];
+    return localPath(typeof value === 'string' ? value : value?.path || value?.image || '', /^assets\/images\//);
+  }
+  const art = (e, lazy=true) => imagePath(e) ? `<img src="${esc(imagePath(e))}" alt="${esc(e.name)}${e.referenceIconBundleId?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceIconBundleId?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>暂无独立图鉴图片</span></span>`;
+  const getName = entry => playerName(entry || {});
   const rarityName = e => e.rarityLabel || (typeof e.rarity === 'string' ? e.rarity : '') || '未标注品质';
   const rarityClass = e => /传说|传奇|独特|橙|金/.test(rarityName(e))?'legendary':/史诗|紫/.test(rarityName(e))?'epic':/稀有|蓝/.test(rarityName(e))?'rare':'common';
   const statVal = (e, re) => (e.stats || []).find(s => re.test(s.label))?.value;
@@ -79,16 +114,16 @@
   }
   function sample(category,n=1) {const preferred={weapon:142,armor:188,enemy:5864,companion:12949};const rows=visible.filter(e=>e.category===category&&imagePath(e));return rows.sort((a,b)=>Number(b.id===preferred[category])-Number(a.id===preferred[category])).slice(0,n);}
   function renderHome() {
-    const hero = A.byName?.firstloading_bkg || '';
+    const hero = localPath(A.byName?.firstloading_bkg || '', /^assets\/images\//);
     const featured = [142,2825,9].map(id=>byId.get(String(id))).filter(e=>e&&imagePath(e));
     if (featured.length<3) featured.push(...visible.filter(e=>e.category==='weapon'&&!featured.includes(e)).slice(0,3-featured.length));
     const tiles = [{key:'weapon',en:'WEAPONS',desc:'火力、近战与战斗选择'},{key:'armor',en:'EQUIPMENT',desc:'防护、品质与装备属性'},{key:'enemy',en:'BESTIARY',desc:'认识废土中的威胁'},{key:'companion',en:'COMPANIONS',desc:'寻找并培养你的伙伴'}];
-    main.innerHTML = `<section class="hero">${hero?`<img class="hero-image" src="${esc(hero)}" alt="Dawn of Zombies 游戏原版废土场景">`:''}<div class="hero-content"><div class="eyebrow">SURVIVOR'S FIELD GUIDE / 幸存者手册</div><h1>生存，需要<br><em>了解这片废土。</em></h1><p>从第一把武器到下一位同行者。<br>查阅图鉴、研究配方，带着准备重返黎明。</p><div class="hero-actions"><a class="primary-button" href="#weapon">探索武器图鉴 <span>↗</span></a><a class="secondary-button" href="#guides">阅读生存指南 <span>→</span></a></div></div><span class="hero-coordinate">THE LAST TERRITORIES · FIELD ARCHIVE 02.278</span></section>
+    main.innerHTML = `<section class="hero">${hero?`<img class="hero-image" src="${esc(hero)}" alt="Dawn of Zombies 游戏原版废土场景">`:''}<div class="hero-content"><div class="eyebrow">SURVIVOR'S FIELD GUIDE / 幸存者手册</div><h1>生存，需要<br><em>了解这片废土。</em></h1><p>从第一把武器到下一位同行者。<br>查阅图鉴、研究配方，带着准备重返黎明。</p><div class="hero-actions"><a class="primary-button" href="#weapon">探索武器图鉴 <span>↗</span></a><a class="secondary-button" href="#guides">阅读生存指南 <span>→</span></a></div></div><span class="hero-coordinate">DAWN OF ZOMBIES · LCZ WIKI</span></section>
       <section class="stats-strip" aria-label="资料库统计">${[{k:'weapon',n:counts.weapon+counts.armor,l:'武器与防具档案'},{k:'enemy',n:counts.enemy,l:'怪物与敌对生物'},{k:'recipes',n:(C.recipes||[]).length,l:'制作配方记录'},{k:'resource',n:visible.length,l:'玩家图鉴条目'}].map(s=>`<a class="stat-block" href="#${s.k}">${icon(s.k)}<div><strong>${fmt(s.n)}</strong><span class="label">${s.l}</span></div></a>`).join('')}</section>
       ${sectionHead('探索图鉴','EXPLORE THE ARCHIVE')}
       <div class="explore-grid">${tiles.map(t=>{const e=sample(t.key)[0];return `<a class="explore-card" href="#${t.key}"><div class="eyebrow">${t.en}</div><h3>${labels[t.key]}</h3><p>${t.desc}</p><span class="arrow">↗</span>${e?`<img src="${esc(imagePath(e))}" alt="" loading="lazy">`:''}</a>`;}).join('')}</div>
       <div class="home-bottom"><section>${sectionHead('装备档案选读','FIELD EQUIPMENT','weapon')}<div class="featured-grid">${featured.map(e=>card(e,true)).join('')}</div></section><section>${sectionHead('机制研究','SURVIVAL INTELLIGENCE','gacha','深入阅读')}<article class="guide-teaser"><span class="corner-art" aria-hidden="true">✧</span><div class="eyebrow">概率 · 保底 · 资源规划</div><h3>下一次召唤之前，<br>先读懂规则。</h3><p>普通、阿尔法与新手召唤分别说明。结合原版帮助文本，区分基础概率、目标保底和待确认条件。</p><a href="#gacha" class="text-link">打开抽取机制档案 →</a></article></section></div>
-      <div class="version-note"><strong>档案版本说明</strong><span>本百科依据 2.278 安装包内置资料整理；数值为基础配置，活动开放与实际获取以游戏内为准。缺失的远程图鉴会明确标注。<a href="#about" class="text-link"> 查看收录情况 ↗</a></span></div>`;
+      <div class="version-note"><strong>档案版本说明</strong><span>本百科依据 2.278 游戏资料整理。基础属性会随等级、技能与活动规则变化；没有独立图片的条目会保留文字说明。<a href="#about" class="text-link"> 查看收录情况 ↗</a></span></div>`;
   }
   function filteredEntries() {
     const q = state.query.trim().toLocaleLowerCase();
@@ -107,13 +142,12 @@
     const eligible = entries.filter(e=>state.route==='search'||state.route==='favorites'&&favorites.has(String(e.id))||e.category===state.route);
     const rarities = [...new Set(eligible.map(rarityName))].sort();
     const subtypes = [...new Set(eligible.map(e=>e.subcategory).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
-    const desc = {weapon:'从近战到远程，检索原版武器的基础伤害、攻击间隔和耐久。实际表现还受等级、技能和战斗效果影响。',armor:'查看每件防具的基础属性与游戏说明，按品质筛选，并将装备加入对比。',enemy:'整理原版怪物及敌对生物。相同名称可能对应不同地区或活动变体，请结合基础属性辨别。',companion:'查看随从与相关形态。召唤概率、目标保底和培养说明另见「抽卡与开箱」。',favorites:'收藏保存在当前浏览器中。点击星标添加或移除，方便下次出发前查阅。',search:'按中文或英文名称、说明与标签检索玩家图鉴；页面不会显示游戏实体编号。'};
-    main.innerHTML = heading(labels[state.route] || '图鉴',esc(desc[state.route] || '查阅游戏中的相关物品、用途和基础配置。点击条目打开完整档案。'),'SURVIVOR ARCHIVE / '+state.route.toUpperCase(),eligible.filter(e=>e.visible!==false).length)+
+    const desc = {weapon:'从近战到远程，检索原版武器的基础伤害、攻击间隔和耐久。实际表现还受等级、技能和战斗效果影响。',armor:'查看每件防具的基础属性与游戏说明，按品质筛选，并将装备加入对比。',enemy:'整理原版怪物及敌对生物。相同名称可能对应不同地区或活动变体，请结合基础属性辨别。',companion:'查看随从与相关形态。召唤概率、目标保底和培养说明另见「抽卡与开箱」。',favorites:'收藏保存在当前浏览器中。点击星标添加或移除，方便下次出发前查阅。',search:'按中文或英文名称、说明与标签检索图鉴，找到下一次探索需要的资料。'};
+    main.innerHTML = heading(labels[state.route] || '图鉴',esc(desc[state.route] || '查阅游戏中的相关物品、用途和基础属性。点击条目打开详细资料。'),'SURVIVOR ARCHIVE / '+state.route.toUpperCase(),eligible.filter(e=>e.visible!==false).length)+
       `<div class="filter-panel"><div class="filter-row"><input id="catalog-search" type="search" placeholder="输入名称或用途筛选…" aria-label="搜索当前分类" value="${esc(state.query)}"><select id="rarity-filter" aria-label="筛选品质"><option value="">全部品质</option>${rarities.map(r=>`<option ${state.rarity===r?'selected':''}>${esc(r)}</option>`).join('')}</select><select id="sort-filter" aria-label="排序方式"><option value="default">默认顺序</option><option value="name">名称排序</option><option value="damage">基础伤害优先</option><option value="defense">防护数值优先</option><option value="durability">耐久数值优先</option></select></div><div class="filter-row"><label><input type="checkbox" id="hidden-filter" ${state.showHidden?'checked':''}>包含特殊 / 未开放条目</label><label><input type="checkbox" id="image-filter" ${state.onlyImages?'checked':''}>只看已有图鉴</label><button class="chip" id="clear-filters">重置筛选</button></div></div><div id="catalog-results"></div>`;
     $('#sort-filter').value = state.sort;
     if(subtypes.length){const select=document.createElement('select');select.id='subtype-filter';select.setAttribute('aria-label','筛选装备或生物类型');select.innerHTML='<option value="">全部类型</option>'+subtypes.map(s=>`<option>${esc(s)}</option>`).join('');select.value=state.subtype;$('#rarity-filter').before(select);select.addEventListener('change',e=>{state.subtype=e.target.value;state.page=1;renderResults();});}
-    let t;
-    $('#catalog-search').addEventListener('input',e=>{state.query=e.target.value;state.page=1;clearTimeout(t);t=setTimeout(renderResults,140);});
+    bindSearch('#catalog-search',query=>{state.query=query;state.page=1;},renderResults);
     $('#rarity-filter').addEventListener('change',e=>{state.rarity=e.target.value;state.page=1;renderResults();});
     $('#sort-filter').addEventListener('change',e=>{state.sort=e.target.value;renderResults();});
     $('#hidden-filter').addEventListener('change',e=>{state.showHidden=e.target.checked;state.page=1;renderResults();});
@@ -134,28 +168,28 @@
     const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`DOZ-${labels[state.route]}-2.278.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast(`已导出 ${rows.length} 条玩家资料`);
   }
   function toggleFavorite(id) {
-    id=String(id);if(favorites.has(id))favorites.delete(id);else favorites.add(id);
+    id=String(id);if(!byId.has(id))return;if(favorites.has(id))favorites.delete(id);else favorites.add(id);
     try{localStorage.setItem('doz-wiki-favorites',JSON.stringify([...favorites]));}catch{toast('浏览器未允许持久保存，本次会话仍可收藏');}
     $('#saved-count').textContent=favorites.size;
     document.querySelectorAll('[data-save]').forEach(b=>{if(b.dataset.save!==id)return;b.classList.toggle('saved',favorites.has(id));b.setAttribute('aria-pressed',String(favorites.has(id)));const entry=byId.get(id);b.setAttribute('aria-label',`${favorites.has(id)?'取消收藏':'收藏'}${entry?.name||''}`);b.textContent=b.classList.contains('card-save')?(favorites.has(id)?'★':'☆'):(favorites.has(id)?'★ 已收藏':'☆ 收藏档案');});
     if(state.route==='favorites')renderResults();
   }
-  function toggleCompare(id) {id=String(id);if(comparison.includes(id))comparison=comparison.filter(x=>x!==id);else{if(comparison.length>=3){toast('一次最多对比 3 件装备，请先移除一件');return;}comparison.push(id);}renderCompareTray();document.querySelectorAll('[data-compare]').forEach(b=>{b.classList.toggle('chosen',comparison.includes(b.dataset.compare));b.textContent=comparison.includes(b.dataset.compare)?'✓ 已加入对比':'＋ 加入装备对比';});}
+  function toggleCompare(id) {id=String(id);if(!byId.has(id)||!['weapon','armor'].includes(byId.get(id).category))return;if(comparison.includes(id))comparison=comparison.filter(x=>x!==id);else{if(comparison.length>=3){toast('一次最多对比 3 件装备，请先移除一件');return;}comparison.push(id);}renderCompareTray();document.querySelectorAll('[data-compare]').forEach(b=>{b.classList.toggle('chosen',comparison.includes(b.dataset.compare));b.textContent=comparison.includes(b.dataset.compare)?'✓ 已加入对比':'＋ 加入装备对比';});}
   function renderCompareTray() {const tray=$('#compare-tray');tray.hidden=!comparison.length;tray.innerHTML=`<span>装备对比 <strong>${comparison.length} / 3</strong></span><span>${comparison.map(id=>esc(byId.get(id)?.name)).join(' · ')}</span><button id="open-compare" ${comparison.length<2?'disabled':''}>开始对比 →</button><button id="clear-compare" aria-label="清空对比">×</button>`;$('#open-compare')?.addEventListener('click',openCompare);$('#clear-compare')?.addEventListener('click',()=>{comparison=[];renderCompareTray();document.querySelectorAll('[data-compare]').forEach(b=>{b.textContent='＋ 加入装备对比';b.classList.remove('chosen');});});}
   function openCompare() {
-    const rows=comparison.map(id=>byId.get(id));const keys=[...new Set(rows.flatMap(e=>(e.stats||[]).map(s=>s.label)))];
-    const dlg=$('#compare-dialog');dlg.innerHTML=`<div class="dialog-top"><span>EQUIPMENT / 装备对比</span><button class="icon-button" data-close aria-label="关闭对比">×</button></div><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>基础配置</th>${rows.map(e=>`<th class="compare-cell">${imagePath(e)?`<img src="${esc(imagePath(e))}" alt="${esc(e.name)}">`:''}${esc(e.name)}</th>`).join('')}</tr></thead><tbody><tr><td>品质</td>${rows.map(e=>`<td>${esc(rarityName(e))}</td>`).join('')}</tr>${keys.map(k=>`<tr><td>${esc(k)}</td>${rows.map(e=>{const s=(e.stats||[]).find(s=>s.label===k);return `<td>${s?esc(s.value)+(s.unit?' '+esc(s.unit):''):'—'}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><p class="fine-print">这里只比较原版基础配置。不同装备类型、攻击机制、技能和成长条件会影响实战表现；缺失字段以「—」表示。</p></div>`;dlg.showModal();
+    const rows=comparison.map(id=>byId.get(id)).filter(Boolean);if(rows.length<2)return;const keys=[...new Set(rows.flatMap(e=>(e.stats||[]).map(s=>s.label)))];
+    const dlg=$('#compare-dialog');dlg.innerHTML=`<div class="dialog-top"><span>EQUIPMENT / 装备对比</span><button class="icon-button" data-close aria-label="关闭对比">×</button></div><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>基础属性</th>${rows.map(e=>`<th class="compare-cell">${imagePath(e)?`<img src="${esc(imagePath(e))}" alt="${esc(e.name)}">`:''}${esc(e.name)}</th>`).join('')}</tr></thead><tbody><tr><td>品质</td>${rows.map(e=>`<td>${esc(rarityName(e))}</td>`).join('')}</tr>${keys.map(k=>`<tr><td>${esc(k)}</td>${rows.map(e=>{const s=(e.stats||[]).find(s=>s.label===k);return `<td>${s?esc(s.value)+(s.unit?' '+esc(s.unit):''):'—'}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><p class="fine-print">这里只比较装备的基础属性。不同装备类型、攻击机制、技能和成长条件会影响实战表现；缺失字段以「—」表示。</p></div>`;dlg.showModal();
   }
-  const itemLink = (id,name) => byId.has(String(id))?`<button class="inline-item" data-detail="${esc(id)}">${esc(name||byId.get(String(id)).name)}</button>`:esc(name||'未命名材料');
+  const itemLink = (id,name) => byId.has(String(id))?`<button class="inline-item" data-detail="${esc(id)}">${esc(getName({name:name||byId.get(String(id)).name}))}</button>`:esc(getName({name:name||'名称待补充'}));
   function openDetail(id) {
     const e=byId.get(String(id));if(!e)return;
     const recipes=(C.recipes||[]).filter(r=>(e.recipeIds||[]).map(String).includes(String(r.id))||(r.resultEntries||[]).some(x=>String(x.id)===String(id))||(r.repairTargets||[]).some(x=>String(x.id)===String(id))).slice(0,15);
     const dlg=$('#detail-dialog');
-    dlg.innerHTML=`<div class="dialog-top"><span>FIELD ARCHIVE / ${esc(e.categoryLabel||labels[e.category]||'图鉴详情')}</span><button class="icon-button" data-close aria-label="关闭详情">×</button></div><div class="detail-body"><div class="detail-overview"><div class="detail-art">${art(e,false)}</div><div class="detail-title"><span class="rarity rarity-${rarityClass(e)}"><i class="rarity-dot"></i>${esc(rarityName(e))}</span><h2>${esc(e.name)}</h2>${e.nameEn?`<div class="english-name">${esc(e.nameEn)}</div>`:''}<p>${rich(e.description)||'当前资料未提供可核实的用途说明。'}</p><div class="tags">${(e.tags||[]).filter(t=>!String(t).includes('_')).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div></div>${e.stats?.length?`<dl class="stat-grid">${e.stats.map(s=>`<div><dt>${esc(s.label)}</dt><dd>${esc(s.value)}${s.unit?` <small>${esc(s.unit)}</small>`:''}</dd></div>`).join('')}</dl>`:''}${e.status?.length?`<div class="notice">${e.status.map(rich).join('<br>')}</div>`:''}${recipes.length?`<div class="detail-section"><h3>相关制作配方</h3>${recipes.map(recipeHtml).join('')}</div>`:''}<div class="detail-section"><h3>档案说明</h3><p>数值来自 2.278 内置基础配置。装备等级、角色技能、套装效果、敌人变体和活动规则可能改变实战数值。${imagePath(e)?'配图为对应游戏素材。':'本地暂未找到对应的独立图鉴图片，条目资料已保留。'}</p>${e.sourceHints?.length?`<p class="fine-print">${e.sourceHints.map(rich).join(' · ')}</p>`:''}</div><div class="detail-actions"><button class="secondary-button" data-save="${esc(id)}" aria-pressed="${favorites.has(String(id))}">${favorites.has(String(id))?'★ 已收藏':'☆ 收藏档案'}</button>${['weapon','armor'].includes(e.category)?`<button class="secondary-button" data-compare="${esc(id)}">${comparison.includes(String(id))?'✓ 已加入对比':'＋ 加入装备对比'}</button>`:''}<button class="secondary-button" data-permalink="${esc(id)}">复制档案链接 ↗</button></div></div>`;
-    const extra = `${e.variantSummary?`<div class="notice">${rich(e.variantSummary)}</div>`:''}${e.abilities?.length?`<div class="detail-section"><h3>特殊能力</h3>${e.abilities.map(a=>`<div class="info-card"><h3>${rich(a.name)}</h3><p>${rich(a.description)}</p>${a.cooldown!==undefined?`<p>冷却：${esc(a.cooldown)} 秒</p>`:''}</div>`).join('')}</div>`:''}${e.levelStats?.length?`<div class="detail-section"><h3>等级分段属性</h3><div class="table-scroll"><table><thead><tr><th>属性</th><th>适用等级</th><th>配置值</th></tr></thead><tbody>${e.levelStats.map(s=>`<tr><td>${esc(s.label)}</td><td>${esc(s.minLevel)}–${esc(s.maxLevel)}</td><td>${esc(s.value)}</td></tr>`).join('')}</tbody></table></div></div>`:''}`;
+    dlg.innerHTML=`<div class="dialog-top"><span>FIELD ARCHIVE / ${esc(e.categoryLabel||labels[e.category]||'图鉴详情')}</span><button class="icon-button" data-close aria-label="关闭详情">×</button></div><div class="detail-body"><div class="detail-overview"><div class="detail-art">${art(e,false)}</div><div class="detail-title"><span class="rarity rarity-${rarityClass(e)}"><i class="rarity-dot"></i>${esc(rarityName(e))}</span><h2>${esc(e.name)}</h2>${e.nameEn?`<div class="english-name">${esc(e.nameEn)}</div>`:''}<p>${rich(e.description)||'当前资料未提供可核实的用途说明。'}</p><div class="tags">${(e.tags||[]).filter(t=>!String(t).includes('_')).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div></div>${e.stats?.length?`<dl class="stat-grid">${e.stats.map(s=>`<div><dt>${esc(s.label)}</dt><dd>${esc(s.value)}${s.unit?` <small>${esc(s.unit)}</small>`:''}</dd></div>`).join('')}</dl>`:''}${e.status?.length?`<div class="notice">${e.status.map(rich).join('<br>')}</div>`:''}${recipes.length?`<div class="detail-section"><h3>相关制作配方</h3>${recipes.map(recipeHtml).join('')}</div>`:''}<div class="detail-section"><h3>档案说明</h3><p>数值来自 2.278 游戏基础资料。装备等级、角色技能、套装效果、敌人变体和活动规则可能改变实战数值。${imagePath(e)?'配图为对应游戏素材。':'这条资料暂无独立图鉴图片，文字与数值仍可查阅。'}</p>${e.sourceHints?.length?`<p class="fine-print">${playerNotes(e.sourceHints).map(rich).join(' · ')}</p>`:''}</div><div class="detail-actions"><button class="secondary-button" data-save="${esc(id)}" aria-pressed="${favorites.has(String(id))}">${favorites.has(String(id))?'★ 已收藏':'☆ 收藏档案'}</button>${['weapon','armor'].includes(e.category)?`<button class="secondary-button" data-compare="${esc(id)}">${comparison.includes(String(id))?'✓ 已加入对比':'＋ 加入装备对比'}</button>`:''}<button class="secondary-button" data-permalink="${esc(id)}">复制档案链接 ↗</button></div></div>`;
+    const extra = `${e.variantSummary?`<div class="notice">${rich(e.variantSummary)}</div>`:''}${e.abilities?.length?`<div class="detail-section"><h3>特殊能力</h3>${e.abilities.map(a=>`<div class="info-card"><h3>${rich(a.name)}</h3><p>${rich(a.description)}</p>${a.cooldown!==undefined?`<p>冷却：${esc(a.cooldown)} 秒</p>`:''}</div>`).join('')}</div>`:''}${e.levelStats?.length?`<div class="detail-section"><h3>等级分段属性</h3><div class="table-scroll"><table><thead><tr><th>属性</th><th>适用等级</th><th>基础数值</th></tr></thead><tbody>${e.levelStats.map(s=>`<tr><td>${esc(s.label)}</td><td>${esc(s.minLevel)}–${esc(s.maxLevel)}</td><td>${esc(s.value)}</td></tr>`).join('')}</tbody></table></div></div>`:''}`;
     dlg.querySelector('.detail-section')?.insertAdjacentHTML('beforebegin',extra);
     if(e.initializationStats?.length){
-      const generated=`<div class="detail-section"><h3>生成时的属性候选</h3><p>这些数值来自该敌人的生成配置，触发条件尚未完全核实。不同场景、等级和活动可能使用不同分支，不能将所有候选同时视为固定属性。</p>${e.initializationStats.map(s=>`<details><summary>${esc(s.label)}：${esc(s.value)}</summary>${s.attackInterval!==undefined?`<p>该分支攻击间隔：${esc(s.attackInterval)} 秒</p>`:''}${s.levels?.length?`<div class="table-scroll"><table><thead><tr><th>等级区间</th><th>配置候选值</th></tr></thead><tbody>${s.levels.map(x=>`<tr><td>${esc(x.minLevel)}–${esc(x.maxLevel)}</td><td>${esc(x.value)}</td></tr>`).join('')}</tbody></table></div>`:''}<p class="fine-print">${rich(s.source)}</p></details>`).join('')}</div>`;
+      const generated=`<div class="detail-section"><h3>不同场景的属性候选</h3><p>这些数值可能对应敌人在不同场景中的状态，具体触发条件尚未完全核实。不同场景、等级和活动可能使用不同分支，不能将所有候选同时视为固定属性。</p>${e.initializationStats.map(s=>`<details><summary>${esc(s.label)}：${esc(s.value)}</summary>${s.attackInterval!==undefined?`<p>该分支攻击间隔：${esc(s.attackInterval)} 秒</p>`:''}${s.levels?.length?`<div class="table-scroll"><table><thead><tr><th>等级区间</th><th>属性候选值</th></tr></thead><tbody>${s.levels.map(x=>`<tr><td>${esc(x.minLevel)}–${esc(x.maxLevel)}</td><td>${esc(x.value)}</td></tr>`).join('')}</tbody></table></div>`:''}</details>`).join('')}</div>`;
       dlg.querySelector('.detail-actions').insertAdjacentHTML('beforebegin',generated);
     }
     if(!dlg.open)dlg.showModal();dlg.scrollTop=0;
@@ -167,7 +201,7 @@
     const result=results.length===1?results[0]:null;
     return `<div class="info-card">
       <div class="eyebrow">${esc(r.kindLabel||'制作配方')}${r.craftTimeSeconds?` · ${esc(r.craftTimeSeconds)} 秒`:''}</div>
-      <h3>${result?itemLink(result.id,r.name):esc(r.name||'配方记录')}</h3>
+      <h3>${result?itemLink(result.id,getName(r)):esc(getName(r))}</h3>
       ${r.description?`<p>${rich(r.description)}</p>`:''}
       ${r.stations?.length?`<p>${repair?'修理设施':'相关设施'}：${r.stations.map(x=>itemLink(x.id,x.name)).join('、')}</p>`:''}
       ${r.requiredLevel?`<p>解锁等级：${esc(r.requiredLevel)}</p>`:''}
@@ -178,33 +212,33 @@
       ${results.length?`<div class="recipe-parts"><strong>${esc(r.resultLabel||'结果')}</strong><br>${results.map(x=>`${itemLink(x.id,x.name)} × ${esc(x.amount??(x.minAmount===x.maxAmount?x.minAmount:`${x.minAmount??'?'}–${x.maxAmount??'?'}`))}${x.conditional?' <span class="fine-print">（有条件）</span>':''}`).join('<br>')}</div>`:''}
       ${r.fuel?.length?`<p>燃料：${r.fuel.map(x=>`${itemLink(x.id,x.name)} × ${esc(x.amount)}`).join('、')}</p>`:''}
       ${r.requiredQuests?.length?`<p>前置任务：${r.requiredQuests.map(x=>esc(x.name||x)).join('、')}</p>`:''}
-      ${r.sourceHints?.length?`<p class="fine-print">${r.sourceHints.map(rich).join('<br>')}</p>`:''}
-      ${r.note?`<p class="fine-print">${rich(r.note)}</p>`:''}</div>`;
+      ${r.sourceHints?.length?`<p class="fine-print">${playerNotes(r.sourceHints).map(rich).join('<br>')}</p>`:''}
+      ${r.note&&!technicalText(r.note)?`<p class="fine-print">${rich(r.note)}</p>`:''}</div>`;
   }
   function renderList() {
     const kind=state.route;const data=C[kind]||[];
-    const desc={recipes:'按产物名称和材料查找配方。相同产物可能存在不同配方或活动版本，消耗以具体记录为准。',locations:'探索原版配置中记录的地点；活动地点是否开放，以及危险等级和入场条件，以游戏内地图为准。',quests:'浏览任务名称与原版说明。此处包含剧情内容，可以按关键词查找你正在进行的任务。'};
+    const desc={recipes:'按产物名称和材料查找配方。相同产物可能存在不同配方或活动版本，消耗以具体记录为准。',locations:'查阅已收录的探索地点；活动地点是否开放，以及危险等级和入场条件，以游戏内地图为准。',quests:'浏览任务名称与原版说明。此处包含剧情内容，可以按关键词查找你正在进行的任务。'};
     main.innerHTML=heading(labels[kind],desc[kind],'SURVIVAL DATABASE / '+kind.toUpperCase(),data.length)+`<div class="filter-panel"><div class="filter-row"><input type="search" id="list-search" placeholder="搜索${labels[kind]}…" aria-label="搜索${labels[kind]}" value="${esc(listState.query)}"></div></div><div id="list-results"></div>`;
-    let t;$('#list-search').addEventListener('input',e=>{listState.query=e.target.value;listState.page=1;clearTimeout(t);t=setTimeout(renderListResults,140);});renderListResults();
+    bindSearch('#list-search',query=>{listState.query=query;listState.page=1;},renderListResults);renderListResults();
   }
   function renderListResults() {
     const kind=state.route,q=listState.query.toLocaleLowerCase();
     const data=(C[kind]||[]).filter(r=>[r.name,r.title,r.description,r.summary,r.hint,...(r.ingredients||r.materials||[]).map(x=>x.name)].join(' ').toLocaleLowerCase().includes(q));
     const pageSize=24,total=Math.ceil(data.length/pageSize);listState.page=Math.max(1,Math.min(listState.page,total||1));
-    $('#list-results').innerHTML=`<div class="results-line">找到 ${fmt(data.length)} 条记录</div><div class="list-grid">${data.slice((listState.page-1)*pageSize,listState.page*pageSize).map(r=>kind==='recipes'?recipeHtml(r):`<article class="info-card"><div class="eyebrow">${kind==='locations'?'WORLD ATLAS':'MISSION ARCHIVE'}</div>${imagePath(r)?`<img class="record-image" src="${esc(imagePath(r))}" alt="${esc(getName(r))}" loading="lazy">`:''}<h3>${esc(getName(r))}</h3><p>${rich(r.description||r.summary)||'该记录暂无中文说明。'}</p>${(r.stats||[]).map(s=>`<p>${esc(s.label)}：${esc(s.value)} ${esc(s.unit||'')}</p>`).join('')}${r.level?`<p>等级：${esc(r.level)}</p>`:''}${r.hint?`<details><summary>查看任务提示（含剧透）</summary><p>${rich(r.hint)}</p>${r.finishText?`<p>完成说明：${rich(r.finishText)}</p>`:''}</details>`:''}${r.repeatable?'<span class="tag">可重复任务</span>':''}${r.locations?.length?`<p>相关地点：${r.locations.map(x=>esc(x.name||x)).join('、')}</p>`:''}${r.rewards?.length?`<div class="recipe-parts">${r.rewards.map(x=>`${itemLink(x.id||x.itemId,x.name)} × ${esc(x.amount||x.count||1)}`).join('<br>')}</div>`:''}${r.status?.length?`<p class="status-tag">${r.status.map(esc).join(' · ')}</p>`:''}${r.note?`<p class="fine-print">${rich(r.note)}</p>`:''}</article>`).join('')||'<div class="empty-state"><h2>没有匹配的记录</h2><p>请尝试其他名称或关键词。</p></div>'}</div>${data.length?pagination(listState.page,total,'list'):''}`;
+    $('#list-results').innerHTML=`<div class="results-line">找到 ${fmt(data.length)} 条记录</div><div class="list-grid">${data.slice((listState.page-1)*pageSize,listState.page*pageSize).map(r=>kind==='recipes'?recipeHtml(r):`<article class="info-card"><div class="eyebrow">${kind==='locations'?'WORLD ATLAS':'MISSION ARCHIVE'}</div>${imagePath(r)?`<img class="record-image" src="${esc(imagePath(r))}" alt="${esc(getName(r))}" loading="lazy">`:''}<h3>${esc(getName(r))}</h3><p>${rich(r.description||r.summary)||'该记录暂无中文说明。'}</p>${(r.stats||[]).map(s=>`<p>${esc(s.label)}：${esc(s.value)} ${esc(s.unit||'')}</p>`).join('')}${r.level?`<p>等级：${esc(r.level)}</p>`:''}${r.hint?`<details><summary>查看任务提示（含剧透）</summary><p>${rich(r.hint)}</p>${r.finishText?`<p>完成说明：${rich(r.finishText)}</p>`:''}</details>`:''}${r.repeatable?'<span class="tag">可重复任务</span>':''}${r.locations?.length?`<p>相关地点：${r.locations.map(x=>esc(x.name||x)).join('、')}</p>`:''}${r.rewards?.length?`<div class="recipe-parts">${r.rewards.map(x=>`${itemLink(x.id||x.itemId,x.name)} × ${esc(x.amount||x.count||1)}`).join('<br>')}</div>`:''}${r.status?.length?`<p class="status-tag">${r.status.map(esc).join(' · ')}</p>`:''}${r.note&&!technicalText(r.note)?`<p class="fine-print">${rich(r.note)}</p>`:''}</article>`).join('')||'<div class="empty-state"><h2>没有匹配的记录</h2><p>请尝试其他名称或关键词。</p></div>'}</div>${data.length?pagination(listState.page,total,'list'):''}`;
   }
   function renderLibrary() {
     const tabs={skills:'角色技能',sets:'装备套装',notes:'废土笔记',factions:'势力阵营'};
     main.innerHTML=heading('成长与故事','查阅角色技能、套装奖励、势力以及废土中的文字记录。笔记保留原版内容，可能包含剧情信息。','PROGRESSION & LORE')+`<div class="filter-panel"><div class="filter-row">${Object.entries(tabs).map(([k,v])=>`<button class="chip ${k===libraryTab?'active':''}" data-library="${k}">${v} · ${fmt((C[k]||[]).length)}</button>`).join('')}</div><div class="filter-row"><input id="library-search" type="search" placeholder="搜索${tabs[libraryTab]}…" aria-label="搜索成长与故事" value="${esc(listState.query)}"></div></div><div id="library-results"></div>`;
     document.querySelectorAll('[data-library]').forEach(b=>b.addEventListener('click',()=>{libraryTab=b.dataset.library;listState={query:'',page:1};renderLibrary();}));
-    let t;$('#library-search').addEventListener('input',e=>{listState.query=e.target.value;listState.page=1;clearTimeout(t);t=setTimeout(renderLibraryResults,140);});renderLibraryResults();
+    bindSearch('#library-search',query=>{listState.query=query;listState.page=1;},renderLibraryResults);renderLibraryResults();
   }
   function renderLibraryResults() {
     const q=listState.query.toLocaleLowerCase();const data=(C[libraryTab]||[]).filter(r=>[r.name,r.description].join(' ').toLocaleLowerCase().includes(q));const total=Math.ceil(data.length/24);
-    $('#library-results').innerHTML=`<div class="results-line">${fmt(data.length)} 条记录 · 包含历史与未开放配置</div><div class="list-grid">${data.slice((listState.page-1)*24,listState.page*24).map(r=>`<article class="info-card">${imagePath(r)?`<img class="record-image" src="${esc(imagePath(r))}" alt="${esc(r.name)}" loading="lazy">`:''}<h3>${esc(r.name)}</h3><p>${rich(r.description)}</p>${r.visible===false?'<span class="status-tag">特殊或未开放记录</span>':''}${r.items?.length?`<div class="recipe-parts">${r.items.map(x=>itemLink(x.id,x.name)).join('<br>')}</div>`:''}${r.bonuses?.length?`<div class="recipe-parts">${r.bonuses.map(x=>`<p>${esc(x.pieces)} 件套：${rich(x.description)}</p>`).join('')}</div>`:''}${r.details?.length?paragraphs(r.details):''}${r.levels?.length?`<details><summary>技能成长（${r.levels.length} 级）</summary><table><thead><tr><th>等级</th><th>说明</th><th>消耗</th></tr></thead><tbody>${r.levels.map(x=>`<tr><td>${esc(x.level)}</td><td>${rich(x.description)||'—'}</td><td>${esc(x.cost??'—')}</td></tr>`).join('')}</tbody></table></details>`:''}</article>`).join('')||'<div class="empty-state"><h2>没有匹配记录</h2></div>'}</div>${data.length?pagination(listState.page,total,'library'):''}`;
+    $('#library-results').innerHTML=`<div class="results-line">${fmt(data.length)} 条记录 · 包含历史与未开放内容</div><div class="list-grid">${data.slice((listState.page-1)*24,listState.page*24).map(r=>`<article class="info-card">${imagePath(r)?`<img class="record-image" src="${esc(imagePath(r))}" alt="${esc(getName(r))}" loading="lazy">`:''}<h3>${esc(getName(r))}</h3><p>${rich(r.description)}</p>${r.visible===false?'<span class="status-tag">特殊或未开放记录</span>':''}${r.items?.length?`<div class="recipe-parts">${r.items.map(x=>itemLink(x.id,x.name)).join('<br>')}</div>`:''}${r.bonuses?.length?`<div class="recipe-parts">${r.bonuses.map(x=>`<p>${esc(x.pieces)} 件套：${rich(x.description)}</p>`).join('')}</div>`:''}${r.details?.length?paragraphs(r.details):''}${r.levels?.length?`<details><summary>技能成长（${r.levels.length} 级）</summary><table><thead><tr><th>等级</th><th>说明</th><th>消耗</th></tr></thead><tbody>${r.levels.map(x=>`<tr><td>${esc(x.level)}</td><td>${rich(x.description)||'—'}</td><td>${esc(x.cost??'—')}</td></tr>`).join('')}</tbody></table></details>`:''}</article>`).join('')||'<div class="empty-state"><h2>没有匹配记录</h2></div>'}</div>${data.length?pagination(listState.page,total,'library'):''}`;
   }
   function ratesHtml(rates, grouped=false) {
-    return rates?.length ? `<div class="table-scroll"><table><caption>${grouped?'奖励分组提示 · 各行不可相加':'盟友基础稀有度概率'}</caption><thead><tr><th>${grouped?'奖励分组说明':'盟友稀有度'}</th><th>${grouped?'组别提示概率':'基础概率'}</th></tr></thead><tbody>${rates.map(r=>`<tr><td>${esc(r.name)}</td><td>${esc(r.percent)}%</td></tr>`).join('')}</tbody></table></div>` : '';
+    return rates?.length ? `<div class="table-scroll"><table><caption>${grouped?'奖励分组提示 · 各行不可相加':'盟友基础稀有度概率'}</caption><thead><tr><th>${grouped?'奖励分组说明':'盟友稀有度'}</th><th>${grouped?'组别提示概率':'基础概率'}</th></tr></thead><tbody>${rates.map(r=>`<tr><td>${esc(getName(r))}</td><td>${esc(r.percent)}%</td></tr>`).join('')}</tbody></table></div>` : '';
   }
   const paragraphs = x => (Array.isArray(x)?x:[x]).filter(Boolean).map(v=>`<p>${rich(typeof v==='string'?v:v.text||v.description||'')}</p>`).join('');
   const knownCost = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
@@ -220,11 +254,11 @@
   function renderGacha() {
     Object.assign(mechanicState,{summonPage:1,lotteryPage:1,chestPage:1});
     main.innerHTML=heading('召唤 · 乐透 · 宝箱','基础概率、目标保证与活动消耗分别查阅。可按池名、活动、货币或候选奖励搜索；资料收录不代表当前开放。','THE ODDS / 机制研究')+
-      `<div class="notice">这里的规则依据 2.278 内置资料。实际概率会受奖池条件、保证状态和活动配置影响；不能用基础概率推断所有召唤的真实结果。</div>
+      `<div class="notice">这里的规则依据 2.278 内置资料。实际概率会受奖池条件、保证状态和活动规则影响；不能用基础概率推断所有召唤的真实结果。</div>
       <div class="two-column"><section class="content-panel"><div class="eyebrow">BEFORE YOU DRAW</div><h2>先读懂这几件事</h2>${(M.highlights||[]).map(h=>`<h3>${esc(h.title)}</h3><p>${rich(h.text)}</p>`).join('')||'<p>普通、新手与阿尔法召唤分别采用各自规则，请逐项查看奖池说明。</p>'}<a class="text-link" href="#guides">阅读完整机制与资源规划指南 →</a></section>
-      <section class="content-panel"><div class="eyebrow">PROBABILITY LAB</div><h2>基础概率演算</h2><p>用于比较抽数的数学模型，不读取你的游戏计数或保证状态。</p><label for="calc-model">计算模型</label><select id="calc-model" style="max-width:100%;width:100%"><option value="independent">固定概率 · 独立抽取</option><option value="featured">独特结果50%目标 · 歪后下个独特必为目标</option></select><div class="calc-controls"><label><span id="calc-prob-label">单次目标概率（%）</span><input id="calc-p" type="number" min="0" max="100" step="0.1" value="5"></label><label>抽取次数<input id="calc-n" type="number" min="1" max="100000" step="1" value="10"></label></div><p id="calc-assumption" class="fine-print"></p><div class="calc-result" aria-live="polite"><span>至少获得一次目标</span><strong id="calc-value">40.13%</strong></div><div class="probability-bar" aria-hidden="true"><i id="calc-bar" style="width:40.13%"></i></div><p id="calc-detail" class="fine-print"></p><p id="calc-formula" class="fine-print"></p><p class="fine-print">${rich(M.calculator?.warning||'这是数学对照模型，不是实际召唤结果预测。新手保证池不适用。实际概率受有条件的奖励规则影响。')}</p></section></div>
+      <section class="content-panel"><div class="eyebrow">PROBABILITY LAB</div><h2>基础概率演算</h2><p>用于比较抽数的数学模型，不读取你的游戏计数或保证状态。</p><label for="calc-model">计算模型</label><select id="calc-model" style="max-width:100%;width:100%"><option value="independent">固定概率 · 独立抽取</option><option value="featured">独特结果50%目标 · 歪后下个独特必为目标</option></select><div class="calc-controls"><label><span id="calc-prob-label">单次目标概率（%）</span><input id="calc-p" inputmode="decimal" type="number" min="0" max="100" step="0.1" value="5"></label><label>抽取次数<input id="calc-n" inputmode="numeric" type="number" min="1" max="100000" step="1" value="10"></label></div><p id="calc-assumption" class="fine-print"></p><div class="calc-result" aria-live="polite"><span>至少获得一次目标</span><strong id="calc-value">40.13%</strong></div><div class="probability-bar" aria-hidden="true"><i id="calc-bar" style="width:40.13%"></i></div><p id="calc-detail" class="fine-print"></p><p id="calc-formula" class="fine-print"></p><p class="fine-print">${rich(M.calculator?.warning||'这是数学对照模型，不是实际召唤结果预测。新手保证池不适用。实际概率受有条件的奖励规则影响。')}</p></section></div>
       ${sectionHead('盟友召唤','COMPANION SUMMONS')}<div class="filter-panel"><div class="filter-row"><input id="summon-search" type="search" placeholder="搜索盟友、编码器或候选奖励…" aria-label="搜索召唤池"><select id="summon-kind" aria-label="召唤池类型"><option value="all">全部召唤</option><option value="basic">常规与新手</option><option value="featured">有目标保证说明</option><option value="event">其他活动召唤</option></select></div></div><div id="summon-results"></div>
-      ${sectionHead('乐透与宝箱档案','EVENT LOTTERIES & CHESTS')}<p class="fine-print">包括历史活动和预置配置。费用、候选奖励与当前开放情况需要对应具体活动查看。每类每页展示12条记录。</p><div class="filter-panel"><div class="filter-row"><input id="pool-search" type="search" placeholder="搜索活动、宝箱、货币或候选奖励…" aria-label="搜索乐透与宝箱"><select id="pool-kind" aria-label="抽取记录类型"><option value="all">全部记录</option><option value="lottery">乐透翻牌</option><option value="chest">宝箱与随机礼包</option><option value="bonus">召唤附加奖励提示</option></select></div></div><div id="event-pools"></div>`;
+      ${sectionHead('乐透与宝箱档案','EVENT LOTTERIES & CHESTS')}<p class="fine-print">包括历史活动和预置内容。费用、候选奖励与当前开放情况需要对应具体活动查看。每类每页展示12条记录。</p><div class="filter-panel"><div class="filter-row"><input id="pool-search" type="search" placeholder="搜索活动、宝箱、货币或候选奖励…" aria-label="搜索乐透与宝箱"><select id="pool-kind" aria-label="抽取记录类型"><option value="all">全部记录</option><option value="lottery">乐透翻牌</option><option value="chest">宝箱与随机礼包</option><option value="bonus">召唤附加奖励提示</option></select></div></div><div id="event-pools"></div>`;
     ['calc-p','calc-n','calc-model'].forEach(id=>$('#'+id).addEventListener('input',calculate));
     ['summon-search','summon-kind'].forEach(id=>$('#'+id).addEventListener('input',()=>{mechanicState.summonPage=1;renderSummons();}));
     ['pool-search','pool-kind'].forEach(id=>$('#'+id).addEventListener('input',()=>{mechanicState.lotteryPage=1;mechanicState.chestPage=1;renderPools();}));
@@ -263,7 +297,7 @@
     mechanicState.chestPage=Math.max(1,Math.min(mechanicState.chestPage,totalChest));
     const lp=mechanicState.lotteryPage,cp=mechanicState.chestPage;
     $('#event-pools').innerHTML=`<div class="results-line" aria-live="polite">${fmt(lotteries.length)} 条乐透记录 · ${fmt(boxes.length)} 条宝箱及附加奖励提示</div>
-      ${lotteries.length?`<section id="lottery-pool-section">${sectionHead('乐透翻牌','LOTTERY ARCHIVE')}<div class="pool-grid">${lotteries.slice((lp-1)*POOL_PAGE,lp*POOL_PAGE).map(p=>`<article class="pool-card"><div class="eyebrow">${esc(p.event||'活动记录')}</div><h3>${esc(p.name)}</h3>${p.availability?`<p class="fine-print">${rich(p.availability)}</p>`:''}${paragraphs(p.description)}<p>消耗货币：${esc(p.currency||'活动消耗')}${knownCost(p.refreshPrice)?` · 刷新基础费用 ${esc(p.refreshPrice)}`:''}${knownCost(p.refreshHours)&&Number(p.refreshHours)>0?` · 自然刷新间隔 ${esc(p.refreshHours)} 小时`:''}</p>${knownCost(p.excludeCount)?`<p>配置中的排除名额：${esc(p.excludeCount)} 项</p>`:''}${p.costNote?`<p class="fine-print">${rich(p.costNote)}</p>`:''}${p.prices?.length?`<details><summary>翻牌基础费用表（${fmt(p.prices.length)} 档）</summary><div class="table-scroll"><table><thead><tr><th>次数</th><th>本次基础费用</th><th>阶梯费用累计</th></tr></thead><tbody>${p.prices.map(x=>`<tr><td>${esc(x.draw)}</td><td>${knownCost(x.cost)?esc(x.cost):'未确认'}</td><td>${knownCost(x.cumulative)?esc(x.cumulative):'未确认'}</td></tr>`).join('')}</tbody></table></div></details>`:''}${p.probabilityNote?`<p class="fine-print">${rich(p.probabilityNote)}</p>`:''}${p.rewards?.length?`<details><summary>候选奖励（${fmt(p.rewards.length)} 项）</summary>${p.rewardNote?`<p class="fine-print">${rich(p.rewardNote)}</p>`:''}${rewardList(p.rewards)}</details>`:''}</article>`).join('')}</div>${poolPager('lottery',lp,totalLottery)}</section>`:''}
+      ${lotteries.length?`<section id="lottery-pool-section">${sectionHead('乐透翻牌','LOTTERY ARCHIVE')}<div class="pool-grid">${lotteries.slice((lp-1)*POOL_PAGE,lp*POOL_PAGE).map(p=>`<article class="pool-card"><div class="eyebrow">${esc(p.event||'活动记录')}</div><h3>${esc(p.name)}</h3>${p.availability?`<p class="fine-print">${rich(p.availability)}</p>`:''}${paragraphs(p.description)}<p>消耗货币：${esc(p.currency||'活动消耗')}${knownCost(p.refreshPrice)?` · 刷新基础费用 ${esc(p.refreshPrice)}`:''}${knownCost(p.refreshHours)&&Number(p.refreshHours)>0?` · 自然刷新间隔 ${esc(p.refreshHours)} 小时`:''}</p>${knownCost(p.excludeCount)?`<p>可排除的奖励名额：${esc(p.excludeCount)} 项</p>`:''}${p.costNote?`<p class="fine-print">${rich(p.costNote)}</p>`:''}${p.prices?.length?`<details><summary>翻牌基础费用表（${fmt(p.prices.length)} 档）</summary><div class="table-scroll"><table><thead><tr><th>次数</th><th>本次基础费用</th><th>阶梯费用累计</th></tr></thead><tbody>${p.prices.map(x=>`<tr><td>${esc(x.draw)}</td><td>${knownCost(x.cost)?esc(x.cost):'未确认'}</td><td>${knownCost(x.cumulative)?esc(x.cumulative):'未确认'}</td></tr>`).join('')}</tbody></table></div></details>`:''}${p.probabilityNote?`<p class="fine-print">${rich(p.probabilityNote)}</p>`:''}${p.rewards?.length?`<details><summary>候选奖励（${fmt(p.rewards.length)} 项）</summary>${p.rewardNote?`<p class="fine-print">${rich(p.rewardNote)}</p>`:''}${rewardList(p.rewards)}</details>`:''}</article>`).join('')}</div>${poolPager('lottery',lp,totalLottery)}</section>`:''}
       ${boxes.length?`<section id="chest-pool-section">${sectionHead(kind==='bonus'?'召唤附加奖励提示':'宝箱与奖励分组','CHESTS & REWARD GROUPS')}<p class="fine-print">同一次领取可以包含多个奖励组；表内百分比不能相加，也不是指定物品的单件掉率。</p><div class="pool-grid">${boxes.slice((cp-1)*POOL_PAGE,cp*POOL_PAGE).map(p=>`<article class="pool-card"><div class="eyebrow">${esc(p.category||'宝箱')} · ${esc(p.currency||'随机奖励')}</div><h3>${esc(p.name)}</h3>${p.availability?`<p class="fine-print">${rich(p.availability)}</p>`:''}${paragraphs(p.description)}${knownCost(p.cost)&&Number(p.cost)>0?`<p>基础标价：${esc(p.cost)} ${esc(p.currency||'')}</p>`:''}${paragraphs(p.costNote)}${p.descriptionInfo?paragraphs(p.descriptionInfo):''}${ratesHtml(p.rates,true)}${p.probabilityNote?`<p class="fine-print">${rich(p.probabilityNote)}</p>`:''}${p.rewards?.length?`<details><summary>候选奖励（${fmt(p.rewards.length)} 项）</summary>${p.rewardNote?`<p class="fine-print">${rich(p.rewardNote)}</p>`:''}${rewardList(p.rewards)}</details>`:''}</article>`).join('')}</div>${poolPager('chest',cp,totalChest)}</section>`:''}
       ${!lotteries.length&&!boxes.length?'<div class="empty-state"><h2>没有匹配的活动记录</h2><p>可搜索奖池、活动或奖励名称，也可以切换记录类型。</p></div>':''}`;
   }
@@ -291,21 +325,54 @@
       `<div class="resource-list"><a href="#recipes">查制作配方 →</a><a href="#weapon">查武器属性 →</a><a href="#gacha">阅读召唤机制 →</a><a href="#locations">查看地图地点 →</a></div>`;
   }
   function renderAbout() {
-    const imageCount=visible.filter(e=>imagePath(e)).length;
-    main.innerHTML=heading('Wiki 资料与图片','此目录独立保存 Wiki 页面、玩家资料与所需图片。图片按武器、防具、怪物等用途分类，玩家页面隐藏实体编号、内部键名和实现代码。','ARCHIVE NOTES / 资料来源')+
-      `<article class="content-panel"><h2>基于你提供的原版游戏资料</h2><p>Dawn of Zombies 2.278 · 内置部署资料 151.25。所有基础数值均从原版配置整理，图片来自对应游戏资源。未使用修改菜单中的强化数值，也未读取玩家账号或存档。</p><div class="quality-grid"><div><strong>${fmt(entries.length)}</strong><span>完整图鉴记录</span></div><div><strong>${fmt(visible.length)}</strong><span>默认可浏览图鉴条目</span></div><div><strong>${fmt(imageCount)}</strong><span>已匹配图鉴条目</span></div><div><strong>${fmt((C.recipes||[]).length)}</strong><span>配方记录</span></div><div><strong>${fmt((C.locations||[]).length)}</strong><span>地图地点</span></div><div><strong>${fmt((C.quests||[]).length)}</strong><span>任务记录</span></div></div><p class="fine-print">实体定义包含活动变体和内部记录，数量不等同于独立可获取物品数。默认图鉴隐藏逻辑实体以及未开放或测试条目；可在分类筛选中查看特殊档案。</p></article>
-      <div class="two-column"><article class="content-panel"><h2>图片与资料完整性</h2><p>当前默认图鉴中，${fmt(imageCount)} 条已匹配图片，${fmt(visible.length-imageCount)} 条尚缺独立图鉴。多个变体可以共用同一张原版图标。</p><p>页面所需图鉴与背景保存在 assets/images，按用途分目录。同一图片被多个条目使用时共用文件。缺少独立图标的条目保留文字说明。</p>${S.summary?`<p>${rich(S.summary)}</p>`:''}<p>结构化玩家资料位于 data，中文分类表位于 data/player，攻略位于 guides。图片原始画质与玩家内容均予保留。</p></article><article class="content-panel"><h2>如何理解这份百科</h2><ul><li>基础属性：来自安装包静态配置，不等同于角色当前实战面板。</li><li>历史活动：资料存在不代表活动正在开放，也不保证物品当前可获得。</li><li>概率：区分原版帮助说明、条件保底与尚未确认的逻辑；不把权重直接当独立概率。</li><li>缺失中文：优先保留游戏英文名称；不凭内部代号编造正式名称。</li><li>收藏：仅保存在当前浏览器；不会上传个人资料。</li></ul></article></div>
-      <article class="content-panel"><h2>维护文件与资料下载</h2><div class="resource-list"><a href="materials.html">打开素材浏览器 ↗</a><a href="README.md" download>使用说明 ↓</a><a href="reports/coverage.json" download>收录统计 ↓</a><a href="data/catalog.json" download>完整图鉴数据 ↓</a><a href="data/mechanics.json" download>机制研究数据 ↓</a><a href="data/asset-map.json" download>素材对应清单 ↓</a></div><p class="fine-print">下载的数据文件包含维护用关联字段；这些字段不会出现在玩家图鉴中。本站为非官方资料整理，游戏名称及美术素材归原权利方所有。</p></article>`;
+    const imageCount = visible.filter(entry => imagePath(entry)).length;
+    const downloads = S.downloads || {};
+    const links = (rows, pattern) => (rows || []).map(row => {
+      const href = localPath(row.href, pattern);
+      return href ? `<a href="${esc(href)}" download>${esc(row.title)} ↓</a>` : '';
+    }).join('');
+    main.innerHTML = heading('收录说明与资料下载', '出发前查阅，离线时也能随手翻阅。这里说明图鉴的适用范围，并提供中文资料表和生存指南。', 'FIELD NOTES / 随身资料') +
+      `<article class="content-panel"><div class="eyebrow">DAWN OF ZOMBIES</div><h2>僵尸的黎明，幸存者的随身百科</h2><p>根据游戏 2.278 的资料整理武器、装备、怪物、随从与生存机制。收藏只保存在当前浏览器，方便下次继续查阅。</p><div class="quality-grid">${[
+        [visible.length,'可浏览图鉴'],[counts.weapon+counts.armor,'武器与防具'],[counts.enemy,'怪物与敌对生物'],
+        [(C.recipes||[]).length,'制作配方'],[(C.locations||[]).length,'地图地点'],[(C.quests||[]).length,'任务档案']
+      ].map(([number,label])=>`<div><strong>${fmt(number)}</strong><span>${label}</span></div>`).join('')}</div></article>
+      <div class="two-column"><article class="content-panel"><h2>数值与活动说明</h2><ul><li>图鉴展示基础属性；等级、技能、套装和战斗条件会改变实战表现。</li><li>历史活动记录不代表当前开放，物品获取方式以游戏内为准。</li><li>同名条目可能是不同地区或活动的变体，请结合属性和说明辨别。</li><li>抽取机制区分基础概率与有条件的保证，不把所有奖励组相加。</li></ul></article><article class="content-panel"><h2>图片与缺失资料</h2><p>${fmt(imageCount)} 条可浏览资料配有游戏图片，${fmt(visible.length-imageCount)} 条暂缺独立图鉴。</p><p>没有对应图片时保留名称、用途与数值，并明确标注缺图。同模型的参考图也会单独说明，不使用猜测图片代替。</p><p>缺失名称或未确认条件会如实标注，后续可随资料更新补充。</p></article></div>
+      <article class="content-panel"><h2>中文资料表</h2><p>下载分类表，方便离线查阅。也可以在图鉴筛选后导出当前结果。</p><div class="resource-list">${links(downloads.csv, /^data\/player\/[^/]+\.csv$/)}</div></article>
+      <article class="content-panel"><h2>生存指南</h2><p>保存一份出征、装备、修理或召唤说明，按自己的节奏阅读。</p><div class="resource-list">${links(downloads.guides, /^guides\/[^/]+\.md$/)}</div><p class="fine-print">本站为非官方玩家资料整理。游戏名称与美术素材归原权利方所有。</p></article>`;
+  }
+  function setMenu(open, returnFocus = false) {
+    const mobile = window.innerWidth <= 800;
+    const active = Boolean(open && mobile);
+    $('#sidebar').classList.toggle('open', active);
+    $('#sidebar').inert = mobile && !active;
+    $('#mobile-menu').setAttribute('aria-expanded', String(active));
+    $('#menu-backdrop').hidden = !active;
+    document.body.classList.toggle('menu-open', active);
+    $('.workspace').inert = active;
+    $('.atlas-nav').inert = active;
+    if (active) {
+      $('#sidebar').setAttribute('role', 'dialog');
+      $('#sidebar').setAttribute('aria-modal', 'true');
+      $('#menu-close').focus();
+    } else {
+      $('#sidebar').removeAttribute('role');
+      $('#sidebar').removeAttribute('aria-modal');
+      if (returnFocus && mobile) $('#mobile-menu').focus();
+    }
   }
   function route() {
+    cancelPendingSearch();
+    const fromMenu = $('#sidebar').classList.contains('open');
     const [hash, paramsString] = (location.hash.slice(1)||'home').split('?');
-    const params=new URLSearchParams(paramsString||'');const target=labels[hash]?hash:'home';
+    const params=new URLSearchParams(paramsString||'');const target=Object.hasOwn(labels,hash)?hash:'home';
     const changed=state.route!==target;state.route=target;
     if(changed){Object.assign(state,{query:target==='search'?params.get('q')||'':'',rarity:'',subtype:'',sort:'default',page:1,showHidden:false,onlyImages:false});listState={query:'',page:1};}
     if(target==='search')state.query=params.get('q')||state.query;
-    $('#crumb').textContent=labels[target];document.title=labels[target]+' · DOZ WIKI';renderNav();
-    $('#sidebar').classList.remove('open');$('#mobile-menu').setAttribute('aria-expanded','false');
+    $('#crumb').textContent=labels[target];document.title=labels[target]+' · 僵尸的黎明 · LCZ';renderNav();
+    setMenu(false);
     if(target==='home')renderHome();else if(target==='gacha')renderGacha();else if(target==='guides')renderGuides();else if(target==='library')renderLibrary();else if(target==='about')renderAbout();else if(['recipes','locations','quests'].includes(target))renderList();else renderCatalog();
+    main.setAttribute('aria-busy','false');
+    if(fromMenu)main.focus({preventScroll:true});
     if(changed)window.scrollTo(0,0);
     if(params.has('entry'))openDetail(params.get('entry'));
   }
@@ -324,10 +391,20 @@
   });
   document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement && !e.target.dataset.failed){e.target.dataset.failed='true';const span=document.createElement('span');span.className='empty-art';span.textContent='图鉴图片暂不可用';e.target.replaceWith(span);}},true);
   ['detail-dialog','compare-dialog'].forEach(id=>$('#'+id).addEventListener('click',e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.currentTarget.close();}));
-  $('#mobile-menu').addEventListener('click',()=>{const opened=$('#sidebar').classList.toggle('open');$('#mobile-menu').setAttribute('aria-expanded',String(opened));});
-  document.addEventListener('click',e=>{if(window.innerWidth<=700&&!e.target.closest('.sidebar')&&!e.target.closest('#mobile-menu')){$('#sidebar').classList.remove('open');$('#mobile-menu').setAttribute('aria-expanded','false');}});
+  $('#mobile-menu').addEventListener('click',()=>setMenu(!$('#sidebar').classList.contains('open')));
+  $('#menu-close').addEventListener('click',()=>setMenu(false,true));
+  $('#menu-backdrop').addEventListener('click',()=>setMenu(false,true));
+  window.addEventListener('resize',()=>{if(innerWidth>800)setMenu(false);else $('#sidebar').inert=!$('#sidebar').classList.contains('open');});
+  $('.skip-link').addEventListener('click',event=>{event.preventDefault();main.focus({preventScroll:true});main.scrollIntoView({block:'start'});});
   $('#global-search').addEventListener('keydown',e=>{if(e.key==='Enter'){const q=e.target.value.trim();location.hash='search?q='+encodeURIComponent(q);if(state.route==='search'){state.query=q;renderCatalog();}}});
-  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#global-search').focus();}if(e.key==='Escape'){$('#sidebar').classList.remove('open');$('#mobile-menu').setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#global-search').focus();}if(e.key==='Escape'&&$('#sidebar').classList.contains('open')){e.preventDefault();setMenu(false,true);}});
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Tab'||!$('#sidebar').classList.contains('open'))return;
+    const links=[...$('#sidebar').querySelectorAll('a[href],button:not([disabled])')];
+    const first=links[0],last=links[links.length-1];
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+  });
   window.addEventListener('hashchange',route);
   route();
 })();

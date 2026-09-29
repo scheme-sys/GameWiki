@@ -45,6 +45,7 @@ def safe_name(name):
 
 
 def main():
+    raise SystemExit('Archived one-time importer disabled: use tools/update_data.py; this command must never overwrite maintained pages or data.')
     catalog = read_json(SOURCE/'data/catalog.json')
     mechanics = read_json(SOURCE/'data/mechanics.json')
     original_assets = read_json(SOURCE/'data/asset-map.json')

@@ -63,7 +63,7 @@ def pause(page):
 def load(page):
     response = page.goto(BASE, wait_until="networkidle")
     assert response.status == 200
-    expect(page.locator(".world")).to_have_count(3)
+    expect(page.locator(".world")).to_have_count(4)
     assert page.locator(".game-icon").evaluate_all("imgs => imgs.every(i => i.complete && i.naturalWidth > 0)")
     page.mouse.move(2, 2)
 
@@ -91,11 +91,19 @@ def check_geometry(page, width, height):
             assert rect["x"] >= -1 and rect["right"] <= width + 1, f"{world['id']} outside horizontal viewport at {width}x{height}: {rect}"
             assert rect["y"] >= geometry["header"]["bottom"] - 1, f"{world['id']} collides with header at {width}x{height}"
             assert rect["bottom"] <= geometry["footer"]["y"] + 1, f"{world['id']} collides with footer at {width}x{height}: {rect}"
+    def intersects(a, b):
+        return min(a["right"], b["right"]) - max(a["x"], b["x"]) > 1 and min(a["bottom"], b["bottom"]) - max(a["y"], b["y"]) > 1
+
     for index, first in enumerate(geometry["worlds"]):
         a = first["icon"]
         for second in geometry["worlds"][index + 1:]:
             b = second["icon"]
             assert distance([a["x"] + a["width"]/2, a["y"] + a["height"]/2], [b["x"] + b["width"]/2, b["y"] + b["height"]/2]) >= (a["width"] + b["width"])/2 - 1, f"Icons overlap: {first['id']}/{second['id']}"
+            for label in first["labels"]:
+                assert not intersects(label, b), f"Label obscures icon: {first['id']}/{second['id']}"
+                assert all(not intersects(label, other) for other in second["labels"]), f"Game captions overlap: {first['id']}/{second['id']}"
+            for label in second["labels"]:
+                assert not intersects(label, a), f"Label obscures icon: {second['id']}/{first['id']}"
     return geometry
 
 
@@ -119,7 +127,7 @@ def home_render(page):
     expect(page.locator("#game-info")).to_be_hidden()
     assert page.locator("canvas,.planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
     captions = page.locator(".world-caption").evaluate_all("nodes => nodes.map(n => ({children:n.children.length,cn:n.querySelector('h2').textContent,en:n.querySelector('p').textContent}))")
-    assert all(item["children"] == 2 and re.search(r"[\u3400-\u9fff]", item["cn"]) and "Survival" in item["en"] for item in captions), captions
+    assert all(item["children"] == 2 and re.search(r"[\u3400-\u9fff]", item["cn"]) and re.search(r"[A-Za-z]", item["en"]) for item in captions), captions
     assert not re.search(r"已发现的世界|SECTOR 01|游戏档案", page.locator("body").inner_text(), re.I)
     expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
     page.locator("[data-site-stats] summary").click()
@@ -165,7 +173,7 @@ def desktop_drag(page):
     assert page.url == BASE
     after = snapshot(page)
     assert distance(baseline["dayr"], after["dayr"]) > 20
-    saved = page.evaluate("JSON.parse(localStorage.getItem('lcz:positions-v2'))")
+    saved = page.evaluate("JSON.parse(localStorage.getItem('lcz:positions-v3:craft,dawn,dayr,westland'))")
     assert saved and any("dayr" in layout for layout in saved.values()), saved
     field = page.locator("#game-universe").bounding_box()
     saved_points = [layout["dayr"] for layout in saved.values() if "dayr" in layout]
@@ -222,7 +230,34 @@ def search_and_return(page):
     expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
     page.locator(".atlas-home").click()
     page.wait_for_url("**/index.html")
-    expect(page.locator(".world")).to_have_count(3)
+    expect(page.locator(".world")).to_have_count(4)
+
+
+
+def dawn_entry_and_switch(page, _):
+    load(page)
+    pause(page)
+    page.locator("#search-open").click()
+    expect(page.locator(".search-result")).to_have_count(4)
+    for query in ["Dawn of Zombies", "僵尸的黎明", "doz"]:
+        page.locator("#game-search").fill(query)
+        expect(page.locator(".search-result")).to_have_count(1)
+        expect(page.locator(".result-title")).to_have_text("僵尸的黎明")
+    page.locator(".result-title").click()
+    page.wait_for_url("**/DawnofZombiewiki/index.html")
+    expect(page.locator("#main h1")).to_be_visible()
+    expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
+    page.locator(".atlas-switch summary").click()
+    expect(page.locator(".atlas-menu a")).to_have_count(4)
+    page.locator('.atlas-menu a[href*="Craft"]').click()
+    page.wait_for_url("**/Craft%20of%20Survival/wiki.html")
+    page.locator(".atlas-switch summary").click()
+    page.locator('.atlas-menu a[href*="DawnofZombiewiki"]').click()
+    page.wait_for_url("**/DawnofZombiewiki/index.html")
+    expect(page.locator("#main h1")).to_be_visible()
+    page.locator(".atlas-home").click()
+    page.wait_for_url("**/index.html")
+    expect(page.locator(".world")).to_have_count(4)
 
 
 def touch_longpress(page, context):
@@ -313,6 +348,8 @@ try:
             context.on("request", lambda request: results["counter_requests"].append(request.url) if "countapi." in urlparse(request.url).netloc else None)
             page = context.new_page()
             page.set_default_timeout(8000)
+            page.on("requestfailed", lambda request: results["errors"].append({"case":name,"request":request.url,"error":request.failure}) if request.failure != "net::ERR_ABORTED" else None)
+            page.on("console", lambda message: results["errors"].append({"case":name,"error":message.text,"location":message.location}) if message.type == "error" else None)
             page.on("pageerror", lambda error: results["errors"].append({"case":name,"error":str(error)}))
             try:
                 callback(page, context)
@@ -341,13 +378,14 @@ try:
                 if (width,height) in [(390,844),(320,568),(568,320),(844,390),(1920,1080)]:
                     screenshot(page, f"layout-{width}x{height}")
             run_case(f"Viewport {width}x{height} keeps circles and labels in bounds", responsive, width=width, height=height, mobile=width<=844)
+        run_case("Dawn search, entry, shared navigation and return", dawn_entry_and_switch)
         run_case("Real touch long press, second tap and direct tap entry", touch_longpress, width=390, height=844, mobile=True)
         run_case("Real touch repulsion, cancel and long-press movement threshold", touch_drag_and_cancel, width=390, height=844, mobile=True)
         run_case("Reduced motion freezes drift and preserves touch dragging", reduced_motion, width=390, height=844, mobile=True, reduce=True)
 
         def local_file(page, _):
             page.goto((ROOT / "index.html").as_uri(), wait_until="load")
-            expect(page.locator(".game-icon")).to_have_count(3)
+            expect(page.locator(".game-icon")).to_have_count(4)
             assert page.locator(".game-icon").evaluate_all("images => images.every(image => image.naturalWidth > 0)")
             expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
         run_case("Local file preview works without public counter requests", local_file)

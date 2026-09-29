@@ -6,6 +6,7 @@ import vm from 'node:vm';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { versionHtmlAssets } from './lib/version-html-assets.mjs';
+import { isPublicFile } from './lib/public-files.mjs';
 
 const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -20,10 +21,7 @@ const stageRoot = option('--stage');
 const errors = [];
 const requiredFiles = ['index.html', '404.html', '.nojekyll'];
 const optionalFiles = ['robots.txt'];
-const publicExtensions = new Set([
-  '.html', '.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
-  '.ico', '.avif', '.woff', '.woff2', '.ttf',
-]);
+
 
 function loadGames(directory) {
   const filename = path.join(directory, 'assets', 'games.js');
@@ -87,7 +85,7 @@ try {
     for (const directory of directories) {
       const full = path.join(sourceRoot, directory);
       if (!fs.existsSync(full)) throw new Error(`Missing public directory: ${directory}`);
-      sources.push(...walk(full).filter((file) => publicExtensions.has(path.extname(file).toLowerCase())));
+      sources.push(...walk(full).filter((file) => isPublicFile(path.relative(sourceRoot, file))));
     }
     for (const source of sources) {
       if (!fs.lstatSync(source).isFile()) throw new Error(`Expected a regular public file: ${source}`);
@@ -121,23 +119,28 @@ for (const name of [...requiredFiles, ...optionalFiles.filter((name) => fs.exist
 for (const directory of directories) {
   const full = path.join(root, directory);
   if (!fs.existsSync(full)) errors.push(`Missing public directory: ${directory}`);
-  try { walk(full, files); }
+  try { files.push(...walk(full).filter((file) => isPublicFile(relative(file)))); }
   catch (error) { errors.push(error.message); }
 }
 
-function checkReference(raw, source, base = path.dirname(source)) {
-  let reference = raw.trim().replaceAll('&amp;', '&');
+const publicFiles = new Set(files.map((file) => path.resolve(file)));
+
+function checkReference(raw, source, base = path.dirname(source), pathLiteral = false) {
+  let reference = pathLiteral ? raw : raw.trim().replaceAll('&amp;', '&');
   if (!reference || reference.startsWith('#') || reference.includes('${') || reference.includes('{{')) return;
   if (/^(?:https?:)?\/\//i.test(reference)) {
     networkReferences.add(reference.split('?')[0]);
     return;
   }
   if (/^[a-z][a-z0-9+.-]*:/i.test(reference)) return;
-  reference = reference.split(/[?#]/)[0];
-  try { reference = decodeURIComponent(reference); }
-  catch { errors.push(`${relative(source)}: invalid URL encoding`); return; }
+  if (!pathLiteral) {
+    reference = reference.split(/[?#]/)[0];
+    try { reference = decodeURIComponent(reference); }
+    catch { errors.push(`${relative(source)}: invalid URL encoding`); return; }
+  }
   if (!reference) return;
-  const target = path.resolve(base, reference);
+  let target = path.resolve(base, reference);
+  if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
   const key = `${source}\n${target}`;
   if (checkedReferences.has(key)) return;
   checkedReferences.add(key);
@@ -146,6 +149,8 @@ function checkReference(raw, source, base = path.dirname(source)) {
     errors.push(`${relative(source)}: URL must stay relative to the published site: ${reference}`);
   } else if (!fs.existsSync(target)) {
     errors.push(`${relative(source)}: missing local resource ${reference}`);
+  } else if (!publicFiles.has(target)) {
+    errors.push(`${relative(source)}: resource is excluded from the public artifact: ${reference}`);
   }
 }
 
@@ -186,6 +191,26 @@ for (const file of files) {
     const gameDirectory = directories.find((directory) => directory !== 'assets' && relative(file).startsWith(`${directory}/`));
     if (gameDirectory) {
       const documentBase = path.join(root, gameDirectory);
+      if (gameDirectory === 'DawnofZombiewiki') {
+        if (/\/data\/(?:catalog|mechanics|asset-map|site-meta)\.js$/.test(relative(file))) {
+          try {
+            const context = { window: {} };
+            vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
+            const visit = (value) => {
+              if (typeof value === 'string' && /^(?:assets\/|data\/player\/|guides\/)/.test(value)) {
+                checkReference(value, file, documentBase, true);
+              } else if (Array.isArray(value)) value.forEach(visit);
+              else if (value && typeof value === 'object') Object.values(value).forEach(visit);
+            };
+            visit(context.window);
+          } catch (error) { errors.push(`${relative(file)}: cannot validate Dawn data: ${error.message}`); }
+        }
+        if (path.basename(file) === 'app.js') {
+          for (const match of source.matchAll(/\b(?:src|href)\s*=\s*(['"])(.*?)\1/gi)) {
+            checkReference(match[2], file, documentBase);
+          }
+        }
+      }
       if (relative(file).endsWith('/wiki-assets/wiki/data/index.js')) {
         for (const match of source.matchAll(/"_chunk"\s*:\s*"(wiki-chunk-[a-z0-9_-]+)"/g)) {
           const chunk = match[1].slice('wiki-chunk-'.length);

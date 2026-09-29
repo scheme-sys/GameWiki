@@ -2,39 +2,60 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#151916">
-  <meta name="description" content="Dawn of Zombies 中文玩家百科：武器装备图鉴、怪物、随从、制作配方与抽取机制。基于 2.278 内置资料整理。">
-  <title>DOZ WIKI · 废土生存档案</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a111c">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://countapi.mileshilliard.com; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="僵尸的黎明 Dawn of Zombies 中文玩家百科：查阅武器装备、怪物、随从、制作配方与抽取机制，为下一次探索做好准备。">
+  <title>僵尸的黎明 · Dawn of Zombies Wiki · LCZ</title>
   <link rel="icon" href="assets/wiki-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../assets/wiki-nav.css">
+  <link rel="stylesheet" href="../assets/site-stats.css">
+  <script src="../assets/wiki-nav.js" defer></script>
+  <script src="../assets/site-stats.js" defer></script>
 </head>
 <body>
+  <nav class="atlas-nav" data-game="dawn" aria-label="游戏星图导航">
+    <a class="atlas-home" href="../index.html"><span class="atlas-home-mark" aria-hidden="true">✧</span><span>返回星空</span></a>
+    <span class="atlas-label">LCZ</span>
+    <div class="site-stats" data-site-stats data-compact="true"></div>
+    <details class="atlas-switch"><summary>切换游戏</summary><div class="atlas-menu">
+      <a href="../Craft%20of%20Survival/wiki.html">Craft of Survival</a>
+      <a href="../Day%20R%20Survival/wiki_dayR.html">Day R Survival</a>
+      <a href="../Westland%20Survival/westland_wiki.html">Westland Survival</a>
+      <a href="../DawnofZombiewiki/index.html" aria-current="page">Dawn of Zombies</a>
+    </div></details>
+  </nav>
   <a class="skip-link" href="#main">跳到正文</a>
-  <aside class="sidebar" id="sidebar">
-    <a class="brand" href="#home" aria-label="DOZ Wiki 首页"><img src="assets/wiki-mark.svg" alt="" width="44" height="44"><span>DOZ<span class="brand-wiki">WIKI / 中文站</span></span></a>
-    <div class="sidebar-caption">DAWN OF ZOMBIES</div>
-    <nav id="nav" aria-label="百科导航"></nav>
-    <div class="sidebar-bottom"><span class="signal-dot"></span> 离线资料库 <strong>2.278</strong><p>献给每一位废土幸存者</p><a href="#about">资料范围与收录说明 <span>↗</span></a></div>
-  </aside>
-  <div class="workspace">
-    <header class="topbar">
-      <button class="icon-button mobile-menu" id="mobile-menu" aria-label="打开导航" aria-expanded="false">☰</button>
-      <div class="breadcrumb"><span>幸存者手册</span><span>/</span><strong id="crumb">资料总览</strong></div>
-      <div class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索整个图鉴"><kbd>/</kbd></div>
-      <a class="saved-link" href="#favorites" aria-label="查看收藏">☆ <span>我的收藏</span><b id="saved-count">0</b></a>
-    </header>
-    <main id="main" tabindex="-1"><div class="initial-loading">正在打开废土档案…</div></main>
-    <footer><span>DOZ WIKI <i>·</i> 非官方中文玩家资料库</span><span>版本 2.278 / 内置资料 151.25 <i>·</i> <a href="#about">来源与完整性</a></span></footer>
+  <button class="menu-backdrop" id="menu-backdrop" aria-label="关闭百科导航" hidden></button>
+  <div class="wiki-shell">
+    <aside class="sidebar" id="sidebar" aria-label="僵尸的黎明百科目录">
+      <div class="sidebar-brand"><a class="brand" href="#home" aria-label="僵尸的黎明 Wiki 首页"><img src="../assets/game-icons/dawn.webp" alt="" width="44" height="44"><span>僵尸的黎明<span class="brand-wiki">DAWN OF ZOMBIES</span></span></a><button class="icon-button sidebar-dismiss" id="menu-close" aria-label="关闭百科导航">×</button></div>
+      <div class="sidebar-caption">幸存者的随身百科</div>
+      <nav id="nav" aria-label="百科导航"></nav>
+      <div class="sidebar-bottom"><span class="signal-dot"></span> 献给每一位废土幸存者<a href="#about">收录说明与资料下载 <span>↗</span></a></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="mobile-menu" aria-label="打开百科导航" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>幸存者手册</span><span>/</span><strong id="crumb">资料总览</strong></div>
+        <div class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索整个图鉴"><kbd>/</kbd></div>
+        <a class="saved-link" href="#favorites" aria-label="查看收藏">☆ <span>我的收藏</span><b id="saved-count">0</b></a>
+      </header>
+      <main id="main" tabindex="-1" aria-busy="true"><div class="initial-loading">正在打开废土档案…</div></main>
+      <footer><span>LCZ <i>·</i> 僵尸的黎明中文玩家百科</span><a href="#about">非官方资料整理 · 收录说明</a></footer>
+    </div>
   </div>
   <dialog id="detail-dialog" aria-label="图鉴详情"></dialog>
   <dialog id="compare-dialog" aria-label="装备对比"></dialog>
   <div id="compare-tray" class="compare-tray" hidden></div>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script src="data/catalog.js"></script>
-  <script src="data/asset-map.js"></script>
-  <script src="data/mechanics.js"></script>
-  <script src="data/site-meta.js"></script>
-  <script src="app.js"></script>
+  <script src="data/catalog.js" defer></script>
+  <script src="data/asset-map.js" defer></script>
+  <script src="data/mechanics.js" defer></script>
+  <script src="data/site-meta.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

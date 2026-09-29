@@ -29,6 +29,9 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Check Dawn data and original image integrity
+        run: python DawnofZombiewiki/tools/verify_package.py --data-only
+
       - name: Check crawler directives and page security
         run: node scripts/test-site-security.mjs
 

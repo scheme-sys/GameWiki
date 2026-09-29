@@ -126,7 +126,7 @@ body.dialog-open { overflow: hidden; }
   .search-trigger { width: 44px; justify-content: center; padding: 0; background: #bacde709; }
   .search-trigger>span,.search-trigger kbd { display: none; }
   .universe { min-height: 380px; }
-  .world-caption { margin-top: 14px; width: 145px; }
+  .world-caption { margin-top: 14px; width: var(--compact-caption-width,145px); }
   .world-caption h2 { font-size: 17px; margin-bottom: 5px; }
   .world-caption p { font-size: 10px; }
   .scene-footer { height: 56px; }
@@ -151,7 +151,7 @@ body.dialog-open { overflow: hidden; }
   .universe { min-height: 170px; }
   .scene-footer { height: 50px; }
   .scene-controls .icon-button { width: 44px; height: 44px; }
-  .world-caption { margin-top: 9px; width: 145px; }
+  .world-caption { margin-top: 9px; width: var(--compact-caption-width,145px); }
   .world-caption h2 { font-size: 14px; margin-bottom: 3px; }
   .world-caption p { font-size: 9px; }
   .game-popover.touch-preview { width: 290px; max-height: calc(100vh - 24px); max-height: calc(100svh - 24px); left: auto !important; right: 12px; bottom: 12px; }

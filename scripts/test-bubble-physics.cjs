@@ -9,6 +9,12 @@ function separated(field) {
     const a = bodies[first];
     for (let second = first + 1; second < bodies.length; second++) {
       const b = bodies[second];
+      if (a.labelHeight || b.labelHeight) {
+        const horizontal = Math.abs(a.x - b.x) >= a.radius + b.radius + field.gap - 0.01;
+        const vertical = a.y + a.radius + a.labelHeight + field.gap <= b.y - b.radius + 0.01 ||
+          b.y + b.radius + b.labelHeight + field.gap <= a.y - a.radius + 0.01;
+        assert.ok(horizontal || vertical, `${a.id} caption overlaps ${b.id}`);
+      }
       assert.ok(Math.hypot(a.x - b.x, a.y - b.y) >= a.radius + b.radius + field.gap - 0.01, `${a.id} overlaps ${b.id}`);
     }
     assert.ok(a.x >= a.radius + field.padding - 0.01);
@@ -98,4 +104,108 @@ test('start is idempotent and stop/destroy cancel the sole animation frame', () 
   assert.equal(callbacks.size, 0);
   field.start().destroy();
   assert.equal(callbacks.size, 0);
+});
+
+
+test('four phone bubbles repel including their captions during repeated drags', () => {
+  const field = new BubbleField({ width: 288, height: 442, padding: 3, gap: 10 });
+  field.setBodies([
+    { id: 'dayr', x: 72, y: 106, radius: 68, labelHeight: 34 },
+    { id: 'craft', x: 216, y: 128, radius: 68, labelHeight: 31 },
+    { id: 'westland', x: 72, y: 301, radius: 68, labelHeight: 33 },
+    { id: 'dawn', x: 216, y: 318, radius: 68, labelHeight: 32 }
+  ]);
+  separated(field);
+  for (const [x, y] of [[216,128],[3,3],[285,439],[144,221],[72,301],[216,318]]) {
+    field.setPosition('dayr', x, y);
+    separated(field);
+  }
+});
+
+test('a held caption stays at a feasible pointer position and a wall uses the free axis', () => {
+  const field = new BubbleField({ width: 360, height: 460, padding: 3, gap: 10 });
+  field.setBodies([
+    { id: 'held', x: 200, y: 120, radius: 50, labelHeight: 35 },
+    { id: 'edge', x: 307, y: 120, radius: 50, labelHeight: 35 }
+  ]);
+  field.grab('held');
+  field.dragTo('held', 280, 120);
+  separated(field);
+  const held = field.getBodies().find((body) => body.id === 'held');
+  assert.equal(held.x, 280);
+  assert.equal(held.y, 120);
+  assert.ok(Math.abs(field.getBodies()[1].y - 120) > 100);
+});
+
+test('360 seeded four-bubble layouts survive random drags, corners, and idle motion', () => {
+  let seed = 0x1c29ab;
+  const random = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+    return seed / 4294967296;
+  };
+  const cases = [
+    { name: '320px phone', width: 288, height: 442, radius: 68, variation: 5, label: 38 },
+    { name: '568px landscape', width: 536, height: 218, radius: 62.5, variation: 4, label: 30 },
+    { name: 'desktop', width: 1280, height: 680, radius: 110, variation: 20, label: 45 }
+  ];
+  let worstDrag = 0, dragCount = 0;
+  for (const config of cases) {
+    for (let trial = 0; trial < 120; trial++) {
+      const field = new BubbleField({ width: config.width, height: config.height, padding: 3, gap: 10 });
+      field.setBodies(['dayr', 'craft', 'westland', 'dawn'].map((id) => ({
+        id, x: random() * config.width, y: random() * config.height,
+        radius: config.radius - random() * config.variation, labelHeight: config.label - random() * 5
+      })));
+      separated(field);
+      const id = field.getBodies()[Math.floor(random() * 4)].id;
+      const targets = [
+        [-100, -100], [config.width + 100, -100],
+        [config.width + 100, config.height + 100], [-100, config.height + 100],
+        [config.width / 2, config.height / 2],
+        ...Array.from({ length: 4 }, () => [random() * config.width, random() * config.height])
+      ];
+      field.grab(id);
+      for (const [x, y] of targets) {
+        const start = performance.now();
+        field.dragTo(id, x, y);
+        worstDrag = Math.max(worstDrag, performance.now() - start);
+        dragCount++;
+        separated(field);
+      }
+      field.release(id);
+      const anchors = field.getBodies().map(({ anchorX, anchorY }) => [anchorX, anchorY]);
+      for (let frame = 0; frame < 15; frame++) {
+        field.step(1 / 60);
+        separated(field);
+      }
+      assert.deepEqual(field.getBodies().map(({ anchorX, anchorY }) => [anchorX, anchorY]), anchors);
+    }
+  }
+  console.log('Stress: ' + dragCount + ' four-bubble drags; worst synchronous drag ' + worstDrag.toFixed(2) + ' ms.');
+});
+
+test('a full drift cycle in crowded phone and landscape layouts never reshuffles neighbours', () => {
+  for (const config of [
+    { width: 288, height: 442, radius: 68, labelHeight: 35, points: [[71,100],[217,100],[71,310],[217,310]] },
+    { width: 536, height: 218, radius: 62.5, labelHeight: 30, points: [[65.5,105],[200.5,105],[335.5,105],[470.5,105]] }
+  ]) {
+    const field = new BubbleField({ width: config.width, height: config.height, padding: 3, gap: 10 });
+    field.setBodies(config.points.map(([x, y], index) => ({ id: 'drift-' + index, x, y,
+      radius: config.radius, labelHeight: config.labelHeight })));
+    const anchors = field.getBodies().map(({ anchorX, anchorY }) => [anchorX, anchorY]);
+    let previous = field.getBodies();
+    for (let frame = 0; frame < 3600; frame++) {
+      field.step(1 / 60);
+      separated(field);
+      const current = field.getBodies();
+      for (let index = 0; index < current.length; index++) {
+        // Even if all four tiny per-frame movements accumulate through contact,
+        // idle correction must remain below a single visible pixel.
+        assert.ok(Math.hypot(current[index].x - previous[index].x, current[index].y - previous[index].y) < 0.3,
+          'Idle collision correction must not cause a rearrangement');
+      }
+      previous = current;
+    }
+    assert.deepEqual(field.getBodies().map(({ anchorX, anchorY }) => [anchorX, anchorY]), anchors);
+  }
 });

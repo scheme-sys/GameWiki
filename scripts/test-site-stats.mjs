@@ -71,7 +71,7 @@ test('production counts project and page once, without sending URL parameters or
   assert.equal(env.timers.size, 0);
 });
 
-test('both project directories share all six page counters and the unchanged project counter', async () => {
+test('both project directories share all seven page counters and the unchanged project counter', async () => {
   const cases = new Map([
     ['', 'home'], ['index.html', 'home'],
     ['Craft%20of%20Survival/wiki.html', 'craft'],
@@ -79,6 +79,8 @@ test('both project directories share all six page counters and the unchanged pro
     ['Westland%20Survival/westland_wiki.html', 'westland'],
     ['Westland%20Survival/westland_difficulty_design.html', 'westland_lab'],
     ['Westland%20Survival/%E5%9F%BA%E5%9C%B0.html', 'westland_base'],
+    ['DawnofZombiewiki/', 'dawn'],
+    ['DawnofZombiewiki/index.html', 'dawn'],
   ]);
   for (const [path, key] of cases) {
     const endpoints = [];
@@ -109,6 +111,7 @@ test('local files, previews, other repositories and unknown paths never send hit
     'https://scheme-sys.github.io/LCZ-GameWiki-other/', 'https://scheme-sys.github.io/another/GameWiki/',
     `${origin}404.html`, `${origin}%zz`, `${legacyOrigin}404.html`, `${legacyOrigin}%zz`,
     `${legacyOrigin}index.html/other`, `${legacyOrigin}Craft%20of%20Survival/unknown.html`,
+    `${origin}DawnofZombiewiki/unknown.html`, 'https://scheme-sys.github.io/DawnofZombiewiki/',
   ]) {
     const env = environment(url);
     await settle();
