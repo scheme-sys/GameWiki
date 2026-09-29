@@ -200,6 +200,9 @@ for (const file of files) {
   } else {
     const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8', maxBuffer: 1024 * 1024 });
     if (result.status !== 0) errors.push(`${relative(file)}: JavaScript syntax check failed`);
+    if (relative(file) === 'assets/music-player.js') {
+      for (const match of source.matchAll(/file:\s*['\"](music\/moonlight-[123]\.mp3)['\"]/g)) checkReference('assets/' + match[1], file, root);
+    }
     // Image paths stored in extracted data resolve relative to the game HTML,
     // not relative to the JavaScript file. Do not evaluate the game application.
     const gameDirectory = directories.find((directory) => directory !== 'assets' && relative(file).startsWith(`${directory}/`));

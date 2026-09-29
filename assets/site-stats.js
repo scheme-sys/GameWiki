@@ -2,6 +2,7 @@
 (() => {
   "use strict";
 
+  if (window.LCZSite?.parked && window === window.top) return;
   if (window.__lczSiteStatsMounted) return;
   window.__lczSiteStatsMounted = true;
   const hosts = [...document.querySelectorAll("[data-site-stats]")];

@@ -140,7 +140,7 @@ def home_render(page):
     load(page)
     assert page.locator(".brand").inner_text().strip() == "LCZ"
     expect(page.locator("#game-info")).to_be_hidden()
-    assert page.locator("canvas,.planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
+    assert page.locator(".planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
     assert page.locator(".world-caption,#motion-toggle,#reset-map,#help-open,.scene-footer").count() == 0
     expect(page.locator('.community-number')).to_have_text('1067536816')
     assert page.locator('.world-link').evaluate_all('links=>links.every(a=>a.getAttribute("aria-label").includes("Wiki"))')
@@ -149,7 +149,7 @@ def home_render(page):
     assert page.locator('#search-open').evaluate('(e)=>getComputedStyle(e).backgroundImage.includes("linear-gradient")'), 'Gradient search border was lost'
     requests = page.evaluate('performance.getEntriesByType("resource").map(r=>r.name)')
     assert not any('/data/' in url or '/wiki-assets/' in url for url in requests), 'Home loaded a game dataset'
-    assert page.evaluate('performance.getEntriesByType("resource").reduce((s,r)=>s+r.decodedBodySize,0)') < 230000, 'Portal initial resource budget exceeded' 
+    assert page.evaluate('performance.getEntriesByType("resource").reduce((s,r)=>s+r.decodedBodySize,0)') < 285000, 'Portal initial resource budget exceeded (music and independent sky included)'
     assert not re.search(r"已发现的世界|SECTOR 01|游戏档案", page.locator("body").inner_text(), re.I)
     expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
     summary = page.locator("[data-site-stats] summary")
@@ -192,29 +192,30 @@ def drift_and_hover(page):
 
 def quiet_sky_motion(page, context):
     load(page)
-    assert page.locator('.constellations .star-points circle').count()==108
-    clusters=page.locator('.constellations .sky-cluster')
-    expect(clusters).to_have_count(2)
-    assert sum(path.count('M') for path in page.locator('.star-lines path').evaluate_all('paths=>paths.map(p=>p.getAttribute("d"))'))==20
-    def state():
-        return clusters.evaluate_all('nodes=>nodes.map(n=>({transform:getComputedStyle(n).transform,opacity:getComputedStyle(n).opacity,play:getComputedStyle(n).animationPlayState,animations:n.getAnimations().map(a=>({state:a.playState,duration:a.effect.getTiming().duration}))}))')
-    before=state();page.wait_for_timeout(1200);after=state()
-    assert all(a['transform']!=b['transform'] for a,b in zip(before,after)), 'The two star groups did not drift'
-    assert all(a['opacity']!=b['opacity'] for a,b in zip(before,after)), 'Slow star brightness variation is absent'
-    assert all(len(a['animations'])==2 and all(animation['duration']>=13000 for animation in a['animations']) for a in after), after
+    canvas=page.locator('.starfield-canvas')
+    expect(canvas).to_be_visible()
+    expect(canvas).to_have_attribute('data-state','running')
+    assert canvas.evaluate('(e)=>getComputedStyle(e).pointerEvents')=='none'
+    assert canvas.evaluate('(e)=>e.width*e.height')<=2600000
+    pixels=lambda:canvas.evaluate('(e)=>e.toDataURL()')
+    before=pixels();page.wait_for_timeout(1200)
+    assert before!=pixels(), 'Independent starfield does not move'
     page.locator('#search-open').click()
-    frozen=state();page.wait_for_timeout(180)
-    assert frozen==state(), 'Background moves behind the search dialog'
-    assert all(all(animation['state']=='paused' for animation in a['animations']) for a in frozen)
+    expect(canvas).to_have_attribute('data-state','paused')
+    frozen=pixels();page.wait_for_timeout(180)
+    assert frozen==pixels(), 'Background moves behind search'
     page.keyboard.press('Escape')
     page.emulate_media(reduced_motion='reduce')
-    assert all(a['transform']=='none' and not a['animations'] for a in state()), 'Reduced-motion still animates the background'
+    expect(canvas).to_have_attribute('data-state','paused')
+    frozen=pixels();page.wait_for_timeout(180)
+    assert frozen==pixels(), 'Reduced-motion still animates'
     page.emulate_media(reduced_motion='no-preference')
-    # Exercise the existing visibility handler without depending on headless tab scheduling.
     page.evaluate('()=>{Object.defineProperty(document,"hidden",{configurable:true,get:()=>true});document.dispatchEvent(new Event("visibilitychange"));}')
-    assert all(all(animation['state']=='paused' for animation in a['animations']) for a in state()), 'Hidden-page visibility handler did not pause the sky'
+    expect(canvas).to_have_attribute('data-state','paused')
+    frozen=pixels();page.wait_for_timeout(180)
+    assert frozen==pixels(), 'Hidden page still draws'
     page.evaluate('()=>{delete document.hidden;document.dispatchEvent(new Event("visibilitychange"));}')
-    assert all(all(animation['state']=='running' for animation in a['animations']) for a in state()), 'Visible-page handler did not resume the sky'
+    expect(canvas).to_have_attribute('data-state','running')
     cdp=context.new_cdp_session(page);cdp.send('Performance.enable')
     def metrics():return {row['name']:row['value'] for row in cdp.send('Performance.getMetrics')['metrics']}
     initial=metrics()
@@ -696,8 +697,8 @@ try:
 
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
         run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
-        run_case("Two quiet star groups drift, pause and respect reduced motion", quiet_sky_motion)
-        run_case("Mobile animated sky keeps 108 stars inexpensive and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
+        run_case("Independent starfield moves, pauses and respects reduced motion", quiet_sky_motion)
+        run_case("Mobile starfield stays bounded and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
         run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
         run_case("Wiki cover backgrounds load only for hovered games", lazy_popover_covers)
         run_case("Wiki cover backgrounds fit long-press cards at 320px", lambda page,context:lazy_popover_covers(page,context,True), width=320,height=568,mobile=True)

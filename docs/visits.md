@@ -54,3 +54,5 @@ URL 的实际页面路径、查询参数、搜索词、锚点和来源页面都�
 3. 页面引入共享统计 CSS/JS，并保留 `<div class="site-stats" data-site-stats></div>`。
 4. CSP 的 `connect-src` 允许 `https://cdn.busuanzi.cc` 即可；无需开放第三方 `script-src`。
 5. 运行 `node --test scripts/test-site-stats.mjs`。测试模拟响应，覆盖单次请求、两种部署路径、预览隔离、无查询/来源泄露、两个指标校验、隐藏首显、超时与失败。不要用正式 POST 做开发测试。
+
+音乐开启后的连续导航：新展示的子页面仍按正常页面访问计数。含 `__lcz_page` 参数的恢复入口会隐藏外层页面，该外层不发送计数；只由实际显示的页面发送一次。栏目 hash 切换不会额外计数，查询参数仍不发送给统计服务。单元验证包含这个外层去重边界。

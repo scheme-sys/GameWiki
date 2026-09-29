@@ -123,7 +123,8 @@
   }
   function sample(category,n=1) {const preferred={weapon:142,armor:188,enemy:5864,companion:12949};const rows=visible.filter(e=>e.category===category&&imagePath(e));return rows.sort((a,b)=>Number(b.id===preferred[category])-Number(a.id===preferred[category])).slice(0,n);}
   function renderHome() {
-    const hero = localPath(A.hero || '', /^assets\/images\//);
+    // Reuse the shared display cover; catalogue image validation stays unchanged.
+    const hero = '../assets/game-covers/dawn.webp';
     const featured = [142,2825,9].map(id=>byId.get(String(id))).filter(e=>e&&imagePath(e));
     if (featured.length<3) featured.push(...visible.filter(e=>e.category==='weapon'&&!featured.includes(e)).slice(0,3-featured.length));
     const tiles = [{key:'weapon',en:'WEAPONS',desc:'火力、近战与战斗选择'},{key:'armor',en:'EQUIPMENT',desc:'防护、品质与装备属性'},{key:'enemy',en:'BESTIARY',desc:'认识废土中的威胁'},{key:'companion',en:'COMPANIONS',desc:'寻找并培养你的伙伴'}];

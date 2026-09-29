@@ -1,6 +1,6 @@
 # LCZ · 游戏星图
 
-一个以手机体验为优先的游戏 Wiki 集合。主页铺满屏幕，以六个纯圆形游戏图标呈现入口。气泡轻微漂移，拖动时可重叠，松手后柔和弹开；中英名称只在悬停或长按后的介绍卡中出现。背景采用静态渐变与缓慢漂移的星点连线，游戏资料按实际操作分批加载。
+一个以手机体验为优先的游戏 Wiki 集合。主页铺满屏幕，以六个纯圆形游戏图标呈现入口。气泡轻微漂移，拖动时可重叠，松手后柔和弹开；中英名称只在悬停或长按后的介绍卡中出现。背景采用静态渐变、独立漂移的星点与随距离淡入淡出的连线，游戏资料按实际操作分批加载。
 
 站点内容使用纯 HTML、CSS、JavaScript，无需 npm 安装或站点构建，可直接托管到 GitHub Pages。访问统计使用外部公开计数服务，与 Wiki 资料加载分开运行。
 
@@ -15,6 +15,14 @@
 主页左上角显示 LCZ、群 QQ：1067536816 和访问统计。点击群号打开二维码小窗，可保存原图；图片只在首次打开时加载。二维码原图保存在 `assets/community/qq-group-1067536816.jpg`，更新时替换该文件；更换群号需同步更新页面与图片。右上角搜索支持 `/` 快捷键；介绍卡、搜索面板与访问统计提示共用深色直角矩形外框。
 
 各 Wiki 顶部共用 LCZ 与群 QQ：1067536816 的入口，点击群号弹出直角二维码小窗；404 页面也保留群入口。共享样式与交互位于 `assets/community-panel.css` 和 `assets/community-panel.js`，二维码复用同一张原图，仅在打开时读取。所有搜索输入框与弹窗外框统一为直角。
+
+## 星空与背景音乐
+
+主页参考 [Yujie Luo 网站](https://yujieluo96.github.io/) 的粒子运动与距离连线机制，使用独立实现的 Canvas 2D 星空，不依赖外部粒子库。桌面约 30 fps、手机约 24 fps，限制星点数量与绘制分辨率；后台、弹窗、拖拽和系统减少动态效果时暂停，Canvas 不可用时保留 SVG 背景。
+
+顶部音符按钮默认关闭。点击后播放贝多芬《月光奏鸣曲》三个乐章，依次循环并柔和衔接；光晕跟随实际音频强弱，暂停后暗淡。录音由 Paul Pitman 演奏、Musopen 提供，录音本身已授权公有领域；来源与摘要见 [音频说明](assets/music/README.md)。
+
+音乐开启后，同一标签页内切换本项目的 Wiki 会保留同一个播放器；普通栏目链接、详情、前进后退和独立页面访问仍可用。刷新、关闭标签或在当前标签跳到外站会中断演奏，新标签不继承原播放器；刷新后再次点击可从记录位置继续。`file://` 本地打开保留普通跳转，跨页连续播放请使用 HTTP 预览或 GitHub Pages。首次打开页面不下载音乐，仅主动播放后读取当前乐章，临近结尾再准备下一乐章。详细结构与维护方式见 [音乐与连续导航](docs/music.md)。
 
 ## 已收录的世界
 
@@ -90,6 +98,10 @@ assets/portal.css              圆形气泡、介绍层与响应式布局
 assets/portal.js               拖动、悬停、长按、搜索与位置保存
 assets/bubble-physics.js       漂移、排斥与场景边界
 assets/game-icons/             官方应用图标、轻量显示副本与来源记录
+assets/starfield.*            独立星点运动、连线与低开销绘制
+assets/music-player.*         按需音乐、衔接和顶部控件
+assets/site-shell.*           播放时保持音频的站内导航
+assets/music/                 三乐章录音及来源许可
 assets/wiki-nav.*              游戏页面的统一导航
 assets/community-panel.*       Wiki 与 404 页共用的QQ群入口和按需二维码弹窗
 assets/site-stats.*            正式站点的参考访问统计
@@ -208,6 +220,7 @@ node scripts/check-site.mjs --root .verification/site-preview
 ```sh
 python -m pip install playwright
 python scripts/test-portal.py
+python scripts/test-music.py
 python scripts/test-dawn.py
 python scripts/test-ldoe.py
 python scripts/test-grim.py

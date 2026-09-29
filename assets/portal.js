@@ -84,11 +84,12 @@
   });
 
   function syncMotion() {
-    document.body.classList.toggle('scene-still', reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog());
+    document.body.classList.toggle('scene-still', document.body.classList.contains('lcz-shell-mode') || reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog());
     field.setReducedMotion(reducedMotion.matches);
-    if (reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog() || (gesture && !gesture.moved)) field.stop();
+    if (document.body.classList.contains('lcz-shell-mode') || reducedMotion.matches || document.hidden || !info.hidden || hasOpenDialog() || (gesture && !gesture.moved)) field.stop();
     else field.start();
   }
+  document.addEventListener('lcz:content-visibility', syncMotion);
   function savePositions() {
     positions[layoutKey] = Object.fromEntries(field.getBodies().map((body) =>
       [body.id, { x: body.anchorX / width, y: body.anchorY / height }]));

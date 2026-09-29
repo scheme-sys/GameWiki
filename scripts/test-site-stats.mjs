@@ -44,6 +44,7 @@ function environment(href, options = {}) {
       } };
     },
   };
+  if (options.parked) { context.window.LCZSite = {parked:true}; context.window.top = context.window; }
   vm.createContext(context);
   const run = () => vm.runInContext(source, context);
   run();
@@ -210,4 +211,11 @@ test('native details still closes on outside pointer and Escape, returning keybo
   env.listeners.get('keydown')({ key: 'Escape' });
   assert.equal(details.open, false);
   assert.equal(env.nodes.get('summary').focused, true);
+});
+
+test('Restoring a music route counts the visible child only, never the parked outer page', async () => {
+  const outer=environment(origin+'index.html?__lcz_page=grimsoul_Wiki%2Findex.html',{parked:true});
+  await settle(); assert.equal(outer.requests.length,0);
+  const child=environment(origin+'grimsoul_Wiki/index.html');
+  await settle(); assert.equal(child.requests.length,1);
 });

@@ -46,9 +46,10 @@ test('CSP blocks arbitrary scripts, plugins, connections, base URLs and form sub
     const scripts = directives.get('script-src');
     assert.ok(scripts.includes("'self'"), name);
     assert.ok(scripts.every(source => source === "'self'" || /^'sha256-[A-Za-z0-9+/]+=*'$/.test(source)), name);
-    for (const directive of ['script-src-attr', 'object-src', 'frame-src', 'worker-src', 'base-uri', 'form-action']) {
+    for (const directive of ['script-src-attr', 'object-src', 'worker-src', 'base-uri', 'form-action']) {
       assert.deepEqual(directives.get(directive), ["'none'"], name + ': ' + directive);
     }
+    for (const directive of ['frame-src', 'media-src']) assert.deepEqual(directives.get(directive), [name === '404.html' ? "'none'" : "'self'"], name + ': ' + directive);
     assert.deepEqual(directives.get('connect-src'), ['https://cdn.busuanzi.cc'], name);
     // These directives require response headers and must not be presented as meta protection.
     assert.ok(!directives.has('frame-ancestors') && !directives.has('sandbox'), name);

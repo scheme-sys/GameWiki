@@ -1,0 +1,14 @@
+/* The original SVG sky stays available until the canvas has a valid first frame. */
+.constellations .starfield-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  contain: strict;
+}
+
+.constellations.starfield-ready > .sky-cluster {
+  display: none;
+}
