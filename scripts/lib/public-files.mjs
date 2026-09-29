@@ -13,12 +13,23 @@ const ldoeRuntimeFiles = new Set([
   'index.html', 'styles.css', 'app.js', 'data-loader.js', 'favicon.svg', 'data/bootstrap.js',
 ]);
 
+const grimRuntimeFiles = new Set([
+  'index.html', 'assets/wiki.css', 'assets/wiki.js', 'assets/favicon.svg',
+  'assets/hero.webp', 'data-loader.js', 'data/bootstrap.js',
+]);
+
 // One selector is shared by source checks and artifact creation. The data and
 // maintenance files remain in the repository, but are not Pages resources.
 export function isPublicFile(relativePath) {
   const relative = relativePath.split(path.sep).join('/');
   const parts = relative.split('/');
   if (parts.some((part) => !part || part.startsWith('.'))) return false;
+  if (relative.startsWith('grimsoul_Wiki/')) {
+    const local = relative.slice('grimsoul_Wiki/'.length);
+    return grimRuntimeFiles.has(local) ||
+      /^data\/lazy\/[a-z0-9-]+\.[a-f0-9]{16}\.js$/.test(local) ||
+      /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|svg|avif)$/i.test(local);
+  }
   if (relative.startsWith('LDOE_Wiki/')) {
     const local = relative.slice('LDOE_Wiki/'.length);
     return ldoeRuntimeFiles.has(local) ||

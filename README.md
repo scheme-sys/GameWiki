@@ -1,6 +1,6 @@
 # LCZ · 游戏星图
 
-一个以手机体验为优先的游戏 Wiki 集合。主页铺满屏幕，以五个纯圆形游戏图标呈现入口。气泡轻微漂移，拖动时可重叠，松手后柔和弹开；中英名称只在悬停或长按后的介绍卡中出现。背景采用静态渐变与稀疏星点，游戏资料按实际操作分批加载。
+一个以手机体验为优先的游戏 Wiki 集合。主页铺满屏幕，以六个纯圆形游戏图标呈现入口。气泡轻微漂移，拖动时可重叠，松手后柔和弹开；中英名称只在悬停或长按后的介绍卡中出现。背景采用静态渐变与缓慢漂移的星点连线，游戏资料按实际操作分批加载。
 
 站点内容使用纯 HTML、CSS、JavaScript，无需 npm 安装或站点构建，可直接托管到 GitHub Pages。访问统计使用外部公开计数服务，与 Wiki 资料加载分开运行。
 
@@ -14,6 +14,8 @@
 
 主页左上角显示 LCZ、群 QQ：1067536816 和访问统计。点击群号打开二维码小窗，可保存原图；图片只在首次打开时加载。二维码原图保存在 `assets/community/qq-group-1067536816.jpg`，更新时替换该文件；更换群号需同步更新页面与图片。右上角搜索支持 `/` 快捷键；介绍卡、搜索面板与访问统计提示共用深色直角矩形外框。
 
+各 Wiki 顶部共用 LCZ 与群 QQ：1067536816 的入口，点击群号弹出直角二维码小窗；404 页面也保留群入口。共享样式与交互位于 `assets/community-panel.css` 和 `assets/community-panel.js`，二维码复用同一张原图，仅在打开时读取。所有搜索输入框与弹窗外框统一为直角。
+
 ## 已收录的世界
 
 中文名称是本站用于识别游戏的展示名或译名，英文名称对应原游戏。
@@ -25,6 +27,7 @@
 | 西部世界 / Westland Survival | 西部冒险 · 生存 | [物品 Wiki](Westland%20Survival/westland_wiki.html)、[难度与配装实验室](Westland%20Survival/westland_difficulty_design.html)、[基地设计提案](Westland%20Survival/基地.html) |
 | 僵尸的黎明 / Dawn of Zombies | 废土末日 · 生存 | [玩家百科](DawnofZombiewiki/index.html)，含 5,635 条默认可见图鉴记录、1,515 条配方、175 个地点、2,786 条任务及 3,687 张原图 |
 | 地球末日生存 / Last Day on Earth | 废土末日 · 生存 | [玩家图鉴](LDOE_Wiki/index.html)，含 1,414 件物品、224 个生物、46 个地点与 459 条制作维修配方 |
+| 冷酷灵魂 / Grim Soul | 暗黑幻想 · 生存 | [玩家百科](grimsoul_Wiki/index.html)，含 2,780 条资料，覆盖武器、装备、怪物、制作、地点等 11 个分类 |
 
 游戏页面保留原有资料与功能，顶部提供返回星图的统一入口。主页图标来自各游戏官方 Google Play 商店页面，来源、英文名称与文件摘要见 [assets/game-icons/README.md](assets/game-icons/README.md)。游戏名称、图标及相关资料归各自权利人所有；本站是非官方资料整理项目。
 
@@ -86,6 +89,7 @@ assets/portal.js               拖动、悬停、长按、搜索与位置保存
 assets/bubble-physics.js       漂移、排斥与场景边界
 assets/game-icons/             官方应用图标、轻量显示副本与来源记录
 assets/wiki-nav.*              游戏页面的统一导航
+assets/community-panel.*       Wiki 与 404 页共用的QQ群入口和按需二维码弹窗
 assets/site-stats.*            正式站点的参考访问统计
 docs/visits.md                访问统计范围与维护说明
 Craft of Survival/           Wiki、样式、脚本、数据与图标
@@ -93,6 +97,7 @@ Day R Survival/wiki-assets/   分离的 css/、js/、data/、images/
 Westland Survival/wiki-assets/ wiki/、lab/、base/ 与共享 images/
 DawnofZombiewiki/              玩家页面、数据、分类图片、指南与维护工具
 LDOE_Wiki/                    玩家页面、维护源、按需分片、图片与校验工具
+grimsoul_Wiki/                玩家手记、完整维护源、按需分片、原图与校验工具
 scripts/build-game-icons.py    生成主页显示尺寸图标（需要 Pillow）
 scripts/check-site.mjs         无依赖静态检查与发布打包
 scripts/lib/public-files.mjs   公开文件范围，排除维护文件
@@ -115,9 +120,9 @@ scripts/test-portal.py         可选的门户浏览器交互检查
 
 面向玩家的页面只展示可读名称、属性与玩法说明。维护数据和发布数据仅保留玩家资料及网站需要的稳定 ID、关联关系、本地图片路径、统计键和模型映射。未用的游戏函数引用、内部类名、原始配置和提取路径从文件中清除，而非仅在界面隐藏。已有收藏、关联查询和分享链接继续使用稳定 ID；未翻译的名称标注为待补充。清理范围和维护规则见 [数据清理说明](docs/player-data.md)。
 
-各游戏的大图和数据库独立于 HTML 存放，并按浏览需求分批读取。Craft 使用轻索引与详情块；Day R 在访问战斗单位资料时加载怪物数据；Westland 首屏使用精简目录，3D 试装在主动打开后加载；Dawn 按分类、详情、配方分页和栏目读取分片；LDOE 首页使用摘要，分类、详情、配方关联与完整搜索分别按需读取。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
+各游戏的大图和数据库独立于 HTML 存放，并按浏览需求分批读取。Craft 使用轻索引与详情块；Day R 在访问战斗单位资料时加载怪物数据；Westland 首屏使用精简目录，3D 试装在主动打开后加载；Dawn 按分类、详情、配方分页和栏目读取分片；LDOE 首页使用摘要，分类、详情、配方关联与完整搜索分别按需读取；Grim Soul 按分类、完整搜索、摘要与详情块加载。调整布局只需编辑 CSS，调整交互编辑运行脚本，更新资料编辑 `data/`；不要把大图或整库数据重新嵌回 HTML，也不要把未筛选的原始游戏记录覆盖到维护数据中。
 
-详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)、[Last Day on Earth](LDOE_Wiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
+详细维护说明见 [Craft of Survival](Craft%20of%20Survival/README.md)、[Day R Survival](Day%20R%20Survival/README.md)、[Westland Survival](Westland%20Survival/README.md)、[Dawn of Zombies](DawnofZombiewiki/README.md)、[Last Day on Earth](LDOE_Wiki/README.md)、[Grim Soul](grimsoul_Wiki/README.md)。各游戏校验清单保留拆分前后的资料和图片摘要，可用于确认素材完整性。
 
 ### 更新 Dawn of Zombies 资料
 
@@ -141,6 +146,17 @@ python LDOE_Wiki/tools/verify_data.py
 
 完整维护库和工具不进入发布包，首屏、分类、详情与搜索分别读取对应数据。数值、配方关联、稳定 ID 与原图均有完整性检查；详见 [LDOE 维护说明](LDOE_Wiki/README.md)。
 
+### 更新 Grim Soul 资料
+
+`grimsoul_Wiki/assets/data.js` 是完整的玩家资料维护源；页面只引用生成后的摘要与分片。更新后执行：
+
+```sh
+python grimsoul_Wiki/tools/update_data.py
+python grimsoul_Wiki/tools/verify_data.py
+```
+
+稳定 ID、资料顺序、所有属性与章节、关联条目以及原图均需保留。完整维护库和工具不进入 Pages 发布包；详细职责见 [Grim Soul 维护说明](grimsoul_Wiki/README.md)。
+
 ## 检查与发布预览
 
 安装 Node.js 后，在项目根目录运行：
@@ -156,9 +172,10 @@ node scripts/test-player-data-policy.mjs
 node scripts/check-player-data.mjs
 python DawnofZombiewiki/tools/verify_package.py --data-only
 python LDOE_Wiki/tools/verify_data.py
+python grimsoul_Wiki/tools/verify_data.py
 ```
 
-检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径、Dawn 玩家下载及图片映射、Westland 与 LDOE 按需数据块、各 Wiki 的完整切换导航。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。
+检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径、Dawn 玩家下载及图片映射、Westland、LDOE 与 Grim Soul 按需数据块、各 Wiki 的完整切换导航。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。
 
 生成与 GitHub Actions 完全相同的发布文件并检查：
 
@@ -187,6 +204,7 @@ python -m pip install playwright
 python scripts/test-portal.py
 python scripts/test-dawn.py
 python scripts/test-ldoe.py
+python scripts/test-grim.py
 ```
 
-脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。

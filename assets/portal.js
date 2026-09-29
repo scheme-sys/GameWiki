@@ -23,7 +23,8 @@
   let dragFrame = 0, pendingDrag = null;
   let width = 0, height = 0, layoutKey = 'desktop';
   let gesture = null, suppressClick = null, previewGame = null;
-  let hideTimer, lastPointerType = 'mouse', ignoreFocus = false;
+  let hideTimer, showTimer, infoAnimation, infoPhase = 'hidden';
+  let lastPointerType = 'mouse', ignoreFocus = false;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
 
@@ -68,7 +69,7 @@
       requestAnimationFrame(() => {
         if (document.hidden || gesture || hasOpenDialog() || lastPointerType !== 'mouse') return;
         const hovered = [...nodes].find(([, node]) => node.querySelector('a').matches(':hover'));
-        if (hovered) showInfo(hovered[0]);
+        if (hovered) queueInfo(hovered[0]);
       });
     },
     onUpdate(bodies) {
@@ -93,7 +94,7 @@
   }
   function layout() {
     cancelGesture();
-    hideInfo();
+    hideInfo(true);
     width = universe.clientWidth;
     height = universe.clientHeight;
     layoutKey = innerHeight <= 500 && innerWidth > innerHeight ? 'landscape'
@@ -126,46 +127,115 @@
     info.style.left = x + 'px';
     info.style.top = y + 'px';
   }
-  function showInfo(id, touch = false) {
-    if (gesture?.moved || hasOpenDialog() || (!touch && field.isSettling())) return;
-    clearTimeout(hideTimer);
-    previewGame = id;
-    const game = GAMES.find((entry) => entry.id === id);
-    $('#info-title').textContent = game.nameZh;
-    $('#info-icon').src = game.image;
-    info.style.setProperty('--preview-color', game.color);
-    $('#info-english').textContent = game.name;
-    $('#info-description').textContent = game.description;
-    $('#info-tags').replaceChildren(...game.tags.map((tag) => {
-      const span = document.createElement('span'); span.textContent = tag; return span;
-    }));
-    $('#info-links').replaceChildren(...game.links.map((entry) => makeLink(entry)));
-    info.classList.toggle('touch-preview', touch);
-    info.hidden = false;
+  function cancelInfoAnimation() {
+    if (!infoAnimation) return;
+    infoAnimation.onfinish = null;
+    infoAnimation.cancel();
+    infoAnimation = null;
+  }
+  function animateInfo(from, to, duration, done) {
+    cancelInfoAnimation();
+    if (reducedMotion.matches || typeof info.animate !== 'function') { done(); return; }
+    const animation = info.animate([from, to], { duration, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'forwards' });
+    infoAnimation = animation;
+    animation.onfinish = () => {
+      if (infoAnimation !== animation) return;
+      cancelInfoAnimation();
+      done();
+    };
+  }
+  function infoPose() {
+    const style = getComputedStyle(info);
+    return { opacity: style.opacity, transform: style.transform };
+  }
+  function markPreview(id) {
     for (const [key, node] of nodes) {
       node.classList.toggle('active', key === id);
       node.querySelector('a').setAttribute('aria-expanded', String(key === id));
     }
+  }
+  function revealInfo(id, touch, from) {
+    const game = GAMES.find((entry) => entry.id === id);
+    if (previewGame !== id || info.hidden) {
+      $('#info-title').textContent = game.nameZh;
+      $('#info-icon').src = game.image;
+      info.style.setProperty('--preview-color', game.color);
+      $('#info-english').textContent = game.name;
+      $('#info-description').textContent = game.description;
+      $('#info-tags').replaceChildren(...game.tags.map((tag) => {
+        const span = document.createElement('span'); span.textContent = tag; return span;
+      }));
+      $('#info-links').replaceChildren(...game.links.map((entry) => makeLink(entry)));
+    }
+    previewGame = id;
+    info.classList.toggle('touch-preview', touch);
+    info.hidden = false;
+    infoPhase = 'opening';
+    markPreview(id);
     positionInfo();
     syncMotion();
+    animateInfo(from || { opacity: 0, transform: 'translateY(5px)' },
+      { opacity: 1, transform: 'translateY(0)' }, 160, () => { infoPhase = 'open'; });
     if (touch) announce(game.nameZh + '介绍已打开；再次点击气泡或选择入口进入 Wiki。');
   }
-  function hideInfo() {
+  function showInfo(id, touch = false) {
+    clearTimeout(showTimer);
     clearTimeout(hideTimer);
-    info.hidden = true;
-    previewGame = null;
-    for (const node of nodes.values()) {
-      node.classList.remove('active');
-      node.querySelector('a').setAttribute('aria-expanded', 'false');
+    if (document.hidden || gesture?.moved || hasOpenDialog() || (!touch && field.isSettling())) return;
+    const same = previewGame === id && !info.hidden;
+    if (same && (infoPhase === 'open' || infoPhase === 'opening')) return;
+    const from = info.hidden ? null : infoPose();
+    if (!info.hidden && !same && !reducedMotion.matches) {
+      infoPhase = 'switching';
+      animateInfo(from, { opacity: 0, transform: 'translateY(3px)' }, 70, () => {
+        const link = nodes.get(id).querySelector('a');
+        if (!touch && !link.matches(':hover') && !link.matches(':focus-visible')) { finishHideInfo(); return; }
+        revealInfo(id, touch);
+      });
+    } else {
+      cancelInfoAnimation();
+      revealInfo(id, touch, same ? from : null);
     }
+  }
+  function queueInfo(id) {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    if (previewGame === id && !info.hidden) { showInfo(id); return; }
+    showTimer = setTimeout(() => {
+      if (!gesture && nodes.get(id).querySelector('a').matches(':hover')) showInfo(id);
+    }, 80);
+  }
+  function finishHideInfo() {
+    cancelInfoAnimation();
+    info.hidden = true;
+    infoPhase = 'hidden';
+    previewGame = null;
+    markPreview(null);
     syncMotion();
   }
+  function hideInfo(immediate = false) {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    if (immediate || info.hidden || reducedMotion.matches || document.hidden) { finishHideInfo(); return; }
+    if (infoPhase === 'closing') return;
+    infoPhase = 'closing';
+    animateInfo(infoPose(), { opacity: 0, transform: 'translateY(4px)' }, 120, finishHideInfo);
+  }
+  function keepInfo() {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    if (previewGame && (infoPhase === 'closing' || infoPhase === 'switching')) {
+      showInfo(previewGame, info.classList.contains('touch-preview'));
+    }
+  }
   function scheduleHide() {
+    clearTimeout(showTimer);
     clearTimeout(hideTimer);
     if (info.classList.contains('touch-preview') || gesture) return;
     hideTimer = setTimeout(() => {
-      if (!info.matches(':hover') && !info.contains(document.activeElement)) hideInfo();
-    }, 220);
+      const link = previewGame && nodes.get(previewGame).querySelector('a');
+      if (!info.matches(':hover') && !info.contains(document.activeElement) && !link?.matches(':hover')) hideInfo();
+    }, 180);
   }
 
   function finishGesture(cancel = false) {
@@ -191,7 +261,7 @@
     current.node.classList.remove('dragging');
     document.body.classList.remove('is-dragging');
     if (current.link.hasPointerCapture(current.pointerId)) current.link.releasePointerCapture(current.pointerId);
-    if (cancel || current.moved) hideInfo();
+    if (cancel || current.moved) hideInfo(true);
     syncMotion();
   }
   function cancelGesture() { finishGesture(true); }
@@ -199,12 +269,12 @@
   document.addEventListener('pointerdown', (event) => {
     lastPointerType = event.pointerType;
     if (gesture && event.pointerId !== gesture.pointerId) cancelGesture();
-    if (!info.hidden && !info.contains(event.target) && !event.target.closest('.world-link')) hideInfo();
+    if (!info.hidden && !info.contains(event.target) && !event.target.closest('.world-link')) hideInfo(true);
   }, true);
   for (const [id, node] of nodes) {
     const link = node.querySelector('a');
     link.addEventListener('pointerenter', (event) => {
-      if (event.pointerType === 'mouse' && !gesture) showInfo(id);
+      if (event.pointerType === 'mouse' && !gesture) queueInfo(id);
     });
     link.addEventListener('pointerleave', (event) => {
       if (event.pointerType === 'mouse') scheduleHide();
@@ -265,7 +335,7 @@
       current.link.setPointerCapture(current.pointerId);
       current.node.classList.add('dragging');
       document.body.classList.add('is-dragging');
-      hideInfo();
+      hideInfo(true);
     }
     event.preventDefault();
     pendingDrag = { x: current.originX + dx, y: current.originY + dy };
@@ -281,12 +351,13 @@
   window.addEventListener('pointercancel', (event) => {
     if (gesture?.pointerId === event.pointerId) cancelGesture();
   });
-  window.addEventListener('blur', () => { cancelGesture(); hideInfo(); });
+  window.addEventListener('blur', () => { cancelGesture(); hideInfo(true); });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) cancelGesture();
+    if (document.hidden) { cancelGesture(); hideInfo(true); }
     syncMotion();
   });
-  info.addEventListener('pointerenter', () => clearTimeout(hideTimer));
+  info.addEventListener('pointerenter', keepInfo);
+  info.addEventListener('focusin', keepInfo);
   info.addEventListener('pointerleave', scheduleHide);
   info.addEventListener('focusout', scheduleHide);
   $('#info-close').addEventListener('click', () => {
@@ -296,7 +367,10 @@
     link?.focus({ preventScroll: true });
     ignoreFocus = false;
   });
-  reducedMotion.addEventListener('change', syncMotion);
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) infoAnimation?.finish();
+    syncMotion();
+  });
 
   function renderResults(query) {
     const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
@@ -323,7 +397,7 @@
   function openDialog(dialog, trigger) {
     if (hasOpenDialog()) return;
     cancelGesture();
-    hideInfo();
+    hideInfo(true);
     dialogTriggers.set(dialog, trigger);
     trigger.setAttribute('aria-expanded', 'true');
     document.body.classList.add('dialog-open');
@@ -382,7 +456,7 @@
     if (event.key === 'Tab') lastPointerType = 'mouse';
     if (event.key === 'Escape') {
       cancelGesture();
-      hideInfo();
+      hideInfo(true);
       const activeDialog = dialogs.find(dialog => dialog.open);
       if (activeDialog) {
         event.preventDefault();

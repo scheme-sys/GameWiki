@@ -17,11 +17,11 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 from playwright.sync_api import sync_playwright, expect
 
-GAME_IDS = ("dayr", "craft", "westland", "dawn", "ldoe")
+GAME_IDS = ("dayr", "craft", "westland", "dawn", "ldoe", "grimsoul")
 GAME_COUNT = len(GAME_IDS)
 POSITION_KEY = "lcz:positions-v4:" + ",".join(sorted(GAME_IDS))
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / ".verification" / "portal"
+OUTPUT = Path(os.environ.get("LCZ_TEST_OUTPUT", str(ROOT / ".verification" / "portal"))).resolve()
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -177,7 +177,7 @@ def drift_and_hover(page):
     page.mouse.move(x, y)
     expect(page.locator("#game-info")).to_be_visible()
     expect(page.locator("#info-title")).to_have_text('辐射生存')
-    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)<=4')
+    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)===0')
     frozen = snapshot(page)
     page.wait_for_timeout(500)
     assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
@@ -188,6 +188,94 @@ def drift_and_hover(page):
     frozen = snapshot(page)
     page.wait_for_timeout(700)
     assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
+
+
+def quiet_sky_motion(page, context):
+    load(page)
+    assert page.locator('.constellations .star-points circle').count()==60
+    clusters=page.locator('.constellations .sky-cluster')
+    expect(clusters).to_have_count(2)
+    assert sum(path.count('M') for path in page.locator('.star-lines path').evaluate_all('paths=>paths.map(p=>p.getAttribute("d"))'))==12
+    def state():
+        return clusters.evaluate_all('nodes=>nodes.map(n=>({transform:getComputedStyle(n).transform,opacity:getComputedStyle(n).opacity,play:getComputedStyle(n).animationPlayState,animations:n.getAnimations().map(a=>({state:a.playState,duration:a.effect.getTiming().duration}))}))')
+    before=state();page.wait_for_timeout(1200);after=state()
+    assert all(a['transform']!=b['transform'] for a,b in zip(before,after)), 'The two star groups did not drift'
+    assert all(a['opacity']!=b['opacity'] for a,b in zip(before,after)), 'Slow star brightness variation is absent'
+    assert all(len(a['animations'])==2 and all(animation['duration']>=13000 for animation in a['animations']) for a in after), after
+    page.locator('#search-open').click()
+    frozen=state();page.wait_for_timeout(180)
+    assert frozen==state(), 'Background moves behind the search dialog'
+    assert all(all(animation['state']=='paused' for animation in a['animations']) for a in frozen)
+    page.keyboard.press('Escape')
+    page.emulate_media(reduced_motion='reduce')
+    assert all(a['transform']=='none' and not a['animations'] for a in state()), 'Reduced-motion still animates the background'
+    page.emulate_media(reduced_motion='no-preference')
+    # Exercise the existing visibility handler without depending on headless tab scheduling.
+    page.evaluate('()=>{Object.defineProperty(document,"hidden",{configurable:true,get:()=>true});document.dispatchEvent(new Event("visibilitychange"));}')
+    assert all(all(animation['state']=='paused' for animation in a['animations']) for a in state()), 'Hidden-page visibility handler did not pause the sky'
+    page.evaluate('()=>{delete document.hidden;document.dispatchEvent(new Event("visibilitychange"));}')
+    assert all(all(animation['state']=='running' for animation in a['animations']) for a in state()), 'Visible-page handler did not resume the sky'
+    cdp=context.new_cdp_session(page);cdp.send('Performance.enable')
+    def metrics():return {row['name']:row['value'] for row in cdp.send('Performance.getMetrics')['metrics']}
+    initial=metrics()
+    frames=page.evaluate('()=>new Promise(resolve=>{const frames=[];let previous;function tick(time){if(previous!==undefined)frames.push(time-previous);previous=time;if(frames.length<180)requestAnimationFrame(tick);else resolve(frames);}requestAnimationFrame(tick);})')
+    end=metrics();ordered=sorted(frames)
+    measure={'viewport':page.viewport_size,'frames':len(frames),'medianMs':ordered[len(ordered)//2],'p95Ms':ordered[int(len(ordered)*.95)],'maxMs':max(frames),'layoutCount':end['LayoutCount']-initial['LayoutCount'],'scriptSeconds':end['ScriptDuration']-initial['ScriptDuration'],'taskSeconds':end['TaskDuration']-initial['TaskDuration']}
+    results.setdefault('sky_performance',[]).append(measure)
+    assert all(math.isfinite(delta) and delta>0 for delta in frames)
+    cdp.detach()
+    screenshot(page,'animated-sky-'+str(page.viewport_size['width']))
+
+
+def popover_transition_races(page, context):
+    load(page)
+    info=page.locator('#game-info')
+    dayr=icon_center(page)
+    page.mouse.move(*dayr);page.wait_for_timeout(20);page.mouse.move(2,2)
+    page.wait_for_timeout(150);expect(info).to_be_hidden()
+    page.mouse.move(*icon_center(page))
+    expect(info).to_be_visible()
+    opening=info.evaluate('(e)=>({opacity:+getComputedStyle(e).opacity,animations:e.getAnimations().map(a=>({duration:a.effect.getTiming().duration,frames:a.effect.getKeyframes()}))})')
+    assert opening['animations'] and opening['animations'][0]['duration']==160, opening
+    assert all(not any(key in frame for key in ['left','top','width','height']) for animation in opening['animations'] for frame in animation['frames']), 'Popover animates layout positions'
+    page.wait_for_timeout(220)
+    box=info.bounding_box();inside=(box['x']+box['width']/2,box['y']+box['height']/2)
+    page.mouse.move(*inside,steps=8);page.wait_for_timeout(240)
+    expect(info).to_be_visible();expect(page.locator('#info-english')).to_have_text('Day R Survival')
+    page.mouse.move(2,2);page.wait_for_timeout(215)
+    closing=info.evaluate('(e)=>({hidden:e.hidden,opacity:+getComputedStyle(e).opacity})')
+    assert not closing['hidden'] and 0<closing['opacity']<1, closing
+    page.mouse.move(*inside);page.wait_for_timeout(240)
+    expect(info).to_be_visible()
+    assert info.evaluate('(e)=>+getComputedStyle(e).opacity')==1
+    page.mouse.move(*icon_center(page,'grimsoul'));page.wait_for_timeout(105)
+    page.mouse.move(2,2);page.wait_for_timeout(140)
+    expect(info).to_be_hidden()
+    expect(page.locator('#info-english')).to_have_text('Day R Survival')
+    page.mouse.move(*icon_center(page,'grimsoul'))
+    expect(page.locator('#info-english')).to_have_text('Grim Soul')
+    page.wait_for_timeout(220);expect(info).to_be_visible()
+    for game in ['dayr','craft','westland']:
+        page.mouse.move(*icon_center(page,game));page.wait_for_timeout(15)
+    expect(page.locator('#info-english')).to_have_text('Westland Survival')
+    page.wait_for_timeout(200);expect(info).to_be_visible()
+    page.keyboard.press('Escape');expect(info).to_be_hidden()
+    page.mouse.move(*icon_center(page,'craft'));page.wait_for_timeout(20)
+    page.keyboard.press('Escape');page.wait_for_timeout(220);expect(info).to_be_hidden()
+    page.mouse.move(*icon_center(page,'grimsoul'));page.wait_for_timeout(20)
+    page.locator('#search-open').click();expect(page.locator('#search-dialog')).to_be_visible()
+    page.wait_for_timeout(250);expect(info).to_be_hidden()
+    for selector in ['#search-open','#search-dialog','.search-field']:
+        assert page.locator(selector).evaluate('(e)=>{const s=getComputedStyle(e);return [s.borderTopLeftRadius,s.borderTopRightRadius,s.borderBottomRightRadius,s.borderBottomLeftRadius].every(v=>v==="0px")}'), selector
+    page.keyboard.press('Escape')
+    page.mouse.move(*icon_center(page,'grimsoul'));expect(info).to_be_visible();page.wait_for_timeout(220)
+    page.locator('#info-close').click();expect(info).to_be_hidden()
+    expect(page.locator('.world[data-game="grimsoul"] .world-link')).to_be_focused()
+    page.emulate_media(reduced_motion='reduce')
+    page.mouse.move(2,2);page.mouse.move(*icon_center(page,'dayr'));expect(info).to_be_visible()
+    assert info.evaluate('(e)=>e.getAnimations().length')==0
+    assert info.evaluate('(e)=>+getComputedStyle(e).opacity')==1
+    page.mouse.move(2,2);expect(info).to_be_hidden()
 
 
 def desktop_drag(page):
@@ -362,16 +450,49 @@ def ldoe_entry_and_switch(page, _):
     expect(page.locator("#main h1")).to_be_visible()
 
 
-def fifth_touch_persistence(page, context):
+def grim_entry_and_switch(page, _):
+    load(page)
+    pause(page)
+    page.locator("#search-open").click()
+    expect(page.locator(".search-result")).to_have_count(GAME_COUNT)
+    for query in ["Grim Soul", "冷酷灵魂", "grimsoul", "黑暗幻想"]:
+        page.locator("#game-search").fill(query)
+        expect(page.locator(".search-result")).to_have_count(1)
+        expect(page.locator(".result-title")).to_have_text("冷酷灵魂")
+        expect(page.locator("a.search-result")).to_have_attribute("href", "grimsoul_Wiki/index.html")
+    page.locator("a.search-result").click()
+    page.wait_for_url("**/grimsoul_Wiki/index.html")
+    expect(page.locator("#home-view h1")).to_be_visible()
+    expect(page.locator('.atlas-nav')).to_have_attribute('data-game','grimsoul')
+    expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
+    page.locator(".atlas-switch summary").click()
+    expect(page.locator(".atlas-menu a")).to_have_count(GAME_COUNT)
+    page.locator('.atlas-menu a[href*="DawnofZombiewiki"]').click()
+    page.wait_for_url("**/DawnofZombiewiki/index.html")
+    page.locator(".atlas-switch summary").click()
+    page.locator('.atlas-menu a[href*="grimsoul_Wiki"]').click()
+    page.wait_for_url("**/grimsoul_Wiki/index.html")
+    expect(page.locator("#home-view h1")).to_be_visible()
+    page.locator(".atlas-home").click()
+    page.wait_for_url("**/index.html")
+    expect(page.locator(".world")).to_have_count(GAME_COUNT)
+    bubble=page.locator('.world[data-game="grimsoul"] .world-link')
+    expect(bubble).to_have_attribute('aria-label',re.compile('冷酷灵魂.*Grim Soul'))
+    bubble.focus();page.keyboard.press('Enter')
+    page.wait_for_url("**/grimsoul_Wiki/index.html")
+    expect(page.locator("#home-view h1")).to_be_visible()
+
+
+def sixth_touch_persistence(page, context):
     load(page)
     pause(page)
     before=snapshot(page)
     cdp=context.new_cdp_session(page)
-    start=icon_center(page,'ldoe');target=icon_center(page,'dayr')
+    start=icon_center(page,'grimsoul');target=icon_center(page,'dayr')
     touch(cdp,'touchStart',[start]);touch(cdp,'touchMove',[target]);page.wait_for_timeout(60)
     overlapping=snapshot(page)
-    assert distance(overlapping['ldoe'],overlapping['dayr'])<3
-    assert all(distance(before[key],overlapping[key])<1 for key in GAME_IDS if key!='ldoe')
+    assert distance(overlapping['grimsoul'],overlapping['dayr'])<3
+    assert all(distance(before[key],overlapping[key])<1 for key in GAME_IDS if key!='grimsoul')
     touch(cdp,'touchEnd');page.wait_for_timeout(100)
     check_geometry(page,320,568)
     saved=page.evaluate("key=>JSON.parse(localStorage.getItem(key))",POSITION_KEY)
@@ -384,18 +505,21 @@ def fifth_touch_persistence(page, context):
     page.set_viewport_size({'width':320,'height':568});page.wait_for_timeout(150)
     check_geometry(page,320,568)
     assert all(distance(point,snapshot(page)[key])<2 for key,point in resolved.items()), 'Portrait layout changed after rotation'
-    screenshot(page,'fifth-game-touch-saved-320')
+    screenshot(page,'sixth-game-touch-saved-320')
 
 
 def roster_migration(page, _):
-    legacy='lcz:positions-v4:craft,dawn,dayr,westland'
-    page.add_init_script("localStorage.setItem("+json.dumps(legacy)+",JSON.stringify({desktop:{dayr:{x:.94,y:.94}}}))")
+    legacy_keys=['lcz:positions-v4:craft,dawn,dayr,westland',
+                 'lcz:positions-v4:craft,dawn,dayr,ldoe,westland']
+    for legacy in legacy_keys:
+        page.add_init_script("localStorage.setItem("+json.dumps(legacy)+",JSON.stringify({desktop:{dayr:{x:.94,y:.94}}}))")
     load(page);pause(page)
     area=page.locator('#game-universe').bounding_box()
     defaults=page.evaluate('Object.fromEntries(LCZ_GAMES.map(g=>[g.id,g.position.desktop]))')
     actual=snapshot(page)
     assert all(distance([point[0]*area['width'],point[1]*area['height']],actual[key])<4 for key,point in defaults.items())
-    assert page.evaluate("key=>JSON.parse(localStorage.getItem(key)).desktop.dayr.x",legacy)==.94
+    for legacy in legacy_keys:
+        assert page.evaluate("key=>JSON.parse(localStorage.getItem(key)).desktop.dayr.x",legacy)==.94
     assert page.evaluate("key=>localStorage.getItem(key)",POSITION_KEY) is None
 
 
@@ -537,6 +661,9 @@ try:
 
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
         run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
+        run_case("Two quiet star groups drift, pause and respect reduced motion", quiet_sky_motion)
+        run_case("Mobile animated sky keeps 60 stars inexpensive and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
+        run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
         run_case("Mouse drag, anchor persistence, keyboard and Escape", lambda page, _: desktop_drag(page))
         run_case("Mouse may overlap during drag then eases apart on release", overlap_then_release)
         run_case("Touch may overlap during drag then eases apart on release", lambda page, context: overlap_then_release(page, context, True), width=390, height=844, mobile=True)
@@ -562,10 +689,11 @@ try:
         run_case("Narrow mouse viewport keeps square info and close button in bounds", narrow_mouse, width=320, height=568)
         run_case("Dawn search, entry, shared navigation and return", dawn_entry_and_switch)
         run_case("LDOE search, fifth bubble, shared navigation and return", ldoe_entry_and_switch)
-        run_case("Five-bubble roster starts fresh without changing the old saved layout", roster_migration)
-        run_case("Fifth bubble touch drag, save, reload and rotation at 320px", fifth_touch_persistence, width=320, height=568, mobile=True)
+        run_case("Grim Soul search, sixth bubble, shared navigation and return", grim_entry_and_switch)
+        run_case("Six-bubble roster starts fresh without changing four/five-game saved layouts", roster_migration)
+        run_case("Sixth bubble touch drag, save, reload and rotation at 320px", sixth_touch_persistence, width=320, height=568, mobile=True)
         run_case("Community QR loads on click and restores focus", community_qr)
-        run_case("Community QR keeps five bubbles still and fits a 320px touch screen", lambda page,context:community_qr(page,context,True),width=320,height=568,mobile=True)
+        run_case("Community QR keeps six bubbles still and fits a 320px touch screen", lambda page,context:community_qr(page,context,True),width=320,height=568,mobile=True)
         run_case("Real touch long press, second tap and direct tap entry", touch_longpress, width=390, height=844, mobile=True)
         run_case("Real touch repulsion, cancel and long-press movement threshold", touch_drag_and_cancel, width=390, height=844, mobile=True)
         run_case("Reduced motion freezes drift and preserves touch dragging", reduced_motion, width=390, height=844, mobile=True, reduce=True)

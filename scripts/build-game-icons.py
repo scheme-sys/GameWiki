@@ -12,7 +12,7 @@ TARGET = ICONS / 'display'
 def main():
     TARGET.mkdir(exist_ok=True)
     before = after = 0
-    for name in ('dayr', 'craft', 'westland', 'dawn', 'ldoe'):
+    for name in ('dayr', 'craft', 'westland', 'dawn', 'ldoe', 'grimsoul'):
         source = ICONS / (name + '.webp')
         target = TARGET / source.name
         with Image.open(source) as image:

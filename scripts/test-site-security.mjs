@@ -75,9 +75,16 @@ test('Every inline script has an exact content hash and the 404 page works at ne
     ['/LCZ-GameWiki/missing/nested.html', '/LCZ-GameWiki/'],
     ['/missing/nested.html', '/']
   ]) {
-    const link = {};
-    vm.runInNewContext(code, { location: { pathname }, document: { getElementById: () => link } });
-    assert.equal(link.href, expected);
+    const origin = 'https://scheme-sys.github.io';
+    const link = {}, groupLink = {}, inserted = [];
+    vm.runInNewContext(code, { URL, location: { pathname, origin, protocol: 'https:', href: origin + pathname }, document: {
+      getElementById: () => link, querySelector: () => groupLink,
+      createElement: tag => ({ tag }), head: { append: node => inserted.push(node) },
+    } });
+    assert.equal(link.href, origin + expected + 'index.html');
+    assert.equal(groupLink.href, origin + expected + 'assets/community/qq-group-1067536816.jpg');
+    assert.equal(inserted[0].href, origin + expected + 'assets/community-panel.css');
+    assert.equal(inserted[1].src, origin + expected + 'assets/community-panel.js');
   }
   assert.ok(!/<(?:link|script)\b[^>]*(?:href|src)=["']assets\//i.test(errorPage),
     'Nested 404 URLs cannot rely on relative asset locations');

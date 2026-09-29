@@ -8,14 +8,14 @@ const layouts = [
   { name: 'landscape', width: 544, height: 232, radii: [50, 49, 51, 52] },
   { name: 'desktop', width: 1392, height: 776, radii: [88, 84, 92, 96] }
 ];
-const gameSizes = [164, 152, 160, 156, 156];
+const gameSizes = [164, 152, 160, 156, 156, 156];
 const positions = {
-  desktop: [[.27,.24],[.73,.26],[.26,.73],[.74,.74],[.50,.49]],
-  tablet: [[.25,.22],[.75,.24],[.25,.78],[.75,.80],[.50,.51]],
-  mobile: [[.25,.18],[.75,.20],[.25,.78],[.75,.80],[.50,.49]],
-  landscape: [[.105,.34],[.3025,.66],[.50,.34],[.6975,.66],[.895,.34]]
+  desktop: [[.20,.27],[.50,.23],[.80,.29],[.20,.72],[.50,.76],[.80,.70]],
+  tablet: [[.20,.26],[.50,.22],[.80,.28],[.20,.72],[.50,.76],[.80,.70]],
+  mobile: [[.25,.18],[.75,.20],[.25,.50],[.75,.52],[.25,.82],[.75,.84]],
+  landscape: [[.10,.32],[.26,.68],[.42,.32],[.58,.68],[.74,.32],[.90,.68]]
 };
-function fiveGameLayout(viewportWidth, viewportHeight) {
+function sixGameLayout(viewportWidth, viewportHeight) {
   const kind = viewportHeight <= 500 && viewportWidth > viewportHeight ? 'landscape'
     : viewportWidth <= 600 ? 'mobile' : viewportWidth <= 900 ? 'tablet' : 'desktop';
   const width = viewportWidth - (viewportWidth <= 900 ? 24 : 48);
@@ -25,11 +25,11 @@ function fiveGameLayout(viewportWidth, viewportHeight) {
       : kind === 'mobile' ? Math.min(112, width * .32) * size / 164 : size * (kind === 'tablet' ? .84 : 1);
     return diameter / 2 + 8;
   });
-  return {name: `five-${viewportWidth}x${viewportHeight}`, width, height, radii,
+  return {name: `six-${viewportWidth}x${viewportHeight}`, width, height, radii,
     points: positions[kind].map(([x,y]) => [x*width,y*height])};
 }
-const fiveLayouts = [[320,568],[360,640],[390,844],[600,900],[768,1024],[1024,768],[1440,960],[568,320],[844,390],[480,320]].map(([width,height]) => fiveGameLayout(width,height));
-layouts.push(...fiveLayouts);
+const sixLayouts = [[320,568],[360,640],[390,844],[600,900],[768,1024],[1024,768],[1440,960],[568,320],[844,390],[480,320]].map(([width,height]) => sixGameLayout(width,height));
+layouts.push(...sixLayouts);
 
 function valid(field, useAnchors = false, allowOverlap = false) {
   const bodies = field.getBodies().map(body => useAnchors ? {...body, x: body.anchorX, y: body.anchorY} : body);
@@ -54,7 +54,7 @@ function fieldFor(config, points) {
   return field;
 }
 
-test('four and five coincident circles settle at phone, tablet, landscape and desktop sizes', () => {
+test('four and six coincident circles settle at phone, tablet, landscape and desktop sizes', () => {
   for (const layout of layouts) {
     const field = fieldFor(layout);
     valid(field);
@@ -62,8 +62,8 @@ test('four and five coincident circles settle at phone, tablet, landscape and de
   }
 });
 
-test('five-game suggested layouts fit without moving any intended starting centre', () => {
-  for (const layout of fiveLayouts) {
+test('six-game suggested layouts fit without moving any intended starting centre', () => {
+  for (const layout of sixLayouts) {
     const field = fieldFor(layout,layout.points);
     valid(field);
     for (const [index,body] of field.getBodies().entries()) {
@@ -73,21 +73,21 @@ test('five-game suggested layouts fit without moving any intended starting centr
   }
 });
 
-test('five saved game anchors survive portrait to landscape resizing and another release', () => {
-  const field=fieldFor(fiveLayouts[0],fiveLayouts[0].points);
-  const fifth=field.getBodies()[4], first=field.getBodies()[0];
-  field.dragTo(fifth.id,first.x,first.y);
-  assert.ok(Math.hypot(field.getBodies()[4].x-first.x,field.getBodies()[4].y-first.y)<1);
+test('six saved game anchors survive portrait to landscape resizing and another release', () => {
+  const field=fieldFor(sixLayouts[0],sixLayouts[0].points);
+  const sixth=field.getBodies()[5], first=field.getBodies()[0];
+  field.dragTo(sixth.id,first.x,first.y);
+  assert.ok(Math.hypot(field.getBodies()[5].x-first.x,field.getBodies()[5].y-first.y)<1);
   field.release();valid(field,true);
   for(let i=0;i<70;i++)field.step(1/60);
   valid(field);
-  const portrait=field.getBodies(), landscape=fiveGameLayout(568,320);
+  const portrait=field.getBodies(), landscape=sixGameLayout(568,320);
   // Portal resizing recomputes icon radii and restores the active layout's anchors.
   field.resize(landscape.width,landscape.height);
   field.setBodies(landscape.radii.map((radius,index)=>({id:`game-${index}`,radius,x:landscape.points[index][0],y:landscape.points[index][1]})));
   valid(field);
   field.resize(296,426).setBodies(portrait);valid(field);
-  field.dragTo('game-4',field.getBodies()[1].x,field.getBodies()[1].y).release();
+  field.dragTo('game-5',field.getBodies()[1].x,field.getBodies()[1].y).release();
   valid(field,true);field.stop();valid(field);
   const saved=anchors(field);
   field.resize(296,426);

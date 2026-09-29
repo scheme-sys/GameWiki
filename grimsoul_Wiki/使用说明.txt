@@ -1,0 +1,20 @@
+Grim Soul · 冷酷灵魂 / 放逐者手记
+
+本资料已整合至 LCZ 游戏 Wiki 集合。完整维护指南见同目录 README.md。
+
+浏览：从集合主页点击 Grim Soul 气泡，或访问 grimsoul_Wiki/index.html。
+分类、全文搜索、详情、关联图鉴与收藏均保留；详情可复制深链接。
+收藏保存在当前浏览器，不会上传。
+
+页面按需读取分类摘要和详情，首次进入不下载完整资料库。
+本地预览请在项目根运行 python -m http.server 8000。
+直接打开 index.html 也可离线使用；请保留整个项目目录，包括根 assets 共享文件。
+
+资料更新：编辑 assets/data.js，保持原条目 ID，然后在项目根运行：
+  python grimsoul_Wiki/tools/update_data.py
+  python grimsoul_Wiki/tools/verify_data.py
+
+发布：使用根目录 GitHub Actions / GitHub Pages 工作流，参见项目根 README.md。
+不要单独上传本子目录，避免缺少共享导航、QQ群二维码或统计组件。
+
+资料快照为 8.4.1；未确认的数值与图像不作补造，实际内容以游戏为准。

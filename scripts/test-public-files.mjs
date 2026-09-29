@@ -138,6 +138,37 @@ test('LDOE publishes only runtime data and validates every lazy image and chunk 
 });
 
 
+test('Grim Soul publishes only runtime data and validates every lazy image and chunk reference', () => {
+  for (const name of ['index.html', 'assets/wiki.css', 'assets/wiki.js', 'data-loader.js', 'assets/favicon.svg', 'assets/hero.webp', 'assets/images/example.webp', 'data/bootstrap.js', 'data/lazy/details-0.0123456789abcdef.js']) {
+    assert.equal(isPublicFile('grimsoul_Wiki/' + name), true, name);
+  }
+  for (const name of ['assets/data.js', 'data/catalog.json', 'data/lazy/private.js', 'data/source.json', 'tools/import.js', 'reports/example.json', 'README.md']) {
+    assert.equal(isPublicFile('grimsoul_Wiki/' + name), false, name);
+  }
+  const root = fixture('grim');
+  write(root, 'assets/games.js', 'window.ORBIT_GAMES=[{id:"grimsoul",name:"Grim Soul",image:"assets/icon.svg",links:[{href:"grimsoul_Wiki/index.html"}]}];');
+  write(root, 'index.html', '<script src="assets/games.js"></script><a href="grimsoul_Wiki/index.html">Grim Soul</a>');
+  write(root, 'grimsoul_Wiki/index.html', '<script src="data/bootstrap.js"></script>');
+  write(root, 'grimsoul_Wiki/data/bootstrap.js', 'window.GRIM_BOOTSTRAP={manifest:{"details-0":"data/lazy/details-0.0123456789abcdef.js"}};');
+  let result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource data\/lazy\/details-0/);
+  write(root, 'grimsoul_Wiki/data/lazy/details-0.0123456789abcdef.js', 'window.GRIM_PARTS["details-0"]=[{id:"item-1",image:"assets/images/example.webp"}];');
+  result = check(root);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /missing local resource assets\/images\/example.webp/);
+  write(root, 'grimsoul_Wiki/assets/images/example.webp', 'fixture image');
+  write(root, 'grimsoul_Wiki/assets/data.js', 'MAINTENANCE_ONLY');
+  write(root, 'grimsoul_Wiki/data/catalog.json', 'MAINTENANCE_ONLY');
+  const output = path.join(workspace, 'grim-published');
+  result = check(root, '--stage', output);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.equal(fs.existsSync(path.join(output, 'grimsoul_Wiki/assets/data.js')), false);
+  assert.equal(fs.existsSync(path.join(output, 'grimsoul_Wiki/data/catalog.json')), false);
+  assert.deepEqual(fs.readFileSync(path.join(output, 'grimsoul_Wiki/assets/images/example.webp')), fs.readFileSync(path.join(root, 'grimsoul_Wiki/assets/images/example.webp')));
+});
+
+
 test('Every shared game switcher includes all registered games', () => {
   const root = fixture('navigation');
   write(root, 'DawnofZombiewiki/index.html', '<nav class="atlas-nav"><div class="atlas-menu"><a href="../index.html">Home</a></div></nav>');

@@ -42,6 +42,7 @@ jobs:
           python DawnofZombiewiki/tools/verify_package.py --data-only
           python LDOE_Wiki/tools/test_data.py
           python LDOE_Wiki/tools/verify_data.py
+          python grimsoul_Wiki/tools/verify_data.py
 
       - name: Check shared interactions and publication rules
         run: node --test scripts/test-bubble-physics.cjs scripts/test-site-stats.mjs scripts/test-public-files.mjs scripts/test-asset-versions.mjs

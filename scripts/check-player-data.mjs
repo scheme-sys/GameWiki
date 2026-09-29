@@ -28,7 +28,7 @@ function walk(directory) {
     if (!item.isFile()) continue;
     if (binaryOrSource.test(relative)) { errors.push(`${relative}: game code/archive file in maintained game directory`); continue; }
     const extension = path.extname(filename).toLowerCase();
-    const dataScript = extension === '.js' && (relative.includes('/data/') || /\/(?:wiki-data|image-index)\.js$/.test(relative));
+    const dataScript = extension === '.js' && (relative.includes('/data/') || relative === 'grimsoul_Wiki/assets/data.js' || /\/(?:wiki-data|image-index)\.js$/.test(relative));
     const text = extension === '.csv' || (extension === '.md' && relative.includes('/guides/'));
     if (extension !== '.json' && !dataScript && !text) continue;
     checked++;
@@ -42,6 +42,7 @@ function walk(directory) {
         if (/\/lab\/data\/avatar-(?:meshes|textures)\.js$/.test(relative)) sandbox.window.WESTLAND_LAB_DATA = { avatar: {} };
         if (relative.startsWith('DawnofZombiewiki/data/lazy/')) sandbox.window.DOZ_DATA_PARTS = {};
         if (relative.startsWith('LDOE_Wiki/data/lazy/')) sandbox.window.LDOE_PARTS = {};
+        if (relative.startsWith('grimsoul_Wiki/data/lazy/')) sandbox.window.GRIM_PARTS = {};
         vm.runInNewContext(source, sandbox, { filename: relative, timeout: 5000 });
         issues = inspectPlayerData(sandbox.window);
       }

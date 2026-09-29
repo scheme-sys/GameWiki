@@ -58,3 +58,6 @@
 
 /* Shared popup frames stay rectangular across all game themes. */
 body dialog, body dialog[class] { border-radius: 0; }
+
+/* Rectangular search frames across the player-facing Wiki themes. */
+body input[type="search"], body .search-field, body .search-wrap, body .search-box, body .global-search { border-radius: 0; }

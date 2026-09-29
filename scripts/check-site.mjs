@@ -204,9 +204,10 @@ for (const file of files) {
     const gameDirectory = directories.find((directory) => directory !== 'assets' && relative(file).startsWith(`${directory}/`));
     if (gameDirectory) {
       const documentBase = path.join(root, gameDirectory);
-      if (gameDirectory === 'LDOE_Wiki' && /^LDOE_Wiki\/data\/(?:bootstrap|lazy\/[a-z0-9-]+\.[a-f0-9]{16})\.js$/.test(relative(file))) {
+      const lazyReceiver = { LDOE_Wiki: 'LDOE_PARTS', grimsoul_Wiki: 'GRIM_PARTS' }[gameDirectory];
+      if (lazyReceiver && /\/data\/(?:bootstrap|lazy\/[a-z0-9-]+\.[a-f0-9]{16})\.js$/.test(relative(file))) {
         try {
-          const context = { window: { LDOE_PARTS: {} } };
+          const context = { window: { [lazyReceiver]: {} } };
           vm.runInNewContext(source, context, { filename: relative(file), timeout: 5000 });
           const visit = value => {
             if (typeof value === 'string' && /^(?:assets\/|data\/lazy\/)/.test(value)) {
@@ -215,7 +216,7 @@ for (const file of files) {
             else if (value && typeof value === 'object') Object.values(value).forEach(visit);
           };
           visit(context.window);
-        } catch (error) { errors.push(`${relative(file)}: cannot validate LDOE data: ${error.message}`); }
+        } catch (error) { errors.push(`${relative(file)}: cannot validate ${gameDirectory} data: ${error.message}`); }
       }
       if (gameDirectory === 'DawnofZombiewiki') {
         if (/\/data\/(?:bootstrap|asset-map|site-meta|lazy\/[a-z0-9-]+)\.js$/.test(relative(file))) {

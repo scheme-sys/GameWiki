@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171919">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://cdn.busuanzi.cc; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="Grim Soul 中文玩家图鉴：查阅武器装备、怪物、资源、地点与制作资料。支持离线浏览。">
+  <title>Grim Soul · 放逐者手记</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/wiki.css">
+  <link rel="stylesheet" href="../assets/wiki-nav.css">
+  <link rel="stylesheet" href="../assets/site-stats.css">
+  <link rel="stylesheet" href="../assets/community-panel.css">
+  <script defer src="../assets/wiki-nav.js"></script>
+  <script defer src="../assets/site-stats.js"></script>
+  <script defer src="../assets/community-panel.js"></script>
+  <script defer src="data/bootstrap.js"></script>
+  <script defer src="data-loader.js"></script>
+  <script src="assets/wiki.js" defer></script>
+</head>
+<body>
+  <nav class="atlas-nav" data-game="grimsoul" aria-label="游戏星图导航">
+    <a class="atlas-home" href="../index.html"><span class="atlas-home-mark" aria-hidden="true">✧</span><span>返回星空</span></a>
+    <div class="atlas-branding"><span class="atlas-label">LCZ</span><a class="lcz-community-trigger" data-lcz-community href="../assets/community/qq-group-1067536816.jpg">群 QQ：<span>1067536816</span></a></div>
+    <div class="site-stats" data-site-stats data-compact="true"></div>
+    <details class="atlas-switch"><summary>切换游戏</summary><div class="atlas-menu">
+      <a href="../Craft%20of%20Survival/wiki.html">Craft of Survival</a>
+      <a href="../Day%20R%20Survival/wiki_dayR.html">Day R Survival</a>
+      <a href="../Westland%20Survival/westland_wiki.html">Westland Survival</a>
+      <a href="../DawnofZombiewiki/index.html">Dawn of Zombies</a>
+      <a href="../LDOE_Wiki/index.html">Last Day on Earth: Survival</a>
+      <a href="../grimsoul_Wiki/index.html" aria-current="page">Grim Soul</a>
+    </div></details>
+  </nav>
+
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="mobile-shade" id="mobile-shade" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="主要导航">
+    <a class="brand" href="#home" aria-label="Grim Soul 图鉴首页">
+      <svg class="brand-mark" viewBox="0 0 48 58" aria-hidden="true"><path d="M24 3 42 13v23L24 54 6 36V13Z"/><path d="m15 21 9-9 9 9-9 23Zm9-9v32M12 29h24"/></svg>
+      <span><strong>GRIM SOUL</strong><small>放 逐 者 手 记</small></span>
+    </a>
+    <div class="sidebar-rule"><span>玩家百科 / FIELD GUIDE</span></div>
+    <nav id="main-nav">
+      <a class="nav-item active" href="#home" data-nav="home"><span class="nav-icon" data-icon="home"></span><span>手记首页</span></a>
+      <a class="nav-item" href="#catalog" data-nav="all"><span class="nav-icon" data-icon="book"></span><span>全部图鉴</span><span class="nav-count" data-count="all">—</span></a>
+      <p class="nav-label">探索瘟疫之地</p>
+      <a class="nav-item" href="#category/weapons" data-nav="weapons"><span class="nav-icon" data-icon="sword"></span><span>武器图鉴</span><span class="nav-count" data-count="weapons">—</span></a>
+      <a class="nav-item" href="#category/armor" data-nav="armor"><span class="nav-icon" data-icon="shield"></span><span>装备图鉴</span><span class="nav-count" data-count="armor">—</span></a>
+      <a class="nav-item" href="#category/monsters" data-nav="monsters"><span class="nav-icon" data-icon="skull"></span><span>怪物与人物</span><span class="nav-count" data-count="monsters">—</span></a>
+      <a class="nav-item" href="#category/items" data-nav="items"><span class="nav-icon" data-icon="flask"></span><span>物品与资源</span><span class="nav-count" data-count="items">—</span></a>
+      <a class="nav-item" href="#category/crafting" data-nav="crafting"><span class="nav-icon" data-icon="anvil"></span><span>制作与配方</span><span class="nav-count" data-count="crafting">—</span></a>
+      <a class="nav-item" href="#category/locations" data-nav="locations"><span class="nav-icon" data-icon="compass"></span><span>地点与探索</span><span class="nav-count" data-count="locations">—</span></a>
+      <a class="nav-item" href="#category/pets" data-nav="pets"><span class="nav-icon" data-icon="paw"></span><span>宠物与坐骑</span><span class="nav-count" data-count="pets">—</span></a>
+      <a class="nav-item" href="#category/skills" data-nav="skills"><span class="nav-icon" data-icon="spark"></span><span>技能与能力</span><span class="nav-count" data-count="skills">—</span></a>
+      <a class="nav-item" href="#category/buildings" data-nav="buildings"><span class="nav-icon" data-icon="castle"></span><span>建筑与设施</span><span class="nav-count" data-count="buildings">—</span></a>
+      <a class="nav-item" href="#category/quests" data-nav="quests"><span class="nav-icon" data-icon="scroll"></span><span>任务与剧情</span><span class="nav-count" data-count="quests">—</span></a>
+      <a class="nav-item" href="#category/guides" data-nav="guides"><span class="nav-icon" data-icon="lantern"></span><span>生存手册</span><span class="nav-count" data-count="guides">—</span></a>
+      <p class="nav-label">我的手记</p>
+      <a class="nav-item" href="#favorites" data-nav="favorites"><span class="nav-icon" data-icon="bookmark"></span><span>收藏图鉴</span><span class="nav-count" id="favorite-count">0</span></a>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span>随时查阅 · 支持离线</span><span id="sidebar-version">8.4.1</span></div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button>
+      <div class="breadcrumb"><span>瘟疫之地</span><span class="breadcrumb-slash">/</span><span id="breadcrumb-current">手记首页</span></div>
+      <form class="search-box" id="search-form" role="search">
+        <span data-icon="search"></span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索全部图鉴" autocomplete="off"><kbd aria-hidden="true">/</kbd>
+      </form>
+      <span class="topbar-badge">中文图鉴</span>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="home-view" aria-label="图鉴首页">
+        <div class="hero">
+          <div class="hero-art" aria-hidden="true"></div>
+          <div class="hero-grain" aria-hidden="true"></div>
+          <div class="hero-content">
+            <div class="eyebrow"><span class="short-line"></span> THE EXILE’S FIELD GUIDE</div>
+            <h1>黑暗之中，<br><span>知识亦是利刃。</span></h1>
+            <p>一本为放逐者准备的生存手记。<br>从手中的第一把剑，到迷雾深处的未知之地。</p>
+            <div class="hero-actions"><a class="button button-gold" href="#category/weapons"><span data-icon="sword"></span>探索武器图鉴<span data-icon="arrow"></span></a><a class="hero-secondary" href="#catalog">浏览全部图鉴<span data-icon="arrow"></span></a></div>
+          </div>
+          <div class="hero-caption"><span class="caption-cross">✦</span><div>GRIM SOUL<span>DARK FANTASY SURVIVAL</span></div></div>
+          <div class="hero-foot"><span><span class="status-dot"></span>资料版本 <b id="hero-version">8.4.1</b></span><span>献给每一位踏入黑暗的放逐者</span></div>
+        </div>
+
+        <div class="overview-stats" id="overview-stats" aria-label="图鉴收录统计"></div>
+
+        <section class="home-section" aria-labelledby="explore-heading">
+          <div class="section-heading"><div><div class="eyebrow">CHOOSE YOUR PATH</div><h2 id="explore-heading">翻开你的手记</h2></div><span class="section-note">循着手记，走入瘟疫之地</span></div>
+          <div class="chapter-grid" id="chapter-grid"></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="featured-heading">
+          <div class="section-heading"><div><div class="eyebrow">THE ARMOURY</div><h2 id="featured-heading">武备图鉴</h2></div><a class="text-link" href="#category/weapons">查看全部武器<span data-icon="arrow"></span></a></div>
+          <div class="feature-tabs" role="tablist" aria-label="首页武备分类"><button class="feature-tab active" id="feature-weapons" role="tab" aria-selected="true" aria-controls="featured-grid" data-feature="weapons">武器</button><button class="feature-tab" id="feature-armor" role="tab" aria-selected="false" aria-controls="featured-grid" data-feature="armor" tabindex="-1">防具与装备</button></div>
+          <div class="entry-grid featured-grid" id="featured-grid" role="tabpanel" aria-labelledby="feature-weapons"></div>
+        </section>
+
+        <section class="home-section bestiary-section" aria-labelledby="bestiary-heading"><div class="bestiary-intro"><div class="eyebrow">KNOW YOUR ENEMY</div><h2 id="bestiary-heading">直面黑暗之前，<br>先认识它。</h2><p>查阅怪物与敌人档案，<br>为下一次远行做好准备。</p><a class="text-link" href="#category/monsters">翻阅怪物手记<span data-icon="arrow"></span></a></div><div class="bestiary-grid" id="bestiary-grid"></div></section>
+
+        <aside class="field-note"><span data-icon="book"></span><div><h3>关于这本手记</h3><p>基于 8.4.1 游戏资料整理；活动开放与实战数值以游戏为准。仅展示已整理的信息，未确认的图像与资料会明确标注。本页面为玩家制作的非官方网站。</p></div><span class="note-decoration" aria-hidden="true">✦</span></aside>
+      </section>
+
+      <section id="catalog-view" aria-labelledby="catalog-title" hidden>
+        <div class="catalog-heading"><div><div class="eyebrow" id="catalog-eyebrow">THE FIELD GUIDE</div><h1 id="catalog-title">全部图鉴</h1><p id="catalog-description">查阅瘟疫之地的武器、装备、资源与生灵。</p></div><span class="catalog-emblem" id="catalog-emblem" data-icon="book" aria-hidden="true"></span></div>
+        <div class="catalog-toolbar">
+          <div class="filter-fields">
+            <label class="filter-label">篇章<select id="category-filter" aria-label="按篇章筛选"><option value="all">全部篇章</option></select></label>
+            <label class="filter-label">分类<select id="subcategory-filter" aria-label="按分类筛选"><option value="all">全部分类</option></select></label>
+            <label class="filter-label">品质<select id="rarity-filter" aria-label="按品质筛选"><option value="all">全部品质</option></select></label>
+          </div>
+          <label class="filter-label sort-label">排序<select id="sort-filter" aria-label="图鉴排序"><option value="default">图鉴顺序</option><option value="name">名称 A → Z</option><option value="images">有图像优先</option><option value="rarity">品质从高到低</option></select></label>
+        </div>
+        <div class="result-bar"><p id="result-summary" role="status" aria-live="polite"></p><div class="result-actions"><label class="image-check"><input id="image-filter" type="checkbox">仅看有图条目</label><button id="reset-filters" class="text-button" type="button">重置筛选</button></div></div>
+        <div class="active-query" id="active-query" hidden></div>
+        <div class="entry-grid" id="catalog-grid"></div>
+        <div class="empty-state" id="empty-state" hidden><span data-icon="compass"></span><h2>这一页还没有留下足迹</h2><p id="empty-description">试试其他关键词，或减少筛选条件。</p><button class="button button-outline" type="button" id="empty-reset">浏览全部图鉴</button></div>
+        <nav class="pagination" id="pagination" aria-label="图鉴分页"></nav>
+      </section>
+      <noscript><div class="field-note">请开启浏览器的 JavaScript，以浏览本地图鉴、使用搜索和筛选。</div></noscript>
+    </main>
+    <footer class="site-footer"><div><span class="footer-brand">GRIM SOUL</span><span>放逐者手记 · 玩家图鉴</span></div><p>非官方网站 · 游戏名称及美术素材归其权利人所有</p><span id="footer-update">资料版本 8.4.1</span></footer>
+  </div>
+
+  <dialog id="entry-dialog" class="entry-dialog" aria-labelledby="detail-name">
+    <button class="icon-button dialog-close" id="dialog-close" type="button" aria-label="关闭图鉴详情"><span data-icon="close"></span></button>
+    <div id="detail-content"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

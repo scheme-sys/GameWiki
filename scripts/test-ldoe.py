@@ -4,9 +4,10 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 from playwright.sync_api import sync_playwright, expect
-import json, os, sys
+import json, os, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
+GAME_COUNT=len(re.findall(r'\bid: "[^"]+"',(ROOT/'assets/games.js').read_text(encoding='utf-8')))
 OUT=ROOT/'.verification/ldoe-ui'
 OUT.mkdir(parents=True,exist_ok=True)
 class Quiet(SimpleHTTPRequestHandler):
@@ -42,7 +43,7 @@ try:
   page=context.new_page();page.set_default_timeout(12000);attach(page)
   page.goto(BASE,wait_until='networkidle');ready(page)
   assert page.locator('.item-card').count()==24
-  assert page.locator('.atlas-menu a').count()==5
+  assert page.locator('.atlas-menu a').count()==GAME_COUNT
   expect(page.locator('[data-site-stats]')).to_have_attribute('data-stats-state','preview')
   assert page.evaluate('LDOE_DATA.loaded()')==[]
   resources=page.evaluate("()=>performance.getEntriesByType('resource').map(r=>({url:r.name,bytes:r.decodedBodySize,type:r.initiatorType}))")
@@ -51,7 +52,7 @@ try:
   assert report['initialDataBytes']<45000
   assert not any(r['url'].endswith('/catalog.js') or r['url'].endswith('/world.js') or '/lazy/' in r['url'] for r in resources)
   overflow(page);screenshot(page,'home-desktop')
-  passed('Home: 24 original cards, 5-game navigation, preview statistics, under 45KB data')
+  passed('Home: 24 original cards, complete game navigation, preview statistics, under 45KB data')
   page.wait_for_timeout(1200);assert page.evaluate('LDOE_DATA.loaded()')==[]
   passed('Idle home does not prefetch any category, detail, recipe or search dataset')
   expected={'weapons':'150','armor':'248','creatures':'224','resources':'1,016','recipes':'459','locations':'46'}

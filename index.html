@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src https://cdn.busuanzi.cc; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#080d17">
-  <meta name="description" content="LCZ 游戏 Wiki：探索辐射生存、西部世界、生存工艺、僵尸的黎明与地球末日生存的物品、装备和生存资料。">
+  <meta name="description" content="LCZ 游戏 Wiki：探索辐射生存、西部世界、生存工艺、僵尸的黎明、地球末日生存与冷酷灵魂的物品、装备和生存资料。">
   <meta property="og:title" content="LCZ · 游戏 Wiki">
   <meta property="og:description" content="选择你的游戏，探索它的世界。">
   <meta property="og:type" content="website">
@@ -23,20 +23,33 @@
 <body>
   <a class="skip-link" href="#game-universe">跳到游戏气泡</a>
   <div class="space-haze" aria-hidden="true"></div>
-  <svg class="constellations" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g class="star-lines">
-      <path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810"/>
-      <path d="M385 178 440 222 516 204M680 344 730 292 803 322 862 283M955 523 1044 492 1112 544M618 740 690 706 765 763 843 730"/>
-    </g>
-    <g class="star-points"><circle cx="70" cy="330" r="1.4"/><circle cx="152" cy="280" r="1.8"/><circle cx="223" cy="303" r="1"/><circle cx="268" cy="223" r="1.5"/><circle cx="1160" cy="138" r="1.2"/><circle cx="1230" cy="188" r="1.7"/><circle cx="1340" cy="163" r="1"/><circle cx="1180" cy="775" r="1.3"/><circle cx="1300" cy="815" r="1.7"/><circle cx="1380" cy="740" r="1.2"/><circle cx="325" cy="835" r="1"/><circle cx="390" cy="787" r="1.6"/><circle cx="475" cy="810" r="1"/><circle cx="530" cy="127" r="1.1"/><circle cx="860" cy="217" r="1"/><circle cx="727" cy="574" r="1.4"/><circle cx="1450" cy="443" r="1"/><circle cx="89" cy="712" r="1.1"/><circle cx="994" cy="900" r="1.3"/><circle cx="1015" cy="420" r="1"/>
-      <circle cx="385" cy="178" r="1.1"/><circle cx="440" cy="222" r="1.5"/><circle cx="516" cy="204" r="1"/>
-      <circle cx="680" cy="344" r="1.1"/><circle cx="730" cy="292" r="1.6"/><circle cx="803" cy="322" r="1.2"/><circle cx="862" cy="283" r="1"/>
-      <circle cx="955" cy="523" r="1.2"/><circle cx="1044" cy="492" r="1.6"/><circle cx="1112" cy="544" r="1"/>
-      <circle cx="618" cy="740" r="1"/><circle cx="690" cy="706" r="1.5"/><circle cx="765" cy="763" r="1.3"/><circle cx="843" cy="730" r="1"/>
-      <circle cx="550" cy="460" r="1"/><circle cx="930" cy="110" r="1.2"/><circle cx="355" cy="560" r=".9"/><circle cx="1060" cy="606" r="1.1"/>
-      <circle cx="720" cy="925" r="1"/><circle cx="902" cy="400" r="1.2"/><circle cx="1178" cy="350" r=".9"/><circle cx="1350" cy="910" r="1.1"/>
-    </g>
-  </svg>
+  <div class="constellations" aria-hidden="true">
+    <svg class="sky-cluster sky-near" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+      <g class="star-lines"><path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810M1100 320 1190 285 1250 350M515 560 587 608 642 557"/></g>
+      <g class="star-points">
+        <circle cx="70" cy="330" r="1.4"/><circle cx="152" cy="280" r="1.8"/><circle cx="223" cy="303" r="1"/><circle cx="268" cy="223" r="1.5"/>
+        <circle cx="1160" cy="138" r="1.2"/><circle cx="1230" cy="188" r="1.7"/><circle cx="1340" cy="163" r="1"/><circle cx="1180" cy="775" r="1.3"/>
+        <circle cx="1300" cy="815" r="1.7"/><circle cx="1380" cy="740" r="1.2"/><circle cx="325" cy="835" r="1"/><circle cx="390" cy="787" r="1.6"/>
+        <circle cx="475" cy="810" r="1"/><circle cx="530" cy="127" r="1.1"/><circle cx="860" cy="217" r="1"/><circle cx="727" cy="574" r="1.4"/>
+        <circle cx="1450" cy="443" r="1"/><circle cx="89" cy="712" r="1.1"/><circle cx="994" cy="900" r="1.3"/><circle cx="1015" cy="420" r="1"/>
+        <circle cx="1100" cy="320" r="1.1"/><circle cx="1190" cy="285" r="1.5"/><circle cx="1250" cy="350" r="1"/><circle cx="515" cy="560" r="1.1"/>
+        <circle cx="587" cy="608" r="1.5"/><circle cx="642" cy="557" r="1"/><circle cx="770" cy="440" r="0.9"/><circle cx="1015" cy="705" r="1.1"/>
+      </g>
+    </svg>
+    <svg class="sky-cluster sky-far" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+      <g class="star-lines"><path d="M385 178 440 222 516 204M680 344 730 292 803 322 862 283M955 523 1044 492 1112 544M618 740 690 706 765 763 843 730M820 145 870 93 938 125M824 475 876 532 939 488 1010 576"/></g>
+      <g class="star-points">
+        <circle cx="385" cy="178" r="1.1"/><circle cx="440" cy="222" r="1.5"/><circle cx="516" cy="204" r="1"/><circle cx="680" cy="344" r="1.1"/>
+        <circle cx="730" cy="292" r="1.6"/><circle cx="803" cy="322" r="1.2"/><circle cx="862" cy="283" r="1"/><circle cx="955" cy="523" r="1.2"/>
+        <circle cx="1044" cy="492" r="1.6"/><circle cx="1112" cy="544" r="1"/><circle cx="618" cy="740" r="1"/><circle cx="690" cy="706" r="1.5"/>
+        <circle cx="765" cy="763" r="1.3"/><circle cx="843" cy="730" r="1"/><circle cx="550" cy="460" r="1"/><circle cx="930" cy="110" r="1.2"/>
+        <circle cx="355" cy="560" r=".9"/><circle cx="1060" cy="606" r="1.1"/><circle cx="720" cy="925" r="1"/><circle cx="902" cy="400" r="1.2"/>
+        <circle cx="1178" cy="350" r=".9"/><circle cx="1350" cy="910" r="1.1"/><circle cx="820" cy="145" r="1.1"/><circle cx="870" cy="93" r="1.4"/>
+        <circle cx="938" cy="125" r="1"/><circle cx="824" cy="475" r="1.1"/><circle cx="876" cy="532" r="1.5"/><circle cx="939" cy="488" r="1"/>
+        <circle cx="1010" cy="576" r="1.2"/><circle cx="745" cy="660" r="0.9"/><circle cx="1460" cy="690" r="1"/><circle cx="190" cy="875" r="1.1"/>
+      </g>
+    </svg>
+  </div>
   <div class="app-shell">
     <header class="site-header">
       <div class="brand-group">
@@ -85,6 +98,6 @@
   </dialog>
 
 
-  <noscript><nav class="noscript-note" aria-label="游戏入口"><a href="Day%20R%20Survival/wiki_dayR.html">辐射生存 / Day R Survival</a><a href="Craft%20of%20Survival/wiki.html">生存工艺 / Craft of Survival</a><a href="Westland%20Survival/westland_wiki.html">西部世界 / Westland Survival</a><a href="DawnofZombiewiki/index.html">僵尸的黎明 / Dawn of Zombies</a><a href="LDOE_Wiki/index.html">地球末日生存 / Last Day on Earth</a></nav></noscript>
+  <noscript><nav class="noscript-note" aria-label="游戏入口"><a href="Day%20R%20Survival/wiki_dayR.html">辐射生存 / Day R Survival</a><a href="Craft%20of%20Survival/wiki.html">生存工艺 / Craft of Survival</a><a href="Westland%20Survival/westland_wiki.html">西部世界 / Westland Survival</a><a href="DawnofZombiewiki/index.html">僵尸的黎明 / Dawn of Zombies</a><a href="LDOE_Wiki/index.html">地球末日生存 / Last Day on Earth</a><a href="grimsoul_Wiki/index.html">冷酷灵魂 / Grim Soul</a></nav></noscript>
 </body>
 </html>

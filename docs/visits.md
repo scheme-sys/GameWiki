@@ -1,6 +1,6 @@
 # 访问统计的范围与维护
 
-主页和七个游戏资料页共用 `assets/site-stats.js` 与 `assets/site-stats.css`。导航分别显示 **PV** 和 **IP**；点击或轻触可查看完整数字及统计口径。提示使用深色 CSS 弹层，不使用浏览器原生 `title`。
+主页和八个游戏资料页共用 `assets/site-stats.js` 与 `assets/site-stats.css`。导航分别显示 **PV** 和 **IP**；点击或轻触可查看完整数字及统计口径。提示使用深色 CSS 弹层，不使用浏览器原生 `title`。
 
 ## 两个数字代表什么
 
@@ -25,6 +25,7 @@
 | Westland 基地设计 | `Westland Survival/基地.html` |
 | Dawn of Zombies Wiki | `DawnofZombiewiki/`、`DawnofZombiewiki/index.html` |
 | Last Day on Earth Wiki | `LDOE_Wiki/`、`LDOE_Wiki/index.html` |
+| Grim Soul Wiki | `grimsoul_Wiki/`、`grimsoul_Wiki/index.html` |
 
 每个允许页面只向 `https://cdn.busuanzi.cc/api.php` 发送 **一次 POST**，使用同一个稳定的项目地址：
 
