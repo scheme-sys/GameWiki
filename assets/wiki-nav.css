@@ -1,0 +1,56 @@
+/* Shared archive navigation. Kept in normal flow to preserve each wiki's controls. */
+.atlas-nav,
+.atlas-nav * { box-sizing: border-box; }
+
+.atlas-nav {
+  position: relative;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  min-height: 60px;
+  margin: 0;
+  padding: 10px clamp(18px, 3vw, 48px);
+  border-bottom: 1px solid #bdd5ff24;
+  background: linear-gradient(110deg, #0a1025f7, #11152bf5 65%, #12182df5);
+  color: #e9efff;
+  font: 12px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  isolation: isolate;
+}
+
+.atlas-nav[data-game="dayr"] { margin-left: var(--aside, 212px); }
+.atlas-nav a { color: #c4d0e8; text-decoration: none; }
+.atlas-nav a:hover { color: #fff; }
+.atlas-nav a:focus-visible,
+.atlas-nav summary:focus-visible { outline: 2px solid #a6bfff; outline-offset: 5px; border-radius: 4px; }
+.atlas-nav .atlas-home { display: inline-flex; align-items: center; gap: 10px; min-height: 36px; color: #e9efff; white-space: nowrap; }
+.atlas-nav .atlas-home-mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #8fe5c955; border-radius: 50%; color: #a2f3d9; font: 17px/1 "Segoe UI Symbol", sans-serif; box-shadow: inset 0 0 15px #93ffd112, 0 0 16px #93ffd10a; }
+.atlas-nav .atlas-label { display: inline-flex; align-items: center; gap: 9px; color: #7488ae; font: 9px/1.5 Consolas, monospace; letter-spacing: 1.6px; }
+.atlas-nav .atlas-label::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #9ef5d9; box-shadow: 0 0 9px #9ef5d977; }
+.atlas-nav .atlas-pages { display: flex; align-items: center; gap: 4px; margin: 0 auto; padding: 0; }
+.atlas-nav .atlas-pages a { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 12px; border: 1px solid transparent; border-radius: 6px; white-space: nowrap; font-size: 11px; }
+.atlas-nav .atlas-pages a:hover { background: #ffffff08; }
+.atlas-nav .atlas-pages a[aria-current="page"] { border-color: #afc5ff30; background: #a0b9ff0d; color: #e5edff; }
+.atlas-nav .atlas-switch { position: relative; margin: 0 0 0 auto; padding: 0; border: 0; border-radius: 0; background: none; color: inherit; }
+.atlas-nav .atlas-switch summary { display: flex; align-items: center; gap: 12px; min-height: 36px; padding: 5px 0 5px 12px; color: #aebcd6; font-size: 11px; font-weight: 400; cursor: pointer; list-style: none; white-space: nowrap; }
+.atlas-nav .atlas-switch summary::-webkit-details-marker { display: none; }
+.atlas-nav .atlas-switch summary::after { content: "+"; color: #93abe0; font: 18px/1 Consolas, monospace; }
+.atlas-nav .atlas-switch[open] summary::after { content: "−"; }
+.atlas-nav .atlas-menu { position: absolute; top: calc(100% + 13px); right: 0; width: min(268px, calc(100vw - 36px)); padding: 8px; border: 1px solid #afc5ff30; border-radius: 12px; background: #10172cf5; box-shadow: 0 18px 60px #0007; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.atlas-nav .atlas-menu a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px; border-radius: 7px; font-size: 12px; }
+.atlas-nav .atlas-menu a:hover { background: #adc5ff10; }
+.atlas-nav .atlas-menu a::after { content: "↗"; color: #7a91ba; font-size: 14px; }
+.atlas-nav .atlas-menu a[aria-current] { background: #adc5ff0c; color: #e5edff; }
+.atlas-nav .atlas-menu a[aria-current]::after { content: "●"; color: #a6c4ff; font-size: 7px; }
+
+@media (max-width: 760px) {
+  .atlas-nav { gap: 0 14px; padding: 8px 18px; min-height: 54px; }
+  .atlas-nav .atlas-label { display: none; }
+  .atlas-nav .atlas-pages { order: 3; width: 100%; margin: 3px 0 0; padding-top: 7px; border-top: 1px solid #a7c1ff18; }
+  .atlas-nav .atlas-pages a { flex: 1; justify-content: center; padding: 5px 7px; }
+}
+
+@media print { .atlas-nav { display: none; } }

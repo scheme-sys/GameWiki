@@ -1,0 +1,1946 @@
+/* Game archive data. See ../README.md for update instructions. */
+window.WESTLAND_LAB_DATA = window.WESTLAND_LAB_DATA || {};
+window.WESTLAND_LAB_DATA.beasts = {
+  "schema": "WLO-DESIGN-GALLERY-V1",
+  "animals": [
+    {
+      "id": "wls2_mob_elite_animal_bear_5",
+      "skin": "bear_skin_5",
+      "name": "路易斯安那黑熊",
+      "family": "bear",
+      "familyName": "熊",
+      "tier": 5,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary06/bear_skin_5_icon",
+      "image": "wls2_mob_elite_animal_bear_5",
+      "source": "westland_wiki_assets/pets/bear_skin_5_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_bear"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_bear_6",
+      "skin": "bear_skin_6",
+      "name": "科迪亚克熊",
+      "family": "bear",
+      "familyName": "熊",
+      "tier": 6,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary08/bear_skin_7_icon",
+      "image": "wls2_mob_elite_animal_bear_6",
+      "source": "westland_wiki_assets/pets/bear_skin_7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_bear"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_bear_7",
+      "skin": "bear_skin_7",
+      "name": "美国黑熊",
+      "family": "bear",
+      "familyName": "熊",
+      "tier": 7,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary09/bear_T7_icon",
+      "image": "wls2_mob_elite_animal_bear_7",
+      "source": "westland_wiki_assets/pets/bear_T7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_bear"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_coyote_1",
+      "skin": "coyote_skin_1",
+      "name": "大平原丛林狼",
+      "family": "coyote",
+      "familyName": "郊狼",
+      "tier": 1,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/coyote_skin_1_icon",
+      "image": "wls2_mob_animal_coyote_1",
+      "source": "westland_wiki_assets/pets/coyote_skin_1_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t1_group_2"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_alligator_5",
+      "skin": "crocodile_skin_2",
+      "name": "成年短吻鳄",
+      "family": "crocodile",
+      "familyName": "鳄鱼",
+      "tier": 5,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary06/crocodile_skin_2_icon",
+      "image": "wls2_mob_elite_animal_alligator_5",
+      "source": "westland_wiki_assets/pets/crocodile_skin_2_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t5_group_10",
+        "wls2_location_spawn_pve_enemy_t5_group_3"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_wolf_5",
+      "skin": "direwolf_skin_5",
+      "name": "红狼王",
+      "family": "direwolf",
+      "familyName": "精英狼",
+      "tier": 5,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary06/direwolf_skin_5_icon",
+      "image": "wls2_mob_elite_animal_wolf_5",
+      "source": "westland_wiki_assets/pets/direwolf_skin_5_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_wolf_elite",
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_wolf_pack",
+        "wls2_location_spawn_pve_enemy_t5_group_15",
+        "wls2_location_spawn_pve_enemy_t5_group_17"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_wolf_6",
+      "skin": "direwolf_skin_6",
+      "name": "阿拉斯加阿尔法狼",
+      "family": "direwolf",
+      "familyName": "精英狼",
+      "tier": 6,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary08/direwolf_skin_6_icon",
+      "image": "wls2_mob_elite_animal_wolf_6",
+      "source": "westland_wiki_assets/pets/direwolf_skin_6_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_wolf_elite",
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_wolf_pack",
+        "wls2_location_spawn_pve_enemy_t6_group_13"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_wolf_7",
+      "skin": "direwolf_skin_7",
+      "name": "墨西哥阿尔法狼",
+      "family": "direwolf",
+      "familyName": "精英狼",
+      "tier": 7,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary10/red_wolf_T7_icon",
+      "image": "wls2_mob_elite_animal_wolf_7",
+      "source": "westland_wiki_assets/pets/red_wolf_T7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_wolf_elite",
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_wolf_pack",
+        "wls2_location_spawn_pve_enemy_t7_group_3"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_2",
+      "skin": "lynx_skin_2",
+      "name": "猞猁",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 2,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/lynx_skin_2_icon",
+      "image": "wls2_mob_animal_cat_2",
+      "source": "westland_wiki_assets/pets/lynx_skin_2_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t2_group_1",
+        "wls2_location_spawn_pve_enemy_t2_group_5"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_3",
+      "skin": "lynx_skin_3",
+      "name": "加拿大猞猁",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 3,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/lynx_skin_3_icon",
+      "image": "wls2_mob_animal_cat_3",
+      "source": "westland_wiki_assets/pets/lynx_skin_3_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t3_group_2",
+        "wls2_location_spawn_pve_enemy_t3_group_7"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_3_summer",
+      "skin": "lynx_skin_3_summer",
+      "name": "红色猞猁",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 3,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/lynx_skin_3_summer_icon",
+      "image": "wls2_mob_animal_cat_3_summer",
+      "source": "westland_wiki_assets/pets/lynx_skin_3_summer_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t3_group_15"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_5",
+      "skin": "lynx_skin_5",
+      "name": "路易斯安那山猫",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 5,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/lynx_skin_5_icon",
+      "image": "wls2_mob_animal_cat_5",
+      "source": "westland_wiki_assets/pets/lynx_skin_5_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_cat",
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_cats",
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_cats_pack",
+        "wls2_location_spawn_pve_enemy_t5_group_1",
+        "wls2_location_spawn_pve_enemy_t5_group_8"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_6",
+      "skin": "lynx_skin_6",
+      "name": "阿拉斯加猞猁",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 6,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary08/lynx_skin_6_icon",
+      "image": "wls2_mob_animal_cat_6",
+      "source": "westland_wiki_assets/pets/lynx_skin_6_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_cat",
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_cats",
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_cats_pack",
+        "wls2_location_spawn_pve_enemy_t6_group_15",
+        "wls2_location_spawn_pve_enemy_t6_group_2",
+        "wls2_location_spawn_pve_enemy_t6_group_7"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_cat_7",
+      "skin": "lynx_skin_7",
+      "name": "山猫 山猫",
+      "family": "lynx",
+      "familyName": "中型猫科",
+      "tier": 7,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary09/lynx_T7_icon",
+      "image": "wls2_mob_animal_cat_7",
+      "source": "westland_wiki_assets/pets/lynx_T7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_cat",
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_cats",
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_cats_pack",
+        "wls2_location_spawn_pve_enemy_t7_group_10",
+        "wls2_location_spawn_pve_enemy_t7_group_5"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_cat_4",
+      "skin": "puma_skin_4",
+      "name": "美洲虎",
+      "family": "puma",
+      "familyName": "大型猫科",
+      "tier": 4,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary06/puma_skin_4_icon",
+      "image": "wls2_mob_elite_animal_cat_4",
+      "source": "westland_wiki_assets/pets/puma_skin_4_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t4_group_6"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_cat_5",
+      "skin": "puma_skin_5",
+      "name": "黑豹",
+      "family": "puma",
+      "familyName": "大型猫科",
+      "tier": 5,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary06/puma_skin_5_icon",
+      "image": "wls2_mob_elite_animal_cat_5",
+      "source": "westland_wiki_assets/pets/puma_skin_5_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_cat_elite",
+        "wls2_location_spawn_pve_enemy_t5_group_2",
+        "wls2_location_spawn_pve_enemy_t5_group_9"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_cat_6",
+      "skin": "puma_skin_6",
+      "name": "北美美洲狮",
+      "family": "puma",
+      "familyName": "大型猫科",
+      "tier": 6,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary08/puma_skin_6_icon",
+      "image": "wls2_mob_elite_animal_cat_6",
+      "source": "westland_wiki_assets/pets/puma_skin_6_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_cat_elite",
+        "wls2_location_spawn_pve_enemy_t6_group_14"
+      ]
+    },
+    {
+      "id": "wls2_mob_elite_animal_cat_7",
+      "skin": "puma_skin_7",
+      "name": "山地美洲狮",
+      "family": "puma",
+      "familyName": "大型猫科",
+      "tier": 7,
+      "rank": "elite",
+      "iconPath": "UI_WW_AlphaBinary09/cougar_T7_icon",
+      "image": "wls2_mob_elite_animal_cat_7",
+      "source": "westland_wiki_assets/pets/cougar_T7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_cat_elite",
+        "wls2_location_spawn_pve_enemy_t7_group_4"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_1",
+      "skin": "wolf_skin_1",
+      "name": "黑狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 1,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/wolf_skin_1_icon",
+      "image": "wls2_mob_animal_wolf_1",
+      "source": "westland_wiki_assets/pets/wolf_skin_1_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t1_group_3",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_2",
+      "skin": "wolf_skin_2",
+      "name": "水牛狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 2,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/wolf_skin_2_icon",
+      "image": "wls2_mob_animal_wolf_2",
+      "source": "westland_wiki_assets/pets/wolf_skin_2_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t2_group_8",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_3",
+      "skin": "wolf_skin_3",
+      "name": "西北狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 3,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/wolf_skin_3_icon",
+      "image": "wls2_mob_animal_wolf_3",
+      "source": "westland_wiki_assets/pets/wolf_skin_3_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t3_group_1",
+        "wls2_location_spawn_pve_enemy_t3_group_6",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_4",
+      "skin": "wolf_skin_4",
+      "name": "黑狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 4,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/wolf_skin_4_icon",
+      "image": "wls2_mob_animal_wolf_4",
+      "source": "westland_wiki_assets/pets/wolf_skin_4_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_t4_group_10",
+        "wls2_location_spawn_pve_enemy_t4_group_3",
+        "wls2_location_spawn_pve_enemy_t4_group_5",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_5",
+      "skin": "wolf_skin_5",
+      "name": "红狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 5,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary06/wolf_skin_5_icon",
+      "image": "wls2_mob_animal_wolf_5",
+      "source": "westland_wiki_assets/pets/wolf_skin_5_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_wolf",
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_wolf_pack",
+        "wls2_location_spawn_pve_enemy_animal_incident_t5_wolves",
+        "wls2_location_spawn_pve_enemy_t5_group_16",
+        "wls2_location_spawn_pve_enemy_t5_group_17",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_6",
+      "skin": "wolf_skin_6",
+      "name": "阿拉斯加狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 6,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary09/wolf_skin_6_icon",
+      "image": "wls2_mob_animal_wolf_6",
+      "source": "westland_wiki_assets/pets/wolf_skin_6_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_wolf",
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_wolf_pack",
+        "wls2_location_spawn_pve_enemy_animal_incident_t6_wolves",
+        "wls2_location_spawn_pve_enemy_t6_group_1",
+        "wls2_location_spawn_pve_enemy_t6_group_11",
+        "wls2_location_spawn_pve_enemy_t6_group_12",
+        "wls2_location_spawn_pve_enemy_t6_group_13",
+        "wls2_location_spawn_pve_enemy_t6_group_6",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    },
+    {
+      "id": "wls2_mob_animal_wolf_7",
+      "skin": "wolf_skin_7",
+      "name": "墨西哥 狼",
+      "family": "wolf",
+      "familyName": "狼",
+      "tier": 7,
+      "rank": "common",
+      "iconPath": "UI_WW_AlphaBinary10/wolf_T7_icon",
+      "image": "wls2_mob_animal_wolf_7",
+      "source": "westland_wiki_assets/pets/wolf_T7_icon.png",
+      "groups": [
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_wolf",
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_wolf_pack",
+        "wls2_location_spawn_pve_enemy_animal_incident_t7_wolves",
+        "wls2_location_spawn_pve_enemy_t7_group_1",
+        "wls2_location_spawn_pve_enemy_t7_group_2",
+        "wls2_location_spawn_pve_enemy_t7_group_3",
+        "wls2_location_spawn_pve_enemy_t7_group_9",
+        "wls2_location_spawn_pve_wolfs_universal"
+      ]
+    }
+  ],
+  "images": {
+    "wls2_mob_elite_animal_bear_5": "wiki-assets/images/807a7fc382bba7420707dec8bdc07daa1793d6fd74d7f853955c5302f545441b.png",
+    "wls2_mob_elite_animal_bear_6": "wiki-assets/images/a4d455d8fa20af4e2110dc2c96b06b76feaf40e5e9d7d192b743e8e5b2b1abf5.png",
+    "wls2_mob_elite_animal_bear_7": "wiki-assets/images/4aae9b1677278415e83f3bfeb80a2152ad897b7d12a5a8b75add729c1e1aa2d1.png",
+    "wls2_mob_animal_coyote_1": "wiki-assets/images/0ce8c78a75ade3997b3a10500a6b686a1702ec320e000784729861f2df0bf7bc.png",
+    "wls2_mob_elite_animal_alligator_5": "wiki-assets/images/ecb26ea6bf21f4f79df134a708246526c1cbbddd66947e53cf89a9fddfd1470a.png",
+    "wls2_mob_elite_animal_wolf_5": "wiki-assets/images/3b667e8796adda89d6fd64469cebeaade703c93cbce3ac5b29cacfcda1589892.png",
+    "wls2_mob_elite_animal_wolf_6": "wiki-assets/images/9fca9881c99cff3048c25efb08d6c3bd7462e0321bbd3cc361d72e1b51ec50e5.png",
+    "wls2_mob_elite_animal_wolf_7": "wiki-assets/images/24a4e79b4b0ed417dc43f7ae5b5aa14e7ae3af3afee59553bee77fc0c7b77954.png",
+    "wls2_mob_animal_cat_2": "wiki-assets/images/86d25d59a03db527e9b18f1654ce7dea5fa36f775c9a09897a5936d6593e3d72.png",
+    "wls2_mob_animal_cat_3": "wiki-assets/images/70a75323e11cb69756236a145b4b9f313085815861f7b302e53a58e2bcd3d853.png",
+    "wls2_mob_animal_cat_3_summer": "wiki-assets/images/a73d50cbebf69a61d962ec615c0c316a76556ece8505b61635a08ab95a4e24b9.png",
+    "wls2_mob_animal_cat_5": "wiki-assets/images/8a51718cd31997c9453b64e0430cf6d16fdf03632374ab4392ebfb9a2ee82d53.png",
+    "wls2_mob_animal_cat_6": "wiki-assets/images/d97d5a8372002a7e3d46660187d37e691e3252e227a5aab1dc9e2eb035d72d55.png",
+    "wls2_mob_animal_cat_7": "wiki-assets/images/16644d8fd4a20b4c0d34f328a432d6c70fc1c5c17601080469afac4e3197df53.png",
+    "wls2_mob_elite_animal_cat_4": "wiki-assets/images/c79f9beb3bae213199dc4d8c81e62943ea42349d978070b59e462bcb439a479d.png",
+    "wls2_mob_elite_animal_cat_5": "wiki-assets/images/6626f5a115b0911b8b9bff266f760fceb0054cd83973510206f59d15bdc56d6e.png",
+    "wls2_mob_elite_animal_cat_6": "wiki-assets/images/1959c05c0ca29e1daba14e1e38dd32d98f0bea1a0aed7c29f936d81dd40ed8c4.png",
+    "wls2_mob_elite_animal_cat_7": "wiki-assets/images/6b256c35bf5f93511d56bc2cc809b23220fd9ff6e07554d7642fb853e89cf86d.png",
+    "wls2_mob_animal_wolf_1": "wiki-assets/images/fb30ff3452cb0130f1be880a427032eee31aaaada917a3cea697c921d214195d.png",
+    "wls2_mob_animal_wolf_2": "wiki-assets/images/75d3919ade5155cf65c211abaa8b2fc8a821f97c8ae7a0826e619f628e9ce4a0.png",
+    "wls2_mob_animal_wolf_3": "wiki-assets/images/645bbcc638fcec72820409bfa59ceb6ea711d4ff0a74093aa59813f80d1f9a21.png",
+    "wls2_mob_animal_wolf_4": "wiki-assets/images/14ab217b39f9dcc0922bfd7e0daec942520801373c90b2e7ee99e1a1985a0d0b.png",
+    "wls2_mob_animal_wolf_5": "wiki-assets/images/687dcb5b6a63d18db07605910d048d557e0811e6647c7fa4c1efd6cff329498a.png",
+    "wls2_mob_animal_wolf_6": "wiki-assets/images/fec3292148fb29aac6baee37782d03d32cb617ba7667173df03dfd586e8af4fe.png",
+    "wls2_mob_animal_wolf_7": "wiki-assets/images/69a018de7276e8a256fa242114eaa0e566b8a6fc353e080afb07c564b32a9d78.png",
+    "wls2_weapon_range_bow_1_common": "wiki-assets/images/d9496f56e85668155c95ac69df649d77b8d88f2c872220fb6b00a99c532784f3.png",
+    "wls2_weapon_melee_fast_1": "wiki-assets/images/6cd02f7119829d025e635b83d5a94be055ce83d23ef89e13f26ae1f06c7aa172.png",
+    "wls2_weapon_melee_knife_1_common": "wiki-assets/images/5925741989313421ea1a90b33372094759b97ae1118dece9b22dddf9492d1ace.png",
+    "wls2_weapon_melee_hammer_1_common": "wiki-assets/images/e337586e615a0b47321d2c2fc92ef2b67db4d09fc08f3c50df6a67854c674bf9.png",
+    "wls2_weapon_range_pistol_1_common": "wiki-assets/images/e1521919aa0b04d63743afb4278154e0285ffc739148040b624f7bfde8b69be3.png",
+    "wls2_weapon_melee_spear_1_common": "wiki-assets/images/aac0fe4fe7567540fc8b468183bb1c41f3592692f325db2c22d5164e35cca9d1.png",
+    "wls2_weapon_melee_hammer_1_rare": "wiki-assets/images/ffa9b8d5884801edebfa41594eaa3e05f43e1e00e1f1d83b4d5fafad054c565e.png",
+    "wls2_weapon_range_bow_2_common": "wiki-assets/images/bbae953820ef3d11b7821982a2e925615aa65f6e3aabfe863efd4c75e9e36c56.png",
+    "wls2_weapon_melee_knife_2_common": "wiki-assets/images/44d20ff2f27e1297af6795532488de9459d6e826425d576a367b35c02011a3f0.png",
+    "wls2_weapon_melee_hammer_2_common": "wiki-assets/images/b7dcc42454f4199e36ca923926d4b89562116ffb7438ecd33071712da8ebbc29.png",
+    "wls2_weapon_range_pistol_2_common": "wiki-assets/images/4d9fda55290d5e6f24220921e0f63dc71f799737d53dee14069c8e426deb1798.png",
+    "wls2_weapon_melee_spear_2_common": "wiki-assets/images/47cbedef5a497a9037eb20bcb5361bc38b312117a730eb354df3daa8b6febf66.png",
+    "wls2_weapon_range_bow_2_uncommon": "wiki-assets/images/ed8ccb74d79eef0d616c617fabb4596b1abc75bb91f3d0efb6e88ccd66e82ad0.png",
+    "wls2_weapon_melee_knife_2_uncommon": "wiki-assets/images/2fc7d19a99a459e65133654a9d2376206336d2b6b48d91f9a8daab3bce9a8dc5.png",
+    "wls2_weapon_melee_hammer_2_uncommon": "wiki-assets/images/921daba77b600bc187a76b877f1cfefd52400998e82e90e0e34b25a2b0e7de37.png",
+    "wls2_weapon_range_pistol_2_uncommon": "wiki-assets/images/d7af64f2ff81aa61da02f6f458abfb630bb79b9e70663880622d7a608092d696.png",
+    "wls2_weapon_range_musket_2_uncommon": "wiki-assets/images/a0127ab29d23c081678fcbcd8229edd5a24a01504900fa12f64fd6a2d772a8eb.png",
+    "wls2_weapon_melee_spear_2_uncommon": "wiki-assets/images/811ad7da635042902c9738afdd61fb514f8e0158703df05673eb536aae59f100.png",
+    "wls2_weapon_melee_knife_2_rare": "wiki-assets/images/864ef879ce9040dd010af29935fa3d8da95ad5d5cec86b5d58f2570f2f1172a0.png",
+    "wls2_weapon_range_shotgun_2_rare": "wiki-assets/images/46c263eb2514f19654ea04c9ee64c0d9ed6955d27aef1028e84fd9419bdfb0ad.png",
+    "wls2_weapon_range_bow_3_common": "wiki-assets/images/b81c83ff47271a22d17c725140b1e9d469023bb1f651d43386a4197e8e8058e9.png",
+    "wls2_weapon_melee_knife_3_common": "wiki-assets/images/a474bda62b0ea22881b9156ddc5647c03bb8bb68f4dc5ce9f6f7c7145a0d66ed.png",
+    "wls2_weapon_melee_hammer_3_common": "wiki-assets/images/a087488265c4d09d3e13548e77c250b5ef682ebcb870c208e28c9fd544557de2.png",
+    "wls2_weapon_range_pistol_3_common": "wiki-assets/images/1cafb1556f741e875d2ff326e72cf21ddaec45b505620799854d68b68faec569.png",
+    "wls2_weapon_range_musket_3_common": "wiki-assets/images/1cd340ad871ae5a844eed24bf6ad20cf7ae2130019c7a120b7e79a94cebe92eb.png",
+    "wls2_weapon_range_shotgun_3_common": "wiki-assets/images/63566e144b8c2bc68ec24a853cd99de6967b392f5703e0ffa922e81105202612.png",
+    "wls2_weapon_melee_spear_3_common": "wiki-assets/images/489453591d1df7f022a08503c7783bb7f356d52b155a567c8ad181d69dbb744b.png",
+    "wls2_weapon_range_bow_3_uncommon": "wiki-assets/images/bfdb4f901dba0f336d9a49239524b0d38461aa9a69d3473d730020cf50d9aac4.png",
+    "wls2_weapon_melee_knife_3_uncommon": "wiki-assets/images/a5464c90e877dd154e2fe22e080bbd33dde24bba8a9a4d09a6470b4b47ef0567.png",
+    "wls2_weapon_melee_hammer_3_uncommon": "wiki-assets/images/05b676bbacba3bd81bad57352a57535d7ced87c7bd934468eb7656f892bc7b85.png",
+    "wls2_weapon_range_revolver_3_uncommon": "wiki-assets/images/185299245ebd023adf41d06f4386d4c73a6ad9932932cfb6b5f47eec03b7cb5f.png",
+    "wls2_weapon_range_musket_3_uncommon": "wiki-assets/images/0eed874c8f3e18981d143b2f863472152c70c5088ef4fd1d485ef7a15c7e7f31.png",
+    "wls2_weapon_range_shotgun_3_uncommon": "wiki-assets/images/9de5dc1aaffd7c07176a81bf38cc09c6f9dbb95ec0f23c43e9119ff1ded678e5.png",
+    "wls2_weapon_melee_spear_3_uncommon": "wiki-assets/images/9f10a04478186cffca8fc13bfecd72c3e02d7c4d52bd5343109965162d5b53e2.png",
+    "wls2_weapon_range_revolver_3_rare": "wiki-assets/images/acf129fa4d9e1ca8c3215ed04b0aacc31e8c308efb87c15094fddc427437f36b.png",
+    "wls2_weapon_range_musket_3_rare": "wiki-assets/images/15aacb00d0e8beef6fd194ef225a590d7ed1ac8ca624b72f4da818f9c43ebf4e.png",
+    "wls2_weapon_melee_spear_3_rare": "wiki-assets/images/4598ac01b527a497ccee6b9f28faed1c6dda76857512e5e254cac2e3041fbcb1.png",
+    "wls2_weapon_melee_knife_3_epic": "wiki-assets/images/efdbb4a3f87e2952f93fed7af01d0e3c942077554f908bc753a1a7001096a6e8.png",
+    "wls2_weapon_range_bow_4_common": "wiki-assets/images/01dceb03adcbad5c572f7fa49f629388b1eaa1cbedb57eec7f83285da0d43b97.png",
+    "wls2_weapon_melee_knife_4_common": "wiki-assets/images/ae8657015139a479fa780298c5dc2f38a95cd84951ad641340435a05ab8da4e4.png",
+    "wls2_weapon_range_revolver_4_common": "wiki-assets/images/13506a7fb2eba81c83068bf1633a7bfc9e4166d08d5edd7aa47d772d9c5ce656.png",
+    "wls2_weapon_range_rifle_4_common": "wiki-assets/images/ade6fbeac7db3e99c266f37cc2d72ac4347c652a2dd34107fb2ff667445dccdd.png",
+    "wls2_weapon_range_musket_4_common": "wiki-assets/images/6129bf86b8f45be703ccda110aed30e2ac859fc386d7db823b6cf8b127c14465.png",
+    "wls2_weapon_range_shotgun_4_common": "wiki-assets/images/620a0a2c13573dea17b0e978f1e5fc1080a1ae68585d8778c4d75583b2531fac.png",
+    "wls2_weapon_melee_sabre_4_common": "wiki-assets/images/d2b1cb0f6f21c31ce6945aadab6485aa3f4465ce9eb5f102af784e919328a887.png",
+    "wls2_weapon_melee_knife_4_uncommon": "wiki-assets/images/43b81734fd4a81fd8ccadbce3e31aef3bd0f126b48baa860517319877d70367a.png",
+    "wls2_weapon_range_revolver_4_uncommon": "wiki-assets/images/9ef94a634f60de16eee4f638a854af6b91876c067d84fc4f515f913c592d3a09.png",
+    "wls2_weapon_range_shotgun_4_uncommon": "wiki-assets/images/1ae8c823e21ade26c511cea224465bb010ccb01da3c7f3be6198d475e45619eb.png",
+    "wls2_weapon_melee_sabre_4_uncommon": "wiki-assets/images/1b2ee4eea9df3d7bb890a1e53db48b10447446ca4aa22a86714f58bf2a347530.png",
+    "wls2_weapon_range_revolver_4_rare": "wiki-assets/images/f2a2ec07fe2069272036293c9c43759841b537fae9c9941ab83158b8a219e5f4.png",
+    "wls2_weapon_range_rifle_4_rare": "wiki-assets/images/a19a0f538c2056e36c904178368e5dec3fc1943766483a83187631634c43d51a.png",
+    "wls2_weapon_melee_sabre_4_rare": "wiki-assets/images/232da52695eb16e9e8d6c2101cdb91e1a53871bb58a8c093cf93f5f95ba99143.png",
+    "wls2_weapon_range_rifle_4_epic": "wiki-assets/images/54d0bdf4bd361fbe4e2c0ad98afca058c9328e6f81e13562c5e2483f148017d1.png",
+    "wls2_weapon_melee_sabre_4_epic": "wiki-assets/images/2f9abbe30ed3b56443dfc55ee42529d3dc1aa16d77d60994c42a1bcfb0ae6ce2.png",
+    "wls2_weapon_range_bow_5_common": "wiki-assets/images/fff843d5d0c33eeba82e7e53029a12c61511945be297098aa8df11a2e060b31f.png",
+    "wls2_weapon_melee_knife_5_common": "wiki-assets/images/9bde81ccf9c28842ce25dc8d8303239e9dd88a9616c6d842929809ef4487a0f1.png",
+    "wls2_weapon_range_revolver_5_common": "wiki-assets/images/57e36e3fdbf3836c3d6a105e35e091472dee743752155ce0c94bc4ce54232e51.png",
+    "wls2_weapon_range_rifle_5_common": "wiki-assets/images/50e72ccf9e3d3150c05d464376de51824a4ed1fd91ab6b4dae2ec70a5d575c15.png",
+    "wls2_weapon_range_shotgun_5_common": "wiki-assets/images/c6d6dc0eb93fa94cc56e2507388471cc20ec8576fd72ccc7a196f0d82bd6795c.png",
+    "wls2_weapon_melee_sabre_5_common": "wiki-assets/images/65cae350a1044c67a7b6aca8ba8041053c9c62e6276136edfe3152e70da9ea1f.png",
+    "wls2_weapon_melee_knife_5_uncommon": "wiki-assets/images/cfa91458167610e3681beae112870c9949832b9172e74be987a24358ff2a3e4b.png",
+    "wls2_weapon_range_revolver_5_uncommon": "wiki-assets/images/82478b0088ecccd4704011194843134a875528b532e569233f3ef8a9696dad1d.png",
+    "wls2_weapon_range_revolver_5_rare": "wiki-assets/images/2cb51d344631bad93f2de3d431a61c279a784fd73cd23f596ed1855ba0c118ca.png",
+    "wls2_weapon_range_rifle_5_rare": "wiki-assets/images/f4ceb539c82763a8555a30e4593425b650a396c7e78893016fc434c967147f8e.png",
+    "wls2_weapon_range_shotgun_5_rare": "wiki-assets/images/ffd852a11a83d35540fe6a802f73043bb0cb2cdc810d11989f0b045ef04802c5.png",
+    "wls2_weapon_melee_sabre_5_rare": "wiki-assets/images/a7de822386947698e8df1a90adfbfd15fc6187066b4bf9c8a3ecbe9184825b4e.png",
+    "wls2_weapon_melee_knife_5_epic": "wiki-assets/images/c93ccc4462e9f0a650c899046230a58e0c1fd4e468c0a1b5356e5b5bdb1f3f10.png",
+    "wls2_weapon_range_revolver_5_epic": "wiki-assets/images/0aea6c31bc8ca4924ef5865356eae27f5d953b88341ab6807223eca41e08cfb6.png",
+    "wls2_weapon_range_rifle_5_epic": "wiki-assets/images/d5d60f9c205ec87c42ee4e2b96d872252e6914ec910029db8fea99464c2b365e.png",
+    "wls2_weapon_range_shotgun_5_epic": "wiki-assets/images/d434921f6cc377838e7d2ff2100c3213e25661c09018de7f0899d4403b9156d2.png",
+    "wls2_weapon_melee_sabre_5_epic": "wiki-assets/images/5bb36d7742e4081b4bd59a60651a0d146cbe2f2e1cfa54af560c42fadbf5e3fb.png",
+    "wls2_weapon_range_bow_6_common": "wiki-assets/images/6ad44f0f9f56ea3f67467c1560a0d4a0767e7be21a968a86d886961d1b18b317.png",
+    "wls2_weapon_melee_knife_6_common": "wiki-assets/images/18c75d7a90f5820b498ef3abdae1fc96bc0c3203fbfb8d416c455cf8de71256a.png",
+    "wls2_weapon_range_revolver_6_common": "wiki-assets/images/b61b5e4f15a5b31481307abce34c6a420e3846fc58ff901ead93f4e79b23e1d1.png",
+    "wls2_weapon_range_rifle_6_common": "wiki-assets/images/f0f8cba5c4b967a36f2281a090489fd2ad85b179ae29b75caddf1a3392ade7dc.png",
+    "wls2_weapon_range_shotgun_6_common": "wiki-assets/images/2dca6cc36316a013fa1c188bcfb4f51621045f124811c6802b36b1a22dbd63bc.png",
+    "wls2_weapon_melee_knife_6_uncommon": "wiki-assets/images/a89726a6b02ffa66cde911f57e4340ee70a5e1bb6971fb2a3bc1306fb29cd3bf.png",
+    "wls2_weapon_range_revolver_6_uncommon": "wiki-assets/images/0ae8062ef9830c0732a5411f6161fba5a7614c082dfa83f8a87d23aea549dfb2.png",
+    "wls2_weapon_range_rifle_6_uncommon": "wiki-assets/images/38cff034e1a5bb98be20b512e18d599b04372ba61926424dc76a8bdd68e0ab69.png",
+    "wls2_weapon_range_shotgun_6_uncommon": "wiki-assets/images/6d828245f283a56e1f2f13e748a22f659e8b047a85d3cda635b67a993fc8f393.png",
+    "wls2_weapon_melee_knife_6_rare": "wiki-assets/images/59841b9e5f0b2696730d51381c445fbcfb8d6d1c52521fc953f5f2ba3e89bbf2.png",
+    "wls2_weapon_range_revolver_6_rare": "wiki-assets/images/d5b147d592c6a47c0d1aae1b4e8bf426c387c05f17cb770e7577101193eedb3f.png",
+    "wls2_weapon_range_rifle_6_rare": "wiki-assets/images/44ceb3a56f7565dd815fdded8b9448e80c589686a772a9f04ff4bfd25586b142.png",
+    "wls2_weapon_range_shotgun_6_rare": "wiki-assets/images/014f89fc55425ceba6ad805d2117ce64642fe39af5dbdf087986091cba9cb383.png",
+    "wls2_weapon_melee_spear_6_rare": "wiki-assets/images/82aacb9084fb329315fe2311b358dd05812fb4a7ee8091d20d268410db80dd02.png",
+    "wls2_weapon_melee_knife_6_epic": "wiki-assets/images/ba80c48d7dec416161c2c793f6e2f7876026550bdb2a6fc6268a3aa7e8e0c559.png",
+    "wls2_weapon_range_revolver_6_epic": "wiki-assets/images/0775273df6034152545d3eea59f0efb461f7d94f1f2797233b6f16ddf24e2981.png",
+    "wls2_weapon_range_rifle_6_epic": "wiki-assets/images/0fa77c1ae88248e5354a445ad06d2c6bdb21d05916cbdd2ec56844fe39d218fe.png",
+    "wls2_weapon_range_shotgun_6_epic": "wiki-assets/images/b116963d6bb55281e31c82ace74fb302d633979ba58de4dfb2bfe98a3828947e.png",
+    "wls2_weapon_range_bow_7_common": "wiki-assets/images/9dd59939882e269c94820b61c9cb104b4c752f6c14b32c90a0b33e254c5f499d.png",
+    "wls2_weapon_melee_knife_7_common": "wiki-assets/images/92d378fd4d99ffe5885989a141a45355f2a6a24f76c4c912aa0437b0d5b956c0.png",
+    "wls2_weapon_range_revolver_7_common": "wiki-assets/images/4b097d4fea1af29eeda7d919913f2c32eac914baf06519af05dd55181db56c42.png",
+    "wls2_weapon_range_rifle_7_common": "wiki-assets/images/31e6df53d3a7a1cbf1ae78a3513d6e1779b17bcc6086cfa1a7c937d2eb3043bd.png",
+    "wls2_weapon_range_shotgun_7_common": "wiki-assets/images/ddccce5beaf13585b0a6b247f145f05e6034950d6926bfc38384192679d1a5bd.png",
+    "wls2_weapon_melee_knife_7_uncommon": "wiki-assets/images/e9799651a65766b99a5536f0c99f41efc73c515fdb5d089045c6ebd2c24b6502.png",
+    "wls2_weapon_range_revolver_7_uncommon": "wiki-assets/images/c18a4bdbc1c14b20df8b29fb19dcc82b9e2e14a21e0666249bd6057bf2031ae3.png",
+    "wls2_weapon_range_rifle_7_uncommon": "wiki-assets/images/7c9d2edef4c8092aa8ff59c2262640fae8542c5796eedc35a9dc4f3c7b3f4b17.png",
+    "wls2_weapon_range_shotgun_7_uncommon": "wiki-assets/images/a89f7aabe9ec9db7d146c2c07986eb3d47a896679e0a46221143c26017e495ee.png",
+    "wls2_weapon_melee_knife_7_rare": "wiki-assets/images/e6787308b2d6b6faf7e25a5baa0cef8ad5c1feaa6949cc36b1df08493b2bf3c0.png",
+    "wls2_weapon_range_revolver_7_rare": "wiki-assets/images/07220d8bab51df916c0939c58e612d10280ab808179b08e2bac2e0f7f5ee8034.png",
+    "wls2_weapon_range_rifle_7_rare": "wiki-assets/images/0ea43203febbe2e2aa959eb60cca8133e400e6f74b5f0dd95b5c641d8fb3bb75.png",
+    "wls2_weapon_range_shotgun_7_rare": "wiki-assets/images/bf80aec6fc64d114e414bb249cc0ab1cf76e2120b38ea7c8249ac4c6c09e4e35.png",
+    "wls2_weapon_melee_knife_7_epic": "wiki-assets/images/c4d084a9c83639ea848ac9eb8cb50714b509da5165c93f549862f181c4fc4c9a.png",
+    "wls2_weapon_range_revolver_7_epic": "wiki-assets/images/78f65abe60a51c14a46906cb41b3fda42fb93369901996987dacd298402ef410.png",
+    "wls2_weapon_range_rifle_7_epic": "wiki-assets/images/22ac74a40c7aa1929850ac130e03c1da76f6e2625cef30692a775873bc90816f.png",
+    "wls2_weapon_range_shotgun_7_epic": "wiki-assets/images/46da834f84afe2a0d558e95bf7fbc9cf65e954e4c5802af685281f98b87c002b.png",
+    "wls2_armor_body_1_common": "wiki-assets/images/9c2bc3ebfc1059d1028b6b6123d7fc7116519636ce46b719c507134ce584dcc7.png",
+    "wls2_armor_boots_1_common": "wiki-assets/images/b3f7481a31fe58f7438c4c6e65d9805e5cd1c708806314bab3eb38904d6bd7cd.png",
+    "wls2_armor_head_1_common": "wiki-assets/images/4748537df9868cfef94b2cd9fd72dba88c6afbe3cf288242d5338f6e62496222.png",
+    "wls2_armor_legs_1_common": "wiki-assets/images/52b471a83b178d77fbcbeff6ac98efff137fc5f37828e3d706054540e491222d.png",
+    "wls2_armor_body_1_uncommon": "wiki-assets/images/ad3a2c57fd5ccadfae75effb5711647df04d390137173ba538b831a87f0a4f8e.png",
+    "wls2_armor_boots_1_uncommon": "wiki-assets/images/55f7d198cb8ae94f203cd820b5f6662674fbdcff55e0e95f4d19ef64943f0648.png",
+    "wls2_armor_legs_1_uncommon": "wiki-assets/images/238a3c63a6b6c7ee85698d99cb6aaf596a83dada08c6caeadf13884b1fef24a3.png",
+    "wls2_armor_body_2_common": "wiki-assets/images/5aba4b97bfc78e47e10af373d95f461b294a0e8a9eb77560b32d804ff05d86b3.png",
+    "wls2_armor_boots_2_common": "wiki-assets/images/f5e0452add70dcf772f930266069a1bda8edae01149fcd808ed04bceac827ae4.png",
+    "wls2_armor_head_2_common": "wiki-assets/images/817217b34a513f2299e1ee3c54afd78b085e4f7abcc787a6f37dffb471e9fbaa.png",
+    "wls2_armor_legs_2_common": "wiki-assets/images/371b7f56af11eb5942906e3eb71054e21ec70326e9d41e3858a9d24ef7be1305.png",
+    "wls2_armor_body_2_uncommon": "wiki-assets/images/5c73d3fe35a85213de374f29a67629b3b3d10de7c56ea6eeea8c89e76cde13c3.png",
+    "wls2_armor_boots_2_uncommon": "wiki-assets/images/4577f81056c7a132880f15b6f3cb6d27e855a2abcbc1981c4297271dfd5c04c5.png",
+    "wls2_armor_head_2_uncommon": "wiki-assets/images/e58c24028da97dccfc0bed835e04a3b4ecd32f3a8f104dff1fbbe7bb4f3b7f60.png",
+    "wls2_armor_legs_2_uncommon": "wiki-assets/images/be857ae05496b3a0646f85788e7d240537cb44d76278a06072a6fc65a165bbf4.png",
+    "wls2_armor_body_3_common": "wiki-assets/images/e2a31a2b718fed98a3678ab8c3643b7235a8f507f7ae1eea6e08013ddf0b03f1.png",
+    "wls2_armor_boots_3_common": "wiki-assets/images/f8dccfbc981e3024913d4647cbff5cbd4ced31efed62f1185fcf6091f5e2f7d0.png",
+    "wls2_armor_head_3_common": "wiki-assets/images/742378f40561b27b94d6ce8968c17c80a886eed9d411ce6866687d0f2414ae0d.png",
+    "wls2_armor_legs_3_common": "wiki-assets/images/9eaba4b4090ce227e6605c5dfff775860d894e510a4799c956e33d115f5e6af5.png",
+    "wls2_armor_body_3_uncommon": "wiki-assets/images/9c926589931a8beceaa005c94e2a5a7a8069d0dcbcfb2d5baaab49b7dc232849.png",
+    "wls2_armor_boots_3_uncommon": "wiki-assets/images/02692476d68beef53597f6bbb0fab66767123830a26ff0e46cd87698ff69e24c.png",
+    "wls2_armor_head_3_uncommon": "wiki-assets/images/6b4ac374393d6d1e12e86bb2f27ed364961a576efba603f5e6d434b32b784877.png",
+    "wls2_armor_legs_3_uncommon": "wiki-assets/images/6b2a701d2d734fb3f43eadaa5c7617b5403f580bf22b1cc9132bf94d15a66e62.png",
+    "wls2_armor_body_3_rare": "wiki-assets/images/4c1eaa8017cb5dd7ba238ee8fa526e734489f4c26c428681ff40d5f64f8e48c8.png",
+    "wls2_armor_boots_3_rare": "wiki-assets/images/d936d2b66af04f858e99a0d8f167b26e6cba460437a02be73ea807861aa696a6.png",
+    "wls2_armor_head_3_rare": "wiki-assets/images/4a2482827ce5fe66df1db9a539b850f4f0f4b5ff0d786afc90ae548228945861.png",
+    "wls2_armor_legs_3_rare": "wiki-assets/images/1da237d4be883560ec001eef6aac72822258758ff45195f873c83d051d614c8f.png",
+    "wls2_armor_body_3_epic": "wiki-assets/images/1ed842f84fb89d1796b03a4d50249c726b381c89dd91217f5e0bd04a13252abb.png",
+    "wls2_armor_boots_3_epic": "wiki-assets/images/d31bb7b26028deaf45341435f83342bb85337b52475bc64926c7f805dea3aa49.png",
+    "wls2_armor_head_3_epic": "wiki-assets/images/83c797af438fdce23a7770aa3f6ee55641bd88f89d5b45c7a9d272affc866fa8.png",
+    "wls2_armor_legs_3_epic": "wiki-assets/images/85fcb56939a9ab83d9f89094f6fe7ee739e6dfff20f22b0a5a820e1fbebb8150.png",
+    "wls2_armor_body_4_common": "wiki-assets/images/35a5b90d866f86ff51ca51c9bc616c9eea859266fbe865d35ae4acfae998c105.png",
+    "wls2_armor_boots_4_common": "wiki-assets/images/dd43ccaa9793cc581642f2d3795b3e8bb59157cf0ca69060c407a8e71845755b.png",
+    "wls2_armor_head_4_common": "wiki-assets/images/78b552fedb1d583af199c65d0a3ebfbe5aedaccdaf2082c060551e1c81462a78.png",
+    "wls2_armor_legs_4_common": "wiki-assets/images/eee86e0965daf4500c641e9e534fdd42668f178dcbd1f383838ccb0b30be90cd.png",
+    "wls2_armor_body_4_uncommon": "wiki-assets/images/93c360bc5f631f3c1f46d906b9f9d42b2e6b21dce2a500150526ed52383188fb.png",
+    "wls2_armor_boots_4_uncommon": "wiki-assets/images/b4fabbbf4997fecdf57ef2e0879a049f1e7635b3c5c83915f33845f830a0034c.png",
+    "wls2_armor_head_4_uncommon": "wiki-assets/images/337a57730d601b4dbf938a8bc43abd56814c715812e0e648977b1acd4fc67c08.png",
+    "wls2_armor_legs_4_uncommon": "wiki-assets/images/b441a64e10d2904572abc890cc1a09e21a4217480eded788195c6bc11afcab50.png",
+    "wls2_armor_body_4_rare": "wiki-assets/images/7e7d7acdb1a4c7dd625f78c4b3ac9f06d3793245f9f61b8fd518a06a369809dc.png",
+    "wls2_armor_boots_4_rare": "wiki-assets/images/a34e89456a2ba401be6157b405a37c694519497f33204e7b1ec40c8359d25206.png",
+    "wls2_armor_head_4_rare": "wiki-assets/images/356267d6afc138db471569c69736f27a6cffc4be96afd9686942be321f82c4b8.png",
+    "wls2_armor_legs_4_rare": "wiki-assets/images/85cf3fc92f09b7396db23b36415f5344ae9994baea0c4a9a93e213cdcea35521.png",
+    "wls2_armor_body_4_epic": "wiki-assets/images/a57a6ae19258cc6b8a6a03f10775107b01d7da3cdecc9dd973c7cc47cccad06f.png",
+    "wls2_armor_boots_4_epic": "wiki-assets/images/68dd0aa02f5fc85ba7ddc8625e50f0add10db0b6a5b9b28e8f5a440a3b84fdca.png",
+    "wls2_armor_body_5_common": "wiki-assets/images/0654b977a249ef2fb2ef0c5344e8cddecb97f5ac4773d18a7455f6998c1f095e.png",
+    "wls2_armor_boots_5_common": "wiki-assets/images/589bcd10a74255b2224bbdbb9859d3c6dd96a406dba34dd46217d8578b03621e.png",
+    "wls2_armor_head_5_common": "wiki-assets/images/bd8087c286dbdab17bebda9fac7a88d5e23e1bab13eba6eba261464982a49b4c.png",
+    "wls2_armor_legs_5_common": "wiki-assets/images/9e5d5a9b893ab14453480886059964d65c42855fc716f19af83c6d5d19823b43.png",
+    "wls2_armor_body_5_uncommon": "wiki-assets/images/c0683f185a3d2fb794fdcb9d04a0a6575242336edb622df868497ae4eafcfd65.png",
+    "wls2_armor_boots_5_uncommon": "wiki-assets/images/62c4786c86dd53a336ecfb78d15ad91b7a67620ba1f8e2de8bec1b1b9b4cb12d.png",
+    "wls2_armor_head_5_uncommon": "wiki-assets/images/3b4428d0ae27388054be6400f7f04a3f6ec87fb21bc8f5ee9cbfea5f096b9638.png",
+    "wls2_armor_legs_5_uncommon": "wiki-assets/images/6d181875f6e4c351f53e8f7a0b3e2ca9b65179356d06c8ff4a098ad9482dfef9.png",
+    "wls2_armor_body_5_rare_crocodile": "wiki-assets/images/fda754515455462e1ae1279ef1f1c8970b03c6b89d5e17c722fb9a987c37c1f0.png",
+    "wls2_armor_body_5_rare": "wiki-assets/images/3b279af8f327fcebc34b417333ebeb38f340addf95d932a4099431fe3912bd7c.png",
+    "wls2_armor_boots_5_rare_crocodile": "wiki-assets/images/d8b8729211de55c7f42e344c115bcd5fbca9937202492cec10ce8a9b174c3276.png",
+    "wls2_armor_boots_5_rare": "wiki-assets/images/6ae83e7f773d08e4e1804d054ec2f9be2dbecc16827d490e5016ff365714f5c3.png",
+    "wls2_armor_head_5_rare_crocodile": "wiki-assets/images/93647835e6633c1464a3c3e51f4bdbc9bcbb320985bb1d1bb69687b6554119d5.png",
+    "wls2_armor_head_5_rare": "wiki-assets/images/40bae83a87338f8cd9ad77e0eaa8f37e71cab77401ef585d7dbeb4b48a6dab7d.png",
+    "wls2_armor_legs_5_rare_crocodile": "wiki-assets/images/5503fdb8cabe987466c54ccbe0104af143e823b18d080e631966a8998c5d9e38.png",
+    "wls2_armor_legs_5_rare": "wiki-assets/images/e87f6b8ae3fffc1d8e3cecb665f9ccdb8c70c684dfa090a1ae7d4c185cc792d0.png",
+    "wls2_armor_body_5_epic": "wiki-assets/images/98c45d779c8f99831b4f91a7daab18b8cdc26d5f562a99df3e3ce2710cbb2031.png",
+    "wls2_armor_boots_5_epic": "wiki-assets/images/40964741745f86e2ef3d3088e4f89bdb070e8f6242c4d309313cbdf1467d75a4.png",
+    "wls2_armor_head_5_epic": "wiki-assets/images/85c526241a48b46378411101c8422cd4d192383e47782f5eea5ee7b5e4a4823b.png",
+    "wls2_armor_legs_5_epic": "wiki-assets/images/9a3c6674d8a8c4a93d299a43c10150f0dd9897ea7a2c24922368d8308b80a32b.png",
+    "wls2_armor_body_6_common": "wiki-assets/images/fd3870bd418863bafbf226623b2a051a220ecf1b83ea65b15aac4ff3c3b4eafc.png",
+    "wls2_armor_boots_6_common": "wiki-assets/images/394a9df7621c24b8dfa4166f636f6676c6e7cd6355905383a9489f86a7f23843.png",
+    "wls2_armor_head_6_common": "wiki-assets/images/e5458779be1c7eda74edb8d9301fc0bb16eaed8c52cda92120c2e953c16acf42.png",
+    "wls2_armor_legs_6_common": "wiki-assets/images/a9dcb3b0e8b65d6bddac09ecde5b3d14062820f27833d7dfa59b4587886f1347.png",
+    "wls2_armor_body_6_uncommon": "wiki-assets/images/6797c0cabb5abd18baa3a7d9e85cd2f8afe3f83127790a3e1d7e310a5bafbf85.png",
+    "wls2_armor_boots_6_uncommon": "wiki-assets/images/951940089711b0ea82569104ca39065401b1735378f3b211859a8b846d5bd27f.png",
+    "wls2_armor_head_6_uncommon": "wiki-assets/images/b09a2b31bd0482c14e22fee57fa42b9984fd7b62e191eb41eb29e6c2f13ed560.png",
+    "wls2_armor_legs_6_uncommon": "wiki-assets/images/ad18bb5168c5dd84e3609293482a356779144336f0fae1c4cfad895c0c20e81c.png",
+    "wls2_armor_body_6_rare": "wiki-assets/images/056557ae341b465571ac8e1be7090e74abccd676c4623cdf8460d2f4820a73b7.png",
+    "wls2_armor_boots_6_rare": "wiki-assets/images/9c5ace19bc71f0e7a5887ac44efc44d9e22969d6ca0863ef839c5880fc2e4df1.png",
+    "wls2_armor_head_6_rare": "wiki-assets/images/38d36511a90bb13ac9aac9e9fb4e169a235eef67bb397888cc471dfa124b35ef.png",
+    "wls2_armor_legs_6_rare": "wiki-assets/images/023fe310a431a323e48325426eeaf770c4cdc22b48c69497c30182234b031f7c.png",
+    "wls2_armor_body_6_epic": "wiki-assets/images/e9b3d4bb7de8421cb7c2cfe26e05d8d3d9fdf8ef6c72136ec565a98a1335d8f0.png",
+    "wls2_armor_boots_6_epic": "wiki-assets/images/2377730d0c20c4b3599e06e2311c628a611e2dada6e27a5b64aaf330d026b9ac.png",
+    "wls2_armor_head_6_epic": "wiki-assets/images/b6e79a039c6fe517c937ae20f20e12f90d5f49e387d506ea9e9c06125d03b2b8.png",
+    "wls2_armor_legs_6_epic": "wiki-assets/images/dc1be28529e4add5c472949ac7cbde43ae9769f37114e064d42eebf5ca9638c1.png",
+    "wls2_armor_body_7_common": "wiki-assets/images/9ad51d0c560e8f5397f6dd801f1686d5369ac6150decbf6ad5bda73eb3d8be29.png",
+    "wls2_armor_boots_7_common": "wiki-assets/images/dbec9ecf259fdc8c41e142719aecbd6562421642ae0360e3eba89b4effb7ed9e.png",
+    "wls2_armor_head_7_common": "wiki-assets/images/6b1a1f90b4c9495930d7cd9fb4a4d21be8a3320389181469644d5948a6ea607a.png",
+    "wls2_armor_legs_7_common": "wiki-assets/images/27e9e204dbdb835bc993563dcc302dcf8c349a1a4f18e7a613d31f9303611158.png",
+    "wls2_armor_body_7_uncommon": "wiki-assets/images/31be97e9072540106994523eb6d4e2a1ccdc6c2a55985929edc5ac8f16adfc8d.png",
+    "wls2_armor_boots_7_uncommon": "wiki-assets/images/2c8981f08d639d2156df16301ac8fefb5d095ad5fa32c8189ef397797a56f213.png",
+    "wls2_armor_head_7_uncommon": "wiki-assets/images/20ef9ac8d3d23ceee17d3dee9d4769f0a790e50acde53efae091ef18f3120a3d.png",
+    "wls2_armor_legs_7_uncommon": "wiki-assets/images/61597f7069c1775e403435a0b535328a94d261ed081c5ca0ebf632d86229ad07.png",
+    "wls2_armor_body_7_rare": "wiki-assets/images/c5d7bdb58bb25a2a6a03393b9c7fb237591bd009c0a979245bfb58c3e1241c7e.png",
+    "wls2_armor_boots_7_rare": "wiki-assets/images/a444b125e83775db8885afb1bb0afd3dbf48194e70e062c5b12116cb61e5c6e3.png",
+    "wls2_armor_head_7_rare": "wiki-assets/images/ea72d7856542b1afe9993e7cad03a0eb4264e66f3e95d71ce9a9bb5bcbd8fae3.png",
+    "wls2_armor_legs_7_rare": "wiki-assets/images/f0aea1b3364480e0e350dd781362edc169d9389896a925e7706893baeae5017b.png",
+    "wls2_armor_body_7_epic": "wiki-assets/images/737df24649b347c88fedf67e3ee86d8f6b25d55b0b1953736841c14db35621e2.png",
+    "wls2_armor_boots_7_epic": "wiki-assets/images/3c6ca2a2c2c624af13d3d0be11b051de6aad36c2c902612d8b68337ccc88ff6c.png",
+    "wls2_armor_head_7_epic": "wiki-assets/images/9b72c0936cad4bc19c69dea33407a883e6a30feff6ecef404a06c442a95f3aed.png",
+    "wls2_armor_legs_7_epic": "wiki-assets/images/96bd70afe948d1bd402496372676b2798e3c0fbe3411220c6a1674d9de6c836a.png",
+    "wls2_backpack_cowboy_1_common": "wiki-assets/images/25170a9aa00b582813f1b5be46a415ad647320a7552729a31d4682577461af2b.png",
+    "wls2_backpack_indian_1_common": "wiki-assets/images/85507006c821f9b38610a1c27a22f1e17bc6cc77ca0049cecf6aa130cf2b9df7.png",
+    "wls2_backpack_cowboy_2_common": "wiki-assets/images/c78ef478ebe46dca780a1c18b5685eac8fbd59c5e0ee7cce17fc2c6ca65daf6f.png",
+    "wls2_backpack_indian_2_common": "wiki-assets/images/0718f2bee85d343e8319b2803622d77980273a6bcaf05bcfe73c12741dd73fc8.png",
+    "wls2_backpack_cowboy_2_uncommon": "wiki-assets/images/9222775e388dfab81f2401a198276d7054ec5cd79931d904d8f7415c27fb3902.png",
+    "wls2_backpack_indian_2_uncommon": "wiki-assets/images/067857e18a0915c4f23b81bbf7e5abbbe5e47765298bb33c376c63e4e541fe3d.png",
+    "wls2_backpack_cowboy_3_common": "wiki-assets/images/db856ef2deba0b9b11da60ce24daa3fc1947f6c2311795560dda70093f9d3c29.png",
+    "wls2_backpack_indian_3_common": "wiki-assets/images/3ec4d36e4dbb37c148f93a1fb099c400263cf507e1be5209fd9976acf707c1a7.png",
+    "wls2_backpack_indian_3_uncommon": "wiki-assets/images/d085fc46ee2cedaf0df2ccbaa7388a1e9a3bc2a661c37adf8a6a0868af81e42c.png",
+    "wls2_backpack_cowboy_3_uncommon": "wiki-assets/images/9dbd1aed82a7c0e92aee99733570f706dbaaa71350354f084b9cf96e34fc0abe.png",
+    "wls2_backpack_indian_3_rare": "wiki-assets/images/5dc31aa820aa345b1f4a4c3ae2ac3e6b22fa5818d610014f136e3e786734de53.png",
+    "wls2_backpack_cowboy_3_rare": "wiki-assets/images/0f9067ffff18722e95a42e4688cf92fd051d03fcd3906b4a8d76199b4577083c.png",
+    "wls2_backpack_cowboy_4_uncommon": "wiki-assets/images/feabf975f2ab0a0441ff2589b46dfa132aa526b6f5fca1f4c6dd571a9a96684c.png",
+    "wls2_backpack_indian_4_uncommon": "wiki-assets/images/cedd2f4c84b67e26921213348fa26199dbda43abd0a2292363893cd33f0603f9.png",
+    "wls2_backpack_indian_4_rare": "wiki-assets/images/be8865b5e0fbc985c681fa44a820dbb1c9ad446e77c992728c0a7464333b0ac6.png",
+    "wls2_backpack_cowboy_4_rare": "wiki-assets/images/5e6e5a3484bca7648b74438893beab467e3ac0f12d4297cd45be8db6bffd2d51.png",
+    "wls2_backpack_cowboy_5_rare": "wiki-assets/images/3bded889d4d81ae6910f5450b9e6781f6e239addc95fd75f5c7ad2f5d75801fa.png",
+    "wls2_backpack_indian_5_rare": "wiki-assets/images/f083e1512aa01770fc94e00b9120f2c7a0b2437594dafea98ff70301a59fc11d.png",
+    "wls2_backpack_indian_6_rare": "wiki-assets/images/93813f95da9780663c517aa4c4a7f5c6f48712205a3648ca2d20deef82e7d723.png",
+    "wls2_backpack_cowboy_6_rare": "wiki-assets/images/bf565a1e5529e1ffd9dac158df81a4ed4239147879cdf6fade54a8a7d41adc07.png",
+    "wls2_backpack_indian_7_rare": "wiki-assets/images/30cf794b672b9a33106b7542437e507618890a99aa8f4b69ffb4f92058b44bee.png",
+    "wls2_backpack_cowboy_7_rare": "wiki-assets/images/7399e19828b0368d34bafaa36a6271031dc1d65c76d26c7e85ea03963880a6f9.png"
+  },
+  "imageSources": {
+    "wls2_mob_elite_animal_bear_5": {
+      "file": "westland_wiki_assets/pets/bear_skin_5_icon.png",
+      "bytes": 26449,
+      "sha256": "807a7fc382bba7420707dec8bdc07daa1793d6fd74d7f853955c5302f545441b"
+    },
+    "wls2_mob_elite_animal_bear_6": {
+      "file": "westland_wiki_assets/pets/bear_skin_7_icon.png",
+      "bytes": 27769,
+      "sha256": "a4d455d8fa20af4e2110dc2c96b06b76feaf40e5e9d7d192b743e8e5b2b1abf5"
+    },
+    "wls2_mob_elite_animal_bear_7": {
+      "file": "westland_wiki_assets/pets/bear_T7_icon.png",
+      "bytes": 25567,
+      "sha256": "4aae9b1677278415e83f3bfeb80a2152ad897b7d12a5a8b75add729c1e1aa2d1"
+    },
+    "wls2_mob_animal_coyote_1": {
+      "file": "westland_wiki_assets/pets/coyote_skin_1_icon.png",
+      "bytes": 21834,
+      "sha256": "0ce8c78a75ade3997b3a10500a6b686a1702ec320e000784729861f2df0bf7bc"
+    },
+    "wls2_mob_elite_animal_alligator_5": {
+      "file": "westland_wiki_assets/pets/crocodile_skin_2_icon.png",
+      "bytes": 29717,
+      "sha256": "ecb26ea6bf21f4f79df134a708246526c1cbbddd66947e53cf89a9fddfd1470a"
+    },
+    "wls2_mob_elite_animal_wolf_5": {
+      "file": "westland_wiki_assets/pets/direwolf_skin_5_icon.png",
+      "bytes": 26999,
+      "sha256": "3b667e8796adda89d6fd64469cebeaade703c93cbce3ac5b29cacfcda1589892"
+    },
+    "wls2_mob_elite_animal_wolf_6": {
+      "file": "westland_wiki_assets/pets/direwolf_skin_6_icon.png",
+      "bytes": 28882,
+      "sha256": "9fca9881c99cff3048c25efb08d6c3bd7462e0321bbd3cc361d72e1b51ec50e5"
+    },
+    "wls2_mob_elite_animal_wolf_7": {
+      "file": "westland_wiki_assets/pets/red_wolf_T7_icon.png",
+      "bytes": 25967,
+      "sha256": "24a4e79b4b0ed417dc43f7ae5b5aa14e7ae3af3afee59553bee77fc0c7b77954"
+    },
+    "wls2_mob_animal_cat_2": {
+      "file": "westland_wiki_assets/pets/lynx_skin_2_icon.png",
+      "bytes": 22400,
+      "sha256": "86d25d59a03db527e9b18f1654ce7dea5fa36f775c9a09897a5936d6593e3d72"
+    },
+    "wls2_mob_animal_cat_3": {
+      "file": "westland_wiki_assets/pets/lynx_skin_3_icon.png",
+      "bytes": 25407,
+      "sha256": "70a75323e11cb69756236a145b4b9f313085815861f7b302e53a58e2bcd3d853"
+    },
+    "wls2_mob_animal_cat_3_summer": {
+      "file": "westland_wiki_assets/pets/lynx_skin_3_summer_icon.png",
+      "bytes": 27067,
+      "sha256": "a73d50cbebf69a61d962ec615c0c316a76556ece8505b61635a08ab95a4e24b9"
+    },
+    "wls2_mob_animal_cat_5": {
+      "file": "westland_wiki_assets/pets/lynx_skin_5_icon.png",
+      "bytes": 25616,
+      "sha256": "8a51718cd31997c9453b64e0430cf6d16fdf03632374ab4392ebfb9a2ee82d53"
+    },
+    "wls2_mob_animal_cat_6": {
+      "file": "westland_wiki_assets/pets/lynx_skin_6_icon.png",
+      "bytes": 23631,
+      "sha256": "d97d5a8372002a7e3d46660187d37e691e3252e227a5aab1dc9e2eb035d72d55"
+    },
+    "wls2_mob_animal_cat_7": {
+      "file": "westland_wiki_assets/pets/lynx_T7_icon.png",
+      "bytes": 22378,
+      "sha256": "16644d8fd4a20b4c0d34f328a432d6c70fc1c5c17601080469afac4e3197df53"
+    },
+    "wls2_mob_elite_animal_cat_4": {
+      "file": "westland_wiki_assets/pets/puma_skin_4_icon.png",
+      "bytes": 32734,
+      "sha256": "c79f9beb3bae213199dc4d8c81e62943ea42349d978070b59e462bcb439a479d"
+    },
+    "wls2_mob_elite_animal_cat_5": {
+      "file": "westland_wiki_assets/pets/puma_skin_5_icon.png",
+      "bytes": 23462,
+      "sha256": "6626f5a115b0911b8b9bff266f760fceb0054cd83973510206f59d15bdc56d6e"
+    },
+    "wls2_mob_elite_animal_cat_6": {
+      "file": "westland_wiki_assets/pets/puma_skin_6_icon.png",
+      "bytes": 27361,
+      "sha256": "1959c05c0ca29e1daba14e1e38dd32d98f0bea1a0aed7c29f936d81dd40ed8c4"
+    },
+    "wls2_mob_elite_animal_cat_7": {
+      "file": "westland_wiki_assets/pets/cougar_T7_icon.png",
+      "bytes": 26686,
+      "sha256": "6b256c35bf5f93511d56bc2cc809b23220fd9ff6e07554d7642fb853e89cf86d"
+    },
+    "wls2_mob_animal_wolf_1": {
+      "file": "westland_wiki_assets/pets/wolf_skin_1_icon.png",
+      "bytes": 23203,
+      "sha256": "fb30ff3452cb0130f1be880a427032eee31aaaada917a3cea697c921d214195d"
+    },
+    "wls2_mob_animal_wolf_2": {
+      "file": "westland_wiki_assets/pets/wolf_skin_2_icon.png",
+      "bytes": 25948,
+      "sha256": "75d3919ade5155cf65c211abaa8b2fc8a821f97c8ae7a0826e619f628e9ce4a0"
+    },
+    "wls2_mob_animal_wolf_3": {
+      "file": "westland_wiki_assets/pets/wolf_skin_3_icon.png",
+      "bytes": 24985,
+      "sha256": "645bbcc638fcec72820409bfa59ceb6ea711d4ff0a74093aa59813f80d1f9a21"
+    },
+    "wls2_mob_animal_wolf_4": {
+      "file": "westland_wiki_assets/pets/wolf_skin_4_icon.png",
+      "bytes": 20875,
+      "sha256": "14ab217b39f9dcc0922bfd7e0daec942520801373c90b2e7ee99e1a1985a0d0b"
+    },
+    "wls2_mob_animal_wolf_5": {
+      "file": "westland_wiki_assets/pets/wolf_skin_5_icon.png",
+      "bytes": 27593,
+      "sha256": "687dcb5b6a63d18db07605910d048d557e0811e6647c7fa4c1efd6cff329498a"
+    },
+    "wls2_mob_animal_wolf_6": {
+      "file": "westland_wiki_assets/pets/wolf_skin_6_icon.png",
+      "bytes": 22971,
+      "sha256": "fec3292148fb29aac6baee37782d03d32cb617ba7667173df03dfd586e8af4fe"
+    },
+    "wls2_mob_animal_wolf_7": {
+      "file": "westland_wiki_assets/pets/wolf_T7_icon.png",
+      "bytes": 23687,
+      "sha256": "69a018de7276e8a256fa242114eaa0e566b8a6fc353e080afb07c564b32a9d78"
+    },
+    "wls2_weapon_range_bow_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_1_common.png",
+      "bytes": 16214,
+      "sha256": "d9496f56e85668155c95ac69df649d77b8d88f2c872220fb6b00a99c532784f3"
+    },
+    "wls2_weapon_melee_fast_1": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_fast_1.png",
+      "bytes": 22342,
+      "sha256": "6cd02f7119829d025e635b83d5a94be055ce83d23ef89e13f26ae1f06c7aa172"
+    },
+    "wls2_weapon_melee_knife_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_1_common.png",
+      "bytes": 15116,
+      "sha256": "5925741989313421ea1a90b33372094759b97ae1118dece9b22dddf9492d1ace"
+    },
+    "wls2_weapon_melee_hammer_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_1_common.png",
+      "bytes": 16359,
+      "sha256": "e337586e615a0b47321d2c2fc92ef2b67db4d09fc08f3c50df6a67854c674bf9"
+    },
+    "wls2_weapon_range_pistol_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_pistol_1_common.png",
+      "bytes": 19512,
+      "sha256": "e1521919aa0b04d63743afb4278154e0285ffc739148040b624f7bfde8b69be3"
+    },
+    "wls2_weapon_melee_spear_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_1_common.png",
+      "bytes": 15407,
+      "sha256": "aac0fe4fe7567540fc8b468183bb1c41f3592692f325db2c22d5164e35cca9d1"
+    },
+    "wls2_weapon_melee_hammer_1_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_1_rare.png",
+      "bytes": 20057,
+      "sha256": "ffa9b8d5884801edebfa41594eaa3e05f43e1e00e1f1d83b4d5fafad054c565e"
+    },
+    "wls2_weapon_range_bow_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_2_common.png",
+      "bytes": 14453,
+      "sha256": "bbae953820ef3d11b7821982a2e925615aa65f6e3aabfe863efd4c75e9e36c56"
+    },
+    "wls2_weapon_melee_knife_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_2_common.png",
+      "bytes": 15520,
+      "sha256": "44d20ff2f27e1297af6795532488de9459d6e826425d576a367b35c02011a3f0"
+    },
+    "wls2_weapon_melee_hammer_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_2_common.png",
+      "bytes": 17905,
+      "sha256": "b7dcc42454f4199e36ca923926d4b89562116ffb7438ecd33071712da8ebbc29"
+    },
+    "wls2_weapon_range_pistol_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_pistol_2_common.png",
+      "bytes": 22450,
+      "sha256": "4d9fda55290d5e6f24220921e0f63dc71f799737d53dee14069c8e426deb1798"
+    },
+    "wls2_weapon_melee_spear_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_2_common.png",
+      "bytes": 14773,
+      "sha256": "47cbedef5a497a9037eb20bcb5361bc38b312117a730eb354df3daa8b6febf66"
+    },
+    "wls2_weapon_range_bow_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_2_uncommon.png",
+      "bytes": 20560,
+      "sha256": "ed8ccb74d79eef0d616c617fabb4596b1abc75bb91f3d0efb6e88ccd66e82ad0"
+    },
+    "wls2_weapon_melee_knife_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_2_uncommon.png",
+      "bytes": 23837,
+      "sha256": "2fc7d19a99a459e65133654a9d2376206336d2b6b48d91f9a8daab3bce9a8dc5"
+    },
+    "wls2_weapon_melee_hammer_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_2_uncommon.png",
+      "bytes": 18408,
+      "sha256": "921daba77b600bc187a76b877f1cfefd52400998e82e90e0e34b25a2b0e7de37"
+    },
+    "wls2_weapon_range_pistol_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_pistol_2_uncommon.png",
+      "bytes": 29284,
+      "sha256": "d7af64f2ff81aa61da02f6f458abfb630bb79b9e70663880622d7a608092d696"
+    },
+    "wls2_weapon_range_musket_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_musket_2_uncommon.png",
+      "bytes": 22723,
+      "sha256": "a0127ab29d23c081678fcbcd8229edd5a24a01504900fa12f64fd6a2d772a8eb"
+    },
+    "wls2_weapon_melee_spear_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_2_uncommon.png",
+      "bytes": 15525,
+      "sha256": "811ad7da635042902c9738afdd61fb514f8e0158703df05673eb536aae59f100"
+    },
+    "wls2_weapon_melee_knife_2_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_2_rare.png",
+      "bytes": 30371,
+      "sha256": "864ef879ce9040dd010af29935fa3d8da95ad5d5cec86b5d58f2570f2f1172a0"
+    },
+    "wls2_weapon_range_shotgun_2_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_2_rare.png",
+      "bytes": 30263,
+      "sha256": "46c263eb2514f19654ea04c9ee64c0d9ed6955d27aef1028e84fd9419bdfb0ad"
+    },
+    "wls2_weapon_range_bow_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_3_common.png",
+      "bytes": 15384,
+      "sha256": "b81c83ff47271a22d17c725140b1e9d469023bb1f651d43386a4197e8e8058e9"
+    },
+    "wls2_weapon_melee_knife_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_3_common.png",
+      "bytes": 16865,
+      "sha256": "a474bda62b0ea22881b9156ddc5647c03bb8bb68f4dc5ce9f6f7c7145a0d66ed"
+    },
+    "wls2_weapon_melee_hammer_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_3_common.png",
+      "bytes": 20203,
+      "sha256": "a087488265c4d09d3e13548e77c250b5ef682ebcb870c208e28c9fd544557de2"
+    },
+    "wls2_weapon_range_pistol_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_pistol_3_common.png",
+      "bytes": 22476,
+      "sha256": "1cafb1556f741e875d2ff326e72cf21ddaec45b505620799854d68b68faec569"
+    },
+    "wls2_weapon_range_musket_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_musket_3_common.png",
+      "bytes": 18906,
+      "sha256": "1cd340ad871ae5a844eed24bf6ad20cf7ae2130019c7a120b7e79a94cebe92eb"
+    },
+    "wls2_weapon_range_shotgun_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_3_common.png",
+      "bytes": 18185,
+      "sha256": "63566e144b8c2bc68ec24a853cd99de6967b392f5703e0ffa922e81105202612"
+    },
+    "wls2_weapon_melee_spear_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_3_common.png",
+      "bytes": 18115,
+      "sha256": "489453591d1df7f022a08503c7783bb7f356d52b155a567c8ad181d69dbb744b"
+    },
+    "wls2_weapon_range_bow_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_3_uncommon.png",
+      "bytes": 19314,
+      "sha256": "bfdb4f901dba0f336d9a49239524b0d38461aa9a69d3473d730020cf50d9aac4"
+    },
+    "wls2_weapon_melee_knife_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_3_uncommon.png",
+      "bytes": 23196,
+      "sha256": "a5464c90e877dd154e2fe22e080bbd33dde24bba8a9a4d09a6470b4b47ef0567"
+    },
+    "wls2_weapon_melee_hammer_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_hammer_3_uncommon.png",
+      "bytes": 20126,
+      "sha256": "05b676bbacba3bd81bad57352a57535d7ced87c7bd934468eb7656f892bc7b85"
+    },
+    "wls2_weapon_range_revolver_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_3_uncommon.png",
+      "bytes": 24355,
+      "sha256": "185299245ebd023adf41d06f4386d4c73a6ad9932932cfb6b5f47eec03b7cb5f"
+    },
+    "wls2_weapon_range_musket_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_musket_3_uncommon.png",
+      "bytes": 22625,
+      "sha256": "0eed874c8f3e18981d143b2f863472152c70c5088ef4fd1d485ef7a15c7e7f31"
+    },
+    "wls2_weapon_range_shotgun_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_3_uncommon.png",
+      "bytes": 25067,
+      "sha256": "9de5dc1aaffd7c07176a81bf38cc09c6f9dbb95ec0f23c43e9119ff1ded678e5"
+    },
+    "wls2_weapon_melee_spear_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_3_uncommon.png",
+      "bytes": 17829,
+      "sha256": "9f10a04478186cffca8fc13bfecd72c3e02d7c4d52bd5343109965162d5b53e2"
+    },
+    "wls2_weapon_range_revolver_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_3_rare.png",
+      "bytes": 24638,
+      "sha256": "acf129fa4d9e1ca8c3215ed04b0aacc31e8c308efb87c15094fddc427437f36b"
+    },
+    "wls2_weapon_range_musket_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_musket_3_rare.png",
+      "bytes": 26509,
+      "sha256": "15aacb00d0e8beef6fd194ef225a590d7ed1ac8ca624b72f4da818f9c43ebf4e"
+    },
+    "wls2_weapon_melee_spear_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_3_rare.png",
+      "bytes": 18431,
+      "sha256": "4598ac01b527a497ccee6b9f28faed1c6dda76857512e5e254cac2e3041fbcb1"
+    },
+    "wls2_weapon_melee_knife_3_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_3_epic.png",
+      "bytes": 21064,
+      "sha256": "efdbb4a3f87e2952f93fed7af01d0e3c942077554f908bc753a1a7001096a6e8"
+    },
+    "wls2_weapon_range_bow_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_4_common.png",
+      "bytes": 16265,
+      "sha256": "01dceb03adcbad5c572f7fa49f629388b1eaa1cbedb57eec7f83285da0d43b97"
+    },
+    "wls2_weapon_melee_knife_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_4_common.png",
+      "bytes": 15779,
+      "sha256": "ae8657015139a479fa780298c5dc2f38a95cd84951ad641340435a05ab8da4e4"
+    },
+    "wls2_weapon_range_revolver_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_4_common.png",
+      "bytes": 20087,
+      "sha256": "13506a7fb2eba81c83068bf1633a7bfc9e4166d08d5edd7aa47d772d9c5ce656"
+    },
+    "wls2_weapon_range_rifle_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_4_common.png",
+      "bytes": 19948,
+      "sha256": "ade6fbeac7db3e99c266f37cc2d72ac4347c652a2dd34107fb2ff667445dccdd"
+    },
+    "wls2_weapon_range_musket_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_musket_4_common.png",
+      "bytes": 19281,
+      "sha256": "6129bf86b8f45be703ccda110aed30e2ac859fc386d7db823b6cf8b127c14465"
+    },
+    "wls2_weapon_range_shotgun_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_4_common.png",
+      "bytes": 18219,
+      "sha256": "620a0a2c13573dea17b0e978f1e5fc1080a1ae68585d8778c4d75583b2531fac"
+    },
+    "wls2_weapon_melee_sabre_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_4_common.png",
+      "bytes": 14726,
+      "sha256": "d2b1cb0f6f21c31ce6945aadab6485aa3f4465ce9eb5f102af784e919328a887"
+    },
+    "wls2_weapon_melee_knife_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_4_uncommon.png",
+      "bytes": 25705,
+      "sha256": "43b81734fd4a81fd8ccadbce3e31aef3bd0f126b48baa860517319877d70367a"
+    },
+    "wls2_weapon_range_revolver_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_4_uncommon.png",
+      "bytes": 27952,
+      "sha256": "9ef94a634f60de16eee4f638a854af6b91876c067d84fc4f515f913c592d3a09"
+    },
+    "wls2_weapon_range_shotgun_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_4_uncommon.png",
+      "bytes": 24638,
+      "sha256": "1ae8c823e21ade26c511cea224465bb010ccb01da3c7f3be6198d475e45619eb"
+    },
+    "wls2_weapon_melee_sabre_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_4_uncommon.png",
+      "bytes": 20969,
+      "sha256": "1b2ee4eea9df3d7bb890a1e53db48b10447446ca4aa22a86714f58bf2a347530"
+    },
+    "wls2_weapon_range_revolver_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_4_rare.png",
+      "bytes": 27558,
+      "sha256": "f2a2ec07fe2069272036293c9c43759841b537fae9c9941ab83158b8a219e5f4"
+    },
+    "wls2_weapon_range_rifle_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_4_rare.png",
+      "bytes": 31027,
+      "sha256": "a19a0f538c2056e36c904178368e5dec3fc1943766483a83187631634c43d51a"
+    },
+    "wls2_weapon_melee_sabre_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_4_rare.png",
+      "bytes": 21480,
+      "sha256": "232da52695eb16e9e8d6c2101cdb91e1a53871bb58a8c093cf93f5f95ba99143"
+    },
+    "wls2_weapon_range_rifle_4_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_4_epic.png",
+      "bytes": 30432,
+      "sha256": "54d0bdf4bd361fbe4e2c0ad98afca058c9328e6f81e13562c5e2483f148017d1"
+    },
+    "wls2_weapon_melee_sabre_4_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_4_epic.png",
+      "bytes": 22947,
+      "sha256": "2f9abbe30ed3b56443dfc55ee42529d3dc1aa16d77d60994c42a1bcfb0ae6ce2"
+    },
+    "wls2_weapon_range_bow_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_5_common.png",
+      "bytes": 18474,
+      "sha256": "fff843d5d0c33eeba82e7e53029a12c61511945be297098aa8df11a2e060b31f"
+    },
+    "wls2_weapon_melee_knife_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_5_common.png",
+      "bytes": 15522,
+      "sha256": "9bde81ccf9c28842ce25dc8d8303239e9dd88a9616c6d842929809ef4487a0f1"
+    },
+    "wls2_weapon_range_revolver_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_5_common.png",
+      "bytes": 21837,
+      "sha256": "57e36e3fdbf3836c3d6a105e35e091472dee743752155ce0c94bc4ce54232e51"
+    },
+    "wls2_weapon_range_rifle_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_5_common.png",
+      "bytes": 17006,
+      "sha256": "50e72ccf9e3d3150c05d464376de51824a4ed1fd91ab6b4dae2ec70a5d575c15"
+    },
+    "wls2_weapon_range_shotgun_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_5_common.png",
+      "bytes": 18766,
+      "sha256": "c6d6dc0eb93fa94cc56e2507388471cc20ec8576fd72ccc7a196f0d82bd6795c"
+    },
+    "wls2_weapon_melee_sabre_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_5_common.png",
+      "bytes": 15175,
+      "sha256": "65cae350a1044c67a7b6aca8ba8041053c9c62e6276136edfe3152e70da9ea1f"
+    },
+    "wls2_weapon_melee_knife_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_5_uncommon.png",
+      "bytes": 19959,
+      "sha256": "cfa91458167610e3681beae112870c9949832b9172e74be987a24358ff2a3e4b"
+    },
+    "wls2_weapon_range_revolver_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_5_uncommon.png",
+      "bytes": 29041,
+      "sha256": "82478b0088ecccd4704011194843134a875528b532e569233f3ef8a9696dad1d"
+    },
+    "wls2_weapon_range_revolver_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_5_rare.png",
+      "bytes": 30527,
+      "sha256": "2cb51d344631bad93f2de3d431a61c279a784fd73cd23f596ed1855ba0c118ca"
+    },
+    "wls2_weapon_range_rifle_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_5_rare.png",
+      "bytes": 29608,
+      "sha256": "f4ceb539c82763a8555a30e4593425b650a396c7e78893016fc434c967147f8e"
+    },
+    "wls2_weapon_range_shotgun_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_5_rare.png",
+      "bytes": 30968,
+      "sha256": "ffd852a11a83d35540fe6a802f73043bb0cb2cdc810d11989f0b045ef04802c5"
+    },
+    "wls2_weapon_melee_sabre_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_5_rare.png",
+      "bytes": 20556,
+      "sha256": "a7de822386947698e8df1a90adfbfd15fc6187066b4bf9c8a3ecbe9184825b4e"
+    },
+    "wls2_weapon_melee_knife_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_5_epic.png",
+      "bytes": 22164,
+      "sha256": "c93ccc4462e9f0a650c899046230a58e0c1fd4e468c0a1b5356e5b5bdb1f3f10"
+    },
+    "wls2_weapon_range_revolver_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_5_epic.png",
+      "bytes": 30208,
+      "sha256": "0aea6c31bc8ca4924ef5865356eae27f5d953b88341ab6807223eca41e08cfb6"
+    },
+    "wls2_weapon_range_rifle_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_5_epic.png",
+      "bytes": 29813,
+      "sha256": "d5d60f9c205ec87c42ee4e2b96d872252e6914ec910029db8fea99464c2b365e"
+    },
+    "wls2_weapon_range_shotgun_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_5_epic.png",
+      "bytes": 30201,
+      "sha256": "d434921f6cc377838e7d2ff2100c3213e25661c09018de7f0899d4403b9156d2"
+    },
+    "wls2_weapon_melee_sabre_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_sabre_5_epic.png",
+      "bytes": 23319,
+      "sha256": "5bb36d7742e4081b4bd59a60651a0d146cbe2f2e1cfa54af560c42fadbf5e3fb"
+    },
+    "wls2_weapon_range_bow_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_6_common.png",
+      "bytes": 13045,
+      "sha256": "6ad44f0f9f56ea3f67467c1560a0d4a0767e7be21a968a86d886961d1b18b317"
+    },
+    "wls2_weapon_melee_knife_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_6_common.png",
+      "bytes": 15522,
+      "sha256": "18c75d7a90f5820b498ef3abdae1fc96bc0c3203fbfb8d416c455cf8de71256a"
+    },
+    "wls2_weapon_range_revolver_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_6_common.png",
+      "bytes": 23953,
+      "sha256": "b61b5e4f15a5b31481307abce34c6a420e3846fc58ff901ead93f4e79b23e1d1"
+    },
+    "wls2_weapon_range_rifle_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_6_common.png",
+      "bytes": 10639,
+      "sha256": "f0f8cba5c4b967a36f2281a090489fd2ad85b179ae29b75caddf1a3392ade7dc"
+    },
+    "wls2_weapon_range_shotgun_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_6_common.png",
+      "bytes": 12073,
+      "sha256": "2dca6cc36316a013fa1c188bcfb4f51621045f124811c6802b36b1a22dbd63bc"
+    },
+    "wls2_weapon_melee_knife_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_6_uncommon.png",
+      "bytes": 28372,
+      "sha256": "a89726a6b02ffa66cde911f57e4340ee70a5e1bb6971fb2a3bc1306fb29cd3bf"
+    },
+    "wls2_weapon_range_revolver_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_6_uncommon.png",
+      "bytes": 21961,
+      "sha256": "0ae8062ef9830c0732a5411f6161fba5a7614c082dfa83f8a87d23aea549dfb2"
+    },
+    "wls2_weapon_range_rifle_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_6_uncommon.png",
+      "bytes": 20479,
+      "sha256": "38cff034e1a5bb98be20b512e18d599b04372ba61926424dc76a8bdd68e0ab69"
+    },
+    "wls2_weapon_range_shotgun_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_6_uncommon.png",
+      "bytes": 21426,
+      "sha256": "6d828245f283a56e1f2f13e748a22f659e8b047a85d3cda635b67a993fc8f393"
+    },
+    "wls2_weapon_melee_knife_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_6_rare.png",
+      "bytes": 23255,
+      "sha256": "59841b9e5f0b2696730d51381c445fbcfb8d6d1c52521fc953f5f2ba3e89bbf2"
+    },
+    "wls2_weapon_range_revolver_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_6_rare.png",
+      "bytes": 32311,
+      "sha256": "d5b147d592c6a47c0d1aae1b4e8bf426c387c05f17cb770e7577101193eedb3f"
+    },
+    "wls2_weapon_range_rifle_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_6_rare.png",
+      "bytes": 25789,
+      "sha256": "44ceb3a56f7565dd815fdded8b9448e80c589686a772a9f04ff4bfd25586b142"
+    },
+    "wls2_weapon_range_shotgun_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_6_rare.png",
+      "bytes": 27850,
+      "sha256": "014f89fc55425ceba6ad805d2117ce64642fe39af5dbdf087986091cba9cb383"
+    },
+    "wls2_weapon_melee_spear_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_spear_6_rare.png",
+      "bytes": 22910,
+      "sha256": "82aacb9084fb329315fe2311b358dd05812fb4a7ee8091d20d268410db80dd02"
+    },
+    "wls2_weapon_melee_knife_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_6_epic.png",
+      "bytes": 31611,
+      "sha256": "ba80c48d7dec416161c2c793f6e2f7876026550bdb2a6fc6268a3aa7e8e0c559"
+    },
+    "wls2_weapon_range_revolver_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_6_epic.png",
+      "bytes": 30869,
+      "sha256": "0775273df6034152545d3eea59f0efb461f7d94f1f2797233b6f16ddf24e2981"
+    },
+    "wls2_weapon_range_rifle_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_6_epic.png",
+      "bytes": 27297,
+      "sha256": "0fa77c1ae88248e5354a445ad06d2c6bdb21d05916cbdd2ec56844fe39d218fe"
+    },
+    "wls2_weapon_range_shotgun_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_6_epic.png",
+      "bytes": 27441,
+      "sha256": "b116963d6bb55281e31c82ace74fb302d633979ba58de4dfb2bfe98a3828947e"
+    },
+    "wls2_weapon_range_bow_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_bow_7_common.png",
+      "bytes": 16825,
+      "sha256": "9dd59939882e269c94820b61c9cb104b4c752f6c14b32c90a0b33e254c5f499d"
+    },
+    "wls2_weapon_melee_knife_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_7_common.png",
+      "bytes": 14437,
+      "sha256": "92d378fd4d99ffe5885989a141a45355f2a6a24f76c4c912aa0437b0d5b956c0"
+    },
+    "wls2_weapon_range_revolver_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_7_common.png",
+      "bytes": 21044,
+      "sha256": "4b097d4fea1af29eeda7d919913f2c32eac914baf06519af05dd55181db56c42"
+    },
+    "wls2_weapon_range_rifle_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_7_common.png",
+      "bytes": 14055,
+      "sha256": "31e6df53d3a7a1cbf1ae78a3513d6e1779b17bcc6086cfa1a7c937d2eb3043bd"
+    },
+    "wls2_weapon_range_shotgun_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_7_common.png",
+      "bytes": 17879,
+      "sha256": "ddccce5beaf13585b0a6b247f145f05e6034950d6926bfc38384192679d1a5bd"
+    },
+    "wls2_weapon_melee_knife_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_7_uncommon.png",
+      "bytes": 17221,
+      "sha256": "e9799651a65766b99a5536f0c99f41efc73c515fdb5d089045c6ebd2c24b6502"
+    },
+    "wls2_weapon_range_revolver_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_7_uncommon.png",
+      "bytes": 30256,
+      "sha256": "c18a4bdbc1c14b20df8b29fb19dcc82b9e2e14a21e0666249bd6057bf2031ae3"
+    },
+    "wls2_weapon_range_rifle_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_7_uncommon.png",
+      "bytes": 20722,
+      "sha256": "7c9d2edef4c8092aa8ff59c2262640fae8542c5796eedc35a9dc4f3c7b3f4b17"
+    },
+    "wls2_weapon_range_shotgun_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_7_uncommon.png",
+      "bytes": 20861,
+      "sha256": "a89f7aabe9ec9db7d146c2c07986eb3d47a896679e0a46221143c26017e495ee"
+    },
+    "wls2_weapon_melee_knife_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_7_rare.png",
+      "bytes": 26910,
+      "sha256": "e6787308b2d6b6faf7e25a5baa0cef8ad5c1feaa6949cc36b1df08493b2bf3c0"
+    },
+    "wls2_weapon_range_revolver_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_7_rare.png",
+      "bytes": 33817,
+      "sha256": "07220d8bab51df916c0939c58e612d10280ab808179b08e2bac2e0f7f5ee8034"
+    },
+    "wls2_weapon_range_rifle_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_7_rare.png",
+      "bytes": 28501,
+      "sha256": "0ea43203febbe2e2aa959eb60cca8133e400e6f74b5f0dd95b5c641d8fb3bb75"
+    },
+    "wls2_weapon_range_shotgun_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_7_rare.png",
+      "bytes": 26979,
+      "sha256": "bf80aec6fc64d114e414bb249cc0ab1cf76e2120b38ea7c8249ac4c6c09e4e35"
+    },
+    "wls2_weapon_melee_knife_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_melee_knife_7_epic.png",
+      "bytes": 30898,
+      "sha256": "c4d084a9c83639ea848ac9eb8cb50714b509da5165c93f549862f181c4fc4c9a"
+    },
+    "wls2_weapon_range_revolver_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_revolver_7_epic.png",
+      "bytes": 36677,
+      "sha256": "78f65abe60a51c14a46906cb41b3fda42fb93369901996987dacd298402ef410"
+    },
+    "wls2_weapon_range_rifle_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_rifle_7_epic.png",
+      "bytes": 38470,
+      "sha256": "22ac74a40c7aa1929850ac130e03c1da76f6e2625cef30692a775873bc90816f"
+    },
+    "wls2_weapon_range_shotgun_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_weapon_range_shotgun_7_epic.png",
+      "bytes": 34206,
+      "sha256": "46da834f84afe2a0d558e95bf7fbc9cf65e954e4c5802af685281f98b87c002b"
+    },
+    "wls2_armor_body_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_1_common.png",
+      "bytes": 23980,
+      "sha256": "9c2bc3ebfc1059d1028b6b6123d7fc7116519636ce46b719c507134ce584dcc7"
+    },
+    "wls2_armor_boots_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_1_common.png",
+      "bytes": 21903,
+      "sha256": "b3f7481a31fe58f7438c4c6e65d9805e5cd1c708806314bab3eb38904d6bd7cd"
+    },
+    "wls2_armor_head_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_1_common.png",
+      "bytes": 17837,
+      "sha256": "4748537df9868cfef94b2cd9fd72dba88c6afbe3cf288242d5338f6e62496222"
+    },
+    "wls2_armor_legs_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_1_common.png",
+      "bytes": 20697,
+      "sha256": "52b471a83b178d77fbcbeff6ac98efff137fc5f37828e3d706054540e491222d"
+    },
+    "wls2_armor_body_1_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_1_uncommon.png",
+      "bytes": 24746,
+      "sha256": "ad3a2c57fd5ccadfae75effb5711647df04d390137173ba538b831a87f0a4f8e"
+    },
+    "wls2_armor_boots_1_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_1_uncommon.png",
+      "bytes": 20610,
+      "sha256": "55f7d198cb8ae94f203cd820b5f6662674fbdcff55e0e95f4d19ef64943f0648"
+    },
+    "wls2_armor_legs_1_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_1_uncommon.png",
+      "bytes": 22220,
+      "sha256": "238a3c63a6b6c7ee85698d99cb6aaf596a83dada08c6caeadf13884b1fef24a3"
+    },
+    "wls2_armor_body_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_2_common.png",
+      "bytes": 24116,
+      "sha256": "5aba4b97bfc78e47e10af373d95f461b294a0e8a9eb77560b32d804ff05d86b3"
+    },
+    "wls2_armor_boots_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_2_common.png",
+      "bytes": 22023,
+      "sha256": "f5e0452add70dcf772f930266069a1bda8edae01149fcd808ed04bceac827ae4"
+    },
+    "wls2_armor_head_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_2_common.png",
+      "bytes": 17709,
+      "sha256": "817217b34a513f2299e1ee3c54afd78b085e4f7abcc787a6f37dffb471e9fbaa"
+    },
+    "wls2_armor_legs_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_2_common.png",
+      "bytes": 19796,
+      "sha256": "371b7f56af11eb5942906e3eb71054e21ec70326e9d41e3858a9d24ef7be1305"
+    },
+    "wls2_armor_body_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_2_uncommon.png",
+      "bytes": 25490,
+      "sha256": "5c73d3fe35a85213de374f29a67629b3b3d10de7c56ea6eeea8c89e76cde13c3"
+    },
+    "wls2_armor_boots_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_2_uncommon.png",
+      "bytes": 21602,
+      "sha256": "4577f81056c7a132880f15b6f3cb6d27e855a2abcbc1981c4297271dfd5c04c5"
+    },
+    "wls2_armor_head_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_2_uncommon.png",
+      "bytes": 17879,
+      "sha256": "e58c24028da97dccfc0bed835e04a3b4ecd32f3a8f104dff1fbbe7bb4f3b7f60"
+    },
+    "wls2_armor_legs_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_2_uncommon.png",
+      "bytes": 21196,
+      "sha256": "be857ae05496b3a0646f85788e7d240537cb44d76278a06072a6fc65a165bbf4"
+    },
+    "wls2_armor_body_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_3_common.png",
+      "bytes": 31509,
+      "sha256": "e2a31a2b718fed98a3678ab8c3643b7235a8f507f7ae1eea6e08013ddf0b03f1"
+    },
+    "wls2_armor_boots_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_3_common.png",
+      "bytes": 28154,
+      "sha256": "f8dccfbc981e3024913d4647cbff5cbd4ced31efed62f1185fcf6091f5e2f7d0"
+    },
+    "wls2_armor_head_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_3_common.png",
+      "bytes": 26943,
+      "sha256": "742378f40561b27b94d6ce8968c17c80a886eed9d411ce6866687d0f2414ae0d"
+    },
+    "wls2_armor_legs_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_3_common.png",
+      "bytes": 29080,
+      "sha256": "9eaba4b4090ce227e6605c5dfff775860d894e510a4799c956e33d115f5e6af5"
+    },
+    "wls2_armor_body_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_3_uncommon.png",
+      "bytes": 29681,
+      "sha256": "9c926589931a8beceaa005c94e2a5a7a8069d0dcbcfb2d5baaab49b7dc232849"
+    },
+    "wls2_armor_boots_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_3_uncommon.png",
+      "bytes": 26972,
+      "sha256": "02692476d68beef53597f6bbb0fab66767123830a26ff0e46cd87698ff69e24c"
+    },
+    "wls2_armor_head_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_3_uncommon.png",
+      "bytes": 23361,
+      "sha256": "6b4ac374393d6d1e12e86bb2f27ed364961a576efba603f5e6d434b32b784877"
+    },
+    "wls2_armor_legs_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_3_uncommon.png",
+      "bytes": 23767,
+      "sha256": "6b2a701d2d734fb3f43eadaa5c7617b5403f580bf22b1cc9132bf94d15a66e62"
+    },
+    "wls2_armor_body_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_3_rare.png",
+      "bytes": 31258,
+      "sha256": "4c1eaa8017cb5dd7ba238ee8fa526e734489f4c26c428681ff40d5f64f8e48c8"
+    },
+    "wls2_armor_boots_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_3_rare.png",
+      "bytes": 28158,
+      "sha256": "d936d2b66af04f858e99a0d8f167b26e6cba460437a02be73ea807861aa696a6"
+    },
+    "wls2_armor_head_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_3_rare.png",
+      "bytes": 22596,
+      "sha256": "4a2482827ce5fe66df1db9a539b850f4f0f4b5ff0d786afc90ae548228945861"
+    },
+    "wls2_armor_legs_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_3_rare.png",
+      "bytes": 27642,
+      "sha256": "1da237d4be883560ec001eef6aac72822258758ff45195f873c83d051d614c8f"
+    },
+    "wls2_armor_body_3_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_3_epic.png",
+      "bytes": 34138,
+      "sha256": "1ed842f84fb89d1796b03a4d50249c726b381c89dd91217f5e0bd04a13252abb"
+    },
+    "wls2_armor_boots_3_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_3_epic.png",
+      "bytes": 24599,
+      "sha256": "d31bb7b26028deaf45341435f83342bb85337b52475bc64926c7f805dea3aa49"
+    },
+    "wls2_armor_head_3_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_3_epic.png",
+      "bytes": 20642,
+      "sha256": "83c797af438fdce23a7770aa3f6ee55641bd88f89d5b45c7a9d272affc866fa8"
+    },
+    "wls2_armor_legs_3_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_3_epic.png",
+      "bytes": 28928,
+      "sha256": "85fcb56939a9ab83d9f89094f6fe7ee739e6dfff20f22b0a5a820e1fbebb8150"
+    },
+    "wls2_armor_body_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_4_common.png",
+      "bytes": 27088,
+      "sha256": "35a5b90d866f86ff51ca51c9bc616c9eea859266fbe865d35ae4acfae998c105"
+    },
+    "wls2_armor_boots_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_4_common.png",
+      "bytes": 21376,
+      "sha256": "dd43ccaa9793cc581642f2d3795b3e8bb59157cf0ca69060c407a8e71845755b"
+    },
+    "wls2_armor_head_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_4_common.png",
+      "bytes": 18802,
+      "sha256": "78b552fedb1d583af199c65d0a3ebfbe5aedaccdaf2082c060551e1c81462a78"
+    },
+    "wls2_armor_legs_4_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_4_common.png",
+      "bytes": 21153,
+      "sha256": "eee86e0965daf4500c641e9e534fdd42668f178dcbd1f383838ccb0b30be90cd"
+    },
+    "wls2_armor_body_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_4_uncommon.png",
+      "bytes": 27910,
+      "sha256": "93c360bc5f631f3c1f46d906b9f9d42b2e6b21dce2a500150526ed52383188fb"
+    },
+    "wls2_armor_boots_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_4_uncommon.png",
+      "bytes": 23114,
+      "sha256": "b4fabbbf4997fecdf57ef2e0879a049f1e7635b3c5c83915f33845f830a0034c"
+    },
+    "wls2_armor_head_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_4_uncommon.png",
+      "bytes": 20444,
+      "sha256": "337a57730d601b4dbf938a8bc43abd56814c715812e0e648977b1acd4fc67c08"
+    },
+    "wls2_armor_legs_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_4_uncommon.png",
+      "bytes": 20647,
+      "sha256": "b441a64e10d2904572abc890cc1a09e21a4217480eded788195c6bc11afcab50"
+    },
+    "wls2_armor_body_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_4_rare.png",
+      "bytes": 30395,
+      "sha256": "7e7d7acdb1a4c7dd625f78c4b3ac9f06d3793245f9f61b8fd518a06a369809dc"
+    },
+    "wls2_armor_boots_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_4_rare.png",
+      "bytes": 24359,
+      "sha256": "a34e89456a2ba401be6157b405a37c694519497f33204e7b1ec40c8359d25206"
+    },
+    "wls2_armor_head_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_4_rare.png",
+      "bytes": 19146,
+      "sha256": "356267d6afc138db471569c69736f27a6cffc4be96afd9686942be321f82c4b8"
+    },
+    "wls2_armor_legs_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_4_rare.png",
+      "bytes": 24225,
+      "sha256": "85cf3fc92f09b7396db23b36415f5344ae9994baea0c4a9a93e213cdcea35521"
+    },
+    "wls2_armor_body_4_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_4_epic.png",
+      "bytes": 28798,
+      "sha256": "a57a6ae19258cc6b8a6a03f10775107b01d7da3cdecc9dd973c7cc47cccad06f"
+    },
+    "wls2_armor_boots_4_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_4_epic.png",
+      "bytes": 24642,
+      "sha256": "68dd0aa02f5fc85ba7ddc8625e50f0add10db0b6a5b9b28e8f5a440a3b84fdca"
+    },
+    "wls2_armor_body_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_5_common.png",
+      "bytes": 25157,
+      "sha256": "0654b977a249ef2fb2ef0c5344e8cddecb97f5ac4773d18a7455f6998c1f095e"
+    },
+    "wls2_armor_boots_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_5_common.png",
+      "bytes": 25642,
+      "sha256": "589bcd10a74255b2224bbdbb9859d3c6dd96a406dba34dd46217d8578b03621e"
+    },
+    "wls2_armor_head_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_5_common.png",
+      "bytes": 18689,
+      "sha256": "bd8087c286dbdab17bebda9fac7a88d5e23e1bab13eba6eba261464982a49b4c"
+    },
+    "wls2_armor_legs_5_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_5_common.png",
+      "bytes": 22231,
+      "sha256": "9e5d5a9b893ab14453480886059964d65c42855fc716f19af83c6d5d19823b43"
+    },
+    "wls2_armor_body_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_5_uncommon.png",
+      "bytes": 27940,
+      "sha256": "c0683f185a3d2fb794fdcb9d04a0a6575242336edb622df868497ae4eafcfd65"
+    },
+    "wls2_armor_boots_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_5_uncommon.png",
+      "bytes": 24814,
+      "sha256": "62c4786c86dd53a336ecfb78d15ad91b7a67620ba1f8e2de8bec1b1b9b4cb12d"
+    },
+    "wls2_armor_head_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_5_uncommon.png",
+      "bytes": 19932,
+      "sha256": "3b4428d0ae27388054be6400f7f04a3f6ec87fb21bc8f5ee9cbfea5f096b9638"
+    },
+    "wls2_armor_legs_5_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_5_uncommon.png",
+      "bytes": 25109,
+      "sha256": "6d181875f6e4c351f53e8f7a0b3e2ca9b65179356d06c8ff4a098ad9482dfef9"
+    },
+    "wls2_armor_body_5_rare_crocodile": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_5_rare_crocodile.png",
+      "bytes": 33926,
+      "sha256": "fda754515455462e1ae1279ef1f1c8970b03c6b89d5e17c722fb9a987c37c1f0"
+    },
+    "wls2_armor_body_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_5_rare.png",
+      "bytes": 26600,
+      "sha256": "3b279af8f327fcebc34b417333ebeb38f340addf95d932a4099431fe3912bd7c"
+    },
+    "wls2_armor_boots_5_rare_crocodile": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_5_rare_crocodile.png",
+      "bytes": 28936,
+      "sha256": "d8b8729211de55c7f42e344c115bcd5fbca9937202492cec10ce8a9b174c3276"
+    },
+    "wls2_armor_boots_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_5_rare.png",
+      "bytes": 26934,
+      "sha256": "6ae83e7f773d08e4e1804d054ec2f9be2dbecc16827d490e5016ff365714f5c3"
+    },
+    "wls2_armor_head_5_rare_crocodile": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_5_rare_crocodile.png",
+      "bytes": 19747,
+      "sha256": "93647835e6633c1464a3c3e51f4bdbc9bcbb320985bb1d1bb69687b6554119d5"
+    },
+    "wls2_armor_head_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_5_rare.png",
+      "bytes": 20277,
+      "sha256": "40bae83a87338f8cd9ad77e0eaa8f37e71cab77401ef585d7dbeb4b48a6dab7d"
+    },
+    "wls2_armor_legs_5_rare_crocodile": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_5_rare_crocodile.png",
+      "bytes": 30531,
+      "sha256": "5503fdb8cabe987466c54ccbe0104af143e823b18d080e631966a8998c5d9e38"
+    },
+    "wls2_armor_legs_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_5_rare.png",
+      "bytes": 23647,
+      "sha256": "e87f6b8ae3fffc1d8e3cecb665f9ccdb8c70c684dfa090a1ae7d4c185cc792d0"
+    },
+    "wls2_armor_body_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_5_epic.png",
+      "bytes": 34077,
+      "sha256": "98c45d779c8f99831b4f91a7daab18b8cdc26d5f562a99df3e3ce2710cbb2031"
+    },
+    "wls2_armor_boots_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_5_epic.png",
+      "bytes": 29616,
+      "sha256": "40964741745f86e2ef3d3088e4f89bdb070e8f6242c4d309313cbdf1467d75a4"
+    },
+    "wls2_armor_head_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_5_epic.png",
+      "bytes": 21670,
+      "sha256": "85c526241a48b46378411101c8422cd4d192383e47782f5eea5ee7b5e4a4823b"
+    },
+    "wls2_armor_legs_5_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_5_epic.png",
+      "bytes": 31819,
+      "sha256": "9a3c6674d8a8c4a93d299a43c10150f0dd9897ea7a2c24922368d8308b80a32b"
+    },
+    "wls2_armor_body_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_6_common.png",
+      "bytes": 33489,
+      "sha256": "fd3870bd418863bafbf226623b2a051a220ecf1b83ea65b15aac4ff3c3b4eafc"
+    },
+    "wls2_armor_boots_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_6_common.png",
+      "bytes": 29065,
+      "sha256": "394a9df7621c24b8dfa4166f636f6676c6e7cd6355905383a9489f86a7f23843"
+    },
+    "wls2_armor_head_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_6_common.png",
+      "bytes": 22535,
+      "sha256": "e5458779be1c7eda74edb8d9301fc0bb16eaed8c52cda92120c2e953c16acf42"
+    },
+    "wls2_armor_legs_6_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_6_common.png",
+      "bytes": 27475,
+      "sha256": "a9dcb3b0e8b65d6bddac09ecde5b3d14062820f27833d7dfa59b4587886f1347"
+    },
+    "wls2_armor_body_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_6_uncommon.png",
+      "bytes": 32702,
+      "sha256": "6797c0cabb5abd18baa3a7d9e85cd2f8afe3f83127790a3e1d7e310a5bafbf85"
+    },
+    "wls2_armor_boots_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_6_uncommon.png",
+      "bytes": 31091,
+      "sha256": "951940089711b0ea82569104ca39065401b1735378f3b211859a8b846d5bd27f"
+    },
+    "wls2_armor_head_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_6_uncommon.png",
+      "bytes": 27761,
+      "sha256": "b09a2b31bd0482c14e22fee57fa42b9984fd7b62e191eb41eb29e6c2f13ed560"
+    },
+    "wls2_armor_legs_6_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_6_uncommon.png",
+      "bytes": 28553,
+      "sha256": "ad18bb5168c5dd84e3609293482a356779144336f0fae1c4cfad895c0c20e81c"
+    },
+    "wls2_armor_body_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_6_rare.png",
+      "bytes": 33198,
+      "sha256": "056557ae341b465571ac8e1be7090e74abccd676c4623cdf8460d2f4820a73b7"
+    },
+    "wls2_armor_boots_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_6_rare.png",
+      "bytes": 29842,
+      "sha256": "9c5ace19bc71f0e7a5887ac44efc44d9e22969d6ca0863ef839c5880fc2e4df1"
+    },
+    "wls2_armor_head_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_6_rare.png",
+      "bytes": 23885,
+      "sha256": "38d36511a90bb13ac9aac9e9fb4e169a235eef67bb397888cc471dfa124b35ef"
+    },
+    "wls2_armor_legs_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_6_rare.png",
+      "bytes": 25388,
+      "sha256": "023fe310a431a323e48325426eeaf770c4cdc22b48c69497c30182234b031f7c"
+    },
+    "wls2_armor_body_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_6_epic.png",
+      "bytes": 33708,
+      "sha256": "e9b3d4bb7de8421cb7c2cfe26e05d8d3d9fdf8ef6c72136ec565a98a1335d8f0"
+    },
+    "wls2_armor_boots_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_6_epic.png",
+      "bytes": 31068,
+      "sha256": "2377730d0c20c4b3599e06e2311c628a611e2dada6e27a5b64aaf330d026b9ac"
+    },
+    "wls2_armor_head_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_6_epic.png",
+      "bytes": 23607,
+      "sha256": "b6e79a039c6fe517c937ae20f20e12f90d5f49e387d506ea9e9c06125d03b2b8"
+    },
+    "wls2_armor_legs_6_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_6_epic.png",
+      "bytes": 27949,
+      "sha256": "dc1be28529e4add5c472949ac7cbde43ae9769f37114e064d42eebf5ca9638c1"
+    },
+    "wls2_armor_body_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_7_common.png",
+      "bytes": 28132,
+      "sha256": "9ad51d0c560e8f5397f6dd801f1686d5369ac6150decbf6ad5bda73eb3d8be29"
+    },
+    "wls2_armor_boots_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_7_common.png",
+      "bytes": 23923,
+      "sha256": "dbec9ecf259fdc8c41e142719aecbd6562421642ae0360e3eba89b4effb7ed9e"
+    },
+    "wls2_armor_head_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_7_common.png",
+      "bytes": 21145,
+      "sha256": "6b1a1f90b4c9495930d7cd9fb4a4d21be8a3320389181469644d5948a6ea607a"
+    },
+    "wls2_armor_legs_7_common": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_7_common.png",
+      "bytes": 20355,
+      "sha256": "27e9e204dbdb835bc993563dcc302dcf8c349a1a4f18e7a613d31f9303611158"
+    },
+    "wls2_armor_body_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_7_uncommon.png",
+      "bytes": 29347,
+      "sha256": "31be97e9072540106994523eb6d4e2a1ccdc6c2a55985929edc5ac8f16adfc8d"
+    },
+    "wls2_armor_boots_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_7_uncommon.png",
+      "bytes": 26229,
+      "sha256": "2c8981f08d639d2156df16301ac8fefb5d095ad5fa32c8189ef397797a56f213"
+    },
+    "wls2_armor_head_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_7_uncommon.png",
+      "bytes": 21888,
+      "sha256": "20ef9ac8d3d23ceee17d3dee9d4769f0a790e50acde53efae091ef18f3120a3d"
+    },
+    "wls2_armor_legs_7_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_7_uncommon.png",
+      "bytes": 23652,
+      "sha256": "61597f7069c1775e403435a0b535328a94d261ed081c5ca0ebf632d86229ad07"
+    },
+    "wls2_armor_body_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_7_rare.png",
+      "bytes": 31792,
+      "sha256": "c5d7bdb58bb25a2a6a03393b9c7fb237591bd009c0a979245bfb58c3e1241c7e"
+    },
+    "wls2_armor_boots_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_7_rare.png",
+      "bytes": 27010,
+      "sha256": "a444b125e83775db8885afb1bb0afd3dbf48194e70e062c5b12116cb61e5c6e3"
+    },
+    "wls2_armor_head_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_7_rare.png",
+      "bytes": 23724,
+      "sha256": "ea72d7856542b1afe9993e7cad03a0eb4264e66f3e95d71ce9a9bb5bcbd8fae3"
+    },
+    "wls2_armor_legs_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_7_rare.png",
+      "bytes": 25203,
+      "sha256": "f0aea1b3364480e0e350dd781362edc169d9389896a925e7706893baeae5017b"
+    },
+    "wls2_armor_body_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_body_7_epic.png",
+      "bytes": 32621,
+      "sha256": "737df24649b347c88fedf67e3ee86d8f6b25d55b0b1953736841c14db35621e2"
+    },
+    "wls2_armor_boots_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_boots_7_epic.png",
+      "bytes": 27353,
+      "sha256": "3c6ca2a2c2c624af13d3d0be11b051de6aad36c2c902612d8b68337ccc88ff6c"
+    },
+    "wls2_armor_head_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_head_7_epic.png",
+      "bytes": 23684,
+      "sha256": "9b72c0936cad4bc19c69dea33407a883e6a30feff6ecef404a06c442a95f3aed"
+    },
+    "wls2_armor_legs_7_epic": {
+      "file": "westland_wiki_assets/equipment/wls2_armor_legs_7_epic.png",
+      "bytes": 27464,
+      "sha256": "96bd70afe948d1bd402496372676b2798e3c0fbe3411220c6a1674d9de6c836a"
+    },
+    "wls2_backpack_cowboy_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_1_common.png",
+      "bytes": 19518,
+      "sha256": "25170a9aa00b582813f1b5be46a415ad647320a7552729a31d4682577461af2b"
+    },
+    "wls2_backpack_indian_1_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_1_common.png",
+      "bytes": 19247,
+      "sha256": "85507006c821f9b38610a1c27a22f1e17bc6cc77ca0049cecf6aa130cf2b9df7"
+    },
+    "wls2_backpack_cowboy_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_2_common.png",
+      "bytes": 21483,
+      "sha256": "c78ef478ebe46dca780a1c18b5685eac8fbd59c5e0ee7cce17fc2c6ca65daf6f"
+    },
+    "wls2_backpack_indian_2_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_2_common.png",
+      "bytes": 20217,
+      "sha256": "0718f2bee85d343e8319b2803622d77980273a6bcaf05bcfe73c12741dd73fc8"
+    },
+    "wls2_backpack_cowboy_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_2_uncommon.png",
+      "bytes": 21701,
+      "sha256": "9222775e388dfab81f2401a198276d7054ec5cd79931d904d8f7415c27fb3902"
+    },
+    "wls2_backpack_indian_2_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_2_uncommon.png",
+      "bytes": 22626,
+      "sha256": "067857e18a0915c4f23b81bbf7e5abbbe5e47765298bb33c376c63e4e541fe3d"
+    },
+    "wls2_backpack_cowboy_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_3_common.png",
+      "bytes": 21668,
+      "sha256": "db856ef2deba0b9b11da60ce24daa3fc1947f6c2311795560dda70093f9d3c29"
+    },
+    "wls2_backpack_indian_3_common": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_3_common.png",
+      "bytes": 21078,
+      "sha256": "3ec4d36e4dbb37c148f93a1fb099c400263cf507e1be5209fd9976acf707c1a7"
+    },
+    "wls2_backpack_indian_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_3_uncommon.png",
+      "bytes": 22690,
+      "sha256": "d085fc46ee2cedaf0df2ccbaa7388a1e9a3bc2a661c37adf8a6a0868af81e42c"
+    },
+    "wls2_backpack_cowboy_3_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_3_uncommon.png",
+      "bytes": 22965,
+      "sha256": "9dbd1aed82a7c0e92aee99733570f706dbaaa71350354f084b9cf96e34fc0abe"
+    },
+    "wls2_backpack_indian_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_3_rare.png",
+      "bytes": 24261,
+      "sha256": "5dc31aa820aa345b1f4a4c3ae2ac3e6b22fa5818d610014f136e3e786734de53"
+    },
+    "wls2_backpack_cowboy_3_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_3_rare.png",
+      "bytes": 23774,
+      "sha256": "0f9067ffff18722e95a42e4688cf92fd051d03fcd3906b4a8d76199b4577083c"
+    },
+    "wls2_backpack_cowboy_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_4_uncommon.png",
+      "bytes": 23475,
+      "sha256": "feabf975f2ab0a0441ff2589b46dfa132aa526b6f5fca1f4c6dd571a9a96684c"
+    },
+    "wls2_backpack_indian_4_uncommon": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_4_uncommon.png",
+      "bytes": 25611,
+      "sha256": "cedd2f4c84b67e26921213348fa26199dbda43abd0a2292363893cd33f0603f9"
+    },
+    "wls2_backpack_indian_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_4_rare.png",
+      "bytes": 27842,
+      "sha256": "be8865b5e0fbc985c681fa44a820dbb1c9ad446e77c992728c0a7464333b0ac6"
+    },
+    "wls2_backpack_cowboy_4_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_4_rare.png",
+      "bytes": 31157,
+      "sha256": "5e6e5a3484bca7648b74438893beab467e3ac0f12d4297cd45be8db6bffd2d51"
+    },
+    "wls2_backpack_cowboy_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_5_rare.png",
+      "bytes": 27097,
+      "sha256": "3bded889d4d81ae6910f5450b9e6781f6e239addc95fd75f5c7ad2f5d75801fa"
+    },
+    "wls2_backpack_indian_5_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_5_rare.png",
+      "bytes": 27441,
+      "sha256": "f083e1512aa01770fc94e00b9120f2c7a0b2437594dafea98ff70301a59fc11d"
+    },
+    "wls2_backpack_indian_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_6_rare.png",
+      "bytes": 32639,
+      "sha256": "93813f95da9780663c517aa4c4a7f5c6f48712205a3648ca2d20deef82e7d723"
+    },
+    "wls2_backpack_cowboy_6_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_6_rare.png",
+      "bytes": 32297,
+      "sha256": "bf565a1e5529e1ffd9dac158df81a4ed4239147879cdf6fade54a8a7d41adc07"
+    },
+    "wls2_backpack_indian_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_indian_7_rare.png",
+      "bytes": 29400,
+      "sha256": "30cf794b672b9a33106b7542437e507618890a99aa8f4b69ffb4f92058b44bee"
+    },
+    "wls2_backpack_cowboy_7_rare": {
+      "file": "westland_wiki_assets/equipment/wls2_backpack_cowboy_7_rare.png",
+      "bytes": 33483,
+      "sha256": "7399e19828b0368d34bafaa36a6271031dc1d65c76d26c7e85ea03963880a6f9"
+    }
+  },
+  "totalVariants": 122,
+  "equipmentCount": 225,
+  "scopeSource": "offline-prototype/native-active-v160-difficulty-release/generated/difficulty_scope_audit.json",
+  "scopeSha256": "3aef369d98358aa525728dadf275cf9fc1f3a7100e9005724166da87dc794580",
+  "humanImagesIncluded": false,
+  "aiImagesIncluded": false
+};

@@ -1,0 +1,9 @@
+# Local preview and verification output
+_site/
+.verification/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db

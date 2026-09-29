@@ -1,0 +1,207 @@
+#!/usr/bin/env node
+// No dependencies: validate the site, or prepare and validate a Pages artifact.
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const args = process.argv.slice(2);
+const option = (name) => {
+  const index = args.indexOf(name);
+  if (index === -1) return null;
+  if (!args[index + 1] || args[index + 1].startsWith('--')) throw new Error(`Missing path after ${name}`);
+  return path.resolve(args[index + 1]);
+};
+const sourceRoot = option('--root') || repository;
+const stageRoot = option('--stage');
+const errors = [];
+const requiredFiles = ['index.html', '404.html', '.nojekyll'];
+const publicExtensions = new Set([
+  '.html', '.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
+  '.ico', '.avif', '.woff', '.woff2', '.ttf',
+]);
+
+function loadGames(directory) {
+  const filename = path.join(directory, 'assets', 'games.js');
+  const context = { window: {} };
+  vm.runInNewContext(fs.readFileSync(filename, 'utf8'), context, { filename, timeout: 1000 });
+  const games = context.window.ORBIT_GAMES;
+  if (!Array.isArray(games) || !games.length) throw new Error('assets/games.js must define a nonempty window.ORBIT_GAMES array.');
+  const ids = new Set();
+  for (const game of games) {
+    if (!game.id || ids.has(game.id)) throw new Error('Game IDs must be present and unique.');
+    ids.add(game.id);
+    if (!game.name || !game.image || !Array.isArray(game.links) || !game.links.length) {
+      throw new Error(`Game ${game.id} is missing its name, image or links.`);
+    }
+  }
+  return games;
+}
+
+function gameDirectories(games) {
+  const directories = new Set(['assets']);
+  for (const game of games) {
+    for (const link of game.links) {
+      const href = decodeURIComponent(link.href || '').split(/[?#]/)[0];
+      const parts = href.split('/');
+      if (parts.length < 2 || parts.some((part) => !part || part.startsWith('.')) || /[:\\]/.test(href)) {
+        throw new Error(`Game ${game.id} must use a relative link inside its game directory.`);
+      }
+      directories.add(parts[0]);
+    }
+  }
+  return [...directories];
+}
+
+function walk(directory, output = []) {
+  if (!fs.existsSync(directory)) return output;
+  for (const item of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (item.name.startsWith('.')) continue;
+    const file = path.join(directory, item.name);
+    if (item.isSymbolicLink()) throw new Error(`Symbolic links are not supported: ${file}`);
+    if (item.isDirectory()) walk(file, output);
+    else if (item.isFile()) output.push(file);
+  }
+  return output;
+}
+
+let games;
+let directories;
+try {
+  games = loadGames(sourceRoot);
+  directories = gameDirectories(games);
+  if (stageRoot) {
+    if (stageRoot === sourceRoot || directories.some((directory) => {
+      const relative = path.relative(path.join(sourceRoot, directory), stageRoot);
+      return relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative));
+    })) throw new Error('The artifact directory must be separate from the site source directories.');
+    if (fs.existsSync(stageRoot) && fs.readdirSync(stageRoot).length) {
+      throw new Error('The artifact directory must be empty. Choose a new directory; existing files are never deleted.');
+    }
+    const sources = requiredFiles.map((name) => path.join(sourceRoot, name));
+    for (const directory of directories) {
+      const full = path.join(sourceRoot, directory);
+      if (!fs.existsSync(full)) throw new Error(`Missing public directory: ${directory}`);
+      sources.push(...walk(full).filter((file) => publicExtensions.has(path.extname(file).toLowerCase())));
+    }
+    for (const source of sources) {
+      if (fs.lstatSync(source).isSymbolicLink()) throw new Error(`Symbolic links are not supported: ${source}`);
+      const target = path.join(stageRoot, path.relative(sourceRoot, source));
+      fs.mkdirSync(path.dirname(target), { recursive: true });
+      fs.copyFileSync(source, target);
+    }
+    console.log(`Prepared ${sources.length} static files from the games.js registry. Metadata and development tools are excluded.`);
+  }
+} catch (error) {
+  console.error(`Site configuration: ${error.message}`);
+  process.exit(1);
+}
+
+const root = stageRoot || sourceRoot;
+const relative = (file) => path.relative(root, file).split(path.sep).join('/');
+const files = [];
+const checkedReferences = new Set();
+const networkReferences = new Set();
+let inlineScripts = 0;
+for (const required of requiredFiles) {
+  const file = path.join(root, required);
+  if (!fs.existsSync(file)) errors.push(`Missing required file: ${required}`);
+  else files.push(file);
+}
+for (const directory of directories) {
+  const full = path.join(root, directory);
+  if (!fs.existsSync(full)) errors.push(`Missing public directory: ${directory}`);
+  try { walk(full, files); }
+  catch (error) { errors.push(error.message); }
+}
+
+function checkReference(raw, source, base = path.dirname(source)) {
+  let reference = raw.trim().replaceAll('&amp;', '&');
+  if (!reference || reference.startsWith('#') || reference.includes('${') || reference.includes('{{')) return;
+  if (/^(?:https?:)?\/\//i.test(reference)) {
+    networkReferences.add(reference.split('?')[0]);
+    return;
+  }
+  if (/^[a-z][a-z0-9+.-]*:/i.test(reference)) return;
+  reference = reference.split(/[?#]/)[0];
+  try { reference = decodeURIComponent(reference); }
+  catch { errors.push(`${relative(source)}: invalid URL encoding`); return; }
+  if (!reference) return;
+  const target = path.resolve(base, reference);
+  const key = `${source}\n${target}`;
+  if (checkedReferences.has(key)) return;
+  checkedReferences.add(key);
+  const targetRelative = path.relative(root, target);
+  if (reference.startsWith('/') || targetRelative === '..' || targetRelative.startsWith(`..${path.sep}`) || path.isAbsolute(targetRelative)) {
+    errors.push(`${relative(source)}: URL must stay relative to the published site: ${reference}`);
+  } else if (!fs.existsSync(target)) {
+    errors.push(`${relative(source)}: missing local resource ${reference}`);
+  }
+}
+
+function checkCss(css, source) {
+  for (const match of css.matchAll(/url\(\s*(['"]?)([^)'"\s]+)\1\s*\)/gi)) checkReference(match[2], source);
+}
+
+const registry = path.join(root, 'assets', 'games.js');
+for (const game of games) {
+  checkReference(game.image, registry, root);
+  for (const link of game.links) checkReference(link.href, registry, root);
+}
+
+for (const file of files) {
+  const extension = path.extname(file).toLowerCase();
+  if (!['.html', '.css', '.js'].includes(extension)) continue;
+  const source = fs.readFileSync(file, 'utf8');
+  if (extension === '.html') {
+    const markup = source.replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (full, attributes, script) => {
+      const src = attributes.match(/\bsrc\s*=\s*(['"])(.*?)\1/i);
+      if (src) checkReference(src[2], file);
+      else if (script.trim() && !/\btype\s*=\s*(['"])(?!text\/javascript|application\/javascript)[^'"]+\1/i.test(attributes)) {
+        inlineScripts++;
+        try { new vm.Script(script, { filename: relative(file) }); }
+        catch (error) { errors.push(`${relative(file)}: inline JavaScript ${error.message}`); }
+      }
+      return '';
+    });
+    for (const match of markup.matchAll(/\b(?:src|href|poster)\s*=\s*(['"])(.*?)\1/gi)) checkReference(match[2], file);
+    for (const match of markup.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style\s*>/gi)) checkCss(match[1], file);
+  } else if (extension === '.css') {
+    checkCss(source, file);
+  } else {
+    const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8', maxBuffer: 1024 * 1024 });
+    if (result.status !== 0) errors.push(`${relative(file)}: JavaScript syntax check failed`);
+    // Image paths stored in extracted data resolve relative to the game HTML,
+    // not relative to the JavaScript file. Do not evaluate the game application.
+    const gameDirectory = directories.find((directory) => directory !== 'assets' && relative(file).startsWith(`${directory}/`));
+    if (gameDirectory) {
+      const documentBase = path.join(root, gameDirectory);
+      if (relative(file).endsWith('/wiki-assets/wiki/data/index.js')) {
+        for (const match of source.matchAll(/"_chunk"\s*:\s*"(wiki-chunk-[a-z0-9_-]+)"/g)) {
+          const chunk = match[1].slice('wiki-chunk-'.length);
+          checkReference(`wiki-assets/wiki/data/chunks/${chunk}.js`, file, documentBase);
+        }
+      }
+      for (const match of source.matchAll(/wiki-assets\/[^"'\\<>\r\n]+/g)) checkReference(match[0], file, documentBase);
+    }
+  }
+}
+
+const htmlFiles = files.filter((file) => path.extname(file).toLowerCase() === '.html');
+const totalBytes = files.reduce((total, file) => total + fs.statSync(file).size, 0);
+console.log(`Checked ${games.length} games, ${files.length} files, ${htmlFiles.length} HTML pages, ${inlineScripts} inline scripts and ${checkedReferences.size} local references.`);
+console.log(`Package size: ${(totalBytes / 1024 / 1024).toFixed(2)} MiB. External links/resources: ${networkReferences.size} (not fetched).`);
+for (const file of htmlFiles) {
+  const size = fs.statSync(file).size;
+  if (size > 10 * 1024 * 1024) console.log(`Size note: ${relative(file)} is ${(size / 1024 / 1024).toFixed(1)} MiB.`);
+}
+if (errors.length) {
+  console.error(`\n${errors.length} check(s) failed:`);
+  for (const error of errors.slice(0, 30)) console.error(`- ${error}`);
+  if (errors.length > 30) console.error(`- ... ${errors.length - 30} additional failures`);
+  process.exitCode = 1;
+} else {
+  console.log('Static site checks passed.');
+}

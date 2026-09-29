@@ -33,7 +33,6 @@
     detailStats: $("detail-stats"),
     detailCosts: $("detail-costs"),
     detailCostSection: $("detail-cost-section"),
-    detailSource: $("detail-source"),
   };
 
   const state = {
@@ -96,16 +95,22 @@
     list.append(text("dt", label), text("dd", String(value)));
   }
 
-  function prettyField(name) {
-    return name
-      .replace(/Id$/, " ID")
-      .replace(/([a-z])([A-Z])/g, "$1 $2")
-      .replace("Chanse", "Chance");
+  const typeLabels = {Weapon:"武器",Stuff:"材料与杂物",Bag:"背包",Clothes:"衣物",Usable:"消耗品",Blueprint:"蓝图",Building:"建筑",Finery:"饰品","Left hand":"副手装备","Repair consumable":"修理用品",Note:"笔记","Quest item":"任务物品","Passive skill book":"技能书","Appearance part":"外观部件","Battle usable":"战斗道具","Gacha article":"补给箱","Pet baby box":"宠物幼崽箱"};
+  const statLabels = {AddSlots:"额外格数",Armor:"护甲",BreakStealth:"打破潜行",Cooldown:"冷却时间",CriticalDamageChanse:"暴击概率",CriticalDamagePower:"暴击倍率",Durability:"耐久",FreeInventorySlotsReq:"所需空闲背包格",FuelTime:"燃烧时间",Lethality:"杀伤力",MagicArmor:"魔法护甲",MaxDamage:"最大伤害",MaxPassiveSkillExpBonus:"被动技能经验加成上限",MinDamage:"最小伤害",PetFoodAmount:"宠物食物量",RepairPower:"修理效果",SecondPocket:"第二快捷栏",TargetingRange:"射程",TwoHanded:"双手使用"};
+  const slotLabels = {Amulet:"护符",Bag:"背包",Belt:"腰带",Boots:"鞋靴",Consumable:"消耗品",Fuel:"燃料",Gloves:"手套",Helmet:"头部",Inventory:"背包物品",Pants:"腿部",Repair:"修理用品","Repair consumable":"修理用品",Ring:"戒指","Second weapon":"副手", "Top torso":"上身",Weapon:"武器"};
+  const stackLabels = {Infinite:"可堆叠",Normal:"常规堆叠",Unique:"单件物品"};
+  const typeLabel = value => typeLabels[value] || "其他物品";
+  function articleTitle(article) {
+    const title = String(article?.title || "");
+    return title && !article.titleLocalizationFallback && !/\[Unlocalized\]|Article\s*#|#[0-9]+|[a-z]+_[a-z_]+/i.test(title) ? title : `${typeLabel(article?.type)}（名称待补充）`;
   }
-
+  function articleDescription(article) {
+    return !article.description || /^No English description/i.test(article.description) ? "暂无物品说明。" : article.description;
+  }
+  function playerStats(article) { return article.primary.filter(item => Object.hasOwn(statLabels,item.name)); }
   function displayValue(value) {
-    if (typeof value === "boolean") return value ? "Yes" : "No";
-    if (typeof value === "number" && !Number.isInteger(value)) return value.toLocaleString("en-US", { maximumFractionDigits: 4 });
+    if (typeof value === "boolean") return value ? "是" : "否";
+    if (typeof value === "number" && !Number.isInteger(value)) return value.toLocaleString("zh-CN", { maximumFractionDigits: 4 });
     return String(value);
   }
 
@@ -114,12 +119,7 @@
   }
 
   function mailboxStatus(article) {
-    if (article.mailboxEligible) {
-      return article.mailboxQuantityAdjustable ? "可生成 · 数量可调" : "可生成 · 固定 1 件";
-    }
-    if (article.mailboxExclusionReason === "no_inventory_slot") return "不可生成 · 无普通背包槽位";
-    if (String(article.mailboxExclusionReason).startsWith("internal_test_")) return "不可生成 · 内部测试对象";
-    return "不可生成 · 未通过白名单";
+    return article.mailboxEligible ? "背包物品" : "其他收录资料";
   }
 
   function populateHeader() {
@@ -130,13 +130,13 @@
     for (const group of data.groupCounts) {
       const option = document.createElement("option");
       option.value = group.id;
-      option.textContent = `${group.label} (${group.mailboxEligibleCount.toLocaleString("en-US")} 可生成 / ${group.count.toLocaleString("en-US")} 总计)`;
+      option.textContent = `${group.label} (${group.mailboxEligibleCount.toLocaleString("en-US")} 背包物品 / ${group.count.toLocaleString("en-US")} 总计)`;
       elements.group.append(option);
     }
     for (const type of data.typeCounts.slice().sort((a, b) => a.typeId - b.typeId)) {
       const option = document.createElement("option");
       option.value = String(type.typeId);
-      option.textContent = `${type.type} (${type.mailboxEligibleCount.toLocaleString("en-US")} 可生成 / ${type.count.toLocaleString("en-US")} 总计)`;
+      option.textContent = `${typeLabel(type.type)} (${type.mailboxEligibleCount.toLocaleString("en-US")} 背包物品 / ${type.count.toLocaleString("en-US")} 总计)`;
       elements.type.append(option);
     }
     for (const quality of ["Common", "Uncommon", "Rare", "Epic", "Legendary", "Unspecified"]) {
@@ -158,7 +158,6 @@
       card.append(
         text("span", currency.label),
         text("strong", currency.title),
-        text("code", `${currency.field} → Article #${currency.articleId}`),
       );
       fragment.append(card);
     }
@@ -192,26 +191,26 @@
     const card = document.createElement("button");
     card.type = "button";
     card.className = "article-card";
-    card.setAttribute("aria-label", `查看 ${article.title}，Article ${article.id}`);
+    card.setAttribute("aria-label", `查看 ${articleTitle(article)}`);
     const visual = document.createElement("div");
     visual.className = "card-image";
-    visual.append(imageOrPlaceholder(article.icon, article.title));
+    visual.append(imageOrPlaceholder(article.icon, articleTitle(article)));
 
     const body = document.createElement("div");
     body.className = "card-body";
     const meta = document.createElement("div");
     meta.className = "card-meta";
-    meta.append(text("span", `#${article.id}`), text("span", article.quality, qualityClass(article.quality)));
-    const description = text("p", article.description || "No English description.", "card-description");
+    meta.append(text("span", article.wikiGroup), text("span", article.quality, qualityClass(article.quality)));
+    const description = text("p", articleDescription(article), "card-description");
     const stats = document.createElement("div");
     stats.className = "card-stats";
     stats.append(text("span", article.wikiGroup));
-    stats.append(text("span", article.type));
+    stats.append(text("span", typeLabel(article.type)));
     stats.append(text("span", mailboxStatus(article), article.mailboxEligible ? "mailbox-ok" : "mailbox-blocked"));
-    for (const item of article.primary.slice(0, 2)) {
-      stats.append(text("span", `${prettyField(item.name)} ${displayValue(item.value)}`));
+    for (const item of playerStats(article).slice(0, 2)) {
+      stats.append(text("span", `${statLabels[item.name]} ${displayValue(item.value)}`));
     }
-    body.append(meta, text("h3", article.title || `Article #${article.id}`), description, stats);
+    body.append(meta, text("h3", articleTitle(article)), description, stats);
     card.append(visual, body);
     card.addEventListener("click", () => openDetail(article));
     return card;
@@ -219,7 +218,7 @@
 
   function updateFilterChips() {
     const chips = [];
-    if (state.query.trim()) chips.push(`搜索：${state.query.trim()}`);
+    if (state.query.trim()) chips.push("关键词筛选");
     if (state.eligibility !== "eligible") chips.push(elements.eligibility.selectedOptions[0].textContent);
     if (state.groupId) chips.push(elements.group.selectedOptions[0].textContent);
     if (state.typeId !== "") chips.push(elements.type.selectedOptions[0].textContent);
@@ -281,7 +280,7 @@
 
   function setDetailImage(article, role) {
     const path = role === "female" ? article.femaleIcon : article.icon;
-    elements.detailImage.replaceChildren(imageOrPlaceholder(path, `${article.title}${role === "female" ? " female" : ""}`, true));
+    elements.detailImage.replaceChildren(imageOrPlaceholder(path, `${articleTitle(article)}${role === "female" ? "（女性外观）" : ""}`, true));
     for (const button of elements.imageSwitch.querySelectorAll("button")) {
       button.classList.toggle("selected", button.dataset.iconRole === role);
     }
@@ -289,47 +288,32 @@
 
   function openDetail(article) {
     state.currentArticle = article;
-    elements.detailKicker.textContent = `${article.wikiGroup} · ${article.type} · Article #${article.id}`;
-    elements.detailTitle.textContent = article.title || `Article #${article.id}`;
-    elements.detailDescription.textContent = article.description || "No English description.";
+    elements.detailKicker.textContent = `${article.wikiGroup} · ${typeLabel(article.type)}`;
+    elements.detailTitle.textContent = articleTitle(article);
+    elements.detailDescription.textContent = articleDescription(article);
     setDetailImage(article, "main");
     elements.imageSwitch.hidden = !article.femaleIcon;
 
     const badges = document.createDocumentFragment();
     badges.append(text("span", article.quality, `badge ${qualityClass(article.quality)}`));
-    badges.append(text("span", article.stackType, "badge"));
+    if (stackLabels[article.stackType]) badges.append(text("span", stackLabels[article.stackType], "badge"));
     badges.append(text("span", mailboxStatus(article), `badge ${article.mailboxEligible ? "mailbox-ok" : "mailbox-blocked"}`));
-    for (const slot of article.slots) badges.append(text("span", slot, "badge"));
+    for (const slot of article.slots) if (slotLabels[slot]) badges.append(text("span", slotLabels[slot], "badge"));
     elements.detailBadges.replaceChildren(badges);
 
     const stats = document.createDocumentFragment();
-    for (const item of article.primary) appendDefinition(stats, prettyField(item.name), displayValue(item.value));
-    if (article.baseHardCost) appendDefinition(stats, "Base hard cost", article.baseHardCost);
-    if (article.workbenchId) appendDefinition(stats, "Workbench ID", article.workbenchId);
-    if (article.baseArticleId) appendDefinition(stats, "Base article ID", article.baseArticleId);
-    if (!stats.childNodes.length) appendDefinition(stats, "Primary parameters", "None configured");
+    for (const item of playerStats(article)) appendDefinition(stats, statLabels[item.name], displayValue(item.value));
+    if (article.baseHardCost) appendDefinition(stats, "基础水晶花费", article.baseHardCost);
+    if (!stats.childNodes.length) appendDefinition(stats, "物品属性", "暂无可展示的属性");
     elements.detailStats.replaceChildren(stats);
 
     const costs = document.createDocumentFragment();
     for (const cost of article.baseResourceCost) {
-      costs.append(text("li", `${cost.count} × ${cost.title} (#${cost.articleId})`));
+      const material = byId.get(cost.articleId);
+      costs.append(text("li", `${cost.count} × ${material ? articleTitle(material) : "未命名材料"}`));
     }
     elements.detailCosts.replaceChildren(costs);
     elements.detailCostSection.hidden = article.baseResourceCost.length === 0;
-
-    const source = document.createDocumentFragment();
-    appendDefinition(source, "Protobuf class", article.class);
-    appendDefinition(source, "Title localization key", article.titleKey || "—");
-    appendDefinition(source, "Description localization key", article.descriptionKey || "—");
-    appendDefinition(source, "Icon resource ID", article.iconResourceId || "—");
-    appendDefinition(source, "Type storage ID → enum", `${article.typeStorageId ?? "—"} → ${article.typeId}`);
-    appendDefinition(source, "Quality storage ID → enum", `${article.qualityStorageId ?? "—"} → ${article.qualityId ?? "—"}`);
-    appendDefinition(source, "Stack storage ID → enum", `${article.stackStorageId ?? "—"} → ${article.stackTypeId ?? "—"}`);
-    appendDefinition(source, "Mailbox whitelist", article.mailboxEligible ? "Eligible" : "Excluded");
-    appendDefinition(source, "Mailbox quantity", article.mailboxQuantityAdjustable ? "Adjustable stack" : "Fixed to one");
-    appendDefinition(source, "Mailbox exclusion reason", article.mailboxExclusionReason || "—");
-    appendDefinition(source, "Localization complete", article.localizationMissing ? "No" : "Yes");
-    elements.detailSource.replaceChildren(source);
 
     if (typeof elements.dialog.showModal === "function") elements.dialog.showModal();
     else elements.dialog.setAttribute("open", "");
