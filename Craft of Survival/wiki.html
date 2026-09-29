@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Craft of Survival 5.7 离线物品 Wiki</title>
+  <link rel="stylesheet" href="wiki-assets/wiki.css">
+  <script defer src="wiki-assets/wiki-data.js"></script>
+  <script defer src="wiki-assets/wiki-app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">跳到资料列表</a>
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">DETERMINISTIC · LOCAL-ONLY · 0.14906</p>
+      <h1>Craft of Survival <span>5.7 离线物品 Wiki</span></h1>
+      <p class="lede">默认只显示客户端明确允许进入普通背包、且已排除内部测试对象的物品。页面不会联网，也不会读取游戏存档。</p>
+    </div>
+    <div class="hero-stats" aria-label="资料统计">
+      <div><strong id="stat-articles">—</strong><span>可生成物品</span></div>
+      <div><strong id="stat-types">—</strong><span>客户端资料总数</span></div>
+      <div><strong id="stat-icons">—</strong><span>图标路径</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="currency-section" aria-labelledby="currency-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SETTINGS STORAGE</p>
+          <h2 id="currency-heading">配置货币</h2>
+        </div>
+        <p>四项均由 <code>SettingsStorageData</code> 解析；它们是账号级资源，不属于可投递的普通背包物品。</p>
+      </div>
+      <div id="currency-grid" class="currency-grid"></div>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalog-heading">
+      <div class="section-heading catalog-title">
+        <div>
+          <p class="eyebrow">BASE ARTICLE CATALOG</p>
+          <h2 id="catalog-heading">背包物品与资料表</h2>
+        </div>
+        <div class="catalog-links">
+          <a class="provenance-link" href="wiki-assets/mailbox-article-whitelist.json">邮箱生成白名单</a>
+          <a class="provenance-link" href="wiki-assets/provenance.json">查看来源清单</a>
+        </div>
+      </div>
+
+      <div class="controls" role="search">
+        <label class="search-field">
+          <span>搜索英文名、描述或 ID</span>
+          <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="例如 battleaxe、healing、#2286">
+        </label>
+        <label>
+          <span>生成范围</span>
+          <select id="eligibility-filter">
+            <option value="eligible" selected>可安全生成</option>
+            <option value="excluded">审计排除项</option>
+            <option value="all">全部客户端资料</option>
+          </select>
+        </label>
+        <label>
+          <span>物品大类</span>
+          <select id="group-filter"><option value="">全部物品大类</option></select>
+        </label>
+        <label>
+          <span>类别</span>
+          <select id="type-filter"><option value="">全部 17 类</option></select>
+        </label>
+        <label>
+          <span>品质</span>
+          <select id="quality-filter"><option value="">全部品质</option></select>
+        </label>
+        <label>
+          <span>排序</span>
+          <select id="sort-order">
+            <option value="id">ID（升序）</option>
+            <option value="title">英文名（A–Z）</option>
+            <option value="quality">品质</option>
+          </select>
+        </label>
+        <label>
+          <span>每页</span>
+          <select id="page-size">
+            <option value="30">30</option>
+            <option value="60" selected>60</option>
+            <option value="120">120</option>
+          </select>
+        </label>
+        <button id="clear-filters" class="quiet-button" type="button">清除筛选</button>
+      </div>
+
+      <div class="result-bar">
+        <p id="result-summary" aria-live="polite">正在载入本地资料…</p>
+        <div id="active-filters" class="active-filters" aria-hidden="true"></div>
+      </div>
+
+      <div id="results" class="article-grid" tabindex="-1"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <strong>没有匹配项目</strong>
+        <span>换一个关键词，或清除类别与品质筛选。</span>
+      </div>
+      <nav id="pagination" class="pagination" aria-label="分页"></nav>
+    </section>
+  </main>
+
+  <footer>
+    <p>Craft of Survival 5.7 / 2887 · deploy 0.14906 · 静态离线资料，不包含任何私人存档值。</p>
+  </footer>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-shell">
+      <button id="dialog-close" class="dialog-close" type="button" aria-label="关闭详情">×</button>
+      <div class="detail-visual">
+        <div id="detail-image-wrap" class="detail-image-wrap"></div>
+        <div id="detail-image-switch" class="image-switch" hidden>
+          <button type="button" data-icon-role="main" class="selected">默认</button>
+          <button type="button" data-icon-role="female">女性外观</button>
+        </div>
+      </div>
+      <div class="detail-copy">
+        <p id="detail-kicker" class="eyebrow"></p>
+        <h2 id="detail-title"></h2>
+        <p id="detail-description" class="detail-description"></p>
+        <div id="detail-badges" class="badges"></div>
+        <dl id="detail-stats" class="detail-stats"></dl>
+        <section id="detail-cost-section">
+          <h3>基础制作成本</h3>
+          <ul id="detail-costs"></ul>
+        </section>
+        <details>
+          <summary>本地数据来源与生成策略</summary>
+          <dl id="detail-source" class="source-fields"></dl>
+        </details>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">此离线 Wiki 需要浏览器启用本地 JavaScript 才能搜索和分页。</p></noscript>
+</body>
+</html>
