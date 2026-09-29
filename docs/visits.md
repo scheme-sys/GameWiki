@@ -4,8 +4,8 @@
 
 ## 统计范围
 
-- 仅当页面来源为 `https://scheme-sys.github.io`、路径为 `/LCZ-GameWiki/` 下列出的六个页面时发送请求。本地 `file:`、localhost、其他项目、未知页面及预览域名不计数。
-- `/LCZ-GameWiki/` 与 `/LCZ-GameWiki/index.html` 合并为同一个主页计数器。
+- 仅当页面来源为 `https://scheme-sys.github.io`、路径为 `/GameWiki/` 或 `/LCZ-GameWiki/` 下列出的六个页面时发送请求。这两个精确项目目录是同一个项目改名前后的允许地址。本地 `file:`、localhost、其他项目、未知页面及预览域名不计数。
+- 两个目录的主页（目录入口与 `index.html`）合并为同一个主页计数器；对应游戏子页也共用原有 key，改名后会继续累计，不会清零或分成两套数字。路径以目录边界匹配，`/GameWiki-other/` 等其他仓库不会被计入。
 - 每次新加载的可见页面，分别向项目总计数器和当前页面计数器发送一次增加请求。刷新会计数；返回浏览器保留的页面、切换搜索/筛选、改变 URL 锚点、重复执行脚本不会重复计数。
 - 使用项目专用的固定 key，与 `scheme-sys.github.io` 下其他仓库的流量分离。页面身份来自允许列表，不包含搜索参数或锚点。
 - 统计从首次部署此功能后开始，无法补算功能上线之前的访问量；显示的是页面浏览次数（PV），并非独立访客人数（UV）。
@@ -34,7 +34,7 @@
 
 ## 调整和添加页面
 
-1. 改域名或项目目录时，更新 `assets/site-stats.js` 的 `DEPLOYMENT`。
+1. 改域名或项目目录时，更新 `assets/site-stats.js` 的 `DEPLOYMENT.origin` 与 `DEPLOYMENT.basePaths`。允许目录需以 `/` 开始和结尾；只列出本项目的实际部署目录，保留现有 key 才能延续计数。
 2. 新增 Wiki 时，在 `PAGE_KEYS` 添加相对路径及稳定页面 key。
 3. 在新页面引入 `site-stats.css` 和 `site-stats.js`，并放入 `<div class="site-stats" data-site-stats></div>`。
 4. 如果页面设置了 CSP，`connect-src` 必须包含 `https://countapi.mileshilliard.com`，无需开放第三方 `script-src`。

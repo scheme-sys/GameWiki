@@ -5,6 +5,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { versionHtmlAssets } from './lib/version-html-assets.mjs';
 
 const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -93,6 +94,10 @@ try {
       fs.copyFileSync(source, target);
     }
     console.log(`Prepared ${sources.length} static files from the games.js registry. Metadata and development tools are excluded.`);
+    const htmlFiles = sources.filter((source) => path.extname(source).toLowerCase() === '.html')
+      .map((source) => path.join(stageRoot, path.relative(sourceRoot, source)));
+    const versioned = versionHtmlAssets(stageRoot, htmlFiles);
+    console.log(`Versioned ${versioned.references} local JS/CSS references in ${versioned.changedFiles} published HTML files.`);
   }
 } catch (error) {
   console.error(`Site configuration: ${error.message}`);

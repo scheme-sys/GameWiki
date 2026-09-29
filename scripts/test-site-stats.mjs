@@ -7,6 +7,7 @@ import { test } from 'node:test';
 
 const source = fs.readFileSync(new URL('../assets/site-stats.js', import.meta.url), 'utf8');
 const origin = 'https://scheme-sys.github.io/LCZ-GameWiki/';
+const legacyOrigin = 'https://scheme-sys.github.io/GameWiki/';
 const settle = async () => { for (let n = 0; n < 10; n++) await Promise.resolve(); };
 
 function environment(href, options = {}) {
@@ -70,7 +71,7 @@ test('production counts project and page once, without sending URL parameters or
   assert.equal(env.timers.size, 0);
 });
 
-test('all six routes share the project counter and have separate page counters', async () => {
+test('both project directories share all six page counters and the unchanged project counter', async () => {
   const cases = new Map([
     ['', 'home'], ['index.html', 'home'],
     ['Craft%20of%20Survival/wiki.html', 'craft'],
@@ -80,11 +81,22 @@ test('all six routes share the project counter and have separate page counters',
     ['Westland%20Survival/%E5%9F%BA%E5%9C%B0.html', 'westland_base'],
   ]);
   for (const [path, key] of cases) {
-    const env = environment(origin + path);
-    await settle();
-    assert.equal(env.requests.length, 2, path);
-    assert.ok(env.requests[0].url.endsWith('_site'), path);
-    assert.ok(env.requests[1].url.endsWith(`_page_${key}`), path);
+    const endpoints = [];
+    for (const base of [origin, legacyOrigin]) {
+      const env = environment(base + path + '?q=private-query#private-hash');
+      await settle();
+      assert.equal(env.requests.length, 2, base + path);
+      assert.equal(env.host.dataset.statsState, 'ready', base + path);
+      assert.ok(env.requests[0].url.endsWith('scheme_sys_lcz_gamewiki_v1_site'), base + path);
+      assert.ok(env.requests[1].url.endsWith(`scheme_sys_lcz_gamewiki_v1_page_${key}`), base + path);
+      for (const request of env.requests) {
+        assert.ok(!request.url.includes('private'));
+        assert.equal(request.init.referrerPolicy, 'no-referrer');
+        assert.equal(request.init.credentials, 'omit');
+      }
+      endpoints.push(env.requests.map((request) => request.url));
+    }
+    assert.deepEqual(endpoints[0], endpoints[1], `Both deployment names must use the same counters for ${path}`);
   }
 });
 
@@ -92,7 +104,11 @@ test('local files, previews, other repositories and unknown paths never send hit
   for (const url of [
     'file:///C:/GameWiki/index.html', 'http://localhost:4173/', 'http://127.0.0.1:4173/',
     'https://scheme-sys.github.io/another-project/', 'http://scheme-sys.github.io/LCZ-GameWiki/',
-    'https://preview.example/LCZ-GameWiki/', `${origin}404.html`, `${origin}%zz`,
+    'https://preview.example/LCZ-GameWiki/', 'https://preview.example/GameWiki/',
+    'http://scheme-sys.github.io/GameWiki/', 'https://scheme-sys.github.io/GameWiki-other/',
+    'https://scheme-sys.github.io/LCZ-GameWiki-other/', 'https://scheme-sys.github.io/another/GameWiki/',
+    `${origin}404.html`, `${origin}%zz`, `${legacyOrigin}404.html`, `${legacyOrigin}%zz`,
+    `${legacyOrigin}index.html/other`, `${legacyOrigin}Craft%20of%20Survival/unknown.html`,
   ]) {
     const env = environment(url);
     await settle();

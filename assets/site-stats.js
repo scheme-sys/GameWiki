@@ -8,7 +8,11 @@
   if (!hosts.length) return;
 
   // Keep these keys stable across releases; changing them starts new counters.
-  const DEPLOYMENT = { origin: "https://scheme-sys.github.io", basePath: "/LCZ-GameWiki/" };
+  const DEPLOYMENT = {
+    origin: "https://scheme-sys.github.io",
+    // Both repository names belong to this project and share the existing keys.
+    basePaths: ["/LCZ-GameWiki/", "/GameWiki/"],
+  };
   const COUNTER_API = "https://countapi.mileshilliard.com/api/v1/hit/";
   const KEY_PREFIX = "scheme_sys_lcz_gamewiki_v1_";
   const PAGE_KEYS = new Map([
@@ -73,8 +77,9 @@
   let pageKey;
   try {
     const current = new URL(window.location.href);
-    if (current.origin === DEPLOYMENT.origin && current.pathname.startsWith(DEPLOYMENT.basePath)) {
-      pageKey = PAGE_KEYS.get(decodeURIComponent(current.pathname.slice(DEPLOYMENT.basePath.length)));
+    if (current.origin === DEPLOYMENT.origin) {
+      const basePath = DEPLOYMENT.basePaths.find((path) => current.pathname.startsWith(path));
+      if (basePath) pageKey = PAGE_KEYS.get(decodeURIComponent(current.pathname.slice(basePath.length)));
     }
   } catch { /* A malformed or file URL is a preview, never a public visit. */ }
   if (!pageKey) {
