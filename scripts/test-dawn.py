@@ -4,12 +4,12 @@ from pathlib import Path
 from threading import Thread
 from urllib.parse import quote
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 import json, math, time, re, sys, os
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'.verification'/'dawn-ui'
+ARTIFACTS=TestArtifacts('dawn')
 SOURCE=json.loads((ROOT/'DawnofZombiewiki/data/catalog.json').read_text(encoding='utf-8'))
-OUT.mkdir(parents=True,exist_ok=True)
 class Quiet(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(ROOT)))
@@ -19,7 +19,8 @@ report={'passed':[],'errors':[],'csp':[],'external':[],'timings':{},'screenshots
 
 def passed(name):report['passed'].append(name);print('PASS '+name,flush=True)
 def capture(page,name):
- page.screenshot(path=str(OUT/(name+'.jpg')),full_page=False,quality=85);report['screenshots'].append(name+'.jpg')
+ path=ARTIFACTS.screenshot(page,name+'.jpg',full_page=False,quality=85)
+ if path:report['screenshots'].append(path)
 def route(page,name):
  started=time.perf_counter();page.evaluate('(route)=>{location.hash=route}',name);page.wait_for_function("target=>{const m=document.getElementById('main');return m.getAttribute('aria-busy')==='false'&&m.dataset.route===target}",arg=name.split('?')[0] if name.split('?')[0] in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search'] else 'home');page.wait_for_timeout(70)
  report['timings'].setdefault('routes',{})[name]=round((time.perf_counter()-started)*1000,1)
@@ -160,8 +161,9 @@ try:
   page.reload(wait_until='networkidle');expect(page.locator('.catalog-grid .item-card')).to_have_count(1)
   passed('Catalog search, detail, favorites and reload persistence')
   with page.expect_download() as download_event:page.locator('#export-csv').click()
-  download_event.value.save_as(str(OUT/'favorite-export.csv'))
-  assert name in (OUT/'favorite-export.csv').read_text(encoding='utf-8-sig')
+  exported=ARTIFACTS.path('favorite-export.csv')
+  download_event.value.save_as(str(exported))
+  assert name in exported.read_text(encoding='utf-8-sig')
   passed('Filtered player CSV downloads correctly')
   route(page,'weapon')
   page.locator('.catalog-grid [data-compare]').nth(0).click();page.locator('.catalog-grid [data-compare]').nth(1).click()
@@ -257,5 +259,5 @@ try:
   passed('Local maintenance image browser uses cleaned names and loads encoded image paths')
   browser.close()
 finally:
- server.shutdown();(OUT/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+ server.shutdown();ARTIFACTS.finish(report)
 print(json.dumps(report,ensure_ascii=False,indent=2))

@@ -4,12 +4,12 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 import json, os, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
 GAME_COUNT=len(re.findall(r'\bid: "[^"]+"',(ROOT/'assets/games.js').read_text(encoding='utf-8')))
-OUT=ROOT/'.verification/ldoe-ui'
-OUT.mkdir(parents=True,exist_ok=True)
+ARTIFACTS=TestArtifacts('ldoe')
 class Quiet(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(ROOT)))
@@ -34,7 +34,8 @@ def attach(page):
 def overflow(page):
  assert page.evaluate("()=>document.documentElement.scrollWidth<=innerWidth+1")
 def screenshot(page,name):
- page.screenshot(path=str(OUT/(name+'.png')));report['screenshots'].append(name+'.png')
+ path=ARTIFACTS.screenshot(page,name+'.png')
+ if path:report['screenshots'].append(path)
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True);report['browser']=browser.version
@@ -227,5 +228,5 @@ try:
   browser.close()
 finally:
  server.shutdown()
- (OUT/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+ ARTIFACTS.finish(report)
  print(json.dumps({'passed':len(report['passed']),'errors':report['errors'],'missing':report['missing'],'csp':report['csp']},ensure_ascii=False),flush=True)

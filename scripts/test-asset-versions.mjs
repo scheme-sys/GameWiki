@@ -1,4 +1,4 @@
-import test from 'node:test';
+import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -6,11 +6,10 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { versionHtmlAssets } from './lib/version-html-assets.mjs';
+import { createTestWorkspace } from './lib/test-workspace.mjs';
 
 const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const verification = path.join(repository, '.verification');
-fs.mkdirSync(verification, { recursive: true });
-const workspace = fs.mkdtempSync(path.join(verification, 'asset-versions-'));
+const workspace = createTestWorkspace('asset-versions', after);
 const digest = (value) => createHash('sha256').update(value).digest('hex');
 const read = (file) => fs.readFileSync(file, 'utf8');
 const write = (file, value) => { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, value); };

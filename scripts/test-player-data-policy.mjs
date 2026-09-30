@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { inspectPlayerData } from './lib/player-data-policy.mjs';
+import { createTestWorkspace } from './lib/test-workspace.mjs';
 
 test('Game implementation references and raw records are rejected, including nested object keys', () => {
   for (const value of [
@@ -34,15 +35,13 @@ test('The scanner reports locations without returning source values', () => {
     { location: '$.rows[0].source', reason: 'game code/archive filename' },
   ]);
 });
-test('CLI checks maintained JSON as well as browser payloads and supports split render data', async () => {
+test('CLI checks maintained JSON as well as browser payloads and supports split render data', async (t) => {
   const fs = await import('node:fs');
   const path = await import('node:path');
   const { spawnSync } = await import('node:child_process');
   const { fileURLToPath } = await import('node:url');
   const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-  const parent = path.join(repo, '.verification');
-  fs.mkdirSync(parent, { recursive: true });
-  const fixture = fs.mkdtempSync(path.join(parent, 'player-data-'));
+  const fixture = createTestWorkspace('player-data', (cleanup) => t.after(cleanup));
   const write = (name, source) => {
     const file = path.join(fixture, name);
     fs.mkdirSync(path.dirname(file), { recursive: true });

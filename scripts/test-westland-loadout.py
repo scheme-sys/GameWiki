@@ -15,10 +15,11 @@ import sys
 import traceback
 
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / ".verification" / "loadout-workspace"
+ARTIFACTS = TestArtifacts("westland-loadout")
 STORE = "westland-loadout-lab-v1"
 SCHEMA = "WLO-LOADOUT-LAB-1"
 
@@ -533,7 +534,6 @@ def main():
     parser.add_argument("--channels", nargs="+", default=["chrome", "msedge"])
     parser.add_argument("--only", help="Run only case names containing this substring")
     args = parser.parse_args()
-    OUT.mkdir(parents=True, exist_ok=True)
     server = Server(("127.0.0.1", 0), partial(Handler, directory=str(ROOT)))
     Thread(target=server.serve_forever, daemon=True).start()
     url = f"http://127.0.0.1:{server.server_port}/Westland%20Survival/westland_difficulty_design.html"
@@ -574,14 +574,13 @@ def main():
             checks.append("no JavaScript errors, missing assets, external requests or default 3D loads")
             if "main" in label:
                 page.locator("#lab-config").scroll_into_view_if_needed()
-                path = OUT / (label + ".png")
-                page.screenshot(path=str(path))
-                results["screenshots"].append(path.relative_to(ROOT).as_posix())
+                path = ARTIFACTS.screenshot(page, label + ".png")
+                if path:
+                    results["screenshots"].append(path)
             results["passed"].append({"case": label, "checks": checks, "evidence": evidence})
             print("PASS", label, flush=True)
         except Exception as error:
-            path = OUT / (label + "-failure.png")
-            page.screenshot(path=str(path))
+            ARTIFACTS.screenshot(page, label + "-failure.png")
             results["failed"].append({"case": label, "error": str(error), "traceback": traceback.format_exc(), "checks": checks, "evidence": evidence, "errors": errors, "external": external, "missing": missing})
             print("FAIL", label, str(error)[:500], flush=True)
         finally:
@@ -643,7 +642,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-        (OUT / "report.json").write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        ARTIFACTS.finish(results)
     print("Passed", len(results["passed"]), "failed", len(results["failed"]), flush=True)
     return bool(results["failed"])
 

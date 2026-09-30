@@ -4,10 +4,11 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 from playwright.sync_api import sync_playwright, expect
-import json, os, sys
+from test_artifacts import TestArtifacts
+import os, sys
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'.verification/grim-ui';OUT.mkdir(parents=True,exist_ok=True)
+ARTIFACTS=TestArtifacts('grim')
 class Quiet(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 class Server(ThreadingHTTPServer):request_queue_size=128
@@ -28,7 +29,9 @@ def attach(page):
  page.on('response',lambda r:report['missing'].append({'status':r.status,'url':r.url}) if r.status>=400 else None)
  page.add_init_script("window.__csp=[];document.addEventListener('securitypolicyviolation',e=>window.__csp.push({directive:e.effectiveDirective,uri:e.blockedURI}));")
 def overflow(page):assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
-def screenshot(page,name):page.screenshot(path=str(OUT/(name+'.png')));report['screenshots'].append(name+'.png')
+def screenshot(page,name):
+ path=ARTIFACTS.screenshot(page,name+'.png')
+ if path:report['screenshots'].append(path)
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True);report['browser']=browser.version
@@ -145,5 +148,5 @@ try:
   context.close();browser.close()
  if report['errors'] or report['missing'] or report['external'] or report['csp']:raise AssertionError(report)
 finally:
- server.shutdown();(OUT/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
+ server.shutdown();ARTIFACTS.finish(report)
 print('PASS Grim Soul browser regression; '+str(len(report['passed']))+' groups')

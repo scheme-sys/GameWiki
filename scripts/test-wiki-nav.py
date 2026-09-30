@@ -9,16 +9,15 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 from urllib.parse import quote, urlsplit, urljoin
-import json
 import os
 import sys
 import traceback
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / ".verification/menu/final"
-OUTPUT.mkdir(parents=True, exist_ok=True)
+ARTIFACTS = TestArtifacts("wiki-nav")
 PAGES = {
     "craft": "Craft of Survival/wiki.html",
     "dayr": "Day R Survival/wiki_dayR.html",
@@ -111,9 +110,9 @@ def check_menu(page):
 
 
 def screenshot(page, label, report):
-    target = OUTPUT / (label + ".png")
-    page.screenshot(path=str(target), full_page=False)
-    report["screenshots"].append(target.relative_to(ROOT).as_posix())
+    path = ARTIFACTS.screenshot(page, label + ".png", full_page=False)
+    if path:
+        report["screenshots"].append(path)
 
 
 def run_case(browser, browser_name, game, width, height, base, report, javascript=True):
@@ -208,7 +207,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-        (OUTPUT / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        ARTIFACTS.finish(report)
     print(f"Menu checks: {len(report['passed'])} passed / {len(report['failed'])} failed", flush=True)
     return 1 if report["failed"] else 0
 

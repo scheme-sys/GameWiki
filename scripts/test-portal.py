@@ -16,13 +16,13 @@ import traceback
 import sys
 sys.stdout.reconfigure(encoding="utf-8")
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 
 GAME_IDS = ("dayr", "craft", "westland", "dawn", "ldoe", "grimsoul")
 GAME_COUNT = len(GAME_IDS)
 POSITION_KEY = "lcz:positions-v4:" + ",".join(sorted(GAME_IDS))
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = Path(os.environ.get("LCZ_TEST_OUTPUT", str(ROOT / ".verification" / "portal"))).resolve()
-OUTPUT.mkdir(parents=True, exist_ok=True)
+ARTIFACTS = TestArtifacts("portal")
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -57,9 +57,9 @@ def icon_center(page, game="dayr"):
 
 
 def screenshot(page, name):
-    path = OUTPUT / f"{name}.jpg"
-    page.screenshot(path=str(path), full_page=True, quality=85)
-    results["screenshots"].append(path.relative_to(ROOT).as_posix())
+    path = ARTIFACTS.screenshot(page, f"{name}.jpg", full_page=True, quality=85)
+    if path:
+        results["screenshots"].append(path)
 
 
 def pause(page):
@@ -755,9 +755,8 @@ finally:
         results["failed"].append({"case":"Preview must not increment public counters", "error":json.dumps(results["counter_requests"])})
     else:
         results["passed"].append("Preview never requests the public counter API")
-    (OUTPUT / "results.json").write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
-    (OUTPUT / ("results-" + results.get("channel","chrome") + ".json")).write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    ARTIFACTS.finish(results, "results.json", aliases=("results-" + results.get("channel", "chrome") + ".json",))
 
-print(f"\n{len(results['passed'])} passed; {len(results['failed'])} failed. Results: {OUTPUT / 'results.json'}")
+print(f"\n{len(results['passed'])} passed; {len(results['failed'])} failed.")
 if results["failed"]:
     raise SystemExit(1)

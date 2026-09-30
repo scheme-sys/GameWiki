@@ -7,12 +7,12 @@ from pathlib import Path
 from threading import Thread
 from urllib.parse import quote
 from playwright.sync_api import sync_playwright, expect
-import json, os, re, sys, time
+from test_artifacts import TestArtifacts
+import os, re, sys, time
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[1]
 GAME=ROOT/'Westland Survival'
-OUT=ROOT/'.verification/lazy-westland'
-OUT.mkdir(parents=True,exist_ok=True)
+ARTIFACTS=TestArtifacts('westland-loading')
 sys.path.insert(0,str(GAME/'tools'))
 from player_schema import read_data
 INDEX=read_data(GAME/'wiki-assets/wiki/data/index.js')
@@ -64,7 +64,7 @@ try:
    data_bytes=sum(row['bytes'] for row in initial if '/wiki/data/' in row['url'])
    assert data_bytes<450000,data_bytes
    REPORT['initial'].append({'width':width,'bytes':sum(row['bytes'] for row in initial),'dataBytes':data_bytes,'localReadyMs':round((time.perf_counter()-started)*1000,1),'requests':len(initial)})
-   checked(page);page.screenshot(path=str(OUT/f'wiki-{width}.jpg'),quality=85)
+   checked(page);ARTIFACTS.screenshot(page,f'wiki-{width}.jpg',quality=85)
    passed(f'{width}px first page: 60 records, full counts/filters, no full index or chunks')
    target=INDEX['inventory']['items'][-1]
    page.locator('#search').fill(target['id']);full(page)
@@ -165,6 +165,5 @@ except Exception as error:
  REPORT['status']='FAIL';REPORT['failure']=str(error)
  raise
 finally:
- (OUT/'wiki-report.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf-8')
- (OUT/('wiki-report-'+os.environ.get('LCZ_BROWSER','chrome')+'.json')).write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf-8')
  server.shutdown()
+ ARTIFACTS.finish(REPORT,'wiki-report.json',aliases=('wiki-report-'+os.environ.get('LCZ_BROWSER','chrome')+'.json',))

@@ -197,23 +197,13 @@ python grimsoul_Wiki/tools/verify_data.py
 
 检查包含统一游戏配置、入口文件、相对链接、CSS 资源、全部 JavaScript 语法、外置图像路径、Dawn 玩家下载及图片映射、Westland、LDOE 与 Grim Soul 按需数据块、各 Wiki 的完整切换导航。它不会访问外部链接，也不会代替浏览器中的拖动、长按、搜索、键盘与移动端验证。
 
-生成与 GitHub Actions 完全相同的发布文件并检查：
+本地预览直接使用仓库源码，无需复制整站：
 
 ```sh
-node scripts/check-site.mjs --stage .verification/site-preview
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-目标目录须不存在或为空；打包不会删除原有文件。预览这个目录：
-
-```sh
-python -m http.server 4173 --bind 127.0.0.1 --directory .verification/site-preview
-```
-
-也可以单独检查已经生成的发布目录：
-
-```sh
-node scripts/check-site.mjs --root .verification/site-preview
-```
+打开 <http://127.0.0.1:4173/>。常规检查直接运行上面的源码检查命令；GitHub Actions 会在临时运行环境中生成并验证 `_site`，再上传正式发布文件。本地如确需核验发布副本，应使用临时目录，并在检查结束后清除，不保留多份预览或历史打包目录。
 
 ### 可选：浏览器交互检查
 
@@ -229,4 +219,6 @@ python scripts/test-ldoe.py
 python scripts/test-grim.py
 ```
 
-脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-music.py` 检查自动启播、手动静音、三乐章衔接与连续导航；`test-wiki-nav.py` 检查九个 Wiki 资料入口（含 Westland 难度分析页）的手机菜单位置、滚动、旋转和链接点击。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航，输出位于 `.verification/portal/`；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开，输出位于 `.verification/dawn-ui/`；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试，输出位于 `.verification/ldoe-ui/`；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览，输出位于 `.verification/grim-ui/`。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+脚本启动独立的无头浏览器和临时本地 HTTP 服务。`test-music.py` 检查自动启播、手动静音、三乐章衔接与连续导航；`test-wiki-nav.py` 检查九个 Wiki 资料入口（含 Westland 难度分析页）的手机菜单位置、滚动、旋转和链接点击。`test-portal.py` 检查主页拖动、手机布局、搜索与跨游戏导航；`test-dawn.py` 检查 Dawn 栏目、收藏、对比、下载、快速切页、键盘操作及离线打开；`test-ldoe.py` 检查 LDOE 分类、详情、配方数量、收藏、比较、手机操作与加载失败重试；`test-grim.py` 检查 Grim Soul 各分类、完整详情、关联、搜索、收藏、手机和离线浏览。可通过环境变量 `LCZ_BROWSER` 指定本机其他可用的 Chromium 浏览器 channel，默认值为 `chrome`。这些依赖仅用于开发验证，网站发布不需要安装。
+
+验证结果默认输出到终端，不保存截图或 JSON 报告；测试必需的临时文件在退出时清理。只有明确需要保留诊断结果时才设置 `LCZ_TEST_OUTPUT` 指定输出目录，用完后删除。不要积累 `.verification/`、整站预览副本或一次性检查文件。

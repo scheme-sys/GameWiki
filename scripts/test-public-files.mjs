@@ -1,16 +1,15 @@
-import test from 'node:test';
+import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { isPublicFile } from './lib/public-files.mjs';
+import { createTestWorkspace } from './lib/test-workspace.mjs';
 
 const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const checker = path.join(repository, 'scripts/check-site.mjs');
-const verification = path.join(repository, '.verification');
-fs.mkdirSync(verification, { recursive: true });
-const workspace = fs.mkdtempSync(path.join(verification, 'public-files-'));
+const workspace = createTestWorkspace('public-files', after);
 const excluded = [
   'DawnofZombiewiki/materials.html', 'DawnofZombiewiki/materials.js',
   'DawnofZombiewiki/data/media.js', 'DawnofZombiewiki/data/catalog.json',

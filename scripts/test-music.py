@@ -9,13 +9,13 @@ from threading import Thread
 from urllib.parse import quote, urlsplit
 import json, os, re, sys, traceback
 from playwright.sync_api import sync_playwright, expect
+from test_artifacts import TestArtifacts
 
 sys.stdout.reconfigure(encoding='utf-8')
 REPOSITORY = Path(__file__).resolve().parents[1]
 ROOT = Path(os.environ.get('LCZ_SITE_ROOT',str(REPOSITORY))).resolve()
 PREFIX = os.environ.get('LCZ_SITE_PREFIX','/')
-OUT = REPOSITORY / '.verification/music' / os.environ.get('LCZ_MUSIC_REPORT','source')
-OUT.mkdir(parents=True, exist_ok=True)
+ARTIFACTS = TestArtifacts('music')
 class Handler(SimpleHTTPRequestHandler):
     def log_message(self, *args): pass
     def translate_path(self,path):
@@ -212,31 +212,34 @@ def phone(page, context):
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
         box=page.locator('.lcz-music-toggle').bounding_box()
         assert box['x']>=0 and box['x']+box['width']<=320
-        page.screenshot(path=str(OUT/('mobile-'+path.split('/')[0].replace(' ','-')+'.jpg')),quality=85)
+        ARTIFACTS.screenshot(page,'mobile-'+path.split('/')[0].replace(' ','-')+'.jpg',quality=85)
     load(page);start(page)
     page.locator('.world[data-game="dawn"] a').tap();frame=frame_ready(page,'DawnofZombiewiki/index.html')
     assert page.evaluate('LCZMusic.snapshot().playing')
     expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
     frame.locator('.lcz-music-toggle').tap()
 
-with sync_playwright() as p:
-    browser=p.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True)
-    for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True)]:
-        if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
-        context=browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
-        page=context.new_page()
-        page.on('pageerror',lambda e:report['errors'].append(str(e)))
-        page.on('response',lambda r:report['missing'].append(r.url) if r.status>=400 else None)
-        page.on('request',lambda r:report['external'].append(r.url) if not r.url.startswith(BASE) else None)
-        try:
-            fn(page,context);report['passed'].append(name);print('PASS '+name,flush=True)
-        except Exception:
-            report['failed'].append({'name':name,'error':traceback.format_exc()});print('FAIL '+name+'\n'+traceback.format_exc(),flush=True)
-            print(page.evaluate('()=>({player:window.LCZMusic?.snapshot(),audio:[...document.querySelectorAll("audio")].map(a=>({src:a.src,current:a.currentTime,duration:a.duration,paused:a.paused,ready:a.readyState,error:a.error?.message}))})'),flush=True)
-            page.screenshot(path=str(OUT/('failure-'+name.replace(' ','-')+'.jpg')))
-        finally:context.close()
-    browser.close()
-server.shutdown()
-(OUT/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+try:
+    with sync_playwright() as p:
+        browser=p.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True)
+        for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True)]:
+            if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
+            context=browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
+            page=context.new_page()
+            page.on('pageerror',lambda e:report['errors'].append(str(e)))
+            page.on('response',lambda r:report['missing'].append(r.url) if r.status>=400 else None)
+            page.on('request',lambda r:report['external'].append(r.url) if not r.url.startswith(BASE) else None)
+            try:
+                fn(page,context);report['passed'].append(name);print('PASS '+name,flush=True)
+            except Exception:
+                report['failed'].append({'name':name,'error':traceback.format_exc()});print('FAIL '+name+'\n'+traceback.format_exc(),flush=True)
+                print(page.evaluate('()=>({player:window.LCZMusic?.snapshot(),audio:[...document.querySelectorAll("audio")].map(a=>({src:a.src,current:a.currentTime,duration:a.duration,paused:a.paused,ready:a.readyState,error:a.error?.message}))})'),flush=True)
+                ARTIFACTS.screenshot(page,'failure-'+name.replace(' ','-')+'.jpg')
+            finally:context.close()
+        browser.close()
+finally:
+    server.shutdown()
+    server.server_close()
+    ARTIFACTS.finish(report)
 print(json.dumps({'passed':len(report['passed']),'failed':len(report['failed']),'errors':report['errors'],'missing':report['missing'],'external':report['external']},ensure_ascii=False))
 sys.exit(bool(report['failed'] or report['errors'] or report['missing'] or report['external']))
