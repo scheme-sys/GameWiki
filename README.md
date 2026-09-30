@@ -11,6 +11,7 @@
 - **动态**：气泡轻微漂移，拖动时跟随指针、允许重叠与穿过，松手后约 1.1 秒柔和分离。系统开启“减少动态效果”时停止漂移；切到后台、打开搜索或介绍卡时也自动停帧。主页不放置暂停、重置按钮或操作提示条。
 - **位置**：桌面、平板、手机竖屏和横屏分别保存摆放锚点。漂移不会改变保存的位置。游戏目录增加或减少时会使用新的初始排列，避免沿用旧布局挤压新气泡。
 - **查找**：搜索支持中文展示名、英文名称和关键词，也可以从游戏目录访问各个百科与工具。
+- **实体代码**：各游戏图鉴在实体名称下方提供已核实的游戏代码，长代码以单行省略显示，点击复制图标仍会复制完整代码，也可以用代码搜索。一个条目对应多个变体时可展开其余代码；配方与产物代码使用各自标签。未核实的代码与非实体攻略不填造编号。
 
 主页左上角显示 LCZ、群 QQ：1067536816 和访问统计。点击群号打开二维码小窗，可保存原图；图片只在首次打开时加载。二维码原图保存在 `assets/community/qq-group-1067536816.jpg`，更新时替换该文件；更换群号需同步更新页面与图片。右上角搜索支持 `/` 快捷键；介绍卡、搜索面板与访问统计提示共用深色直角矩形外框。
 
@@ -18,7 +19,7 @@
 
 ## 星空与背景音乐
 
-主页参考 [Yujie Luo 网站](https://yujieluo96.github.io/) 的粒子运动与距离连线机制，使用独立实现的 Canvas 2D 星空，不依赖外部粒子库。桌面约 30 fps、手机约 24 fps，限制星点数量与绘制分辨率；后台、弹窗、拖拽和系统减少动态效果时暂停，Canvas 不可用时保留 SVG 背景。
+主页参考 [Yujie Luo 网站](https://yujieluo96.github.io/) 的粒子运动与距离连线机制，使用独立实现的 Canvas 2D 星空，不依赖外部粒子库。桌面约 30 fps、手机约 24 fps，限制星点数量与绘制分辨率；后台、弹窗、拖拽和系统减少动态效果时暂停，Canvas 不可用时保留 SVG 背景。 远景星尘在尺寸变化时绘制到内存缓存，少量近景亮星使用短光芒；静态蓝紫星云由 CSS 渐变生成。字标参考现有 LCZ 徽章的衬线与金属分面，气泡使用同一套银青环边和玻璃反射，均不增加图片或字体下载。
 
 主页初始不播放音乐，点击进入游戏时自动启播，也可点击顶部音符控制。播放贝多芬《月光奏鸣曲》三个乐章，依次循环并柔和衔接；光晕跟随实际音频强弱，暂停后暗淡。录音由 Paul Pitman 演奏、Musopen 提供，录音本身已授权公有领域；来源与摘要见 [音频说明](assets/music/README.md)。
 
@@ -104,6 +105,7 @@ assets/starfield.*            独立星点运动、连线与低开销绘制
 assets/music-player.*         按需音乐、衔接和顶部控件
 assets/site-shell.*           播放时保持音频的站内导航
 assets/music/                 三乐章录音及来源许可
+assets/entity-code.*           实体代码、变体展开与独立复制控件
 assets/wiki-nav.*              游戏页面的统一导航
 assets/community-panel.*       Wiki 与 404 页共用的QQ群入口和按需二维码弹窗
 assets/site-stats.*            正式站点的参考访问统计
@@ -185,6 +187,7 @@ python grimsoul_Wiki/tools/verify_data.py
 node scripts/check-site.mjs
 node scripts/test-bubble-physics.cjs
 node scripts/test-site-stats.mjs
+node scripts/test-entity-code.mjs
 node scripts/test-site-security.mjs
 node scripts/test-asset-versions.mjs
 node scripts/test-public-files.mjs

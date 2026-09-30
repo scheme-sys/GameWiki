@@ -22,6 +22,7 @@ test('Game implementation references and raw records are rejected, including nes
 test('Player values, stable links, local images and rendering mappings remain valid', () => {
   assert.deepEqual(inspectPlayerData({
     id: 5, item_id: 5, key: 'damage', recipeIds: [3], name: 'Example sword',
+    entityCode: 'weapon_hunter_sword', entityCodes: ['sword_1', 'sword_2'],
     stats: [{ key: 'damage', value: 120 }], rawDamage: 120,
     image: 'assets/images/weapon.png', sha256: 'a'.repeat(64),
     avatar: { parts: { head: { mesh: 'mesh_1', material: 'mat_2' } },

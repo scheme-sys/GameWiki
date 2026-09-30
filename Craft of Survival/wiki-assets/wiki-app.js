@@ -29,6 +29,7 @@
     imageSwitch: $("detail-image-switch"),
     detailKicker: $("detail-kicker"),
     detailTitle: $("detail-title"),
+    detailCode: $("detail-code"),
     detailDescription: $("detail-description"),
     detailBadges: $("detail-badges"),
     detailStats: $("detail-stats"),
@@ -162,6 +163,7 @@
       const copy = document.createElement("div");
       copy.className = "currency-copy";
       copy.append(text("span", currency.label), text("strong", currency.title));
+      copy.insertAdjacentHTML("beforeend", window.LCZEntityCode.render(currency.articleId));
       card.append(copy);
       if (currencyIcons[currency.articleId]) {
         const image = document.createElement("img");
@@ -203,10 +205,8 @@
   }
 
   function createCard(article) {
-    const card = document.createElement("button");
-    card.type = "button";
+    const card = document.createElement("article");
     card.className = "article-card";
-    card.setAttribute("aria-label", `查看 ${articleTitle(article)}`);
     const visual = document.createElement("div");
     visual.className = "card-image";
     visual.append(imageOrPlaceholder(article.icon, articleTitle(article)));
@@ -225,9 +225,18 @@
     for (const item of playerStats(article).slice(0, 2)) {
       stats.append(text("span", `${statLabels[item.name]} ${displayValue(item.value)}`));
     }
-    body.append(meta, text("h3", articleTitle(article)), description, stats);
+    const heading = document.createElement("h3");
+    const open = text("button", articleTitle(article), "card-title-action");
+    open.type = "button";
+    open.setAttribute("aria-label", `查看 ${articleTitle(article)}`);
+    heading.append(open);
+    body.append(meta, heading);
+    body.insertAdjacentHTML("beforeend", window.LCZEntityCode.render(article.id));
+    body.append(description, stats);
     card.append(visual, body);
-    card.addEventListener("click", () => openDetail(article));
+    card.addEventListener("click", (event) => {
+      if (!event.target.closest("[data-entity-copy], .lcz-entity-code")) openDetail(article);
+    });
     return card;
   }
 
@@ -336,6 +345,7 @@
     state.currentArticle = article;
     elements.detailKicker.textContent = `${article.wikiGroup} · ${typeLabel(article.type)}`;
     elements.detailTitle.textContent = articleTitle(article);
+    elements.detailCode.innerHTML = window.LCZEntityCode.render(article.id);
     elements.detailDescription.textContent = articleDescription(article);
     setDetailImage(article, "main");
     elements.imageSwitch.hidden = !article.femaleIcon;

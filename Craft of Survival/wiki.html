@@ -11,6 +11,8 @@
   <meta name="theme-color" content="#131a1c">
   <link rel="stylesheet" href="../assets/site-shell.css">
   <link rel="stylesheet" href="../assets/music-player.css">
+  <link rel="stylesheet" href="../assets/entity-code.css">
+  <script defer src="../assets/entity-code.js"></script>
   <script defer src="../assets/site-shell.js"></script>
   <script defer src="../assets/music-player.js"></script>
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -51,7 +53,7 @@
         <h1>Craft of<br><span class="hero-title-last">Survival<span class="title-dot">.</span></span></h1>
         <p class="hero-subtitle">生存工艺<span>玩家百科</span></p>
         <p class="lede">每一次远行，都从充分准备开始。<br>翻阅武器、装备与物资，找到下一段旅途需要的答案。</p>
-        <div class="hero-actions"><a class="hero-primary" href="#catalog-heading">探索物品图鉴 <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#currency-heading">查看游戏货币 <span aria-hidden="true">→</span></a></div>
+        <div class="hero-actions"><a class="hero-primary" href="#catalog-heading">探索物品图鉴</a><a class="hero-secondary" href="#currency-heading">查看游戏货币 <span aria-hidden="true">→</span></a></div>
       </div>
     </div>
     <div class="hero-stats" aria-label="资料统计">
@@ -85,8 +87,8 @@
 
       <div class="controls" role="search">
         <label class="search-field">
-          <span>搜索物品名称或说明</span>
-          <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="搜索名称、说明或物品编号…">
+          <span>搜索物品名称、说明或实体代码</span>
+          <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="搜索名称、说明或实体代码…">
         </label>
         <label>
           <span>收录范围</span>
@@ -160,6 +162,7 @@
       <div class="detail-copy">
         <p id="detail-kicker" class="eyebrow"></p>
         <h2 id="detail-title"></h2>
+        <div id="detail-code"></div>
         <p id="detail-description" class="detail-description"></p>
         <div id="detail-badges" class="badges"></div>
         <dl id="detail-stats" class="detail-stats"></dl>

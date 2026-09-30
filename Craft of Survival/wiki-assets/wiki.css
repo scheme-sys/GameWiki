@@ -77,3 +77,19 @@ dialog{width:min(970px,calc(100% - 32px));max-height:calc(100vh - 32px);max-heig
   .detail-copy .eyebrow{font-size:10px}
 }
 @media print{.dialog-toolbar{display:none}}
+
+/* Keep the code line independent from the native detail button. */
+.article-card{cursor:pointer}
+.card-title-action{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;line-height:inherit;cursor:pointer}
+.card-title-action:focus-visible{outline:2px solid var(--ember-soft);outline-offset:4px;border-radius:2px}
+.article-card:focus-within{border-color:#b3a07680}
+.card-body .lcz-entity-code{margin:0 0 10px}
+.currency-copy .lcz-entity-code{margin-top:10px;max-width:100%}
+#detail-code{margin:10px 0 0}
+
+@media(max-width:620px){
+.card-body .lcz-entity-code,.currency-copy .lcz-entity-code{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:5px;row-gap:1px;align-items:start}
+.card-body .lcz-entity-code .lcz-entity-code__label,.currency-copy .lcz-entity-code .lcz-entity-code__label{grid-column:1/-1;font-size:9px}
+.card-body .lcz-entity-code .lcz-entity-code__value,.currency-copy .lcz-entity-code .lcz-entity-code__value{grid-column:1;grid-row:2;align-self:center}
+.card-body .lcz-entity-code .lcz-entity-code__copy,.currency-copy .lcz-entity-code .lcz-entity-code__copy{grid-column:2;grid-row:2;align-self:center}
+}

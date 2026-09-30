@@ -11,6 +11,8 @@
   <title>DAY R — 废土档案 / 游戏 Wiki</title>
   <link rel="stylesheet" href="../assets/site-shell.css">
   <link rel="stylesheet" href="../assets/music-player.css">
+  <link rel="stylesheet" href="../assets/entity-code.css">
+  <script defer src="../assets/entity-code.js"></script>
   <script defer src="../assets/site-shell.js"></script>
   <script defer src="../assets/music-player.js"></script>
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -86,7 +88,7 @@
       </section>
       <section id="catalog" aria-labelledby="catalogTitle">
         <div class="section-head"><div><div class="section-kicker" id="sectionKicker">SUPPLIES & EQUIPMENT</div><h2 id="catalogTitle">全部物品 <span>ITEM INDEX</span></h2><p class="section-desc" id="sectionDescription">从一枚螺母到一把步枪，寻找你需要的生存物资。</p></div><div class="result-readout" id="catalogReadout">CATALOG / —</div></div>
-        <div class="filters"><div class="filter-row"><div class="search-wrap"><label class="sr-only" for="search">搜索名称、英文名称或说明</label><svg aria-hidden="true"><use href="#i-search"/></svg><input class="search" type="search" id="search" placeholder="搜索名称、英文名称或说明…" autocomplete="off" spellcheck="false"><button class="search-clear" id="clearSearch" aria-label="清除搜索" hidden><svg aria-hidden="true"><use href="#i-cross"/></svg></button><kbd class="search-shortcut" aria-hidden="true">/</kbd></div><label class="sr-only" for="categorySelect">筛选分类</label><select class="filter-select" id="categorySelect"><option value="">全部分类</option></select><label class="sr-only" for="sortSelect">排序方式</label><select class="filter-select sort-select" id="sortSelect"><option value="original">默认排序</option><option value="name">名称 A → Z</option><option value="category">按分类排序</option></select></div><div class="chip-row" id="chipRow"></div></div>
+        <div class="filters"><div class="filter-row"><div class="search-wrap"><label class="sr-only" for="search">搜索名称、实体代码或说明</label><svg aria-hidden="true"><use href="#i-search"/></svg><input class="search" type="search" id="search" placeholder="搜索名称、实体代码或说明…" autocomplete="off" spellcheck="false"><button class="search-clear" id="clearSearch" aria-label="清除搜索" hidden><svg aria-hidden="true"><use href="#i-cross"/></svg></button><kbd class="search-shortcut" aria-hidden="true">/</kbd></div><label class="sr-only" for="categorySelect">筛选分类</label><select class="filter-select" id="categorySelect"><option value="">全部分类</option></select><label class="sr-only" for="sortSelect">排序方式</label><select class="filter-select sort-select" id="sortSelect"><option value="original">默认排序</option><option value="name">名称 A → Z</option><option value="category">按分类排序</option></select></div><div class="chip-row" id="chipRow"></div></div>
         <div class="list-meta"><span id="resultsText" role="status" aria-live="polite" aria-atomic="true"></span><span>点击条目查看完整档案 <span class="dot-sep">/</span> <span class="mono">48 / PAGE</span></span></div>
         <div class="grid" id="cardGrid"></div>
         <nav class="pagination" aria-label="档案分页"><div class="page-readout" id="pageReadout"></div><div class="page-buttons" id="pageButtons"></div></nav>

@@ -1,10 +1,33 @@
 /* A single visible document; the audio owner survives in the outer page. */
-.lcz-content-host { position: fixed; inset: 0; z-index: 500; background: #0b111b; }
+.lcz-content-host { position: fixed; inset: 0; z-index: 500; background: transparent; pointer-events: none; }
 .lcz-content-host[hidden] { display: none !important; }
-.lcz-content-frame { display: block; width: 100%; height: 100%; border: 0; background: #0b111b; }
+.lcz-content-frame { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: #0b111b; pointer-events: auto; }
+.lcz-content-frame.lcz-frame-pending { visibility: hidden; pointer-events: none; }
 body.lcz-shell-mode { overflow: hidden !important; }
 body.lcz-shell-mode > :not(.lcz-content-host):not(.lcz-audio-owner) { display: none !important; }
-.lcz-route-note { position: fixed; z-index: 501; left: 50%; top: 22px; transform: translateX(-50%); padding: 10px 18px; color: #c7d6e4; border: 1px solid #93acbe42; background: #101a28f5; font: 12px/1.6 "Segoe UI","Microsoft YaHei",sans-serif; box-shadow: 0 8px 35px #0005; }
+.lcz-route-note { pointer-events: auto; position: fixed; z-index: 501; left: 50%; top: 22px; transform: translateX(-50%); padding: 10px 18px; color: #c7d6e4; border: 1px solid #93acbe42; background: #101a28f5; font: 12px/1.6 "Segoe UI","Microsoft YaHei",sans-serif; box-shadow: 0 8px 35px #0005; }
 .lcz-route-note a { color: #bce9dd; margin-left: 12px; }
 .lcz-audio-owner { display: none !important; }
 @media print { .lcz-route-note { display: none !important; } }
+
+.lcz-route-focus:focus { outline: none; }
+/* A quiet top edge acknowledges loading while the current page stays usable. */
+.lcz-content-host[data-state="loading"]:before {
+  content: ""; position: absolute; z-index: 2; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg,transparent,#a9d9df99 48%,#c5c7e666 55%,transparent);
+  transform-origin: left; animation: lcz-route-progress 1.8s ease-in-out infinite;
+}
+@keyframes lcz-route-progress { 0%,100% { opacity: .3; transform: scaleX(.35); } 50% { opacity: .85; transform: scaleX(1); } }
+/* Muted, ordinary same-origin links keep native navigation and gain a dissolve
+   in browsers supporting cross-document View Transitions. No delayed redirects. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: lcz-page-out 240ms ease-out both; }
+  ::view-transition-new(root) { animation: lcz-page-in 280ms cubic-bezier(.22,.61,.36,1) both; }
+}
+@keyframes lcz-page-out { to { opacity: 0; } }
+@keyframes lcz-page-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .lcz-content-host[data-state="loading"]:before { animation: none; opacity: .55; }
+  @view-transition { navigation: none; }
+}

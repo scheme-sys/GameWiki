@@ -264,3 +264,14 @@ main { scroll-margin-top: 90px; }
  .materials-page .media-tile{padding:10px}
  .materials-page .media-tile img{height:135px}
 }
+
+/* Entity identifiers sit beneath titles without changing card navigation. */
+.card-title-button { padding: 0; border: 0; border-radius: 2px; background: none; color: inherit; font: inherit; text-align: left; overflow-wrap: anywhere; }
+.card-title-button:hover { color: var(--accent); }
+.card-main, .card-open { cursor: pointer; }
+.item-meta, .card-info, .detail-title { min-width: 0; }
+.item-meta .lcz-entity-code, .card-info .lcz-entity-code { margin: 0 0 10px; }
+
+.item-meta .lcz-entity-code, .card-info .lcz-entity-code { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 7px; align-items: start; }
+.item-meta .lcz-entity-code__label, .card-info .lcz-entity-code__label { grid-column: 1 / -1; }
+.item-meta .lcz-entity-code__value, .card-info .lcz-entity-code__value { min-width: 0; }

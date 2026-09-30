@@ -7,8 +7,8 @@
     {
       "path": "README.md",
       "hashMode": "utf8-lf",
-      "bytes": 3384,
-      "sha256": "0f3cd8bd285a6b500d6952b4af907c68abea3b8d68be49d2c56a10033b23d01c"
+      "bytes": 3624,
+      "sha256": "a6f6a4fc083d962f29ae6a09294eb909728918a221dfb87ec8849ccf3641c4ae"
     },
     {
       "path": "wiki-assets/data/chunks/b0.179071c50cc1a612.js",
@@ -7471,8 +7471,8 @@
     {
       "path": "wiki-assets/wiki-app.js",
       "hashMode": "utf8-lf",
-      "bytes": 19233,
-      "sha256": "b2a26f87904d0e409db5f15790f0e5b0151b8dec2091473de41d00329f900d42"
+      "bytes": 19752,
+      "sha256": "29680b63141ba2276efd0d0097bf1c844a06780fb214c11d32097f19a718ed61"
     },
     {
       "path": "wiki-assets/wiki-data.js",
@@ -7489,14 +7489,14 @@
     {
       "path": "wiki-assets/wiki.css",
       "hashMode": "utf8-lf",
-      "bytes": 23157,
-      "sha256": "61a21807fc1ee35d97707690a2608056bf1ccd3581fc14413916d2a1156af6fd"
+      "bytes": 24351,
+      "sha256": "a7718049e9a4086326c978a6cff8d1f464bd7366f8c62e535629e4c928b14fef"
     },
     {
       "path": "wiki.html",
       "hashMode": "utf8-lf",
-      "bytes": 8794,
-      "sha256": "9681a4ec79da01614c904b95143894119843733bb18a87f1807dc5b4d81ffec6"
+      "bytes": 8962,
+      "sha256": "b100bc833c2f7ea560b71fa00b9fc3b2aae2f553ee686d4bf764e0d8fa8a11fc"
     }
   ]
 }

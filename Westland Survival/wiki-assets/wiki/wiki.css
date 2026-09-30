@@ -462,3 +462,11 @@ dialog::backdrop{background:#070d10d9;backdrop-filter:blur(6px)}
   .view-switch button,.pagination button { min-width:44px; min-height:44px; }
   #detail .close { width:44px; height:44px; min-width:44px; min-height:44px; }
 }
+
+/* Reserve a full line for long inventory identifiers on entity cards. */
+.item-card .lcz-entity-code{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 4px;margin:8px 0}
+.item-card .lcz-entity-code__label{grid-column:1/-1}
+.item-card .lcz-entity-code__value{grid-column:1;grid-row:2}
+.item-card .lcz-entity-code__copy{grid-column:2;grid-row:2;align-self:start}
+.list-item>div:last-child{min-width:0;max-width:340px}
+.modal-title>.lcz-entity-code{margin:9px 0}

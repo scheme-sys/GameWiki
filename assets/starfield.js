@@ -17,6 +17,11 @@
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
   const palette = ['190,215,235', '157,191,224', '183,217,212', '223,207,181'];
+  // Distant dust is painted once per resize, separate from the moving link field.
+  // Keep it in memory: no image downloads, extra animation loop or saved assets.
+  const dustCanvas = document.createElement('canvas');
+  let dustContext;
+  try { dustContext = dustCanvas.getContext('2d', { alpha: true }); } catch (_) { /* Optional depth layer. */ }
   const stars = [];
   const links = [];
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
@@ -38,6 +43,33 @@
       dpr: Math.min(devicePixelRatio || 1, compact ? 1 : 1.5,
         Math.sqrt((compact ? 700000 : 2600000) / (width * height)))
     };
+  }
+
+  function paintDistantSky() {
+    if (!dustContext) return;
+    const dpr = Math.min(settings.dpr, 1);
+    dustCanvas.width = Math.max(1, Math.round(width * dpr));
+    dustCanvas.height = Math.max(1, Math.round(height * dpr));
+    dustContext.setTransform(dustCanvas.width / width, 0, 0, dustCanvas.height / height, 0, 0);
+    const count = Math.round(clamp(width * height / 4300, settings.compact ? 72 : 140, settings.compact ? 130 : 360));
+    // Stable normalized positions keep the distant sky calm when the screen rotates.
+    const noise = (index, salt) => {
+      const value = Math.sin(index * 127.1 + salt * 311.7) * 43758.5453;
+      return value - Math.floor(value);
+    };
+    for (let i = 0; i < count; i++) {
+      const x = noise(i, 1);
+      const spread = (noise(i, 3) + noise(i, 4) + noise(i, 5) - 1.5) * .23;
+      const y = i % 3 ? .80 - x * .60 + spread : noise(i, 2);
+      if (y < 0 || y > 1) continue;
+      const edge = ease(clamp(Math.min(x, 1 - x, y, 1 - y) * 20, 0, 1));
+      dustContext.fillStyle = i % 13 === 0 ? 'rgb(211,203,189)' : 'rgb(157,184,215)';
+      dustContext.globalAlpha = (.10 + noise(i, 6) * .23) * edge;
+      dustContext.beginPath();
+      dustContext.arc(x * width, y * height, .35 + noise(i, 7) * .48, 0, Math.PI * 2);
+      dustContext.fill();
+    }
+    dustContext.globalAlpha = 1;
   }
 
   function createStar() {
@@ -132,6 +164,7 @@
 
   function draw(delta = 0) {
     context.clearRect(0, 0, width, height);
+    if (dustContext) context.drawImage(dustCanvas, 0, 0, width, height);
     context.lineWidth = .65;
     context.strokeStyle = 'rgb(145,183,215)';
     const fade = 1 - Math.exp(-delta * 3);
@@ -149,10 +182,27 @@
     }
     for (const star of stars) {
       const twinkle = .86 + Math.sin(elapsed * star.frequency + star.phase) * .14;
-      const alpha = star.alpha * twinkle * star.edge;
+      const alpha = star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1);
       context.fillStyle = 'rgb(' + star.color + ')';
-      // Only the closest stars get a small, inexpensive halo; no blur filters.
-      if (star.depth > .86 && !settings.compact) {
+      // A few brighter stars give the sky depth without making every point glow.
+      // Concentric light and short rays avoid per-frame blur filters.
+      if (star.glint) {
+        context.globalAlpha = alpha * .025;
+        context.beginPath();
+        context.arc(star.px, star.py, star.radius * 5.5, 0, Math.PI * 2);
+        context.fill();
+        const ray = (settings.compact ? 3 : 4.5) * twinkle;
+        context.strokeStyle = 'rgb(' + star.color + ')';
+        context.lineWidth = .55;
+        context.globalAlpha = alpha * .28;
+        context.beginPath();
+        context.moveTo(star.px - ray, star.py);
+        context.lineTo(star.px + ray, star.py);
+        context.moveTo(star.px, star.py - ray * 1.4);
+        context.lineTo(star.px, star.py + ray * 1.4);
+        context.stroke();
+      }
+      if (star.glint || (star.depth > .86 && !settings.compact)) {
         context.globalAlpha = alpha * .055;
         context.beginPath();
         context.arc(star.px, star.py, star.radius * 3, 0, Math.PI * 2);
@@ -225,6 +275,9 @@
     }
     stars.length = Math.min(stars.length, settings.count);
     while (stars.length < settings.count) stars.push(createStar());
+    for (const star of stars) star.glint = false;
+    for (const star of [...stars].sort((a, b) => b.depth - a.depth).slice(0, settings.compact ? 3 : 6)) star.glint = true;
+    paintDistantSky();
     if (settings.compact) pointer.x = pointer.y = pointer.targetX = pointer.targetY = 0;
     links.length = 0;
     project();

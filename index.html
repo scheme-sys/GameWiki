@@ -78,7 +78,7 @@
         <div data-site-stats data-compact="true" class="site-stats"></div>
       </div>
       <button class="search-trigger" type="button" id="search-open" aria-label="搜索游戏" aria-haspopup="dialog" aria-controls="search-dialog" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <svg class="search-symbol" viewBox="0 0 28 28" aria-hidden="true"><circle class="search-lens" cx="11.7" cy="11.7" r="7.7"/><circle class="search-inner" cx="11.7" cy="11.7" r="5.4"/><path class="search-reflection" d="M7.6 10.4a4.4 4.4 0 0 1 3.5-3.1"/><path class="search-handle" d="m17.8 16.8 6.4 5.7a1.2 1.2 0 0 1-1.7 1.7l-5.7-6.4"/><path class="search-spark" d="m23 2.2.55 1.45L25 4.2l-1.45.55L23 6.2l-.55-1.45L21 4.2l1.45-.55Z"/></svg>
         <span>搜索游戏</span><kbd>/</kbd>
       </button>
     </header>
@@ -94,7 +94,8 @@
 
   <aside class="game-popover" id="game-info" role="dialog" aria-modal="false" aria-labelledby="info-title" hidden>
     <div class="popover-art" aria-hidden="true"><img id="info-cover" alt="" decoding="async"></div>
-    <div class="popover-top"><span class="eyebrow"><i></i> GAME WIKI</span><button id="info-close" class="icon-button" type="button" aria-label="关闭游戏介绍">×</button></div>
+    <svg class="window-tracery" viewBox="0 0 240 220" aria-hidden="true"><g fill="none"><circle cx="174" cy="54" r="83"/><circle cx="174" cy="54" r="68"/><circle class="orbit-ticks" cx="174" cy="54" r="75"/><ellipse cx="174" cy="54" rx="98" ry="34" transform="rotate(-38 174 54)"/><path d="M69 139 98 119 133 145 169 116 215 142M107 15l134 81M165 0l30 152"/></g><g class="orbit-stars"><circle cx="69" cy="139" r="2"/><circle cx="98" cy="119" r="2.6"/><circle cx="133" cy="145" r="2"/><circle cx="169" cy="116" r="2.8"/><circle cx="215" cy="142" r="2"/><path d="m174 31 4 18 18 5-18 5-4 18-4-18-18-5 18-5Z"/></g></svg>
+    <div class="popover-top"><span class="eyebrow"><i></i> GAME WIKI</span><button id="info-close" class="icon-button window-close" type="button" aria-label="关闭游戏介绍"><svg class="close-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <div class="popover-heading"><div><h2 id="info-title"></h2><p class="info-english" id="info-english"></p></div><img id="info-icon" alt="" width="52" height="52" decoding="async"></div>
     <p class="info-description" id="info-description"></p>
     <div class="info-tags" id="info-tags"></div>
@@ -102,7 +103,8 @@
   </aside>
 
   <dialog class="community-dialog" id="community-dialog" aria-labelledby="community-title" data-qr-state="loading">
-    <div class="dialog-header"><h2 id="community-title">QQ 交流群</h2><button class="icon-button dialog-close" type="button" aria-label="关闭群二维码" autofocus>×</button></div>
+    <svg class="window-tracery" viewBox="0 0 240 220" aria-hidden="true"><g fill="none"><circle cx="174" cy="54" r="83"/><circle cx="174" cy="54" r="68"/><circle class="orbit-ticks" cx="174" cy="54" r="75"/><ellipse cx="174" cy="54" rx="98" ry="34" transform="rotate(-38 174 54)"/><path d="M69 139 98 119 133 145 169 116 215 142M107 15l134 81M165 0l30 152"/></g><g class="orbit-stars"><circle cx="69" cy="139" r="2"/><circle cx="98" cy="119" r="2.6"/><circle cx="133" cy="145" r="2"/><circle cx="169" cy="116" r="2.8"/><circle cx="215" cy="142" r="2"/><path d="m174 31 4 18 18 5-18 5-4 18-4-18-18-5 18-5Z"/></g></svg>
+    <div class="dialog-header"><div class="window-heading"><svg class="window-seal" viewBox="0 0 48 48" aria-hidden="true"><path class="seal-plate" d="m24 2 22 22-22 22L2 24Z"/><circle cx="24" cy="24" r="15"/><path class="seal-orbit" d="M8 29C2 19 31 7 40 15S20 42 9 33"/><path class="seal-star" d="m24 10 3.5 10.5L38 24l-10.5 3.5L24 38l-3.5-10.5L10 24l10.5-3.5Z"/><circle class="seal-core" cx="24" cy="24" r="3"/><path class="seal-ticks" d="m10 10 3 3m22 22 3 3m0-28-3 3M13 35l-3 3"/></svg><div><p class="window-kicker" aria-hidden="true">LCZ · COMMUNITY</p><h2 id="community-title">QQ 交流群</h2></div></div><button class="icon-button window-close dialog-close" type="button" aria-label="关闭群二维码" autofocus><svg class="close-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <div class="community-image">
       <img id="community-qr" data-src="assets/community/qq-group-1067536816.jpg" alt="QQ群1067536816的加群二维码" width="1284" height="2283" decoding="async">
       <div class="community-image-state"><p id="community-qr-status" role="status">正在加载二维码…</p><button id="community-qr-retry" type="button" hidden>重新加载</button></div>
@@ -111,8 +113,9 @@
   </dialog>
 
   <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
-    <div class="dialog-header"><h2 id="search-title">搜索游戏</h2><button class="icon-button dialog-close" type="button" aria-label="关闭搜索">×</button></div>
-    <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" id="game-search" placeholder="游戏名称、类型或资料" autocomplete="off" aria-label="搜索游戏名称、类型或资料"><kbd>ESC</kbd></label>
+    <svg class="window-tracery" viewBox="0 0 240 220" aria-hidden="true"><g fill="none"><circle cx="174" cy="54" r="83"/><circle cx="174" cy="54" r="68"/><circle class="orbit-ticks" cx="174" cy="54" r="75"/><ellipse cx="174" cy="54" rx="98" ry="34" transform="rotate(-38 174 54)"/><path d="M69 139 98 119 133 145 169 116 215 142M107 15l134 81M165 0l30 152"/></g><g class="orbit-stars"><circle cx="69" cy="139" r="2"/><circle cx="98" cy="119" r="2.6"/><circle cx="133" cy="145" r="2"/><circle cx="169" cy="116" r="2.8"/><circle cx="215" cy="142" r="2"/><path d="m174 31 4 18 18 5-18 5-4 18-4-18-18-5 18-5Z"/></g></svg>
+    <div class="dialog-header"><div class="window-heading"><svg class="window-seal" viewBox="0 0 48 48" aria-hidden="true"><path class="seal-plate" d="m24 2 22 22-22 22L2 24Z"/><circle cx="24" cy="24" r="15"/><path class="seal-orbit" d="M8 29C2 19 31 7 40 15S20 42 9 33"/><path class="seal-star" d="m24 10 3.5 10.5L38 24l-10.5 3.5L24 38l-3.5-10.5L10 24l10.5-3.5Z"/><circle class="seal-core" cx="24" cy="24" r="3"/><path class="seal-ticks" d="m10 10 3 3m22 22 3 3m0-28-3 3M13 35l-3 3"/></svg><div><p class="window-kicker" aria-hidden="true">LCZ · GAME ATLAS</p><h2 id="search-title">搜索游戏</h2></div></div><button class="icon-button window-close dialog-close" type="button" aria-label="关闭搜索"><svg class="close-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <label class="search-field"><svg class="search-symbol" viewBox="0 0 28 28" aria-hidden="true"><circle class="search-lens" cx="11.7" cy="11.7" r="7.7"/><circle class="search-inner" cx="11.7" cy="11.7" r="5.4"/><path class="search-reflection" d="M7.6 10.4a4.4 4.4 0 0 1 3.5-3.1"/><path class="search-handle" d="m17.8 16.8 6.4 5.7a1.2 1.2 0 0 1-1.7 1.7l-5.7-6.4"/><path class="search-spark" d="m23 2.2.55 1.45L25 4.2l-1.45.55L23 6.2l-.55-1.45L21 4.2l1.45-.55Z"/></svg><input type="search" id="game-search" placeholder="游戏名称、类型或资料" autocomplete="off" aria-label="搜索游戏名称、类型或资料"><kbd>ESC</kbd></label>
     <p class="sr-only" id="search-summary" role="status" aria-live="polite"></p>
     <div class="search-results" id="search-results"></div>
     <p class="empty-state" id="search-empty" hidden>未找到相关游戏</p>

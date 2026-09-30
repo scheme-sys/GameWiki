@@ -1,0 +1,1 @@
+window.LDOE_PARTS["details-item-25"]=[{"id":"item-0823","name":"节庆蜡烛","enName":"","category":"resources","subcategory":"材料与零件","description":"用于生产、建造或装备维护的物资。可通过制作关系查找用途。","image":"assets/items/item-0823.webp","tags":["材料与零件","活动内容"],"stats":[{"label":"单格堆叠","value":20}],"entityCode":"season_12_halloween_candle","_order":570}];

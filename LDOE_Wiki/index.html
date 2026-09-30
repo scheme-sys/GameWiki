@@ -15,6 +15,8 @@
   <script defer src="../assets/music-player.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../assets/entity-code.css">
+  <script defer src="../assets/entity-code.js"></script>
   <link rel="stylesheet" href="../assets/wiki-nav.css">
   <link rel="stylesheet" href="../assets/site-stats.css">
   <script defer src="../assets/wiki-nav.js"></script>
@@ -42,7 +44,7 @@
   <a class="skip-link" href="#main">跳到图鉴内容</a>
   <div class="mobile-shade" id="mobile-shade"></div>
   <aside class="sidebar" id="sidebar" aria-label="主导航">
-    <a class="brand" href="#" aria-label="LDOE Wiki 首页"><span class="brand-mark">L<span>↗</span></span><span><strong>LDOE<span class="brand-wiki"> WIKI</span></strong><small>地球末日 · 生存百科</small></span></a>
+    <a class="brand" href="#" aria-label="LDOE Wiki 首页"><span class="brand-mark">L</span><span><strong>LDOE<span class="brand-wiki"> WIKI</span></strong><small>地球末日 · 生存百科</small></span></a>
     <div class="edition"><span class="status-dot"></span> 生存档案 <span>v1.52.0</span></div>
     <div class="nav-heading">探索百科 <span>EXPLORE</span></div>
     <nav id="primary-nav"></nav>
@@ -58,7 +60,7 @@
     <header class="topbar">
       <button class="icon-button menu-toggle" id="menu-toggle" aria-label="展开导航" aria-expanded="false"><span data-icon="menu"></span></button>
       <div class="breadcrumb"><span>LDOE WIKI</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-current">生存指南</strong></div>
-      <label class="global-search"><span data-icon="search"></span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索全部图鉴"><kbd>/</kbd></label>
+      <label class="global-search"><span data-icon="search"></span><input id="global-search" type="search" placeholder="搜索名称、实体代码…" aria-label="搜索全部图鉴"><kbd>/</kbd></label>
       <span class="top-version"><span class="status-dot"></span> 中文图鉴</span>
     </header>
     <main id="main">
@@ -70,13 +72,13 @@
       </section>
       <section class="overview-stats" id="overview-stats" aria-label="图鉴收录数量"></section>
       <section class="catalog-section" aria-labelledby="catalog-title">
-        <div class="section-heading"><div><div class="eyebrow section-eyebrow" id="section-eyebrow">SURVIVAL ENCYCLOPEDIA</div><h2 id="catalog-title">探索生存图鉴<span class="title-dot">.</span></h2><p id="catalog-description">出发前，先了解你手中的装备。</p></div><button class="text-button" data-action="about">收录说明 <span data-icon="arrow-up-right"></span></button></div>
+        <div class="section-heading"><div><div class="eyebrow section-eyebrow" id="section-eyebrow">SURVIVAL ENCYCLOPEDIA</div><h2 id="catalog-title">探索生存图鉴<span class="title-dot">.</span></h2><p id="catalog-description">出发前，先了解你手中的装备。</p></div><button class="text-button" data-action="about">收录说明</button></div>
         <div class="category-tabs" id="category-tabs" role="group" aria-label="图鉴分类"></div>
         <div class="collection-bar">
           <div class="filter-chips" id="filter-chips" role="group" aria-label="细分类别"></div>
           <div class="collection-controls"><label class="sort-label"><span data-icon="sort"></span><select id="sort-select" aria-label="排序方式"><option value="default">默认排序</option><option value="name">名称排序</option><option value="stat">主要数值 ↓</option></select></label><div class="view-toggle" role="group" aria-label="显示方式"><button class="active" data-layout="grid" aria-label="卡片视图" aria-pressed="true"><span data-icon="grid"></span></button><button data-layout="list" aria-label="列表视图" aria-pressed="false"><span data-icon="list"></span></button></div></div>
         </div>
-        <div class="results-line"><span id="result-count" aria-live="polite"></span><span id="collection-hint">点击条目查看详细资料 <span>↗</span></span></div>
+        <div class="results-line"><span id="result-count" aria-live="polite"></span><span id="collection-hint">点击条目查看详细资料</span></div>
         <div id="catalog-grid" class="catalog-grid"></div>
         <div id="pagination" class="pagination"></div>
         <div class="catalog-note"><span data-icon="info"></span><p>图鉴依据本地 1.52.0 资料整理。部分条目属于活动或历史内容；实际获取方式与属性以游戏内为准。<button data-action="about">了解数据范围</button></p></div>

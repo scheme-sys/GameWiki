@@ -404,6 +404,7 @@
       (game.nameZh + ' ' + game.name + ' ' + game.keywords).toLocaleLowerCase().includes(term)));
     $('#search-results').replaceChildren(...games.map((game) => {
       const result = makeLink({ href: game.links[0].href, title: '' }, 'search-result');
+      result.style.setProperty('--result-color', game.color);
       result.setAttribute('aria-label', game.nameZh + '，' + game.name);
       const image = document.createElement('img');
       image.src = game.image; image.alt = ''; image.width = image.height = 48;

@@ -12,3 +12,21 @@
 .constellations.starfield-ready > .sky-cluster {
   display: none;
 }
+
+/* A faint, static blue-violet cloud follows the distant dust band.
+   Gradients keep the backdrop light and remain visible without Canvas. */
+.space-haze { overflow: hidden; }
+.space-haze:before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  pointer-events: none;
+  transform: rotate(-28deg);
+  background:
+    radial-gradient(ellipse 22% 10% at 35% 49%,#457b891c,transparent 85%),
+    radial-gradient(ellipse 28% 12% at 64% 50%,#68598720,transparent 85%),
+    radial-gradient(ellipse 48% 16% at 49% 50%,#47648e22,transparent 82%);
+}
+@media (max-width: 760px) {
+  .space-haze:before { opacity: .76; }
+}

@@ -37,7 +37,7 @@
     host.classList.add("site-stats");
     host.innerHTML = `<details class="site-stats-disclosure">
       <summary class="site-stats-summary" aria-label="查看浏览量与IP访客">
-        <svg class="site-stats-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M1.5 10s3-5.5 8.5-5.5 8.5 5.5 8.5 5.5-3 5.5-8.5 5.5S1.5 10 1.5 10Z"/><circle cx="10" cy="10" r="2.3"/></svg>
+        <svg class="site-stats-icon" viewBox="0 0 28 28" aria-hidden="true"><path class="stats-orbit" d="M7 5.8a14 14 0 0 1 14 0M7 22.2a14 14 0 0 0 14 0"/><path d="M2.8 14S7 7.1 14 7.1 25.2 14 25.2 14 21 20.9 14 20.9 2.8 14 2.8 14Z"/><circle class="stats-iris" cx="14" cy="14" r="4.2"/><path class="stats-pupil" d="m14 11.4.8 1.8 1.8.8-1.8.8-.8 1.8-.8-1.8-1.8-.8 1.8-.8Z"/><circle class="stats-glint" cx="16.6" cy="11.5" r=".8"/></svg>
         <span class="site-stats-metric"><span>PV</span><strong data-stat-pv-short>—</strong></span>
         <span class="site-stats-metric"><span>IP</span><strong data-stat-ip-short>—</strong></span>
       </summary>

@@ -15,6 +15,21 @@ class PlayerDataTests(unittest.TestCase):
   for collection in collections:
    for source in collection:
     for key,value in source.items():self.assertEqual(normalized[source['id']][key],list(dict.fromkeys(value)) if key=='tags' else value,(source['id'],key))
+ def test_entity_codes_are_searchable_and_preserved_in_every_card(self):
+  parts={path.split('/')[-1].split('.')[0]:json.loads(payload.decode().split('=',1)[1].rstrip(';\n')) for path,payload in self.outputs.items() if '/lazy/' in path}
+  search={row['id']:row['searchText'] for row in parts['search']}
+  cards={row['id']:row for name,rows in parts.items() if name.startswith('category-') for row in rows}
+  items={row['id']:row for row in self.catalog['items']}
+  for row in self.rows:
+   if row.get('entityCode'):
+    self.assertEqual(cards[row['id']]['entityCode'],row['entityCode'])
+    self.assertIn(row['entityCode'].lower(),search[row['id']])
+   for variant in row.get('variants',[]):
+    self.assertIn(variant['entityCode'].lower(),search[row['id']])
+   if row.get('kind')=='recipes':self.assertEqual(row['entityCode'],items[row['outputId']]['entityCode'])
+  self.assertEqual(items['item-0001']['entityCode'],'wood')
+  self.assertEqual(next(row for row in self.world['creatures'] if row['id']=='creature-0001')['entityCode'],'weak_zombie')
+
  def test_stable_content_addresses(self):
   self.assertEqual(self.outputs,data.build()[0])
   for path,payload in self.outputs.items():

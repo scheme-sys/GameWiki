@@ -28,8 +28,17 @@ def route(page,name):
 def no_overflow(page,label):
  value=page.evaluate('({width:innerWidth,scroll:document.documentElement.scrollWidth})')
  assert value['scroll']<=value['width']+1,(label,value)
-def no_player_codes(page,label):
- text=page.locator('#main').inner_text()
+def no_unrelated_technical_text(page,label):
+ # Verified entity identifiers are intentionally visible only in the code component.
+ text=page.locator('#main').evaluate(r"""root=>{
+  const text=[];
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(node){
+   const parent=node.parentElement;
+   return parent.closest('.lcz-entity-code')||!parent.getClientRects().length?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;
+  }});
+  while(walker.nextNode())text.push(walker.currentNode.textContent);
+  return text.join('\n');
+ }""")
  match=re.search(r'EntityId|assetbundle|prefab|assets/|data/|\b[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+\b|\{\d+\}',text,re.I)
  if match:report['issues'].append({'page':label,'technicalText':text[max(0,match.start()-70):match.end()+100]})
 
@@ -132,7 +141,7 @@ try:
 
 
   for name in ['home','weapon','armor','enemy','companion','resource','consumable','building','other','recipes','locations','quests','gacha','guides','library','about','favorites','search']:
-   route(page,name);no_overflow(page,name);no_player_codes(page,name)
+   route(page,name);no_overflow(page,name);no_unrelated_technical_text(page,name)
   passed('All 18 routes render without document overflow')
   rows=SOURCE['entries']
   preserved_details=[]

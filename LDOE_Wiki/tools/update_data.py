@@ -6,10 +6,10 @@ FEATURED = ['Glock 17','AK-47','M16','Shotgun','Machete','Katana','Saw Blade Mac
 CATEGORIES = ['weapons','armor','creatures','resources','recipes','locations']
 SPAN = 32
 FIELDS = {
- 'items': {'id','name','enName','category','subcategory','description','image','tags','stats','recipe','source','modSlots','notes'},
+ 'items': {'id','entityCode','name','enName','category','subcategory','description','image','tags','stats','recipe','source','modSlots','notes'},
  'recipes': {'id','name','outputId','quantity','station','status','ingredients','level','duration','stations','type'},
- 'creatures': {'id','name','enName','category','description','image','tags','stats','locations','note','sources','variants','variantCount','imageNote'},
- 'locations': {'id','name','enName','category','description','image','tags','stats','locations','note','sources'},
+ 'creatures': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources','variants','variantCount','imageNote'},
+ 'locations': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources'},
 }
 BAD_KEYS = {'raw','$ref','name_key','sourceHints','prototype','assetFile','bundle','assetBundle','class','className','typeName','method','methodName','function','functionName','sourcePath','assetPath'}
 BAD_TEXT = re.compile(r'CAB-[0-9a-f]{16,}|[A-Za-z0-9_/\\-]+\.(?:bundle|bun|lu|lua|cs|dex|dll)\b|\b[A-Za-z]+StorageData\b|\.prototype\.',re.I)
@@ -23,6 +23,7 @@ def read_assignment(path, name):
 def audit(value, path='data'):
  if isinstance(value,dict):
   for key,item in value.items():
+   if key=='entityCode' and (not isinstance(item,str) or not item.strip() or len(item)>256 or re.search(r'[\x00-\x1f\x7f]',item)):raise ValueError('Invalid player entity code: '+path)
    if key in BAD_KEYS: raise ValueError('Unnecessary technical field: '+path+'.'+key)
    audit(item,path+'.'+key)
  elif isinstance(value,list):
@@ -40,7 +41,7 @@ def check_nested(row,path):
   check_fields(source,{'title','url'},path+'.source')
   if source.get('url') and not source['url'].startswith('https://'):raise ValueError('Public source must use HTTPS')
  for variant in row.get('variants',[]):
-  check_fields(variant,{'name','stats'},path+'.variants');check_nested(variant,path+'.variants')
+  check_fields(variant,{'name','stats','entityCode'},path+'.variants');check_nested(variant,path+'.variants')
 def sources():
  catalog=read_assignment(ROOT/'data/catalog.js','WIKI_CATALOG')
  world=read_assignment(ROOT/'data/world.js','WIKI_WORLD')
@@ -72,7 +73,7 @@ def normalized(catalog,world):
  recipes=[]
  for row in catalog['recipes']:
   output=lookup.get(row.get('outputId'),{})
-  recipes.append(normalize({**row,'kind':'recipes','image':row.get('image') or output.get('image'),'enName':row.get('enName') or output.get('enName'),
+  recipes.append(normalize({**row,'kind':'recipes','entityCode':output.get('entityCode',''),'image':row.get('image') or output.get('image'),'enName':row.get('enName') or output.get('enName'),
    'subcategory':(row.get('station') or '制作配方').split(' / ')[0],'tags':[row.get('status') or '需解锁相应图纸'],
    'description':(row.get('station') or '制作')+'配方。'+(row.get('status') or '请以游戏内开放情况为准。'),
    'stats':[{'label':'修复数量' if row.get('type')=='repair' else '产出','value':row.get('quantity') or 1}]+([{'label':'等级','value':row['level']}] if row.get('level') else [])+([{'label':'耗时','value':row['duration'],'unit':'秒'}] if row.get('duration') else [])}))
@@ -80,7 +81,7 @@ def normalized(catalog,world):
  for order,row in enumerate(rows):row['_order']=order
  return rows
 def summary(row):
- return {key:row[key] for key in ('id','name','enName','category','subcategory','kind','image','tags','stats','_order') if key in row}
+ return {key:row[key] for key in ('id','entityCode','name','enName','category','subcategory','kind','image','tags','stats','_order') if key in row}
 def build():
  catalog,world=sources()
  rows=normalized(catalog,world)
@@ -99,7 +100,7 @@ def build():
   buckets['details-'+prefix+'-'+str((int(number)-1)//SPAN)].append(row)
  parts.update(buckets)
  parts['search']=[{'id':row['id'],'name':row['name'],'kind':category(row),'stats':row['stats'][:1],
-  'searchText':(' '.join([row['name'],row['enName'],row.get('subcategory') or '',' '.join(row['tags']),row.get('description') or ''])).lower()}
+  'searchText':(' '.join([row['name'],row['enName'],row.get('entityCode',''),' '.join(v.get('entityCode','') for v in row.get('variants',[])),row.get('subcategory') or '',' '.join(row['tags']),row.get('description') or ''])).lower()}
   for row in rows]
  relations=collections.defaultdict(lambda:{'outputs':[],'uses':[]})
  for row in catalog['recipes']:

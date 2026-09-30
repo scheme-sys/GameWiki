@@ -1,8 +1,15 @@
 .lcz-header-tools { display: flex; align-items: center; gap: 17px; flex-shrink: 0; }
-.lcz-music-control { --music-level: 0; position: relative; display: inline-flex; align-items: center; flex: 0 0 auto; color: #657486; }
+.lcz-music-control { --music-level: 0; position: relative; display: inline-flex; align-items: center; flex: 0 0 auto; color: #9bb6c8; }
 button.lcz-music-toggle { position: relative; display: grid; place-items: center; width: 42px; height: 42px; min-height: 42px; padding: 0; border: 0; border-radius: 50%; color: inherit; background: transparent; cursor: pointer; touch-action: manipulation; box-shadow: none; }
-.lcz-music-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
-.lcz-music-toggle:before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: radial-gradient(circle,#a8e6df33,transparent 70%); opacity: 0; pointer-events: none; }
+.lcz-music-toggle svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 5px #a2d9df24); }
+.lcz-music-toggle .music-orbit { stroke: #94aac8; stroke-width: .8; opacity: .48; }
+.lcz-music-toggle .music-stem { stroke: #c1dce4; }
+.lcz-music-toggle .music-note { stroke: #b5d6df; fill: #a5d3dc38; }
+.lcz-music-toggle .music-spark { stroke: none; fill: #c9e5ec; }
+.lcz-music-toggle:hover .music-orbit,.lcz-music-control[data-state="playing"] .music-orbit { opacity: .85; }
+.lcz-music-control[data-state="playing"] .music-stem,.lcz-music-control[data-state="playing"] .music-note { stroke: #d2f2ec; }
+.lcz-music-control[data-state="playing"] .music-note { fill: #b9e8dd66; }
+.lcz-music-toggle:before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: radial-gradient(circle,#a8e6df33,transparent 70%); opacity: .22; pointer-events: none; }
 .lcz-music-toggle:hover,.lcz-music-toggle:focus-visible { color: #c5dfdd; filter: drop-shadow(0 0 6px #bdebe25c); outline-offset: 3px; }
 .lcz-music-control[data-state="playing"] { color: #bdebe2; }
 .lcz-music-control[data-state="playing"] .lcz-music-toggle { filter: drop-shadow(0 0 calc(2px + var(--music-level)*9px) #9ae1d399); }

@@ -45,7 +45,7 @@ jobs:
           python grimsoul_Wiki/tools/verify_data.py
 
       - name: Check shared interactions and publication rules
-        run: node --test scripts/test-bubble-physics.cjs scripts/test-site-stats.mjs scripts/test-public-files.mjs scripts/test-asset-versions.mjs
+        run: node --test scripts/test-bubble-physics.cjs scripts/test-site-stats.mjs scripts/test-public-files.mjs scripts/test-asset-versions.mjs scripts/test-entity-code.mjs
 
       - name: Check crawler directives and page security
         run: node scripts/test-site-security.mjs

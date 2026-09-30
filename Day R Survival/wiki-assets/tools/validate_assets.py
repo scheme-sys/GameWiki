@@ -17,7 +17,7 @@ ROOT = ASSETS.parent
 
 RECORD_FIELDS = {
     "items": {"id", "name", "nameEn", "description", "category", "subcategory", "image", "stats", "tags"},
-    "monsters": {"id", "name", "nameEn", "description", "category", "subcategory", "image", "stats", "tags", "attacks", "loot", "perks", "loaded", "friendly"},
+    "monsters": {"id", "entityCode", "name", "nameEn", "description", "category", "subcategory", "image", "stats", "tags", "attacks", "loot", "perks", "loaded", "friendly"},
 }
 PRIVATE_KEYS = {"raw", "$ref", "source", "linkedSource", "petConfig", "template", "class", "titleKey", "descriptionKey"}
 PRIVATE_TEXT = re.compile(r"function\s*\(proto=|\b\w+StorageData\b|\bCAB-[a-f0-9]+\b|\.(?:bundle|bun|lu|lua|cs)(?:\b|$)", re.I)
@@ -59,6 +59,9 @@ def main() -> None:
     for kind, allowed in RECORD_FIELDS.items():
         for row in data[kind]:
             assert set(row) == allowed, (kind, row.get("id"), "unexpected or missing fields")
+            if kind == "monsters":
+                assert isinstance(row["entityCode"], str) and row["entityCode"], row["id"]
+                assert row["id"] == row["entityCode"] or (row["loaded"] is False and row["id"] == row["entityCode"] + "__archive"), row["id"]
         canonical_records = json.dumps(data[kind], ensure_ascii=False, sort_keys=True, separators=(",", ":"))
         assert digest(canonical_records.encode("utf-8")) == manifest["playerRecordSha256"][kind], kind
 

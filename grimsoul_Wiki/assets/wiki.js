@@ -121,18 +121,19 @@
   function renderIcons(root = document) {
     root.querySelectorAll('[data-icon]').forEach(node => { node.innerHTML = icon(node.dataset.icon); });
   }
+  const entityCode = entry => window.LCZEntityCode.render(entry.entityCodes, { label: entry.category === 'crafting' ? '配方代码' : '实体代码' });
   function card(entry) {
     const saved = favorites.has(entry.id);
     const stats = (Array.isArray(entry.stats) ? entry.stats : []).filter(stat => stat && stat.label && stat.value != null).slice(0, 2);
     return `<article class="entry-card" data-card="${escape(entry.id)}">
       ${entry.rarity ? `<span class="rarity-label" data-rarity="${rarityClass(entry.rarity)}">${escape(entry.rarity)}</span>` : ''}
       <button class="card-favorite${saved ? ' saved' : ''}" type="button" data-favorite="${escape(entry.id)}" aria-label="${saved ? '取消收藏' : '收藏'}：${escape(entry.name)}" aria-pressed="${saved}">${icon('bookmark')}</button>
-      <a class="entry-open" href="#entry/${encodeURIComponent(entry.id)}" data-entry="${escape(entry.id)}" aria-label="查看${escape(entry.name)}图鉴">
+      <a class="entry-open" href="#entry/${encodeURIComponent(entry.id)}" data-entry="${escape(entry.id)}" tabindex="-1" aria-label="查看${escape(entry.name)}图鉴">
         <div class="entry-image">${entryImage(entry)}</div>
-        <div class="entry-copy"><span class="entry-category">${escape(entry.subcategory || category(entry).name)}</span><h3>${escape(entry.name)}</h3>
+      </a>
+        <div class="entry-copy"><span class="entry-category">${escape(entry.subcategory || category(entry).name)}</span><h3><a href="#entry/${encodeURIComponent(entry.id)}" data-entry="${escape(entry.id)}">${escape(entry.name)}</a></h3>${entityCode(entry)}
           <div class="entry-card-stats">${stats.length ? stats.map(stat => `<span>${escape(stat.label)}<b>${escape(stat.value)}</b></span>`).join('') : '<span class="card-hint">查看图鉴详情</span>'}</div>
         </div>
-      </a>
     </article>`;
   }
   function renderHome() {
@@ -360,7 +361,7 @@
     const related = Array.isArray(entry.related) ? entry.related.map(id => byId.get(id)).filter(e => e && e.id !== entry.id).slice(0, 30) : [];
     if (!dialog.open) dialogTrigger = document.activeElement;
     dialogEntryId = entry.id;
-    $('#detail-content').innerHTML = `<div class="detail-top"><div class="detail-art">${entryImage(entry, false)}</div><div class="detail-heading"><div class="detail-kicker"><a href="#category/${escape(entry.category)}">${escape(category(entry).name)}</a><span>${escape(entry.subcategory || '')}</span>${entry.rarity ? `<span class="rarity-label" data-rarity="${rarityClass(entry.rarity)}">${escape(entry.rarity)}</span>` : ''}</div><h2 id="detail-name">${escape(entry.name)}</h2>${entry.english ? `<p class="detail-english" lang="en">${escape(entry.english)}</p>` : ''}${entry.summary ? `<p class="detail-summary">${escape(entry.summary)}</p>` : ''}<div class="detail-actions"><button type="button" class="button button-outline${saved ? ' saved' : ''}" data-favorite="${escape(entry.id)}" data-detail-favorite aria-pressed="${saved}">${icon('bookmark')}<span>${saved ? '已加入收藏' : '加入收藏'}</span></button><button class="button button-outline" id="copy-link" type="button">${icon('link')}复制图鉴链接</button></div></div></div>
+    $('#detail-content').innerHTML = `<div class="detail-top"><div class="detail-art">${entryImage(entry, false)}</div><div class="detail-heading"><div class="detail-kicker"><a href="#category/${escape(entry.category)}">${escape(category(entry).name)}</a><span>${escape(entry.subcategory || '')}</span>${entry.rarity ? `<span class="rarity-label" data-rarity="${rarityClass(entry.rarity)}">${escape(entry.rarity)}</span>` : ''}</div><h2 id="detail-name">${escape(entry.name)}</h2>${entityCode(entry)}${entry.english ? `<p class="detail-english" lang="en">${escape(entry.english)}</p>` : ''}${entry.summary ? `<p class="detail-summary">${escape(entry.summary)}</p>` : ''}<div class="detail-actions"><button type="button" class="button button-outline${saved ? ' saved' : ''}" data-favorite="${escape(entry.id)}" data-detail-favorite aria-pressed="${saved}">${icon('bookmark')}<span>${saved ? '已加入收藏' : '加入收藏'}</span></button><button class="button button-outline" id="copy-link" type="button">${icon('link')}复制图鉴链接</button></div></div></div>
       <div class="detail-body">${stats.length ? `<dl class="detail-stats">${stats.map(stat => `<div class="detail-stat"><dt>${escape(stat.label)}</dt><dd>${escape(stat.value)}</dd></div>`).join('')}</dl>` : ''}${sections.map(detailSection).join('')}${!stats.length && !sections.length ? '<p class="detail-no-data">本篇已收录名称与基础资料，更多属性和获取方式仍待补充。</p>' : ''}${related.length ? `<section class="detail-section"><h3>关联图鉴</h3><div class="related-list">${related.map(other => `<a class="related-button" href="#entry/${encodeURIComponent(other.id)}" data-entry="${escape(other.id)}">${safeImage(other) ? `<img src="${escape(safeImage(other))}" alt="" loading="lazy" data-fallback="${escape(category(other).icon)}">` : icon(category(other).icon)}${escape(other.name)}</a>`).join('')}</div></section>` : ''}<p class="detail-footnote">基于 ${escape(meta.version || '8.4.1')} 游戏资料整理。活动开放与实战数值以游戏为准；未确认的信息不作推断。</p></div>`;
     if (!dialog.open) {
       if (typeof dialog.showModal === 'function') dialog.showModal();

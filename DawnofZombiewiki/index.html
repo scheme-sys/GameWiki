@@ -15,6 +15,8 @@
   <script defer src="../assets/music-player.js"></script>
   <link rel="icon" href="assets/wiki-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../assets/entity-code.css">
+  <script defer src="../assets/entity-code.js"></script>
   <link rel="stylesheet" href="../assets/wiki-nav.css">
   <link rel="stylesheet" href="../assets/site-stats.css">
   <script src="../assets/wiki-nav.js" defer></script>
@@ -43,13 +45,13 @@
       <div class="sidebar-brand"><a class="brand" href="#home" aria-label="僵尸的黎明 Wiki 首页"><img src="../assets/game-icons/dawn.webp" alt="" width="44" height="44"><span>僵尸的黎明<span class="brand-wiki">DAWN OF ZOMBIES</span></span></a><button class="icon-button sidebar-dismiss" id="menu-close" aria-label="关闭百科导航">×</button></div>
       <div class="sidebar-caption">幸存者的随身百科</div>
       <nav id="nav" aria-label="百科导航"></nav>
-      <div class="sidebar-bottom"><span class="signal-dot"></span> 献给每一位废土幸存者<a href="#about">收录说明与资料下载 <span>↗</span></a></div>
+      <div class="sidebar-bottom"><span class="signal-dot"></span> 献给每一位废土幸存者<a href="#about">收录说明与资料下载</a></div>
     </aside>
     <div class="workspace">
       <header class="topbar">
         <button class="icon-button mobile-menu" id="mobile-menu" aria-label="打开百科导航" aria-controls="sidebar" aria-expanded="false">☰</button>
         <div class="breadcrumb"><span>幸存者手册</span><span>/</span><strong id="crumb">资料总览</strong></div>
-        <div class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="搜索武器、装备、怪物…" aria-label="搜索整个图鉴"><kbd>/</kbd></div>
+        <div class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="搜索名称、实体代码…" aria-label="搜索整个图鉴"><kbd>/</kbd></div>
         <a class="saved-link" href="#favorites" aria-label="查看收藏">☆ <span>我的收藏</span><b id="saved-count">0</b></a>
       </header>
       <main id="main" tabindex="-1" aria-busy="true"><div class="initial-loading">正在打开废土档案…</div></main>

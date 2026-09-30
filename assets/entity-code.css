@@ -1,0 +1,106 @@
+/* A quiet metadata line; it inherits each Wiki's palette and remains selectable. */
+.lcz-entity-code {
+  --entity-code-accent: var(--accent, var(--gold, var(--ember, #98bab1)));
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  max-width: 100%;
+  margin: 7px 0 2px;
+  color: var(--muted, #99a8aa);
+  font: 11px/1.5 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  text-align: left;
+  letter-spacing: 0;
+}
+.lcz-entity-code .lcz-entity-code__label {
+  flex: 0 0 auto;
+  color: inherit;
+  font: 10px/1.5 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  letter-spacing: .025em;
+}
+.lcz-entity-code .lcz-entity-code__value {
+  display: block;
+  flex: 1 1 auto;
+  align-self: center;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: 11px/1.6 Consolas, "SFMono-Regular", ui-monospace, monospace;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+  word-break: normal;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.lcz-entity-code .lcz-entity-code__copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: -3px 0 -3px 1px;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  box-shadow: none;
+  touch-action: manipulation;
+  transition: color .15s, background-color .15s;
+}
+.lcz-entity-code .lcz-entity-code__copy:hover,
+.lcz-entity-code .lcz-entity-code__copy:focus-visible {
+  color: var(--entity-code-accent);
+  background: #80808012;
+}
+.lcz-entity-code .lcz-entity-code__copy:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.lcz-entity-code .lcz-entity-code__copy svg {
+  display: block; width: 16px; height: 16px; flex-shrink: 0;
+  fill: none; stroke: currentColor; stroke-width: 1.35;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.lcz-entity-code .lcz-entity-code__copy .lcz-entity-code__done-icon { display: none; }
+.lcz-entity-code[data-copy-state="copied"] .lcz-entity-code__copy { color: var(--entity-code-accent); }
+.lcz-entity-code[data-copy-state="copied"] .lcz-entity-code__copy-icon { display: none; }
+.lcz-entity-code[data-copy-state="copied"] .lcz-entity-code__copy .lcz-entity-code__done-icon { display: block; }
+.lcz-entity-code__status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.lcz-entity-code[data-copy-state="error"] { flex-wrap: wrap; }
+.lcz-entity-code[data-copy-state="error"] .lcz-entity-code__status {
+  position: static; flex-basis: 100%; width: auto; height: auto; overflow: visible;
+  clip-path: none; white-space: normal; color: inherit; font-size: 11px;
+}
+.lcz-entity-codes { min-width: 0; max-width: 100%; }
+.lcz-entity-codes__more { margin: 2px 0 0; padding: 0; border: 0; background: none; color: var(--muted, #99a8aa); }
+.lcz-entity-codes__more > summary {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 30px;
+  margin: 0; padding: 2px 0; border: 0; background: none;
+  color: inherit; font: 10px/1.5 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  cursor: pointer; list-style: none; letter-spacing: 0;
+}
+.lcz-entity-codes__more > summary::-webkit-details-marker { display: none; }
+.lcz-entity-codes__more > summary::before { content: "+"; font: 14px/1 Consolas, monospace; }
+.lcz-entity-codes__more[open] > summary::before { content: "−"; }
+.lcz-entity-codes__more > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.lcz-entity-codes__list { max-height: 176px; overflow-y: auto; overscroll-behavior: contain; padding: 2px 3px 3px 0; scrollbar-width: thin; }
+.lcz-entity-codes__count { color: var(--muted, #99a8aa); font-size: 10px; }
+@media (pointer: coarse) {
+  .lcz-entity-code .lcz-entity-code__copy { flex-basis: 40px; min-width: 40px; width: 40px; min-height: 40px; height: 40px; }
+  .lcz-entity-codes__more > summary { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .lcz-entity-code .lcz-entity-code__copy { transition: none; } }
+@media print { .lcz-entity-code__copy, .lcz-entity-code__status { display: none !important; } }

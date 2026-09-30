@@ -24,6 +24,8 @@ def validate_player_data(catalog, mechanics, assets):
     def walk(value, path):
         if isinstance(value, dict):
             for key, child in value.items():
+                if key == 'entityCode' and (not isinstance(child, str) or not child.strip() or len(child) > 256 or re.search(r'[\x00-\x08\x0a-\x1f\x7f]', child)):
+                    raise ValueError(f'Invalid player entity code at {path}.{key}')
                 if key in REMOVED_FIELDS:
                     raise ValueError(f'Unsupported technical field at {path}.{key}; keep player fields only')
                 walk(child, f'{path}.{key}')

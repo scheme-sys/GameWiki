@@ -1,7 +1,7 @@
 {
   "source": "data/catalog.json, data/mechanics.json, data/asset-map.json",
   "sourceSHA256": {
-    "catalog": "19cb090fc7d4a50f071af7dd02fe3e38bed30927ee9916fd7c4ccceaf415010f",
+    "catalog": "8aefb7e7013bd421381baff7a5e9ad6993c871af83374ff9536cf61850f1732d",
     "mechanics": "762e96821282c7adaf6d81064c602e4f99d9688403139cf48e231356a764a9a9",
     "asset-map": "1a198d79bf506f72e677bdfd1cf93d0fc38c8cc447b69f056bbbb60cf6934153"
   },

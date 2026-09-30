@@ -5,7 +5,7 @@ import hashlib
 import json
 from collections import defaultdict
 
-INDEX_FIELDS = {'id','name','nameEn','description','category','categoryLabel','subcategory','rarity','rarityLabel','stats','tags','visible','image','referenceImage','variantCount','variantIndex'}
+INDEX_FIELDS = {'id','entityCode','name','nameEn','description','category','categoryLabel','subcategory','rarity','rarityLabel','stats','tags','visible','image','referenceImage','variantCount','variantIndex'}
 CATEGORIES = ('weapon','armor','enemy','companion','resource','consumable','building','other')
 DETAIL_SPAN = 128
 

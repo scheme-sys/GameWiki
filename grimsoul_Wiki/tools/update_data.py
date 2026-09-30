@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SPAN = 32
 CATEGORIES = ['weapons','armor','monsters','items','crafting','locations','pets','skills','buildings','quests','guides']
-FIELDS = {'id','name','english','category','subcategory','summary','image','rarity','stats','sections','related'}
+FIELDS = {'id','name','english','category','subcategory','summary','image','rarity','stats','sections','related','entityCodes'}
 BAD_KEYS = {'raw','className','functionName','methodName','assetBundle','assetPath','sourcePath','prototype','name_key'}
 BAD_TEXT = re.compile(r'CAB-[0-9a-f]{16,}|[A-Za-z0-9_/\\-]+\.(?:bundle|bun|lu|lua|cs|dex|dll)\b|\b[A-Za-z]+StorageData\b|\.prototype\.',re.I)
 
@@ -35,6 +35,8 @@ def sources():
   fields(row,FIELDS,'entry')
   if not re.fullmatch(r'[a-z][0-9]{4}',row['id']) or row['id'] in ids:raise ValueError('Invalid or duplicate stable player ID')
   ids.add(row['id'])
+  codes=row.get('entityCodes',[])
+  if not isinstance(codes,list) or any(not isinstance(code,str) or not re.fullmatch(r'[A-Za-z0-9_.:-]+',code) for code in codes) or len(codes)!=len(set(codes)):raise ValueError('Invalid entity codes: '+row['id'])
   if row['category'] not in CATEGORIES or not isinstance(row['name'],str):raise ValueError('Invalid player category/name')
   for stat in row.get('stats',[]):fields(stat,{'label','value'},row['id']+'.stats')
   for section in row.get('sections',[]):
@@ -49,7 +51,7 @@ def sources():
  return data
 
 def summary(row):
- result={key:row[key] for key in ('id','name','english','category','subcategory','image','rarity') if key in row}
+ result={key:row[key] for key in ('id','name','english','category','subcategory','image','rarity','entityCodes') if key in row}
  if 'stats' in row:result['stats']=[stat for stat in row['stats'] if stat and stat.get('label') and stat.get('value') is not None][:2]
  return result
 
@@ -77,7 +79,7 @@ def build(data):
   parts['details-'+bucket]=chunk
   parts['summaries-'+bucket]=[summary(row) for row in chunk]
  def search_text(row):
-  text=' '.join(str(x) for x in [row.get('name'),row.get('english'),row.get('subcategory'),row.get('summary')]+[' '.join(str(x) for x in [s.get('title'),s.get('text')] if x) for s in row.get('sections',[])] if x)
+  text=' '.join(str(x) for x in [row.get('name'),row.get('english'),row.get('subcategory'),row.get('summary')]+row.get('entityCodes',[])+[' '.join(str(x) for x in [s.get('title'),s.get('text')] if x) for s in row.get('sections',[])] if x)
   return unicodedata.normalize('NFKC',text).lower().strip()
  parts['search']={row['id']:search_text(row) for row in rows}
  for key,value in parts.items():

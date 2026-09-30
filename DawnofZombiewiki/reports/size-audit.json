@@ -1,8 +1,8 @@
 {
   "images": 3687,
   "imageBytes": 343838419,
-  "maintenanceJsonBytes": 16911626,
-  "playerRuntimeDataBytes": 22853642,
-  "initialRuntimeDataBytes": 25886,
+  "maintenanceJsonBytes": 17578410,
+  "playerRuntimeDataBytes": 24179422,
+  "initialRuntimeDataBytes": 26067,
   "lazyChunks": 232
 }

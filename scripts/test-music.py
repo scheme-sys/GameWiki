@@ -8,7 +8,7 @@ from pathlib import Path
 from threading import Thread
 from urllib.parse import quote, urlsplit
 import json, os, re, sys, traceback
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import sync_playwright, expect, Error
 from test_artifacts import TestArtifacts
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -61,7 +61,15 @@ def start(page):
     page.wait_for_function("() => window.LCZMusic.snapshot().time>.1")
 
 def frame_ready(page, path):
-    page.wait_for_function("p=>{const f=document.querySelector('.lcz-content-frame');return f?.contentDocument?.readyState==='complete'&&decodeURIComponent(f.contentWindow.location.pathname).endsWith(p)&&f.contentWindow.LCZMusic}", arg=path)
+    # During a fade both documents may be mounted. Wait for the route to commit,
+    # rather than accidentally returning the outgoing or still-hidden frame.
+    page.wait_for_function("""p=>{
+      const frames=document.querySelectorAll('.lcz-content-frame');
+      const f=frames[0];
+      return document.querySelector('.lcz-content-host')?.dataset.state==='ready' &&
+        frames.length===1 && f.contentDocument?.readyState==='complete' &&
+        decodeURIComponent(f.contentWindow.location.pathname).endsWith(p) && f.contentWindow.LCZMusic;
+    }""", arg=path)
     return page.locator('.lcz-content-frame').content_frame
 
 def lazy(page, context):
@@ -219,10 +227,171 @@ def phone(page, context):
     expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
     frame.locator('.lcz-music-toggle').tap()
 
+def focused_route(page):
+    assert page.evaluate("""()=>{
+      const f=document.querySelector('.lcz-content-frame');
+      return document.activeElement===f && f.contentDocument.hasFocus() &&
+        f.contentDocument.activeElement!==f.contentDocument.body;
+    }"""), 'Focus did not enter the new page content'
+
+
+def click_moving_world(page, game):
+    # Real pointer input does not require an intentionally drifting bubble to stop.
+    box=page.locator(f'.world[data-game="{game}"] a').bounding_box()
+    assert box
+    page.mouse.click(box['x']+box['width']/2,box['y']+box['height']/2)
+
+
+def wait_held_request(page, requests):
+    # Pump Playwright events until the intentionally intercepted request arrives.
+    for _ in range(40):
+        if requests:return requests[0]
+        page.wait_for_timeout(50)
+    raise AssertionError('Expected a held navigation request')
+
+
+def smooth_slow_navigation(page, context):
+    page.emulate_media(reduced_motion='no-preference')
+    load(page);start(page)
+    original_player=page.evaluate('window.originalPlayer=LCZMusic;window.originalAudio=document.querySelector("audio");LCZMusic.snapshot().time')
+    held=[];pattern='**/Craft%20of%20Survival/wiki.html'
+    page.route(pattern,lambda route:held.append(route))
+    try:
+        click_moving_world(page,'craft')
+        pending=wait_held_request(page,held)
+        expect(page.locator('.lcz-content-host')).to_have_attribute('data-state','loading')
+        expect(page.locator('.world').first).to_be_visible()
+        page.wait_for_timeout(350)
+        assert page.locator('.lcz-content-frame').evaluate('(f)=>getComputedStyle(f).visibility==="hidden"&&f.inert'), 'Loading document is visible or interactive'
+        assert not page.evaluate('document.body.classList.contains("lcz-shell-mode")'), 'Home disappeared before the destination loaded'
+        assert page.evaluate('LCZMusic.snapshot().time')>original_player
+        # A modal can open while the still-visible outgoing home is loading.
+        page.locator('#search-open').click()
+        expect(page.locator('#search-dialog')).to_be_visible()
+        # Record the brief transition at its source instead of racing a 280ms fade.
+        page.evaluate("""()=>{
+          window.routeStages=[];
+          const host=document.querySelector('.lcz-content-host');
+          const observer=new MutationObserver(()=>{
+            const incoming=host.querySelector('.lcz-content-frame');
+            window.routeStages.push({state:host.dataset.state,
+              homeVisible:getComputedStyle(document.querySelector('.app-shell')).display!=='none',
+              animating:incoming?.getAnimations().some(a=>a.playState==='running')});
+            if(host.dataset.state==='ready')observer.disconnect();
+          });
+          observer.observe(host,{attributes:true,attributeFilter:['data-state']});
+        }""")
+        pending.continue_()
+        frame=frame_ready(page,'Craft of Survival/wiki.html')
+        stages=page.evaluate('routeStages')
+        assert any(stage['state']=='revealing' and stage['homeVisible'] and stage['animating'] for stage in stages), stages
+        expect(page.locator('dialog[open]')).to_have_count(0)
+        expect(frame.locator('.article-card').first).to_be_visible()
+        focused_route(page)
+        frame.locator('.article-card').first.click()
+        expect(frame.locator('#detail-dialog')).to_be_visible()
+        frame.locator('#dialog-close').click()
+        assert page.evaluate('window.originalPlayer===LCZMusic&&window.originalAudio===document.querySelector("audio")')
+        assert page.evaluate('document.body.classList.contains("scene-still")'), 'Parked home keeps animating'
+        assert page.locator('.lcz-frame-pending').count()==0
+    finally:
+        page.unroute(pattern)
+
+
+def latest_navigation_wins(page, context):
+    page.emulate_media(reduced_motion='no-preference')
+    load(page);start(page)
+    page.evaluate('window.originalAudio=document.querySelector("audio")')
+    click_moving_world(page,'craft')
+    frame_ready(page,'Craft of Survival/wiki.html')
+    held=[];pattern='**/Day%20R%20Survival/wiki_dayR.html'
+    page.route(pattern,lambda route:held.append(route))
+    try:
+        page.evaluate("LCZSite.navigate('Day%20R%20Survival/wiki_dayR.html')")
+        pending=wait_held_request(page,held)
+        expect(page.locator('.lcz-content-host')).to_have_attribute('data-state','loading')
+        assert page.locator('.lcz-content-frame').evaluate_all('frames=>frames.some(f=>decodeURIComponent(f.src).includes("Craft of Survival")&&getComputedStyle(f).visibility!=="hidden"&&parseFloat(getComputedStyle(f).opacity)>.99)')
+        page.evaluate("LCZSite.navigate('DawnofZombiewiki/index.html')")
+        frame=frame_ready(page,'DawnofZombiewiki/index.html')
+        title=page.title();address=page.url
+        # The canceled request can still resolve at the browser/network boundary.
+        # An already-canceled interception is also an expected safe outcome.
+        try:pending.continue_()
+        except Error:pass
+        page.wait_for_timeout(400)
+        assert page.title()==title and page.url==address, 'Superseded load changed the committed route'
+        assert page.locator('.lcz-content-frame').count()==1
+        expect(frame.locator('#main h1')).to_be_visible()
+        focused_route(page)
+        assert page.evaluate('window.originalAudio===document.querySelector("audio")&&LCZMusic.snapshot().playing')
+        assert frame.locator('audio').count()==0, 'Child created another audio owner'
+        assert page.locator('.lcz-route-note').count()==0
+        page.go_back();frame_ready(page,'Craft of Survival/wiki.html')
+        focused_route(page)
+        page.go_forward();frame_ready(page,'DawnofZombiewiki/index.html')
+    finally:
+        page.unroute(pattern)
+
+
+def route_failure_retry(page, context):
+    load(page);start(page)
+    page.locator('.world[data-game="craft"] a').click()
+    frame_ready(page,'Craft of Survival/wiki.html')
+    pattern='**/DawnofZombiewiki/index.html'
+    page.route(pattern,lambda route:route.abort('failed'))
+    try:
+        page.evaluate("LCZSite.navigate('DawnofZombiewiki/index.html')")
+        host=page.locator('.lcz-content-host')
+        expect(host).to_have_attribute('data-state','error')
+        expect(page.locator('.lcz-route-note')).to_contain_text(re.compile('未能打开|无法打开|打开失败|加载失败'))
+        expect(page.locator('.lcz-route-note a').filter(has_text='重新打开')).to_be_visible()
+        assert page.locator('.lcz-content-frame').count()==1, 'Failed pending frame was retained'
+        old=page.locator('.lcz-content-frame').content_frame
+        expect(old.locator('.article-card').first).to_be_visible()
+        assert page.evaluate('LCZMusic.snapshot().playing')
+    finally:
+        page.unroute(pattern)
+    page.locator('.lcz-route-note a').filter(has_text='重新打开').click()
+    frame_ready(page,'DawnofZombiewiki/index.html')
+    focused_route(page)
+    assert page.locator('.lcz-route-note').count()==0
+    page.go_back();frame_ready(page,'Craft of Survival/wiki.html')
+    # Choosing another destination after failure must replace the unvisited route.
+    page.route(pattern,lambda route:route.abort('failed'))
+    try:
+        page.evaluate("LCZSite.navigate('DawnofZombiewiki/index.html')")
+        expect(page.locator('.lcz-content-host')).to_have_attribute('data-state','error')
+        page.evaluate("LCZSite.navigate('LDOE_Wiki/index.html')")
+        frame_ready(page,'LDOE_Wiki/index.html')
+        focused_route(page)
+        page.go_back();frame_ready(page,'Craft of Survival/wiki.html')
+        focused_route(page)
+        page.go_forward();frame_ready(page,'LDOE_Wiki/index.html')
+        assert page.locator('.lcz-content-frame').count()==1
+        assert page.locator('.lcz-route-note').count()==0
+    finally:
+        page.unroute(pattern)
+
+
+def reduced_route_focus(page, context):
+    load(page);start(page)
+    page.locator('.world[data-game="craft"] a').focus()
+    page.keyboard.press('Enter')
+    frame_ready(page,'Craft of Survival/wiki.html')
+    focused_route(page)
+    assert page.locator('.lcz-content-frame').evaluate('(f)=>f.getAnimations().every(a=>a.playState!=="running")'), 'Reduced-motion route still animates'
+    assert page.locator('.lcz-frame-pending').count()==0
+    frame=page.locator('.lcz-content-frame').content_frame
+    frame.locator('.atlas-home').focus();page.keyboard.press('Enter')
+    frame_ready(page,'index.html')
+    focused_route(page)
+    assert page.locator('.lcz-content-frame').evaluate('(f)=>f.getAnimations().every(a=>a.playState!=="running")')
+
+
 try:
     with sync_playwright() as p:
         browser=p.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True)
-        for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True)]:
+        for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True),('smooth route keeps home visible during slow loading',smooth_slow_navigation,False),('latest route wins rapid switching without stale frames or history',latest_navigation_wins,False),('failed route retains old page and retry recovers',route_failure_retry,False),('reduced motion routes restore focus without animation',reduced_route_focus,False)]:
             if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
             context=browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
             page=context.new_page()

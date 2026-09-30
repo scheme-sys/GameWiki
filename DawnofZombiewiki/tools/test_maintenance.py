@@ -9,7 +9,7 @@ import sys
 import tempfile
 import unittest
 
-from wiki_data import ROOT, generated_files, json_bytes, load_data, player_exports, read_js_json
+from wiki_data import ROOT, csv_bytes, generated_files, json_bytes, load_data, player_exports, read_js_json
 from verify_data import verify
 
 
@@ -66,6 +66,36 @@ class MaintenanceTests(unittest.TestCase):
         self.assertIn('0.87', rows[1][5])
         for secret in ('123456', 'HIDDEN_ROW', 'iconBundleId'):
             self.assertNotIn(secret, value)
+
+    def test_entity_codes_survive_lists_details_and_exports_without_normalization(self):
+        code = " weapon_vampire_hunter's_sword "
+        self.catalog['entries'][0]['entityCode'] = code
+        self.write('data/catalog.json', json_bytes(self.catalog))
+        self.assertEqual(self.command('--exports').returncode, 0)
+        boot = read_js_json(self.root / 'data/bootstrap.js', 'DOZ_BOOTSTRAP')
+        self.assertEqual(boot['entries'][0]['entityCode'], code)
+        index_path = self.root / boot['manifest']['index-weapon']
+        index = json.loads(index_path.read_text('utf-8').split(' = ', 1)[1].rstrip(';\n'))
+        self.assertEqual(index[0]['entityCode'], code)
+        runtime = read_js_json(self.root / 'data/catalog.js', 'DOZ_CATALOG')
+        self.assertEqual(runtime['entries'][0]['entityCode'], code)
+        rows = list(csv.reader(io.StringIO((self.root / 'data/player/武器图鉴.csv').read_text('utf-8-sig'))))
+        self.assertEqual(rows[0][-1], '实体代码')
+        self.assertEqual(rows[1][-1], code)
+        self.assertEqual(verify(self.root, data_only=True)['errors'], [])
+
+    def test_csv_quotes_significant_whitespace_without_changing_other_rows(self):
+        rows = [['name', 'code'], ['plain', 'ordinary_code'],
+                ['trailing space', 'res_incense_halloween2 '],
+                ['trailing tab', 'spawn_military_mob_6_Scene_ForestBelt_Red_low_1\t'],
+                ['leading space', ' broken_bicycle']]
+        value = csv_bytes(rows).decode('utf-8-sig')
+        self.assertEqual(list(csv.reader(io.StringIO(value, newline=''))), rows)
+        self.assertTrue(value.startswith('name,code\r\nplain,ordinary_code\r\n'))
+        for line in value.splitlines():
+            self.assertEqual(line, line.rstrip(' \t'))
+        self.assertIn('"res_incense_halloween2 "', value)
+        self.assertIn('"spawn_military_mob_6_Scene_ForestBelt_Red_low_1\t"', value)
 
     def test_update_is_repeatable_and_preserves_source_images_and_ui(self):
         protected = ['data/catalog.json', 'data/mechanics.json', 'data/asset-map.json', 'assets/images/example#1.png', 'index.html', 'app.js']

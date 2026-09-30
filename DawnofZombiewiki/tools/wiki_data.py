@@ -75,14 +75,20 @@ def csv_value(value):
 
 def csv_bytes(rows):
     stream = io.StringIO(newline='')
-    csv.writer(stream).writerows([[csv_value(value) for value in row] for row in rows])
+    normal = csv.writer(stream)
+    protected = csv.writer(stream, quoting=csv.QUOTE_ALL)
+    for row in rows:
+        values = [csv_value(value) for value in row]
+        # Preserve meaningful code whitespace inside CSV quotes, not at line ends.
+        writer = protected if any(value != value.strip() for value in values) else normal
+        writer.writerow(values)
     return stream.getvalue().encode('utf-8-sig')
 
 
 def player_exports(catalog, mechanics, assets):
-    """Explicit player columns only; IDs, keys and implementation fields are omitted."""
+    """Explicit player columns, including verified entity codes; implementation fields are omitted."""
     outputs = {}
-    heading = ['名称', '英文名称', '品质', '类型', '说明', '基础属性', '特殊能力', '来源提示', '图片文件', '图片类型']
+    heading = ['名称', '英文名称', '品质', '类型', '说明', '基础属性', '特殊能力', '来源提示', '图片文件', '图片类型', '实体代码']
     for category, title in ENTRY_EXPORTS.items():
         rows = [heading]
         for entry in catalog['entries']:
@@ -94,12 +100,12 @@ def player_exports(catalog, mechanics, assets):
                 entry.get('subcategory', ''), entry.get('description', ''),
                 '；'.join(f"{stat['label']}：{stat['value']}{stat.get('unit', '')}" for stat in entry.get('stats', [])),
                 '；'.join(f"{ability.get('name', '')}：{ability.get('description', '')}" for ability in entry.get('abilities', [])),
-                '；'.join(entry.get('sourceHints', [])), image, kind,
+                '；'.join(entry.get('sourceHints', [])), image, kind, entry.get('entityCode', ''),
             ])
         outputs[f'data/player/{title}.csv'] = csv_bytes(rows)
     for key, title in LIBRARY_EXPORTS.items():
-        rows = [['名称', '说明', '提示', '图片文件']]
-        rows += [[entry.get('name', ''), entry.get('description', ''), entry.get('hint', ''), image_for(entry, assets)[0]]
+        rows = [['名称', '说明', '提示', '图片文件', '实体代码']]
+        rows += [[entry.get('name', ''), entry.get('description', ''), entry.get('hint', ''), image_for(entry, assets)[0], entry.get('entityCode', '')]
                  for entry in catalog[key]]
         outputs[f'data/player/{title}.csv'] = csv_bytes(rows)
     rows = [['名称', '类型', '说明', '解锁等级', '制作秒数', '投入装备与材料', '结果', '设施', '解锁说明']]
