@@ -110,6 +110,12 @@
   .celestial-tree-art img { object-position: 50% 40%; }
 }
 
+/* The dedicated 3:1 panorama keeps the tree and its spreading crown in view
+   on both 21:9 and 32:9 displays, with nebulae filling the distant wings. */
+@media (min-width: 1280px) and (min-aspect-ratio: 2/1) {
+  .celestial-tree-art img { object-position: 50% 50%; }
+}
+
 :is(.scene-still, .is-dragging) .celestial-tree > * {
   animation-play-state: paused;
 }
