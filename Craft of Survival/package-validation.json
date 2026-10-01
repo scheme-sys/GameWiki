@@ -7489,14 +7489,14 @@
     {
       "path": "wiki-assets/wiki.css",
       "hashMode": "utf8-lf",
-      "bytes": 24351,
-      "sha256": "a7718049e9a4086326c978a6cff8d1f464bd7366f8c62e535629e4c928b14fef"
+      "bytes": 31396,
+      "sha256": "dce2136994a69c26368a64e77474d5144e7819db08ede03b6bfaa6ad77cfb937"
     },
     {
       "path": "wiki.html",
       "hashMode": "utf8-lf",
-      "bytes": 8926,
-      "sha256": "9f0c5732bfef72404739e98571fa72482eca18928883271391acbe7a86f1342a"
+      "bytes": 9047,
+      "sha256": "2346fbbd5a398a91cd3dd917fd7f95dfbc6daf419c00a9ba89c8c7cbbb91b98e"
     }
   ]
 }
