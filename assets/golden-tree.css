@@ -14,10 +14,15 @@
   position: absolute;
   inset: 0;
   display: block;
-  opacity: var(--tree-opacity);
   /* Fade the artwork into the existing sky, without a rectangular edge. */
   -webkit-mask-image: radial-gradient(ellipse 78% 86% at 50% 47%, #000 24%, #000c 52%, transparent 83%);
   mask-image: radial-gradient(ellipse 78% 86% at 50% 47%, #000 24%, #000c 52%, transparent 83%);
+}
+
+/* Keep the base artwork subdued, but let the extracted gold emit above it.
+   Applying opacity to their shared parent would also dim the pointer light. */
+.celestial-tree-art picture {
+  opacity: var(--tree-opacity);
   transition: opacity 3.6s cubic-bezier(.2,.65,.3,1);
 }
 
@@ -25,7 +30,7 @@
    motion preferences must never restart the tree at a transparent frame.
    Browsers without starting-style simply show the finished composition. */
 @starting-style {
-  .celestial-tree-art { opacity: 0; }
+  .celestial-tree-art picture { opacity: 0; }
 }
 
 .celestial-tree-art picture,
@@ -139,7 +144,8 @@
 :is(.scene-still, .is-dragging) .celestial-tree > * {
   animation-play-state: paused;
 }
-:is(.scene-still, .is-dragging) .celestial-tree-art { transition: none; }
+:is(.scene-still, .is-dragging) .celestial-tree-art picture { transition: none; }
 @media (prefers-reduced-motion: reduce) {
   .celestial-tree > * { animation: none !important; transition: none !important; }
+  .celestial-tree-art picture { transition: none !important; }
 }

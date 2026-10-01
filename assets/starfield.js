@@ -35,11 +35,11 @@
   const stars = [];
   const links = [];
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
-  const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false,
+  const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false, inside: false,
     radius: 220, dpr: 1, crop: null, paintedX: NaN, paintedY: NaN };
   let lightCanvas, lightContext;
   const goldWorkerURL = new URL('golden-tree-texture.js', document.currentScript.src);
-  let goldTexture, goldWorker, goldSource = '', goldBuild = 0;
+  let goldTexture, goldMask, goldWorker, goldSource = '', goldBuild = 0;
   let width = 1, height = 1, settings, frame = 0, resizeTimer = 0;
   let tree;
   let lastFrame = 0, lastStep = 0, elapsed = 0, nextConnections = 0;
@@ -114,12 +114,12 @@
 
   function prepareGoldTexture() {
     if (!desktopPointer.matches || reducedMotion.matches || !treeImage?.complete || !treeImage.naturalWidth) return;
-    if (!window.Worker || !window.OffscreenCanvas || !window.createImageBitmap) return;
     const source = treeImage.currentSrc;
     if (goldSource === source) return;
     goldSource = source;
     goldTexture?.close();
     goldTexture = null;
+    goldMask = null;
     goldWorker?.terminate();
     if (lightCanvas) lightCanvas.style.opacity = '0';
     const build = ++goldBuild;
@@ -130,8 +130,30 @@
       goldSource = '';
       return false;
     };
+    let maskRequested = false;
+    const loadMask = () => {
+      if (maskRequested || !current()) return;
+      maskRequested = true;
+      // file: pages cannot create a Worker or read local-image pixels. These
+      // native-size alpha masks use the identical extraction, prepared once.
+      const mask = new Image();
+      const url = new URL(source);
+      url.pathname = url.pathname.replace(/\.webp$/, '-gold-mask.png');
+      mask.decoding = 'async';
+      mask.src = url.href;
+      mask.decode().then(() => {
+        if (!current()) return;
+        goldMask = mask;
+        light.paintedX = NaN;
+        light.amount = 0;
+      }).catch(() => { /* Keep the original artwork if an optional mask is unavailable. */ });
+    };
+    if (location.protocol === 'file:' || !window.Worker || !window.OffscreenCanvas || !window.createImageBitmap) {
+      loadMask();
+      return;
+    }
     let worker;
-    try { worker = new Worker(goldWorkerURL); } catch (_) { return; }
+    try { worker = new Worker(goldWorkerURL); } catch (_) { loadMask(); return; }
     goldWorker = worker;
     const finish = () => {
       worker.terminate();
@@ -139,13 +161,13 @@
     };
     worker.onmessage = ({ data }) => {
       finish();
-      if (!data.texture) return;
+      if (!data.texture) { loadMask(); return; }
       if (!current()) { data.texture.close(); return; }
       goldTexture = data.texture;
       light.paintedX = NaN;
       light.amount = 0;
     };
-    worker.onerror = finish;
+    worker.onerror = () => { finish(); loadMask(); };
     // Pixel readback and fine-detail extraction run off the UI thread, once
     // per selected source. Pointer motion only draws the resulting gold texture.
     treeImage.decode().then(() => createImageBitmap(treeImage)).then((bitmap) => {
@@ -154,8 +176,7 @@
       catch (error) { bitmap.close(); throw error; }
     }).catch((error) => {
       finish();
-      if (build === goldBuild && (treeImage.currentSrc !== source ||
-          error.name === 'EncodingError' || error.name === 'AbortError')) goldSource = '';
+      loadMask();
     });
   }
 
@@ -175,7 +196,7 @@
     if (light.active && light.amount > .995) light.amount = 1;
     if (!light.crop || !treeImage?.complete || !treeImage.naturalWidth) return;
     prepareGoldTexture();
-    if (!goldTexture || goldSource !== treeImage.currentSrc) return;
+    if ((!goldTexture && !goldMask) || goldSource !== treeImage.currentSrc) return;
     // Draw only the extracted gold emission, never a copy of the whole scene.
     // The small viewport crop shares the sky's existing animation loop.
     const size = light.radius * 2;
@@ -200,8 +221,18 @@
     if (left !== light.paintedX || top !== light.paintedY) {
       const crop = light.crop;
       lightContext.clearRect(0, 0, size, size);
-      lightContext.drawImage(goldTexture, (left - crop.left) / crop.scale, (top - crop.top) / crop.scale,
-        size / crop.scale, size / crop.scale, 0, 0, size, size);
+      const sourceX = (left - crop.left) / crop.scale, sourceY = (top - crop.top) / crop.scale;
+      const sourceSize = size / crop.scale;
+      lightContext.drawImage(goldTexture || treeImage, sourceX, sourceY,
+        sourceSize, sourceSize, 0, 0, size, size);
+      if (goldMask) {
+        // Drawing a local image is allowed without pixel readback. Apply only
+        // its matching gold alpha, so file mode never falls back to a full glow.
+        lightContext.globalCompositeOperation = 'destination-in';
+        lightContext.drawImage(goldMask, sourceX, sourceY,
+          sourceSize, sourceSize, 0, 0, size, size);
+        lightContext.globalCompositeOperation = 'source-over';
+      }
       lightCanvas.style.transform = 'translate3d(' + left + 'px,' + top + 'px,0)';
       light.paintedX = left;
       light.paintedY = top;
@@ -424,6 +455,7 @@
     const paused = shouldPause();
     canvas.dataset.state = paused ? 'paused' : 'running';
     if (paused || !desktopPointer.matches) clearPointerLight();
+    else if (light.inside) light.active = true;
     if (paused) {
       cancelAnimationFrame(frame);
       frame = 0;
@@ -477,21 +509,26 @@
     resizeTimer = setTimeout(resize, 120);
   }, { passive: true });
   window.addEventListener('pointermove', (event) => {
-    if (event.pointerType !== 'mouse') { light.active = false; return; }
+    if (event.pointerType !== 'mouse') { light.inside = light.active = false; return; }
+    // Retain the final mouse position while a game preview fades out. When
+    // the scene resumes, a stationary mouse must still illuminate that spot.
+    if (desktopPointer.matches) {
+      light.inside = true;
+      light.targetX = clamp(event.clientX, 0, width);
+      light.targetY = clamp(event.clientY, 0, height);
+      if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
+    }
     if (shouldPause()) return;
     if (!settings.compact) {
       pointer.targetX = (clamp(event.clientX / width, 0, 1) - .5) * 8;
       pointer.targetY = (clamp(event.clientY / height, 0, 1) - .5) * 8;
     }
     if (!desktopPointer.matches) return;
-    light.targetX = clamp(event.clientX, 0, width);
-    light.targetY = clamp(event.clientY, 0, height);
-    if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
     light.active = true;
   }, { passive: true });
   function leavePointer() {
     pointer.targetX = pointer.targetY = 0;
-    light.active = false;
+    light.inside = light.active = false;
   }
   window.addEventListener('pointerout', (event) => {
     if (!event.relatedTarget) leavePointer();
