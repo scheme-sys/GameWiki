@@ -217,7 +217,7 @@ def drift_and_hover(page):
     page.mouse.move(x, y)
     expect(page.locator("#game-info")).to_be_visible()
     expect(page.locator("#info-title")).to_have_text('辐射生存')
-    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)===8')
+    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)===0')
     frozen = snapshot(page)
     page.wait_for_timeout(500)
     assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
@@ -309,7 +309,7 @@ def popover_transition_races(page, context):
     page.mouse.move(*icon_center(page,'grimsoul'));page.wait_for_timeout(20)
     page.locator('#search-open').click();expect(page.locator('#search-dialog')).to_be_visible()
     page.wait_for_timeout(250);expect(info).to_be_hidden()
-    for selector, radius in [('#search-dialog', '8px'), ('.search-field', '0px')]:
+    for selector, radius in [('#search-dialog', '0px'), ('.search-field', '0px')]:
         assert page.locator(selector).evaluate('(e,radius)=>{const s=getComputedStyle(e);return [s.borderTopLeftRadius,s.borderTopRightRadius,s.borderBottomRightRadius,s.borderBottomLeftRadius].every(v=>v===radius)}', radius), selector
     page.keyboard.press('Escape')
     page.mouse.move(*icon_center(page,'grimsoul'));expect(info).to_be_visible();page.wait_for_timeout(220)
@@ -349,7 +349,7 @@ def lazy_popover_covers(page, context, mobile=False):
         frame=info.bounding_box()
         assert frame['x']>=0 and frame['y']>=0 and frame['x']+frame['width']<=page.viewport_size['width']+1
         assert frame['y']+frame['height']<=page.viewport_size['height']+1
-        assert info.evaluate('(e)=>getComputedStyle(e).borderTopLeftRadius')=='8px'
+        assert info.evaluate('(e)=>getComputedStyle(e).borderTopLeftRadius')=='0px'
         screenshot(page,('cover-touch-' if mobile else 'cover-mouse-')+game)
         page.locator('#info-close').click()
         expect(info).to_be_hidden()

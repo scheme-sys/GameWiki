@@ -15,8 +15,8 @@
 .site-header :is(.site-stats-summary:hover,.site-stats-summary:focus-visible,.site-stats-disclosure[open]) .site-stats-icon { filter: drop-shadow(0 0 6px #dfbd7955); }
 .site-header .site-stats-summary:focus-visible .stats-orbit { opacity: .8; }
 .site-header .site-stats-disclosure:not([open]) .site-stats-summary:is(:hover,:focus-visible)::after {
-  border-color: #c6aa7352; border-radius: 6px;
-  background: var(--panel-fill); box-shadow: var(--panel-shadow); color: var(--muted);
+  border-color: #c6aa7352; border-radius: 0;
+  background: var(--panel-fill) #0c1621; box-shadow: var(--panel-shadow); color: var(--muted);
 }
 
 .site-header .lcz-music-toggle svg { filter: drop-shadow(0 0 5px #d8b87724); }
