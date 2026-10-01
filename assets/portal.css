@@ -276,8 +276,7 @@ dialog::backdrop { background: #030813ad; -webkit-backdrop-filter: blur(5px); ba
   .search-trigger { width: 44px; height: 44px; justify-content: center; padding: 0; }
   .search-trigger>span,.search-trigger kbd { display: none; }
   main { inset: calc(118px + env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left)); }
-  .game-popover.touch-preview { left: max(12px,env(safe-area-inset-left)) !important; right: max(12px,env(safe-area-inset-right)); bottom: max(12px,env(safe-area-inset-bottom)); top: auto !important; width: auto; max-height: calc(100vh - 140px); max-height: calc(100dvh - 140px); padding: 19px 22px 0; }
-  .game-popover h2 { font-size: 23px; }
+  .game-popover.touch-preview { left: max(12px,env(safe-area-inset-left)) !important; right: max(12px,env(safe-area-inset-right)); bottom: max(12px,env(safe-area-inset-bottom)); top: auto !important; margin-inline: auto; max-height: calc(100vh - 140px); max-height: calc(100dvh - 140px); }
   .popover-top { margin-bottom: 12px; }
   .popover-heading { margin-bottom: 16px; }
   .info-description { margin-bottom: 16px; }
@@ -298,7 +297,7 @@ dialog::backdrop { background: #030813ad; -webkit-backdrop-filter: blur(5px); ba
   .search-trigger { width: 44px; height: 44px; justify-content: center; padding: 0; }
   .search-trigger>span,.search-trigger kbd { display: none; }
   main { top: calc(68px + env(safe-area-inset-top)); bottom: max(20px,env(safe-area-inset-bottom)); }
-  .game-popover.touch-preview { width: 310px; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); left: auto !important; right: max(12px,env(safe-area-inset-right)); bottom: 12px; }
+  .game-popover.touch-preview { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); left: auto !important; right: max(12px,env(safe-area-inset-right)); bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *,*:before,*:after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
@@ -306,7 +305,6 @@ dialog::backdrop { background: #030813ad; -webkit-backdrop-filter: blur(5px); ba
 @keyframes community-glow { 0%,100% { opacity: .82; } 50% { opacity: 1; } }
 .scene-still .community { animation-play-state: paused; }
 
-@media (max-width: 600px) { .game-popover.touch-preview .popover-heading { min-height: 92px; } .game-popover.touch-preview .popover-art { height: 220px; } }
 @media (prefers-reduced-motion: reduce) { .game-popover[data-cover-state="ready"] .popover-art>img { transition: none; } }
 
 /* A search keeps its field and close action in view while only results scroll. */
@@ -347,4 +345,43 @@ dialog::backdrop { background: #030813ad; -webkit-backdrop-filter: blur(5px); ba
 }
 @media (max-height: 600px) {
   .community-image { width: min(100%,calc((100dvh - 184px) * .833333)); }
+}
+
+/* Scale the whole window composition; retain 44px interactive targets. */
+.game-popover {
+  width: min(clamp(280px,calc(260px + 6vw),348px),calc(100vw - 32px));
+  padding: clamp(12px,1.4vw,20px) clamp(14px,calc(10px + 1vw),24px) 0;
+}
+.popover-art { height: clamp(172px,calc(152px + 6vw),238px); }
+.popover-heading { min-height: clamp(76px,calc(56px + 5.56vw),136px); gap: clamp(12px,1.25vw,18px); margin-bottom: clamp(12px,1.46vw,21px); }
+.popover-heading img { width: clamp(40px,calc(34px + 1.25vw),52px); height: auto; aspect-ratio: 1; flex-basis: clamp(40px,calc(34px + 1.25vw),52px); }
+.game-popover h2 { font-size: clamp(20px,calc(18px + .625vw),27px); }
+.info-description { font-size: clamp(12px,calc(11.5px + .105vw),13px); margin-bottom: clamp(12px,1.46vw,21px); }
+.info-english,.info-tags>span { font-size: clamp(10px,calc(9.6px + .1vw),11px); }
+.info-tags { gap: 6px; margin-bottom: clamp(12px,1.67vw,24px); }
+.info-tags>span { padding: 4px 7px; }
+.info-links { padding-block: clamp(10px,1.25vw,18px) clamp(12px,1.4vw,20px); }
+.info-links a { padding: 8px 10px; font-size: clamp(11px,calc(10.6px + .1vw),12px); }
+.search-dialog {
+  --field-height: clamp(44px,calc(40px + 1.05vw),55px);
+  width: min(clamp(288px,calc(250px + 27vw),590px),calc(100vw - 32px));
+  padding: clamp(14px,2.1vw,30px);
+}
+.search-dialog .dialog-header { min-height: clamp(44px,3.75vw,54px); margin-bottom: clamp(16px,1.53vw,22px); }
+.search-dialog h2 { font-size: clamp(18px,calc(16px + .5vw),23px); }
+.search-dialog .window-heading { gap: clamp(8px,1vw,14px); }
+.search-dialog .window-seal { width: clamp(32px,3.33vw,48px); height: auto; flex-basis: clamp(32px,3.33vw,48px); }
+.search-field { min-height: var(--field-height); gap: clamp(8px,.91vw,13px); padding-inline: clamp(10px,1.05vw,15px); }
+.search-field input { height: calc(var(--field-height) - 2px); }
+.search-result { grid-template-columns: clamp(36px,3.33vw,48px) minmax(0,1fr); gap: clamp(12px,1vw,14px); min-height: clamp(66px,calc(54px + 2.8vw),94px); padding: clamp(10px,1.25vw,18px) clamp(10px,1vw,14px); }
+.search-result>img { width: clamp(36px,3.33vw,48px); height: auto; aspect-ratio: 1; }
+.result-title { font-size: clamp(13px,calc(12px + .21vw),15px); }
+.result-english { font-size: clamp(10px,calc(9.6px + .1vw),11px); margin-top: 3px; }
+@media (max-height: 500px) {
+  .search-dialog { padding: 12px 16px; }
+  .search-dialog .dialog-header { min-height: 44px; margin-bottom: 14px; }
+  .search-dialog .search-results { margin-top: 12px; }
+  .game-popover .popover-heading { min-height: 56px; margin-bottom: 10px; }
+  .game-popover .popover-top { margin-bottom: 8px; padding-bottom: 4px; }
+  .game-popover .popover-art { height: 148px; }
 }

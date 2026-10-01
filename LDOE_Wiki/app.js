@@ -306,7 +306,10 @@
   document.addEventListener('input',event=>{if(event.target.id==='recipe-quantity'&&currentDetail){const quantity=Math.min(999,Math.max(1,Math.floor(Number(event.target.value)||1)));$('#recipe-ingredients').innerHTML=ingredientMarkup(ingredientsOf(currentDetail),quantity);}});
   document.addEventListener('change',event=>{if(event.target.id==='recipe-quantity')event.target.value=Math.min(999,Math.max(1,Math.floor(Number(event.target.value)||1)));if(event.target.id==='more-filters'){state.filter=event.target.value;state.page=1;render();}});
   document.addEventListener('click',async event=>{
-    const button=event.target.closest('button,a.brand');if(!button)return;
+    const button=event.target.closest('button,a.brand,.card-open[data-entry]');if(!button)return;
+    // Nested actions retain priority; selecting or copying an entity code never opens its card.
+    if(event.target.closest('.lcz-entity-code,.lcz-entity-codes'))return;
+    if(button.matches('.card-open')&&event.target.closest('a,input,select,textarea,summary,[contenteditable]'))return;
     if(button.matches('a.brand')){event.preventDefault();changeView('overview');return;}
     const d=button.dataset;
     if(d.view){changeView(d.view);return;}

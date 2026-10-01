@@ -53,7 +53,7 @@ try:
   start=time.perf_counter();page.goto(BASE,wait_until='networkidle');report['timings']['firstLocalLoadMs']=round((time.perf_counter()-start)*1000,1)
   assert page.locator('#main h1').count()==1
   expect(page.locator('[data-site-stats]')).to_have_attribute('data-stats-state','preview')
-  assert page.locator('.atlas-menu a').count()==4
+  assert page.locator('.atlas-menu a').count()==6
   expect(page.locator('#mobile-menu')).to_be_hidden();expect(page.locator('#menu-close')).to_be_hidden()
   no_overflow(page,'desktop-home');capture(page,'home-desktop')
   report['timings']['initialImageRequests']=page.evaluate("performance.getEntriesByType('resource').filter(r=>r.initiatorType==='img').length")

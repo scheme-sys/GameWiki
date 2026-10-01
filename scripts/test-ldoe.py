@@ -100,7 +100,7 @@ try:
   passed('Creatures, resources, 459 crafting/repair recipes and 46 locations render independently')
   view(page,'overview');page.locator('#global-search').fill('Glock 17')
   page.wait_for_function("()=>document.querySelector('#result-count').textContent.includes('Glock 17')&&document.querySelector('#catalog-grid').getAttribute('aria-busy')==='false'")
-  assert page.locator('.item-card').count()==3
+  assert page.locator('.item-card').count()==6
   expect(page.locator('.item-card h3').first).to_have_text('格洛克 17')
   assert 'search' in page.evaluate('LDOE_DATA.loaded()')
   page.locator('#global-search').fill('松木原木')
@@ -111,6 +111,11 @@ try:
   expect(page.locator('.empty-state')).to_be_visible()
   passed('Global English and Chinese search, original text matching and empty results')
   view(page,'weapons')
+  page.locator('.card-visual').first.click();expect(page.locator('.detail-body')).to_be_visible();close(page)
+  page.locator('.card-title-button').first.click();expect(page.locator('.detail-body')).to_be_visible();close(page)
+  page.locator('.item-card .lcz-entity-code__value').first.click();expect(page.locator('#detail-dialog')).not_to_be_visible()
+  page.locator('.item-card [data-entity-copy]').first.click();expect(page.locator('#detail-dialog')).not_to_be_visible()
+  passed('Card image and title open details; entity code selection and copy stay independent')
   page.locator('[data-save="item-0069"]').click();expect(page.locator('#favorites-count')).to_have_text('1')
   page.locator('[data-compare="item-0069"]').click();page.locator('[data-compare="item-0076"]').click()
   expect(page.locator('#compare-count')).to_have_text('2')
@@ -211,8 +216,8 @@ try:
   p.goto(BASE,wait_until='networkidle');p.locator('#global-search').fill('Glock 17 远程武器')
   p.wait_for_function("()=>document.querySelector('#result-count').textContent.includes('Glock 17')&&document.querySelector('#catalog-grid').getAttribute('aria-busy')==='false'")
   parts=p.evaluate('LDOE_DATA.loaded()')
-  assert set(parts)=={'search','details-item-2'},parts
-  passed('Cold global search requests only its search index and the one matching detail bucket')
+  assert set(parts)=={'search','details-item-2','details-item-50'},parts
+  passed('Cold global search requests only its search index and the two matching detail buckets')
   cold.close()
   offline=browser.new_context(viewport={'width':1440,'height':900});p=offline.new_page();attach(p)
   p.goto((ROOT/'LDOE_Wiki/index.html').as_uri()+'#entry=recipe-0001',wait_until='load')
