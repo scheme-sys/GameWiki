@@ -28,12 +28,32 @@
   .celestial-tree-art { opacity: 0; }
 }
 
+.celestial-tree-art picture,
 .celestial-tree-art img {
   display: block;
   width: 100%;
   height: 100%;
+}
+.celestial-tree-art img {
   object-fit: cover;
   object-position: 50% 48%;
+}
+
+/* A small crop of the same artwork reveals the branches beneath the mouse.
+   Screen preserves the dark sky; both masks keep the light soft and contained. */
+.celestial-tree-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(circle closest-side, #000 0%, #000d 22%, #0006 51%, #0001 74%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side, #000 0%, #000d 22%, #0006 51%, #0001 74%, transparent 100%);
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .celestial-tree-light { display: none; }
 }
 
 /* A faint warm heart illuminates the cool mist, leaving the header in shadow. */

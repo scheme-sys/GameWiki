@@ -32,12 +32,14 @@
   <a class="skip-link" href="#game-universe">跳到游戏气泡</a>
   <div class="space-haze" aria-hidden="true"></div>
   <div class="celestial-tree" aria-hidden="true">
-    <picture class="celestial-tree-art">
-      <source media="(max-width: 600px) and (orientation: portrait)" srcset="assets/backgrounds/golden-tree-mobile.webp">
-      <source media="(min-width: 1280px) and (min-aspect-ratio: 2/1)" srcset="assets/backgrounds/golden-tree-ultrawide.webp">
-      <source media="(min-width: 1921px)" srcset="assets/backgrounds/golden-tree-detail.webp">
-      <img src="assets/backgrounds/golden-tree.webp" alt="" width="1536" height="1024" decoding="async" fetchpriority="low" draggable="false">
-    </picture>
+    <div class="celestial-tree-art">
+      <picture>
+        <source media="(max-width: 600px) and (orientation: portrait)" srcset="assets/backgrounds/golden-tree-mobile.webp">
+        <source media="(min-width: 1280px) and (min-aspect-ratio: 2/1)" srcset="assets/backgrounds/golden-tree-ultrawide.webp">
+        <source media="(min-width: 1921px)" srcset="assets/backgrounds/golden-tree-detail.webp">
+        <img src="assets/backgrounds/golden-tree.webp" alt="" width="1536" height="1024" decoding="async" fetchpriority="low" draggable="false">
+      </picture>
+    </div>
     <div class="celestial-tree-aureole"></div>
     <div class="celestial-tree-dust"></div>
     <div class="celestial-tree-veil"></div>

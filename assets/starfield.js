@@ -16,6 +16,9 @@
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
+  const desktopPointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const treeArt = document.querySelector('.celestial-tree-art');
+  const treeImage = treeArt?.querySelector('img');
   // Precomputed silver-blue to champagne ramps keep color changes gradual
   // without allocating gradients or color strings during animation.
   const colorRamp = (cold, gold) => Array.from({ length: 64 }, (_, index) =>
@@ -32,6 +35,9 @@
   const stars = [];
   const links = [];
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+  const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false,
+    radius: 220, dpr: 1, crop: null, paintedX: NaN, paintedY: NaN };
+  let lightCanvas, lightContext;
   let width = 1, height = 1, settings, frame = 0, resizeTimer = 0;
   let tree;
   let lastFrame = 0, lastStep = 0, elapsed = 0, nextConnections = 0;
@@ -90,6 +96,76 @@
     return ease(Math.max(crown, trunk));
   }
 
+  function mapPointerLight() {
+    light.crop = null;
+    light.paintedX = NaN;
+    if (!treeImage?.complete || !treeImage.naturalWidth) return;
+    // Read only on image load/resize. Use the selected source's real dimensions
+    // so the small overlay exactly matches cover on ordinary and wide screens.
+    const position = getComputedStyle(treeImage).objectPosition.split(' ').map(parseFloat);
+    const scale = Math.max(width / treeImage.naturalWidth, height / treeImage.naturalHeight);
+    light.crop = { scale,
+      left: (width - treeImage.naturalWidth * scale) * position[0] / 100,
+      top: (height - treeImage.naturalHeight * scale) * position[1] / 100 };
+  }
+
+  function clearPointerLight() {
+    const visible = light.amount > 0;
+    light.active = false;
+    light.amount = 0;
+    if (lightCanvas) lightCanvas.style.opacity = '0';
+    return visible;
+  }
+
+  function updatePointerLight(delta) {
+    if (!light.active && !light.amount) return;
+    const follow = 1 - Math.exp(-delta * 20);
+    light.x += (light.targetX - light.x) * follow;
+    light.y += (light.targetY - light.y) * follow;
+    light.amount += ((light.active ? 1 : 0) - light.amount) * (1 - Math.exp(-delta * 8));
+    if (!light.active && light.amount < .005) { clearPointerLight(); return; }
+    if (light.active && light.amount > .995) light.amount = 1;
+    if (!light.crop || !treeImage?.complete || !treeImage.naturalWidth) return;
+    // Allocate only for an actual desktop mouse. No extra image or full-screen
+    // bitmap, and no second animation loop; stationary light reuses its crop.
+    const size = light.radius * 2;
+    if (!lightCanvas) {
+      const surface = document.createElement('canvas');
+      try { lightContext = surface.getContext('2d', { alpha: true }); } catch (_) { return; }
+      if (!lightContext) return;
+      lightCanvas = surface;
+      lightCanvas.className = 'celestial-tree-light';
+      lightCanvas.setAttribute('aria-hidden', 'true');
+      treeArt.append(lightCanvas);
+    }
+    const bitmapSize = Math.round(size * light.dpr);
+    if (lightCanvas.width !== bitmapSize || lightCanvas.height !== bitmapSize) {
+      lightCanvas.width = lightCanvas.height = bitmapSize;
+      lightCanvas.style.width = lightCanvas.style.height = size + 'px';
+      lightContext.setTransform(bitmapSize / size, 0, 0, bitmapSize / size, 0, 0);
+      light.paintedX = NaN;
+    }
+    const left = Math.round((light.x - light.radius) * light.dpr) / light.dpr;
+    const top = Math.round((light.y - light.radius) * light.dpr) / light.dpr;
+    if (left !== light.paintedX || top !== light.paintedY) {
+      const crop = light.crop;
+      lightContext.clearRect(0, 0, size, size);
+      lightContext.drawImage(treeImage, (left - crop.left) / crop.scale, (top - crop.top) / crop.scale,
+        size / crop.scale, size / crop.scale, 0, 0, size, size);
+      lightCanvas.style.transform = 'translate3d(' + left + 'px,' + top + 'px,0)';
+      light.paintedX = left;
+      light.paintedY = top;
+    }
+    lightCanvas.style.opacity = String(light.amount * .68);
+  }
+
+  function pointerLightAt(x, y) {
+    if (!light.amount) return 0;
+    const dx = (x - light.x) / light.radius, dy = (y - light.y) / light.radius;
+    const proximity = Math.max(0, 1 - dx * dx - dy * dy);
+    return proximity * proximity * light.amount;
+  }
+
   function paintDistantSky() {
     if (!dustContext) return;
     const dpr = Math.min(settings.dpr, 1);
@@ -129,7 +205,7 @@
       phase: Math.random() * Math.PI * 2,
       frequency: .16 + Math.random() * .24,
       tint: Math.floor(Math.random() * starColors.length), affinity: .8 + Math.random() * .2,
-      warmth: 0, color: starColors[0][0],
+      warmth: 0, light: 0, color: starColors[0][0],
       px: 0, py: 0, edge: 1, neighbours: 0
     };
   }
@@ -140,6 +216,7 @@
       star.py = star.y + pointer.y * star.depth;
       star.warmth = treeWarmth(star.px, star.py) * star.affinity;
       star.color = starColors[star.tint][Math.round(star.warmth * 63)];
+      star.light = pointerLightAt(star.px, star.py);
       // Fade before a particle wraps, keeping the edges quiet on small screens.
       star.edge = ease(clamp(Math.min(star.x, width - star.x, star.y, height - star.y) / 24, 0, 1));
     }
@@ -230,7 +307,7 @@
       link.alpha += (target - link.alpha) * fade;
       if (target === 0 && link.alpha < .001) { links.splice(i, 1); continue; }
       // Edge fading is immediate on wrap; the line itself eases as points separate.
-      context.globalAlpha = link.alpha * Math.min(a.edge, b.edge);
+      context.globalAlpha = link.alpha * Math.min(a.edge, b.edge) * (1 + (a.light + b.light) * .12);
       context.strokeStyle = linkColors[Math.round((a.warmth + b.warmth) * 31.5)];
       context.beginPath();
       context.moveTo(a.px, a.py);
@@ -239,7 +316,7 @@
     }
     for (const star of stars) {
       const twinkle = .89 + Math.sin(elapsed * star.frequency + star.phase) * .11;
-      const alpha = star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1);
+      const alpha = Math.min(1, star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1) * (1 + star.light * .4));
       context.fillStyle = star.color;
       // A few brighter stars give the sky depth without making every point glow.
       // Concentric light and short rays avoid per-frame blur filters.
@@ -290,6 +367,7 @@
       lastStep = time;
       lastFrame = time - (sinceDraw >= settings.interval ? sinceDraw % settings.interval : 0);
       move(delta);
+      updatePointerLight(delta);
       project();
       if (elapsed >= nextConnections) {
         refreshConnections();
@@ -303,6 +381,10 @@
   function syncMotion() {
     const paused = shouldPause();
     canvas.dataset.state = paused ? 'paused' : 'running';
+    if ((paused || !desktopPointer.matches) && clearPointerLight() && !contextLost) {
+      project();
+      draw();
+    }
     if (paused) {
       cancelAnimationFrame(frame);
       frame = 0;
@@ -320,6 +402,10 @@
     height = Math.max(1, host.clientHeight);
     settings = configuration();
     mapTree();
+    clearPointerLight();
+    light.radius = Math.min(220, width * .25, height * .3);
+    light.dpr = Math.min(devicePixelRatio || 1, 2);
+    mapPointerLight();
     const bitmapWidth = Math.max(1, Math.round(width * settings.dpr));
     const bitmapHeight = Math.max(1, Math.round(height * settings.dpr));
     if (canvas.width !== bitmapWidth || canvas.height !== bitmapHeight) {
@@ -347,18 +433,37 @@
   }
 
   window.addEventListener('resize', () => {
+    light.active = false;
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(resize, 120);
   }, { passive: true });
   window.addEventListener('pointermove', (event) => {
-    if (settings.compact || event.pointerType !== 'mouse' || shouldPause()) return;
-    pointer.targetX = (clamp(event.clientX / width, 0, 1) - .5) * 8;
-    pointer.targetY = (clamp(event.clientY / height, 0, 1) - .5) * 8;
+    if (event.pointerType !== 'mouse') { light.active = false; return; }
+    if (shouldPause()) return;
+    if (!settings.compact) {
+      pointer.targetX = (clamp(event.clientX / width, 0, 1) - .5) * 8;
+      pointer.targetY = (clamp(event.clientY / height, 0, 1) - .5) * 8;
+    }
+    if (!desktopPointer.matches) return;
+    light.targetX = clamp(event.clientX, 0, width);
+    light.targetY = clamp(event.clientY, 0, height);
+    if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
+    light.active = true;
   }, { passive: true });
-  window.addEventListener('blur', () => { pointer.targetX = pointer.targetY = 0; });
+  function leavePointer() {
+    pointer.targetX = pointer.targetY = 0;
+    light.active = false;
+  }
+  window.addEventListener('pointerout', (event) => {
+    if (!event.relatedTarget) leavePointer();
+  }, { passive: true });
+  window.addEventListener('pointercancel', leavePointer, { passive: true });
+  window.addEventListener('blur', leavePointer);
+  treeImage?.addEventListener('load', mapPointerLight);
   document.addEventListener('visibilitychange', syncMotion);
   reducedMotion.addEventListener('change', syncMotion);
   coarsePointer.addEventListener('change', resize);
+  desktopPointer.addEventListener('change', syncMotion);
   const observer = new MutationObserver(syncMotion);
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
