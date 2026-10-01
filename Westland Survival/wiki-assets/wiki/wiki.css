@@ -470,3 +470,58 @@ dialog::backdrop{background:#070d10d9;backdrop-filter:blur(6px)}
 .item-card .lcz-entity-code__copy{grid-column:2;grid-row:2;align-self:start}
 .list-item>div:last-child{min-width:0;max-width:340px}
 .modal-title>.lcz-entity-code{margin:9px 0}
+
+/* Frontier archive: night ink, aged brass and the portal's engraved edges. */
+@media screen {
+  :root {
+    --paper:#0c1218; --card:#171f23; --ink:#ece8dc; --text:#c6ccc5;
+    --muted:#a6ada3; --line:#d5bd832c; --green:#d8bf8d; --accent:#dfc894; --light:#26302c;
+    --west-edge:#d7bd8070;
+    --west-corners:linear-gradient(var(--west-edge),var(--west-edge)) left top/22px 1px no-repeat,
+      linear-gradient(var(--west-edge),var(--west-edge)) left top/1px 22px no-repeat,
+      linear-gradient(var(--west-edge),var(--west-edge)) right bottom/22px 1px no-repeat,
+      linear-gradient(var(--west-edge),var(--west-edge)) right bottom/1px 22px no-repeat;
+  }
+  body { background:radial-gradient(ellipse 1000px 580px at 78% 0,#a4804210,transparent 75%),radial-gradient(ellipse 900px 650px at 0 600px,#506c7410,transparent 75%),var(--paper); }
+  .masthead { border-color:#cbb07859; box-shadow:0 20px 65px #02070d59; }
+  .masthead:after { inset:7px; border-color:#dfc89421; background:var(--west-corners); }
+  .masthead h1 .brand>span,.cover-subtitle,.kicker { color:#dfc894; }
+  .cover-edition { color:#dbccab; border-color:#d5bd8352; background:#1018216b; }
+  .cover-action { background:linear-gradient(115deg,#dfc894,#b99a61); border-color:#eedbb177; box-shadow:inset 0 0 0 3px #17202716; }
+  .topnav { background:linear-gradient(100deg,#1b2425,#111b24); border-color:var(--line); }
+  .topnav button.active { color:var(--accent); }
+  .topnav button.active:after { background:linear-gradient(90deg,transparent,#dfc894,transparent); }
+  .sidebar { background:var(--west-corners),linear-gradient(155deg,#1c2626,#111b21); border-color:var(--line); }
+  .category-button { color:#b4c0b0; }
+  .category-button:hover { background:#d5bd8310; }
+  .category-button.active { color:#ebd4a8; background:linear-gradient(90deg,#bba06724,#bba06708); box-shadow:inset 2px 0 #d8bf8d; }
+  .filter-panel,.sidebar-note,.mini-stats,.collection-stats span+span,.item-id { border-color:var(--line); }
+  .filter-label,.sidebar-note b,.item-description,.detail-description,.plain-note { color:#b1bcad; }
+  .sidebar-note,.english-name,.card-footer,.mini-stat span,.footer,.volume,.collection-stats,.intro>p,.intro .kicker { color:#a5b0a2; }
+  select,.search-box { background:#101a21; border-color:#d5bd833d; color:var(--text); }
+  .search-box { box-shadow:inset 0 1px #dfc89406; }
+  .search-box:focus-within { outline-color:#dfc894a8; box-shadow:0 0 0 3px #dfc8940d; }
+  .search-box input::placeholder { color:#99a59b; }
+  .secondary-button,.view-switch,.pagination button,.close { background:#1a2528; border-color:#d5bd8338; color:#dac8a5; }
+  .secondary-button:hover,.close:hover { background:#29312d; border-color:#dfc89485; }
+  .view-switch button.active,.active-chip,.selected-level { background:#d5bd8315; color:#e2cd9e; }
+  .item-card { background:var(--west-corners),linear-gradient(145deg,#1c2829,#141e25); border-color:var(--line); box-shadow:0 8px 22px #02081124; }
+  .item-card:hover { border-color:#d5bd8370; box-shadow:0 10px 28px #02081152,inset 0 1px #dfc89416; transform:translateY(-2px); }
+  .item-card h3,.modal-head h2 { color:var(--ink); }
+  .image-tile { border-color:#d5bd8333; background:radial-gradient(ellipse at 50% 75%,#bdab7521,#111c21); }
+  .mini-stat b,.fact b,.section-heading h3,.section>h3 { color:#dfcba0; }
+  .pagination button.active { background:#d8bf8d; border-color:#d8bf8d; color:#16201e; }
+  .table-wrap { border-color:var(--line); background:var(--card); }
+  th { background:#202b2b; color:#b5c1b1; }
+  th,td { border-color:var(--line); }
+  tbody tr:hover { background:#d5bd8309; }
+  dialog { border-color:#d5bd8380; background:#101921; box-shadow:0 30px 110px #02060dcc,inset 0 0 0 4px #d5bd8309; }
+  dialog::backdrop { background:#050b14d6; }
+  .modal-head { background:var(--west-corners),radial-gradient(ellipse at 0 0,#b3975620,transparent 75%),#192427; }
+  .modal-body { background:#111b23; }
+  .fact,.facts.compact .fact,details,.related-card,.recipe-row { background:#1a2528; border-color:var(--line); }
+  .fact span,.fact small,.related-card small { color:#aab5a7; }
+  .perk-row { background:#1b2827; border-color:var(--line); border-left-color:#b8ba89; }
+  .perk-row p { color:#b4c1ac; }
+  .empty { background:#152027; border-color:#d5bd8340; }
+}

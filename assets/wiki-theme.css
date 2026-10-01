@@ -1,0 +1,119 @@
+/* Shared LCZ chrome. Individual games own their imagery, accent colors and
+   reading surfaces; these tokens and frames connect them to the star atlas. */
+:root {
+  --lcz-gold: #dfc894;
+  --lcz-ink: #efece4;
+  --lcz-muted: #aaa99f;
+  --lcz-line: #d5bd8330;
+  --lcz-panel-fill: radial-gradient(ellipse at 3% 0,#c3a46614,transparent 48%),radial-gradient(ellipse at 100% 12%,#6e91ad12,transparent 55%),linear-gradient(145deg,#151e27fc,#0a121dfd 63%,#101b28fc);
+  --lcz-panel-edge: linear-gradient(135deg,#d7bc8170,#6f6f5840 24%,#51616b50 60%,#baa37480);
+  --lcz-frame:
+    linear-gradient(90deg,#efd8a6dd,transparent) top left / 40px 2px no-repeat border-box,
+    linear-gradient(180deg,#efd8a6dd,transparent) top left / 2px 40px no-repeat border-box,
+    linear-gradient(270deg,#d4bb8580,transparent) top right / 28px 2px no-repeat border-box,
+    linear-gradient(180deg,#d4bb8580,transparent) top right / 2px 28px no-repeat border-box,
+    linear-gradient(90deg,#b7ad8c66,transparent) bottom left / 28px 2px no-repeat border-box,
+    linear-gradient(0deg,#b7ad8c66,transparent) bottom left / 2px 28px no-repeat border-box,
+    linear-gradient(270deg,#dec58eb3,transparent) bottom right / 40px 2px no-repeat border-box,
+    linear-gradient(0deg,#dec58eb3,transparent) bottom right / 2px 40px no-repeat border-box;
+  --lcz-panel-shadow: 0 22px 64px #02050bb3,0 0 24px #c5a46a0c,inset 0 1px 5px #02081555;
+}
+
+.atlas-nav {
+  /* The same scoped control palette is used by portal-controls.css. */
+  --gold: var(--lcz-gold);
+  --ink: var(--lcz-ink);
+  --muted: var(--lcz-muted);
+  --line: var(--lcz-line);
+  --panel-fill: var(--lcz-panel-fill);
+  --panel-shadow: var(--lcz-panel-shadow);
+  --atlas-world: 195,172,127;
+  color-scheme: dark;
+  color: var(--lcz-ink);
+  border-bottom-color: var(--lcz-line);
+  background: radial-gradient(ellipse at 25% 0,rgba(var(--atlas-world),.08),transparent 62%),linear-gradient(110deg,#0a111df7,#111b26f5);
+  box-shadow: 0 6px 24px #0208111a;
+}
+.atlas-nav[data-game="craft"] { --atlas-world: 155,181,153; }
+.atlas-nav[data-game="dayr"] { --atlas-world: 179,162,117; }
+.atlas-nav[data-game="westland"] { --atlas-world: 205,160,103; }
+.atlas-nav[data-game="dawn"] { --atlas-world: 128,181,178; }
+.atlas-nav[data-game="ldoe"] { --atlas-world: 153,174,120; }
+.atlas-nav[data-game="grimsoul"] { --atlas-world: 184,160,116; }
+.atlas-nav::after {
+  content: ""; position: absolute; bottom: -1px; left: clamp(18px,3vw,48px);
+  width: clamp(100px,28vw,360px); height: 1px; pointer-events: none;
+  background: linear-gradient(90deg,#d9c18c91,rgba(var(--atlas-world),.2),transparent);
+}
+.atlas-nav a { color: #c8c2b1; }
+.atlas-nav a:hover { color: #fff0cf; }
+.atlas-nav a:focus-visible,.atlas-nav summary:focus-visible { outline: 1px solid var(--lcz-gold); border-radius: 0; }
+.atlas-nav .atlas-home { color: #e6d8b7; }
+.atlas-nav .atlas-home-mark {
+  color: #e6ce94; border-color: #cfb47870;
+  background: radial-gradient(circle,#d4b57010,transparent 72%);
+  box-shadow: inset 0 0 12px #d9b56e0d,0 0 15px #d4b5780a;
+}
+.atlas-nav .atlas-branding .atlas-label {
+  color: #e4d3ab; font: 700 19px/1 "Palatino Linotype","Book Antiqua",Georgia,serif;
+  letter-spacing: .1em; text-shadow: 0 1px 8px #d4b57812;
+}
+.atlas-nav .atlas-pages { border-color: var(--lcz-line); }
+.atlas-nav .atlas-pages a { border-radius: 0; }
+.atlas-nav .atlas-pages a:hover { background: #cdb47a0c; }
+.atlas-nav .atlas-pages a[aria-current="page"] {
+  border-color: #bfa97640; background: #cdb47a0c; color: #ecdcba;
+  box-shadow: inset 2px 0 rgba(var(--atlas-world),.6);
+}
+.atlas-nav .atlas-switch summary { color: #c2bba6; }
+.atlas-nav .atlas-switch summary::after { color: #cfb67f; }
+.atlas-nav .atlas-menu a { border-radius: 0; }
+.atlas-nav .atlas-menu a:hover { background: #c9ab7412; }
+.atlas-nav .atlas-menu a[aria-current] { color: #eddbb3; background: #c9ab740e; }
+.atlas-nav .atlas-menu a[aria-current]::after { content: "✦"; color: var(--lcz-gold); font-size: 9px; }
+
+/* Identical squared corner strokes, with no new layout or stacking contexts. */
+.atlas-nav .atlas-menu,.atlas-nav .site-stats .site-stats-panel,
+.atlas-nav .lcz-music-hint,body dialog.lcz-community-dialog {
+  color: var(--lcz-muted); border: 2px solid transparent; border-radius: 0;
+  background: var(--lcz-panel-fill) padding-box,var(--lcz-frame),var(--lcz-panel-edge) border-box;
+  background-origin: padding-box,padding-box,padding-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box;
+  background-clip: padding-box,padding-box,padding-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box,border-box;
+  box-shadow: var(--lcz-panel-shadow);
+}
+.atlas-nav .atlas-menu { scrollbar-width: thin; scrollbar-color: #b59a676b transparent; }
+.atlas-nav .site-stats .site-stats-summary { border-radius: 0; }
+.atlas-nav .lcz-community-trigger { color: #c1b69c; text-shadow: 0 0 12px #ddbb7526; }
+.atlas-nav .lcz-community-trigger span { color: #dfd2b2; }
+.atlas-nav .lcz-community-trigger:hover { color: #fff0cc; }
+.atlas-nav .lcz-community-trigger:hover span { text-shadow: 0 0 14px #e9c78355; }
+.atlas-nav .lcz-community-trigger:focus-visible { outline: 1px solid var(--lcz-gold); }
+
+.lcz-community-dialog::backdrop { background: #030813ad; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+.lcz-community-dialog .lcz-community-heading { padding-bottom: 12px; border-bottom: 1px solid var(--lcz-line); }
+.lcz-community-dialog .lcz-community-eyebrow { color: #bda879; }
+.lcz-community-dialog h2 { color: var(--lcz-ink); }
+.lcz-community-dialog .lcz-community-close {
+  position: relative; isolation: isolate; color: #d4c39f; background: none;
+}
+.lcz-community-dialog .lcz-community-close::before {
+  content: ""; position: absolute; inset: 6px; z-index: -1; pointer-events: none;
+  border: 1px solid #cdb37a40; background: linear-gradient(145deg,#d8bd8612,#14213720);
+}
+.lcz-community-dialog .lcz-community-close:hover { color: #fff0cc; background: none; }
+.lcz-community-dialog .lcz-community-close:hover::before { border-color: #e7cb8e8c; background-color: #d0b17a12; }
+.lcz-community-dialog .lcz-community-image { outline: 1px solid #d8be803d; outline-offset: 3px; }
+.lcz-community-dialog [data-lcz-retry] { border-color: #a69a7d; color: #5e5034; }
+.lcz-community-dialog [data-lcz-download] {
+  color: #f2e3bf; border-color: #d5b87970;
+  background: linear-gradient(180deg,#f1dca818,transparent 48%),linear-gradient(115deg,#c8a35d26,#a9b6b50a);
+  box-shadow: inset 2px 0 #e4c78899,inset 0 1px #f2dfb12b;
+}
+.lcz-community-dialog [data-lcz-download]:hover { color: #fff1d3; background-color: #d5b97c19; border-color: #e2c68899; }
+.lcz-community-dialog button:focus-visible,.lcz-community-dialog a:focus-visible { outline-color: var(--lcz-gold); }
+.lcz-entity-code .lcz-entity-code__copy { border-radius: 0; }
+
+@media (max-height:600px) {
+  .lcz-community-dialog .lcz-community-heading { padding-bottom: 8px; }
+  .lcz-community-dialog .lcz-community-image { width: min(100%,calc((100dvh - 194px) * .833333)); }
+}
