@@ -39,8 +39,8 @@
   object-position: 50% 48%;
 }
 
-/* A small crop of the same artwork reveals the branches beneath the mouse.
-   Screen preserves the dark sky; both masks keep the light soft and contained. */
+/* Only extracted gold filaments emit light. Sky, mist and the dark bark stay
+   transparent in this texture; the radial mask merely softens its reach. */
 .celestial-tree-light {
   position: absolute;
   top: 0;

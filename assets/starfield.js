@@ -38,6 +38,8 @@
   const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false,
     radius: 220, dpr: 1, crop: null, paintedX: NaN, paintedY: NaN };
   let lightCanvas, lightContext;
+  const goldWorkerURL = new URL('golden-tree-texture.js', document.currentScript.src);
+  let goldTexture, goldWorker, goldSource = '', goldBuild = 0;
   let width = 1, height = 1, settings, frame = 0, resizeTimer = 0;
   let tree;
   let lastFrame = 0, lastStep = 0, elapsed = 0, nextConnections = 0;
@@ -107,14 +109,60 @@
     light.crop = { scale,
       left: (width - treeImage.naturalWidth * scale) * position[0] / 100,
       top: (height - treeImage.naturalHeight * scale) * position[1] / 100 };
+    prepareGoldTexture();
+  }
+
+  function prepareGoldTexture() {
+    if (!desktopPointer.matches || reducedMotion.matches || !treeImage?.complete || !treeImage.naturalWidth) return;
+    if (!window.Worker || !window.OffscreenCanvas || !window.createImageBitmap) return;
+    const source = treeImage.currentSrc;
+    if (goldSource === source) return;
+    goldSource = source;
+    goldTexture?.close();
+    goldTexture = null;
+    goldWorker?.terminate();
+    if (lightCanvas) lightCanvas.style.opacity = '0';
+    const build = ++goldBuild;
+    const current = () => {
+      if (build !== goldBuild) return false;
+      if (treeImage.currentSrc === source) return true;
+      // A canceled source can be selected again before another build starts.
+      goldSource = '';
+      return false;
+    };
+    let worker;
+    try { worker = new Worker(goldWorkerURL); } catch (_) { return; }
+    goldWorker = worker;
+    const finish = () => {
+      worker.terminate();
+      if (goldWorker === worker) goldWorker = null;
+    };
+    worker.onmessage = ({ data }) => {
+      finish();
+      if (!data.texture) return;
+      if (!current()) { data.texture.close(); return; }
+      goldTexture = data.texture;
+      light.paintedX = NaN;
+      light.amount = 0;
+    };
+    worker.onerror = finish;
+    // Pixel readback and fine-detail extraction run off the UI thread, once
+    // per selected source. Pointer motion only draws the resulting gold texture.
+    treeImage.decode().then(() => createImageBitmap(treeImage)).then((bitmap) => {
+      if (!current()) { bitmap.close(); finish(); return; }
+      try { worker.postMessage({ bitmap }, [bitmap]); }
+      catch (error) { bitmap.close(); throw error; }
+    }).catch((error) => {
+      finish();
+      if (build === goldBuild && (treeImage.currentSrc !== source ||
+          error.name === 'EncodingError' || error.name === 'AbortError')) goldSource = '';
+    });
   }
 
   function clearPointerLight() {
-    const visible = light.amount > 0;
     light.active = false;
     light.amount = 0;
     if (lightCanvas) lightCanvas.style.opacity = '0';
-    return visible;
   }
 
   function updatePointerLight(delta) {
@@ -126,8 +174,10 @@
     if (!light.active && light.amount < .005) { clearPointerLight(); return; }
     if (light.active && light.amount > .995) light.amount = 1;
     if (!light.crop || !treeImage?.complete || !treeImage.naturalWidth) return;
-    // Allocate only for an actual desktop mouse. No extra image or full-screen
-    // bitmap, and no second animation loop; stationary light reuses its crop.
+    prepareGoldTexture();
+    if (!goldTexture || goldSource !== treeImage.currentSrc) return;
+    // Draw only the extracted gold emission, never a copy of the whole scene.
+    // The small viewport crop shares the sky's existing animation loop.
     const size = light.radius * 2;
     if (!lightCanvas) {
       const surface = document.createElement('canvas');
@@ -150,20 +200,13 @@
     if (left !== light.paintedX || top !== light.paintedY) {
       const crop = light.crop;
       lightContext.clearRect(0, 0, size, size);
-      lightContext.drawImage(treeImage, (left - crop.left) / crop.scale, (top - crop.top) / crop.scale,
+      lightContext.drawImage(goldTexture, (left - crop.left) / crop.scale, (top - crop.top) / crop.scale,
         size / crop.scale, size / crop.scale, 0, 0, size, size);
       lightCanvas.style.transform = 'translate3d(' + left + 'px,' + top + 'px,0)';
       light.paintedX = left;
       light.paintedY = top;
     }
-    lightCanvas.style.opacity = String(light.amount * .68);
-  }
-
-  function pointerLightAt(x, y) {
-    if (!light.amount) return 0;
-    const dx = (x - light.x) / light.radius, dy = (y - light.y) / light.radius;
-    const proximity = Math.max(0, 1 - dx * dx - dy * dy);
-    return proximity * proximity * light.amount;
+    lightCanvas.style.opacity = String(light.amount * .6);
   }
 
   function paintDistantSky() {
@@ -205,7 +248,7 @@
       phase: Math.random() * Math.PI * 2,
       frequency: .16 + Math.random() * .24,
       tint: Math.floor(Math.random() * starColors.length), affinity: .8 + Math.random() * .2,
-      warmth: 0, light: 0, color: starColors[0][0],
+      warmth: 0, color: starColors[0][0],
       px: 0, py: 0, edge: 1, neighbours: 0
     };
   }
@@ -216,7 +259,6 @@
       star.py = star.y + pointer.y * star.depth;
       star.warmth = treeWarmth(star.px, star.py) * star.affinity;
       star.color = starColors[star.tint][Math.round(star.warmth * 63)];
-      star.light = pointerLightAt(star.px, star.py);
       // Fade before a particle wraps, keeping the edges quiet on small screens.
       star.edge = ease(clamp(Math.min(star.x, width - star.x, star.y, height - star.y) / 24, 0, 1));
     }
@@ -307,7 +349,7 @@
       link.alpha += (target - link.alpha) * fade;
       if (target === 0 && link.alpha < .001) { links.splice(i, 1); continue; }
       // Edge fading is immediate on wrap; the line itself eases as points separate.
-      context.globalAlpha = link.alpha * Math.min(a.edge, b.edge) * (1 + (a.light + b.light) * .12);
+      context.globalAlpha = link.alpha * Math.min(a.edge, b.edge);
       context.strokeStyle = linkColors[Math.round((a.warmth + b.warmth) * 31.5)];
       context.beginPath();
       context.moveTo(a.px, a.py);
@@ -316,7 +358,7 @@
     }
     for (const star of stars) {
       const twinkle = .89 + Math.sin(elapsed * star.frequency + star.phase) * .11;
-      const alpha = Math.min(1, star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1) * (1 + star.light * .4));
+      const alpha = star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1);
       context.fillStyle = star.color;
       // A few brighter stars give the sky depth without making every point glow.
       // Concentric light and short rays avoid per-frame blur filters.
@@ -381,10 +423,7 @@
   function syncMotion() {
     const paused = shouldPause();
     canvas.dataset.state = paused ? 'paused' : 'running';
-    if ((paused || !desktopPointer.matches) && clearPointerLight() && !contextLost) {
-      project();
-      draw();
-    }
+    if (paused || !desktopPointer.matches) clearPointerLight();
     if (paused) {
       cancelAnimationFrame(frame);
       frame = 0;
