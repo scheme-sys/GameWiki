@@ -34,14 +34,22 @@
 
   function configuration() {
     const compact = width < 760 || coarsePointer.matches;
+    const area = width * height;
+    const displayDpr = devicePixelRatio || 1;
+    const ultrawide = !compact && width / height >= 2;
+    const targetDpr = Math.min(displayDpr, compact ? 1 : ultrawide ? 2 : 1.5);
+    // Preserve at least one bitmap pixel per CSS pixel on large desktop
+    // displays and native pixels on scaled ultrawides, within an 8.3MP ceiling.
+    // Smaller non-ultrawide screens keep their existing budget.
+    const pixelBudget = compact ? 700000 : Math.max(2600000,
+      Math.min(area * (ultrawide ? targetDpr * targetDpr : 1), 8300000));
     return {
       compact,
       count: Math.round(clamp(width * height / (compact ? 10000 : 12000), compact ? 28 : 56, compact ? 48 : 128)),
       distance: compact ? 116 : 164,
       neighbours: compact ? 2 : 3,
       interval: 1000 / (compact ? 24 : 30),
-      dpr: Math.min(devicePixelRatio || 1, compact ? 1 : 1.5,
-        Math.sqrt((compact ? 700000 : 2600000) / (width * height)))
+      dpr: Math.min(targetDpr, Math.sqrt(pixelBudget / area))
     };
   }
 
