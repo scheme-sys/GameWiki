@@ -16,7 +16,14 @@
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const coarsePointer = matchMedia('(pointer: coarse)');
-  const palette = ['190,215,235', '157,191,224', '183,217,212', '223,207,181'];
+  // Precomputed silver-blue to champagne ramps keep color changes gradual
+  // without allocating gradients or color strings during animation.
+  const colorRamp = (cold, gold) => Array.from({ length: 64 }, (_, index) =>
+    'rgb(' + cold.map((value, channel) => Math.round(value + (gold[channel] - value) * index / 63)).join(',') + ')');
+  const starColors = [[194,216,234], [175,202,228], [190,214,217]]
+    .map(cold => colorRamp(cold, [235,213,170]));
+  const linkColors = colorRamp([172,204,231], [220,199,157]);
+  const dustColors = colorRamp([157,184,215], [218,196,158]);
   // Distant dust is painted once per resize, separate from the moving link field.
   // Keep it in memory: no image downloads, extra animation loop or saved assets.
   const dustCanvas = document.createElement('canvas');
@@ -26,6 +33,7 @@
   const links = [];
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
   let width = 1, height = 1, settings, frame = 0, resizeTimer = 0;
+  let tree;
   let lastFrame = 0, lastStep = 0, elapsed = 0, nextConnections = 0;
   let suspended = false, contextLost = false;
 
@@ -45,12 +53,41 @@
       Math.min(area * (ultrawide ? targetDpr * targetDpr : 1), 8300000));
     return {
       compact,
-      count: Math.round(clamp(width * height / (compact ? 10000 : 12000), compact ? 28 : 56, compact ? 48 : 128)),
-      distance: compact ? 116 : 164,
+      count: Math.round(clamp(area / (compact ? 8800 : 10400), compact ? 32 : 64, compact ? 56 : 148)),
+      distance: compact ? 120 : 170,
       neighbours: compact ? 2 : 3,
       interval: 1000 / (compact ? 24 : 30),
       dpr: Math.min(targetDpr, Math.sqrt(pixelBudget / area))
     };
+  }
+
+  function mapTree() {
+    // Match the picture sources and CSS cover crop, rather than assuming the
+    // same tree position on portrait, ordinary landscape and ultrawide art.
+    const portrait = width <= 600 && height >= width;
+    const panorama = width >= 1280 && width / height >= 2;
+    const ratio = portrait ? 2 / 3 : panorama ? 3 : 1.5;
+    const artWidth = Math.max(width, height * ratio), artHeight = artWidth / ratio;
+    const positionY = portrait ? .46 : panorama ? .5 : height <= 500 && width > height ? .4 : .48;
+    tree = {
+      left: (width - artWidth) / 2, top: (height - artHeight) * positionY,
+      inverseWidth: 1 / artWidth, inverseHeight: 1 / artHeight,
+      crownX: panorama ? .51 : .5, crownY: .34,
+      crownRadiusX: portrait ? .60 : panorama ? .39 : .47,
+      crownRadiusY: portrait ? .23 : panorama ? .32 : .36,
+      trunkX: portrait ? .51 : .52, trunkY: portrait ? .61 : .64,
+      trunkRadiusX: panorama ? .105 : .19, trunkRadiusY: portrait ? .26 : .34
+    };
+  }
+
+  function treeWarmth(x, y) {
+    const u = (x - tree.left) * tree.inverseWidth;
+    const v = (y - tree.top) * tree.inverseHeight;
+    const cx = (u - tree.crownX) / tree.crownRadiusX, cy = (v - tree.crownY) / tree.crownRadiusY;
+    const tx = (u - tree.trunkX) / tree.trunkRadiusX, ty = (v - tree.trunkY) / tree.trunkRadiusY;
+    const crown = Math.max(0, 1 - cx * cx - cy * cy);
+    const trunk = Math.max(0, 1 - tx * tx - ty * ty) * .85;
+    return ease(Math.max(crown, trunk));
   }
 
   function paintDistantSky() {
@@ -59,7 +96,7 @@
     dustCanvas.width = Math.max(1, Math.round(width * dpr));
     dustCanvas.height = Math.max(1, Math.round(height * dpr));
     dustContext.setTransform(dustCanvas.width / width, 0, 0, dustCanvas.height / height, 0, 0);
-    const count = Math.round(clamp(width * height / 4300, settings.compact ? 72 : 140, settings.compact ? 130 : 360));
+    const count = Math.round(clamp(width * height / 3800, settings.compact ? 80 : 160, settings.compact ? 146 : 408));
     // Stable normalized positions keep the distant sky calm when the screen rotates.
     const noise = (index, salt) => {
       const value = Math.sin(index * 127.1 + salt * 311.7) * 43758.5453;
@@ -71,7 +108,7 @@
       const y = i % 3 ? .80 - x * .60 + spread : noise(i, 2);
       if (y < 0 || y > 1) continue;
       const edge = ease(clamp(Math.min(x, 1 - x, y, 1 - y) * 20, 0, 1));
-      dustContext.fillStyle = i % 13 === 0 ? 'rgb(211,203,189)' : 'rgb(157,184,215)';
+      dustContext.fillStyle = dustColors[Math.round(treeWarmth(x * width, y * height) * 63)];
       dustContext.globalAlpha = (.10 + noise(i, 6) * .23) * edge;
       dustContext.beginPath();
       dustContext.arc(x * width, y * height, .35 + noise(i, 7) * .48, 0, Math.PI * 2);
@@ -91,7 +128,8 @@
       alpha: .32 + depth * .35 + Math.random() * .09,
       phase: Math.random() * Math.PI * 2,
       frequency: .16 + Math.random() * .24,
-      color: palette[Math.random() < .87 ? Math.floor(Math.random() * 3) : 3],
+      tint: Math.floor(Math.random() * starColors.length), affinity: .8 + Math.random() * .2,
+      warmth: 0, color: starColors[0][0],
       px: 0, py: 0, edge: 1, neighbours: 0
     };
   }
@@ -100,6 +138,8 @@
     for (const star of stars) {
       star.px = star.x + pointer.x * star.depth;
       star.py = star.y + pointer.y * star.depth;
+      star.warmth = treeWarmth(star.px, star.py) * star.affinity;
+      star.color = starColors[star.tint][Math.round(star.warmth * 63)];
       // Fade before a particle wraps, keeping the edges quiet on small screens.
       star.edge = ease(clamp(Math.min(star.x, width - star.x, star.y, height - star.y) / 24, 0, 1));
     }
@@ -158,11 +198,12 @@
     const follow = 1 - Math.exp(-delta * 2);
     pointer.x += (pointer.targetX - pointer.x) * follow;
     pointer.y += (pointer.targetY - pointer.y) * follow;
+    const speedScale = settings.compact ? .72 : 1;
     for (const star of stars) {
       const drift = elapsed * .11 + star.phase;
-      const speedScale = settings.compact ? .72 : 1;
       star.x += (star.vx + Math.sin(drift) * .6) * delta * speedScale;
-      star.y += (star.vy + Math.cos(drift * .83) * .6) * delta * speedScale;
+      // A restrained upward current lets warmer motes rise from the tree.
+      star.y += (star.vy + Math.cos(drift * .83) * .6 - star.warmth * .65) * delta * speedScale;
       if (star.x < -24) star.x = width + 24;
       else if (star.x > width + 24) star.x = -24;
       if (star.y < -24) star.y = height + 24;
@@ -171,10 +212,17 @@
   }
 
   function draw(delta = 0) {
-    context.clearRect(0, 0, width, height);
-    if (dustContext) context.drawImage(dustCanvas, 0, 0, width, height);
+    if (dustContext && !settings.compact) {
+      // Copy the cached sky, including transparent pixels, in one desktop
+      // pass. Keep the existing compact path, where clear + draw is cheaper.
+      context.globalCompositeOperation = 'copy';
+      context.drawImage(dustCanvas, 0, 0, width, height);
+      context.globalCompositeOperation = 'source-over';
+    } else {
+      context.clearRect(0, 0, width, height);
+      if (dustContext) context.drawImage(dustCanvas, 0, 0, width, height);
+    }
     context.lineWidth = .75;
-    context.strokeStyle = 'rgb(172,204,231)';
     const fade = 1 - Math.exp(-delta * 3);
     for (let i = links.length - 1; i >= 0; i--) {
       const link = links[i], a = stars[link.a], b = stars[link.b];
@@ -183,15 +231,16 @@
       if (target === 0 && link.alpha < .001) { links.splice(i, 1); continue; }
       // Edge fading is immediate on wrap; the line itself eases as points separate.
       context.globalAlpha = link.alpha * Math.min(a.edge, b.edge);
+      context.strokeStyle = linkColors[Math.round((a.warmth + b.warmth) * 31.5)];
       context.beginPath();
       context.moveTo(a.px, a.py);
       context.lineTo(b.px, b.py);
       context.stroke();
     }
     for (const star of stars) {
-      const twinkle = .86 + Math.sin(elapsed * star.frequency + star.phase) * .14;
+      const twinkle = .89 + Math.sin(elapsed * star.frequency + star.phase) * .11;
       const alpha = star.alpha * twinkle * star.edge * (star.glint ? 1.18 : 1);
-      context.fillStyle = 'rgb(' + star.color + ')';
+      context.fillStyle = star.color;
       // A few brighter stars give the sky depth without making every point glow.
       // Concentric light and short rays avoid per-frame blur filters.
       if (star.glint) {
@@ -200,7 +249,7 @@
         context.arc(star.px, star.py, star.radius * 5.5, 0, Math.PI * 2);
         context.fill();
         const ray = (settings.compact ? 3 : 4.5) * twinkle;
-        context.strokeStyle = 'rgb(' + star.color + ')';
+        context.strokeStyle = star.color;
         context.lineWidth = .55;
         context.globalAlpha = alpha * .28;
         context.beginPath();
@@ -270,6 +319,7 @@
     width = Math.max(1, host.clientWidth);
     height = Math.max(1, host.clientHeight);
     settings = configuration();
+    mapTree();
     const bitmapWidth = Math.max(1, Math.round(width * settings.dpr));
     const bitmapHeight = Math.max(1, Math.round(height * settings.dpr));
     if (canvas.width !== bitmapWidth || canvas.height !== bitmapHeight) {
