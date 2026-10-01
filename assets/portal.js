@@ -8,6 +8,13 @@
   const infoCover = $('#info-cover');
   let coverVersion = 0;
   const search = $('#search-dialog');
+  const searchInput = $('#game-search');
+  const searchResults = $('#search-results');
+  const searchSummary = $('#search-summary');
+  const searchEmpty = $('#search-empty');
+  const searchIndex = GAMES.map(game => ({ game,
+    text: (game.nameZh + ' ' + game.name + ' ' + game.keywords).toLocaleLowerCase(), node: null }));
+  let displayedResults = null;
   const community = $('#community-dialog');
   const dialogs = [search, community];
   const dialogTriggers = new WeakMap();
@@ -22,6 +29,7 @@
   const positions = saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {};
   const nodes = new Map();
   const radii = new Map();
+  const renderedPositions = new Map();
   let dragFrame = 0, pendingDrag = null;
   let width = 0, height = 0, layoutKey = 'desktop';
   let gesture = null, suppressClick = null, previewGame = null;
@@ -78,7 +86,12 @@
       for (const body of bodies) {
         const node = nodes.get(body.id);
         const half = radii.get(body.id) || 0;
-        node.style.transform = 'translate3d(' + (body.x - half) + 'px,' + (body.y - half) + 'px,0)';
+        const x = body.x - half, y = body.y - half;
+        const previous = renderedPositions.get(body.id);
+        if (previous && previous.x === x && previous.y === y) continue;
+        node.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+        if (previous) { previous.x = x; previous.y = y; }
+        else renderedPositions.set(body.id, { x, y });
       }
     }
   });
@@ -121,6 +134,9 @@
 
   function positionInfo() {
     if (!previewGame || info.hidden) return;
+    // Compact touch previews are fully positioned by CSS; measuring their
+    // newly populated content here would force an unused synchronous layout.
+    if (info.classList.contains('touch-preview') && innerWidth <= 900) return;
     const rect = nodes.get(previewGame).querySelector('.world-visual').getBoundingClientRect();
     const box = info.getBoundingClientRect();
     let x = rect.right + 24;
@@ -398,28 +414,36 @@
     syncMotion();
   });
 
+  function resultNode(entry) {
+    if (entry.node) return entry.node;
+    const game = entry.game;
+    const result = makeLink({ href: game.links[0].href, title: '' }, 'search-result');
+    result.style.setProperty('--result-color', game.color);
+    result.setAttribute('aria-label', game.nameZh + '，' + game.name);
+    const image = document.createElement('img');
+    image.src = game.image; image.alt = ''; image.width = image.height = 48;
+    const content = document.createElement('span');
+    content.className = 'result-copy';
+    const title = document.createElement('span');
+    title.className = 'result-title'; title.textContent = game.nameZh;
+    const english = document.createElement('span');
+    english.className = 'result-english'; english.textContent = game.name;
+    content.append(title, english);
+    result.append(image, content);
+    entry.node = result;
+    return result;
+  }
   function renderResults(query) {
     const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
-    const games = GAMES.filter((game) => terms.every((term) =>
-      (game.nameZh + ' ' + game.name + ' ' + game.keywords).toLocaleLowerCase().includes(term)));
-    $('#search-results').replaceChildren(...games.map((game) => {
-      const result = makeLink({ href: game.links[0].href, title: '' }, 'search-result');
-      result.style.setProperty('--result-color', game.color);
-      result.setAttribute('aria-label', game.nameZh + '，' + game.name);
-      const image = document.createElement('img');
-      image.src = game.image; image.alt = ''; image.width = image.height = 48;
-      const content = document.createElement('span');
-      content.className = 'result-copy';
-      const title = document.createElement('span');
-      title.className = 'result-title'; title.textContent = game.nameZh;
-      const english = document.createElement('span');
-      english.className = 'result-english'; english.textContent = game.name;
-      content.append(title, english);
-      result.append(image, content);
-      return result;
-    }));
-    $('#search-summary').textContent = games.length ? games.length + ' 个游戏' : '没有匹配的结果';
-    $('#search-empty').hidden = games.length > 0;
+    const matches = searchIndex.filter(entry => terms.every(term => entry.text.includes(term)));
+    // Keep existing cards (and their decoded images) when typing still yields
+    // the same games. Reuse those same nodes when the result set changes.
+    if (displayedResults && matches.length === displayedResults.length &&
+      matches.every((entry, index) => entry === displayedResults[index])) return;
+    displayedResults = matches;
+    searchResults.replaceChildren(...matches.map(resultNode));
+    searchSummary.textContent = matches.length ? matches.length + ' 个游戏' : '没有匹配的结果';
+    searchEmpty.hidden = matches.length > 0;
   }
   function openDialog(dialog, trigger) {
     if (hasOpenDialog()) return;
@@ -427,15 +451,16 @@
     hideInfo(true);
     dialogTriggers.set(dialog, trigger);
     trigger.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('dialog-open');
-    dialog.showModal();
+    // Populate while hidden so showModal and focus share one final layout.
     if (dialog === search) {
-      $('#game-search').value = '';
+      searchInput.value = '';
       renderResults('');
-      $('#game-search').focus();
     } else if (dialog === community) {
       loadCommunityQr();
     }
+    document.body.classList.add('dialog-open');
+    dialog.showModal();
+    if (dialog === search) searchInput.focus({ preventScroll: true });
     syncMotion();
   }
   for (const dialog of dialogs) {
@@ -478,7 +503,7 @@
   qrRetry.addEventListener('click', loadCommunityQr);
   $('#community-open').addEventListener('click', (event) => openDialog(community, event.currentTarget));
   $('#search-open').addEventListener('click', (event) => openDialog(search, event.currentTarget));
-  $('#game-search').addEventListener('input', (event) => renderResults(event.target.value));
+  searchInput.addEventListener('input', (event) => renderResults(event.target.value));
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') lastPointerType = 'mouse';
     if (event.key === 'Escape') {
