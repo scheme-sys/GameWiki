@@ -80,7 +80,7 @@
       x: Math.random() * width, y: Math.random() * height,
       vx: Math.cos(direction) * speed, vy: Math.sin(direction) * speed,
       depth, radius: .45 + depth * .78 + Math.random() * .25,
-      alpha: .22 + depth * .3 + Math.random() * .08,
+      alpha: .32 + depth * .35 + Math.random() * .09,
       phase: Math.random() * Math.PI * 2,
       frequency: .16 + Math.random() * .24,
       color: palette[Math.random() < .87 ? Math.floor(Math.random() * 3) : 3],
@@ -101,7 +101,7 @@
 
   function connectionOpacity(a, b) {
     const proximity = Math.max(0, 1 - distance(a, b) / settings.distance);
-    return .27 * proximity * Math.sqrt(proximity) * (.65 + (a.depth + b.depth) * .175) * Math.min(a.edge, b.edge);
+    return .40 * proximity * Math.sqrt(proximity) * (.65 + (a.depth + b.depth) * .175) * Math.min(a.edge, b.edge);
   }
 
   function refreshConnections(initial = false) {
@@ -165,8 +165,8 @@
   function draw(delta = 0) {
     context.clearRect(0, 0, width, height);
     if (dustContext) context.drawImage(dustCanvas, 0, 0, width, height);
-    context.lineWidth = .65;
-    context.strokeStyle = 'rgb(145,183,215)';
+    context.lineWidth = .75;
+    context.strokeStyle = 'rgb(172,204,231)';
     const fade = 1 - Math.exp(-delta * 3);
     for (let i = links.length - 1; i >= 0; i--) {
       const link = links[i], a = stars[link.a], b = stars[link.b];
