@@ -101,7 +101,7 @@
 
   function connectionOpacity(a, b) {
     const proximity = Math.max(0, 1 - distance(a, b) / settings.distance);
-    return .22 * proximity * Math.sqrt(proximity) * (.65 + (a.depth + b.depth) * .175) * Math.min(a.edge, b.edge);
+    return .27 * proximity * Math.sqrt(proximity) * (.65 + (a.depth + b.depth) * .175) * Math.min(a.edge, b.edge);
   }
 
   function refreshConnections(initial = false) {

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/site-stats.css">
   <link rel="stylesheet" href="assets/portal.css">
   <link rel="stylesheet" href="assets/starfield.css">
+  <link rel="stylesheet" href="assets/golden-tree.css">
   <script src="assets/games.js" defer></script>
   <script src="assets/bubble-physics.js" defer></script>
   <script src="assets/site-stats.js" defer></script>
@@ -29,6 +30,15 @@
 <body>
   <a class="skip-link" href="#game-universe">跳到游戏气泡</a>
   <div class="space-haze" aria-hidden="true"></div>
+  <div class="celestial-tree" aria-hidden="true">
+    <picture class="celestial-tree-art">
+      <source media="(max-width: 600px) and (orientation: portrait)" srcset="assets/backgrounds/golden-tree-mobile.webp">
+      <img src="assets/backgrounds/golden-tree.webp" alt="" width="1536" height="1024" decoding="async" fetchpriority="low" draggable="false">
+    </picture>
+    <div class="celestial-tree-aureole"></div>
+    <div class="celestial-tree-dust"></div>
+    <div class="celestial-tree-veil"></div>
+  </div>
   <div class="constellations" aria-hidden="true">
     <svg class="sky-cluster sky-near" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
       <g class="star-lines"><path d="M70 330 152 280 223 303 268 223M1160 138 1230 188 1340 163M1180 775 1300 815 1380 740M325 835 390 787 475 810M1100 320 1190 285 1250 350M515 560 587 608 642 557M160 105 223 142 291 109 354 148M145 531 218 489 285 545 251 610M562 884 624 848 697 862 739 821M1280 489 1370 537 1452 493 1510 553"/></g>

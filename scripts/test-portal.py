@@ -78,6 +78,45 @@ def load(page):
     page.mouse.move(2, 2)
 
 
+def check_tree_background(page):
+    tree = page.locator('.celestial-tree')
+    expect(tree).to_have_attribute('aria-hidden', 'true')
+    assert tree.evaluate('(e)=>getComputedStyle(e).pointerEvents') == 'none'
+    image = tree.locator('picture img')
+    expect(image).to_be_visible()
+    expect(image).to_have_attribute('alt', '')
+    dimensions = image.evaluate('(e)=>({complete:e.complete,width:e.naturalWidth,height:e.naturalHeight,src:e.currentSrc})')
+    assert dimensions['complete'] and min(dimensions['width'], dimensions['height']) > 0, dimensions
+    viewport = page.viewport_size
+    portrait = viewport['width'] <= 600 and viewport['height'] >= viewport['width']
+    expected = 'golden-tree-mobile.webp' if portrait else 'golden-tree.webp'
+    assert urlparse(dimensions['src']).path == '/assets/backgrounds/' + expected, dimensions
+    expected_size = (1024, 1536) if portrait else (1536, 1024)
+    assert (dimensions['width'], dimensions['height']) == expected_size, dimensions
+    requests = page.evaluate("performance.getEntriesByType('resource').filter(r=>new URL(r.name).pathname.startsWith('/assets/backgrounds/')).map(r=>({url:r.name,bytes:r.decodedBodySize}))")
+    assert len(requests) == 1 and requests[0]['url'] == dimensions['src'], f'Expected one matching background download: {requests}'
+    assert 0 < requests[0]['bytes'] <= 600000, f'Golden tree image exceeds its independent resource budget: {requests}'
+    blocked = page.locator('.world-link').evaluate_all("""links=>links.filter(link=>{
+      const r=link.getBoundingClientRect();
+      return !link.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));
+    }).map(link=>link.closest('.world').dataset.game)""")
+    assert not blocked, f'Background blocks game entry points: {blocked}'
+
+
+def check_tree_still(page, reduced=False):
+    tree = page.locator('.celestial-tree')
+    expect(tree).to_be_visible()
+    state = tree.evaluate("""e=>{
+      let opacity=1;
+      for(let node=e.querySelector('img');node;node=node.parentElement) opacity*=parseFloat(getComputedStyle(node).opacity);
+      return {opacity,animations:e.getAnimations({subtree:true}).map(a=>a.playState)};
+    }""")
+    assert state['opacity'] > 0, f'Golden tree became invisible when motion stopped: {state}'
+    assert 'running' not in state['animations'], f'Golden tree keeps animating while the scene is paused: {state}'
+    if reduced:
+        assert not state['animations'], f'Reduced-motion leaves background animations active: {state}'
+
+
 def check_geometry(page, width, height):
     geometry = page.evaluate("""() => {
       const rect = r => ({x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom});
@@ -138,6 +177,7 @@ def touch_drag(page, cdp, start, end, cancel=False):
 
 def home_render(page):
     load(page)
+    check_tree_background(page)
     assert page.locator(".brand").inner_text().strip() == "LCZ"
     expect(page.locator("#game-info")).to_be_hidden()
     assert page.locator(".planet-marker,.planet-enter,.world-atmosphere,.world-genre").count() == 0
@@ -149,7 +189,7 @@ def home_render(page):
     assert page.locator('#search-open').evaluate('(e)=>{const s=getComputedStyle(e);return s.backgroundImage==="none"&&parseFloat(s.borderTopWidth)===0}'), 'Search icon should remain unframed'
     requests = page.evaluate('performance.getEntriesByType("resource").map(r=>r.name)')
     assert not any('/data/' in url or '/wiki-assets/' in url for url in requests), 'Home loaded a game dataset'
-    assert page.evaluate('performance.getEntriesByType("resource").reduce((s,r)=>s+r.decodedBodySize,0)') < 285000, 'Portal initial resource budget exceeded (music and independent sky included)'
+    assert page.evaluate('performance.getEntriesByType("resource").filter(r=>!new URL(r.name).pathname.startsWith("/assets/backgrounds/")).reduce((s,r)=>s+r.decodedBodySize,0)') < 285000, 'Portal initial resource budget exceeded (music and independent sky included; artwork budget is separate)'
     assert not re.search(r"已发现的世界|SECTOR 01|游戏档案", page.locator("body").inner_text(), re.I)
     expect(page.locator("[data-site-stats]")).to_have_attribute("data-stats-state", "preview")
     summary = page.locator("[data-site-stats] summary")
@@ -177,7 +217,7 @@ def drift_and_hover(page):
     page.mouse.move(x, y)
     expect(page.locator("#game-info")).to_be_visible()
     expect(page.locator("#info-title")).to_have_text('辐射生存')
-    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)===0')
+    assert page.locator('#game-info').evaluate('(e)=>parseFloat(getComputedStyle(e).borderRadius)===8')
     frozen = snapshot(page)
     page.wait_for_timeout(500)
     assert all(distance(point, snapshot(page)[key]) < 0.05 for key, point in frozen.items())
@@ -202,16 +242,19 @@ def quiet_sky_motion(page, context):
     assert before!=pixels(), 'Independent starfield does not move'
     page.locator('#search-open').click()
     expect(canvas).to_have_attribute('data-state','paused')
+    check_tree_still(page)
     frozen=pixels();page.wait_for_timeout(180)
     assert frozen==pixels(), 'Background moves behind search'
     page.keyboard.press('Escape')
     page.emulate_media(reduced_motion='reduce')
     expect(canvas).to_have_attribute('data-state','paused')
+    check_tree_still(page, reduced=True)
     frozen=pixels();page.wait_for_timeout(180)
     assert frozen==pixels(), 'Reduced-motion still animates'
     page.emulate_media(reduced_motion='no-preference')
     page.evaluate('()=>{Object.defineProperty(document,"hidden",{configurable:true,get:()=>true});document.dispatchEvent(new Event("visibilitychange"));}')
     expect(canvas).to_have_attribute('data-state','paused')
+    check_tree_still(page)
     frozen=pixels();page.wait_for_timeout(180)
     assert frozen==pixels(), 'Hidden page still draws'
     page.evaluate('()=>{delete document.hidden;document.dispatchEvent(new Event("visibilitychange"));}')
@@ -266,8 +309,8 @@ def popover_transition_races(page, context):
     page.mouse.move(*icon_center(page,'grimsoul'));page.wait_for_timeout(20)
     page.locator('#search-open').click();expect(page.locator('#search-dialog')).to_be_visible()
     page.wait_for_timeout(250);expect(info).to_be_hidden()
-    for selector in ['#search-dialog','.search-field']:
-        assert page.locator(selector).evaluate('(e)=>{const s=getComputedStyle(e);return [s.borderTopLeftRadius,s.borderTopRightRadius,s.borderBottomRightRadius,s.borderBottomLeftRadius].every(v=>v==="0px")}'), selector
+    for selector, radius in [('#search-dialog', '8px'), ('.search-field', '0px')]:
+        assert page.locator(selector).evaluate('(e,radius)=>{const s=getComputedStyle(e);return [s.borderTopLeftRadius,s.borderTopRightRadius,s.borderBottomRightRadius,s.borderBottomLeftRadius].every(v=>v===radius)}', radius), selector
     page.keyboard.press('Escape')
     page.mouse.move(*icon_center(page,'grimsoul'));expect(info).to_be_visible();page.wait_for_timeout(220)
     page.locator('#info-close').click();expect(info).to_be_hidden()
@@ -306,7 +349,7 @@ def lazy_popover_covers(page, context, mobile=False):
         frame=info.bounding_box()
         assert frame['x']>=0 and frame['y']>=0 and frame['x']+frame['width']<=page.viewport_size['width']+1
         assert frame['y']+frame['height']<=page.viewport_size['height']+1
-        assert info.evaluate('(e)=>getComputedStyle(e).borderTopLeftRadius')=='0px'
+        assert info.evaluate('(e)=>getComputedStyle(e).borderTopLeftRadius')=='8px'
         screenshot(page,('cover-touch-' if mobile else 'cover-mouse-')+game)
         page.locator('#info-close').click()
         expect(info).to_be_hidden()
@@ -698,7 +741,7 @@ try:
                 context.close()
 
         run_case("Minimal LCZ home and preview visit statistics", lambda page, _: home_render(page))
-        run_case("Gentle drift, system reduced motion and square hover preview", lambda page, _: drift_and_hover(page))
+        run_case("Gentle drift, system reduced motion and metal-framed hover preview", lambda page, _: drift_and_hover(page))
         run_case("Independent starfield moves, pauses and respects reduced motion", quiet_sky_motion)
         run_case("Mobile starfield stays bounded and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
         run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
@@ -713,6 +756,8 @@ try:
                 load(page)
                 pause(page)
                 check_geometry(page, width, height)
+                check_tree_background(page)
+                check_tree_still(page, reduced=True)
                 if (width,height) in [(390,844),(320,568),(568,320),(844,390),(1920,1080)]:
                     screenshot(page, f"layout-{width}x{height}")
             run_case(f"Viewport {width}x{height} keeps full-screen circles in bounds", responsive, width=width, height=height, mobile=width<=844)
@@ -726,7 +771,7 @@ try:
             assert box['x'] >= 0 and box['x']+box['width'] <= 320, box
             page.locator('#info-close').click()
             expect(page.locator('#game-info')).to_be_hidden()
-        run_case("Narrow mouse viewport keeps square info and close button in bounds", narrow_mouse, width=320, height=568)
+        run_case("Narrow mouse viewport keeps metal-framed info and close button in bounds", narrow_mouse, width=320, height=568)
         run_case("Dawn search, entry, shared navigation and return", dawn_entry_and_switch)
         run_case("LDOE search, fifth bubble, shared navigation and return", ldoe_entry_and_switch)
         run_case("Grim Soul search, sixth bubble, shared navigation and return", grim_entry_and_switch)
