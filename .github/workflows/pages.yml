@@ -1,4 +1,4 @@
-name: Deploy LCZ-GameWiki to GitHub Pages
+name: Deploy GameWiki to GitHub Pages
 
 on:
   push:

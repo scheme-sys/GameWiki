@@ -1,1 +1,0 @@
-window.LDOE_PARTS["details-item-38"]=[{"id":"item-1217","name":"工作桌","enName":"","category":"building","subcategory":"家具与设施","description":"可建造的生产设施、家具或装饰。升级和摆放条件以游戏内为准。","image":"assets/items/item-1217.webp","tags":["家具与设施"],"stats":[],"_order":669}];

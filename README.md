@@ -72,16 +72,14 @@ python -m http.server 4173 --bind 127.0.0.1
 
 1. 在 GitHub 仓库中打开 **Settings → Pages**。
 2. 将 **Build and deployment → Source** 设置为 **GitHub Actions**。
-3. 把本项目文件提交并推送到 `main`。如果代码已经推送，进入 **Actions → Deploy LCZ-GameWiki to GitHub Pages → Run workflow**。
+3. 把本项目文件提交并推送到 `main`。如果代码已经推送，进入 **Actions → Deploy GameWiki to GitHub Pages → Run workflow**。
 4. 等待工作流通过，部署地址会显示在 Pages 设置和工作流的 `github-pages` 环境中。
 
-如果仓库仍名为 `GameWiki`，先在 GitHub 仓库 Settings → General → Repository name 将其改为 `LCZ-GameWiki`，再运行发布。改名后，本地执行 `git remote set-url origin https://github.com/scheme-sys/LCZ-GameWiki.git` 更新远程地址。
+发布目标仓库为 [`scheme-sys/GameWiki`](https://github.com/scheme-sys/GameWiki)。启用并成功部署后的默认地址为：
 
-发布目标仓库为 [`scheme-sys/LCZ-GameWiki`](https://github.com/scheme-sys/LCZ-GameWiki)。启用并成功部署后的默认地址为：
+**https://scheme-sys.github.io/GameWiki/**
 
-**https://scheme-sys.github.io/LCZ-GameWiki/**
-
-站点使用相对资源路径，兼容 `/LCZ-GameWiki/` 项目子目录。`404.html` 提供返回入口，并兼容原 `/GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。动态数据分片由各游戏生成器提供内容哈希文件名或版本参数，发布时须连同对应入口清单一起更新。
+站点使用相对资源路径，兼容 `/GameWiki/` 项目子目录。`404.html` 提供返回入口，也支持 `/LCZ-GameWiki/` 路径。工作流从 `assets/games.js` 自动读取需要发布的游戏目录，把静态文件整理到 `_site/`，检查资源与 JavaScript 后发布。打包时会自动为 HTML 引用的本地 CSS 和 JavaScript 加上基于文件内容的版本参数，防止更新后浏览器混用旧缓存；源文件保持不变。动态数据分片由各游戏生成器提供内容哈希文件名或版本参数，发布时须连同对应入口清单一起更新。
 
 Dawn 的中文玩家 CSV 与 Markdown 指南也随站点发布，方便离线查阅；已清理的维护 JSON、校验报告与工具留在仓库。
 
