@@ -177,9 +177,12 @@ def generated_files(root=ROOT):
     site = metadata(root, catalog, mechanics, assets)
     outputs['data/site-meta.js'] = js_bytes('DOZ_SITE_META', site)
     outputs['reports/coverage.json'] = json_bytes(site['coverage'], pretty=True)
+    # Git checkouts may use CRLF; measure and hash UTF-8 text with LF on every OS.
+    source_bytes = {name: (root / f'data/{name}.json').read_text(encoding='utf-8').encode('utf-8')
+                    for name in JSON_NAMES}
     summary = {
         'source': 'data/catalog.json, data/mechanics.json, data/asset-map.json',
-        'sourceSHA256': {name: hashlib.sha256((root / f'data/{name}.json').read_bytes()).hexdigest() for name in JSON_NAMES},
+        'sourceSHA256': {name: hashlib.sha256(content).hexdigest() for name, content in source_bytes.items()},
         'datasets': site['coverage']['datasets'], 'visibleEntries': site['coverage']['visibleEntries'],
         'mechanics': {key: len(value) for key, value in mechanics.items() if isinstance(value, list)},
         'images': site['coverage']['assetStats'], 'downloads': site['downloads'],
@@ -201,7 +204,7 @@ def generated_files(root=ROOT):
     }, pretty=True)
     outputs['reports/size-audit.json'] = json_bytes({
         'images': len(assets['images']), 'imageBytes': site['coverage']['assetStats']['imageBytes'],
-        'maintenanceJsonBytes': sum((root / f'data/{name}.json').stat().st_size for name in JSON_NAMES),
+        'maintenanceJsonBytes': sum(len(content) for content in source_bytes.values()),
         'playerRuntimeDataBytes': sum(len(value) for name,value in outputs.items() if name=='data/bootstrap.js' or name.startswith('data/lazy/') or name in ('data/asset-map.js','data/site-meta.js')),
         'initialRuntimeDataBytes': sum(len(outputs[name]) for name in ('data/bootstrap.js','data/asset-map.js','data/site-meta.js')),
         'lazyChunks': len([name for name in outputs if name.startswith('data/lazy/')]),

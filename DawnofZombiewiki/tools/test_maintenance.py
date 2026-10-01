@@ -109,6 +109,18 @@ class MaintenanceTests(unittest.TestCase):
         self.assertEqual(before, {name: (self.root / name).read_bytes() for name in protected})
         self.assertEqual(read_js_json(self.root / 'data/catalog.js', 'DOZ_CATALOG'), self.catalog)
 
+    def test_source_line_endings_do_not_change_generated_reports(self):
+        for name in ('catalog', 'mechanics', 'asset-map'):
+            path = self.root / f'data/{name}.json'
+            path.write_bytes(json_bytes(json.loads(path.read_text('utf-8')), pretty=True))
+        self.refresh()
+        expected = generated_files(self.root)
+        for name in ('catalog', 'mechanics', 'asset-map'):
+            path = self.root / f'data/{name}.json'
+            path.write_bytes(path.read_bytes().replace(b'\n', b'\r\n'))
+        self.assertEqual(generated_files(self.root), expected)
+        self.assertEqual(verify(self.root, data_only=True)['errors'], [])
+
     def test_export_refresh_follows_json_and_validator_detects_drift(self):
         self.catalog['entries'][0]['stats'][1]['value'] = 1.25
         self.write('data/catalog.json', json_bytes(self.catalog))
