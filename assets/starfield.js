@@ -27,7 +27,7 @@
     .map(cold => colorRamp(cold, [235,213,170]));
   const linkColors = colorRamp([172,204,231], [220,199,157]);
   const dustColors = colorRamp([157,184,215], [218,196,158]);
-  // Distant dust is painted once per resize, separate from the moving link field.
+  // Distant dust is painted on resize or artwork load, separate from the moving link field.
   // Keep it in memory: no image downloads, extra animation loop or saved assets.
   const dustCanvas = document.createElement('canvas');
   let dustContext;
@@ -70,15 +70,17 @@
   }
 
   function mapTree() {
-    // Match the picture sources and CSS cover crop, rather than assuming the
-    // same tree position on portrait, ordinary landscape and ultrawide art.
+    // Share the loaded artwork's cover crop with the gold overlay, including
+    // the taller 4K panorama. The old ratios are only a loading fallback.
     const portrait = width <= 600 && height >= width;
     const panorama = width >= 1280 && width / height >= 2;
     const ratio = portrait ? 2 / 3 : panorama ? 3 : 1.5;
-    const artWidth = Math.max(width, height * ratio), artHeight = artWidth / ratio;
+    const artWidth = light.crop ? treeImage.naturalWidth * light.crop.scale : Math.max(width, height * ratio);
+    const artHeight = light.crop ? treeImage.naturalHeight * light.crop.scale : artWidth / ratio;
     const positionY = portrait ? .46 : panorama ? .5 : height <= 500 && width > height ? .4 : .48;
     tree = {
-      left: (width - artWidth) / 2, top: (height - artHeight) * positionY,
+      left: light.crop?.left ?? (width - artWidth) / 2,
+      top: light.crop?.top ?? (height - artHeight) * positionY,
       inverseWidth: 1 / artWidth, inverseHeight: 1 / artHeight,
       crownX: panorama ? .51 : .5, crownY: .34,
       crownRadiusX: portrait ? .60 : panorama ? .39 : .47,
@@ -472,11 +474,11 @@
     width = Math.max(1, host.clientWidth);
     height = Math.max(1, host.clientHeight);
     settings = configuration();
-    mapTree();
     clearPointerLight();
     light.radius = Math.min(220, width * .25, height * .3);
     light.dpr = Math.min(devicePixelRatio || 1, 2);
     mapPointerLight();
+    mapTree();
     const bitmapWidth = Math.max(1, Math.round(width * settings.dpr));
     const bitmapHeight = Math.max(1, Math.round(height * settings.dpr));
     if (canvas.width !== bitmapWidth || canvas.height !== bitmapHeight) {
@@ -535,7 +537,14 @@
   }, { passive: true });
   window.addEventListener('pointercancel', leavePointer, { passive: true });
   window.addEventListener('blur', leavePointer);
-  treeImage?.addEventListener('load', mapPointerLight);
+  treeImage?.addEventListener('load', () => {
+    if (contextLost) return;
+    mapPointerLight();
+    mapTree();
+    paintDistantSky();
+    project();
+    draw();
+  });
   document.addEventListener('visibilitychange', syncMotion);
   reducedMotion.addEventListener('change', syncMotion);
   coarsePointer.addEventListener('change', resize);
