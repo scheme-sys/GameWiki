@@ -23,7 +23,7 @@
       try { sessionStorage.setItem('lcz:moonlight-muted', String(value)); } catch { /* Optional preference. */ }
     }
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const FADE = 2.2, VOLUME = .60;
+    const FADE = 2.2, VOLUME = .85;
 
     function snapshot() { return { index, title: tracks[index].title, status, playing: wanted && status === 'playing', activated, time: decks?.[current].audio.currentTime || 0 }; }
     function publish() { const value = snapshot(); for (const listener of listeners) listener(value); }
