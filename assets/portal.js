@@ -115,12 +115,19 @@
     height = universe.clientHeight;
     layoutKey = innerHeight <= 500 && innerWidth > innerHeight ? 'landscape'
       : innerWidth <= 600 ? 'mobile' : innerWidth <= 900 ? 'tablet' : 'desktop';
+    // Use the available scene dimensions, with the original sizes as ceilings.
+    // Keep desktop sizing close to tablet sizing at their shared breakpoint.
+    const screenScale = layoutKey === 'tablet' ? Math.min(.84, width / 840, height / 640)
+      : Math.min(1, Math.max(.84, width / 1392), height / 640);
     field.resize(width, height);
     field.setBodies(GAMES.map((game) => {
       const node = nodes.get(game.id);
-      const size = layoutKey === 'landscape' ? Math.min(94, height * .38, (width - 72) / GAMES.length)
+      const baseSize = layoutKey === 'landscape' ? Math.min(94, height * .38, (width - 72) / GAMES.length)
         : layoutKey === 'mobile' ? Math.min(112, width * .32) * game.size / 164
-        : game.size * (layoutKey === 'tablet' ? .84 : 1);
+        : game.size * screenScale;
+      // Resize the actual element and its collision radius together, not just
+      // its visual transform. Apply the 85% reduction once on every screen.
+      const size = baseSize * .85;
       radii.set(game.id, size / 2);
       node.style.setProperty('--diameter', size + 'px');
       const point = positions[layoutKey]?.[game.id];
