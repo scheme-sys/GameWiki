@@ -19,6 +19,40 @@
   background: var(--panel-fill) #0c1621; box-shadow: var(--panel-shadow); color: var(--muted);
 }
 
+/* A small engraved counter shares the tree's champagne light. Its frame sits
+   inside the existing hit area; ::after remains the disclosure's tooltip. */
+:is(.site-header,.atlas-nav) .site-stats-summary {
+  position: relative; isolation: isolate; border-radius: 0; padding-inline: 8px;
+}
+:is(.site-header,.atlas-nav) .site-stats-summary::before {
+  content: ""; position: absolute; inset: 4px 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(#e3ca93,#e3ca93) top left / 10px 1px no-repeat,
+    linear-gradient(#e3ca93,#e3ca93) top left / 1px 7px no-repeat,
+    linear-gradient(#b49e72,#b49e72) bottom right / 10px 1px no-repeat,
+    linear-gradient(#b49e72,#b49e72) bottom right / 1px 7px no-repeat,
+    radial-gradient(ellipse at 18% 0,#dec18b16,transparent 72%),
+    linear-gradient(115deg,#111c29b8,#0a14216b);
+  box-shadow: inset 0 0 0 1px #d8bd8124,0 3px 12px #02081426;
+  opacity: .68; transition: opacity .2s;
+}
+:is(.site-header,.atlas-nav) :is(.site-stats-summary:hover,.site-stats-summary:focus-visible,.site-stats-disclosure[open] .site-stats-summary)::before { opacity: 1; }
+:is(.site-header,.atlas-nav) .site-stats-summary strong {
+  color: #f0ddb3; font-family: Consolas,"SFMono-Regular",monospace; font-weight: 500;
+  text-shadow: 0 0 9px #e3bd7926;
+}
+:is(.site-header,.atlas-nav) .site-stats-metric > span { color: #b3a486; letter-spacing: .09em; }
+:is(.site-header,.atlas-nav) .site-stats-metric + .site-stats-metric {
+  border-color: transparent;
+  background: linear-gradient(transparent,#d8bd8152,transparent) left center / 1px 80% no-repeat;
+}
+:is(.site-header,.atlas-nav) .site-stats-row { margin: 0; padding-block: 6px; color: #b8b1a0; }
+:is(.site-header,.atlas-nav) .site-stats-row + .site-stats-row { border-top: 1px solid #d3b77c1a; }
+:is(.site-header,.atlas-nav) .site-stats-row strong {
+  color: #f0ddb3; font: 500 15px/1.6 Consolas,"SFMono-Regular",monospace;
+  font-variant-numeric: tabular-nums; text-shadow: 0 0 12px #dfbd791a;
+}
+
 :is(.site-header,.atlas-nav) .lcz-music-toggle svg { filter: drop-shadow(0 0 5px #d8b87724); }
 :is(.site-header,.atlas-nav) :is(.music-stem,.music-note) { stroke: currentColor; }
 :is(.site-header,.atlas-nav) .music-note { fill: #d4ba8738; }
@@ -35,3 +69,40 @@
 :is(.site-header,.atlas-nav) .lcz-music-control[data-state="error"] [data-music-title] { color: #dca493; }
 :is(.site-header,.atlas-nav) .lcz-music-hint a { color: var(--gold); }
 :is(.site-header,.atlas-nav) .lcz-music-hint a:is(:hover,:focus-visible) { color: var(--ink); }
+
+/* Shared scroll chrome: preserve native scrolling in documents, sidebars and
+   dialogs. No script, overlay, animation or extra compositing layer is needed. */
+:root {
+  --lcz-scroll-track: #0a111c;
+  --lcz-scroll-thumb: #9c865d;
+}
+@media (forced-colors: none) {
+  /* Override the older per-game scrollbar palettes in this shared theme only. */
+  :root,body * {
+    scrollbar-color: var(--lcz-scroll-thumb) var(--lcz-scroll-track) !important;
+    scrollbar-width: thin !important;
+  }
+  @supports selector(::-webkit-scrollbar) {
+    @media (hover: hover) and (pointer: fine) {
+      /* Non-auto standard properties suppress the detailed native thumb. */
+      :root,body * { scrollbar-color: auto !important; scrollbar-width: auto !important; }
+      ::-webkit-scrollbar { width: 10px; height: 10px; background: var(--lcz-scroll-track); }
+      ::-webkit-scrollbar-track {
+        background: var(--lcz-scroll-track);
+        box-shadow: inset 1px 0 #d1b77c12;
+      }
+      ::-webkit-scrollbar-thumb {
+        min-height: 40px; min-width: 40px; border: 2px solid var(--lcz-scroll-track); border-radius: 0;
+        background: linear-gradient(180deg,#796545,#bea572 46%,#8c744d);
+        box-shadow: inset 1px 0 #efdbab38;
+      }
+      ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg,#a38a5d,#e2cb97 46%,#b39663); }
+      ::-webkit-scrollbar-thumb:active { background: #ead3a0; }
+      ::-webkit-scrollbar-corner { background: var(--lcz-scroll-track); }
+      ::-webkit-scrollbar-button { display: none; }
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.site-header,.atlas-nav) .site-stats-summary::before { transition: none; }
+}
