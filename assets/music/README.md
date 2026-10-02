@@ -1,6 +1,19 @@
-# 月光奏鸣曲录音来源与许可
+# 背景音乐录音来源与许可
 
-本目录收录贝多芬《第 14 钢琴奏鸣曲，升 C 小调，作品 27 第 2 号》（《月光奏鸣曲》）的完整三个乐章，按 `moonlight-1.mp3` → `moonlight-2.mp3` → `moonlight-3.mp3` 播放。
+本目录收录肖邦《降 E 大调夜曲，Op.9 No.2》和贝多芬《月光奏鸣曲》完整三个乐章。没有续播记录时，两组等概率随机选择；每组播完后再随机选择下一组。月光组内部保持 `moonlight-1.mp3` → `moonlight-2.mp3` → `moonlight-3.mp3`，不在乐章间插入其他作品。
+
+## 肖邦《降 E 大调夜曲，Op.9 No.2》
+
+- 网站文件：`chopin-nocturne-op9-no2.mp3`。
+- 来源：[Wikimedia Commons 文件页](https://commons.wikimedia.org/wiki/File:Nocturne_Op._9_no._2_in_E_flat_major.mp3)，页面将录音来源指向 Musopen / Internet Archive，并标注录音文件为 CC0 1.0。
+- [原始 MP3](https://upload.wikimedia.org/wikipedia/commons/5/50/Nocturne_Op._9_no._2_in_E_flat_major.mp3)。2026-10-02 下载；按原字节保存，没有再次有损转码。
+- 时长：276.648 秒（约 4:37）；大小：5,354,496 字节；MP3，平均码率约 155 kbps。已通过 FFprobe 和 FFmpeg 完整解码。
+- 文件页没有明确演奏者，播放器显示肖邦与 Musopen 来源，不将月光奏鸣曲的钢琴演奏者署名套用到此曲。
+- SHA-256：`d6a289cd51123f0033fb6e4014277495340c6d3afa3a4e42e7cd89bcf634d917`。
+
+## 贝多芬《月光奏鸣曲》
+
+《第 14 钢琴奏鸣曲，升 C 小调，作品 27 第 2 号》的三个乐章：
 
 - 作曲：Ludwig van Beethoven（路德维希·凡·贝多芬）。
 - 钢琴演奏：Paul Pitman。

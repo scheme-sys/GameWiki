@@ -208,13 +208,15 @@ test('Raw Craft source folder and cover originals never enter the public artifac
   assert.equal(fs.existsSync(path.join(output, 'assets/game-covers/craft.webp')), true);
 });
 
-test('Only the three reviewed recordings publish; missing playlist audio is rejected', () => {
-  for (const name of ['moonlight-1.mp3','moonlight-2.mp3','moonlight-3.mp3']) assert.equal(isPublicFile('assets/music/'+name),true);
+test('Only the four reviewed recordings publish; missing playlist audio is rejected', () => {
+  for (const name of ['moonlight-1.mp3','moonlight-2.mp3','moonlight-3.mp3','chopin-nocturne-op9-no2.mp3']) assert.equal(isPublicFile('assets/music/'+name),true);
   for (const name of ['README.md','source.wav','source.mp3','notes.js']) assert.equal(isPublicFile('assets/music/'+name),false);
   const root=fixture('music');
-  write(root,'assets/music-player.js',"const tracks=[{file:'music/moonlight-1.mp3'}];");
+  write(root,'assets/music-player.js',"const tracks=[{file:'music/moonlight-1.mp3'},{file:'music/chopin-nocturne-op9-no2.mp3'}];");
   assert.notEqual(check(root).status,0);
   write(root,'assets/music/moonlight-1.mp3','reviewed recording');
+  assert.notEqual(check(root).status,0);
+  write(root,'assets/music/chopin-nocturne-op9-no2.mp3','reviewed recording');
   assert.equal(check(root).status,0);
 });
 

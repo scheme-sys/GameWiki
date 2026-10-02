@@ -249,15 +249,52 @@ def continuity(page, context):
     assert page.evaluate('document.body.classList.contains("scene-still")')
     frame.locator('.lcz-music-toggle').click()
 
+def random_programs(page, context):
+    context.add_init_script("""(()=>{
+      sessionStorage.removeItem('lcz:moonlight-position');
+      Math.random=()=>new URLSearchParams(location.search).get('program')==='chopin'?.75:.25;
+    })()""")
+    for program,index,file,composer in [('moonlight',0,'moonlight-1.mp3','贝多芬'),('chopin',3,'chopin-nocturne-op9-no2.mp3','肖邦')]:
+        load(page,'index.html?program='+program);start(page)
+        assert page.evaluate('LCZMusic.snapshot().index')==index
+        expect(page.locator('[data-music-program]')).to_contain_text(composer)
+        expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-label',re.compile(composer))
+        assert page.evaluate("[...document.querySelectorAll('audio')].find(a=>!a.paused).src").endswith(file)
+        if index==3:
+            assert 'Chopin' in page.evaluate('navigator.mediaSession.metadata.artist')
+            assert 'Paul Pitman' not in page.locator('.lcz-music-hint').text_content()
+
+def repeating_chopin(page, context):
+    context.add_init_script("""(()=>{
+      sessionStorage.setItem('lcz:moonlight-position',JSON.stringify({index:3,time:0}));
+      Math.random=()=>.75;
+      const set=navigator.mediaSession.setActionHandler.bind(navigator.mediaSession);
+      navigator.mediaSession.setActionHandler=(action,handler)=>{
+        if(action==='nexttrack')window.__nextMusicTrack=handler;
+        return set(action,handler);
+      };
+    })()""")
+    load(page);start(page)
+    for _ in range(2):
+        page.evaluate("()=>{[...document.querySelectorAll('audio')].find(a=>!a.paused).currentTime=45;window.__nextMusicTrack()}")
+        page.wait_for_function('()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time<3')
+        assert page.evaluate('LCZMusic.snapshot().index')==3
+        page.wait_for_timeout(1600)
+
 def movements(page, context):
+    context.add_init_script("if(!sessionStorage.getItem('lcz:moonlight-position'))sessionStorage.setItem('lcz:moonlight-position',JSON.stringify({index:0,time:0}))")
     media=[];page.on('request',lambda r:media.append(r.url) if '.mp3' in r.url else None)
     load(page);start(page)
     page.wait_for_function("() => Number.isFinite(document.querySelector('audio').duration)")
     assert set(urlsplit(url).path for url in media)=={PREFIX+'assets/music/moonlight-1.mp3'}
     page.emulate_media(reduced_motion='no-preference')
     page.wait_for_function("() => parseFloat(document.querySelector('.lcz-music-control').style.getPropertyValue('--music-level'))>0",timeout=15000)
-    for target in [1,2,0]:
-        page.evaluate("()=>{const a=[...document.querySelectorAll('audio')].find(a=>!a.paused);a.currentTime=a.duration-3.5}")
+    for target in [1,2,3,0]:
+        page.evaluate("i=>{Math.random=()=>i===3?.75:.25;const a=[...document.querySelectorAll('audio')].find(a=>!a.paused);a.currentTime=a.duration-12}",target)
+        filename='chopin-nocturne-op9-no2.mp3' if target==3 else f'moonlight-{target+1}.mp3'
+        page.wait_for_function("file=>[...document.querySelectorAll('audio')].some(a=>a.src.endsWith(file)&&a.paused&&a.readyState>=3)",arg=filename)
+        # Changing the random result after preloading must not replace the queued program.
+        page.evaluate("i=>{Math.random=()=>i===3?.25:.75;const a=[...document.querySelectorAll('audio')].find(a=>!a.paused);a.currentTime=a.duration-3.5}",target)
         page.wait_for_function('i=>LCZMusic.snapshot().index===i',arg=target,timeout=12000)
         page.wait_for_timeout(2600)
         assert page.evaluate('LCZMusic.snapshot().status')=='playing'
@@ -287,6 +324,7 @@ def direct(page, context):
 
 def recovery(page, context):
     context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
+    context.add_init_script("sessionStorage.setItem('lcz:moonlight-position',JSON.stringify({index:0,time:0}))")
     page.route('**/moonlight-1.mp3',lambda route:route.abort())
     load(page)
     assert page.evaluate("LCZSite.navigate('https://example.com/index.html')") is False
@@ -490,7 +528,7 @@ try:
         browser=p.chromium.launch(**launch_options,args=['--autoplay-policy=document-user-activation-required'],
                                   ignore_default_args=['--autoplay-policy=no-user-gesture-required'])
         allowed_browser=None
-        for name,fn,mobile in [('autoplay begins without interaction on home, wiki and local file',autoplay,False),('autoplay blocked recovers on a trusted click',autoplay_click,False),('autoplay blocked recovers on keyboard input',autoplay_keyboard,False),('autoplay button toggles once and manual mute survives reload',autoplay_button,False),('autoplay waits for suspended Web Audio despite active media',autoplay_pending_context,False),('manual mute stays lazy and uses native links',lazy,False),('entering a game keeps music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and respect manual pause',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry keeps music and respects mute',entry,True),('smooth route keeps home visible during slow loading',smooth_slow_navigation,False),('latest route wins rapid switching without stale frames or history',latest_navigation_wins,False),('failed route retains old page and retry recovers',route_failure_retry,False),('reduced motion routes restore focus without animation',reduced_route_focus,False)]:
+        for name,fn,mobile in [('autoplay begins without interaction on home, wiki and local file',autoplay,False),('autoplay blocked recovers on a trusted click',autoplay_click,False),('autoplay blocked recovers on keyboard input',autoplay_keyboard,False),('autoplay button toggles once and manual mute survives reload',autoplay_button,False),('autoplay waits for suspended Web Audio despite active media',autoplay_pending_context,False),('manual mute stays lazy and uses native links',lazy,False),('entering a game keeps music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('random programs choose either Chopin or Moonlight',random_programs,False),('repeating Chopin starts from the beginning',repeating_chopin,False),('random program boundaries preserve Moonlight order and queued preload',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry keeps music and respects mute',entry,True),('smooth route keeps home visible during slow loading',smooth_slow_navigation,False),('latest route wins rapid switching without stale frames or history',latest_navigation_wins,False),('failed route retains old page and retry recovers',route_failure_retry,False),('reduced motion routes restore focus without animation',reduced_route_focus,False)]:
             if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
             case_browser=browser
             if fn in (autoplay,autoplay_pending_context):

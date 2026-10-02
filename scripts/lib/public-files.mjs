@@ -24,7 +24,7 @@ export function isPublicFile(relativePath) {
   const relative = relativePath.split(path.sep).join('/');
   const parts = relative.split('/');
   if (parts.some((part) => !part || part.startsWith('.'))) return false;
-  if (relative.startsWith('assets/music/')) return /^assets\/music\/moonlight-[123]\.mp3$/.test(relative);
+  if (relative.startsWith('assets/music/')) return /^assets\/music\/(?:moonlight-[123]|chopin-nocturne-op9-no2)\.mp3$/.test(relative);
   if (relative.startsWith('craftsurvival/')) return false;
   if (relative.startsWith('assets/game-covers/originals/')) return false;
   if (relative.startsWith('grimsoul_Wiki/')) {

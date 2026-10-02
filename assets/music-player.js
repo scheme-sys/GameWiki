@@ -1,20 +1,28 @@
-/* Moonlight starts on entry, with gesture recovery when autoplay is blocked. */
+/* Random classical programs start on entry, with autoplay gesture recovery. */
 (() => {
   'use strict';
   const root = new URL('../', document.currentScript.src);
-  const tracks = [
-    { title: '第一乐章 · Adagio sostenuto', file: 'music/moonlight-1.mp3' },
-    { title: '第二乐章 · Allegretto', file: 'music/moonlight-2.mp3' },
-    { title: '第三乐章 · Presto agitato', file: 'music/moonlight-3.mp3' },
+  const programs = [
+    { title: '贝多芬 · 月光奏鸣曲', artist: 'Ludwig van Beethoven · Paul Pitman', credit: '钢琴：Paul Pitman · ' },
+    { title: '肖邦 · 降 E 大调夜曲，Op.9 No.2', artist: 'Frédéric Chopin', credit: '录音来源：' },
   ];
+  const tracks = [
+    { title: '第一乐章 · Adagio sostenuto', file: 'music/moonlight-1.mp3', program: 0 },
+    { title: '第二乐章 · Allegretto', file: 'music/moonlight-2.mp3', program: 0 },
+    { title: '第三乐章 · Presto agitato', file: 'music/moonlight-3.mp3', program: 0 },
+    { title: '行板 · Andante', file: 'music/chopin-nocturne-op9-no2.mp3', program: 1 },
+  ];
+  const chooseProgram = () => Math.random() < .5 ? 0 : 3;
   let parentPlayer = null;
   try { if (window.parent !== window && window.parent.LCZSite?.owns(window)) parentPlayer = window.parent.LCZMusic; } catch { /* Independent embedded page. */ }
 
   function createPlayer() {
     const listeners = new Set();
     const saved = (() => { try { return JSON.parse(sessionStorage.getItem('lcz:moonlight-position')); } catch { return null; } })();
-    let index = Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < 3 ? saved.index : 0;
-    let resumeAt = Number.isFinite(saved?.time) && saved.time > 0 ? Math.min(saved.time, 900) : 0;
+    const savedTrack = Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < tracks.length;
+    let index = savedTrack ? saved.index : chooseProgram();
+    let resumeAt = savedTrack && Number.isFinite(saved?.time) && saved.time > 0 ? Math.min(saved.time, 900) : 0;
+    let queuedIndex = null;
     let context, analyser, master, bins, owner, decks, current = 0, activated = false;
     let wanted = false, status = 'off', epoch = 0, crossfading = false, fadeTimer, raf = 0, lastBeat = 0, lastSaved = 0;
     let muted = (() => { try { return sessionStorage.getItem('lcz:moonlight-muted') === 'true'; } catch { return false; } })();
@@ -25,7 +33,17 @@
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     const FADE = 2.2, VOLUME = .85;
 
-    function snapshot() { return { index, title: tracks[index].title, status, playing: wanted && status === 'playing', activated, time: decks?.[current].audio.currentTime || 0 }; }
+    function snapshot() {
+      const program = programs[tracks[index].program];
+      return { index, title: tracks[index].title, program: program.title, credit: program.credit,
+        status, playing: wanted && status === 'playing', activated, time: decks?.[current].audio.currentTime || 0 };
+    }
+    function nextTrackIndex() {
+      // Finish Moonlight I -> II -> III before drawing another program. Keep
+      // one choice across preloading, playback attempts and gesture retries.
+      if (queuedIndex === null) queuedIndex = index < 2 ? index + 1 : chooseProgram();
+      return queuedIndex;
+    }
     function publish() { const value = snapshot(); for (const listener of listeners) listener(value); }
     function save() {
       if (!decks) return;
@@ -92,7 +110,7 @@
           const left = audio.duration - audio.currentTime;
           if (!Number.isFinite(left) || crossfading) return;
           const next = decks[1 - current];
-          if (left < 18) prepare(next, (index + 1) % tracks.length);
+          if (left < 18) prepare(next, nextTrackIndex());
           if (left <= FADE && left > .05 && next.audio.readyState >= 3) advance(true);
         });
         audio.addEventListener('ended', () => { if (decks[current] === deck && wanted && !crossfading) advance(false); });
@@ -112,7 +130,8 @@
     }
     function metadata() {
       if ('mediaSession' in navigator && window.MediaMetadata) {
-        navigator.mediaSession.metadata = new MediaMetadata({ title: tracks[index].title, artist: 'Ludwig van Beethoven · Paul Pitman', album: '月光奏鸣曲 · Musopen' });
+        const program = programs[tracks[index].program];
+        navigator.mediaSession.metadata = new MediaMetadata({ title: tracks[index].title, artist: program.artist, album: program.title + ' · Musopen' });
         navigator.mediaSession.playbackState = wanted && status === 'playing' ? 'playing' : 'paused';
       }
     }
@@ -157,18 +176,19 @@
     }
     function advance(blend) {
       if (!wanted || crossfading) return;
-      const operation = epoch, previous = decks[current], next = decks[1 - current], nextIndex = (index + 1) % tracks.length;
+      const operation = epoch, previous = decks[current], next = decks[1 - current], nextIndex = nextTrackIndex();
       crossfading = true; prepare(next, nextIndex); gain(next, 0);
+      if (next.audio.currentTime > 0) next.audio.currentTime = 0;
       next.audio.play().then(() => {
         if (operation !== epoch || !wanted) { if (!wanted || decks[current] !== next) next.audio.pause(); return; }
         const seconds = blend ? Math.max(.15, Math.min(FADE, previous.audio.duration - previous.audio.currentTime)) : 1.4;
-        current = 1 - current; index = nextIndex; status = 'playing'; gain(next, 1, seconds); gain(previous, 0, seconds);
+        current = 1 - current; index = nextIndex; queuedIndex = null; status = 'playing'; gain(next, 1, seconds); gain(previous, 0, seconds);
         metadata(); publish(); save(); syncBeat();
         fadeTimer = setTimeout(() => { previous.audio.pause(); crossfading = false; }, seconds * 1000 + 50);
       }).catch(() => {
         crossfading = false;
         // Keep the already-authorized element usable on stricter mobile browsers.
-        if (operation === epoch && wanted && previous.audio.ended) { index = nextIndex; prepare(previous, index); start(); }
+        if (operation === epoch && wanted && previous.audio.ended) { index = nextIndex; queuedIndex = null; prepare(previous, index); start(); }
       });
     }
     document.addEventListener('visibilitychange', syncBeat);
@@ -186,7 +206,7 @@
   const navigation = document.querySelector('.site-header,.atlas-nav');
   if (!navigation) return;
   const control = document.createElement('span'); control.className = 'lcz-music-control';
-  control.innerHTML = '<button class="lcz-music-toggle" type="button" aria-label="播放月光奏鸣曲" aria-pressed="false"><svg viewBox="0 0 28 28" aria-hidden="true"><path class="music-orbit" d="M19.8 3.6A11.3 11.3 0 0 0 3.7 19M8.2 24.4a11.3 11.3 0 0 0 16.1-9.8"/><path class="music-stem" d="M10.5 20V8.5L21 6v11.5M10.5 12 21 9.5"/><ellipse class="music-note" cx="7.8" cy="20.2" rx="2.7" ry="2" transform="rotate(-18 7.8 20.2)"/><ellipse class="music-note" cx="18.3" cy="17.7" rx="2.7" ry="2" transform="rotate(-18 18.3 17.7)"/><path class="music-spark" d="m24 2.3.55 1.45L26 4.3l-1.45.55L24 6.3l-.55-1.45L22 4.3l1.45-.55Z"/></svg></button><span class="lcz-music-hint" role="note"><strong>月光奏鸣曲</strong><span data-music-title></span><small>钢琴：Paul Pitman · <a href="https://musopen.org/" target="_blank" rel="noopener noreferrer">Musopen</a><br>公有领域录音</small></span>';
+  control.innerHTML = '<button class="lcz-music-toggle" type="button" aria-label="播放背景音乐" aria-pressed="false"><svg viewBox="0 0 28 28" aria-hidden="true"><path class="music-orbit" d="M19.8 3.6A11.3 11.3 0 0 0 3.7 19M8.2 24.4a11.3 11.3 0 0 0 16.1-9.8"/><path class="music-stem" d="M10.5 20V8.5L21 6v11.5M10.5 12 21 9.5"/><ellipse class="music-note" cx="7.8" cy="20.2" rx="2.7" ry="2" transform="rotate(-18 7.8 20.2)"/><ellipse class="music-note" cx="18.3" cy="17.7" rx="2.7" ry="2" transform="rotate(-18 18.3 17.7)"/><path class="music-spark" d="m24 2.3.55 1.45L26 4.3l-1.45.55L24 6.3l-.55-1.45L22 4.3l1.45-.55Z"/></svg></button><span class="lcz-music-hint" role="note"><strong data-music-program></strong><span data-music-title></span><small><span data-music-credit></span><a href="https://musopen.org/" target="_blank" rel="noopener noreferrer">Musopen</a></small></span>';
   const button = control.querySelector('button');
   if (navigation.classList.contains('site-header')) {
     const search = document.querySelector('#search-open'); const tools = document.createElement('div'); tools.className = 'lcz-header-tools';
@@ -201,7 +221,9 @@
     control.dataset.state = state.status; button.setAttribute('aria-pressed', String(state.playing));
     button.setAttribute('aria-busy', String(state.status === 'loading'));
     const action = state.status === 'loading' ? '取消加载' : state.playing ? '暂停' : state.status === 'error' ? '重试播放' : '播放';
-    button.setAttribute('aria-label', action + '月光奏鸣曲，' + state.title);
+    button.setAttribute('aria-label', action + state.program + '，' + state.title);
+    control.querySelector('[data-music-program]').textContent = state.program;
+    control.querySelector('[data-music-credit]').textContent = state.credit;
     control.querySelector('[data-music-title]').textContent = state.status === 'error' ? '暂时无法播放，点击重试'
       : state.status === 'blocked' ? '点击页面后自动播放 · ' + state.title : state.title;
   });
