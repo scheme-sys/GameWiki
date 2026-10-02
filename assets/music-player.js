@@ -31,7 +31,7 @@
       try { sessionStorage.setItem('lcz:moonlight-muted', String(value)); } catch { /* Optional preference. */ }
     }
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const FADE = 2.2, VOLUME = .85;
+    const FADE = 2.2, VOLUME = 1;
 
     function snapshot() {
       const program = programs[tracks[index].program];
