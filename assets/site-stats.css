@@ -27,18 +27,6 @@
 }
 @media print { .site-stats { display: none; } }
 
-/* Styled hint replaces the browser's unthemeable native title tooltip. */
-@media (hover: hover) {
-  .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:hover::after,
-  .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:focus-visible::after {
-    content: attr(data-tooltip); position: absolute; z-index: 101; top: calc(100% + 8px); left: 0;
-    width: 218px; padding: 12px 15px; border: 1px solid #b9d3e32d; border-radius: 0;
-    background: #101d2bf7; box-shadow: 0 12px 32px #0005; color: #b4c7d5;
-    font: 11px/1.7 "Segoe UI","Microsoft YaHei",sans-serif; white-space: normal;
-    text-align: left; pointer-events: none; letter-spacing: .01em;
-  }
-}
-
 .site-stats .site-stats-metric { display: inline-flex; align-items: baseline; gap: 5px; }
 .site-stats .site-stats-metric + .site-stats-metric { margin-left: 7px; padding-left: 10px; border-left: 1px solid #b3ccd41c; }
 .site-stats .site-stats-metric > span { color: #8297a8; font-size: 9px; letter-spacing: .06em; }
@@ -55,10 +43,6 @@
   .atlas-nav .site-stats .site-stats-panel {
     left:auto; right:18px; top:calc(100% + 6px);
     max-width:calc(100vw - 36px);
-  }
-  .atlas-nav .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:hover::after,
-  .atlas-nav .site-stats .site-stats-disclosure:not([open]) .site-stats-summary:focus-visible::after {
-    left:auto; right:18px; top:calc(100% + 6px); max-width:calc(100vw - 36px);
   }
 }
 @media (pointer:coarse) { .site-stats .site-stats-summary { min-height:44px; } }

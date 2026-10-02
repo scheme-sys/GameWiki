@@ -72,7 +72,7 @@ test('one POST sends only the fixed project namespace; separate PV/IP fields ign
   assert.equal(env.nodes.get('[data-stat-note]').textContent, '');
   assert.equal(env.nodes.get('[data-stat-note]').hidden, true);
   assert.equal(env.nodes.get('summary').title, undefined);
-  assert.match(env.nodes.get('summary')['data-tooltip'], /PV.*IP/);
+  assert.equal(env.nodes.get('summary')['data-tooltip'], undefined);
   assert.deepEqual(env.durations, [7000]);
   assert.equal(env.timers.size, 0);
 });

@@ -14,13 +14,9 @@
 :is(.site-header,.atlas-nav) .stats-glint { fill: #fff2d5; }
 :is(.site-header,.atlas-nav) :is(.site-stats-summary:hover,.site-stats-summary:focus-visible,.site-stats-disclosure[open]) .site-stats-icon { filter: drop-shadow(0 0 6px #dfbd7955); }
 :is(.site-header,.atlas-nav) .site-stats-summary:focus-visible .stats-orbit { opacity: .8; }
-:is(.site-header,.atlas-nav) .site-stats-disclosure:not([open]) .site-stats-summary:is(:hover,:focus-visible)::after {
-  border-color: #c6aa7352; border-radius: 0;
-  background: var(--panel-fill) #0c1621; box-shadow: var(--panel-shadow); color: var(--muted);
-}
 
 /* A small engraved counter shares the tree's champagne light. Its frame sits
-   inside the existing hit area; ::after remains the disclosure's tooltip. */
+   inside the existing hit area. */
 :is(.site-header,.atlas-nav) .site-stats-summary {
   position: relative; isolation: isolate; border-radius: 0; padding-inline: 8px;
 }

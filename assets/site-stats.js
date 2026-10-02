@@ -61,7 +61,6 @@
       noteElement.textContent = note;
       noteElement.hidden = !note;
       const summary = host.querySelector("summary");
-      summary.setAttribute("data-tooltip", "点击查看浏览量 PV 与按服务口径去重的 IP访客");
       summary.setAttribute("aria-label", `访问统计，浏览量 PV ${pv} 次，IP访客 ${ip}。${note}`);
     }
   }
