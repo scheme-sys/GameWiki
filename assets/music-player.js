@@ -1,4 +1,4 @@
-/* Optional Moonlight player. Audio is requested only after an explicit click. */
+/* Moonlight starts on entry, with gesture recovery when autoplay is blocked. */
 (() => {
   'use strict';
   const root = new URL('../', document.currentScript.src);
@@ -96,8 +96,8 @@
           if (left <= FADE && left > .05 && next.audio.readyState >= 3) advance(true);
         });
         audio.addEventListener('ended', () => { if (decks[current] === deck && wanted && !crossfading) advance(false); });
-        audio.addEventListener('waiting', () => { if (decks[current] === deck && wanted) { status = 'loading'; publish(); syncBeat(); } });
-        audio.addEventListener('playing', () => { if (decks[current] === deck && wanted) { status = 'playing'; publish(); syncBeat(); } });
+        audio.addEventListener('waiting', () => { if (decks[current] === deck && wanted && status !== 'blocked') { status = 'loading'; publish(); syncBeat(); } });
+        audio.addEventListener('playing', () => { if (decks[current] === deck && wanted && (!context || context.state === 'running')) { status = 'playing'; publish(); syncBeat(); } });
         audio.addEventListener('error', () => { if (decks[current] === deck && wanted) fail(); });
         return deck;
       });
@@ -113,7 +113,7 @@
     function metadata() {
       if ('mediaSession' in navigator && window.MediaMetadata) {
         navigator.mediaSession.metadata = new MediaMetadata({ title: tracks[index].title, artist: 'Ludwig van Beethoven · Paul Pitman', album: '月光奏鸣曲 · Musopen' });
-        navigator.mediaSession.playbackState = wanted ? 'playing' : 'paused';
+        navigator.mediaSession.playbackState = wanted && status === 'playing' ? 'playing' : 'paused';
       }
     }
     function fail() {
@@ -128,6 +128,9 @@
       prepare(deck, index); if (deck.audio.error) deck.audio.load(); gain(deck, 0);
       const resume = context?.resume();
       const playback = deck.audio.play();
+      // resume() may remain pending until user activation. Keep a retryable
+      // state even if the media element itself is allowed to play silently.
+      if (context && context.state !== 'running') status = 'blocked';
       publish();
       if (resumeAt) {
         const position = resumeAt; resumeAt = 0;
@@ -137,7 +140,12 @@
       Promise.all([resume, playback]).then(() => {
         if (operation !== epoch || !wanted) { if (!wanted) deck.audio.pause(); return; }
         status = 'playing'; gain(deck, 1, 1.4); metadata(); publish(); syncBeat();
-      }).catch(() => { if (operation === epoch) fail(); });
+      }).catch((error) => {
+        if (operation !== epoch) return;
+        if (error?.name === 'NotAllowedError') {
+          status = 'blocked'; metadata(); publish(); syncBeat();
+        } else fail();
+      });
     }
     function pause() {
       rememberMuted(true);
@@ -166,7 +174,10 @@
     document.addEventListener('visibilitychange', syncBeat);
     reduced.addEventListener('change', syncBeat);
     window.addEventListener('pagehide', save);
-    return { get activated() { return activated; }, enter() { if (!muted && !wanted) start(); }, toggle() { if (wanted && status !== 'interrupted') pause(); else start(); }, pause, snapshot,
+    return { get activated() { return activated; },
+      enter() { if (!muted && (!wanted || status === 'blocked')) start(); },
+      resumeOnInteraction() { if (!muted && wanted && status === 'blocked') start(); },
+      toggle() { if (wanted && status !== 'interrupted' && status !== 'blocked') pause(); else start(); }, pause, snapshot,
       subscribe(listener) { listeners.add(listener); listener(snapshot()); return () => listeners.delete(listener); } };
   }
 
@@ -191,8 +202,20 @@
     button.setAttribute('aria-busy', String(state.status === 'loading'));
     const action = state.status === 'loading' ? '取消加载' : state.playing ? '暂停' : state.status === 'error' ? '重试播放' : '播放';
     button.setAttribute('aria-label', action + '月光奏鸣曲，' + state.title);
-    control.querySelector('[data-music-title]').textContent = state.status === 'error' ? '暂时无法播放，点击重试' : state.title;
+    control.querySelector('[data-music-title]').textContent = state.status === 'error' ? '暂时无法播放，点击重试'
+      : state.status === 'blocked' ? '点击页面后自动播放 · ' + state.title : state.title;
   });
+  // Each document forwards its own gestures to the shared player; iframe
+  // events do not bubble into the parent document. The music button owns its
+  // toggle, so the same gesture must never trigger it twice.
+  const resumeOnInteraction = (event) => {
+    if (!event.isTrusted || event.target.closest?.('.lcz-music-toggle')) return;
+    if (event.type === 'keydown' && (event.repeat || event.ctrlKey || event.metaKey || event.altKey)) return;
+    player.resumeOnInteraction();
+  };
+  document.addEventListener('click', resumeOnInteraction);
+  document.addEventListener('keydown', resumeOnInteraction);
+  if (!parentPlayer) player.enter();
   window.addEventListener('pagehide', (event) => {
     // Cached pages keep their controls subscribed when browser Back restores them.
     if (!event.persisted) unsubscribe();

@@ -1,4 +1,4 @@
-"""Real-browser regression for optional music and continuous same-site navigation.
+"""Real-browser regression for automatic music and continuous same-site navigation.
 Run: python scripts/test-music.py (Python Playwright + installed Chrome).
 LCZ_BROWSER=msedge chooses Edge; LCZ_MUSIC_CASE filters case names.
 """
@@ -52,13 +52,99 @@ PAGES = ['index.html', 'Craft of Survival/wiki.html', 'Day R Survival/wiki_dayR.
          'Westland Survival/基地.html', 'DawnofZombiewiki/index.html', 'LDOE_Wiki/index.html', 'grimsoul_Wiki/index.html']
 
 def load(page, path='index.html'):
-    page.goto(BASE + quote(path, safe='/?=#%&'), wait_until='networkidle')
+    # Playing media can keep its response open; use document readiness and
+    # explicit player assertions instead of waiting for all network activity.
+    page.goto(BASE + quote(path, safe='/?=#%&'), wait_until='load')
     expect(page.locator('.lcz-music-toggle')).to_be_visible()
 
 def start(page):
-    page.locator('.lcz-music-toggle').click()
+    page.wait_for_function("() => window.LCZMusic.snapshot().status!=='loading'")
+    if not page.evaluate('LCZMusic.snapshot().playing'):
+        page.locator('.lcz-music-toggle').click()
     page.wait_for_function("() => window.LCZMusic.snapshot().status==='playing'")
     page.wait_for_function("() => window.LCZMusic.snapshot().time>.1")
+
+def expect_blocked(page):
+    expect(page.locator('.lcz-music-control')).to_have_attribute('data-state','blocked')
+    expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','false')
+    expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-busy','false')
+    assert page.evaluate('LCZMusic.snapshot().activated&&!LCZMusic.snapshot().playing')
+
+def autoplay(page, context):
+    # This case uses an allowed policy so no input can accidentally unlock audio.
+    context.add_init_script("""(()=>{
+      const play=HTMLMediaElement.prototype.play;
+      window.initialMusicActivation=null;
+      HTMLMediaElement.prototype.play=function(...args){
+        if(window.initialMusicActivation===null)window.initialMusicActivation=navigator.userActivation.hasBeenActive;
+        return play.apply(this,args);
+      };
+    })()""")
+    for address in [BASE+'index.html',BASE+'LDOE_Wiki/index.html',(ROOT/'index.html').as_uri()]:
+        page.goto(address,wait_until='load')
+        page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+        expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
+        assert page.evaluate('[...document.querySelectorAll("audio")].filter(a=>!a.paused).length')==1
+        # DevTools evaluations may themselves mark activation; record the first
+        # play() call during page startup before inspecting the page.
+        assert page.evaluate('initialMusicActivation') is False, 'Automatic playback required input'
+
+def autoplay_click(page, context):
+    load(page);expect_blocked(page)
+    page.evaluate('document.body.click()')
+    expect_blocked(page)
+    page.locator('#search-open').click()
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
+
+def autoplay_keyboard(page, context):
+    load(page);expect_blocked(page)
+    page.keyboard.press('x')
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
+
+def autoplay_button(page, context):
+    load(page);expect_blocked(page)
+    button=page.locator('.lcz-music-toggle')
+    button.click()
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    expect(button).to_have_attribute('aria-pressed','true')
+    button.click()
+    expect(page.locator('.lcz-music-control')).to_have_attribute('data-state','off')
+    page.locator('#search-open').click()
+    assert page.evaluate('LCZMusic.snapshot().status')=='off', 'A normal click reversed manual pause'
+    assert page.evaluate("sessionStorage.getItem('lcz:moonlight-muted')")=='true'
+    page.reload(wait_until='networkidle')
+    assert page.locator('audio').count()==0
+    expect(button).to_have_attribute('aria-pressed','false')
+    button.focus();page.keyboard.press('Enter')
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    expect(button).to_have_attribute('aria-pressed','true')
+
+def autoplay_pending_context(page, context):
+    # The media element is allowed, but Web Audio independently needs activation.
+    # Keep real media decoding and node graph; model only its suspended policy.
+    context.add_init_script("""(()=>{
+      const NativeContext=window.AudioContext;
+      window.pendingResumeCalls=0;
+      window.AudioContext=class extends NativeContext {
+        get state(){return navigator.userActivation.hasBeenActive?super.state:'suspended';}
+        resume(){
+          if(!navigator.userActivation.hasBeenActive){
+            window.pendingResumeCalls++;
+            return new Promise(()=>{});
+          }
+          return super.resume();
+        }
+      };
+    })()""")
+    load(page)
+    page.wait_for_function("()=>document.querySelector('audio')?.currentTime>.1")
+    assert page.evaluate('pendingResumeCalls')==1
+    expect_blocked(page)
+    page.locator('#search-open').click()
+    page.wait_for_function("()=>LCZMusic.snapshot().playing")
+    expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
 
 def frame_ready(page, path):
     # During a fade both documents may be mounted. Wait for the route to commit,
@@ -73,6 +159,7 @@ def frame_ready(page, path):
     return page.locator('.lcz-content-frame').content_frame
 
 def lazy(page, context):
+    context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
     media=[]
     page.on('request',lambda request: media.append(request.url) if '.mp3' in request.url else None)
     for path in PAGES:
@@ -85,7 +172,6 @@ def lazy(page, context):
     page.evaluate("location.hash='weapons'");page.wait_for_timeout(250)
     assert page.locator('.lcz-content-frame').count()==0
     page.go_back();assert page.locator('.lcz-content-frame').count()==0
-    context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
     load(page)
     page.locator('.world[data-game="craft"] a').click()
     page.wait_for_url('**/Craft%20of%20Survival/wiki.html')
@@ -93,7 +179,8 @@ def lazy(page, context):
 
 def entry(page, context):
     load(page)
-    assert page.locator('audio').count()==0
+    page.wait_for_function("()=>['playing','blocked'].includes(LCZMusic.snapshot().status)")
+    assert page.locator('audio').count()==2
     page.locator('.world[data-game="craft"] a').click()
     frame=frame_ready(page,'Craft of Survival/wiki.html')
     page.wait_for_function("()=>LCZMusic.snapshot().playing")
@@ -190,18 +277,27 @@ def direct(page, context):
     current=page.url
     page.reload(wait_until='networkidle');frame=frame_ready(page,'index.html')
     assert page.url==current
-    assert page.locator('audio').count()==0
-    expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','false')
+    page.wait_for_function("()=>['playing','blocked'].includes(LCZMusic.snapshot().status)")
+    assert page.locator('audio').count()==2
+    assert frame.locator('audio').count()==0
+    if not page.evaluate('LCZMusic.snapshot().playing'):
+        frame.locator('.lcz-music-toggle').click()
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    expect(frame.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
 
 def recovery(page, context):
+    context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
+    page.route('**/moonlight-1.mp3',lambda route:route.abort())
     load(page)
     assert page.evaluate("LCZSite.navigate('https://example.com/index.html')") is False
     assert page.evaluate("LCZSite.navigate('assets/games.js')") is False
     assert page.locator('.lcz-content-frame').count()==0
-    page.route('**/moonlight-1.mp3',lambda route:route.abort())
     page.locator('.lcz-music-toggle').click()
     page.wait_for_function("()=>LCZMusic.snapshot().status==='error'")
     assert page.locator('.lcz-music-toggle').get_attribute('aria-pressed')=='false'
+    page.locator('#search-open').click()
+    assert page.evaluate('LCZMusic.snapshot().status')=='error', 'An unrelated click retried a real media error'
+    page.keyboard.press('Escape')
     page.unroute('**/moonlight-1.mp3')
     start(page)
     for _ in range(3):
@@ -390,14 +486,22 @@ def reduced_route_focus(page, context):
 
 try:
     with sync_playwright() as p:
-        browser=p.chromium.launch(channel=os.environ.get('LCZ_BROWSER','chrome'),headless=True)
-        for name,fn,mobile in [('inactive stays lazy and uses native links',lazy,False),('entering a game starts music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and remain opt-in',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry starts music and respects mute',entry,True),('smooth route keeps home visible during slow loading',smooth_slow_navigation,False),('latest route wins rapid switching without stale frames or history',latest_navigation_wins,False),('failed route retains old page and retry recovers',route_failure_retry,False),('reduced motion routes restore focus without animation',reduced_route_focus,False)]:
+        launch_options={'channel':os.environ.get('LCZ_BROWSER','chrome'),'headless':True}
+        browser=p.chromium.launch(**launch_options,args=['--autoplay-policy=document-user-activation-required'],
+                                  ignore_default_args=['--autoplay-policy=no-user-gesture-required'])
+        allowed_browser=None
+        for name,fn,mobile in [('autoplay begins without interaction on home, wiki and local file',autoplay,False),('autoplay blocked recovers on a trusted click',autoplay_click,False),('autoplay blocked recovers on keyboard input',autoplay_keyboard,False),('autoplay button toggles once and manual mute survives reload',autoplay_button,False),('autoplay waits for suspended Web Audio despite active media',autoplay_pending_context,False),('manual mute stays lazy and uses native links',lazy,False),('entering a game keeps music, manual mute persists',entry,False),('search entry closes modal and keeps wiki interactive',search_entry,False),('audio persists across wiki history and home',continuity,False),('three movements crossfade in order and respect manual pause',movements,False),('direct wiki playback and route reload',direct,False),('network recovery, rapid toggles and route boundaries',recovery,False),('320px phone controls and continuous playback',phone,True),('touch entry keeps music and respects mute',entry,True),('smooth route keeps home visible during slow loading',smooth_slow_navigation,False),('latest route wins rapid switching without stale frames or history',latest_navigation_wins,False),('failed route retains old page and retry recovers',route_failure_retry,False),('reduced motion routes restore focus without animation',reduced_route_focus,False)]:
             if os.environ.get('LCZ_MUSIC_CASE') and not re.search(os.environ['LCZ_MUSIC_CASE'],name):continue
-            context=browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
+            case_browser=browser
+            if fn in (autoplay,autoplay_pending_context):
+                if allowed_browser is None:
+                    allowed_browser=p.chromium.launch(**launch_options,args=['--autoplay-policy=no-user-gesture-required'])
+                case_browser=allowed_browser
+            context=case_browser.new_context(viewport={'width':320 if mobile else 1440,'height':740 if mobile else 960},is_mobile=mobile,has_touch=mobile,reduced_motion='reduce')
             page=context.new_page()
             page.on('pageerror',lambda e:report['errors'].append(str(e)))
             page.on('response',lambda r:report['missing'].append(r.url) if r.status>=400 else None)
-            page.on('request',lambda r:report['external'].append(r.url) if not r.url.startswith(BASE) else None)
+            page.on('request',lambda r:report['external'].append(r.url) if not r.url.startswith((BASE,ROOT.as_uri()+'/')) else None)
             try:
                 fn(page,context);report['passed'].append(name);print('PASS '+name,flush=True)
             except Exception:
@@ -406,6 +510,7 @@ try:
                 ARTIFACTS.screenshot(page,'failure-'+name.replace(' ','-')+'.jpg')
             finally:context.close()
         browser.close()
+        if allowed_browser:allowed_browser.close()
 finally:
     server.shutdown()
     server.server_close()
