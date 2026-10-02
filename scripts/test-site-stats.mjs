@@ -69,7 +69,8 @@ test('one POST sends only the fixed project namespace; separate PV/IP fields ign
   assert.equal(env.host.dataset.statsState, 'ready');
   assert.match(env.host.innerHTML, /浏览量 PV/);
   assert.match(env.host.innerHTML, /IP访客/);
-  assert.match(env.nodes.get('[data-stat-note]').textContent, /不等于真实人数.*周期/);
+  assert.equal(env.nodes.get('[data-stat-note]').textContent, '');
+  assert.equal(env.nodes.get('[data-stat-note]').hidden, true);
   assert.equal(env.nodes.get('summary').title, undefined);
   assert.match(env.nodes.get('summary')['data-tooltip'], /PV.*IP/);
   assert.deepEqual(env.durations, [7000]);

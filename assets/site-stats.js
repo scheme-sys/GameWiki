@@ -31,7 +31,6 @@
   const formatter = new Intl.NumberFormat("zh-CN");
   const compactFormatter = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 1 });
   const values = { pv: null, ip: null };
-  const scopeNote = "IP访客按服务端IP去重，不等于真实人数；去重周期依服务口径。";
 
   for (const host of hosts) {
     host.classList.add("site-stats");
@@ -49,7 +48,7 @@
     </details>`;
   }
 
-  function render(status, note) {
+  function render(status, note = "") {
     for (const host of hosts) {
       host.dataset.statsState = status;
       const pv = values.pv === null ? "—" : formatter.format(values.pv);
@@ -58,7 +57,9 @@
       host.querySelector("[data-stat-ip-short]").textContent = values.ip === null ? "—" : compactFormatter.format(values.ip);
       host.querySelector("[data-stat-pv]").textContent = pv;
       host.querySelector("[data-stat-ip]").textContent = ip;
-      host.querySelector("[data-stat-note]").textContent = note;
+      const noteElement = host.querySelector("[data-stat-note]");
+      noteElement.textContent = note;
+      noteElement.hidden = !note;
       const summary = host.querySelector("summary");
       summary.setAttribute("data-tooltip", "点击查看浏览量 PV 与按服务口径去重的 IP访客");
       summary.setAttribute("aria-label", `访问统计，浏览量 PV ${pv} 次，IP访客 ${ip}。${note}`);
@@ -136,7 +137,7 @@
     render("loading", "正在加载访问统计");
     try {
       Object.assign(values, await hitProject());
-      render("ready", scopeNote);
+      render("ready");
     } catch {
       render("unavailable", "访问统计暂不可用，请稍后刷新页面。");
     }
