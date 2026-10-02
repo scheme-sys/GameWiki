@@ -62,7 +62,7 @@
   const pageSize = 24;
   const number = value => typeof value === 'number' ? new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2}).format(value) : String(value ?? '—');
   const validImage = path => typeof path === 'string' && /^assets\/[a-zA-Z0-9_./-]+\.(webp|png|jpg|svg)$/.test(path) && !path.includes('..') ? path : '';
-  const imageMarkup = (entry,cls='',loading='lazy') => validImage(entry.image) ? `<img ${cls ? `class="${cls}"` : ''} src="${esc(entry.image)}" alt="${esc(entry.name)}图鉴" loading="${loading}" decoding="async">` : `<span class="image-placeholder" aria-label="暂无已确认图像">${icon(categories[getCategory(entry)]?.icon || 'box')}<small>图像待补</small></span>`;
+  const imageMarkup = (entry,cls='',loading='lazy') => validImage(entry.image) ? `<img ${cls ? `class="${cls}"` : ''} src="${loading==='lazy'?window.LCZLazyImages.placeholder:esc(entry.image)}" ${loading==='lazy'?`data-lazy-src="${esc(entry.image)}"`:""} alt="${esc(entry.name)}图鉴" loading="${loading}" decoding="async">` : `<span class="image-placeholder" aria-label="暂无已确认图像">${icon(categories[getCategory(entry)]?.icon || 'box')}<small>图像待补</small></span>`;
   const statIcon = label => /伤害|攻击/.test(label) ? 'weapon' : /生命|恢复/.test(label) ? 'heart' : /射速|攻速|速度/.test(label) ? 'bolt' : /防|护甲/.test(label) ? 'shield' : /时间/.test(label) ? 'clock' : 'box';
   const categoryList=category=>loadedCategories.get(category)||(category==='weapons'?boot.home:[]);
   const favoriteRows=()=>[...favorites].map(id=>entries.get(id)).filter(Boolean).sort((a,b)=>a._order-b._order);
@@ -129,6 +129,7 @@
     $('#result-count').innerHTML = `${state.query ? `“${esc(state.query)}” · ` : ''}共 <strong>${number(total)}</strong> 个条目${result.length ? ` <span> / 显示 ${start+1}–${Math.min(start+pageSize,total)}</span>` : ''}`;
     $('#catalog-grid').className = `catalog-grid ${state.layout === 'list' ? 'list-layout' : ''}`;
     $('#catalog-grid').innerHTML = result.length ? visible.map(card).join('') : `<div class="empty-state">${icon(state.view === 'favorites' ? 'bookmark' : 'search')}<h3>${state.view === 'favorites' && !state.query ? '把值得记住的装备，收进你的手册' : '没有找到匹配的条目'}</h3><p>${state.view === 'favorites' && !state.query ? '点击图鉴卡片右上角的书签，即可在这里快速找到它。' : '试试更短的名称、英文名称，或清除当前筛选。'}</p><button class="primary-button" data-action="reset-search">浏览武器图鉴 ${icon('arrow')}</button></div>`;
+    window.LCZLazyImages.observe($('#catalog-grid'));
     const pageNumbers = [...new Set([1,state.page-1,state.page,state.page+1,pages])].filter(n => n>0 && n<=pages).sort((a,b)=>a-b);
     $('#pagination').innerHTML = pages > 1 ? `<button data-page="${state.page-1}" ${state.page===1?'disabled':''} aria-label="上一页">←</button>${pageNumbers.map((n,i) => `${i && n > pageNumbers[i-1]+1 ? '<span class="page-caption">…</span>' : ''}<button data-page="${n}" class="${n===state.page?'active':''}" ${n===state.page?'aria-current="page"':''} aria-label="第 ${n} 页">${n}</button>`).join('')}<button data-page="${state.page+1}" ${state.page===pages?'disabled':''} aria-label="下一页">→</button><span class="page-caption">每页 ${pageSize} 条</span>` : '';
   }

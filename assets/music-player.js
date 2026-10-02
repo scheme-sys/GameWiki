@@ -47,7 +47,7 @@
     function publish() { const value = snapshot(); for (const listener of listeners) listener(value); }
     function save() {
       if (!decks) return;
-      try { sessionStorage.setItem('lcz:moonlight-position', JSON.stringify({ index, time: decks[current].audio.currentTime })); } catch { /* Optional storage. */ }
+      try { sessionStorage.setItem('lcz:moonlight-position', JSON.stringify({ index, time: decks[current].audio.currentTime || resumeAt })); } catch { /* Optional storage. */ }
     }
     function gain(deck, value, seconds = 0) {
       if (deck.gain) {
@@ -82,9 +82,9 @@
       if (wanted && status === 'playing' && !document.hidden && !reduced.matches) raf = requestAnimationFrame(beat);
       else level(0);
     }
-    function prepare(deck, track) {
+    function prepare(deck, track, preload = 'none') {
       if (deck.track === track) return;
-      deck.audio.pause(); deck.audio.preload = 'auto'; deck.track = track;
+      deck.audio.pause(); deck.audio.preload = preload; deck.track = track;
       deck.audio.src = new URL('assets/' + tracks[track].file, root).href;
       deck.audio.load(); gain(deck, 0);
     }
@@ -110,7 +110,7 @@
           const left = audio.duration - audio.currentTime;
           if (!Number.isFinite(left) || crossfading) return;
           const next = decks[1 - current];
-          if (left < 18) prepare(next, nextTrackIndex());
+          if (left < 18) prepare(next, nextTrackIndex(), 'auto');
           if (left <= FADE && left > .05 && next.audio.readyState >= 3) advance(true);
         });
         audio.addEventListener('ended', () => { if (decks[current] === deck && wanted && !crossfading) advance(false); });
@@ -144,6 +144,7 @@
       init(); activated = true; wanted = true; status = 'loading'; const operation = ++epoch;
       clearTimeout(fadeTimer); crossfading = false;
       const deck = decks[current]; decks.forEach(other => { if (other !== deck) other.audio.pause(); });
+      const startAt = resumeAt || deck.audio.currentTime;
       prepare(deck, index); if (deck.audio.error) deck.audio.load(); gain(deck, 0);
       const resume = context?.resume();
       const playback = deck.audio.play();
@@ -162,6 +163,11 @@
       }).catch((error) => {
         if (operation !== epoch) return;
         if (error?.name === 'NotAllowedError') {
+          // Some browsers buffer a Web Audio source despite preload="none".
+          // Release a refused source and restore it on the next trusted gesture.
+          resumeAt = deck.audio.currentTime || startAt;
+          deck.track = -1;
+          deck.audio.removeAttribute('src'); deck.audio.load();
           status = 'blocked'; metadata(); publish(); syncBeat();
         } else fail();
       });

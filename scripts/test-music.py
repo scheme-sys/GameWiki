@@ -90,11 +90,21 @@ def autoplay(page, context):
         assert page.evaluate('initialMusicActivation') is False, 'Automatic playback required input'
 
 def autoplay_click(page, context):
-    load(page);expect_blocked(page)
+    context.add_init_script("if(!sessionStorage.getItem('lcz:moonlight-position'))sessionStorage.setItem('lcz:moonlight-position',JSON.stringify({index:3,time:42}))")
+    media=[]
+    page.on('request',lambda request:media.append(request.url) if '.mp3' in request.url else None)
+    load(page)
+    expect(page.locator('.lcz-music-control')).to_have_attribute('data-state','blocked')
+    page.wait_for_timeout(350)
+    assert not media, f'Blocked autoplay downloaded unused music: {media}'
+    page.reload(wait_until='load')
+    expect(page.locator('.lcz-music-control')).to_have_attribute('data-state','blocked')
+    assert not media, f'Reloading blocked autoplay downloaded music: {media}'
+    expect_blocked(page)
     page.evaluate('document.body.click()')
     expect_blocked(page)
     page.locator('#search-open').click()
-    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>.1")
+    page.wait_for_function("()=>LCZMusic.snapshot().playing&&LCZMusic.snapshot().time>=42")
     expect(page.locator('.lcz-music-toggle')).to_have_attribute('aria-pressed','true')
 
 def autoplay_keyboard(page, context):

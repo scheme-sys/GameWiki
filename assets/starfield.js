@@ -111,7 +111,8 @@
     light.crop = { scale,
       left: (width - treeImage.naturalWidth * scale) * position[0] / 100,
       top: (height - treeImage.naturalHeight * scale) * position[1] / 100 };
-    prepareGoldTexture();
+    // Extract the optional glow only when pointer interaction first needs it.
+    // Mapping the visible background must not start a worker or load a mask.
   }
 
   function prepareGoldTexture() {

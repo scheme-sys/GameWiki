@@ -80,7 +80,8 @@
   function imageOrPlaceholder(path, alt, large = false) {
     if (!path) return text("div", "?", "icon-placeholder");
     const image = document.createElement("img");
-    image.src = path;
+    image.src = large ? path : window.LCZLazyImages.placeholder;
+    if (!large) image.dataset.lazySrc = path;
     image.alt = alt;
     image.loading = large ? "eager" : "lazy";
     image.decoding = "async";
@@ -173,12 +174,14 @@
         image.height = 64;
         image.loading = "lazy";
         image.decoding = "async";
-        image.src = currencyIcons[currency.articleId];
+        image.src = window.LCZLazyImages.placeholder;
+        image.dataset.lazySrc = currencyIcons[currency.articleId];
         card.append(image);
       }
       fragment.append(card);
     }
     grid.replaceChildren(fragment);
+    window.LCZLazyImages.observe(grid);
   }
 
   function selectedArticles() {
@@ -314,6 +317,7 @@
       elements.results.replaceChildren(fragment);
       elements.empty.hidden = rows.length !== 0;
       elements.results.hidden = rows.length === 0;
+      window.LCZLazyImages.observe(elements.results);
       elements.summary.textContent = rows.length
         ? `共 ${rows.length.toLocaleString("en-US")} 条；显示第 ${(start + 1).toLocaleString("en-US")}–${Math.min(start + state.pageSize, rows.length).toLocaleString("en-US")} 条，第 ${state.page}/${pageCount} 页。`
         : "0 条匹配结果。";

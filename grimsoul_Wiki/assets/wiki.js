@@ -88,7 +88,7 @@
   }
   function entryImage(entry, lazy = true) {
     const src = safeImage(entry);
-    return src ? `<img src="${escape(src)}" alt="${escape(entry.name)}" ${lazy ? 'loading="lazy"' : 'loading="eager"'} decoding="async" data-fallback="${escape(category(entry).icon)}">` : placeholder(entry);
+    return src ? `<img src="${lazy?window.LCZLazyImages.placeholder:escape(src)}" ${lazy?`data-lazy-src="${escape(src)}"`:""} alt="${escape(entry.name)}" ${lazy ? 'loading="lazy"' : 'loading="eager"'} decoding="async" data-fallback="${escape(category(entry).icon)}">` : placeholder(entry);
   }
   function rarityClass(value) {
     const v = normalize(value);
@@ -148,6 +148,7 @@
     renderFeatured();
     const enemies = pickFeatured('monsters', 3);
     $('#bestiary-grid').innerHTML = enemies.length ? enemies.map(card).join('') : '<p class="detail-no-data">怪物资料尚在整理。</p>';
+    window.LCZLazyImages.observe($('#bestiary-grid'));
   }
   function pickFeatured(key, limit) {
     return (boot.featured[key] || []).map(id => byId.get(id)).filter(Boolean).slice(0, limit);
@@ -155,6 +156,7 @@
   function renderFeatured() {
     const selected = pickFeatured(featureCategory, 4);
     $('#featured-grid').innerHTML = selected.length ? selected.map(card).join('') : '<p class="detail-no-data">本篇资料尚在整理。</p>';
+    window.LCZLazyImages.observe($('#featured-grid'));
     $$('.feature-tab').forEach(tab => {
       const active = tab.dataset.feature === featureCategory;
       tab.classList.toggle('active', active);
@@ -203,6 +205,7 @@
     const offset = (state.page - 1) * PAGE_SIZE;
     const pageEntries = filtered.slice(offset, offset + PAGE_SIZE);
     $('#catalog-grid').innerHTML = pageEntries.map(card).join('');
+    window.LCZLazyImages.observe($('#catalog-grid'));
     $('#result-summary').innerHTML = `找到 <strong>${number(filtered.length)}</strong> 篇图鉴${filtered.length ? `<span> · 第 ${number(offset + 1)}–${number(offset + pageEntries.length)} 篇</span>` : ''}`;
     $('#empty-state').hidden = filtered.length > 0;
     $('#empty-description').textContent = isSaved && !favorites.size ? '点击图鉴上的书签，将常用资料加入你的收藏。收藏保存在当前浏览器。' : entries.length ? '试试其他关键词，或减少筛选条件。' : '图鉴数据尚未加载，请确认已保留完整的页面文件夹。';
@@ -462,7 +465,7 @@
     $('#hero-version').textContent = version;
     $('#footer-update').textContent = `资料版本 ${version}${meta.updated ? ` · ${String(meta.updated)}` : ''}`;
     $('#favorite-count').textContent = number(favorites.size);
-    renderHome();
+    if (parseHash().path.startsWith('entry/')) renderHome();
     route();
 
     document.addEventListener('click', event => {

@@ -9,7 +9,6 @@
   const entityCode = entry => window.LCZEntityCode.render(entry.entityCode);
   const D = window.DOZ_DATA;
   const C = window.DOZ_CATALOG;
-  const A = window.DOZ_ASSETS || {};
   const M = window.DOZ_MECHANICS || {};
   const S = window.DOZ_SITE_META || {};
   const main = $('#main');
@@ -101,7 +100,7 @@
     const value = entry.image;
     return localPath(typeof value === 'string' ? value : value?.path || value?.image || '', /^assets\/images\//);
   }
-  const art = (e, lazy=true) => imagePath(e) ? `<img src="${esc(imagePath(e))}" alt="${esc(e.name)}${e.referenceImage?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceImage?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>暂无独立图鉴图片</span></span>`;
+  const art = (e, lazy=true) => imagePath(e) ? `<img src="${lazy?window.LCZLazyImages.placeholder:esc(imagePath(e))}" ${lazy?`data-lazy-src="${esc(imagePath(e))}"`:''} alt="${esc(e.name)}${e.referenceImage?'的同模型参考图':'的游戏图鉴'}" ${lazy?'loading="lazy"':''} decoding="async">${e.referenceImage?'<span class="art-reference">同模型参考图</span>':''}` : `<span class="empty-art">${icon(e.category)}<span>暂无独立图鉴图片</span></span>`;
   const getName = entry => playerName(entry || {});
   const rarityName = e => e.rarityLabel || (typeof e.rarity === 'string' ? e.rarity : '') || '未标注品质';
   const rarityClass = e => /传说|传奇|独特|橙|金/.test(rarityName(e))?'legendary':/史诗|紫/.test(rarityName(e))?'epic':/稀有|蓝/.test(rarityName(e))?'rare':'common';
@@ -135,6 +134,7 @@
       <div class="explore-grid">${tiles.map(t=>{const e=sample(t.key)[0];return `<a class="explore-card" href="#${t.key}"><div class="eyebrow">${t.en}</div><h3>${labels[t.key]}</h3><p>${t.desc}</p><span class="arrow">↗</span>${e?`<img src="${esc(imagePath(e))}" alt="" loading="lazy">`:''}</a>`;}).join('')}</div>
       <div class="home-bottom"><section>${sectionHead('装备档案选读','FIELD EQUIPMENT','weapon')}<div class="featured-grid">${featured.map(e=>card(e,true)).join('')}</div></section><section>${sectionHead('机制研究','SURVIVAL INTELLIGENCE','gacha','深入阅读')}<article class="guide-teaser"><span class="corner-art" aria-hidden="true">✧</span><div class="eyebrow">概率 · 保底 · 资源规划</div><h3>下一次召唤之前，<br>先读懂规则。</h3><p>普通、阿尔法与新手召唤分别说明。结合原版帮助文本，区分基础概率、目标保底和待确认条件。</p><a href="#gacha" class="text-link">打开抽取机制档案 →</a></article></section></div>
       <div class="version-note"><strong>档案版本说明</strong><span>本百科依据 2.278 游戏资料整理。基础属性会随等级、技能与活动规则变化；没有独立图片的条目会保留文字说明。<a href="#about" class="text-link"> 查看收录情况 ↗</a></span></div>`;
+    window.LCZLazyImages.observe(main);
   }
   function filteredEntries() {
     const q = state.query.trim().toLocaleLowerCase();
@@ -170,6 +170,7 @@
   function renderResults() {
     const result = filteredEntries();const total=Math.ceil(result.length/PAGE);state.page=Math.max(1,Math.min(state.page,total||1));
     $('#catalog-results').innerHTML=`<div class="results-line"><span>找到 <strong>${fmt(result.length)}</strong> 条档案 <span> / 点击图鉴查看详情</span></span><button class="chip" id="export-csv">导出当前结果 ↓</button></div><div class="catalog-grid">${result.slice((state.page-1)*PAGE,state.page*PAGE).map(e=>card(e)).join('') || `<div class="empty-state"><h2>${state.route==='favorites'?'还没有收藏的档案':'没有匹配的档案'}</h2><p>${state.route==='favorites'?'在图鉴中点击 ☆，即可保存到这里。':'试试更短的关键词，或重置品质与图片筛选。'}</p></div>`}</div>${result.length?pagination(state.page,total,'catalog'):''}`;
+    window.LCZLazyImages.observe($('#catalog-results'));
     $('#export-csv').addEventListener('click',()=>downloadCsv(result));
   }
   function downloadCsv(rows) {
