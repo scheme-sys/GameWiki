@@ -57,7 +57,7 @@
   mask-image: radial-gradient(circle closest-side, #000 0%, #000d 22%, #0006 51%, #0001 74%, transparent 100%);
 }
 
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   .celestial-tree-light { display: none; }
 }
 

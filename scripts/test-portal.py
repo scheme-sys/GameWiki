@@ -271,6 +271,154 @@ def quiet_sky_motion(page, context):
     screenshot(page,'animated-sky-'+str(page.viewport_size['width']))
 
 
+def tree_light(page, context, local=False, desktop=False):
+    requests = []
+    page.on('request', lambda request: requests.append(request.url))
+    context.add_init_script("""(() => {
+      window.goldDraws = [];
+      const draw = CanvasRenderingContext2D.prototype.drawImage;
+      CanvasRenderingContext2D.prototype.drawImage = function(image, ...args) {
+        if (this.canvas.classList.contains('celestial-tree-light')) {
+          window.goldDraws.push({source:image.src || image.constructor.name, mode:this.globalCompositeOperation});
+        }
+        return draw.call(this, image, ...args);
+      };
+      window.touchCanceled = 0;
+      addEventListener('pointercancel', e => { if (e.pointerType === 'touch') window.touchCanceled++; });
+    })();""")
+    page.goto((ROOT / 'index.html').as_uri() if local else BASE, wait_until='load')
+    page.wait_for_function("() => document.querySelector('.celestial-tree img').naturalWidth > 0")
+    assert not any('gold-mask' in url or 'golden-tree-texture.js' in url for url in requests), requests
+    assert page.locator('.celestial-tree-light').count() == 0, 'Gold extraction is not lazy'
+    # A real empty point avoids accidentally opening a bubble's long-press card.
+    start = page.evaluate("""() => {
+      for (const y of [320, 360, 420, 260, 550]) for (const x of [innerWidth/2, 90, 300]) {
+        if (!document.elementFromPoint(x,y)?.closest('a,button,summary,input,.world')) return [x,y];
+      }
+      throw new Error('No free background touch point');
+    }""")
+    cdp = context.new_cdp_session(page)
+    def send(kind, points=()):
+        cdp.send('Input.dispatchTouchEvent', {'type':kind, 'touchPoints':[dict(id=i, x=x, y=y) for i,x,y in points]})
+    def follow(point):
+        page.wait_for_function("""([x,y]) => {
+          const e=document.querySelector('.celestial-tree-light'); if(!e) return false;
+          const matrix=new DOMMatrix(getComputedStyle(e).transform);
+          return +e.style.opacity > .45 && Math.abs(matrix.m41+parseFloat(e.style.width)/2-x)<3 && Math.abs(matrix.m42+parseFloat(e.style.height)/2-y)<3;
+        }""", arg=point)
+    def faded():
+        page.wait_for_function("() => !document.querySelector('.celestial-tree-light') || +document.querySelector('.celestial-tree-light').style.opacity === 0")
+    if desktop:
+        page.mouse.move(*start)
+    else:
+        send('touchStart', [(1,*start)])
+    follow(start)
+    light = page.locator('.celestial-tree-light')
+    assert light.evaluate("e=>getComputedStyle(e).pointerEvents") == 'none'
+    assert light.evaluate("e=>getComputedStyle(e).mixBlendMode") == 'screen'
+    if local:
+        assert page.evaluate("goldDraws.some(d=>d.source.includes('golden-tree-mobile-gold-mask.png') && d.mode==='destination-in')"), 'Local touch skipped the matching gold-only mask'
+    else:
+        pixels = light.evaluate("""e=>{
+          const data=e.getContext('2d').getImageData(0,0,e.width,e.height).data;
+          let empty=0,gold=0,painted=0;
+          for(let i=0;i<data.length;i+=4){
+            if(data[i+3]===0)empty++;
+            if(data[i+3]>20){painted++;if(data[i]>data[i+2]&&data[i+1]>data[i+2])gold++;}
+          }
+          return {empty,gold,painted,total:data.length/4};
+        }""")
+        assert pixels['empty'] > pixels['total']*.25 and pixels['gold'] > 10 and pixels['gold'] >= pixels['painted']*.99, pixels
+        assert page.evaluate("goldDraws.some(d=>d.source==='ImageBitmap')"), 'HTTP touch did not reuse extracted gold texture'
+    moved = [start[0]+35, start[1]+48]
+    if desktop:
+        page.mouse.move(*moved)
+        follow(moved)
+        page.mouse.move(-1, -1)
+        faded()
+        page.mouse.move(*start)
+        follow(start)
+    else:
+        send('touchMove', [(1,*moved)])
+        follow(moved)
+        # Adding and lifting another finger cannot steal the glow.
+        other = [30, 700]
+        send('touchStart', [(1,*moved), (2,*other)])
+        follow(moved)
+        send('touchEnd', [(1,*moved)])
+        follow(moved)
+        send('touchEnd')
+        faded()
+        send('touchStart', [(1,*start)])
+        follow(start)
+        send('touchCancel')
+        faded()
+        send('touchStart', [(1,*start)])
+        follow(start)
+    # Backgrounding must not retain a held finger or restart it on return.
+    page.evaluate("() => {Object.defineProperty(document,'hidden',{configurable:true,get:()=>true});document.dispatchEvent(new Event('visibilitychange'));}")
+    faded()
+    page.evaluate("() => {delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));}")
+    page.wait_for_timeout(100)
+    assert float(light.get_attribute('style').split('opacity:')[1].split(';')[0]) == 0
+    if not desktop:
+        send('touchEnd')
+    page.emulate_media(reduced_motion='reduce')
+    if desktop:
+        page.mouse.move(*moved)
+    else:
+        send('touchStart', [(1,*start)])
+    faded()
+    assert light.evaluate("e=>getComputedStyle(e).display") == 'none'
+    if not desktop:
+        send('touchEnd')
+    cdp.detach()
+
+
+def tree_touch_scroll(page, context):
+    page.goto(BASE, wait_until='load')
+    page.wait_for_function("() => document.querySelector('.celestial-tree img').naturalWidth > 0")
+    # A temporary in-memory scroll surface exercises browser-owned panning;
+    # the real portal is intentionally one screen tall. No fixture is saved.
+    page.evaluate("""() => {
+      const e=document.createElement('div');e.id='touch-scroll-probe';
+      e.style='position:fixed;inset:180px 0 0;overflow:auto;z-index:1000';
+      e.innerHTML='<div style="height:2400px"></div>';document.body.append(e);
+      window.pointerCanceled=false;
+      addEventListener('pointercancel',e=>{if(e.pointerType==='touch')window.pointerCanceled=true;});
+    }""")
+    cdp=context.new_cdp_session(page)
+    touch(cdp,'touchStart',[(190,650)])
+    page.wait_for_function("() => +document.querySelector('.celestial-tree-light')?.style.opacity>.45")
+    for y in range(625,324,-25):
+        touch(cdp,'touchMove',[(190,y)])
+        page.wait_for_timeout(24)
+    page.wait_for_function("() => document.querySelector('#touch-scroll-probe').scrollTop>100 && window.pointerCanceled")
+    page.wait_for_function("""() => {
+      const e=document.querySelector('.celestial-tree-light'),m=new DOMMatrix(getComputedStyle(e).transform);
+      return +e.style.opacity>.45 && Math.abs(m.m42+parseFloat(e.style.height)/2-325)<3;
+    }""")
+    touch(cdp,'touchEnd')
+    page.wait_for_function("() => +document.querySelector('.celestial-tree-light').style.opacity===0")
+    page.locator('#touch-scroll-probe').evaluate('e=>e.remove()')
+    # Dragging still uses pointer capture and pauses the starfield, while the
+    # same gold crop follows the finger without changing bubble positions.
+    start=icon_center(page)
+    end=(start[0]+35,start[1]+28)
+    touch(cdp,'touchStart',[start])
+    touch(cdp,'touchMove',[end])
+    expect(page.locator('.starfield-canvas')).to_have_attribute('data-state','paused')
+    page.wait_for_function("""([x,y]) => {
+      const e=document.querySelector('.celestial-tree-light'),m=new DOMMatrix(getComputedStyle(e).transform);
+      return +e.style.opacity>.45 && Math.abs(m.m41+parseFloat(e.style.width)/2-x)<3 && Math.abs(m.m42+parseFloat(e.style.height)/2-y)<3;
+    }""",arg=end)
+    touch(cdp,'touchEnd')
+    assert page.url==BASE
+    expect(page.locator('.starfield-canvas')).to_have_attribute('data-state','running')
+    page.wait_for_function("() => +document.querySelector('.celestial-tree-light').style.opacity===0")
+    cdp.detach()
+
+
 def popover_transition_races(page, context):
     load(page)
     info=page.locator('#game-info')
@@ -744,6 +892,10 @@ try:
         run_case("Gentle drift, system reduced motion and metal-framed hover preview", lambda page, _: drift_and_hover(page))
         run_case("Independent starfield moves, pauses and respects reduced motion", quiet_sky_motion)
         run_case("Mobile starfield stays bounded and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
+        run_case("Gold texture follows real touch and keeps lazy extraction", tree_light, width=390, height=844, mobile=True)
+        run_case("Gold texture supports local-file touch masks", lambda page,context:tree_light(page,context,local=True), width=390, height=844, mobile=True)
+        run_case("Gold texture preserves desktop mouse and reduced motion", lambda page,context:tree_light(page,context,desktop=True))
+        run_case("Gold texture follows native scroll and captured bubble drag", tree_touch_scroll, width=390, height=844, mobile=True)
         run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
         run_case("Wiki cover backgrounds load only for hovered games", lazy_popover_covers)
         run_case("Wiki cover backgrounds fit long-press cards at 320px", lambda page,context:lazy_popover_covers(page,context,True), width=320,height=568,mobile=True)

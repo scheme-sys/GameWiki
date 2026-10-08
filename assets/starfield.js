@@ -35,8 +35,9 @@
   const stars = [];
   const links = [];
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
-  const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false, inside: false,
+  const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false, inside: false, touch: false,
     radius: 220, dpr: 1, crop: null, paintedX: NaN, paintedY: NaN };
+  let touchId = null;
   let lightCanvas, lightContext;
   const goldWorkerURL = new URL('golden-tree-texture.js', document.currentScript.src);
   let goldTexture, goldMask, goldWorker, goldSource = '', goldBuild = 0;
@@ -116,7 +117,7 @@
   }
 
   function prepareGoldTexture() {
-    if (!desktopPointer.matches || reducedMotion.matches || !treeImage?.complete || !treeImage.naturalWidth) return;
+    if (reducedMotion.matches || !treeImage?.complete || !treeImage.naturalWidth) return;
     const source = treeImage.currentSrc;
     if (goldSource === source) return;
     goldSource = source;
@@ -426,15 +427,29 @@
     context.globalAlpha = 1;
   }
 
-  function shouldPause() {
+  function scenePaused() {
     return suspended || contextLost || document.hidden || reducedMotion.matches ||
-      document.body.matches('.scene-still, .is-dragging') ||
-      document.documentElement.matches('.scene-still, .is-dragging');
+      document.body.matches('.scene-still') || document.documentElement.matches('.scene-still');
+  }
+
+  function dragging() {
+    return document.body.matches('.is-dragging') || document.documentElement.matches('.is-dragging');
+  }
+
+  function shouldPause() {
+    return scenePaused() || dragging();
+  }
+
+  function lightPaused() {
+    // A dragged bubble still freezes the stars. Only its finger-sized gold
+    // crop follows the touch, using this same loop and the original texture.
+    return scenePaused() || (!light.touch && dragging());
   }
 
   function tick(time) {
     frame = 0;
-    if (shouldPause()) { syncMotion(); return; }
+    const paused = shouldPause();
+    if (paused && (lightPaused() || (!light.active && !light.amount))) { syncMotion(); return; }
     if (!lastFrame) { lastFrame = time; lastStep = time; }
     const sinceDraw = time - lastFrame;
     if (sinceDraw >= settings.interval - .5) {
@@ -442,14 +457,16 @@
       const delta = Math.min((time - lastStep) / 1000, .08);
       lastStep = time;
       lastFrame = time - (sinceDraw >= settings.interval ? sinceDraw % settings.interval : 0);
-      move(delta);
       updatePointerLight(delta);
-      project();
-      if (elapsed >= nextConnections) {
-        refreshConnections();
-        nextConnections = elapsed + .5;
+      if (!paused) {
+        move(delta);
+        project();
+        if (elapsed >= nextConnections) {
+          refreshConnections();
+          nextConnections = elapsed + .5;
+        }
+        draw(delta);
       }
-      draw(delta);
     }
     frame = requestAnimationFrame(tick);
   }
@@ -457,9 +474,10 @@
   function syncMotion() {
     const paused = shouldPause();
     canvas.dataset.state = paused ? 'paused' : 'running';
-    if (paused || !desktopPointer.matches) clearPointerLight();
-    else if (light.inside) light.active = true;
-    if (paused) {
+    const glowPaused = lightPaused();
+    if (glowPaused || (!light.touch && !desktopPointer.matches)) clearPointerLight();
+    else light.active = light.touch ? touchId !== null : light.inside;
+    if (paused && (glowPaused || (!light.active && !light.amount))) {
       cancelAnimationFrame(frame);
       frame = 0;
       lastFrame = lastStep = 0;
@@ -512,14 +530,13 @@
     resizeTimer = setTimeout(resize, 120);
   }, { passive: true });
   window.addEventListener('pointermove', (event) => {
-    if (event.pointerType !== 'mouse') { light.inside = light.active = false; return; }
+    if (event.pointerType !== 'mouse' || touchId !== null) return;
     // Retain the final mouse position while a game preview fades out. When
     // the scene resumes, a stationary mouse must still illuminate that spot.
     if (desktopPointer.matches) {
+      light.touch = false;
       light.inside = true;
-      light.targetX = clamp(event.clientX, 0, width);
-      light.targetY = clamp(event.clientY, 0, height);
-      if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
+      aimLight(event.clientX, event.clientY);
     }
     if (shouldPause()) return;
     if (!settings.compact) {
@@ -529,15 +546,49 @@
     if (!desktopPointer.matches) return;
     light.active = true;
   }, { passive: true });
+  function aimLight(x, y) {
+    light.targetX = clamp(x, 0, width);
+    light.targetY = clamp(y, 0, height);
+    if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
+  }
+  // Passive Touch Events continue after native scrolling cancels Pointer
+  // Events. Never capture/prevent them: scroll, pinch, taps and bubble gestures
+  // keep their existing behavior. Follow the first finger without jumping to
+  // another contact when fingers are added or lifted.
+  window.addEventListener('touchstart', (event) => {
+    if (touchId !== null || event.touches.length !== 1 || scenePaused()) return;
+    const touch = event.touches[0];
+    touchId = touch.identifier;
+    light.touch = true;
+    light.inside = false;
+    aimLight(touch.clientX, touch.clientY);
+    syncMotion();
+  }, { passive: true, capture: true });
+  window.addEventListener('touchmove', (event) => {
+    if (touchId === null) return;
+    const touch = Array.from(event.touches).find(point => point.identifier === touchId);
+    if (touch) aimLight(touch.clientX, touch.clientY);
+  }, { passive: true, capture: true });
+  function endTouch(event) {
+    if (touchId === null || Array.from(event.touches).some(point => point.identifier === touchId)) return;
+    touchId = null;
+    light.active = false;
+    syncMotion();
+  }
+  window.addEventListener('touchend', endTouch, { passive: true, capture: true });
+  window.addEventListener('touchcancel', endTouch, { passive: true, capture: true });
   function leavePointer() {
+    touchId = null;
     pointer.targetX = pointer.targetY = 0;
     light.inside = light.active = false;
   }
   window.addEventListener('pointerout', (event) => {
-    if (!event.relatedTarget) leavePointer();
+    if (event.pointerType === 'mouse' && !event.relatedTarget) leavePointer();
   }, { passive: true });
-  window.addEventListener('pointercancel', leavePointer, { passive: true });
-  window.addEventListener('blur', leavePointer);
+  window.addEventListener('pointercancel', (event) => {
+    if (event.pointerType === 'mouse') leavePointer();
+  }, { passive: true });
+  window.addEventListener('blur', () => { leavePointer(); clearPointerLight(); syncMotion(); });
   treeImage?.addEventListener('load', () => {
     if (contextLost) return;
     mapPointerLight();
@@ -546,8 +597,14 @@
     project();
     draw();
   });
-  document.addEventListener('visibilitychange', syncMotion);
-  reducedMotion.addEventListener('change', syncMotion);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) leavePointer();
+    syncMotion();
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) touchId = null;
+    syncMotion();
+  });
   coarsePointer.addEventListener('change', resize);
   desktopPointer.addEventListener('change', syncMotion);
   const observer = new MutationObserver(syncMotion);
@@ -555,6 +612,7 @@
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   window.addEventListener('pagehide', () => {
     suspended = true;
+    leavePointer();
     clearTimeout(resizeTimer);
     syncMotion();
   });

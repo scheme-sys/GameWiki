@@ -51,6 +51,8 @@
     return;
   }
   const boot=data.boot, entries=data.records;
+  $('#data-edition').textContent=`v${boot.meta.version}`;
+  $('#data-version-note').textContent=`图鉴依据本地 ${boot.meta.version} 资料整理，更新于 ${boot.meta.updated}。`;
   const loadedCategories=new Map();
   let searchRows=[],viewRequest=0,cardsRequest=0,detailRequest=0;
   let currentRelations={outputs:[],uses:[]};
@@ -210,7 +212,8 @@
   function sourceMarkup(entry) {
     const sources=Array.isArray(entry.sources)?entry.sources:entry.source?[entry.source]:[];
     const links=sources.map(source=>{const url=typeof source==='string'?source:source.url;const title=typeof source==='object'?(source.title||source.name||'参考资料'):'公开参考资料';return typeof url==='string'&&/^https:\/\//.test(url)?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(title)} ↗</a>`:typeof source==='string'?esc(source):'';}).filter(Boolean);
-    return `<div class="detail-source">资料版本：1.52.0 · 基础数值不含战斗中的临时效果。${links.length?`<br>${links.join(' · ')}`:''}</div>`;
+    const version=entry.sourceVersion || boot.meta.version;
+    return `<div class="detail-source">资料版本：${esc(version)}${version!==boot.meta.version?'（历史资料）':''} · 基础数值不含战斗中的临时效果。${links.length?`<br>${links.join(' · ')}`:''}</div>`;
   }
   function ingredientsOf(entry) {const raw=entry.ingredients || entry.recipe?.ingredients || entry.materials || [];return Array.isArray(raw)?raw:[];}
   function ingredientMarkup(ingredients,multiplier=1) {
@@ -287,7 +290,7 @@
   function showAbout() {
     ++detailRequest;currentDetail=null;
     const missing=Object.keys(boot.counts).reduce((sum,key)=>sum+boot.counts[key]-boot.coverage[key],0);
-    showDialog(`<div class="about-content"><span class="eyebrow">ABOUT THIS FIELD GUIDE</span><h2 id="dialog-title">一份面向幸存者的图鉴</h2><p>为 Last Day on Earth: Survival《地球末日：生存》整理的非官方中文玩家资料站。使用真实游戏图像，集中查阅装备、物资、生物、地点和制作材料。</p><div class="about-counts">${Object.entries(categories).map(([key,c])=>`<div><strong>${number(boot.counts[key])}</strong>${esc(c.name)}</div>`).join('')}</div><h3>资料范围</h3><p>本图鉴依据现有 1.52.0 本地资料整理，是版本快照，不能据此认定所有内容仍在当前线上开放。季节、任务、外观及特殊变体可能有独立条目。部分中文名称是整理译名，请结合图像与英文名称辨认。</p><p>仅展示可以确认的基础数值与材料。伤害、速度等会受到改装、技能、抗性及活动规则影响。配方存在不表示当前角色已经解锁；不同版本、模式或活动的配方可能不同。${missing?` ${number(missing)} 个条目暂缺已确认图像，使用分类标识，详情不以示意图代替真实图鉴。`:''}</p><h3>使用方法</h3><ul><li>顶部搜索同时检索中文、英文、类别与说明。按 / 可快速开始搜索。</li><li>分类标签与细分筛选可以缩小范围。点击卡片查看属性、材料与相关资料。</li><li>书签保存在当前浏览器。武器、护甲可分别选择最多三件进行对比。</li><li>配方详情可调整制作次数，材料需求会同步计算。</li><li>保留完整 LCZ 网站文件夹，双击本页 index.html 即可离线浏览。</li></ul><h3>补充与来源</h3><p>图像与主要属性来自现有游戏资料。条目如使用公开补充资料，会在详情中列出链接。玩法问题可查阅 <a href="https://kefirgames.helpshift.com/hc/en/5-last-day-on-earth/" target="_blank" rel="noopener noreferrer">Kefir 官方帮助中心</a>。</p><p>Last Day on Earth、游戏图像及游戏内容版权归 Kefir 所有。本站与游戏官方无隶属关系。</p></div>`);
+    showDialog(`<div class="about-content"><span class="eyebrow">ABOUT THIS FIELD GUIDE</span><h2 id="dialog-title">一份面向幸存者的图鉴</h2><p>为 Last Day on Earth: Survival《地球末日：生存》整理的非官方中文玩家资料站。使用真实游戏图像，集中查阅装备、物资、生物、地点和制作材料。</p><div class="about-counts">${Object.entries(categories).map(([key,c])=>`<div><strong>${number(boot.counts[key])}</strong>${esc(c.name)}</div>`).join('')}</div><h3>资料范围</h3><p>本图鉴依据现有 ${esc(boot.meta.version)} 本地资料整理，更新于 ${esc(boot.meta.updated)}。这是版本快照，不能据此认定所有内容仍在当前线上开放；沿用旧版的条目会单独注明资料版本。季节、任务、外观及特殊变体可能有独立条目。部分中文名称是整理译名，请结合图像与英文名称辨认。</p><p>仅展示可以确认的基础数值与材料。伤害、速度等会受到改装、技能、抗性及活动规则影响。配方存在不表示当前角色已经解锁；不同版本、模式或活动的配方可能不同。${missing?` ${number(missing)} 个条目暂缺已确认图像，使用分类标识，详情不以示意图代替真实图鉴。`:''}</p><h3>使用方法</h3><ul><li>顶部搜索同时检索中文、英文、类别与说明。按 / 可快速开始搜索。</li><li>分类标签与细分筛选可以缩小范围。点击卡片查看属性、材料与相关资料。</li><li>书签保存在当前浏览器。武器、护甲可分别选择最多三件进行对比。</li><li>配方详情可调整制作次数，材料需求会同步计算。</li><li>保留完整 LCZ 网站文件夹，双击本页 index.html 即可离线浏览。</li></ul><h3>补充与来源</h3><p>图像与主要属性来自现有游戏资料。条目如使用公开补充资料，会在详情中列出链接。玩法问题可查阅 <a href="https://kefirgames.helpshift.com/hc/en/5-last-day-on-earth/" target="_blank" rel="noopener noreferrer">Kefir 官方帮助中心</a>。</p><p>Last Day on Earth、游戏图像及游戏内容版权归 Kefir 所有。本站与游戏官方无隶属关系。</p></div>`);
   }
   const mobileQuery=matchMedia('(max-width: 760px)');
   function updateSidebarInert(){$('#sidebar').inert=mobileQuery.matches&&!$('#sidebar').classList.contains('open');}

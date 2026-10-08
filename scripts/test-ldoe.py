@@ -56,9 +56,11 @@ try:
   passed('Home: 24 original cards, complete game navigation, preview statistics, under 45KB data')
   page.wait_for_timeout(1200);assert page.evaluate('LDOE_DATA.loaded()')==[]
   passed('Idle home does not prefetch any category, detail, recipe or search dataset')
-  expected={'weapons':'150','armor':'248','creatures':'224','resources':'1,016','recipes':'459','locations':'46'}
+  expect(page.locator('#data-edition')).to_have_text('v1.52.9')
+  expect(page.locator('#data-version-note')).to_contain_text('2026-10-08')
+  expected={'weapons':'150','armor':'248','creatures':'224','resources':'1,024','recipes':'480','locations':'46'}
   for key,value in expected.items():expect(page.locator('#primary-nav [data-view="'+key+'"] .nav-count')).to_have_text(value)
-  passed('All six category counts match the original 2143 records')
+  passed('All six category counts match the 2172 records in the 1.52.9 snapshot')
   page.locator('#pagination [data-page="2"]').first.click();ready(page)
   assert page.evaluate('LDOE_DATA.loaded()')==['category-weapons']
   expect(page.locator('#result-count')).to_contain_text('25–48')
@@ -97,7 +99,7 @@ try:
   for key in ['creatures','resources','recipes','locations']:
    view(page,key);expect(page.locator('#result-count')).to_contain_text(expected[key])
    assert page.locator('.item-card').count()==24
-  passed('Creatures, resources, 459 crafting/repair recipes and 46 locations render independently')
+  passed('Creatures, resources, 480 crafting/repair recipes and 46 locations render independently')
   view(page,'overview');page.locator('#global-search').fill('Glock 17')
   page.wait_for_function("()=>document.querySelector('#result-count').textContent.includes('Glock 17')&&document.querySelector('#catalog-grid').getAttribute('aria-busy')==='false'")
   assert page.locator('.item-card').count()==6
@@ -153,6 +155,24 @@ try:
   page.locator('.detail-actions [data-entry="item-0052"]').click()
   expect(page.locator('#dialog-title')).to_have_text('球棒');close(page)
   passed('Repair semantics, output link and original 86400-second station duration are preserved')
+  detail(page,'item-3180','Google Play 主题背包外观')
+  expect(page.locator('.detail-source')).to_contain_text('资料版本：1.52.9')
+  expect(page.locator('.detail-title .lcz-entity-code__value')).to_have_text('backpack_googleplay')
+  page.wait_for_function("()=>{const img=document.querySelector('.detail-art img');return img?.complete&&img.naturalWidth>0;}")
+  close(page)
+  detail(page,'recipe-0461','配送货箱 I · 常规阶段')
+  expect(page.locator('.detail-title .lcz-entity-code__value')).to_have_text('calendar_delivery_box_1')
+  expect(page.locator('#recipe-ingredients')).to_contain_text('胶带')
+  page.locator('#recipe-quantity').fill('2')
+  expect(page.locator('#recipe-ingredients')).to_contain_text('× 70')
+  expect(page.locator('.detail-source')).to_contain_text('资料版本：1.52.9');close(page)
+  detail(page,'recipe-0117','万圣节仪式桌')
+  expect(page.locator('.detail-source')).to_contain_text('资料版本：1.52.0（历史资料）')
+  expect(page.locator('.detail-body')).to_contain_text('仅供历史查询');close(page)
+  detail(page,'item-0424','万圣节仪式桌')
+  assert page.locator('#recipe-ingredients').count()==0
+  close(page)
+  passed('New items and delivery recipes render with current versions; the retained Halloween recipe stays historical')
   detail(page,'creature-0001','游荡僵尸')
   assert page.locator('.variant-list details').count()>0
   page.locator('.variant-list summary').first.click()
@@ -194,7 +214,9 @@ try:
   passed('Escape during a pending detail request prevents late modal reopening')
   view(page,'overview');page.locator('[data-action="about"]').first.click()
   expect(page.locator('.coverage-text')).to_contain_text('139 / 224')
-  expect(page.locator('.about-counts')).to_contain_text('459');close(page)
+  expect(page.locator('.about-counts')).to_contain_text('480')
+  expect(page.locator('.about-content')).to_contain_text('1.52.9')
+  expect(page.locator('.about-content')).to_contain_text('2026-10-08');close(page)
   page.keyboard.press('/');expect(page.locator('#global-search')).to_be_focused()
   passed('About counts, confirmed-image coverage and keyboard search still work')
   report['csp']+=page.evaluate('window.__csp')

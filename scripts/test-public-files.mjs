@@ -47,6 +47,12 @@ function fixture(name) {
   return root;
 }
 
+test('LDOE reference sources stay out of the published site', () => {
+  for (const name of ['index.html', 'app.js', 'styles.css', 'data/catalog.js', 'data/world.js', 'assets/items/item-3180.webp']) {
+    assert.equal(isPublicFile('LDOE_Wiki_reference/' + name), false, name);
+  }
+});
+
 test('Public selector includes only Dawn runtime, images, player CSVs and guides', () => {
   for (const name of ['index.html', 'app.js', 'data-loader.js', 'styles.css', 'data/bootstrap.js', 'data/lazy/detail-0-0123456789abcdef.js', 'data/asset-map.js', 'data/site-meta.js', 'assets/wiki-mark.svg', 'assets/images/图 #1.png', 'data/player/武器.csv', 'guides/01-生存.md']) {
     assert.equal(isPublicFile(`DawnofZombiewiki/${name}`), true, name);

@@ -7,9 +7,9 @@ CATEGORIES = ['weapons','armor','creatures','resources','recipes','locations']
 SPAN = 32
 FIELDS = {
  'items': {'id','entityCode','name','enName','category','subcategory','description','image','tags','stats','recipe','source','modSlots','notes'},
- 'recipes': {'id','name','outputId','quantity','station','status','ingredients','level','duration','stations','type'},
- 'creatures': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources','variants','variantCount','imageNote'},
- 'locations': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources'},
+ 'recipes': {'id','name','outputId','quantity','station','status','ingredients','level','duration','stations','type','phase','sourceVersion'},
+ 'creatures': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources','variants','variantCount','imageNote','sourceVersion'},
+ 'locations': {'id','entityCode','name','enName','category','description','image','tags','stats','locations','note','sources','sourceVersion'},
 }
 BAD_KEYS = {'raw','$ref','name_key','sourceHints','prototype','assetFile','bundle','assetBundle','class','className','typeName','method','methodName','function','functionName','sourcePath','assetPath'}
 BAD_TEXT = re.compile(r'CAB-[0-9a-f]{16,}|[A-Za-z0-9_/\\-]+\.(?:bundle|bun|lu|lua|cs|dex|dll)\b|\b[A-Za-z]+StorageData\b|\.prototype\.',re.I)
@@ -32,6 +32,8 @@ def audit(value, path='data'):
 def check_fields(value, allowed, path):
  if not isinstance(value,dict) or set(value)-allowed: raise ValueError('Unreviewed schema at '+path)
 def check_nested(row,path):
+ if 'sourceVersion' in row and (not isinstance(row['sourceVersion'],str) or not re.fullmatch(r'\d+\.\d+\.\d+',row['sourceVersion'])):raise ValueError('Invalid source version: '+path)
+ if 'phase' in row and (not isinstance(row['phase'],str) or not row['phase'].strip()):raise ValueError('Invalid player recipe phase: '+path)
  for stat in row.get('stats',[]):check_fields(stat,{'label','value','unit'},path+'.stats')
  if 'recipe' in row:
   check_fields(row['recipe'],FIELDS['recipes'],path+'.recipe');check_nested(row['recipe'],path+'.recipe')
