@@ -866,7 +866,7 @@ try:
                 results["skipped"].append(name)
                 return
             context = browser.new_context(viewport={"width":width,"height":height}, is_mobile=mobile, has_touch=mobile, reduced_motion="reduce" if reduce else "no-preference")
-            context.on("request", lambda request: results["counter_requests"].append(request.url) if any(host in urlparse(request.url).netloc for host in ("countapi.","busuanzi.cc")) else None)
+            context.on("request", lambda request: results["counter_requests"].append(request.url) if any(host in urlparse(request.url).netloc for host in ("countapi.","busuanzi.cc","hitwebcounter.com")) else None)
             # Music navigation is covered separately; exercise the muted native portal.
             context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
             page = context.new_page()

@@ -52,7 +52,10 @@ test('CSP blocks arbitrary scripts, plugins, connections, base URLs and form sub
     // Only the homepage extracts its gold texture in a same-origin worker.
     assert.deepEqual(directives.get('worker-src'), [name === 'index.html' ? "'self'" : "'none'"], name + ': worker-src');
     for (const directive of ['frame-src', 'media-src']) assert.deepEqual(directives.get(directive), [name === '404.html' ? "'none'" : "'self'"], name + ': ' + directive);
-    assert.deepEqual(directives.get('connect-src'), ['https://cdn.busuanzi.cc'], name);
+    assert.deepEqual(directives.get('connect-src'), ["'none'"], name + ': connect-src');
+    const images = ["'self'", 'data:', 'blob:'];
+    if (name !== '404.html') images.push('https://www.hitwebcounter.com');
+    assert.deepEqual(directives.get('img-src'), images, name + ': img-src');
     // These directives require response headers and must not be presented as meta protection.
     assert.ok(!directives.has('frame-ancestors') && !directives.has('sandbox'), name);
     const csp = metadata(html, 'http-equiv', 'content-security-policy')[0];
