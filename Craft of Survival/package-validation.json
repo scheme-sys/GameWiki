@@ -7471,8 +7471,8 @@
     {
       "path": "wiki-assets/wiki-app.js",
       "hashMode": "utf8-lf",
-      "bytes": 20001,
-      "sha256": "bfcad2b021f20a8c1bb7d4a6fd6f14cd2b74d1e1353471b338a145e727a3a19a"
+      "bytes": 20119,
+      "sha256": "0a1591e485b9cdf2eb06da7a82de806d53eff37c785309b5cdec847cf258e16e"
     },
     {
       "path": "wiki-assets/wiki-data.js",

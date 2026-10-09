@@ -50,6 +50,7 @@
   let searchIndex = Object.create(null);
   let routeVersion = 0;
   const PAGE_SIZE = 24;
+  const nameCollator = new Intl.Collator('zh-CN', { numeric: true });
   const storageKey = 'grim-soul-wiki-favorites-v1';
   let favorites = readFavorites();
   let state = { mode: 'home', category: 'all', subcategory: 'all', rarity: 'all', sort: 'default', query: '', images: false, page: 1 };
@@ -197,7 +198,7 @@
       (!state.images || safeImage(entry)) &&
       tokens.every(token => (searchIndex[entry.id] || '').includes(token))
     );
-    if (state.sort === 'name') filtered.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN', { numeric: true }));
+    if (state.sort === 'name') filtered.sort((a, b) => nameCollator.compare(a.name, b.name));
     else if (state.sort === 'images') filtered.sort((a, b) => Number(Boolean(safeImage(b))) - Number(Boolean(safeImage(a))));
     else if (state.sort === 'rarity') filtered.sort((a, b) => rarityRank(b) - rarityRank(a));
     const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));

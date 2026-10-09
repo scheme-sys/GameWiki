@@ -53,6 +53,8 @@
     ["Legendary", 0], ["Epic", 1], ["Rare", 2], ["Uncommon", 3], ["Common", 4], ["Unspecified", 5],
   ]);
   const byId = new Map(data.articles.map((article) => [article.id, article]));
+  const titleCollator = new Intl.Collator("en", { sensitivity: "base" });
+  const statNumberFormatter = new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 4 });
 
   function normalize(value) {
     return String(value ?? "").normalize("NFKD").toLocaleLowerCase("en");
@@ -109,7 +111,7 @@
   function playerStats(article) { return article.primary.filter(item => Object.hasOwn(statLabels,item.name)); }
   function displayValue(value) {
     if (typeof value === "boolean") return value ? "是" : "否";
-    if (typeof value === "number" && !Number.isInteger(value)) return value.toLocaleString("zh-CN", { maximumFractionDigits: 4 });
+    if (typeof value === "number" && !Number.isInteger(value)) return statNumberFormatter.format(value);
     return String(value);
   }
 
@@ -197,7 +199,7 @@
     });
     rows.sort((left, right) => {
       if (state.sort === "title") {
-        return left.title.localeCompare(right.title, "en", { sensitivity: "base" }) || left.id - right.id;
+        return titleCollator.compare(left.title, right.title) || left.id - right.id;
       }
       if (state.sort === "quality") {
         return (qualityOrder.get(left.quality) - qualityOrder.get(right.quality)) || left.typeId - right.typeId || left.id - right.id;

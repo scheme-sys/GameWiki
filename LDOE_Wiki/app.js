@@ -62,7 +62,8 @@
   const comparison=new Set(readStorage('ldoe-wiki-comparison').filter(id=>data.gear.has(id)).slice(0,3));
   const state = {view:'overview',category:'weapons',filter:'全部',query:'',sort:'default',page:1,layout:'grid'};
   const pageSize = 24;
-  const number = value => typeof value === 'number' ? new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2}).format(value) : String(value ?? '—');
+  const numberFormatter = new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2});
+  const number = value => typeof value === 'number' ? numberFormatter.format(value) : String(value ?? '—');
   const validImage = path => typeof path === 'string' && /^assets\/[a-zA-Z0-9_./-]+\.(webp|png|jpg|svg)$/.test(path) && !path.includes('..') ? path : '';
   const imageMarkup = (entry,cls='',loading='lazy') => validImage(entry.image) ? `<img ${cls ? `class="${cls}"` : ''} src="${loading==='lazy'?window.LCZLazyImages.placeholder:esc(entry.image)}" ${loading==='lazy'?`data-lazy-src="${esc(entry.image)}"`:""} alt="${esc(entry.name)}图鉴" loading="${loading}" decoding="async">` : `<span class="image-placeholder" aria-label="暂无已确认图像">${icon(categories[getCategory(entry)]?.icon || 'box')}<small>图像待补</small></span>`;
   const statIcon = label => /伤害|攻击/.test(label) ? 'weapon' : /生命|恢复/.test(label) ? 'heart' : /射速|攻速|速度/.test(label) ? 'bolt' : /防|护甲/.test(label) ? 'shield' : /时间/.test(label) ? 'clock' : 'box';

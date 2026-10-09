@@ -20,15 +20,34 @@ self.onmessage = (event) => {
     const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
     const ease = (value) => value * value * (3 - 2 * value);
     const smooth = (value, low, high) => ease(clamp((value - low) / (high - low), 0, 1));
-    const mean = (x, y, r) => {
-      const x0 = Math.max(0, x - r), x1 = Math.min(w, x + r + 1);
-      const y0 = Math.max(0, y - r), y1 = Math.min(h, y + r + 1);
-      return (sums[y1 * stride + x1] - sums[y0 * stride + x1] -
-        sums[y1 * stride + x0] + sums[y0 * stride + x0]) / ((x1 - x0) * (y1 - y0));
-    };
+    // The two sample windows share their column bounds across every row.
+    // Cache only O(width) integers; keep the original Float64 sums and order
+    // of arithmetic so extraction produces exactly the same RGBA pixels.
+    const nearLeft = new Uint32Array(w), nearRight = new Uint32Array(w);
+    const farLeft = new Uint32Array(w), farRight = new Uint32Array(w);
+    for (let x = 0; x < w; x++) {
+      nearLeft[x] = Math.max(0, x - radius);
+      nearRight[x] = Math.min(w, x + radius + 1);
+      farLeft[x] = Math.max(0, x - radius * 2);
+      farRight[x] = Math.min(w, x + radius * 2 + 1);
+    }
+    let nearTop, nearBottom, nearHeight, farTop, farBottom, farHeight;
+    const mean = (x0, x1, top, bottom, height) =>
+      (sums[bottom + x1] - sums[top + x1] -
+        sums[bottom + x0] + sums[top + x0]) / ((x1 - x0) * height);
 
     for (let phase = 0; phase < 2; phase++) {
       for (let row = 0; row < h; row++) {
+        if (phase) {
+          const y0 = Math.max(0, row - radius), y1 = Math.min(h, row + radius + 1);
+          nearTop = y0 * stride;
+          nearBottom = y1 * stride;
+          nearHeight = y1 - y0;
+          const farY0 = Math.max(0, row - radius * 2), farY1 = Math.min(h, row + radius * 2 + 1);
+          farTop = farY0 * stride;
+          farBottom = farY1 * stride;
+          farHeight = farY1 - farY0;
+        }
         let sum = 0;
         for (let x = 0; x < w; x++) {
           const offset = (row * w + x) * 4;
@@ -41,8 +60,8 @@ self.onmessage = (event) => {
             // Color alone also selects the haze. Retain bright fine texture:
             // bark seams, small leaves and twigs; keep the original gold RGB.
             const warmth = smooth(r - b, 8, 38) * smooth(g - b, 3, 20);
-            const detail = Math.max(luminance - mean(x, row, radius),
-              (luminance - mean(x, row, radius * 2)) * .7);
+            const detail = Math.max(luminance - mean(nearLeft[x], nearRight[x], nearTop, nearBottom, nearHeight),
+              (luminance - mean(farLeft[x], farRight[x], farTop, farBottom, farHeight)) * .7);
             data[offset + 3] = Math.round(255 * warmth * smooth(luminance, 60, 150) * smooth(detail, 2.5, 22));
           }
         }
