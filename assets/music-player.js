@@ -222,8 +222,16 @@
     if (switcher) switcher.before(control); else navigation.append(control);
   }
   button.addEventListener('click', () => player.toggle());
+  let renderedLevel;
   const unsubscribe = player.subscribe((state, energy) => {
-    if (energy !== undefined) { control.style.setProperty('--music-level', String(Math.round(energy * 100) / 100)); return; }
+    if (energy !== undefined) {
+      const value = Math.round(energy * 100) / 100;
+      if (value !== renderedLevel) {
+        renderedLevel = value;
+        control.style.setProperty('--music-level', String(value));
+      }
+      return;
+    }
     control.dataset.state = state.status; button.setAttribute('aria-pressed', String(state.playing));
     button.setAttribute('aria-busy', String(state.status === 'loading'));
     const action = state.status === 'loading' ? '取消加载' : state.playing ? '暂停' : state.status === 'error' ? '重试播放' : '播放';

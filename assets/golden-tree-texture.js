@@ -15,8 +15,13 @@ self.onmessage = (event) => {
 
     const w = surface.width, h = surface.height, stride = w + 1;
     const pixels = paint.getImageData(0, 0, w, h);
-    const data = pixels.data, sums = new Float64Array(stride * (h + 1));
+    const data = pixels.data;
     const radius = Math.max(2, Math.round(h / 300));
+    // Keep only the cumulative rows needed by the widest sample window.
+    // These remain full-image prefix sums, with exactly the original Float64
+    // additions; recycling storage must not change the extracted pixels.
+    const sumRows = Math.min(h + 1, radius * 4 + 2);
+    const sums = new Float64Array(stride * sumRows);
     const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
     const ease = (value) => value * value * (3 - 2 * value);
     const smooth = (value, low, high) => ease(clamp((value - low) / (high - low), 0, 1));
@@ -36,35 +41,39 @@ self.onmessage = (event) => {
       (sums[bottom + x1] - sums[top + x1] -
         sums[bottom + x0] + sums[top + x0]) / ((x1 - x0) * height);
 
-    for (let phase = 0; phase < 2; phase++) {
-      for (let row = 0; row < h; row++) {
-        if (phase) {
-          const y0 = Math.max(0, row - radius), y1 = Math.min(h, row + radius + 1);
-          nearTop = y0 * stride;
-          nearBottom = y1 * stride;
-          nearHeight = y1 - y0;
-          const farY0 = Math.max(0, row - radius * 2), farY1 = Math.min(h, row + radius * 2 + 1);
-          farTop = farY0 * stride;
-          farBottom = farY1 * stride;
-          farHeight = farY1 - farY0;
-        }
+    let summedRows = 0;
+    for (let row = 0; row < h; row++) {
+      const y0 = Math.max(0, row - radius), y1 = Math.min(h, row + radius + 1);
+      const farY0 = Math.max(0, row - radius * 2), farY1 = Math.min(h, row + radius * 2 + 1);
+      while (summedRows < farY1) {
+        const previous = (summedRows % sumRows) * stride;
+        const next = ((summedRows + 1) % sumRows) * stride;
         let sum = 0;
         for (let x = 0; x < w; x++) {
-          const offset = (row * w + x) * 4;
+          const offset = (summedRows * w + x) * 4;
           const r = data[offset], g = data[offset + 1], b = data[offset + 2];
           const luminance = r * .2126 + g * .7152 + b * .0722;
-          if (!phase) {
-            sum += luminance;
-            sums[(row + 1) * stride + x + 1] = sums[row * stride + x + 1] + sum;
-          } else {
-            // Color alone also selects the haze. Retain bright fine texture:
-            // bark seams, small leaves and twigs; keep the original gold RGB.
-            const warmth = smooth(r - b, 8, 38) * smooth(g - b, 3, 20);
-            const detail = Math.max(luminance - mean(nearLeft[x], nearRight[x], nearTop, nearBottom, nearHeight),
-              (luminance - mean(farLeft[x], farRight[x], farTop, farBottom, farHeight)) * .7);
-            data[offset + 3] = Math.round(255 * warmth * smooth(luminance, 60, 150) * smooth(detail, 2.5, 22));
-          }
+          sum += luminance;
+          sums[next + x + 1] = sums[previous + x + 1] + sum;
         }
+        summedRows++;
+      }
+      nearTop = (y0 % sumRows) * stride;
+      nearBottom = (y1 % sumRows) * stride;
+      nearHeight = y1 - y0;
+      farTop = (farY0 % sumRows) * stride;
+      farBottom = (farY1 % sumRows) * stride;
+      farHeight = farY1 - farY0;
+      for (let x = 0; x < w; x++) {
+        const offset = (row * w + x) * 4;
+        const r = data[offset], g = data[offset + 1], b = data[offset + 2];
+        const luminance = r * .2126 + g * .7152 + b * .0722;
+        // Color alone also selects the haze. Retain bright fine texture:
+        // bark seams, small leaves and twigs; keep the original gold RGB.
+        const warmth = smooth(r - b, 8, 38) * smooth(g - b, 3, 20);
+        const detail = Math.max(luminance - mean(nearLeft[x], nearRight[x], nearTop, nearBottom, nearHeight),
+          (luminance - mean(farLeft[x], farRight[x], farTop, farBottom, farHeight)) * .7);
+        data[offset + 3] = Math.round(255 * warmth * smooth(luminance, 60, 150) * smooth(detail, 2.5, 22));
       }
     }
 

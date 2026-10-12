@@ -82,11 +82,13 @@
       return this;
     }
 
-    resize(width, height) {
+    resize(width, height, bodies) {
       if (this._destroyed) return this;
       this._finishSettlement();
       this.width = Math.max(1, finite(width, this.width));
       this.height = Math.max(1, finite(height, this.height));
+      // A replacement layout only needs solving once, using its new radii.
+      if (bodies !== undefined) return this.setBodies(bodies);
       for (const body of this._bodies) this._setBounds(body);
       this._settleLayout();
       this._emit();

@@ -119,8 +119,7 @@
     // Keep desktop sizing close to tablet sizing at their shared breakpoint.
     const screenScale = layoutKey === 'tablet' ? Math.min(.84, width / 840, height / 640)
       : Math.min(1, Math.max(.84, width / 1392), height / 640);
-    field.resize(width, height);
-    field.setBodies(GAMES.map((game) => {
+    field.resize(width, height, GAMES.map((game) => {
       const node = nodes.get(game.id);
       const baseSize = layoutKey === 'landscape' ? Math.min(94, height * .38, (width - 72) / GAMES.length)
         : layoutKey === 'mobile' ? Math.min(112, width * .32) * game.size / 164

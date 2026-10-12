@@ -38,7 +38,7 @@
   const light = { x: 0, y: 0, targetX: 0, targetY: 0, amount: 0, active: false, inside: false, touch: false,
     radius: 220, dpr: 1, crop: null, paintedX: NaN, paintedY: NaN };
   let touchId = null;
-  let lightCanvas, lightContext;
+  let lightCanvas, lightContext, lightOpacity;
   const goldWorkerURL = new URL('golden-tree-texture.js', document.currentScript.src);
   let goldTexture, goldMask, goldWorker, goldSource = '', goldBuild = 0;
   let width = 1, height = 1, settings, frame = 0, resizeTimer = 0;
@@ -125,7 +125,7 @@
     goldTexture = null;
     goldMask = null;
     goldWorker?.terminate();
-    if (lightCanvas) lightCanvas.style.opacity = '0';
+    setLightOpacity(0);
     const build = ++goldBuild;
     const current = () => {
       if (build !== goldBuild) return false;
@@ -184,10 +184,16 @@
     });
   }
 
+  function setLightOpacity(value) {
+    if (!lightCanvas || lightOpacity === value) return;
+    lightOpacity = value;
+    lightCanvas.style.opacity = String(value);
+  }
+
   function clearPointerLight() {
     light.active = false;
     light.amount = 0;
-    if (lightCanvas) lightCanvas.style.opacity = '0';
+    setLightOpacity(0);
   }
 
   function updatePointerLight(delta) {
@@ -241,7 +247,7 @@
       light.paintedX = left;
       light.paintedY = top;
     }
-    lightCanvas.style.opacity = String(light.amount * .6);
+    setLightOpacity(light.amount * .6);
   }
 
   function paintDistantSky() {
