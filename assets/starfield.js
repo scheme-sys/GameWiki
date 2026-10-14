@@ -247,7 +247,7 @@
       light.paintedX = left;
       light.paintedY = top;
     }
-    setLightOpacity(light.amount * .6);
+    setLightOpacity(light.amount * .85);
   }
 
   function paintDistantSky() {
