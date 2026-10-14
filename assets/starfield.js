@@ -104,14 +104,19 @@
   function mapPointerLight() {
     light.crop = null;
     light.paintedX = NaN;
+    setLightOpacity(0);
     if (!treeImage?.complete || !treeImage.naturalWidth) return;
-    // Read only on image load/resize. Use the selected source's real dimensions
-    // so the small overlay exactly matches cover on ordinary and wide screens.
+    // The artwork can resize independently of the debounced star canvas (for
+    // example as mobile browser controls change height). Match its actual box.
+    // These layout reads happen only on load/resize, never on pointer movement.
+    const bounds = treeImage.getBoundingClientRect();
+    const origin = treeArt.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
     const position = getComputedStyle(treeImage).objectPosition.split(' ').map(parseFloat);
-    const scale = Math.max(width / treeImage.naturalWidth, height / treeImage.naturalHeight);
-    light.crop = { scale,
-      left: (width - treeImage.naturalWidth * scale) * position[0] / 100,
-      top: (height - treeImage.naturalHeight * scale) * position[1] / 100 };
+    const scale = Math.max(bounds.width / treeImage.naturalWidth, bounds.height / treeImage.naturalHeight);
+    light.crop = { scale, originX: origin.left, originY: origin.top,
+      left: bounds.left - origin.left + (bounds.width - treeImage.naturalWidth * scale) * position[0] / 100,
+      top: bounds.top - origin.top + (bounds.height - treeImage.naturalHeight * scale) * position[1] / 100 };
     // Extract the optional glow only when pointer interaction first needs it.
     // Mapping the visible background must not start a worker or load a mask.
   }
@@ -226,10 +231,10 @@
       lightContext.setTransform(bitmapSize / size, 0, 0, bitmapSize / size, 0, 0);
       light.paintedX = NaN;
     }
-    const left = Math.round((light.x - light.radius) * light.dpr) / light.dpr;
-    const top = Math.round((light.y - light.radius) * light.dpr) / light.dpr;
+    const crop = light.crop;
+    const left = Math.round((light.x - crop.originX - light.radius) * light.dpr) / light.dpr;
+    const top = Math.round((light.y - crop.originY - light.radius) * light.dpr) / light.dpr;
     if (left !== light.paintedX || top !== light.paintedY) {
-      const crop = light.crop;
       lightContext.clearRect(0, 0, size, size);
       const sourceX = (left - crop.left) / crop.scale, sourceY = (top - crop.top) / crop.scale;
       const sourceSize = size / crop.scale;
@@ -530,8 +535,13 @@
     syncMotion();
   }
 
+  // ResizeObserver runs before paint, keeping a held finger's texture aligned
+  // even while the more expensive starfield resize is still debounced.
+  const treeResizeObserver = treeImage && typeof ResizeObserver === 'function'
+    ? new ResizeObserver(() => { mapPointerLight(); updatePointerLight(0); }) : null;
+  treeResizeObserver?.observe(treeImage);
   window.addEventListener('resize', () => {
-    light.active = false;
+    if (!treeResizeObserver) { mapPointerLight(); updatePointerLight(0); }
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(resize, 120);
   }, { passive: true });
@@ -553,8 +563,10 @@
     light.active = true;
   }, { passive: true });
   function aimLight(x, y) {
-    light.targetX = clamp(x, 0, width);
-    light.targetY = clamp(y, 0, height);
+    // Input is already in viewport coordinates. The starfield's cached size
+    // may still describe the old orientation; the artwork clips the light.
+    light.targetX = x;
+    light.targetY = y;
     if (!light.amount) { light.x = light.targetX; light.y = light.targetY; }
   }
   // Passive Touch Events continue after native scrolling cancels Pointer
@@ -598,6 +610,7 @@
   treeImage?.addEventListener('load', () => {
     if (contextLost) return;
     mapPointerLight();
+    updatePointerLight(0);
     mapTree();
     paintDistantSky();
     project();

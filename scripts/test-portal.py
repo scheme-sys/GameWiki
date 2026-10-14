@@ -375,6 +375,90 @@ def tree_light(page, context, local=False, desktop=False):
     cdp.detach()
 
 
+def tree_light_alignment(page, context, local=False):
+    context.add_init_script("""(() => {
+      const draw = CanvasRenderingContext2D.prototype.drawImage;
+      CanvasRenderingContext2D.prototype.drawImage = function(image, ...args) {
+        if (this.canvas.classList.contains('celestial-tree-light') && this.globalCompositeOperation !== 'destination-in') {
+          const m=this.getTransform();
+          window.goldAlignmentDraw={args, type:image.constructor.name,
+            width:image.naturalWidth || image.width, height:image.naturalHeight || image.height,
+            source:document.querySelector('.celestial-tree img').currentSrc, matrix:[m.a,m.b,m.c,m.d,m.e,m.f]};
+        }
+        return draw.call(this, image, ...args);
+      };
+    })();""")
+    page.goto((ROOT / 'index.html').as_uri() if local else BASE, wait_until='load')
+    page.wait_for_function("() => {const i=document.querySelector('.celestial-tree img');return i.complete && i.naturalWidth>0;}")
+    cdp = context.new_cdp_session(page)
+    held = False
+    def follow(point):
+        page.wait_for_function("""([x,y]) => {
+          const e=document.querySelector('.celestial-tree-light'); if(!e) return false;
+          const r=e.getBoundingClientRect();
+          return +e.style.opacity>.45 && Math.abs(r.x+r.width/2-x)<3 && Math.abs(r.y+r.height/2-y)<3;
+        }""", arg=point)
+    def begin():
+        nonlocal held
+        point=page.evaluate("""() => {
+          for (const y of [320,360,260,180]) for (const x of [innerWidth/2,90,300]) {
+            if (y<innerHeight-20 && !document.elementFromPoint(x,y)?.closest('a,button,summary,input,.world')) return [x,y];
+          }
+          throw new Error('No free background touch point');
+        }""")
+        touch(cdp,'touchStart',[point])
+        held = True
+        follow(point)
+        return point
+    def aligned(label):
+        state=page.evaluate("""() => {
+          const d=window.goldAlignmentDraw, i=document.querySelector('.celestial-tree img'),
+            light=document.querySelector('.celestial-tree-light'), r=i.getBoundingClientRect(), l=light.getBoundingClientRect();
+          const p=getComputedStyle(i).objectPosition.split(' ').map(parseFloat),
+            scale=Math.max(r.width/i.naturalWidth,r.height/i.naturalHeight),
+            origin=[r.x+(r.width-i.naturalWidth*scale)*p[0]/100,r.y+(r.height-i.naturalHeight*scale)*p[1]/100];
+          const [sx,sy,sw,sh,dx,dy,dw,dh]=d.args, [xx,yx,xy,yy,tx,ty]=d.matrix;
+          const errors=[[sx,sy,dx,dy],[sx+sw,sy+sh,dx+dw,dy+dh]].map(([x,y,u,v])=>[
+            origin[0]+x*scale-(l.x+(xx*u+xy*v+tx)*l.width/light.width),
+            origin[1]+y*scale-(l.y+(yx*u+yy*v+ty)*l.height/light.height)]);
+          return {errors, type:d.type, source:d.source, currentSource:i.currentSrc,
+            sourceSize:[d.width,d.height], imageSize:[i.naturalWidth,i.naturalHeight], opacity:+light.style.opacity};
+        }""")
+        assert state['opacity'] > 0, (label,state)
+        assert state['type'] == ('HTMLImageElement' if local else 'ImageBitmap'), (label,state)
+        assert state['source'] == state['currentSource'] and state['sourceSize'] == state['imageSize'], (label,state)
+        assert max(abs(value) for corner in state['errors'] for value in corner) < .1, (label,state)
+    try:
+        point=begin()
+        aligned('portrait')
+        # Browser chrome can resize the artwork without resizing the star layer.
+        # Keep the same held finger and include fractional CSS pixels in the crop.
+        star_size=page.locator('.constellations').evaluate('e=>[e.clientWidth,e.clientHeight]')
+        page.locator('.celestial-tree-art').evaluate("e=>e.style.height='calc(100% - 80.5px)'")
+        page.evaluate('() => new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))')
+        assert page.locator('.constellations').evaluate('e=>[e.clientWidth,e.clientHeight]') == star_size
+        aligned('artwork-only resize')
+        point=[point[0]+25,point[1]+35]
+        touch(cdp,'touchMove',[point])
+        follow(point)
+        aligned('finger movement after artwork resize')
+        touch(cdp,'touchEnd')
+        held = False
+        page.locator('.celestial-tree-art').evaluate("e=>e.style.height=''")
+        for width,height,source in [(844,390,'golden-tree.webp'),(390,844,'golden-tree-mobile.webp')]:
+            page.set_viewport_size({'width':width,'height':height})
+            page.wait_for_function("""source => {const i=document.querySelector('.celestial-tree img');
+              return i.complete && i.naturalWidth>0 && i.currentSrc.endsWith('/'+source);}""",arg=source)
+            begin()
+            aligned('source switch to '+source)
+            touch(cdp,'touchEnd')
+            held = False
+    finally:
+        if held:
+            touch(cdp,'touchCancel')
+        cdp.detach()
+
+
 def tree_touch_scroll(page, context):
     page.goto(BASE, wait_until='load')
     page.wait_for_function("() => document.querySelector('.celestial-tree img').naturalWidth > 0")
@@ -860,12 +944,12 @@ try:
         results["browser"] = browser.version
         results["channel"] = os.environ.get("LCZ_BROWSER", os.environ.get("ORBIT_BROWSER", "chrome"))
 
-        def run_case(name, callback, *, width=1440, height=960, mobile=False, reduce=False):
+        def run_case(name, callback, *, width=1440, height=960, mobile=False, reduce=False, dpr=1):
             pattern=os.environ.get("LCZ_CASE_PATTERN")
             if pattern and not re.search(pattern,name):
                 results["skipped"].append(name)
                 return
-            context = browser.new_context(viewport={"width":width,"height":height}, is_mobile=mobile, has_touch=mobile, reduced_motion="reduce" if reduce else "no-preference")
+            context = browser.new_context(viewport={"width":width,"height":height}, device_scale_factor=dpr, is_mobile=mobile, has_touch=mobile, reduced_motion="reduce" if reduce else "no-preference")
             context.on("request", lambda request: results["counter_requests"].append(request.url) if any(host in urlparse(request.url).netloc for host in ("countapi.","busuanzi.cc","hitwebcounter.com")) else None)
             # Music navigation is covered separately; exercise the muted native portal.
             context.add_init_script("sessionStorage.setItem('lcz:moonlight-muted','true')")
@@ -894,6 +978,8 @@ try:
         run_case("Mobile starfield stays bounded and pauses safely", quiet_sky_motion, width=390, height=844, mobile=True)
         run_case("Gold texture follows real touch and keeps lazy extraction", tree_light, width=390, height=844, mobile=True)
         run_case("Gold texture supports local-file touch masks", lambda page,context:tree_light(page,context,local=True), width=390, height=844, mobile=True)
+        run_case("Gold texture alignment tracks mobile artwork size and source", tree_light_alignment, width=390, height=844, mobile=True, dpr=3)
+        run_case("Gold texture alignment tracks local-file mobile masks", lambda page,context:tree_light_alignment(page,context,local=True), width=390, height=844, mobile=True, dpr=3)
         run_case("Gold texture preserves desktop mouse and reduced motion", lambda page,context:tree_light(page,context,desktop=True))
         run_case("Gold texture follows native scroll and captured bubble drag", tree_touch_scroll, width=390, height=844, mobile=True)
         run_case("Popover intent, soft transitions, pointer bridge, reentry and cancellation", popover_transition_races)
